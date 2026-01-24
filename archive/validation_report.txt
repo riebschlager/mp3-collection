@@ -1,0 +1,423 @@
+iTunes Export Compilation - Validation Report
+============================================================
+
+STATISTICS
+------------------------------------------------------------
+Files found: 368
+Files processed: 368
+Files with errors: 0
+Empty files: 0
+Total rows parsed: 48623
+Duplicate rows removed: 256
+Unique songs in CSV: 48367
+Unique fields found: 28
+
+FILE FORMAT DETECTION
+------------------------------------------------------------
+Files with header+data on first line: 0
+Files with separate header row: 111
+Files with no header (data only): 257
+
+FIELD NAMES
+------------------------------------------------------------
+  - Name
+  - Artist
+  - Composer
+  - Album
+  - Grouping
+  - Genre
+  - Size
+  - Time
+  - Disc Number
+  - Disc Count
+  - Track Number
+  - Track Count
+  - Year
+  - Date Modified
+  - Date
+  - Date Added
+  - Bit Rate
+  - Sample Rate
+  - Volume Adjustment
+  - Kind
+  - Equalizer
+  - Comments
+  - Play Count
+  - Last Played
+  - My Rating
+  - Location
+  - _source_file
+  - _line_number
+
+FILE FORMAT DETAILS
+------------------------------------------------------------
+  Library.export001              | separate_header |  19 fields
+  Library.export002              | separate_header |  19 fields
+  Library.export003              | separate_header |  19 fields
+  Library.export004              | separate_header |  19 fields
+  Library.export005              | separate_header |  19 fields
+  Library.export006              | separate_header |  19 fields
+  Library.export007              | separate_header |  19 fields
+  Library.export008              | separate_header |  19 fields
+  Library.export009              | separate_header |  19 fields
+  Library.export010              | separate_header |  19 fields
+  Library.export011              | separate_header |  19 fields
+  Library.export012              | separate_header |  19 fields
+  Library.export013              | separate_header |  19 fields
+  Library.export014              | separate_header |  19 fields
+  Library.export015              | separate_header |  19 fields
+  Library.export016              | separate_header |  19 fields
+  Library.export017              | separate_header |  19 fields
+  Library.export018              | separate_header |  19 fields
+  Library.export019              | separate_header |  19 fields
+  Library.export020              | separate_header |  19 fields
+  Library.export021              | separate_header |  19 fields
+  Library.export022              | separate_header |  19 fields
+  Library.export023              | separate_header |  19 fields
+  Library.export024              | separate_header |  19 fields
+  Library.export025              | separate_header |  19 fields
+  Library.export026              | separate_header |  19 fields
+  Library.export027              | separate_header |  19 fields
+  Library.export028              | separate_header |  19 fields
+  Library.export029              | separate_header |  19 fields
+  Library.export030              | separate_header |  19 fields
+  Library.export031              | separate_header |  19 fields
+  Library.export032              | separate_header |  19 fields
+  Library.export033              | separate_header |  19 fields
+  Library.export034              | separate_header |  19 fields
+  Library.export035              | separate_header |  19 fields
+  Library.export036              | separate_header |  19 fields
+  Library.export037              | separate_header |  19 fields
+  Library.export038              | separate_header |  19 fields
+  Library.export039              | separate_header |  19 fields
+  Library.export040              | separate_header |  19 fields
+  Library.export041              | no_header       |  19 fields
+  Library.export042              | no_header       |  19 fields
+  Library.export043              | no_header       |  19 fields
+  Library.export044              | no_header       |  19 fields
+  Library.export045              | no_header       |  19 fields
+  Library.export046              | no_header       |  19 fields
+  Library.export047              | separate_header |  19 fields
+  Library.export048              | no_header       |  19 fields
+  Library.export049              | no_header       |  19 fields
+  Library.export050              | no_header       |  19 fields
+  Library.export051              | no_header       |  19 fields
+  Library.export052              | no_header       |  19 fields
+  Library.export053              | no_header       |  19 fields
+  Library.export054              | separate_header |  19 fields
+  Library.export055              | no_header       |  19 fields
+  Library.export056              | no_header       |  19 fields
+  Library.export057              | no_header       |  19 fields
+  Library.export058              | no_header       |  19 fields
+  Library.export059              | no_header       |  19 fields
+  Library.export060              | no_header       |  19 fields
+  Library.export061              | no_header       |  19 fields
+  Library.export062              | no_header       |  19 fields
+  Library.export063              | no_header       |  19 fields
+  Library.export064              | no_header       |  19 fields
+  Library.export065              | no_header       |  19 fields
+  Library.export066              | no_header       |  19 fields
+  Library.export067              | no_header       |  19 fields
+  Library.export068              | no_header       |  19 fields
+  Library.export069              | no_header       |  19 fields
+  Library.export070              | no_header       |  19 fields
+  Library.export071              | no_header       |  19 fields
+  Library.export072              | no_header       |  19 fields
+  Library.export073              | no_header       |  19 fields
+  Library.export074              | no_header       |  19 fields
+  Library.export075              | no_header       |  19 fields
+  Library.export076              | no_header       |  19 fields
+  Library.export077              | no_header       |  19 fields
+  Library.export078              | no_header       |  19 fields
+  Library.export079              | no_header       |  19 fields
+  Library.export080              | no_header       |  19 fields
+  Library.export081              | no_header       |  19 fields
+  Library.export082              | separate_header |  19 fields
+  Library.export083              | no_header       |  19 fields
+  Library.export084              | no_header       |  19 fields
+  Library.export085              | no_header       |  19 fields
+  Library.export086              | no_header       |  19 fields
+  Library.export087              | no_header       |  19 fields
+  Library.export088              | no_header       |  19 fields
+  Library.export089              | no_header       |  19 fields
+  Library.export090              | no_header       |  19 fields
+  Library.export091              | no_header       |  19 fields
+  Library.export092              | no_header       |  19 fields
+  Library.export093              | no_header       |  19 fields
+  Library.export094              | no_header       |  19 fields
+  Library.export095              | no_header       |  19 fields
+  Library.export096              | no_header       |  19 fields
+  Library.export097              | no_header       |  19 fields
+  Library.export098              | no_header       |  19 fields
+  Library.export099              | no_header       |  19 fields
+  Library.export100              | no_header       |  19 fields
+  Library.export101              | no_header       |  19 fields
+  Library.export102              | no_header       |  19 fields
+  Library.export103              | no_header       |  19 fields
+  Library.export104              | no_header       |  19 fields
+  Library.export105              | no_header       |  19 fields
+  Library.export106              | no_header       |  19 fields
+  Library.export107              | no_header       |  19 fields
+  Library.export108              | no_header       |  19 fields
+  Library.export109              | no_header       |  19 fields
+  Library.export110              | no_header       |  19 fields
+  Library.export111              | no_header       |  19 fields
+  Library.export112              | no_header       |  19 fields
+  Library.export113              | no_header       |  19 fields
+  Library.export114              | no_header       |  19 fields
+  Library.export115              | no_header       |  19 fields
+  Library.export116              | no_header       |  19 fields
+  Library.export117              | no_header       |  19 fields
+  Library.export118              | no_header       |  19 fields
+  Library.export119              | no_header       |  19 fields
+  Library.export120              | no_header       |  19 fields
+  Library.export121              | no_header       |  19 fields
+  Library.export122              | no_header       |  19 fields
+  Library.export123              | no_header       |  19 fields
+  Library.export124              | no_header       |  19 fields
+  Library.export125              | no_header       |  19 fields
+  Library.export126              | no_header       |  19 fields
+  Library.export127              | no_header       |  19 fields
+  Library.export128              | no_header       |  19 fields
+  Library.export129              | no_header       |  19 fields
+  Library.export130              | no_header       |  19 fields
+  Library.export131              | no_header       |  19 fields
+  Library.export132              | no_header       |  19 fields
+  Library.export133              | no_header       |  19 fields
+  Library.export134              | no_header       |  19 fields
+  Library.export135              | no_header       |  19 fields
+  Library.export136              | no_header       |  19 fields
+  Library.export137              | no_header       |  19 fields
+  Library.export138              | no_header       |  19 fields
+  Library.export139              | no_header       |  19 fields
+  Library.export140              | no_header       |  19 fields
+  Library.export141              | no_header       |  19 fields
+  Library.export142              | no_header       |  19 fields
+  Library.export143              | no_header       |  19 fields
+  Library.export144              | no_header       |  19 fields
+  Library.export145              | no_header       |  19 fields
+  Library.export146              | no_header       |  19 fields
+  Library.export147              | no_header       |  19 fields
+  Library.export148              | no_header       |  19 fields
+  Library.export149              | no_header       |  19 fields
+  Library.export150              | no_header       |  19 fields
+  Library.export151              | no_header       |  19 fields
+  Library.export152              | no_header       |  19 fields
+  Library.export153              | no_header       |  19 fields
+  Library.export154              | no_header       |  19 fields
+  Library.export155              | no_header       |  19 fields
+  Library.export156              | no_header       |  19 fields
+  Library.export157              | no_header       |  19 fields
+  Library.export158              | no_header       |  19 fields
+  Library.export159              | no_header       |  19 fields
+  Library.export160              | no_header       |  19 fields
+  Library.export161              | no_header       |  19 fields
+  Library.export162              | no_header       |  19 fields
+  Library.export163              | no_header       |  19 fields
+  Library.export164              | no_header       |  19 fields
+  Library.export165              | no_header       |  19 fields
+  166.txt                        | no_header       |  25 fields
+  167.txt                        | no_header       |  25 fields
+  168.txt                        | no_header       |  25 fields
+  169.txt                        | no_header       |  25 fields
+  170.txt                        | no_header       |  25 fields
+  171.txt                        | no_header       |  25 fields
+  172.txt                        | no_header       |  25 fields
+  173.txt                        | no_header       |  25 fields
+  174.txt                        | no_header       |  25 fields
+  175.txt                        | no_header       |  25 fields
+  176.txt                        | no_header       |  25 fields
+  177.txt                        | no_header       |  25 fields
+  178.txt                        | no_header       |  25 fields
+  179.txt                        | no_header       |  25 fields
+  180.txt                        | no_header       |  25 fields
+  181.txt                        | no_header       |  25 fields
+  182.txt                        | no_header       |  25 fields
+  183.txt                        | no_header       |  25 fields
+  184.txt                        | no_header       |  25 fields
+  185.txt                        | no_header       |  25 fields
+  186.txt                        | no_header       |  25 fields
+  187.txt                        | no_header       |  25 fields
+  188.txt                        | no_header       |  25 fields
+  189.txt                        | no_header       |  25 fields
+  190.txt                        | no_header       |  25 fields
+  191.txt                        | no_header       |  25 fields
+  192.txt                        | no_header       |  25 fields
+  193.txt                        | no_header       |  25 fields
+  194.txt                        | no_header       |  25 fields
+  195.txt                        | no_header       |  25 fields
+  196.txt                        | no_header       |  25 fields
+  197.txt                        | no_header       |  25 fields
+  198.txt                        | no_header       |  25 fields
+  199.txt                        | no_header       |  25 fields
+  200.txt                        | no_header       |  25 fields
+  201.txt                        | no_header       |  25 fields
+  202.txt                        | no_header       |  25 fields
+  203.txt                        | no_header       |  25 fields
+  204.txt                        | no_header       |  25 fields
+  205.txt                        | no_header       |  25 fields
+  206.txt                        | no_header       |  25 fields
+  207.txt                        | no_header       |  25 fields
+  208.txt                        | no_header       |  25 fields
+  209.txt                        | no_header       |  25 fields
+  210.txt                        | no_header       |  25 fields
+  211.txt                        | no_header       |  25 fields
+  212.txt                        | no_header       |  25 fields
+  213.txt                        | no_header       |  25 fields
+  214.txt                        | no_header       |  25 fields
+  215.txt                        | no_header       |  25 fields
+  216.txt                        | no_header       |  25 fields
+  217.txt                        | no_header       |  25 fields
+  218.txt                        | no_header       |  25 fields
+  219.txt                        | no_header       |  25 fields
+  220.txt                        | no_header       |  25 fields
+  221.txt                        | no_header       |  25 fields
+  222.txt                        | no_header       |  25 fields
+  223.txt                        | no_header       |  25 fields
+  224.txt                        | no_header       |  25 fields
+  225.txt                        | no_header       |  25 fields
+  226.txt                        | no_header       |  25 fields
+  227.txt                        | no_header       |  25 fields
+  228.txt                        | no_header       |  25 fields
+  229.txt                        | no_header       |  25 fields
+  230.txt                        | no_header       |  25 fields
+  231.txt                        | no_header       |  25 fields
+  232.txt                        | no_header       |  25 fields
+  233.txt                        | no_header       |  25 fields
+  234.txt                        | no_header       |  25 fields
+  235.txt                        | no_header       |  25 fields
+  236.txt                        | no_header       |  25 fields
+  237.txt                        | no_header       |  25 fields
+  238.txt                        | no_header       |  25 fields
+  239.txt                        | no_header       |  26 fields
+  240.txt                        | no_header       |  26 fields
+  241.txt                        | no_header       |  26 fields
+  242.txt                        | separate_header |  26 fields
+  243.txt                        | separate_header |  26 fields
+  244.txt                        | no_header       |  26 fields
+  245.txt                        | no_header       |  26 fields
+  246.txt                        | no_header       |  26 fields
+  247.txt                        | no_header       |  26 fields
+  248.txt                        | no_header       |  26 fields
+  249.txt                        | no_header       |  26 fields
+  250.txt                        | no_header       |  26 fields
+  251.txt                        | no_header       |  26 fields
+  252.txt                        | no_header       |  26 fields
+  253.txt                        | no_header       |  26 fields
+  254.txt                        | no_header       |  26 fields
+  255.txt                        | no_header       |  26 fields
+  256.txt                        | no_header       |  26 fields
+  257.txt                        | no_header       |  26 fields
+  258.txt                        | no_header       |  26 fields
+  259.txt                        | no_header       |  26 fields
+  260.txt                        | no_header       |  26 fields
+  261.txt                        | no_header       |  26 fields
+  262.txt                        | no_header       |  26 fields
+  263.txt                        | no_header       |  26 fields
+  264.txt                        | no_header       |  26 fields
+  265.txt                        | no_header       |  26 fields
+  266.txt                        | no_header       |  26 fields
+  267.txt                        | no_header       |  26 fields
+  268.txt                        | no_header       |  26 fields
+  269.txt                        | no_header       |  26 fields
+  270.txt                        | no_header       |  26 fields
+  271.txt                        | no_header       |  26 fields
+  272.txt                        | no_header       |  26 fields
+  273.txt                        | no_header       |  26 fields
+  274.txt                        | no_header       |  26 fields
+  275.txt                        | no_header       |  26 fields
+  276.txt                        | no_header       |  26 fields
+  277.txt                        | no_header       |  26 fields
+  278.txt                        | no_header       |  26 fields
+  279.txt                        | no_header       |  26 fields
+  280.txt                        | no_header       |  26 fields
+  281.txt                        | no_header       |  26 fields
+  282.txt                        | no_header       |  26 fields
+  283.txt                        | no_header       |  26 fields
+  284.txt                        | separate_header |  26 fields
+  285.txt                        | no_header       |  26 fields
+  286.txt                        | no_header       |  26 fields
+  287.txt                        | no_header       |  26 fields
+  288.txt                        | no_header       |  26 fields
+  289.txt                        | no_header       |  26 fields
+  290.txt                        | no_header       |  26 fields
+  291.txt                        | no_header       |  26 fields
+  292.txt                        | no_header       |  26 fields
+  293.txt                        | no_header       |  26 fields
+  MP3Vol294.txt                  | separate_header |  26 fields
+  MP3Vol295.txt                  | separate_header |  26 fields
+  MP3Vol296.txt                  | separate_header |  26 fields
+  MP3Vol297.txt                  | separate_header |  26 fields
+  MP3Vol298.txt                  | separate_header |  26 fields
+  MP3Vol299.txt                  | separate_header |  26 fields
+  MP3Vol300.txt                  | separate_header |  26 fields
+  MP3Vol301.txt                  | separate_header |  26 fields
+  MP3Vol302.txt                  | separate_header |  26 fields
+  MP3Vol303.txt                  | separate_header |  26 fields
+  MP3Vol304.txt                  | separate_header |  26 fields
+  MP3Vol305.txt                  | separate_header |  26 fields
+  MP3Vol306.txt                  | separate_header |  26 fields
+  MP3Vol307.txt                  | separate_header |  26 fields
+  MP3Vol308.txt                  | separate_header |  26 fields
+  MP3Vol309.txt                  | separate_header |  26 fields
+  MP3Vol310.txt                  | separate_header |  26 fields
+  MP3Vol311.txt                  | separate_header |  26 fields
+  MP3Vol312.txt                  | separate_header |  26 fields
+  MP3Vol313.txt                  | separate_header |  26 fields
+  MP3Vol314.txt                  | separate_header |  26 fields
+  MP3Vol315.txt                  | separate_header |  26 fields
+  MP3Vol316.txt                  | separate_header |  26 fields
+  MP3Vol317.txt                  | separate_header |  26 fields
+  MP3Vol318.txt                  | separate_header |  26 fields
+  MP3Vol319.txt                  | separate_header |  26 fields
+  MP3Vol320.txt                  | separate_header |  26 fields
+  MP3Vol321.txt                  | separate_header |  26 fields
+  MP3Vol322.txt                  | separate_header |  26 fields
+  MP3Vol323.txt                  | separate_header |  26 fields
+  MP3Vol324.txt                  | separate_header |  26 fields
+  MP3Vol325.txt                  | separate_header |  26 fields
+  MP3Vol326.txt                  | separate_header |  26 fields
+  MP3Vol327.txt                  | separate_header |  26 fields
+  MP3Vol328.txt                  | separate_header |  26 fields
+  MP3Vol329.txt                  | separate_header |  26 fields
+  MP3Vol330.txt                  | separate_header |  26 fields
+  MP3Vol331.txt                  | no_header       |  26 fields
+  MP3Vol332.txt                  | no_header       |  26 fields
+  MP3Vol333.txt                  | no_header       |  26 fields
+  MP3Vol334.txt                  | no_header       |  26 fields
+  MP3Vol335.txt                  | no_header       |  26 fields
+  MP3Vol336.txt                  | no_header       |  26 fields
+  MP3Vol337.txt                  | no_header       |  26 fields
+  MP3Vol338.txt                  | no_header       |  26 fields
+  MP3Vol339.txt                  | no_header       |  26 fields
+  MP3Vol340.txt                  | no_header       |  26 fields
+  MP3Vol341.txt                  | separate_header |  26 fields
+  MP3Vol342.txt                  | separate_header |  26 fields
+  MP3Vol343.txt                  | separate_header |  26 fields
+  MP3Vol344.txt                  | separate_header |  26 fields
+  MP3Vol345.txt                  | separate_header |  26 fields
+  MP3Vol346.txt                  | separate_header |  26 fields
+  MP3Vol347.txt                  | separate_header |  26 fields
+  MP3Vol348.txt                  | separate_header |  26 fields
+  MP3Vol349.txt                  | separate_header |  26 fields
+  MP3Vol350.txt                  | separate_header |  26 fields
+  MP3Vol351.txt                  | separate_header |  26 fields
+  MP3Vol352.txt                  | separate_header |  26 fields
+  MP3Vol353.txt                  | separate_header |  26 fields
+  MP3Vol354.txt                  | separate_header |  26 fields
+  MP3Vol355.txt                  | separate_header |  26 fields
+  MP3Vol356.txt                  | separate_header |  26 fields
+  MP3Vol357.txt                  | separate_header |  26 fields
+  MP3Vol358.txt                  | separate_header |  26 fields
+  MP3Vol359.txt                  | separate_header |  26 fields
+  MP3Vol360.txt                  | separate_header |  26 fields
+  MP3Vol361.txt                  | separate_header |  26 fields
+  MP3Vol362.txt                  | separate_header |  26 fields
+  MP3Vol363.txt                  | separate_header |  26 fields
+  MP3Vol364.txt                  | separate_header |  26 fields
+  MP3Vol365.txt                  | separate_header |  26 fields
+  MP3Vol366.txt                  | separate_header |  26 fields
+  MP3Vol367.txt                  | separate_header |  26 fields
+  MP3Vol368.txt                  | separate_header |  26 fields
+
+No errors encountered!
