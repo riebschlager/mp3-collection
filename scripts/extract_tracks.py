@@ -9,6 +9,15 @@ import json
 from pathlib import Path
 
 
+def is_valid_name(name):
+    """Check if a name is valid (not just question marks)"""
+    if not name:
+        return False
+    clean_name = str(name).strip()
+    # Check if name is only question marks or empty
+    return clean_name and clean_name != '?' and not all(c == '?' for c in clean_name)
+
+
 def sanitize_artist_name(name):
     """Remove leading/trailing quotation marks and move trailing articles to the beginning"""
     if not name:
@@ -64,6 +73,10 @@ def extract_tracks(csv_path, output_path=None):
             track_name = row.get('Name', '').strip()
             artist = sanitize_artist_name(row.get('Artist', '').strip())
             album = row.get('Album', '').strip()
+
+            # Skip tracks with invalid artist or album names (e.g., just question marks)
+            if not is_valid_name(artist) or not is_valid_name(album):
+                continue
 
             # Only add entries with non-empty track names
             if track_name:

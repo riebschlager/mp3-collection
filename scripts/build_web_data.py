@@ -12,6 +12,15 @@ from pathlib import Path
 from collections import defaultdict
 
 
+def is_valid_name(name):
+    """Check if a name is valid (not just question marks)"""
+    if not name:
+        return False
+    clean_name = str(name).strip()
+    # Check if name is only question marks or empty
+    return clean_name and clean_name != '?' and not all(c == '?' for c in clean_name)
+
+
 def slugify(text):
     """Convert text to URL-friendly slug"""
     if not text:
@@ -168,6 +177,11 @@ def build_web_data(csv_path, output_dir):
             # Extract all fields
             artist_name = sanitize_artist_name(safe_str(row.get('Artist'))) or 'Unknown Artist'
             album_name = safe_str(row.get('Album')) or 'Unknown Album'
+            
+            # Skip tracks with invalid artist or album names (e.g., just question marks)
+            if not is_valid_name(artist_name) or not is_valid_name(album_name):
+                continue
+            
             composer = safe_str(row.get('Composer'))
             genre = sanitize_genre(safe_str(row.get('Genre')))
             year = sanitize_year(row.get('Year'))

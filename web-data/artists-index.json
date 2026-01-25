@@ -346,14 +346,11 @@
     },
     {
       "slug": "unknown",
-      "name": "????",
-      "albumCount": 4,
-      "trackCount": 40,
+      "name": "?? ?",
+      "albumCount": 1,
+      "trackCount": 1,
       "albums": [
-        "?????????? ??????",
-        "????????????????????",
-        "KENJI",
-        "Lost In Translation"
+        "?????????? ??????"
       ]
     },
     {
@@ -7260,10 +7257,9 @@
     {
       "slug": "cop-shoot-cop",
       "name": "Cop Shoot Cop",
-      "albumCount": 5,
-      "trackCount": 25,
+      "albumCount": 4,
+      "trackCount": 24,
       "albums": [
-        "?",
         "Release",
         "Unknown Album",
         "White Noise",
@@ -30895,10 +30891,9 @@
     {
       "slug": "south-park",
       "name": "South Park",
-      "albumCount": 2,
-      "trackCount": 8,
+      "albumCount": 1,
+      "trackCount": 6,
       "albums": [
-        "???",
         "Comedy"
       ]
     },

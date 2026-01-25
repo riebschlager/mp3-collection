@@ -1,7 +1,7 @@
 {
-  "totalTracks": 48346,
+  "totalTracks": 48304,
   "totalArtists": 4167,
-  "totalAlbums": 3215,
+  "totalAlbums": 3214,
   "genres": [
     "!K7",
     "<Unknown>",
@@ -118,7 +118,6 @@
     "Industrial Dance",
     "Instrumental",
     "Italian Music",
-    "Japanese Psyche",
     "Jazz",
     "Jazz+Funk",
     "Jon",
@@ -282,12 +281,12 @@
     2006
   ],
   "stats": {
-    "totalSizeBytes": 126404421022,
-    "totalSizeGB": 117.72,
-    "totalDurationSeconds": 6043594,
-    "totalDurationHours": 1678.8,
-    "totalDurationFormatted": "1678h 46m",
-    "avgBitRate": 14789.7,
+    "totalSizeBytes": 126242772400,
+    "totalSizeGB": 117.57,
+    "totalDurationSeconds": 6033741,
+    "totalDurationHours": 1676.0,
+    "totalDurationFormatted": "1676h 2m",
+    "avgBitRate": 14814.8,
     "tracksWithPlayCount": 32,
     "tracksWithRating": 8424
   }
