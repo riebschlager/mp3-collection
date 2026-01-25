@@ -10,11 +10,7 @@ const firstChunk = await import('../../public/data/chunks/tracks-001.json');
 
 
 
-// Get most played tracks
-const mostPlayedTracks = firstChunk.tracks
-  .filter((t: any) => t.playCount > 0)
-  .sort((a: any, b: any) => b.playCount - a.playCount)
-  .slice(0, 10);
+
 ---
 
 <Layout title="MP3 Collection - Historical iTunes Library">

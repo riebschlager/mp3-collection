@@ -56,7 +56,6 @@ const sortedAlbums = Array.from(albumGroups.entries())
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Calculate statistics
-const totalPlayCount = allTracks.reduce((sum, t) => sum + (t.playCount || 0), 0);
 const totalDuration = allTracks.reduce((sum, t) => sum + (t.duration || 0), 0);
 ---
 

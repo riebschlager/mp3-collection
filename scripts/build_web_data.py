@@ -199,7 +199,6 @@ def build_web_data(csv_path, output_dir):
             disc_count = safe_int(row.get('Disc Count'))
 
             # User data
-            play_count = safe_int(row.get('Play Count'))
             rating = safe_int(row.get('My Rating'))
 
             # Dates and other metadata
@@ -238,7 +237,6 @@ def build_web_data(csv_path, output_dir):
                 'trackCount': track_count if track_count > 0 else None,
                 'discNumber': disc_number if disc_number > 0 else None,
                 'discCount': disc_count if disc_count > 0 else None,
-                'playCount': play_count,
                 'lastPlayed': last_played,
                 'rating': rating,
                 'dateAdded': date_added,
@@ -359,7 +357,6 @@ def build_web_data(csv_path, output_dir):
             'totalDurationHours': round(total_hours, 1),
             'totalDurationFormatted': f"{int(total_hours)}h {int((total_hours % 1) * 60)}m",
             'avgBitRate': round(avg_bitrate, 1),
-            'tracksWithPlayCount': sum(1 for t in tracks if t['playCount'] > 0),
             'tracksWithRating': sum(1 for t in tracks if t['rating'] > 0),
         }
     }
@@ -378,8 +375,7 @@ def build_web_data(csv_path, output_dir):
     print(f"Total Size:       {metadata['stats']['totalSizeGB']} GB")
     print(f"Total Duration:   {metadata['stats']['totalDurationFormatted']}")
     print(f"Avg Bit Rate:     {metadata['stats']['avgBitRate']} kbps")
-    print(f"Tracks Played:    {metadata['stats']['tracksWithPlayCount']:,}")
-    print(f"Tracks Rated:     {metadata['stats']['tracksWithRating']:,}")
+    print(f"Tracks Rated:     {metadata['stats']['tracksWithRating']:,}"
     print("="*60)
     print(f"\nOutput directory: {output_dir.absolute()}")
     print(f"Track chunks:     {total_chunks} files in {chunks_dir.name}/")

@@ -9,7 +9,6 @@ interface Track {
   duration: number;
   durationFormatted: string;
   year?: number;
-  playCount?: number;
 }
 
 interface Props {
@@ -51,9 +50,6 @@ const { tracks, showArtist = true, showAlbum = true } = Astro.props;
         <tr class="hover:bg-gray-50">
           <td class="px-6 py-4 whitespace-nowrap">
             <div class="text-sm font-medium text-gray-900">{track.name}</div>
-            {track.playCount > 0 && (
-              <div class="text-xs text-gray-500">Played {track.playCount} times</div>
-            )}
           </td>
           {showArtist && (
             <td class="px-6 py-4 whitespace-nowrap">
