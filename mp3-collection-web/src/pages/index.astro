@@ -58,14 +58,6 @@ const firstChunk = await import('../../public/data/chunks/tracks-001.json');
       </div>
     </div>
 
-    <!-- Most Played Tracks -->
-    {mostPlayedTracks.length > 0 && (
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Most Played Tracks</h2>
-        <TrackList tracks={mostPlayedTracks} />
-      </div>
-    )}
-
     <!-- Quick Navigation -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <a
