@@ -47,7 +47,13 @@ export async function getStaticPaths() {
 }
 
 const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro.props;
-const baseUrl = import.meta.env.BASE_URL;
+
+const buildUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const separator = base.endsWith('/') ? '' : '/';
+  return `${base}${separator}${cleanPath}`;
+};
 ---
 
 <Layout
@@ -75,7 +81,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <div>
           {currentPage > 1 ? (
             <a
-              href={`${baseUrl}tracks/${currentPage - 1}`}
+              href={buildUrl(`tracks/${currentPage - 1}`)}
               class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 inline-block"
             >
               ← Previous
@@ -92,7 +98,7 @@ const baseUrl = import.meta.env.BASE_URL;
           {/* Show first page */}
           {currentPage > 3 && (
             <>
-              <a href={`${baseUrl}tracks/1`} class="px-3 py-1 rounded hover:bg-gray-100">
+              <a href={buildUrl('tracks/1')} class="px-3 py-1 rounded hover:bg-gray-100">
                 1
               </a>
               {currentPage > 4 && <span class="text-gray-400">...</span>}
@@ -106,7 +112,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
             return (
               <a
-                href={`${baseUrl}tracks/${pageNum}`}
+                href={buildUrl(`tracks/${pageNum}`)}
                 class={`px-3 py-1 rounded ${
                   pageNum === currentPage
                     ? 'bg-blue-600 text-white'
@@ -122,7 +128,7 @@ const baseUrl = import.meta.env.BASE_URL;
           {currentPage < totalPages - 2 && (
             <>
               {currentPage < totalPages - 3 && <span class="text-gray-400">...</span>}
-              <a href={`${baseUrl}tracks/${totalPages}`} class="px-3 py-1 rounded hover:bg-gray-100">
+              <a href={buildUrl(`tracks/${totalPages}`)} class="px-3 py-1 rounded hover:bg-gray-100">
                 {totalPages}
               </a>
             </>
@@ -133,7 +139,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <div>
           {currentPage < totalPages ? (
             <a
-              href={`${baseUrl}tracks/${currentPage + 1}`}
+              href={buildUrl(`tracks/${currentPage + 1}`)}
               class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 inline-block"
             >
               Next →

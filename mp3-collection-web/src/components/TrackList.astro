@@ -18,7 +18,13 @@ interface Props {
 }
 
 const { tracks, showArtist = true, showAlbum = true } = Astro.props;
-const baseUrl = import.meta.env.BASE_URL;
+
+const buildUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const separator = base.endsWith('/') ? '' : '/';
+  return `${base}${separator}${cleanPath}`;
+};
 ---
 
 <div class="bg-white rounded-lg shadow overflow-hidden">
@@ -55,7 +61,7 @@ const baseUrl = import.meta.env.BASE_URL;
           {showArtist && (
             <td class="px-6 py-4 whitespace-nowrap">
               <a
-                href={`${baseUrl}artists/${track.artistSlug}`}
+                href={buildUrl(`artists/${track.artistSlug}`)}
                 class="text-sm text-blue-600 hover:text-blue-800"
               >
                 {track.artist}
@@ -65,7 +71,7 @@ const baseUrl = import.meta.env.BASE_URL;
           {showAlbum && (
             <td class="px-6 py-4 whitespace-nowrap">
               <a
-                href={`${baseUrl}albums/${track.albumSlug}`}
+                href={buildUrl(`albums/${track.albumSlug}`)}
                 class="text-sm text-blue-600 hover:text-blue-800"
               >
                 {track.album}

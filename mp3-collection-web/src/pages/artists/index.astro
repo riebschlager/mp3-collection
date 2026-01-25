@@ -18,7 +18,13 @@ sortedArtists.forEach(artist => {
 });
 
 const letters = Array.from(artistsByLetter.keys()).sort();
-const baseUrl = import.meta.env.BASE_URL;
+
+const buildUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const separator = base.endsWith('/') ? '' : '/';
+  return `${base}${separator}${cleanPath}`;
+};
 ---
 
 <Layout title="Artists - MP3 Collection" description={`Browse ${artistsIndex.total} artists from the MP3 collection`}>
@@ -79,7 +85,7 @@ const baseUrl = import.meta.env.BASE_URL;
                   <tr class="hover:bg-gray-50">
                     <td class="px-4 py-3">
                       <a
-                        href={`${baseUrl}artists/${artist.slug}`}
+                        href={buildUrl(`artists/${artist.slug}`)}
                         class="text-blue-600 font-medium hover:text-blue-800"
                       >
                         {artist.name}

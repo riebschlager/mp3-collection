@@ -7,7 +7,13 @@ interface Props {
 }
 
 const { title, description = 'Browse my historical iTunes MP3 collection from the early 2000s' } = Astro.props;
-const baseUrl = import.meta.env.BASE_URL;
+
+const buildUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const separator = base.endsWith('/') ? '' : '/';
+  return `${base}${separator}${cleanPath}`;
+};
 ---
 
 <!doctype html>
@@ -16,14 +22,14 @@ const baseUrl = import.meta.env.BASE_URL;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
+    <link rel="icon" type="image/svg+xml" href={buildUrl('favicon.svg')} />
     <title>{title}</title>
   </head>
   <body class="bg-gray-50 text-gray-900 min-h-screen">
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex items-center justify-between">
-          <a href={`${baseUrl}`} class="flex items-center space-x-2">
+          <a href={buildUrl('')} class="flex items-center space-x-2">
             <span class="text-2xl">🎵</span>
             <div>
               <h1 class="text-xl font-bold text-gray-900">MP3 Collection</h1>
@@ -31,9 +37,9 @@ const baseUrl = import.meta.env.BASE_URL;
             </div>
           </a>
           <div class="flex items-center space-x-4">
-            <a href={`${baseUrl}artists`} class="text-gray-600 hover:text-gray-900">Artists</a>
-            <a href={`${baseUrl}albums`} class="text-gray-600 hover:text-gray-900">Albums</a>
-            <a href={`${baseUrl}tracks/1`} class="text-gray-600 hover:text-gray-900">Tracks</a>
+            <a href={buildUrl('artists')} class="text-gray-600 hover:text-gray-900">Artists</a>
+            <a href={buildUrl('albums')} class="text-gray-600 hover:text-gray-900">Albums</a>
+            <a href={buildUrl('tracks/1')} class="text-gray-600 hover:text-gray-900">Tracks</a>
           </div>
         </div>
       </nav>
