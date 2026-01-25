@@ -42,6 +42,25 @@ def safe_str(value):
     return str(value).strip()
 
 
+def sanitize_artist_name(name):
+    """Remove leading/trailing quotation marks from artist names"""
+    if not name:
+        return name
+    # Remove leading and trailing triple quotes (""") and regular quotes (")
+    name = str(name).strip()
+    while name.startswith('"""') or name.startswith('"'):
+        if name.startswith('"""'):
+            name = name[3:]
+        else:
+            name = name[1:]
+    while name.endswith('"""') or name.endswith('"'):
+        if name.endswith('"""'):
+            name = name[:-3]
+        else:
+            name = name[:-1]
+    return name.strip()
+
+
 def format_duration(seconds):
     """Format duration in seconds to MM:SS format"""
     if not seconds:
@@ -83,7 +102,7 @@ def build_web_data(csv_path, output_dir):
                 continue
 
             # Extract all fields
-            artist_name = safe_str(row.get('Artist')) or 'Unknown Artist'
+            artist_name = sanitize_artist_name(safe_str(row.get('Artist'))) or 'Unknown Artist'
             album_name = safe_str(row.get('Album')) or 'Unknown Album'
             composer = safe_str(row.get('Composer'))
             genre = safe_str(row.get('Genre'))

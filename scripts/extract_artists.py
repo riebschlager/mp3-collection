@@ -9,6 +9,25 @@ import json
 from pathlib import Path
 
 
+def sanitize_artist_name(name):
+    """Remove leading/trailing quotation marks from artist names"""
+    if not name:
+        return name
+    # Remove leading and trailing triple quotes (""") and regular quotes (")
+    name = str(name).strip()
+    while name.startswith('"""') or name.startswith('"'):
+        if name.startswith('"""'):
+            name = name[3:]
+        else:
+            name = name[1:]
+    while name.endswith('"""') or name.endswith('"'):
+        if name.endswith('"""'):
+            name = name[:-3]
+        else:
+            name = name[:-1]
+    return name.strip()
+
+
 def extract_artists(csv_path, output_path=None):
     """
     Extract unique artists with their albums from the iTunes library CSV.
@@ -26,7 +45,7 @@ def extract_artists(csv_path, output_path=None):
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            artist = row.get('Artist', '').strip()
+            artist = sanitize_artist_name(row.get('Artist', '').strip())
             album = row.get('Album', '').strip()
 
             # Only add entries with non-empty artist names

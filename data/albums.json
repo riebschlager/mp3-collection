@@ -1208,7 +1208,7 @@
     {
       "album": "69 Love Songs Vol. 2",
       "artists": [
-        "\"Magnetic Fields, The\""
+        "Magnetic Fields, The"
       ]
     },
     {
@@ -2125,8 +2125,7 @@
     {
       "album": "Alternative Rock",
       "artists": [
-        "\"Causey Way, The\"",
-        "\"New Pornographers, The\"",
+        "Causey Way, The",
         "Dob Schneider",
         "Downer",
         "Dropkick Murphys",
@@ -2136,6 +2135,7 @@
         "Kristin Hersh",
         "Matthew Good Band",
         "Mirwais",
+        "New Pornographers, The",
         "Radiohead",
         "Schatzi",
         "Silver Scooter",
@@ -3601,7 +3601,6 @@
     {
       "album": "Blues",
       "artists": [
-        "\"Stan, Kyle And Eric\"",
         "Afghan Whigs",
         "Archie Edwards",
         "Boss Hog",
@@ -3630,6 +3629,7 @@
         "Sam Chatmon",
         "Sheryl Crow",
         "Spoon",
+        "Stan, Kyle And Eric",
         "Stefan Grossman (guitar solo)",
         "The People Of South Park",
         "Underwater People",
@@ -6293,9 +6293,6 @@
     {
       "album": "Electronic",
       "artists": [
-        "\"Books, The\"",
-        "\"Emerson, Lake & Palmer & Basem\"",
-        "\"stock, hausen & walkman\"",
         "8-bit apocalypse",
         "8O8 State",
         "Add N to X",
@@ -6316,6 +6313,7 @@
         "Blame",
         "Boards of Canada",
         "Bobby Orlando & Felix Da House",
+        "Books, The",
         "Brian Eno",
         "Brothomstates",
         "Carlos Morgan",
@@ -6334,6 +6332,7 @@
         "Dolly Parton & R�yksopp",
         "Electronicat",
         "Embassy",
+        "Emerson, Lake & Palmer & Basem",
         "Frank Delour & the Residents",
         "Funkacise Gang & Soul Grabber",
         "Funkstorung",
@@ -6426,6 +6425,7 @@
         "skanfrom",
         "solaris",
         "solvent",
+        "stock, hausen & walkman",
         "styrofoam",
         "the Cramps",
         "the Stooges & Salt 'n' Pepa",
@@ -7332,7 +7332,7 @@
     {
       "album": "Fusion",
       "artists": [
-        "\"Medeski, Martin, And Wood\""
+        "Medeski, Martin, And Wood"
       ]
     },
     {
@@ -7906,7 +7906,7 @@
     {
       "album": "Gospel",
       "artists": [
-        "\"Gillian Welch, Allison Krauss & Emmylou Harris\""
+        "Gillian Welch, Allison Krauss & Emmylou Harris"
       ]
     },
     {
@@ -9349,7 +9349,6 @@
     {
       "album": "Instrumental",
       "artists": [
-        "\"Up, Bustle & Out\"",
         "3 Leg Torso",
         "A Forest Mighty Black",
         "Air",
@@ -9364,7 +9363,8 @@
         "The Album Leaf",
         "The Karminsky Experience Inc",
         "Thievery Corporation",
-        "Ultrasound"
+        "Ultrasound",
+        "Up, Bustle & Out"
       ]
     },
     {
@@ -12792,7 +12792,6 @@
     {
       "album": "Other",
       "artists": [
-        "\"Glennmark, Eriksson, Str�msted\"",
         "1 Giant Leap",
         "A Certain Ratio",
         "Aloha",
@@ -12823,6 +12822,7 @@
         "Feven",
         "Friends",
         "Geddy Lee And Alex Lifeson",
+        "Glennmark, Eriksson, Str�msted",
         "Godspeed You Black Emperor!",
         "Grandaddy",
         "Great Big Sea",
@@ -13525,7 +13525,6 @@
     {
       "album": "Pop",
       "artists": [
-        "\"Geto Boys, The\"",
         "21stCENTURY - ATeens",
         "Aaron Bingle",
         "Aaron Bingle/venomspace",
@@ -13544,6 +13543,7 @@
         "Elvis Presley",
         "Familiar 48",
         "Francid Poulenc",
+        "Geto Boys, The",
         "Gravity Kills",
         "Great Big Sea",
         "H2O",
@@ -14535,8 +14535,6 @@
     {
       "album": "Reggae",
       "artists": [
-        "\"Lee \"\"Scratch\"\" Perry\"",
-        "\"Sly, Lenky & Frenchie\"",
         "AMUDARJAH",
         "Alton Ellis & The Flames",
         "Andrew Bradford",
@@ -14556,6 +14554,7 @@
         "JAH DIVISION",
         "JAH TORCH",
         "Jimmy Cliff",
+        "Lee \"\"Scratch\"\" Perry",
         "Lee Perry",
         "Lee Scratch Perry",
         "Lenky",
@@ -14572,6 +14571,7 @@
         "Sir Lord Comic",
         "Slam Productions",
         "Sly & Lenky",
+        "Sly, Lenky & Frenchie",
         "Steely And Clevie",
         "Stranger Cole",
         "The Ethiopians",
@@ -14700,7 +14700,7 @@
     {
       "album": "Requiem in d-moll",
       "artists": [
-        "\"Mozart, Wolfgang Amadeus\""
+        "Mozart, Wolfgang Amadeus"
       ]
     },
     {
@@ -14845,8 +14845,6 @@
     {
       "album": "Rock",
       "artists": [
-        "\"Hazlewood, Lee\"",
-        "\"Joe, Marc's Brother\"",
         "10 CC",
         "Abandoned Pools",
         "Aden",
@@ -14927,6 +14925,7 @@
         "Guano Apes",
         "Guided By Voices",
         "Guns n' Roses",
+        "Hazlewood, Lee",
         "Heavy Blinkers",
         "Heavy Vegetable",
         "Henry's Dress",
@@ -14940,6 +14939,7 @@
         "JJ Cale",
         "Jimi Hendrix",
         "Jimmy Eat World",
+        "Joe, Marc's Brother",
         "Judas Priest",
         "Kinks",
         "Le Tigre",
@@ -21608,7 +21608,6 @@
     {
       "album": "genre",
       "artists": [
-        "\"Joe, Marc's Brother\"",
         "764-Hero",
         "Andrew W.K.",
         "Brideshead",
@@ -21618,6 +21617,7 @@
         "Gorillaz",
         "Great Big Sea",
         "Husker Du",
+        "Joe, Marc's Brother",
         "Josh Rouse",
         "Liars",
         "Low",

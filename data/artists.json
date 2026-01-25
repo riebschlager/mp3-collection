@@ -2,121 +2,6 @@
   "total_artists": 4369,
   "artists": [
     {
-      "artist": "\"10,000 Maniacs\"",
-      "albums": []
-    },
-    {
-      "artist": "\"Books, The\"",
-      "albums": [
-        "Electronic"
-      ]
-    },
-    {
-      "artist": "\"Causey Way, The\"",
-      "albums": [
-        "Alternative Rock"
-      ]
-    },
-    {
-      "artist": "\"Data 80 - Baby, I Can Forgive\"",
-      "albums": []
-    },
-    {
-      "artist": "\"Emerson, Lake & Palmer & Basem\"",
-      "albums": [
-        "Electronic"
-      ]
-    },
-    {
-      "artist": "\"Geto Boys, The\"",
-      "albums": [
-        "Pop"
-      ]
-    },
-    {
-      "artist": "\"Gillian Welch, Allison Krauss & Emmylou Harris\"",
-      "albums": [
-        "Gospel"
-      ]
-    },
-    {
-      "artist": "\"Glennmark, Eriksson, Str�msted\"",
-      "albums": [
-        "Other"
-      ]
-    },
-    {
-      "artist": "\"Hazlewood, Lee\"",
-      "albums": [
-        "Rock"
-      ]
-    },
-    {
-      "artist": "\"Joe, Marc's Brother\"",
-      "albums": [
-        "Rock",
-        "genre"
-      ]
-    },
-    {
-      "artist": "\"Lee \"\"Scratch\"\" Perry\"",
-      "albums": [
-        "Reggae"
-      ]
-    },
-    {
-      "artist": "\"Magnetic Fields, The\"",
-      "albums": [
-        "69 Love Songs Vol. 2"
-      ]
-    },
-    {
-      "artist": "\"Medeski, Martin, And Wood\"",
-      "albums": [
-        "Fusion"
-      ]
-    },
-    {
-      "artist": "\"Mozart, Wolfgang Amadeus\"",
-      "albums": [
-        "Requiem in d-moll"
-      ]
-    },
-    {
-      "artist": "\"New Pornographers, The\"",
-      "albums": [
-        "Alternative Rock"
-      ]
-    },
-    {
-      "artist": "\"Paul Williams, Composer\"",
-      "albums": []
-    },
-    {
-      "artist": "\"Sly, Lenky & Frenchie\"",
-      "albums": [
-        "Reggae"
-      ]
-    },
-    {
-      "artist": "\"Stan, Kyle And Eric\"",
-      "albums": [
-        "Blues"
-      ]
-    },
-    {
-      "artist": "\"Up, Bustle & Out\"",
-      "albums": [
-        "Instrumental"
-      ]
-    },
-    {
-      "artist": "\"stock, hausen & walkman\"",
-      "albums": [
-        "Electronic"
-      ]
-    },
-    {
       "artist": "(Space Ghost)",
       "albums": []
     },
@@ -133,6 +18,10 @@
       "albums": [
         "Rock"
       ]
+    },
+    {
+      "artist": "10,000 Maniacs",
+      "albums": []
     },
     {
       "artist": "1208",
@@ -3232,6 +3121,12 @@
       ]
     },
     {
+      "artist": "Books, The",
+      "albums": [
+        "Electronic"
+      ]
+    },
+    {
       "artist": "Boom Bip",
       "albums": [
         "Seed To Sun-ADVANCE"
@@ -3980,6 +3875,12 @@
     {
       "artist": "Cathy Claret",
       "albums": []
+    },
+    {
+      "artist": "Causey Way, The",
+      "albums": [
+        "Alternative Rock"
+      ]
     },
     {
       "artist": "Ce Ce*",
@@ -5543,6 +5444,10 @@
       ]
     },
     {
+      "artist": "Data 80 - Baby, I Can Forgive",
+      "albums": []
+    },
+    {
       "artist": "Data 80 - Love Was Made For Two",
       "albums": []
     },
@@ -7065,6 +6970,12 @@
       ]
     },
     {
+      "artist": "Emerson, Lake & Palmer & Basem",
+      "albums": [
+        "Electronic"
+      ]
+    },
+    {
       "artist": "Emery",
       "albums": [
         "Punk Goes 80's"
@@ -8364,6 +8275,12 @@
       "albums": []
     },
     {
+      "artist": "Geto Boys, The",
+      "albums": [
+        "Pop"
+      ]
+    },
+    {
       "artist": "Getting Away with It",
       "albums": []
     },
@@ -8454,6 +8371,12 @@
       ]
     },
     {
+      "artist": "Gillian Welch, Allison Krauss & Emmylou Harris",
+      "albums": [
+        "Gospel"
+      ]
+    },
+    {
       "artist": "Gin Blossoms",
       "albums": [
         "Rock/Pop"
@@ -8493,6 +8416,12 @@
       "artist": "Glenn Gould",
       "albums": [
         "Haydn: Glenn Gould, The Six Last Sonatas"
+      ]
+    },
+    {
+      "artist": "Glennmark, Eriksson, Str�msted",
+      "albums": [
+        "Other"
       ]
     },
     {
@@ -9097,6 +9026,12 @@
       "albums": [
         "Elk-Lake Serenade",
         "Meditative"
+      ]
+    },
+    {
+      "artist": "Hazlewood, Lee",
+      "albums": [
+        "Rock"
       ]
     },
     {
@@ -10517,6 +10452,13 @@
       ]
     },
     {
+      "artist": "Joe, Marc's Brother",
+      "albums": [
+        "Rock",
+        "genre"
+      ]
+    },
+    {
       "artist": "Joey Ramone",
       "albums": [
         "Punk Rock"
@@ -11796,6 +11738,12 @@
       ]
     },
     {
+      "artist": "Lee \"\"Scratch\"\" Perry",
+      "albums": [
+        "Reggae"
+      ]
+    },
+    {
       "artist": "Lee Perry",
       "albums": [
         "Reggae"
@@ -12577,6 +12525,12 @@
       ]
     },
     {
+      "artist": "Magnetic Fields, The",
+      "albums": [
+        "69 Love Songs Vol. 2"
+      ]
+    },
+    {
       "artist": "Magnolia Electric Company",
       "albums": [
         "Trials And Errors"
@@ -13061,6 +13015,12 @@
       "artist": "Medeski, Martin And Wood",
       "albums": [
         "Combustication"
+      ]
+    },
+    {
+      "artist": "Medeski, Martin, And Wood",
+      "albums": [
+        "Fusion"
       ]
     },
     {
@@ -13745,6 +13705,12 @@
       "albums": []
     },
     {
+      "artist": "Mozart, Wolfgang Amadeus",
+      "albums": [
+        "Requiem in d-moll"
+      ]
+    },
+    {
       "artist": "Mr Garrison",
       "albums": [
         "Mr. Hankey's Christmas Classic"
@@ -14361,6 +14327,12 @@
       "artist": "New Order & Detroit Grand Puba",
       "albums": [
         "Electronic"
+      ]
+    },
+    {
+      "artist": "New Pornographers, The",
+      "albums": [
+        "Alternative Rock"
       ]
     },
     {
@@ -15291,6 +15263,10 @@
         "Rock",
         "genre"
       ]
+    },
+    {
+      "artist": "Paul Williams, Composer",
+      "albums": []
     },
     {
       "artist": "Pavement",
@@ -18484,6 +18460,12 @@
       ]
     },
     {
+      "artist": "Sly, Lenky & Frenchie",
+      "albums": [
+        "Reggae"
+      ]
+    },
+    {
       "artist": "Sly, Lenky, & Frenchie",
       "albums": [
         "Now Thing"
@@ -19086,6 +19068,12 @@
       "artist": "Stan Tracy",
       "albums": [
         "Impressed with Gilles Peterson Vol. 2"
+      ]
+    },
+    {
+      "artist": "Stan, Kyle And Eric",
+      "albums": [
+        "Blues"
       ]
     },
     {
@@ -23214,6 +23202,12 @@
       ]
     },
     {
+      "artist": "Up, Bustle & Out",
+      "albums": [
+        "Instrumental"
+      ]
+    },
+    {
       "artist": "Ural 13 Diktators",
       "albums": [
         "Electronic"
@@ -26251,6 +26245,12 @@
       "artist": "stick",
       "albums": [
         "Disgruntled Ex-Employee"
+      ]
+    },
+    {
+      "artist": "stock, hausen & walkman",
+      "albums": [
+        "Electronic"
       ]
     },
     {

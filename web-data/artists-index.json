@@ -2,162 +2,6 @@
   "total": 4172,
   "artists": [
     {
-      "slug": "10000-maniacs",
-      "name": "\"10,000 Maniacs\"",
-      "albumCount": 1,
-      "trackCount": 3,
-      "albums": [
-        "Unknown Album"
-      ]
-    },
-    {
-      "slug": "books-the",
-      "name": "\"Books, The\"",
-      "albumCount": 2,
-      "trackCount": 10,
-      "albums": [
-        "Electronic",
-        "Unknown Album"
-      ]
-    },
-    {
-      "slug": "causey-way-the",
-      "name": "\"Causey Way, The\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Alternative Rock"
-      ]
-    },
-    {
-      "slug": "data-80-baby-i-can-forgive",
-      "name": "\"Data 80 - Baby, I Can Forgive\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Unknown Album"
-      ]
-    },
-    {
-      "slug": "emerson-lake-palmer-basem",
-      "name": "\"Emerson, Lake & Palmer & Basem\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Electronic"
-      ]
-    },
-    {
-      "slug": "geto-boys-the",
-      "name": "\"Geto Boys, The\"",
-      "albumCount": 1,
-      "trackCount": 10,
-      "albums": [
-        "Pop"
-      ]
-    },
-    {
-      "slug": "gillian-welch-allison-krauss-emmylou-harris",
-      "name": "\"Gillian Welch, Allison Krauss & Emmylou Harris\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Gospel"
-      ]
-    },
-    {
-      "slug": "glennmark-eriksson-strmsted",
-      "name": "\"Glennmark, Eriksson, Str�msted\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Other"
-      ]
-    },
-    {
-      "slug": "hazlewood-lee",
-      "name": "\"Hazlewood, Lee\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Rock"
-      ]
-    },
-    {
-      "slug": "joe-marcs-brother",
-      "name": "\"Joe, Marc's Brother\"",
-      "albumCount": 3,
-      "trackCount": 8,
-      "albums": [
-        "Rock",
-        "Unknown Album",
-        "genre"
-      ]
-    },
-    {
-      "slug": "magnetic-fields-the",
-      "name": "\"Magnetic Fields, The\"",
-      "albumCount": 1,
-      "trackCount": 23,
-      "albums": [
-        "69 Love Songs Vol. 2"
-      ]
-    },
-    {
-      "slug": "mozart-wolfgang-amadeus",
-      "name": "\"Mozart, Wolfgang Amadeus\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Requiem in d-moll"
-      ]
-    },
-    {
-      "slug": "new-pornographers-the",
-      "name": "\"New Pornographers, The\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Alternative Rock"
-      ]
-    },
-    {
-      "slug": "paul-williams-composer",
-      "name": "\"Paul Williams, Composer\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Unknown Album"
-      ]
-    },
-    {
-      "slug": "stan-kyle-and-eric",
-      "name": "\"Stan, Kyle And Eric\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Blues"
-      ]
-    },
-    {
-      "slug": "stock-hausen-walkman",
-      "name": "\"stock, hausen & walkman\"",
-      "albumCount": 1,
-      "trackCount": 13,
-      "albums": [
-        "Electronic"
-      ]
-    },
-    {
-      "slug": "up-bustle-out",
-      "name": "\"Up, Bustle & Out\"",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Instrumental"
-      ]
-    },
-    {
       "slug": "1-giant-leap",
       "name": "1 Giant Leap",
       "albumCount": 4,
@@ -176,6 +20,15 @@
       "trackCount": 1,
       "albums": [
         "Rock"
+      ]
+    },
+    {
+      "slug": "10000-maniacs",
+      "name": "10,000 Maniacs",
+      "albumCount": 1,
+      "trackCount": 3,
+      "albums": [
+        "Unknown Album"
       ]
     },
     {
@@ -5110,6 +4963,16 @@
       ]
     },
     {
+      "slug": "books-the",
+      "name": "Books, The",
+      "albumCount": 2,
+      "trackCount": 10,
+      "albums": [
+        "Electronic",
+        "Unknown Album"
+      ]
+    },
+    {
       "slug": "boom-bip",
       "name": "Boom Bip",
       "albumCount": 1,
@@ -6254,6 +6117,15 @@
       "trackCount": 1,
       "albums": [
         "Unknown Album"
+      ]
+    },
+    {
+      "slug": "causey-way-the",
+      "name": "Causey Way, The",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Alternative Rock"
       ]
     },
     {
@@ -8420,6 +8292,15 @@
       "trackCount": 12,
       "albums": [
         "Emo",
+        "Unknown Album"
+      ]
+    },
+    {
+      "slug": "data-80-baby-i-can-forgive",
+      "name": "Data 80 - Baby, I Can Forgive",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
         "Unknown Album"
       ]
     },
@@ -11336,6 +11217,15 @@
       ]
     },
     {
+      "slug": "emerson-lake-palmer-basem",
+      "name": "Emerson, Lake & Palmer & Basem",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Electronic"
+      ]
+    },
+    {
       "slug": "emery",
       "name": "Emery",
       "albumCount": 1,
@@ -13580,6 +13470,15 @@
       ]
     },
     {
+      "slug": "geto-boys-the",
+      "name": "Geto Boys, The",
+      "albumCount": 1,
+      "trackCount": 10,
+      "albums": [
+        "Pop"
+      ]
+    },
+    {
       "slug": "getting-away-with-it",
       "name": "Getting Away with It",
       "albumCount": 1,
@@ -13732,6 +13631,15 @@
       ]
     },
     {
+      "slug": "gillian-welch-allison-krauss-emmylou-harris",
+      "name": "Gillian Welch, Allison Krauss & Emmylou Harris",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Gospel"
+      ]
+    },
+    {
       "slug": "gin-blossoms",
       "name": "Gin Blossoms",
       "albumCount": 1,
@@ -13810,6 +13718,15 @@
       "trackCount": 4,
       "albums": [
         "Haydn: Glenn Gould, The Six Last Sonatas"
+      ]
+    },
+    {
+      "slug": "glennmark-eriksson-strmsted",
+      "name": "Glennmark, Eriksson, Str�msted",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Other"
       ]
     },
     {
@@ -14688,6 +14605,15 @@
       "albums": [
         "Elk-Lake Serenade",
         "Meditative"
+      ]
+    },
+    {
+      "slug": "hazlewood-lee",
+      "name": "Hazlewood, Lee",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Rock"
       ]
     },
     {
@@ -17136,6 +17062,17 @@
       "trackCount": 10,
       "albums": [
         "Rock Art And the X-Ray Style"
+      ]
+    },
+    {
+      "slug": "joe-marcs-brother",
+      "name": "Joe, Marc's Brother",
+      "albumCount": 3,
+      "trackCount": 8,
+      "albums": [
+        "Rock",
+        "Unknown Album",
+        "genre"
       ]
     },
     {
@@ -20436,6 +20373,15 @@
       ]
     },
     {
+      "slug": "magnetic-fields-the",
+      "name": "Magnetic Fields, The",
+      "albumCount": 1,
+      "trackCount": 23,
+      "albums": [
+        "69 Love Songs Vol. 2"
+      ]
+    },
+    {
       "slug": "magnolia-electric-company",
       "name": "Magnolia Electric Company",
       "albumCount": 1,
@@ -22423,6 +22369,15 @@
       ]
     },
     {
+      "slug": "mozart-wolfgang-amadeus",
+      "name": "Mozart, Wolfgang Amadeus",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Requiem in d-moll"
+      ]
+    },
+    {
       "slug": "mp3vol72alkaline-trio-b-sides02-alkaline-trioustic-eismp3",
       "name": "MP3Vol72:alkaline trio - b sides:02-alkaline trioustic)-EiS.mp3",
       "albumCount": 1,
@@ -23458,6 +23413,15 @@
       "trackCount": 1,
       "albums": [
         "Electronic"
+      ]
+    },
+    {
+      "slug": "new-pornographers-the",
+      "name": "New Pornographers, The",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Alternative Rock"
       ]
     },
     {
@@ -25072,6 +25036,15 @@
         "Rock",
         "Unknown Album",
         "genre"
+      ]
+    },
+    {
+      "slug": "paul-williams-composer",
+      "name": "Paul Williams, Composer",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Unknown Album"
       ]
     },
     {
@@ -31457,6 +31430,15 @@
       ]
     },
     {
+      "slug": "stan-kyle-and-eric",
+      "name": "Stan, Kyle And Eric",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Blues"
+      ]
+    },
+    {
       "slug": "standtoreason",
       "name": "standtoreason",
       "albumCount": 1,
@@ -31887,6 +31869,15 @@
       "albums": [
         "Punk",
         "Unknown Album"
+      ]
+    },
+    {
+      "slug": "stock-hausen-walkman",
+      "name": "stock, hausen & walkman",
+      "albumCount": 1,
+      "trackCount": 13,
+      "albums": [
+        "Electronic"
       ]
     },
     {
@@ -38381,6 +38372,15 @@
       "trackCount": 8,
       "albums": [
         "Leaves turn..."
+      ]
+    },
+    {
+      "slug": "up-bustle-out",
+      "name": "Up, Bustle & Out",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Instrumental"
       ]
     },
     {
