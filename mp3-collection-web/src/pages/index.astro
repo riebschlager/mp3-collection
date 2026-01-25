@@ -8,6 +8,8 @@ const metadata = await import('../../public/data/metadata.json');
 // Load first chunk of tracks
 const firstChunk = await import('../../public/data/chunks/tracks-001.json');
 
+const baseUrl = import.meta.env.BASE_URL;
+
 
 
 
@@ -61,21 +63,21 @@ const firstChunk = await import('../../public/data/chunks/tracks-001.json');
     <!-- Quick Navigation -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <a
-        href="/artists"
+        href={`${baseUrl}artists`}
         class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg shadow-lg p-8 hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105"
       >
         <h3 class="text-2xl font-bold mb-2">Browse Artists</h3>
         <p class="text-blue-100">Explore {metadata.totalArtists?.toLocaleString()} artists</p>
       </a>
       <a
-        href="/albums"
+        href={`${baseUrl}albums`}
         class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-lg shadow-lg p-8 hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105"
       >
         <h3 class="text-2xl font-bold mb-2">Browse Albums</h3>
         <p class="text-green-100">Discover {metadata.totalAlbums?.toLocaleString()} albums</p>
       </a>
       <a
-        href="/tracks/1"
+        href={`${baseUrl}tracks/1`}
         class="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-lg shadow-lg p-8 hover:from-purple-600 hover:to-purple-700 transition-all transform hover:scale-105"
       >
         <h3 class="text-2xl font-bold mb-2">Browse Tracks</h3>

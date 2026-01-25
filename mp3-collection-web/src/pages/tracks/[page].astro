@@ -47,6 +47,7 @@ export async function getStaticPaths() {
 }
 
 const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -74,7 +75,7 @@ const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro
         <div>
           {currentPage > 1 ? (
             <a
-              href={`/tracks/${currentPage - 1}`}
+              href={`${baseUrl}tracks/${currentPage - 1}`}
               class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 inline-block"
             >
               ← Previous
@@ -91,7 +92,7 @@ const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro
           {/* Show first page */}
           {currentPage > 3 && (
             <>
-              <a href="/tracks/1" class="px-3 py-1 rounded hover:bg-gray-100">
+              <a href={`${baseUrl}tracks/1`} class="px-3 py-1 rounded hover:bg-gray-100">
                 1
               </a>
               {currentPage > 4 && <span class="text-gray-400">...</span>}
@@ -105,7 +106,7 @@ const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro
 
             return (
               <a
-                href={`/tracks/${pageNum}`}
+                href={`${baseUrl}tracks/${pageNum}`}
                 class={`px-3 py-1 rounded ${
                   pageNum === currentPage
                     ? 'bg-blue-600 text-white'
@@ -121,7 +122,7 @@ const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro
           {currentPage < totalPages - 2 && (
             <>
               {currentPage < totalPages - 3 && <span class="text-gray-400">...</span>}
-              <a href={`/tracks/${totalPages}`} class="px-3 py-1 rounded hover:bg-gray-100">
+              <a href={`${baseUrl}tracks/${totalPages}`} class="px-3 py-1 rounded hover:bg-gray-100">
                 {totalPages}
               </a>
             </>
@@ -132,7 +133,7 @@ const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro
         <div>
           {currentPage < totalPages ? (
             <a
-              href={`/tracks/${currentPage + 1}`}
+              href={`${baseUrl}tracks/${currentPage + 1}`}
               class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 inline-block"
             >
               Next →

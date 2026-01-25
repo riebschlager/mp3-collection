@@ -23,6 +23,8 @@ const letters = Array.from(albumsByLetter.keys()).sort((a, b) => {
   if (b === '#') return -1;
   return a.localeCompare(b);
 });
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Albums - MP3 Collection" description={`Browse ${albumsIndex.total} albums from the MP3 collection`}>
@@ -83,7 +85,7 @@ const letters = Array.from(albumsByLetter.keys()).sort((a, b) => {
                   <tr class="hover:bg-gray-50">
                     <td class="px-4 py-3">
                       <a
-                        href={`/albums/${album.slug}`}
+                        href={`${baseUrl}albums/${album.slug}`}
                         class="text-green-600 font-medium hover:text-green-800"
                       >
                         {album.name}

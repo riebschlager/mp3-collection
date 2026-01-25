@@ -18,6 +18,7 @@ sortedArtists.forEach(artist => {
 });
 
 const letters = Array.from(artistsByLetter.keys()).sort();
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Artists - MP3 Collection" description={`Browse ${artistsIndex.total} artists from the MP3 collection`}>
@@ -78,7 +79,7 @@ const letters = Array.from(artistsByLetter.keys()).sort();
                   <tr class="hover:bg-gray-50">
                     <td class="px-4 py-3">
                       <a
-                        href={`/artists/${artist.slug}`}
+                        href={`${baseUrl}artists/${artist.slug}`}
                         class="text-blue-600 font-medium hover:text-blue-800"
                       >
                         {artist.name}
