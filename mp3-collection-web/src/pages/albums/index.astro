@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Load all albums
+const albumsIndex = await import('../../../public/data/albums-index.json');
+
+// Sort alphabetically
+const sortedAlbums = [...albumsIndex.albums].sort((a, b) => a.name.localeCompare(b.name));
+
+// Group by first letter/character
+const albumsByLetter = new Map<string, any[]>();
+sortedAlbums.forEach(album => {
+  const firstChar = album.name[0].toUpperCase();
+  const letter = /[A-Z]/.test(firstChar) ? firstChar : '#';
+  if (!albumsByLetter.has(letter)) {
+    albumsByLetter.set(letter, []);
+  }
+  albumsByLetter.get(letter)!.push(album);
+});
+
+const letters = Array.from(albumsByLetter.keys()).sort((a, b) => {
+  if (a === '#') return 1;
+  if (b === '#') return -1;
+  return a.localeCompare(b);
+});
+---
+
+<Layout title="Albums - MP3 Collection" description={`Browse ${albumsIndex.total} albums from the MP3 collection`}>
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">Albums</h1>
+      <p class="text-gray-600">{albumsIndex.total.toLocaleString()} albums in the collection</p>
+    </div>
+
+    <!-- Letter Navigation -->
+    <div class="bg-white rounded-lg shadow p-4 sticky top-20 z-40">
+      <div class="flex flex-wrap gap-2 justify-center">
+        {letters.map(letter => (
+          <a
+            href={`#${letter}`}
+            class="px-3 py-1 bg-green-100 text-green-700 hover:bg-green-200 rounded font-medium"
+          >
+            {letter}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Album Listings -->
+    {letters.map(letter => {
+      const albums = albumsByLetter.get(letter) || [];
+      return (
+        <div id={letter} class="scroll-mt-32">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4 border-b-2 border-green-500 pb-2">
+            {letter}
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {albums.map(album => (
+              <a
+                href={`/albums/${album.slug}`}
+                class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-4"
+              >
+                <h3 class="font-semibold text-gray-900 mb-1">{album.name}</h3>
+                <p class="text-sm text-gray-600 mb-1">
+                  {album.artists.slice(0, 2).join(', ')}
+                  {album.artists.length > 2 && ` +${album.artists.length - 2} more`}
+                </p>
+                <p class="text-xs text-gray-500">
+                  {album.trackCount} tracks
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</Layout>

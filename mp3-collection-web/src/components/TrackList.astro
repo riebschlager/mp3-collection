@@ -1,0 +1,101 @@
+---
+interface Track {
+  id: string;
+  name: string;
+  artist: string;
+  artistSlug: string;
+  album: string;
+  albumSlug: string;
+  duration: number;
+  durationFormatted: string;
+  year?: number;
+  rating?: number;
+  playCount?: number;
+}
+
+interface Props {
+  tracks: Track[];
+  showArtist?: boolean;
+  showAlbum?: boolean;
+}
+
+const { tracks, showArtist = true, showAlbum = true } = Astro.props;
+
+function getRatingStars(rating: number | undefined): string {
+  if (!rating) return '';
+  const stars = rating / 20; // Rating is 0-100, convert to 0-5
+  return '⭐'.repeat(Math.floor(stars));
+}
+---
+
+<div class="bg-white rounded-lg shadow overflow-hidden">
+  <table class="min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Track
+        </th>
+        {showArtist && (
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Artist
+          </th>
+        )}
+        {showAlbum && (
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Album
+          </th>
+        )}
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Year
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Duration
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Rating
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      {tracks.map((track) => (
+        <tr class="hover:bg-gray-50">
+          <td class="px-6 py-4 whitespace-nowrap">
+            <div class="text-sm font-medium text-gray-900">{track.name}</div>
+            {track.playCount > 0 && (
+              <div class="text-xs text-gray-500">Played {track.playCount} times</div>
+            )}
+          </td>
+          {showArtist && (
+            <td class="px-6 py-4 whitespace-nowrap">
+              <a
+                href={`/artists/${track.artistSlug}`}
+                class="text-sm text-blue-600 hover:text-blue-800"
+              >
+                {track.artist}
+              </a>
+            </td>
+          )}
+          {showAlbum && (
+            <td class="px-6 py-4 whitespace-nowrap">
+              <a
+                href={`/albums/${track.albumSlug}`}
+                class="text-sm text-blue-600 hover:text-blue-800"
+              >
+                {track.album}
+              </a>
+            </td>
+          )}
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            {track.year || '-'}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            {track.durationFormatted}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm">
+            {getRatingStars(track.rating)}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

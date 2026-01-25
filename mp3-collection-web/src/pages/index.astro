@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrackList from '../components/TrackList.astro';
+
+// Load metadata from JSON
+const metadata = await import('../../public/data/metadata.json');
+
+// Load first chunk of tracks
+const firstChunk = await import('../../public/data/chunks/tracks-001.json');
+
+// Get top rated tracks
+const topRatedTracks = firstChunk.tracks
+  .filter((t: any) => t.rating > 0)
+  .sort((a: any, b: any) => b.rating - a.rating)
+  .slice(0, 10);
+
+// Get most played tracks
+const mostPlayedTracks = firstChunk.tracks
+  .filter((t: any) => t.playCount > 0)
+  .sort((a: any, b: any) => b.playCount - a.playCount)
+  .slice(0, 10);
+---
+
+<Layout title="MP3 Collection - Historical iTunes Library">
+  <div class="space-y-12">
+    <!-- Hero Section -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Historical iTunes MP3 Collection
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        A journey through {metadata.totalTracks?.toLocaleString()} tracks from the early 2000s,
+        spanning {metadata.stats?.totalDurationFormatted} of music across
+        {metadata.totalArtists?.toLocaleString()} artists and {metadata.totalAlbums?.toLocaleString()} albums.
+      </p>
+    </div>
+
+    <!-- Statistics Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-3xl font-bold text-blue-600">{metadata.totalTracks?.toLocaleString()}</div>
+        <div class="text-sm text-gray-600 mt-1">Total Tracks</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-3xl font-bold text-green-600">{metadata.totalArtists?.toLocaleString()}</div>
+        <div class="text-sm text-gray-600 mt-1">Unique Artists</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-3xl font-bold text-purple-600">{metadata.totalAlbums?.toLocaleString()}</div>
+        <div class="text-sm text-gray-600 mt-1">Albums</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-3xl font-bold text-orange-600">{metadata.stats?.totalSizeGB} GB</div>
+        <div class="text-sm text-gray-600 mt-1">Total Size</div>
+      </div>
+    </div>
+
+    <!-- Collection Insights -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Music Duration</h3>
+        <p class="text-2xl font-bold text-blue-600">{metadata.stats?.totalDurationFormatted}</p>
+        <p class="text-sm text-gray-600 mt-1">
+          {Math.round(metadata.stats?.totalDurationSeconds / 86400)} days of continuous music
+        </p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Audio Quality</h3>
+        <p class="text-2xl font-bold text-green-600">{Math.round(metadata.stats?.avgBitRate)} kbps</p>
+        <p class="text-sm text-gray-600 mt-1">Average bit rate</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">User Engagement</h3>
+        <p class="text-2xl font-bold text-purple-600">{metadata.stats?.tracksWithRating?.toLocaleString()}</p>
+        <p class="text-sm text-gray-600 mt-1">Tracks with ratings</p>
+      </div>
+    </div>
+
+    <!-- Top Rated Tracks -->
+    {topRatedTracks.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Top Rated Tracks</h2>
+        <TrackList tracks={topRatedTracks} />
+      </div>
+    )}
+
+    <!-- Most Played Tracks -->
+    {mostPlayedTracks.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Most Played Tracks</h2>
+        <TrackList tracks={mostPlayedTracks} />
+      </div>
+    )}
+
+    <!-- Quick Navigation -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a
+        href="/artists"
+        class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg shadow-lg p-8 hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105"
+      >
+        <h3 class="text-2xl font-bold mb-2">Browse Artists</h3>
+        <p class="text-blue-100">Explore {metadata.totalArtists?.toLocaleString()} artists</p>
+      </a>
+      <a
+        href="/albums"
+        class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-lg shadow-lg p-8 hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105"
+      >
+        <h3 class="text-2xl font-bold mb-2">Browse Albums</h3>
+        <p class="text-green-100">Discover {metadata.totalAlbums?.toLocaleString()} albums</p>
+      </a>
+      <a
+        href="/tracks/1"
+        class="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-lg shadow-lg p-8 hover:from-purple-600 hover:to-purple-700 transition-all transform hover:scale-105"
+      >
+        <h3 class="text-2xl font-bold mb-2">Browse Tracks</h3>
+        <p class="text-purple-100">View all {metadata.totalTracks?.toLocaleString()} tracks</p>
+      </a>
+    </div>
+
+    <!-- Genre Cloud -->
+    {metadata.genres && metadata.genres.length > 0 && (
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Genres</h2>
+        <div class="flex flex-wrap gap-2">
+          {metadata.genres.slice(0, 50).map((genre: string) => (
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+              {genre}
+            </span>
+          ))}
+          {metadata.genres.length > 50 && (
+            <span class="px-3 py-1 bg-gray-200 text-gray-500 rounded-full text-sm">
+              +{metadata.genres.length - 50} more
+            </span>
+          )}
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>

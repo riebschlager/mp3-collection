@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Load all artists
+const artistsIndex = await import('../../../public/data/artists-index.json');
+
+// Sort alphabetically
+const sortedArtists = [...artistsIndex.artists].sort((a, b) => a.name.localeCompare(b.name));
+
+// Group by first letter
+const artistsByLetter = new Map<string, any[]>();
+sortedArtists.forEach(artist => {
+  const firstLetter = artist.name[0].toUpperCase();
+  if (!artistsByLetter.has(firstLetter)) {
+    artistsByLetter.set(firstLetter, []);
+  }
+  artistsByLetter.get(firstLetter)!.push(artist);
+});
+
+const letters = Array.from(artistsByLetter.keys()).sort();
+---
+
+<Layout title="Artists - MP3 Collection" description={`Browse ${artistsIndex.total} artists from the MP3 collection`}>
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">Artists</h1>
+      <p class="text-gray-600">{artistsIndex.total.toLocaleString()} artists in the collection</p>
+    </div>
+
+    <!-- Letter Navigation -->
+    <div class="bg-white rounded-lg shadow p-4 sticky top-20 z-40">
+      <div class="flex flex-wrap gap-2 justify-center">
+        {letters.map(letter => (
+          <a
+            href={`#${letter}`}
+            class="px-3 py-1 bg-blue-100 text-blue-700 hover:bg-blue-200 rounded font-medium"
+          >
+            {letter}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Artist Listings -->
+    {letters.map(letter => {
+      const artists = artistsByLetter.get(letter) || [];
+      return (
+        <div id={letter} class="scroll-mt-32">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4 border-b-2 border-blue-500 pb-2">
+            {letter}
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {artists.map(artist => (
+              <a
+                href={`/artists/${artist.slug}`}
+                class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-4"
+              >
+                <h3 class="font-semibold text-gray-900 mb-1">{artist.name}</h3>
+                <p class="text-sm text-gray-600">
+                  {artist.trackCount} tracks • {artist.albumCount} albums
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</Layout>

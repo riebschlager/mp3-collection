@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Browse my historical iTunes MP3 collection from the early 2000s' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center space-x-2">
+            <span class="text-2xl">🎵</span>
+            <div>
+              <h1 class="text-xl font-bold text-gray-900">MP3 Collection</h1>
+              <p class="text-xs text-gray-500">Historical iTunes Library</p>
+            </div>
+          </a>
+          <div class="flex items-center space-x-4">
+            <a href="/artists" class="text-gray-600 hover:text-gray-900">Artists</a>
+            <a href="/albums" class="text-gray-600 hover:text-gray-900">Albums</a>
+            <a href="/tracks/1" class="text-gray-600 hover:text-gray-900">Tracks</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <slot />
+    </main>
+
+    <footer class="bg-white border-t mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <p class="text-center text-gray-500 text-sm">
+          Historical iTunes MP3 Collection Archive
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

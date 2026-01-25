@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrackList from '../../components/TrackList.astro';
+
+export async function getStaticPaths() {
+  const TRACKS_PER_PAGE = 100;
+
+  // Load all tracks from all chunks
+  const allTracks: any[] = [];
+  const totalChunks = 49;
+
+  for (let i = 1; i <= totalChunks; i++) {
+    const chunkNum = String(i).padStart(3, '0');
+    const chunk = await import(`../../../public/data/chunks/tracks-${chunkNum}.json`);
+    allTracks.push(...chunk.tracks);
+  }
+
+  // Sort tracks alphabetically by artist, then album, then track number
+  const sortedTracks = allTracks.sort((a, b) => {
+    if (a.artist !== b.artist) return a.artist.localeCompare(b.artist);
+    if (a.album !== b.album) return a.album.localeCompare(b.album);
+    return (a.trackNumber || 0) - (b.trackNumber || 0);
+  });
+
+  // Calculate total pages
+  const totalPages = Math.ceil(sortedTracks.length / TRACKS_PER_PAGE);
+
+  // Generate paths for each page
+  return Array.from({ length: totalPages }, (_, i) => {
+    const page = i + 1;
+    const startIdx = i * TRACKS_PER_PAGE;
+    const endIdx = Math.min(startIdx + TRACKS_PER_PAGE, sortedTracks.length);
+    const tracks = sortedTracks.slice(startIdx, endIdx);
+
+    return {
+      params: { page: String(page) },
+      props: {
+        tracks,
+        currentPage: page,
+        totalPages,
+        totalTracks: sortedTracks.length,
+        startIdx: startIdx + 1,
+        endIdx
+      }
+    };
+  });
+}
+
+const { tracks, currentPage, totalPages, totalTracks, startIdx, endIdx } = Astro.props;
+---
+
+<Layout
+  title={`Tracks (Page ${currentPage} of ${totalPages}) - MP3 Collection`}
+  description={`Browse tracks ${startIdx}-${endIdx} of ${totalTracks} in the MP3 collection`}
+>
+  <div class="space-y-6">
+    <!-- Page Header -->
+    <div class="flex items-center justify-between">
+      <div>
+        <h1 class="text-4xl font-bold text-gray-900 mb-2">All Tracks</h1>
+        <p class="text-gray-600">
+          Showing {startIdx.toLocaleString()} - {endIdx.toLocaleString()} of {totalTracks.toLocaleString()} tracks
+        </p>
+      </div>
+    </div>
+
+    <!-- Track List -->
+    <TrackList tracks={tracks} />
+
+    <!-- Pagination -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="flex items-center justify-between">
+        <!-- Previous Button -->
+        <div>
+          {currentPage > 1 ? (
+            <a
+              href={`/tracks/${currentPage - 1}`}
+              class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 inline-block"
+            >
+              ← Previous
+            </a>
+          ) : (
+            <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded inline-block cursor-not-allowed">
+              ← Previous
+            </span>
+          )}
+        </div>
+
+        <!-- Page Numbers -->
+        <div class="flex items-center space-x-2">
+          {/* Show first page */}
+          {currentPage > 3 && (
+            <>
+              <a href="/tracks/1" class="px-3 py-1 rounded hover:bg-gray-100">
+                1
+              </a>
+              {currentPage > 4 && <span class="text-gray-400">...</span>}
+            </>
+          )}
+
+          {/* Show pages around current */}
+          {Array.from({ length: 5 }, (_, i) => {
+            const pageNum = currentPage - 2 + i;
+            if (pageNum < 1 || pageNum > totalPages) return null;
+
+            return (
+              <a
+                href={`/tracks/${pageNum}`}
+                class={`px-3 py-1 rounded ${
+                  pageNum === currentPage
+                    ? 'bg-blue-600 text-white'
+                    : 'hover:bg-gray-100'
+                }`}
+              >
+                {pageNum}
+              </a>
+            );
+          })}
+
+          {/* Show last page */}
+          {currentPage < totalPages - 2 && (
+            <>
+              {currentPage < totalPages - 3 && <span class="text-gray-400">...</span>}
+              <a href={`/tracks/${totalPages}`} class="px-3 py-1 rounded hover:bg-gray-100">
+                {totalPages}
+              </a>
+            </>
+          )}
+        </div>
+
+        <!-- Next Button -->
+        <div>
+          {currentPage < totalPages ? (
+            <a
+              href={`/tracks/${currentPage + 1}`}
+              class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 inline-block"
+            >
+              Next →
+            </a>
+          ) : (
+            <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded inline-block cursor-not-allowed">
+              Next →
+            </span>
+          )}
+        </div>
+      </div>
+
+      <div class="mt-4 text-center text-sm text-gray-600">
+        Page {currentPage} of {totalPages}
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrackList from '../../components/TrackList.astro';
+
+export async function getStaticPaths() {
+  // Load album index
+  const albumsIndex = await import('../../../public/data/albums-index.json');
+
+  // Generate a path for each album
+  return albumsIndex.albums.map((album: any) => ({
+    params: { slug: album.slug },
+    props: { album }
+  }));
+}
+
+const { album } = Astro.props;
+
+// Load all tracks for this album from all chunks
+const allTracks: any[] = [];
+const totalChunks = 49; // We know there are 49 chunks
+
+for (let i = 1; i <= totalChunks; i++) {
+  const chunkNum = String(i).padStart(3, '0');
+  try {
+    const chunk = await import(`../../../public/data/chunks/tracks-${chunkNum}.json`);
+    const albumTracks = chunk.tracks.filter((t: any) => t.albumSlug === album.slug);
+    allTracks.push(...albumTracks);
+  } catch (e) {
+    // Chunk might not exist, skip
+  }
+}
+
+// Sort tracks by disc number and track number
+const sortedTracks = allTracks.sort((a, b) => {
+  if (a.discNumber !== b.discNumber) {
+    return (a.discNumber || 0) - (b.discNumber || 0);
+  }
+  return (a.trackNumber || 0) - (b.trackNumber || 0);
+});
+
+// Calculate statistics
+const totalDuration = allTracks.reduce((sum, t) => sum + (t.duration || 0), 0);
+const totalPlayCount = allTracks.reduce((sum, t) => sum + (t.playCount || 0), 0);
+const ratedTracks = allTracks.filter(t => t.rating > 0).length;
+const avgRating = ratedTracks > 0
+  ? allTracks.reduce((sum, t) => sum + (t.rating || 0), 0) / ratedTracks
+  : 0;
+
+// Get album year from first track
+const albumYear = allTracks[0]?.year;
+
+// Get disc information
+const discs = new Map<number, any[]>();
+sortedTracks.forEach(track => {
+  const discNum = track.discNumber || 1;
+  if (!discs.has(discNum)) {
+    discs.set(discNum, []);
+  }
+  discs.get(discNum)!.push(track);
+});
+---
+
+<Layout title={`${album.name} - MP3 Collection`} description={`Browse ${allTracks.length} tracks from ${album.name}`}>
+  <div class="space-y-8">
+    <!-- Album Header -->
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">{album.name}</h1>
+      <div class="flex items-center space-x-2 text-gray-600 mb-6">
+        {album.artists.map((artist: string, index: number) => {
+          const artistSlug = artist.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          return (
+            <>
+              <a href={`/artists/${artistSlug}`} class="text-blue-600 hover:text-blue-800">
+                {artist}
+              </a>
+              {index < album.artists.length - 1 && <span>•</span>}
+            </>
+          );
+        })}
+        {albumYear && (
+          <>
+            <span>•</span>
+            <span>{albumYear}</span>
+          </>
+        )}
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div>
+          <div class="text-2xl font-bold text-blue-600">{allTracks.length}</div>
+          <div class="text-sm text-gray-600">Tracks</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-green-600">{Math.floor(totalDuration / 60)}m</div>
+          <div class="text-sm text-gray-600">Duration</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-purple-600">
+            {totalPlayCount > 0 ? totalPlayCount : '-'}
+          </div>
+          <div class="text-sm text-gray-600">Total Plays</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-orange-600">
+            {avgRating > 0 ? '⭐'.repeat(Math.round(avgRating / 20)) : '-'}
+          </div>
+          <div class="text-sm text-gray-600">Avg Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tracks by Disc -->
+    {Array.from(discs.entries()).map(([discNum, tracks]) => (
+      <div class="space-y-4">
+        {discs.size > 1 && (
+          <h2 class="text-2xl font-bold text-gray-900">
+            Disc {discNum}
+          </h2>
+        )}
+        <TrackList
+          tracks={tracks}
+          showArtist={album.artists.length > 1}
+          showAlbum={false}
+        />
+      </div>
+    ))}
+
+    {allTracks.length === 0 && (
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+        <p class="text-yellow-800">No tracks found for this album.</p>
+      </div>
+    )}
+  </div>
+</Layout>

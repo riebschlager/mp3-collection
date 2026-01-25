@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(python scripts/build_web_data.py:*)",
+      "Bash(npm create astro@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npx astro add tailwind --yes)",
+      "Bash(ln:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run preview:*)"
+    ]
+  }
+}
