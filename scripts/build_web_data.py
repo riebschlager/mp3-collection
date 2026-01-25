@@ -87,6 +87,27 @@ def sanitize_artist_name(name):
     return name.strip()
 
 
+def sanitize_album_name(name):
+    """Remove leading/trailing quotation marks from album names"""
+    if not name:
+        return name
+    
+    # Remove leading and trailing triple quotes (""") and regular quotes (")
+    name = str(name).strip()
+    while name.startswith('"""') or name.startswith('"'):
+        if name.startswith('"""'):
+            name = name[3:]
+        else:
+            name = name[1:]
+    while name.endswith('"""') or name.endswith('"'):
+        if name.endswith('"""'):
+            name = name[:-3]
+        else:
+            name = name[:-1]
+    
+    return name.strip()
+
+
 def sanitize_genre(genre):
     """Return cleaned genre or None for invalid genres.
 
@@ -176,7 +197,7 @@ def build_web_data(csv_path, output_dir):
 
             # Extract all fields
             artist_name = sanitize_artist_name(safe_str(row.get('Artist'))) or 'Unknown Artist'
-            album_name = safe_str(row.get('Album')) or 'Unknown Album'
+            album_name = sanitize_album_name(safe_str(row.get('Album'))) or 'Unknown Album'
             
             # Skip tracks with invalid artist or album names (e.g., just question marks)
             if not is_valid_name(artist_name) or not is_valid_name(album_name):
@@ -375,7 +396,7 @@ def build_web_data(csv_path, output_dir):
     print(f"Total Size:       {metadata['stats']['totalSizeGB']} GB")
     print(f"Total Duration:   {metadata['stats']['totalDurationFormatted']}")
     print(f"Avg Bit Rate:     {metadata['stats']['avgBitRate']} kbps")
-    print(f"Tracks Rated:     {metadata['stats']['tracksWithRating']:,}"
+    print(f"Tracks Rated:     {metadata['stats']['tracksWithRating']:,}")
     print("="*60)
     print(f"\nOutput directory: {output_dir.absolute()}")
     print(f"Track chunks:     {total_chunks} files in {chunks_dir.name}/")

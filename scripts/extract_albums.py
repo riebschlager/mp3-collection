@@ -53,6 +53,27 @@ def sanitize_artist_name(name):
     return name.strip()
 
 
+def sanitize_album_name(name):
+    """Remove leading/trailing quotation marks from album names"""
+    if not name:
+        return name
+    
+    # Remove leading and trailing triple quotes (""") and regular quotes (")
+    name = str(name).strip()
+    while name.startswith('"""') or name.startswith('"'):
+        if name.startswith('"""'):
+            name = name[3:]
+        else:
+            name = name[1:]
+    while name.endswith('"""') or name.endswith('"'):
+        if name.endswith('"""'):
+            name = name[:-3]
+        else:
+            name = name[:-1]
+    
+    return name.strip()
+
+
 
 def extract_albums(csv_path, output_path=None):
     """
@@ -71,7 +92,7 @@ def extract_albums(csv_path, output_path=None):
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            album = row.get('Album', '').strip()
+            album = sanitize_album_name(row.get('Album', '').strip())
             artist = sanitize_artist_name(row.get('Artist', '').strip())
 
             # Only add entries with valid album names (not just question marks)

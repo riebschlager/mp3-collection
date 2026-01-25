@@ -2,1194 +2,6 @@
   "total": 3214,
   "albums": [
     {
-      "slug": "athens-ga-111992-01",
-      "name": "\"Athens, GA 11.19.92 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-02",
-      "name": "\"Athens, GA 11.19.92 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-03",
-      "name": "\"Athens, Ga 11.19.92 (03)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-04",
-      "name": "\"Athens, GA 11.19.92 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-05",
-      "name": "\"Athens, GA 11.19.92 (05)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-06",
-      "name": "\"Athens, GA 11.19.92 (06)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-07",
-      "name": "\"Athens, GA 11.19.92 (07)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-08",
-      "name": "\"Athens, GA 11.19.92 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-09",
-      "name": "\"Athens, GA 11.19.92 (09)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-10",
-      "name": "\"Athens, GA 11.19.92 (10)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-11",
-      "name": "\"Athens, GA 11.19.92 (11)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "athens-ga-111992-12",
-      "name": "\"Athens, GA 11.19.92 (12)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-01",
-      "name": "\"Atlanta, GA - 05.14.82 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-02",
-      "name": "\"Atlanta, GA - 05.14.82 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-03",
-      "name": "\"Atlanta, GA - 05.14.82 (03)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-04",
-      "name": "\"Atlanta, GA - 05.14.82 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-05",
-      "name": "\"Atlanta, GA - 05.14.82 (05)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-06",
-      "name": "\"Atlanta, GA - 05.14.82 (06)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-07",
-      "name": "\"Atlanta, GA - 05.14.82 (07)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-08",
-      "name": "\"Atlanta, GA - 05.14.82 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-09",
-      "name": "\"Atlanta, GA - 05.14.82 (09)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-10",
-      "name": "\"Atlanta, GA - 05.14.82 (10)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-11",
-      "name": "\"Atlanta, GA - 05.14.82 (11)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-12",
-      "name": "\"Atlanta, GA - 05.14.82 (12)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-13",
-      "name": "\"Atlanta, GA - 05.14.82 (13)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-14",
-      "name": "\"Atlanta, GA - 05.14.82 (14)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-15",
-      "name": "\"Atlanta, GA - 05.14.82 (15)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "atlanta-ga-051482-16",
-      "name": "\"Atlanta, GA - 05.14.82 (16)\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-01",
-      "name": "\"Boca Raton, FL 09.29.84 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-02",
-      "name": "\"Boca Raton, FL 09.29.84 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-03",
-      "name": "\"Boca Raton, FL 09.29.84 (03)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-04",
-      "name": "\"Boca Raton, FL 09.29.84 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-05",
-      "name": "\"Boca Raton, FL 09.29.84 (05)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-06",
-      "name": "\"Boca Raton, FL 09.29.84 (06)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-07",
-      "name": "\"Boca Raton, FL 09.29.84 (07)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-08",
-      "name": "\"Boca Raton, FL 09.29.84 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-09",
-      "name": "\"Boca Raton, FL 09.29.84 (09)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-10",
-      "name": "\"Boca Raton, FL 09.29.84 (10)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-11",
-      "name": "\"Boca Raton, FL 09.29.84 (11)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-12",
-      "name": "\"Boca Raton, FL 09.29.84 (12)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-13",
-      "name": "\"Boca Raton, FL 09.29.84 (13)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-14",
-      "name": "\"Boca Raton, FL 09.29.84 (14)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-15",
-      "name": "\"Boca Raton, FL 09.29.84 (15)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-16",
-      "name": "\"Boca Raton, FL 09.29.84 (16)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "boca-raton-fl-092984-17",
-      "name": "\"Boca Raton, FL 09.29.84 (17)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "burn-berlin-burn",
-      "name": "\"Burn, Berlin, Burn!\"",
-      "artistCount": 1,
-      "trackCount": 14,
-      "artists": [
-        "Atari Teenage Riot"
-      ]
-    },
-    {
-      "slug": "chicago-il-april-10-1998",
-      "name": "\"Chicago, Il - April 10, 1998 -\"",
-      "artistCount": 1,
-      "trackCount": 15,
-      "artists": [
-        "Radiohead"
-      ]
-    },
-    {
-      "slug": "fold-your-hands-child-you-walk-like-a-peasant",
-      "name": "\"Fold Your Hands Child, You Walk Like A Peasant\"",
-      "artistCount": 1,
-      "trackCount": 11,
-      "artists": [
-        "Belle and Sebastian"
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-01",
-      "name": "\"Hamburg, Germany 11.02.98 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-02",
-      "name": "\"Hamburg, Germany 11.02.98 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-03",
-      "name": "\"Hamburg, Germany 11.02.98 (03)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-04",
-      "name": "\"Hamburg, Germany 11.02.98 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-05",
-      "name": "\"Hamburg, Germany 11.02.98 (05)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-06",
-      "name": "\"Hamburg, Germany 11.02.98 (06)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-08",
-      "name": "\"Hamburg, Germany 11.02.98 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-11",
-      "name": "\"Hamburg, Germany 11.02.98 (11)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-13",
-      "name": "\"Hamburg, Germany 11.02.98 (13)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hamburg-germany-110298-14",
-      "name": "\"Hamburg, Germany 11.02.98 (14)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "hannah-med-h-soundtrack",
-      "name": "\"Hannah med H\" -soundtrack",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "The Knife"
-      ]
-    },
-    {
-      "slug": "if-evolution-is-outlawed-only",
-      "name": "\"If Evolution Is Outlawed, Only\"",
-      "artistCount": 1,
-      "trackCount": 4,
-      "artists": [
-        "Jello Biafra"
-      ]
-    },
-    {
-      "slug": "july-3-2000-berlin-germany",
-      "name": "\"July 3, 2000 - Berlin, Germany\"",
-      "artistCount": 1,
-      "trackCount": 15,
-      "artists": [
-        "Radiohead"
-      ]
-    },
-    {
-      "slug": "live-copenhagen-sept-8-2000",
-      "name": "\"Live Copenhagen, Sept 8 2000\"",
-      "artistCount": 1,
-      "trackCount": 11,
-      "artists": [
-        "Radiohead"
-      ]
-    },
-    {
-      "slug": "live-in-irvine-ca-82886",
-      "name": "\"Live in Irvine, CA - 8.28.86\"",
-      "artistCount": 1,
-      "trackCount": 17,
-      "artists": [
-        "The Smiths"
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-01",
-      "name": "\"Madison, WI 04.24.82 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-02",
-      "name": "\"Madison, WI 04.24.82 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-03",
-      "name": "\"Madison, WI 04.24.82 (03)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-04",
-      "name": "\"Madison, WI 04.24.82 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-05",
-      "name": "\"Madison, WI 04.24.82 (05)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-06",
-      "name": "\"Madison, WI 04.24.82 (06)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-07",
-      "name": "\"Madison, WI 04.24.82 (07)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-08",
-      "name": "\"Madison, WI 04.24.82 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-09",
-      "name": "\"Madison, WI 04.24.82 (09)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-10",
-      "name": "\"Madison, WI 04.24.82 (10)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-11",
-      "name": "\"Madison, WI 04.24.82 (11)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-12",
-      "name": "\"Madison, WI 04.24.82 (12)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-13",
-      "name": "\"Madison, WI 04.24.82 (13)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-14",
-      "name": "\"Madison, WI 04.24.82 (14)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-15",
-      "name": "\"Madison, WI 04.24.82 (15)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-16",
-      "name": "\"Madison, WI 04.24.82 (16)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "madison-wi-042482-17",
-      "name": "\"Madison, WI 04.24.82 (17)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "me-myself-and-irene",
-      "name": "\"Me, Myself, and Irene\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "Ben Folds Five"
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-01",
-      "name": "\"Seattle, WA 06.27.84 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-02",
-      "name": "\"Seattle, WA 06.27.84 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-03",
-      "name": "\"Seattle, WA 06.27.84 (03)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-04",
-      "name": "\"Seattle, WA 06.27.84 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-05",
-      "name": "\"Seattle, WA 06.27.84 (05)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-06",
-      "name": "\"Seattle, WA 06.27.84 (06)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-07",
-      "name": "\"Seattle, WA 06.27.84 (07)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-08",
-      "name": "\"Seattle, WA 06.27.84 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-09",
-      "name": "\"Seattle, WA 06.27.84 (09)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-10",
-      "name": "\"Seattle, WA 06.27.84 (10)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-11",
-      "name": "\"Seattle, WA 06.27.84 (11)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-12",
-      "name": "\"Seattle, WA 06.27.84 (12)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-13",
-      "name": "\"Seattle, WA 06.27.84 (13)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-14",
-      "name": "\"Seattle, WA 06.27.84 (14)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-15",
-      "name": "\"Seattle, WA 06.27.84 (15)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-16",
-      "name": "\"Seattle, WA 06.27.84 (16)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-17",
-      "name": "\"Seattle, WA 06.27.84 (17)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-18",
-      "name": "\"Seattle, WA 06.27.84 (18)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-19",
-      "name": "\"Seattle, WA 06.27.84 (19)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-20",
-      "name": "\"Seattle, WA 06.27.84 (20)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "seattle-wa-062784-21",
-      "name": "\"Seattle, WA 06.27.84 (21)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "secret-stars-7",
-      "name": "\"Secret Stars 7\"\"\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "Death Cab for Cutie"
-      ]
-    },
-    {
-      "slug": "shoreline-mt-view-ca",
-      "name": "\"Shoreline, Mt. View, CA\"",
-      "artistCount": 1,
-      "trackCount": 7,
-      "artists": [
-        "Smashing Pumpkins"
-      ]
-    },
-    {
-      "slug": "signals-calls-and-marches-ep",
-      "name": "\"Signals, Calls And Marches EP\"",
-      "artistCount": 1,
-      "trackCount": 8,
-      "artists": [
-        "Mission Of Burma"
-      ]
-    },
-    {
-      "slug": "soundtrack-slc-punk",
-      "name": "\"Soundtrack, SLC Punk\"",
-      "artistCount": 1,
-      "trackCount": 2,
-      "artists": [
-        "Adam And The Ants"
-      ]
-    },
-    {
-      "slug": "stories-from-the-city-stories",
-      "name": "\"Stories From The City, Stories\"",
-      "artistCount": 1,
-      "trackCount": 12,
-      "artists": [
-        "PJ Harvey"
-      ]
-    },
-    {
-      "slug": "toronto-ca-050991",
-      "name": "\"Toronto, CA - 05.09.91\"",
-      "artistCount": 1,
-      "trackCount": 5,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-01",
-      "name": "\"Utecht, Holland 091.14.87 (01)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-02",
-      "name": "\"Utecht, Holland 091.14.87 (02)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-03",
-      "name": "\"Utecht, Holland 091.14.87 (03)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-04",
-      "name": "\"Utecht, Holland 091.14.87 (04)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-05",
-      "name": "\"Utecht, Holland 091.14.87 (05)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-06",
-      "name": "\"Utecht, Holland 091.14.87 (06)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-07",
-      "name": "\"Utecht, Holland 091.14.87 (07)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-08",
-      "name": "\"Utecht, Holland 091.14.87 (08)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-09",
-      "name": "\"Utecht, Holland 091.14.87 (09)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-10",
-      "name": "\"Utecht, Holland 091.14.87 (10)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-11",
-      "name": "\"Utecht, Holland 091.14.87 (11)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-12",
-      "name": "\"Utecht, Holland 091.14.87 (12)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-13",
-      "name": "\"Utecht, Holland 091.14.87 (13)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-14",
-      "name": "\"Utecht, Holland 091.14.87 (14)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-15",
-      "name": "\"Utecht, Holland 091.14.87 (15)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-16",
-      "name": "\"Utecht, Holland 091.14.87 (16)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-17",
-      "name": "\"Utecht, Holland 091.14.87 (17)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-18",
-      "name": "\"Utecht, Holland 091.14.87 (18)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-19",
-      "name": "\"Utecht, Holland 091.14.87 (19)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-20",
-      "name": "\"Utecht, Holland 091.14.87 (20)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-21",
-      "name": "\"Utecht, Holland 091.14.87 (21)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-22",
-      "name": "\"Utecht, Holland 091.14.87 (22)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "utecht-holland-0911487-23",
-      "name": "\"Utecht, Holland 091.14.87 (23)\"",
-      "artistCount": 1,
-      "trackCount": 1,
-      "artists": [
-        "R.E.M."
-      ]
-    },
-    {
-      "slug": "whatever-and-ever-amen",
-      "name": "\"Whatever and Ever, Amen\"",
-      "artistCount": 1,
-      "trackCount": 12,
-      "artists": [
-        "Ben Folds Five"
-      ]
-    },
-    {
       "slug": "1",
       "name": "#1",
       "artistCount": 1,
@@ -3819,6 +2631,258 @@
       ]
     },
     {
+      "slug": "athens-ga-111992-01",
+      "name": "Athens, GA 11.19.92 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-02",
+      "name": "Athens, GA 11.19.92 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-03",
+      "name": "Athens, Ga 11.19.92 (03)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-04",
+      "name": "Athens, GA 11.19.92 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-05",
+      "name": "Athens, GA 11.19.92 (05)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-06",
+      "name": "Athens, GA 11.19.92 (06)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-07",
+      "name": "Athens, GA 11.19.92 (07)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-08",
+      "name": "Athens, GA 11.19.92 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-09",
+      "name": "Athens, GA 11.19.92 (09)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-10",
+      "name": "Athens, GA 11.19.92 (10)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-11",
+      "name": "Athens, GA 11.19.92 (11)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "athens-ga-111992-12",
+      "name": "Athens, GA 11.19.92 (12)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-01",
+      "name": "Atlanta, GA - 05.14.82 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-02",
+      "name": "Atlanta, GA - 05.14.82 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-03",
+      "name": "Atlanta, GA - 05.14.82 (03)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-04",
+      "name": "Atlanta, GA - 05.14.82 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-05",
+      "name": "Atlanta, GA - 05.14.82 (05)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-06",
+      "name": "Atlanta, GA - 05.14.82 (06)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-07",
+      "name": "Atlanta, GA - 05.14.82 (07)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-08",
+      "name": "Atlanta, GA - 05.14.82 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-09",
+      "name": "Atlanta, GA - 05.14.82 (09)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-10",
+      "name": "Atlanta, GA - 05.14.82 (10)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-11",
+      "name": "Atlanta, GA - 05.14.82 (11)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-12",
+      "name": "Atlanta, GA - 05.14.82 (12)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-13",
+      "name": "Atlanta, GA - 05.14.82 (13)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-14",
+      "name": "Atlanta, GA - 05.14.82 (14)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-15",
+      "name": "Atlanta, GA - 05.14.82 (15)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "atlanta-ga-051482-16",
+      "name": "Atlanta, GA - 05.14.82 (16)",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
       "slug": "atliens",
       "name": "ATLiens",
       "artistCount": 1,
@@ -4852,7 +3916,7 @@
     },
     {
       "slug": "black-dice-erase-errata-7",
-      "name": "Black Dice - Erase Errata 7\"",
+      "name": "Black Dice - Erase Errata 7",
       "artistCount": 2,
       "trackCount": 3,
       "artists": [
@@ -5286,6 +4350,159 @@
       "trackCount": 14,
       "artists": [
         "Blur"
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-01",
+      "name": "Boca Raton, FL 09.29.84 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-02",
+      "name": "Boca Raton, FL 09.29.84 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-03",
+      "name": "Boca Raton, FL 09.29.84 (03)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-04",
+      "name": "Boca Raton, FL 09.29.84 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-05",
+      "name": "Boca Raton, FL 09.29.84 (05)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-06",
+      "name": "Boca Raton, FL 09.29.84 (06)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-07",
+      "name": "Boca Raton, FL 09.29.84 (07)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-08",
+      "name": "Boca Raton, FL 09.29.84 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-09",
+      "name": "Boca Raton, FL 09.29.84 (09)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-10",
+      "name": "Boca Raton, FL 09.29.84 (10)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-11",
+      "name": "Boca Raton, FL 09.29.84 (11)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-12",
+      "name": "Boca Raton, FL 09.29.84 (12)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-13",
+      "name": "Boca Raton, FL 09.29.84 (13)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-14",
+      "name": "Boca Raton, FL 09.29.84 (14)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-15",
+      "name": "Boca Raton, FL 09.29.84 (15)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-16",
+      "name": "Boca Raton, FL 09.29.84 (16)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "boca-raton-fl-092984-17",
+      "name": "Boca Raton, FL 09.29.84 (17)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
       ]
     },
     {
@@ -5758,6 +4975,15 @@
       "trackCount": 10,
       "artists": [
         "Blood Brothers"
+      ]
+    },
+    {
+      "slug": "burn-berlin-burn",
+      "name": "Burn, Berlin, Burn!",
+      "artistCount": 1,
+      "trackCount": 14,
+      "artists": [
+        "Atari Teenage Riot"
       ]
     },
     {
@@ -6290,6 +5516,15 @@
       "trackCount": 1,
       "artists": [
         "R.E.M."
+      ]
+    },
+    {
+      "slug": "chicago-il-april-10-1998",
+      "name": "Chicago, Il - April 10, 1998 -",
+      "artistCount": 1,
+      "trackCount": 15,
+      "artists": [
+        "Radiohead"
       ]
     },
     {
@@ -10258,6 +9493,15 @@
       ]
     },
     {
+      "slug": "fold-your-hands-child-you-walk-like-a-peasant",
+      "name": "Fold Your Hands Child, You Walk Like A Peasant",
+      "artistCount": 1,
+      "trackCount": 11,
+      "artists": [
+        "Belle and Sebastian"
+      ]
+    },
+    {
       "slug": "folk",
       "name": "Folk",
       "artistCount": 7,
@@ -11822,6 +11066,96 @@
       ]
     },
     {
+      "slug": "hamburg-germany-110298-01",
+      "name": "Hamburg, Germany 11.02.98 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-02",
+      "name": "Hamburg, Germany 11.02.98 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-03",
+      "name": "Hamburg, Germany 11.02.98 (03)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-04",
+      "name": "Hamburg, Germany 11.02.98 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-05",
+      "name": "Hamburg, Germany 11.02.98 (05)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-06",
+      "name": "Hamburg, Germany 11.02.98 (06)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-08",
+      "name": "Hamburg, Germany 11.02.98 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-11",
+      "name": "Hamburg, Germany 11.02.98 (11)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-13",
+      "name": "Hamburg, Germany 11.02.98 (13)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "hamburg-germany-110298-14",
+      "name": "Hamburg, Germany 11.02.98 (14)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
       "slug": "hammers-and-anvils",
       "name": "Hammers and Anvils",
       "artistCount": 1,
@@ -11846,6 +11180,15 @@
       "trackCount": 15,
       "artists": [
         "Pink Martini"
+      ]
+    },
+    {
+      "slug": "hannah-med-h-soundtrack",
+      "name": "Hannah med H\" -soundtrack",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "The Knife"
       ]
     },
     {
@@ -12640,7 +11983,7 @@
     },
     {
       "slug": "hot-and-informed-7",
-      "name": "Hot and Informed 7\"",
+      "name": "Hot and Informed 7",
       "artistCount": 1,
       "trackCount": 3,
       "artists": [
@@ -13132,6 +12475,15 @@
         "Prince Far I",
         "Prince Jazzbo",
         "Tappa Zukie"
+      ]
+    },
+    {
+      "slug": "if-evolution-is-outlawed-only",
+      "name": "If Evolution Is Outlawed, Only",
+      "artistCount": 1,
+      "trackCount": 4,
+      "artists": [
+        "Jello Biafra"
       ]
     },
     {
@@ -14236,6 +13588,15 @@
       "trackCount": 33,
       "artists": [
         "Swervedriver"
+      ]
+    },
+    {
+      "slug": "july-3-2000-berlin-germany",
+      "name": "July 3, 2000 - Berlin, Germany",
+      "artistCount": 1,
+      "trackCount": 15,
+      "artists": [
+        "Radiohead"
       ]
     },
     {
@@ -15719,6 +15080,15 @@
       ]
     },
     {
+      "slug": "live-copenhagen-sept-8-2000",
+      "name": "Live Copenhagen, Sept 8 2000",
+      "artistCount": 1,
+      "trackCount": 11,
+      "artists": [
+        "Radiohead"
+      ]
+    },
+    {
       "slug": "live-era-87-93-cd-2",
       "name": "Live Era '87 - '93  CD 2",
       "artistCount": 1,
@@ -15770,6 +15140,15 @@
       "trackCount": 11,
       "artists": [
         "Natalie Merchant"
+      ]
+    },
+    {
+      "slug": "live-in-irvine-ca-82886",
+      "name": "Live in Irvine, CA - 8.28.86",
+      "artistCount": 1,
+      "trackCount": 17,
+      "artists": [
+        "The Smiths"
       ]
     },
     {
@@ -16376,6 +15755,159 @@
       ]
     },
     {
+      "slug": "madison-wi-042482-01",
+      "name": "Madison, WI 04.24.82 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-02",
+      "name": "Madison, WI 04.24.82 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-03",
+      "name": "Madison, WI 04.24.82 (03)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-04",
+      "name": "Madison, WI 04.24.82 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-05",
+      "name": "Madison, WI 04.24.82 (05)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-06",
+      "name": "Madison, WI 04.24.82 (06)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-07",
+      "name": "Madison, WI 04.24.82 (07)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-08",
+      "name": "Madison, WI 04.24.82 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-09",
+      "name": "Madison, WI 04.24.82 (09)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-10",
+      "name": "Madison, WI 04.24.82 (10)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-11",
+      "name": "Madison, WI 04.24.82 (11)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-12",
+      "name": "Madison, WI 04.24.82 (12)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-13",
+      "name": "Madison, WI 04.24.82 (13)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-14",
+      "name": "Madison, WI 04.24.82 (14)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-15",
+      "name": "Madison, WI 04.24.82 (15)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-16",
+      "name": "Madison, WI 04.24.82 (16)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "madison-wi-042482-17",
+      "name": "Madison, WI 04.24.82 (17)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
       "slug": "madvillain-remixes-four-tet-ep",
       "name": "Madvillain Remixes: Four Tet - EP",
       "artistCount": 1,
@@ -16617,6 +16149,15 @@
       "trackCount": 14,
       "artists": [
         "Mclusky"
+      ]
+    },
+    {
+      "slug": "me-myself-and-irene",
+      "name": "Me, Myself, and Irene",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "Ben Folds Five"
       ]
     },
     {
@@ -19484,7 +19025,7 @@
     },
     {
       "slug": "pig-pile-5",
-      "name": "Pig Pile 5\"",
+      "name": "Pig Pile 5",
       "artistCount": 1,
       "trackCount": 1,
       "artists": [
@@ -22495,6 +22036,195 @@
       ]
     },
     {
+      "slug": "seattle-wa-062784-01",
+      "name": "Seattle, WA 06.27.84 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-02",
+      "name": "Seattle, WA 06.27.84 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-03",
+      "name": "Seattle, WA 06.27.84 (03)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-04",
+      "name": "Seattle, WA 06.27.84 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-05",
+      "name": "Seattle, WA 06.27.84 (05)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-06",
+      "name": "Seattle, WA 06.27.84 (06)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-07",
+      "name": "Seattle, WA 06.27.84 (07)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-08",
+      "name": "Seattle, WA 06.27.84 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-09",
+      "name": "Seattle, WA 06.27.84 (09)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-10",
+      "name": "Seattle, WA 06.27.84 (10)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-11",
+      "name": "Seattle, WA 06.27.84 (11)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-12",
+      "name": "Seattle, WA 06.27.84 (12)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-13",
+      "name": "Seattle, WA 06.27.84 (13)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-14",
+      "name": "Seattle, WA 06.27.84 (14)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-15",
+      "name": "Seattle, WA 06.27.84 (15)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-16",
+      "name": "Seattle, WA 06.27.84 (16)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-17",
+      "name": "Seattle, WA 06.27.84 (17)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-18",
+      "name": "Seattle, WA 06.27.84 (18)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-19",
+      "name": "Seattle, WA 06.27.84 (19)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-20",
+      "name": "Seattle, WA 06.27.84 (20)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "seattle-wa-062784-21",
+      "name": "Seattle, WA 06.27.84 (21)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
       "slug": "second-class",
       "name": "Second Class",
       "artistCount": 1,
@@ -22519,6 +22249,15 @@
       "trackCount": 6,
       "artists": [
         "C Average"
+      ]
+    },
+    {
+      "slug": "secret-stars-7",
+      "name": "Secret Stars 7",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "Death Cab for Cutie"
       ]
     },
     {
@@ -22793,6 +22532,15 @@
       ]
     },
     {
+      "slug": "shoreline-mt-view-ca",
+      "name": "Shoreline, Mt. View, CA",
+      "artistCount": 1,
+      "trackCount": 7,
+      "artists": [
+        "Smashing Pumpkins"
+      ]
+    },
+    {
       "slug": "short-sharp-shocked",
       "name": "Short Sharp Shocked",
       "artistCount": 1,
@@ -22880,6 +22628,15 @@
       "trackCount": 14,
       "artists": [
         "J-Zone"
+      ]
+    },
+    {
+      "slug": "signals-calls-and-marches-ep",
+      "name": "Signals, Calls And Marches EP",
+      "artistCount": 1,
+      "trackCount": 8,
+      "artists": [
+        "Mission Of Burma"
       ]
     },
     {
@@ -23731,6 +23488,15 @@
       ]
     },
     {
+      "slug": "soundtrack-slc-punk",
+      "name": "Soundtrack, SLC Punk",
+      "artistCount": 1,
+      "trackCount": 2,
+      "artists": [
+        "Adam And The Ants"
+      ]
+    },
+    {
       "slug": "soundtracks",
       "name": "Soundtracks",
       "artistCount": 1,
@@ -24260,6 +24026,15 @@
       "name": "Stories b side",
       "artistCount": 1,
       "trackCount": 1,
+      "artists": [
+        "PJ Harvey"
+      ]
+    },
+    {
+      "slug": "stories-from-the-city-stories",
+      "name": "Stories From The City, Stories",
+      "artistCount": 1,
+      "trackCount": 12,
       "artists": [
         "PJ Harvey"
       ]
@@ -25291,7 +25066,7 @@
     },
     {
       "slug": "the-ballroom-song-12",
-      "name": "The Ballroom Song 12\"",
+      "name": "The Ballroom Song 12",
       "artistCount": 1,
       "trackCount": 4,
       "artists": [
@@ -25850,7 +25625,7 @@
     },
     {
       "slug": "the-disruption-7",
-      "name": "the disruption 7\"",
+      "name": "the disruption 7",
       "artistCount": 1,
       "trackCount": 1,
       "artists": [
@@ -28529,6 +28304,15 @@
       ]
     },
     {
+      "slug": "toronto-ca-050991",
+      "name": "Toronto, CA - 05.09.91",
+      "artistCount": 1,
+      "trackCount": 5,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
       "slug": "toronto-massey-hall-may-15-1953",
       "name": "Toronto, Massey Hall, May 15, 1953",
       "artistCount": 1,
@@ -30952,6 +30736,213 @@
       ]
     },
     {
+      "slug": "utecht-holland-0911487-01",
+      "name": "Utecht, Holland 091.14.87 (01)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-02",
+      "name": "Utecht, Holland 091.14.87 (02)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-03",
+      "name": "Utecht, Holland 091.14.87 (03)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-04",
+      "name": "Utecht, Holland 091.14.87 (04)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-05",
+      "name": "Utecht, Holland 091.14.87 (05)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-06",
+      "name": "Utecht, Holland 091.14.87 (06)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-07",
+      "name": "Utecht, Holland 091.14.87 (07)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-08",
+      "name": "Utecht, Holland 091.14.87 (08)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-09",
+      "name": "Utecht, Holland 091.14.87 (09)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-10",
+      "name": "Utecht, Holland 091.14.87 (10)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-11",
+      "name": "Utecht, Holland 091.14.87 (11)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-12",
+      "name": "Utecht, Holland 091.14.87 (12)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-13",
+      "name": "Utecht, Holland 091.14.87 (13)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-14",
+      "name": "Utecht, Holland 091.14.87 (14)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-15",
+      "name": "Utecht, Holland 091.14.87 (15)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-16",
+      "name": "Utecht, Holland 091.14.87 (16)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-17",
+      "name": "Utecht, Holland 091.14.87 (17)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-18",
+      "name": "Utecht, Holland 091.14.87 (18)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-19",
+      "name": "Utecht, Holland 091.14.87 (19)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-20",
+      "name": "Utecht, Holland 091.14.87 (20)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-21",
+      "name": "Utecht, Holland 091.14.87 (21)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-22",
+      "name": "Utecht, Holland 091.14.87 (22)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
+      "slug": "utecht-holland-0911487-23",
+      "name": "Utecht, Holland 091.14.87 (23)",
+      "artistCount": 1,
+      "trackCount": 1,
+      "artists": [
+        "R.E.M."
+      ]
+    },
+    {
       "slug": "utopia",
       "name": "Utopia",
       "artistCount": 1,
@@ -31806,6 +31797,15 @@
       "trackCount": 19,
       "artists": [
         "Various Artists - Matador"
+      ]
+    },
+    {
+      "slug": "whatever-and-ever-amen",
+      "name": "Whatever and Ever, Amen",
+      "artistCount": 1,
+      "trackCount": 12,
+      "artists": [
+        "Ben Folds Five"
       ]
     },
     {
