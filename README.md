@@ -56,7 +56,41 @@ npm run dev
 
 Visit `http://localhost:4321` to browse the collection.
 
-## 📦 Data Architecture
+## � Deployment to GitHub Pages
+
+The project is configured for automatic deployment to GitHub Pages. Deployment happens automatically when you push changes to the `main` or `master` branch.
+
+### Configuration
+
+The deployment is configured in:
+- **Astro config:** `mp3-collection-web/astro.config.mjs` (sets `site` and `base` for GitHub Pages)
+- **GitHub Actions:** `.github/workflows/deploy.yml` (automates the build and deployment)
+
+### Accessing the Deployed Site
+
+Once deployed, the site will be available at:
+```
+https://riebschlager.github.io/mp3-collection
+```
+
+### Manual Deployment
+
+To manually trigger a deployment:
+1. Go to the [Actions](https://github.com/riebschlager/mp3-collection/actions) tab in the repository
+2. Select the "Deploy to GitHub Pages" workflow
+3. Click "Run workflow"
+
+### Building for Production Locally
+
+To test a production build locally:
+
+```bash
+cd mp3-collection-web
+npm run build
+npm run preview
+```
+
+## �📦 Data Architecture
 
 The system uses a "static database" approach:
 -   **Indexes:** `artists-index.json`, `albums-index.json` provide O(1) lookups for routing.
