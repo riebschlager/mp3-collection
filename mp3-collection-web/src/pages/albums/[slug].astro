@@ -41,10 +41,6 @@ const sortedTracks = allTracks.sort((a, b) => {
 // Calculate statistics
 const totalDuration = allTracks.reduce((sum, t) => sum + (t.duration || 0), 0);
 const totalPlayCount = allTracks.reduce((sum, t) => sum + (t.playCount || 0), 0);
-const ratedTracks = allTracks.filter(t => t.rating > 0).length;
-const avgRating = ratedTracks > 0
-  ? allTracks.reduce((sum, t) => sum + (t.rating || 0), 0) / ratedTracks
-  : 0;
 
 // Get album year from first track
 const albumYear = allTracks[0]?.year;
@@ -100,12 +96,7 @@ sortedTracks.forEach(track => {
           </div>
           <div class="text-sm text-gray-600">Total Plays</div>
         </div>
-        <div>
-          <div class="text-2xl font-bold text-orange-600">
-            {avgRating > 0 ? '⭐'.repeat(Math.round(avgRating / 20)) : '-'}
-          </div>
-          <div class="text-sm text-gray-600">Avg Rating</div>
-        </div>
+
       </div>
     </div>
 

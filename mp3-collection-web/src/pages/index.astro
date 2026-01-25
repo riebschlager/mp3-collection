@@ -8,11 +8,7 @@ const metadata = await import('../../public/data/metadata.json');
 // Load first chunk of tracks
 const firstChunk = await import('../../public/data/chunks/tracks-001.json');
 
-// Get top rated tracks
-const topRatedTracks = firstChunk.tracks
-  .filter((t: any) => t.rating > 0)
-  .sort((a: any, b: any) => b.rating - a.rating)
-  .slice(0, 10);
+
 
 // Get most played tracks
 const mostPlayedTracks = firstChunk.tracks
@@ -64,25 +60,7 @@ const mostPlayedTracks = firstChunk.tracks
           {Math.round(metadata.stats?.totalDurationSeconds / 86400)} days of continuous music
         </p>
       </div>
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">Audio Quality</h3>
-        <p class="text-2xl font-bold text-green-600">{Math.round(metadata.stats?.avgBitRate)} kbps</p>
-        <p class="text-sm text-gray-600 mt-1">Average bit rate</p>
-      </div>
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">User Engagement</h3>
-        <p class="text-2xl font-bold text-purple-600">{metadata.stats?.tracksWithRating?.toLocaleString()}</p>
-        <p class="text-sm text-gray-600 mt-1">Tracks with ratings</p>
-      </div>
     </div>
-
-    <!-- Top Rated Tracks -->
-    {topRatedTracks.length > 0 && (
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Top Rated Tracks</h2>
-        <TrackList tracks={topRatedTracks} />
-      </div>
-    )}
 
     <!-- Most Played Tracks -->
     {mostPlayedTracks.length > 0 && (

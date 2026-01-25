@@ -9,7 +9,6 @@ interface Track {
   duration: number;
   durationFormatted: string;
   year?: number;
-  rating?: number;
   playCount?: number;
 }
 
@@ -20,12 +19,6 @@ interface Props {
 }
 
 const { tracks, showArtist = true, showAlbum = true } = Astro.props;
-
-function getRatingStars(rating: number | undefined): string {
-  if (!rating) return '';
-  const stars = rating / 20; // Rating is 0-100, convert to 0-5
-  return '⭐'.repeat(Math.floor(stars));
-}
 ---
 
 <div class="bg-white rounded-lg shadow overflow-hidden">
@@ -50,9 +43,6 @@ function getRatingStars(rating: number | undefined): string {
         </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Duration
-        </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Rating
         </th>
       </tr>
     </thead>
@@ -90,9 +80,6 @@ function getRatingStars(rating: number | undefined): string {
           </td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
             {track.durationFormatted}
-          </td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm">
-            {getRatingStars(track.rating)}
           </td>
         </tr>
       ))}

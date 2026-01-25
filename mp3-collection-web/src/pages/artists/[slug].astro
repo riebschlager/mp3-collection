@@ -58,10 +58,6 @@ const sortedAlbums = Array.from(albumGroups.entries())
 // Calculate statistics
 const totalPlayCount = allTracks.reduce((sum, t) => sum + (t.playCount || 0), 0);
 const totalDuration = allTracks.reduce((sum, t) => sum + (t.duration || 0), 0);
-const ratedTracks = allTracks.filter(t => t.rating > 0).length;
-const avgRating = ratedTracks > 0
-  ? allTracks.reduce((sum, t) => sum + (t.rating || 0), 0) / ratedTracks
-  : 0;
 ---
 
 <Layout title={`${artist.name} - MP3 Collection`} description={`Browse ${allTracks.length} tracks by ${artist.name} across ${artist.albumCount} albums`}>
@@ -83,12 +79,7 @@ const avgRating = ratedTracks > 0
           <div class="text-2xl font-bold text-purple-600">{Math.floor(totalDuration / 60)}m</div>
           <div class="text-sm text-gray-600">Total Duration</div>
         </div>
-        <div>
-          <div class="text-2xl font-bold text-orange-600">
-            {avgRating > 0 ? '⭐'.repeat(Math.round(avgRating / 20)) : '-'}
-          </div>
-          <div class="text-sm text-gray-600">Avg Rating</div>
-        </div>
+
       </div>
     </div>
 
