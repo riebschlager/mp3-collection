@@ -7,6 +7,7 @@ Creates enriched JSON chunks with all metadata, artist/album indexes, and metada
 import csv
 import json
 import re
+from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
 
@@ -77,6 +78,53 @@ def sanitize_artist_name(name):
     return name.strip()
 
 
+def sanitize_genre(genre):
+    """Return cleaned genre or None for invalid genres.
+
+    Rules:
+    - Strip surrounding quotes.
+    - Require at least one ASCII letter to consider it a valid genre.
+    - Return None for numeric-only or punctuation-only values.
+    """
+    if not genre:
+        return None
+    g = str(genre).strip()
+    # strip surrounding quotes
+    while g.startswith('"""') or g.startswith('"'):
+        if g.startswith('"""'):
+            g = g[3:]
+        else:
+            g = g[1:]
+    while g.endswith('"""') or g.endswith('"'):
+        if g.endswith('"""'):
+            g = g[:-3]
+        else:
+            g = g[:-1]
+    g = g.strip()
+
+    # Accept only if there's at least one letter (avoid numeric-only genres)
+    if re.search(r'[A-Za-z]', g):
+        return g
+    return None
+
+
+def sanitize_year(value):
+    """Return a valid year (int) or None if out of reasonable bounds.
+
+    Rules:
+    - Parse the value as integer.
+    - Accept years between 1000 and current year inclusive.
+    - Return None for invalid or out-of-range years.
+    """
+    y = safe_int(value, default=0)
+    if y <= 0:
+        return None
+    current_year = datetime.now().year
+    if 1000 <= y <= current_year:
+        return y
+    return None
+
+
 def format_duration(seconds):
     """Format duration in seconds to MM:SS format"""
     if not seconds:
@@ -121,8 +169,8 @@ def build_web_data(csv_path, output_dir):
             artist_name = sanitize_artist_name(safe_str(row.get('Artist'))) or 'Unknown Artist'
             album_name = safe_str(row.get('Album')) or 'Unknown Album'
             composer = safe_str(row.get('Composer'))
-            genre = safe_str(row.get('Genre'))
-            year = safe_int(row.get('Year'))
+            genre = sanitize_genre(safe_str(row.get('Genre')))
+            year = sanitize_year(row.get('Year'))
 
             # Technical metadata
             size = safe_int(row.get('Size'))
@@ -166,7 +214,7 @@ def build_web_data(csv_path, output_dir):
                 'albumSlug': album_slug,
                 'grouping': grouping,
                 'genre': genre,
-                'year': year if year > 0 else None,
+                'year': year if year is not None else None,
                 'size': size,
                 'duration': duration,
                 'durationFormatted': format_duration(duration),
@@ -202,7 +250,7 @@ def build_web_data(csv_path, output_dir):
             # Collect metadata
             if genre:
                 genres.add(genre)
-            if year and year > 0:
+            if year is not None:
                 years.add(year)
 
             # Statistics

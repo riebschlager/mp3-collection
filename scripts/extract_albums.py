@@ -44,6 +44,7 @@ def sanitize_artist_name(name):
     return name.strip()
 
 
+
 def extract_albums(csv_path, output_path=None):
     """
     Extract unique albums with artists from the iTunes library CSV.
