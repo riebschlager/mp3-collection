@@ -1,5 +1,5 @@
 {
-  "total_artists": 4369,
+  "total_artists": 4364,
   "artists": [
     {
       "artist": "(Space Ghost)",
@@ -3121,12 +3121,6 @@
       ]
     },
     {
-      "artist": "Books, The",
-      "albums": [
-        "Electronic"
-      ]
-    },
-    {
       "artist": "Boom Bip",
       "albums": [
         "Seed To Sun-ADVANCE"
@@ -3875,12 +3869,6 @@
     {
       "artist": "Cathy Claret",
       "albums": []
-    },
-    {
-      "artist": "Causey Way, The",
-      "albums": [
-        "Alternative Rock"
-      ]
     },
     {
       "artist": "Ce Ce*",
@@ -5704,12 +5692,6 @@
       "artist": "Debussy",
       "albums": [
         "Music: An Appreciation (sixth ed.)"
-      ]
-    },
-    {
-      "artist": "Decemberists, The",
-      "albums": [
-        "Her Majesty"
       ]
     },
     {
@@ -7629,12 +7611,6 @@
       ]
     },
     {
-      "artist": "Fitness, The",
-      "albums": [
-        "Call Me For Together"
-      ]
-    },
-    {
       "artist": "Five Fifteen",
       "albums": [
         "Hard Covers"
@@ -8273,12 +8249,6 @@
     {
       "artist": "Get-up Kids",
       "albums": []
-    },
-    {
-      "artist": "Geto Boys, The",
-      "albums": [
-        "Pop"
-      ]
     },
     {
       "artist": "Getting Away with It",
@@ -12525,12 +12495,6 @@
       ]
     },
     {
-      "artist": "Magnetic Fields, The",
-      "albums": [
-        "69 Love Songs Vol. 2"
-      ]
-    },
-    {
       "artist": "Magnolia Electric Company",
       "albums": [
         "Trials And Errors"
@@ -14327,12 +14291,6 @@
       "artist": "New Order & Detroit Grand Puba",
       "albums": [
         "Electronic"
-      ]
-    },
-    {
-      "artist": "New Pornographers, The",
-      "albums": [
-        "Alternative Rock"
       ]
     },
     {
@@ -16990,12 +16948,6 @@
       ]
     },
     {
-      "artist": "Revolving Paint Dream, The",
-      "albums": [
-        "Little Hits"
-      ]
-    },
-    {
       "artist": "Rhettmatic/Styles of Beyond",
       "albums": [
         "2000 Fold"
@@ -19333,12 +19285,6 @@
       "albums": []
     },
     {
-      "artist": "Stone Roses, The",
-      "albums": [
-        "Turns Into Stone"
-      ]
-    },
-    {
       "artist": "Stone Temple Pilost",
       "albums": [
         "No. 4"
@@ -20425,6 +20371,7 @@
     {
       "artist": "The Books",
       "albums": [
+        "Electronic",
         "Lost And Safe"
       ]
     },
@@ -20523,6 +20470,7 @@
     {
       "artist": "The Causey Way",
       "albums": [
+        "Alternative Rock",
         "Punk"
       ]
     },
@@ -20767,7 +20715,8 @@
     {
       "artist": "The Decemberists",
       "albums": [
-        "Castaways and Cutouts"
+        "Castaways and Cutouts",
+        "Her Majesty"
       ]
     },
     {
@@ -20965,6 +20914,12 @@
       ]
     },
     {
+      "artist": "The Fitness",
+      "albums": [
+        "Call Me For Together"
+      ]
+    },
+    {
       "artist": "The Flaming Lips",
       "albums": [
         "Rock"
@@ -21040,6 +20995,12 @@
       "artist": "The Get Up Kids",
       "albums": [
         "Before You Were Punk 2"
+      ]
+    },
+    {
+      "artist": "The Geto Boys",
+      "albums": [
+        "Pop"
       ]
     },
     {
@@ -21370,7 +21331,8 @@
     {
       "artist": "The Magnetic Fields",
       "albums": [
-        "69 Love Songs"
+        "69 Love Songs",
+        "69 Love Songs Vol. 2"
       ]
     },
     {
@@ -21495,6 +21457,7 @@
     {
       "artist": "The New Pornographers",
       "albums": [
+        "Alternative Rock",
         "Electric Version",
         "Mass Romantic"
       ]
@@ -21739,6 +21702,12 @@
       "albums": []
     },
     {
+      "artist": "The Revolving Paint Dream",
+      "albums": [
+        "Little Hits"
+      ]
+    },
+    {
       "artist": "The Rock*A*Teens",
       "albums": []
     },
@@ -21913,6 +21882,12 @@
     {
       "artist": "The Stockholm Monsters",
       "albums": []
+    },
+    {
+      "artist": "The Stone Roses",
+      "albums": [
+        "Turns Into Stone"
+      ]
     },
     {
       "artist": "The Stones",

@@ -43,9 +43,10 @@ def safe_str(value):
 
 
 def sanitize_artist_name(name):
-    """Remove leading/trailing quotation marks from artist names"""
+    """Remove leading/trailing quotation marks and move trailing articles to the beginning"""
     if not name:
         return name
+    
     # Remove leading and trailing triple quotes (""") and regular quotes (")
     name = str(name).strip()
     while name.startswith('"""') or name.startswith('"'):
@@ -58,6 +59,21 @@ def sanitize_artist_name(name):
             name = name[:-3]
         else:
             name = name[:-1]
+    name = name.strip()
+    
+    # Move trailing articles to the beginning
+    # Check for patterns like ", The", ", A", ", An"
+    articles = [', The', ', A', ', An', ', Le', ', La', ', Los', ', Las', ', El']
+    for article in articles:
+        if name.lower().endswith(article.lower()):
+            # Extract the article (without the comma and space)
+            article_text = article[2:]  # Remove ", " prefix
+            # Remove the article from the end
+            name_without_article = name[:-len(article)]
+            # Move article to the beginning
+            name = f"{article_text} {name_without_article}"
+            break
+    
     return name.strip()
 
 

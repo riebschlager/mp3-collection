@@ -1,5 +1,5 @@
 {
-  "total": 4172,
+  "total": 4167,
   "artists": [
     {
       "slug": "1-giant-leap",
@@ -4963,16 +4963,6 @@
       ]
     },
     {
-      "slug": "books-the",
-      "name": "Books, The",
-      "albumCount": 2,
-      "trackCount": 10,
-      "albums": [
-        "Electronic",
-        "Unknown Album"
-      ]
-    },
-    {
       "slug": "boom-bip",
       "name": "Boom Bip",
       "albumCount": 1,
@@ -6117,15 +6107,6 @@
       "trackCount": 1,
       "albums": [
         "Unknown Album"
-      ]
-    },
-    {
-      "slug": "causey-way-the",
-      "name": "Causey Way, The",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Alternative Rock"
       ]
     },
     {
@@ -8717,15 +8698,6 @@
       "trackCount": 6,
       "albums": [
         "Music: An Appreciation (sixth ed.)"
-      ]
-    },
-    {
-      "slug": "decemberists-the",
-      "name": "Decemberists, The",
-      "albumCount": 1,
-      "trackCount": 11,
-      "albums": [
-        "Her Majesty"
       ]
     },
     {
@@ -12346,15 +12318,6 @@
       ]
     },
     {
-      "slug": "fitness-the",
-      "name": "Fitness, The",
-      "albumCount": 1,
-      "trackCount": 9,
-      "albums": [
-        "Call Me For Together"
-      ]
-    },
-    {
       "slug": "five-blobs",
       "name": "FIVE BLOBS",
       "albumCount": 1,
@@ -13467,15 +13430,6 @@
       "trackCount": 4,
       "albums": [
         "Sparkling Pistol"
-      ]
-    },
-    {
-      "slug": "geto-boys-the",
-      "name": "Geto Boys, The",
-      "albumCount": 1,
-      "trackCount": 10,
-      "albums": [
-        "Pop"
       ]
     },
     {
@@ -20373,15 +20327,6 @@
       ]
     },
     {
-      "slug": "magnetic-fields-the",
-      "name": "Magnetic Fields, The",
-      "albumCount": 1,
-      "trackCount": 23,
-      "albums": [
-        "69 Love Songs Vol. 2"
-      ]
-    },
-    {
       "slug": "magnolia-electric-company",
       "name": "Magnolia Electric Company",
       "albumCount": 1,
@@ -23413,15 +23358,6 @@
       "trackCount": 1,
       "albums": [
         "Electronic"
-      ]
-    },
-    {
-      "slug": "new-pornographers-the",
-      "name": "New Pornographers, The",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Alternative Rock"
       ]
     },
     {
@@ -27736,15 +27672,6 @@
       ]
     },
     {
-      "slug": "revolving-paint-dream-the",
-      "name": "Revolving Paint Dream, The",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "Little Hits"
-      ]
-    },
-    {
       "slug": "rexhobart",
       "name": "rexhobart",
       "albumCount": 1,
@@ -31908,15 +31835,6 @@
       ]
     },
     {
-      "slug": "stone-roses-the",
-      "name": "Stone Roses, The",
-      "albumCount": 1,
-      "trackCount": 22,
-      "albums": [
-        "Turns Into Stone"
-      ]
-    },
-    {
       "slug": "stone-temple-pilost",
       "name": "Stone Temple Pilost",
       "albumCount": 1,
@@ -33662,11 +33580,13 @@
     {
       "slug": "the-books",
       "name": "The Books",
-      "albumCount": 2,
-      "trackCount": 13,
+      "albumCount": 4,
+      "trackCount": 23,
       "albums": [
+        "Electronic",
         "Lost And Safe",
-        "Unknown"
+        "Unknown",
+        "Unknown Album"
       ]
     },
     {
@@ -33832,9 +33752,10 @@
     {
       "slug": "the-causey-way",
       "name": "The Causey Way",
-      "albumCount": 1,
-      "trackCount": 12,
+      "albumCount": 2,
+      "trackCount": 13,
       "albums": [
+        "Alternative Rock",
         "Punk"
       ]
     },
@@ -34214,10 +34135,11 @@
     {
       "slug": "the-decemberists",
       "name": "The Decemberists",
-      "albumCount": 1,
-      "trackCount": 10,
+      "albumCount": 2,
+      "trackCount": 21,
       "albums": [
-        "Castaways and Cutouts"
+        "Castaways and Cutouts",
+        "Her Majesty"
       ]
     },
     {
@@ -34529,6 +34451,15 @@
       ]
     },
     {
+      "slug": "the-fitness",
+      "name": "The Fitness",
+      "albumCount": 1,
+      "trackCount": 9,
+      "albums": [
+        "Call Me For Together"
+      ]
+    },
+    {
       "slug": "the-flaming-lips",
       "name": "The Flaming Lips",
       "albumCount": 2,
@@ -34646,6 +34577,15 @@
       "trackCount": 1,
       "albums": [
         "Before You Were Punk 2"
+      ]
+    },
+    {
+      "slug": "the-geto-boys",
+      "name": "The Geto Boys",
+      "albumCount": 1,
+      "trackCount": 10,
+      "albums": [
+        "Pop"
       ]
     },
     {
@@ -35151,10 +35091,11 @@
     {
       "slug": "the-magnetic-fields",
       "name": "The Magnetic Fields",
-      "albumCount": 2,
-      "trackCount": 71,
+      "albumCount": 3,
+      "trackCount": 94,
       "albums": [
         "69 Love Songs",
+        "69 Love Songs Vol. 2",
         "Unknown Album"
       ]
     },
@@ -35344,9 +35285,10 @@
     {
       "slug": "the-new-pornographers",
       "name": "The New Pornographers",
-      "albumCount": 2,
-      "trackCount": 25,
+      "albumCount": 3,
+      "trackCount": 26,
       "albums": [
+        "Alternative Rock",
         "Electric Version",
         "Mass Romantic"
       ]
@@ -35774,6 +35716,15 @@
       ]
     },
     {
+      "slug": "the-revolving-paint-dream",
+      "name": "The Revolving Paint Dream",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "Little Hits"
+      ]
+    },
+    {
       "slug": "the-rockateens",
       "name": "The Rock*A*Teens",
       "albumCount": 1,
@@ -36056,6 +36007,15 @@
       "trackCount": 21,
       "albums": [
         "Unknown Album"
+      ]
+    },
+    {
+      "slug": "the-stone-roses",
+      "name": "The Stone Roses",
+      "albumCount": 1,
+      "trackCount": 22,
+      "albums": [
+        "Turns Into Stone"
       ]
     },
     {
