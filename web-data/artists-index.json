@@ -2,6 +2,15 @@
   "total": 4167,
   "artists": [
     {
+      "slug": "space-ghost",
+      "name": "(Space Ghost)",
+      "albumCount": 1,
+      "trackCount": 4,
+      "albums": [
+        "Unknown Album"
+      ]
+    },
+    {
       "slug": "1-giant-leap",
       "name": "1 Giant Leap",
       "albumCount": 4,
@@ -976,7 +985,7 @@
     },
     {
       "slug": "air",
-      "name": "AIR",
+      "name": "Air",
       "albumCount": 7,
       "trackCount": 48,
       "albums": [
@@ -1347,7 +1356,7 @@
     },
     {
       "slug": "alkaline-trio",
-      "name": "Alkaline Trio",
+      "name": "alkaline trio",
       "albumCount": 2,
       "trackCount": 12,
       "albums": [
@@ -1616,7 +1625,7 @@
     },
     {
       "slug": "and-you-will-know-us-by-the-tr",
-      "name": "And You Will Know Us by the Tr",
+      "name": "And You Will Know Us By The Tr",
       "albumCount": 2,
       "trackCount": 18,
       "albums": [
@@ -1626,7 +1635,7 @@
     },
     {
       "slug": "and-you-will-know-us-by-the-trail-of-dead",
-      "name": "And You Will Know Us by the Trail of Dead",
+      "name": "And You Will Know Us By The Trail Of Dead",
       "albumCount": 3,
       "trackCount": 27,
       "albums": [
@@ -1824,7 +1833,7 @@
     },
     {
       "slug": "ani-difranco",
-      "name": "Ani DiFranco",
+      "name": "Ani Difranco",
       "albumCount": 5,
       "trackCount": 40,
       "albums": [
@@ -1946,7 +1955,7 @@
     },
     {
       "slug": "anti-pop-consortium",
-      "name": "Anti-Pop Consortium",
+      "name": "Anti Pop Consortium",
       "albumCount": 2,
       "trackCount": 11,
       "albums": [
@@ -2225,7 +2234,7 @@
     },
     {
       "slug": "archers-of-loaf",
-      "name": "Archers of Loaf",
+      "name": "Archers Of Loaf",
       "albumCount": 3,
       "trackCount": 80,
       "albums": [
@@ -2647,7 +2656,7 @@
     },
     {
       "slug": "at-the-drive-in",
-      "name": "At The Drive-In",
+      "name": "At The Drive In",
       "albumCount": 4,
       "trackCount": 38,
       "albums": [
@@ -2849,6 +2858,15 @@
       ]
     },
     {
+      "slug": "b-fleischmann",
+      "name": "B Fleischmann",
+      "albumCount": 1,
+      "trackCount": 2,
+      "albums": [
+        "Putting The Morr Back In Mor.."
+      ]
+    },
+    {
       "slug": "b-film",
       "name": "B-Film",
       "albumCount": 1,
@@ -2873,15 +2891,6 @@
       "trackCount": 15,
       "albums": [
         "Blues On The Bayou"
-      ]
-    },
-    {
-      "slug": "b-fleischmann",
-      "name": "B. Fleischmann",
-      "albumCount": 1,
-      "trackCount": 2,
-      "albums": [
-        "Putting The Morr Back In Mor.."
       ]
     },
     {
@@ -3493,7 +3502,7 @@
     },
     {
       "slug": "belle-and-sebastian",
-      "name": "Belle And Sebastian",
+      "name": "Belle and Sebastian",
       "albumCount": 6,
       "trackCount": 67,
       "albums": [
@@ -3677,7 +3686,7 @@
     },
     {
       "slug": "better-than-ezra",
-      "name": "Better than Ezra",
+      "name": "Better Than Ezra",
       "albumCount": 2,
       "trackCount": 14,
       "albums": [
@@ -4272,7 +4281,7 @@
     },
     {
       "slug": "blackalicious",
-      "name": "Blackalicious",
+      "name": "blackalicious",
       "albumCount": 2,
       "trackCount": 10,
       "albums": [
@@ -4658,7 +4667,7 @@
     },
     {
       "slug": "boards-of-canada",
-      "name": "Boards Of Canada",
+      "name": "Boards of Canada",
       "albumCount": 9,
       "trackCount": 105,
       "albums": [
@@ -5024,7 +5033,7 @@
     },
     {
       "slug": "bouncing-souls",
-      "name": "Bouncing Souls",
+      "name": "Bouncing souls",
       "albumCount": 4,
       "trackCount": 17,
       "albums": [
@@ -5220,7 +5229,7 @@
     },
     {
       "slug": "brides-of-destruction",
-      "name": "Brides Of Destruction",
+      "name": "Brides of Destruction",
       "albumCount": 2,
       "trackCount": 13,
       "albums": [
@@ -5385,7 +5394,7 @@
     },
     {
       "slug": "bruch",
-      "name": "Bruch",
+      "name": "BRUCH",
       "albumCount": 2,
       "trackCount": 4,
       "albums": [
@@ -5515,7 +5524,7 @@
     },
     {
       "slug": "built-to-spill",
-      "name": "Built To Spill",
+      "name": "Built to Spill",
       "albumCount": 11,
       "trackCount": 74,
       "albums": [
@@ -5751,7 +5760,7 @@
     },
     {
       "slug": "can",
-      "name": "CAN",
+      "name": "can",
       "albumCount": 12,
       "trackCount": 26,
       "albums": [
@@ -6398,7 +6407,7 @@
     },
     {
       "slug": "children-of-bodom",
-      "name": "Children Of Bodom",
+      "name": "Children of Bodom",
       "albumCount": 3,
       "trackCount": 11,
       "albums": [
@@ -6810,7 +6819,7 @@
     },
     {
       "slug": "clint-mansell",
-      "name": "clint mansell",
+      "name": "Clint Mansell",
       "albumCount": 2,
       "trackCount": 13,
       "albums": [
@@ -6984,7 +6993,7 @@
     },
     {
       "slug": "coil",
-      "name": "COIL",
+      "name": "Coil",
       "albumCount": 2,
       "trackCount": 4,
       "albums": [
@@ -8128,7 +8137,7 @@
     },
     {
       "slug": "dangerdoom",
-      "name": "DANGERDOOM",
+      "name": "DangerDoom",
       "albumCount": 3,
       "trackCount": 18,
       "albums": [
@@ -8418,7 +8427,7 @@
     },
     {
       "slug": "david-holmes",
-      "name": "david holmes",
+      "name": "David Holmes",
       "albumCount": 4,
       "trackCount": 24,
       "albums": [
@@ -8752,7 +8761,7 @@
     },
     {
       "slug": "deep-purple",
-      "name": "Deep Purple",
+      "name": "deep purple",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -9010,7 +9019,7 @@
     },
     {
       "slug": "devendra-banhart",
-      "name": "devendra banhart",
+      "name": "Devendra Banhart",
       "albumCount": 2,
       "trackCount": 17,
       "albums": [
@@ -9047,7 +9056,7 @@
     },
     {
       "slug": "devo",
-      "name": "DEVO",
+      "name": "Devo",
       "albumCount": 10,
       "trackCount": 108,
       "albums": [
@@ -9448,7 +9457,7 @@
     },
     {
       "slug": "division-of-laura-lee",
-      "name": "Division Of Laura Lee",
+      "name": "Division of Laura Lee",
       "albumCount": 2,
       "trackCount": 13,
       "albums": [
@@ -9513,7 +9522,7 @@
     },
     {
       "slug": "dj-rupture",
-      "name": "dj /rupture",
+      "name": "DJ /Rupture",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -10073,7 +10082,7 @@
     },
     {
       "slug": "donovan",
-      "name": "donovan",
+      "name": "Donovan",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -10301,7 +10310,7 @@
     },
     {
       "slug": "drive-by-honky",
-      "name": "Drive-By Honky",
+      "name": "Drive By Honky",
       "albumCount": 2,
       "trackCount": 11,
       "albums": [
@@ -10724,7 +10733,7 @@
     },
     {
       "slug": "echo-the-bunnymen",
-      "name": "Echo & The Bunnymen",
+      "name": "Echo & the Bunnymen",
       "albumCount": 8,
       "trackCount": 142,
       "albums": [
@@ -11314,7 +11323,7 @@
     },
     {
       "slug": "enon",
-      "name": "enon",
+      "name": "Enon",
       "albumCount": 3,
       "trackCount": 43,
       "albums": [
@@ -12126,7 +12135,7 @@
     },
     {
       "slug": "felt",
-      "name": "Felt",
+      "name": "felt",
       "albumCount": 2,
       "trackCount": 21,
       "albums": [
@@ -12531,7 +12540,7 @@
     },
     {
       "slug": "foreigner",
-      "name": "Foreigner",
+      "name": "foreigner",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -12678,7 +12687,7 @@
     },
     {
       "slug": "frank-zappa",
-      "name": "Frank Zappa",
+      "name": "frank zappa",
       "albumCount": 2,
       "trackCount": 7,
       "albums": [
@@ -13137,7 +13146,7 @@
     },
     {
       "slug": "gary-moore",
-      "name": "Gary Moore",
+      "name": "gary moore",
       "albumCount": 2,
       "trackCount": 6,
       "albums": [
@@ -13411,7 +13420,7 @@
     },
     {
       "slug": "get-up-kids",
-      "name": "Get Up Kids",
+      "name": "Get-up Kids",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -13514,7 +13523,7 @@
     },
     {
       "slug": "ghosty",
-      "name": "Ghosty",
+      "name": "ghosty",
       "albumCount": 2,
       "trackCount": 7,
       "albums": [
@@ -13721,7 +13730,7 @@
     },
     {
       "slug": "godspeed-you-black-emperor",
-      "name": "Godspeed you black emperor!",
+      "name": "Godspeed You Black Emperor!",
       "albumCount": 6,
       "trackCount": 25,
       "albums": [
@@ -13744,7 +13753,7 @@
     },
     {
       "slug": "goldfinga",
-      "name": "GoldFinga",
+      "name": "Goldfinga",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -13894,7 +13903,7 @@
     },
     {
       "slug": "gotan-project",
-      "name": "Gotan Project",
+      "name": "gotan project",
       "albumCount": 2,
       "trackCount": 20,
       "albums": [
@@ -14185,7 +14194,7 @@
     },
     {
       "slug": "guided-by-voices",
-      "name": "Guided By Voices",
+      "name": "Guided by Voices",
       "albumCount": 9,
       "trackCount": 272,
       "albums": [
@@ -14247,7 +14256,7 @@
     },
     {
       "slug": "guns-n-roses",
-      "name": "Guns N Roses",
+      "name": "Guns n' Roses",
       "albumCount": 7,
       "trackCount": 92,
       "albums": [
@@ -15436,7 +15445,7 @@
     },
     {
       "slug": "i-am-the-world-trade-center",
-      "name": "I Am The World Trade Center",
+      "name": "I Am the World Trade Center",
       "albumCount": 2,
       "trackCount": 25,
       "albums": [
@@ -15788,7 +15797,7 @@
     },
     {
       "slug": "inxs",
-      "name": "Inxs",
+      "name": "INXS",
       "albumCount": 2,
       "trackCount": 19,
       "albums": [
@@ -15826,7 +15835,7 @@
     },
     {
       "slug": "iron-and-wine",
-      "name": "Iron And Wine",
+      "name": "Iron and Wine",
       "albumCount": 3,
       "trackCount": 13,
       "albums": [
@@ -15856,7 +15865,7 @@
     },
     {
       "slug": "isan",
-      "name": "Isan",
+      "name": "isan",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -15866,7 +15875,7 @@
     },
     {
       "slug": "isis",
-      "name": "Isis",
+      "name": "ISIS",
       "albumCount": 3,
       "trackCount": 17,
       "albums": [
@@ -16293,23 +16302,23 @@
       ]
     },
     {
-      "slug": "janek-schefer",
-      "name": "Janek Schefer",
-      "albumCount": 1,
-      "trackCount": 1,
-      "albums": [
-        "The Wire Tapper 6 Special Edition"
-      ]
-    },
-    {
       "slug": "janes-addiction",
-      "name": "Janes Addiction",
+      "name": "Jane's Addiction",
       "albumCount": 3,
       "trackCount": 28,
       "albums": [
         "Hypersonic",
         "Kettle Whistle",
         "Unknown Album"
+      ]
+    },
+    {
+      "slug": "janek-schefer",
+      "name": "Janek Schefer",
+      "albumCount": 1,
+      "trackCount": 1,
+      "albums": [
+        "The Wire Tapper 6 Special Edition"
       ]
     },
     {
@@ -17890,7 +17899,7 @@
     },
     {
       "slug": "kardinal-offishall",
-      "name": "Kardinal Offishall*",
+      "name": "Kardinal Offishall",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -18235,7 +18244,7 @@
     },
     {
       "slug": "kid606",
-      "name": "Kid606",
+      "name": "kid606",
       "albumCount": 2,
       "trackCount": 9,
       "albums": [
@@ -18422,7 +18431,7 @@
     },
     {
       "slug": "kinks",
-      "name": "Kinks",
+      "name": "kinks",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -18919,7 +18928,7 @@
     },
     {
       "slug": "lali-puna",
-      "name": "Lali Puna",
+      "name": "lali puna",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -19134,6 +19143,15 @@
       ]
     },
     {
+      "slug": "lee-scratch-perry",
+      "name": "Lee \"\"Scratch\"\" Perry",
+      "albumCount": 1,
+      "trackCount": 20,
+      "albums": [
+        "Reggae"
+      ]
+    },
+    {
       "slug": "lee-perry",
       "name": "Lee Perry",
       "albumCount": 1,
@@ -19149,15 +19167,6 @@
       "trackCount": 1,
       "albums": [
         "Reel 1 Dub Organiser"
-      ]
-    },
-    {
-      "slug": "lee-scratch-perry",
-      "name": "Lee Scratch Perry",
-      "albumCount": 1,
-      "trackCount": 20,
-      "albums": [
-        "Reggae"
       ]
     },
     {
@@ -19189,7 +19198,7 @@
     },
     {
       "slug": "legendary-pink-dots",
-      "name": "legendary pink dots",
+      "name": "Legendary Pink Dots",
       "albumCount": 2,
       "trackCount": 14,
       "albums": [
@@ -19268,7 +19277,7 @@
     },
     {
       "slug": "lenky-snapple-dapple",
-      "name": "Lenky, Snapple Dapple",
+      "name": "Lenky & Snapple Dapple",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -20147,7 +20156,7 @@
     },
     {
       "slug": "lynyrd-skynyrd",
-      "name": "lynyrd skynyrd",
+      "name": "Lynyrd Skynyrd",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -20220,7 +20229,7 @@
     },
     {
       "slug": "machine-drum",
-      "name": "machine drum",
+      "name": "Machine Drum",
       "albumCount": 2,
       "trackCount": 43,
       "albums": [
@@ -20460,7 +20469,7 @@
     },
     {
       "slug": "manual",
-      "name": "Manual",
+      "name": "manual",
       "albumCount": 2,
       "trackCount": 10,
       "albums": [
@@ -20614,7 +20623,7 @@
     },
     {
       "slug": "mark-kozelek",
-      "name": "Mark Kozelek",
+      "name": "mark kozelek",
       "albumCount": 4,
       "trackCount": 14,
       "albums": [
@@ -21064,7 +21073,7 @@
     },
     {
       "slug": "mc-solaar",
-      "name": "MC Solaar",
+      "name": "MC SOLAAR",
       "albumCount": 7,
       "trackCount": 69,
       "albums": [
@@ -21107,7 +21116,7 @@
     },
     {
       "slug": "me-first-and-the-gimme-gimmes",
-      "name": "Me first and the Gimme Gimmes",
+      "name": "Me First And The Gimme Gimmes",
       "albumCount": 2,
       "trackCount": 9,
       "albums": [
@@ -21167,7 +21176,7 @@
     },
     {
       "slug": "medeski-martin-and-wood",
-      "name": "Medeski, Martin And Wood",
+      "name": "Medeski, Martin, And Wood",
       "albumCount": 2,
       "trackCount": 24,
       "albums": [
@@ -22373,16 +22382,6 @@
       ]
     },
     {
-      "slug": "mr-big",
-      "name": "mr big",
-      "albumCount": 2,
-      "trackCount": 2,
-      "albums": [
-        "Top 40",
-        "Unknown Album"
-      ]
-    },
-    {
       "slug": "mr-garrison",
       "name": "Mr Garrison",
       "albumCount": 1,
@@ -22443,6 +22442,16 @@
       "trackCount": 1,
       "albums": [
         "Dexterity-Hollow Point (Hip Ho"
+      ]
+    },
+    {
+      "slug": "mr-big",
+      "name": "Mr. Big",
+      "albumCount": 2,
+      "trackCount": 2,
+      "albums": [
+        "Top 40",
+        "Unknown Album"
       ]
     },
     {
@@ -22624,7 +22633,7 @@
     },
     {
       "slug": "mukeka-di-rato",
-      "name": "Mukeka Di Rato",
+      "name": "Mukeka di Rato",
       "albumCount": 1,
       "trackCount": 2,
       "albums": [
@@ -22860,7 +22869,7 @@
     },
     {
       "slug": "mylene-farmer",
-      "name": "Mylene farmer",
+      "name": "Mylene Farmer",
       "albumCount": 2,
       "trackCount": 30,
       "albums": [
@@ -22888,7 +22897,7 @@
     },
     {
       "slug": "mm",
-      "name": "M�m",
+      "name": "m�m",
       "albumCount": 3,
       "trackCount": 26,
       "albums": [
@@ -22913,18 +22922,6 @@
       "trackCount": 15,
       "albums": [
         "Decade of Decadence '81-'91"
-      ]
-    },
-    {
-      "slug": "nerd",
-      "name": "N.E.R.D.",
-      "albumCount": 4,
-      "trackCount": 28,
-      "albums": [
-        "In search of",
-        "Lapdance",
-        "Rap",
-        "Unknown Album"
       ]
     },
     {
@@ -23109,7 +23106,7 @@
     },
     {
       "slug": "nazareth",
-      "name": "Nazareth",
+      "name": "nazareth",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -23216,6 +23213,18 @@
       ]
     },
     {
+      "slug": "nerd",
+      "name": "Nerd",
+      "albumCount": 4,
+      "trackCount": 28,
+      "albums": [
+        "In search of",
+        "Lapdance",
+        "Rap",
+        "Unknown Album"
+      ]
+    },
+    {
       "slug": "nerf-herder",
       "name": "Nerf Herder",
       "albumCount": 2,
@@ -23277,7 +23286,7 @@
     },
     {
       "slug": "neutral-milk-hotel",
-      "name": "Neutral Milk Hotel",
+      "name": "neutral milk hotel",
       "albumCount": 5,
       "trackCount": 51,
       "albums": [
@@ -23423,7 +23432,7 @@
     },
     {
       "slug": "nick-cave-and-the-bad-seeds",
-      "name": "Nick Cave And The Bad Seeds",
+      "name": "Nick Cave and The Bad Seeds",
       "albumCount": 8,
       "trackCount": 44,
       "albums": [
@@ -23537,7 +23546,7 @@
     },
     {
       "slug": "nightmares-on-wax",
-      "name": "Nightmares on Wax",
+      "name": "Nightmares On Wax",
       "albumCount": 5,
       "trackCount": 43,
       "albums": [
@@ -23789,7 +23798,7 @@
     },
     {
       "slug": "nofx",
-      "name": "NOFX",
+      "name": "NoFX",
       "albumCount": 8,
       "trackCount": 60,
       "albums": [
@@ -25051,7 +25060,7 @@
     },
     {
       "slug": "pedro-the-lion",
-      "name": "Pedro The Lion",
+      "name": "Pedro the Lion",
       "albumCount": 7,
       "trackCount": 76,
       "albums": [
@@ -26057,7 +26066,7 @@
     },
     {
       "slug": "pretenders",
-      "name": "pretenders",
+      "name": "Pretenders",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -26308,7 +26317,7 @@
     },
     {
       "slug": "pulley",
-      "name": "Pulley",
+      "name": "PULLEY",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -26443,7 +26452,7 @@
     },
     {
       "slug": "queen",
-      "name": "Queen",
+      "name": "queen",
       "albumCount": 3,
       "trackCount": 13,
       "albums": [
@@ -26482,7 +26491,7 @@
     },
     {
       "slug": "queens-of-the-stone-age",
-      "name": "Queens Of The Stone Age",
+      "name": "Queens of the Stone Age",
       "albumCount": 3,
       "trackCount": 41,
       "albums": [
@@ -26561,246 +26570,6 @@
       "trackCount": 13,
       "albums": [
         "Wish I Was In Heaven Sitting Down"
-      ]
-    },
-    {
-      "slug": "rem",
-      "name": "R.E.M",
-      "albumCount": 232,
-      "trackCount": 707,
-      "albums": [
-        "Around the Sun",
-        "Athens, GA 11.19.92 (01)",
-        "Athens, GA 11.19.92 (02)",
-        "Athens, GA 11.19.92 (04)",
-        "Athens, GA 11.19.92 (05)",
-        "Athens, GA 11.19.92 (06)",
-        "Athens, GA 11.19.92 (07)",
-        "Athens, GA 11.19.92 (08)",
-        "Athens, GA 11.19.92 (09)",
-        "Athens, GA 11.19.92 (10)",
-        "Athens, GA 11.19.92 (11)",
-        "Athens, GA 11.19.92 (12)",
-        "Athens, Ga 11.19.92 (03)",
-        "Atlanta, GA - 05.14.82 (01)",
-        "Atlanta, GA - 05.14.82 (02)",
-        "Atlanta, GA - 05.14.82 (03)",
-        "Atlanta, GA - 05.14.82 (04)",
-        "Atlanta, GA - 05.14.82 (05)",
-        "Atlanta, GA - 05.14.82 (06)",
-        "Atlanta, GA - 05.14.82 (07)",
-        "Atlanta, GA - 05.14.82 (08)",
-        "Atlanta, GA - 05.14.82 (09)",
-        "Atlanta, GA - 05.14.82 (10)",
-        "Atlanta, GA - 05.14.82 (11)",
-        "Atlanta, GA - 05.14.82 (12)",
-        "Atlanta, GA - 05.14.82 (13)",
-        "Atlanta, GA - 05.14.82 (14)",
-        "Atlanta, GA - 05.14.82 (15)",
-        "Atlanta, GA - 05.14.82 (16)",
-        "Automatic For The People",
-        "Automatic for the People",
-        "Boca Raton, FL 09.29.84 (01)",
-        "Boca Raton, FL 09.29.84 (02)",
-        "Boca Raton, FL 09.29.84 (03)",
-        "Boca Raton, FL 09.29.84 (04)",
-        "Boca Raton, FL 09.29.84 (05)",
-        "Boca Raton, FL 09.29.84 (06)",
-        "Boca Raton, FL 09.29.84 (07)",
-        "Boca Raton, FL 09.29.84 (08)",
-        "Boca Raton, FL 09.29.84 (09)",
-        "Boca Raton, FL 09.29.84 (10)",
-        "Boca Raton, FL 09.29.84 (11)",
-        "Boca Raton, FL 09.29.84 (12)",
-        "Boca Raton, FL 09.29.84 (13)",
-        "Boca Raton, FL 09.29.84 (14)",
-        "Boca Raton, FL 09.29.84 (15)",
-        "Boca Raton, FL 09.29.84 (16)",
-        "Boca Raton, FL 09.29.84 (17)",
-        "Chicago 07.07.84 (01)",
-        "Chicago 07.07.84 (02)",
-        "Chicago 07.07.84 (03)",
-        "Chicago 07.07.84 (04)",
-        "Chicago 07.07.84 (05)",
-        "Chicago 07.07.84 (06)",
-        "Chicago 07.07.84 (07)",
-        "Chicago 07.07.84 (08)",
-        "Chicago 07.07.84 (09)",
-        "Chicago 07.07.84 (10)",
-        "Chicago 07.07.84 (11)",
-        "Chicago 07.07.84 (12)",
-        "Chicago 07.07.84 (13)",
-        "Chicago 07.07.84 (14)",
-        "Chicago 07.07.84 (15)",
-        "Chicago 07.07.84 (16)",
-        "Chronic Town",
-        "Dead Letter Office",
-        "Document",
-        "Eponymous",
-        "Fables Of The Reconstruction [UK Bonus Edition]",
-        "Fables of the Reconstruction",
-        "Green",
-        "Hamburg, Germany 11.02.98 (01)",
-        "Hamburg, Germany 11.02.98 (02)",
-        "Hamburg, Germany 11.02.98 (03)",
-        "Hamburg, Germany 11.02.98 (04)",
-        "Hamburg, Germany 11.02.98 (05)",
-        "Hamburg, Germany 11.02.98 (06)",
-        "Hamburg, Germany 11.02.98 (08)",
-        "Hamburg, Germany 11.02.98 (11)",
-        "Hamburg, Germany 11.02.98 (13)",
-        "Hamburg, Germany 11.02.98 (14)",
-        "In The Attic: Essential R.E.M.",
-        "In Time 1988-2003",
-        "In Time-The Best Of REM 1988-2",
-        "Life's Rich Pageant",
-        "Live at the Crocodile Cafe, Seattle, WA",
-        "London 10.29.85 (01)",
-        "London 10.29.85 (02)",
-        "London 10.29.85 (03)",
-        "London 10.29.85 (04)",
-        "London 10.29.85 (05)",
-        "London 10.29.85 (06)",
-        "London 10.29.85 (07)",
-        "London 10.29.85 (08)",
-        "London 10.29.85 (09)",
-        "London 10.29.85 (10)",
-        "London 10.29.85 (11)",
-        "London 10.29.85 (12)",
-        "London 10.29.85 (13)",
-        "London 10.29.85 (14)",
-        "London 10.29.85 (15)",
-        "London 10.29.85 (16)",
-        "Madison, WI 04.24.82 (01)",
-        "Madison, WI 04.24.82 (02)",
-        "Madison, WI 04.24.82 (03)",
-        "Madison, WI 04.24.82 (04)",
-        "Madison, WI 04.24.82 (05)",
-        "Madison, WI 04.24.82 (06)",
-        "Madison, WI 04.24.82 (07)",
-        "Madison, WI 04.24.82 (08)",
-        "Madison, WI 04.24.82 (09)",
-        "Madison, WI 04.24.82 (10)",
-        "Madison, WI 04.24.82 (11)",
-        "Madison, WI 04.24.82 (12)",
-        "Madison, WI 04.24.82 (13)",
-        "Madison, WI 04.24.82 (14)",
-        "Madison, WI 04.24.82 (15)",
-        "Madison, WI 04.24.82 (16)",
-        "Madison, WI 04.24.82 (17)",
-        "Misc",
-        "Monster",
-        "Murmur",
-        "New Adventures In HIFI",
-        "New Adventures In Hi-Fi",
-        "New Adventures in Hi-Fi",
-        "Other",
-        "Out Of Time",
-        "Out of Time",
-        "Reckoning",
-        "Reveal",
-        "Rock",
-        "Seattle, WA 06.27.84 (01)",
-        "Seattle, WA 06.27.84 (02)",
-        "Seattle, WA 06.27.84 (03)",
-        "Seattle, WA 06.27.84 (04)",
-        "Seattle, WA 06.27.84 (05)",
-        "Seattle, WA 06.27.84 (06)",
-        "Seattle, WA 06.27.84 (07)",
-        "Seattle, WA 06.27.84 (08)",
-        "Seattle, WA 06.27.84 (09)",
-        "Seattle, WA 06.27.84 (10)",
-        "Seattle, WA 06.27.84 (11)",
-        "Seattle, WA 06.27.84 (12)",
-        "Seattle, WA 06.27.84 (13)",
-        "Seattle, WA 06.27.84 (14)",
-        "Seattle, WA 06.27.84 (15)",
-        "Seattle, WA 06.27.84 (16)",
-        "Seattle, WA 06.27.84 (17)",
-        "Seattle, WA 06.27.84 (18)",
-        "Seattle, WA 06.27.84 (19)",
-        "Seattle, WA 06.27.84 (20)",
-        "Seattle, WA 06.27.84 (21)",
-        "Toronto - 07.09.83 (01)",
-        "Toronto - 07.09.83 (02)",
-        "Toronto - 07.09.83 (04)",
-        "Toronto - 07.09.83 (05)",
-        "Toronto - 07.09.83 (06)",
-        "Toronto - 07.09.83 (07)",
-        "Toronto - 07.09.83 (08)",
-        "Toronto - 07.09.83 (09)",
-        "Toronto - 07.09.83 (10)",
-        "Toronto - 07.09.83 (11)",
-        "Toronto - 07.09.83 (12)",
-        "Toronto - 07.09.83 (13)",
-        "Toronto - 07.09.83 (14)",
-        "Toronto - 07.09.83 (15)",
-        "Toronto - 07.09.83 (16)",
-        "Toronto - 07.09.83 (17)",
-        "Toronto - 07.09.83 (18)",
-        "Toronto - 07.09.83 (19)",
-        "Toronto, CA - 05.09.91",
-        "Unknown Album",
-        "Unplugged 04.10.91 (01)",
-        "Unplugged 04.10.91 (02)",
-        "Unplugged 04.10.91 (03)",
-        "Unplugged 04.10.91 (04)",
-        "Unplugged 04.10.91 (05)",
-        "Unplugged 04.10.91 (06)",
-        "Unplugged 04.10.91 (07)",
-        "Unplugged 04.10.91 (08)",
-        "Unplugged 04.10.91 (09)",
-        "Unplugged 04.10.91 (10)",
-        "Unplugged 04.10.91 (11)",
-        "Up",
-        "Uplink -Bowery- 10.21.98 (01)",
-        "Uplink -Bowery- 10.21.98 (02)",
-        "Uplink -Bowery- 10.21.98 (03)",
-        "Uplink -Bowery- 10.21.98 (04)",
-        "Uplink -Bowery- 10.21.98 (05)",
-        "Uplink -Bowery- 10.21.98 (06)",
-        "Uplink -Bowery- 10.21.98 (07)",
-        "Uplink -Bowery- 10.21.98 (08)",
-        "Uplink -Bowery- 10.21.98 (09)",
-        "Utecht, Holland 091.14.87 (01)",
-        "Utecht, Holland 091.14.87 (02)",
-        "Utecht, Holland 091.14.87 (03)",
-        "Utecht, Holland 091.14.87 (04)",
-        "Utecht, Holland 091.14.87 (05)",
-        "Utecht, Holland 091.14.87 (06)",
-        "Utecht, Holland 091.14.87 (07)",
-        "Utecht, Holland 091.14.87 (08)",
-        "Utecht, Holland 091.14.87 (09)",
-        "Utecht, Holland 091.14.87 (10)",
-        "Utecht, Holland 091.14.87 (11)",
-        "Utecht, Holland 091.14.87 (12)",
-        "Utecht, Holland 091.14.87 (13)",
-        "Utecht, Holland 091.14.87 (14)",
-        "Utecht, Holland 091.14.87 (15)",
-        "Utecht, Holland 091.14.87 (16)",
-        "Utecht, Holland 091.14.87 (17)",
-        "Utecht, Holland 091.14.87 (18)",
-        "Utecht, Holland 091.14.87 (19)",
-        "Utecht, Holland 091.14.87 (20)",
-        "Utecht, Holland 091.14.87 (21)",
-        "Utecht, Holland 091.14.87 (22)",
-        "Utecht, Holland 091.14.87 (23)",
-        "VH1 Storytellers (01)",
-        "VH1 Storytellers (02)",
-        "VH1 Storytellers (03)",
-        "VH1 Storytellers (04)",
-        "VH1 Storytellers (05)",
-        "VH1 Storytellers (06)",
-        "VH1 Storytellers (07)",
-        "VH1 Storytellers (08)",
-        "VH1 Storytellers (09)",
-        "VH1 Storytellers (10)",
-        "VH1 Storytellers (11)",
-        "VH1 Storytellers (12)",
-        "VH1 Storytellers (13)",
-        "VH1 Storytellers (14)",
-        "VH1 Storytellers (15)",
-        "life's rich pagent"
       ]
     },
     {
@@ -27350,7 +27119,7 @@
     },
     {
       "slug": "red-house-painters",
-      "name": "red house painters",
+      "name": "Red House Painters",
       "albumCount": 2,
       "trackCount": 18,
       "albums": [
@@ -27423,7 +27192,7 @@
     },
     {
       "slug": "redshift",
-      "name": "Redshift",
+      "name": "redshift",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -27542,6 +27311,246 @@
       ]
     },
     {
+      "slug": "rem",
+      "name": "REM",
+      "albumCount": 232,
+      "trackCount": 707,
+      "albums": [
+        "Around the Sun",
+        "Athens, GA 11.19.92 (01)",
+        "Athens, GA 11.19.92 (02)",
+        "Athens, GA 11.19.92 (04)",
+        "Athens, GA 11.19.92 (05)",
+        "Athens, GA 11.19.92 (06)",
+        "Athens, GA 11.19.92 (07)",
+        "Athens, GA 11.19.92 (08)",
+        "Athens, GA 11.19.92 (09)",
+        "Athens, GA 11.19.92 (10)",
+        "Athens, GA 11.19.92 (11)",
+        "Athens, GA 11.19.92 (12)",
+        "Athens, Ga 11.19.92 (03)",
+        "Atlanta, GA - 05.14.82 (01)",
+        "Atlanta, GA - 05.14.82 (02)",
+        "Atlanta, GA - 05.14.82 (03)",
+        "Atlanta, GA - 05.14.82 (04)",
+        "Atlanta, GA - 05.14.82 (05)",
+        "Atlanta, GA - 05.14.82 (06)",
+        "Atlanta, GA - 05.14.82 (07)",
+        "Atlanta, GA - 05.14.82 (08)",
+        "Atlanta, GA - 05.14.82 (09)",
+        "Atlanta, GA - 05.14.82 (10)",
+        "Atlanta, GA - 05.14.82 (11)",
+        "Atlanta, GA - 05.14.82 (12)",
+        "Atlanta, GA - 05.14.82 (13)",
+        "Atlanta, GA - 05.14.82 (14)",
+        "Atlanta, GA - 05.14.82 (15)",
+        "Atlanta, GA - 05.14.82 (16)",
+        "Automatic For The People",
+        "Automatic for the People",
+        "Boca Raton, FL 09.29.84 (01)",
+        "Boca Raton, FL 09.29.84 (02)",
+        "Boca Raton, FL 09.29.84 (03)",
+        "Boca Raton, FL 09.29.84 (04)",
+        "Boca Raton, FL 09.29.84 (05)",
+        "Boca Raton, FL 09.29.84 (06)",
+        "Boca Raton, FL 09.29.84 (07)",
+        "Boca Raton, FL 09.29.84 (08)",
+        "Boca Raton, FL 09.29.84 (09)",
+        "Boca Raton, FL 09.29.84 (10)",
+        "Boca Raton, FL 09.29.84 (11)",
+        "Boca Raton, FL 09.29.84 (12)",
+        "Boca Raton, FL 09.29.84 (13)",
+        "Boca Raton, FL 09.29.84 (14)",
+        "Boca Raton, FL 09.29.84 (15)",
+        "Boca Raton, FL 09.29.84 (16)",
+        "Boca Raton, FL 09.29.84 (17)",
+        "Chicago 07.07.84 (01)",
+        "Chicago 07.07.84 (02)",
+        "Chicago 07.07.84 (03)",
+        "Chicago 07.07.84 (04)",
+        "Chicago 07.07.84 (05)",
+        "Chicago 07.07.84 (06)",
+        "Chicago 07.07.84 (07)",
+        "Chicago 07.07.84 (08)",
+        "Chicago 07.07.84 (09)",
+        "Chicago 07.07.84 (10)",
+        "Chicago 07.07.84 (11)",
+        "Chicago 07.07.84 (12)",
+        "Chicago 07.07.84 (13)",
+        "Chicago 07.07.84 (14)",
+        "Chicago 07.07.84 (15)",
+        "Chicago 07.07.84 (16)",
+        "Chronic Town",
+        "Dead Letter Office",
+        "Document",
+        "Eponymous",
+        "Fables Of The Reconstruction [UK Bonus Edition]",
+        "Fables of the Reconstruction",
+        "Green",
+        "Hamburg, Germany 11.02.98 (01)",
+        "Hamburg, Germany 11.02.98 (02)",
+        "Hamburg, Germany 11.02.98 (03)",
+        "Hamburg, Germany 11.02.98 (04)",
+        "Hamburg, Germany 11.02.98 (05)",
+        "Hamburg, Germany 11.02.98 (06)",
+        "Hamburg, Germany 11.02.98 (08)",
+        "Hamburg, Germany 11.02.98 (11)",
+        "Hamburg, Germany 11.02.98 (13)",
+        "Hamburg, Germany 11.02.98 (14)",
+        "In The Attic: Essential R.E.M.",
+        "In Time 1988-2003",
+        "In Time-The Best Of REM 1988-2",
+        "Life's Rich Pageant",
+        "Live at the Crocodile Cafe, Seattle, WA",
+        "London 10.29.85 (01)",
+        "London 10.29.85 (02)",
+        "London 10.29.85 (03)",
+        "London 10.29.85 (04)",
+        "London 10.29.85 (05)",
+        "London 10.29.85 (06)",
+        "London 10.29.85 (07)",
+        "London 10.29.85 (08)",
+        "London 10.29.85 (09)",
+        "London 10.29.85 (10)",
+        "London 10.29.85 (11)",
+        "London 10.29.85 (12)",
+        "London 10.29.85 (13)",
+        "London 10.29.85 (14)",
+        "London 10.29.85 (15)",
+        "London 10.29.85 (16)",
+        "Madison, WI 04.24.82 (01)",
+        "Madison, WI 04.24.82 (02)",
+        "Madison, WI 04.24.82 (03)",
+        "Madison, WI 04.24.82 (04)",
+        "Madison, WI 04.24.82 (05)",
+        "Madison, WI 04.24.82 (06)",
+        "Madison, WI 04.24.82 (07)",
+        "Madison, WI 04.24.82 (08)",
+        "Madison, WI 04.24.82 (09)",
+        "Madison, WI 04.24.82 (10)",
+        "Madison, WI 04.24.82 (11)",
+        "Madison, WI 04.24.82 (12)",
+        "Madison, WI 04.24.82 (13)",
+        "Madison, WI 04.24.82 (14)",
+        "Madison, WI 04.24.82 (15)",
+        "Madison, WI 04.24.82 (16)",
+        "Madison, WI 04.24.82 (17)",
+        "Misc",
+        "Monster",
+        "Murmur",
+        "New Adventures In HIFI",
+        "New Adventures In Hi-Fi",
+        "New Adventures in Hi-Fi",
+        "Other",
+        "Out Of Time",
+        "Out of Time",
+        "Reckoning",
+        "Reveal",
+        "Rock",
+        "Seattle, WA 06.27.84 (01)",
+        "Seattle, WA 06.27.84 (02)",
+        "Seattle, WA 06.27.84 (03)",
+        "Seattle, WA 06.27.84 (04)",
+        "Seattle, WA 06.27.84 (05)",
+        "Seattle, WA 06.27.84 (06)",
+        "Seattle, WA 06.27.84 (07)",
+        "Seattle, WA 06.27.84 (08)",
+        "Seattle, WA 06.27.84 (09)",
+        "Seattle, WA 06.27.84 (10)",
+        "Seattle, WA 06.27.84 (11)",
+        "Seattle, WA 06.27.84 (12)",
+        "Seattle, WA 06.27.84 (13)",
+        "Seattle, WA 06.27.84 (14)",
+        "Seattle, WA 06.27.84 (15)",
+        "Seattle, WA 06.27.84 (16)",
+        "Seattle, WA 06.27.84 (17)",
+        "Seattle, WA 06.27.84 (18)",
+        "Seattle, WA 06.27.84 (19)",
+        "Seattle, WA 06.27.84 (20)",
+        "Seattle, WA 06.27.84 (21)",
+        "Toronto - 07.09.83 (01)",
+        "Toronto - 07.09.83 (02)",
+        "Toronto - 07.09.83 (04)",
+        "Toronto - 07.09.83 (05)",
+        "Toronto - 07.09.83 (06)",
+        "Toronto - 07.09.83 (07)",
+        "Toronto - 07.09.83 (08)",
+        "Toronto - 07.09.83 (09)",
+        "Toronto - 07.09.83 (10)",
+        "Toronto - 07.09.83 (11)",
+        "Toronto - 07.09.83 (12)",
+        "Toronto - 07.09.83 (13)",
+        "Toronto - 07.09.83 (14)",
+        "Toronto - 07.09.83 (15)",
+        "Toronto - 07.09.83 (16)",
+        "Toronto - 07.09.83 (17)",
+        "Toronto - 07.09.83 (18)",
+        "Toronto - 07.09.83 (19)",
+        "Toronto, CA - 05.09.91",
+        "Unknown Album",
+        "Unplugged 04.10.91 (01)",
+        "Unplugged 04.10.91 (02)",
+        "Unplugged 04.10.91 (03)",
+        "Unplugged 04.10.91 (04)",
+        "Unplugged 04.10.91 (05)",
+        "Unplugged 04.10.91 (06)",
+        "Unplugged 04.10.91 (07)",
+        "Unplugged 04.10.91 (08)",
+        "Unplugged 04.10.91 (09)",
+        "Unplugged 04.10.91 (10)",
+        "Unplugged 04.10.91 (11)",
+        "Up",
+        "Uplink -Bowery- 10.21.98 (01)",
+        "Uplink -Bowery- 10.21.98 (02)",
+        "Uplink -Bowery- 10.21.98 (03)",
+        "Uplink -Bowery- 10.21.98 (04)",
+        "Uplink -Bowery- 10.21.98 (05)",
+        "Uplink -Bowery- 10.21.98 (06)",
+        "Uplink -Bowery- 10.21.98 (07)",
+        "Uplink -Bowery- 10.21.98 (08)",
+        "Uplink -Bowery- 10.21.98 (09)",
+        "Utecht, Holland 091.14.87 (01)",
+        "Utecht, Holland 091.14.87 (02)",
+        "Utecht, Holland 091.14.87 (03)",
+        "Utecht, Holland 091.14.87 (04)",
+        "Utecht, Holland 091.14.87 (05)",
+        "Utecht, Holland 091.14.87 (06)",
+        "Utecht, Holland 091.14.87 (07)",
+        "Utecht, Holland 091.14.87 (08)",
+        "Utecht, Holland 091.14.87 (09)",
+        "Utecht, Holland 091.14.87 (10)",
+        "Utecht, Holland 091.14.87 (11)",
+        "Utecht, Holland 091.14.87 (12)",
+        "Utecht, Holland 091.14.87 (13)",
+        "Utecht, Holland 091.14.87 (14)",
+        "Utecht, Holland 091.14.87 (15)",
+        "Utecht, Holland 091.14.87 (16)",
+        "Utecht, Holland 091.14.87 (17)",
+        "Utecht, Holland 091.14.87 (18)",
+        "Utecht, Holland 091.14.87 (19)",
+        "Utecht, Holland 091.14.87 (20)",
+        "Utecht, Holland 091.14.87 (21)",
+        "Utecht, Holland 091.14.87 (22)",
+        "Utecht, Holland 091.14.87 (23)",
+        "VH1 Storytellers (01)",
+        "VH1 Storytellers (02)",
+        "VH1 Storytellers (03)",
+        "VH1 Storytellers (04)",
+        "VH1 Storytellers (05)",
+        "VH1 Storytellers (06)",
+        "VH1 Storytellers (07)",
+        "VH1 Storytellers (08)",
+        "VH1 Storytellers (09)",
+        "VH1 Storytellers (10)",
+        "VH1 Storytellers (11)",
+        "VH1 Storytellers (12)",
+        "VH1 Storytellers (13)",
+        "VH1 Storytellers (14)",
+        "VH1 Storytellers (15)",
+        "life's rich pagent"
+      ]
+    },
+    {
       "slug": "remy-zero",
       "name": "Remy Zero",
       "albumCount": 3,
@@ -27563,7 +27572,7 @@
     },
     {
       "slug": "reo-speedwagon",
-      "name": "REO Speedwagon",
+      "name": "reo speedwagon",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -28263,7 +28272,7 @@
     },
     {
       "slug": "roxette",
-      "name": "Roxette",
+      "name": "roxette",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -28273,7 +28282,7 @@
     },
     {
       "slug": "roxy-music",
-      "name": "Roxy Music",
+      "name": "roxy music",
       "albumCount": 2,
       "trackCount": 10,
       "albums": [
@@ -29580,7 +29589,7 @@
     },
     {
       "slug": "shiver",
-      "name": "shiver",
+      "name": "Shiver",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -29746,7 +29755,7 @@
     },
     {
       "slug": "silver-jews",
-      "name": "silver jews",
+      "name": "Silver Jews",
       "albumCount": 2,
       "trackCount": 20,
       "albums": [
@@ -29977,7 +29986,7 @@
     },
     {
       "slug": "six-by-seven",
-      "name": "Six by Seven",
+      "name": "Six By Seven",
       "albumCount": 2,
       "trackCount": 14,
       "albums": [
@@ -30267,7 +30276,7 @@
     },
     {
       "slug": "sly-lenky-frenchie",
-      "name": "Sly, Lenky, & Frenchie",
+      "name": "Sly, Lenky & Frenchie",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -30529,7 +30538,7 @@
     },
     {
       "slug": "sodastream",
-      "name": "Sodastream",
+      "name": "sodastream",
       "albumCount": 2,
       "trackCount": 16,
       "albums": [
@@ -30612,7 +30621,7 @@
     },
     {
       "slug": "solvent",
-      "name": "Solvent",
+      "name": "solvent",
       "albumCount": 2,
       "trackCount": 3,
       "albums": [
@@ -30695,7 +30704,7 @@
     },
     {
       "slug": "songs-ohia",
-      "name": "Songs: Ohia",
+      "name": "Songs Ohia",
       "albumCount": 10,
       "trackCount": 73,
       "albums": [
@@ -30713,7 +30722,7 @@
     },
     {
       "slug": "songsohia",
-      "name": "songs:ohia",
+      "name": "Songs:Ohia",
       "albumCount": 2,
       "trackCount": 9,
       "albums": [
@@ -30949,15 +30958,6 @@
       "trackCount": 1,
       "albums": [
         "Pop"
-      ]
-    },
-    {
-      "slug": "space-ghost",
-      "name": "Space Ghost",
-      "albumCount": 1,
-      "trackCount": 4,
-      "albums": [
-        "Unknown Album"
       ]
     },
     {
@@ -31275,22 +31275,22 @@
       ]
     },
     {
-      "slug": "st-germain",
-      "name": "St Germain",
-      "albumCount": 2,
-      "trackCount": 20,
-      "albums": [
-        "Tourist",
-        "Unknown Album"
-      ]
-    },
-    {
       "slug": "st-christopher",
       "name": "St. Christopher",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
         "Little Hits"
+      ]
+    },
+    {
+      "slug": "st-germain",
+      "name": "St. Germain",
+      "albumCount": 2,
+      "trackCount": 20,
+      "albums": [
+        "Tourist",
+        "Unknown Album"
       ]
     },
     {
@@ -32086,7 +32086,7 @@
     },
     {
       "slug": "styrofoam",
-      "name": "Styrofoam",
+      "name": "styrofoam",
       "albumCount": 2,
       "trackCount": 2,
       "albums": [
@@ -32393,7 +32393,7 @@
     },
     {
       "slug": "susumu-yokota",
-      "name": "susumu yokota",
+      "name": "Susumu Yokota",
       "albumCount": 3,
       "trackCount": 13,
       "albums": [
@@ -32605,7 +32605,7 @@
     },
     {
       "slug": "tpau",
-      "name": "T'Pau",
+      "name": "T'pau",
       "albumCount": 1,
       "trackCount": 2,
       "albums": [
@@ -33518,7 +33518,7 @@
     },
     {
       "slug": "the-blind-boys-of-alabama",
-      "name": "The Blind Boys of Alabama",
+      "name": "The Blind Boys Of Alabama",
       "albumCount": 2,
       "trackCount": 36,
       "albums": [
@@ -33537,7 +33537,7 @@
     },
     {
       "slug": "the-blood-group",
-      "name": "the blood group",
+      "name": "The Blood Group",
       "albumCount": 2,
       "trackCount": 8,
       "albums": [
@@ -33716,7 +33716,7 @@
     },
     {
       "slug": "the-cars",
-      "name": "The Cars",
+      "name": "the cars",
       "albumCount": 4,
       "trackCount": 50,
       "albums": [
@@ -34428,7 +34428,7 @@
     },
     {
       "slug": "the-fall-outs",
-      "name": "The Fall-outs",
+      "name": "The Fall-Outs",
       "albumCount": 2,
       "trackCount": 18,
       "albums": [
@@ -34613,7 +34613,7 @@
     },
     {
       "slug": "the-good-life",
-      "name": "the good life",
+      "name": "The Good Life",
       "albumCount": 4,
       "trackCount": 35,
       "albums": [
@@ -38031,6 +38031,20 @@
       ]
     },
     {
+      "slug": "unkle",
+      "name": "U.N.K.L.E.",
+      "albumCount": 6,
+      "trackCount": 30,
+      "albums": [
+        "Do Androids Dream Of Electric Beats?",
+        "Never Neverland",
+        "Rock",
+        "Sexy Beast OST",
+        "Trip-Hop",
+        "Unknown Album"
+      ]
+    },
+    {
       "slug": "ux",
       "name": "U.X",
       "albumCount": 1,
@@ -38239,7 +38253,7 @@
     },
     {
       "slug": "unearth",
-      "name": "Unearth",
+      "name": "unearth",
       "albumCount": 3,
       "trackCount": 15,
       "albums": [
@@ -38291,20 +38305,6 @@
       "trackCount": 1,
       "albums": [
         "Pacman (Ram Trilogy Remix)"
-      ]
-    },
-    {
-      "slug": "unkle",
-      "name": "Unkle",
-      "albumCount": 6,
-      "trackCount": 30,
-      "albums": [
-        "Do Androids Dream Of Electric Beats?",
-        "Never Neverland",
-        "Rock",
-        "Sexy Beast OST",
-        "Trip-Hop",
-        "Unknown Album"
       ]
     },
     {
@@ -39854,7 +39854,7 @@
     },
     {
       "slug": "xiu-xiu",
-      "name": "Xiu Xiu",
+      "name": "xiu xiu",
       "albumCount": 2,
       "trackCount": 32,
       "albums": [
@@ -39940,7 +39940,7 @@
     },
     {
       "slug": "yesterdays-new-quintet",
-      "name": "Yesterdays New Quintet",
+      "name": "Yesterday's New Quintet",
       "albumCount": 2,
       "trackCount": 13,
       "albums": [
@@ -40275,7 +40275,7 @@
     },
     {
       "slug": "zumbis-do-espao",
-      "name": "Zumbis do Espa�o",
+      "name": "Zumbis Do Espa�o",
       "albumCount": 3,
       "trackCount": 3,
       "albums": [

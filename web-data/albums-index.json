@@ -721,7 +721,7 @@
     },
     {
       "slug": "a-cast-of-thousands",
-      "name": "A Cast Of Thousands",
+      "name": "A Cast of Thousands",
       "artistCount": 1,
       "trackCount": 22,
       "artists": [
@@ -810,23 +810,23 @@
       ]
     },
     {
-      "slug": "a-fistful-of-film-music-disc-1",
-      "name": "A Fistful of Film Music (Disc 1)",
-      "artistCount": 3,
-      "trackCount": 19,
-      "artists": [
-        "Ennio Morricone",
-        "Ennio Morricone w/ Domenico Modugno",
-        "Ennio Morricone w/ Maurizio Graf"
-      ]
-    },
-    {
       "slug": "a-fistful-of-film-music-disc-2",
       "name": "A Fistful Of Film Music (Disc 2)",
       "artistCount": 1,
       "trackCount": 21,
       "artists": [
         "Ennio Morricone"
+      ]
+    },
+    {
+      "slug": "a-fistful-of-film-music-disc-1",
+      "name": "A Fistful Of Film Music Disc 1",
+      "artistCount": 3,
+      "trackCount": 19,
+      "artists": [
+        "Ennio Morricone",
+        "Ennio Morricone w/ Domenico Modugno",
+        "Ennio Morricone w/ Maurizio Graf"
       ]
     },
     {
@@ -1863,7 +1863,7 @@
     },
     {
       "slug": "ambient",
-      "name": "Ambient",
+      "name": "ambient",
       "artistCount": 18,
       "trackCount": 62,
       "artists": [
@@ -2072,7 +2072,7 @@
     },
     {
       "slug": "and-then-nothing-turned-itself-inside-out",
-      "name": "And Then Nothing Turned Itself Inside Out",
+      "name": "And Then Nothing Turned Itself Inside-Out",
       "artistCount": 1,
       "trackCount": 26,
       "artists": [
@@ -2108,7 +2108,7 @@
     },
     {
       "slug": "angels-with-dirty-faces",
-      "name": "Angels With Dirty Faces",
+      "name": "Angels with Dirty Faces",
       "artistCount": 1,
       "trackCount": 22,
       "artists": [
@@ -2965,7 +2965,7 @@
     },
     {
       "slug": "automatic-for-the-people",
-      "name": "Automatic For The People",
+      "name": "Automatic for the People",
       "artistCount": 2,
       "trackCount": 24,
       "artists": [
@@ -3396,7 +3396,7 @@
     },
     {
       "slug": "beats-rhymes-and-life-vol-4-this-aint-no-fuckin-game",
-      "name": "Beats, Rhymes, and Life Vol. 4: This Ain't No Fuckin' Game!",
+      "name": "Beats, Rhymes, and Life Vol. 4: This Ain't No Fuckin' Game",
       "artistCount": 25,
       "trackCount": 25,
       "artists": [
@@ -3663,7 +3663,7 @@
     },
     {
       "slug": "best-of",
-      "name": "Best of",
+      "name": "Best Of",
       "artistCount": 2,
       "trackCount": 13,
       "artists": [
@@ -4043,7 +4043,7 @@
     },
     {
       "slug": "blank-wave-arcade",
-      "name": "Blank Wave Arcade",
+      "name": "Blank-Wave Arcade",
       "artistCount": 1,
       "trackCount": 22,
       "artists": [
@@ -4871,7 +4871,7 @@
     },
     {
       "slug": "broken",
-      "name": "broken",
+      "name": "Broken",
       "artistCount": 1,
       "trackCount": 16,
       "artists": [
@@ -7044,7 +7044,7 @@
     },
     {
       "slug": "demo",
-      "name": "demo",
+      "name": "Demo",
       "artistCount": 3,
       "trackCount": 14,
       "artists": [
@@ -7305,7 +7305,7 @@
     },
     {
       "slug": "dilate",
-      "name": "dilate",
+      "name": "Dilate",
       "artistCount": 2,
       "trackCount": 21,
       "artists": [
@@ -9518,7 +9518,7 @@
     },
     {
       "slug": "folk-rock",
-      "name": "Folk Rock",
+      "name": "Folk-Rock",
       "artistCount": 7,
       "trackCount": 37,
       "artists": [
@@ -10393,7 +10393,7 @@
     },
     {
       "slug": "ghost-of-david",
-      "name": "Ghost Of David",
+      "name": "Ghost of David",
       "artistCount": 1,
       "trackCount": 15,
       "artists": [
@@ -10546,7 +10546,7 @@
     },
     {
       "slug": "gling-glo",
-      "name": "Gling glo",
+      "name": "gling-glo",
       "artistCount": 1,
       "trackCount": 16,
       "artists": [
@@ -11556,7 +11556,7 @@
     },
     {
       "slug": "here-come-the-warm-jets",
-      "name": "Here Come The Warm Jets",
+      "name": "Here Come the Warm Jets",
       "artistCount": 1,
       "trackCount": 20,
       "artists": [
@@ -11655,7 +11655,7 @@
     },
     {
       "slug": "high-society",
-      "name": "High Society",
+      "name": "High-Society",
       "artistCount": 1,
       "trackCount": 30,
       "artists": [
@@ -13076,7 +13076,7 @@
     },
     {
       "slug": "introducing",
-      "name": "Introducing",
+      "name": "Introducing...",
       "artistCount": 2,
       "trackCount": 5,
       "artists": [
@@ -13239,7 +13239,7 @@
     },
     {
       "slug": "iv",
-      "name": "IV",
+      "name": "Iv",
       "artistCount": 2,
       "trackCount": 9,
       "artists": [
@@ -13964,7 +13964,7 @@
     },
     {
       "slug": "kind-of-blue",
-      "name": "Kind of Blue",
+      "name": "Kind Of Blue",
       "artistCount": 2,
       "trackCount": 3,
       "artists": [
@@ -14209,7 +14209,7 @@
     },
     {
       "slug": "la-revancha-del-tango",
-      "name": "La Revancha Del Tango",
+      "name": "la revancha del tango",
       "artistCount": 2,
       "trackCount": 20,
       "artists": [
@@ -16537,7 +16537,7 @@
     },
     {
       "slug": "misc",
-      "name": "misc",
+      "name": "Misc",
       "artistCount": 11,
       "trackCount": 60,
       "artists": [
@@ -17269,7 +17269,7 @@
     },
     {
       "slug": "new-adventures-in-hi-fi",
-      "name": "New Adventures in Hi-Fi",
+      "name": "New Adventures In Hi-Fi",
       "artistCount": 1,
       "trackCount": 15,
       "artists": [
@@ -17514,7 +17514,7 @@
     },
     {
       "slug": "no-more-heroes",
-      "name": "No more heroes",
+      "name": "No More Heroes",
       "artistCount": 1,
       "trackCount": 2,
       "artists": [
@@ -18201,7 +18201,7 @@
     },
     {
       "slug": "one-day-along-the-mississippi-near-new-orleans",
-      "name": "One day along the Mississippi near New Orleans",
+      "name": "One day along the mississippi near New Orleans",
       "artistCount": 1,
       "trackCount": 2,
       "artists": [
@@ -18535,7 +18535,7 @@
     },
     {
       "slug": "out-of-time",
-      "name": "Out Of Time",
+      "name": "Out of Time",
       "artistCount": 2,
       "trackCount": 22,
       "artists": [
@@ -18780,7 +18780,7 @@
     },
     {
       "slug": "pauls-boutique",
-      "name": "Paul's Boutique",
+      "name": "Pauls Boutique",
       "artistCount": 1,
       "trackCount": 30,
       "artists": [
@@ -19079,7 +19079,7 @@
     },
     {
       "slug": "pink-flag",
-      "name": "Pink Flag",
+      "name": "pink flag",
       "artistCount": 2,
       "trackCount": 22,
       "artists": [
@@ -19152,7 +19152,7 @@
     },
     {
       "slug": "pisces-iscariot",
-      "name": "Pisces Iscariot",
+      "name": "pisces iscariot",
       "artistCount": 2,
       "trackCount": 28,
       "artists": [
@@ -19189,7 +19189,7 @@
     },
     {
       "slug": "pixies-at-the-bbc",
-      "name": "Pixies At The BBC",
+      "name": "Pixies at the BBC",
       "artistCount": 1,
       "trackCount": 21,
       "artists": [
@@ -20219,7 +20219,7 @@
     },
     {
       "slug": "q-are-we-not-men-a-we-are-devo",
-      "name": "Q: Are We Not Men? A: We Are DEVO!",
+      "name": "Q: Are We Not Men? A: We Are Devo",
       "artistCount": 1,
       "trackCount": 18,
       "artists": [
@@ -20417,7 +20417,7 @@
     },
     {
       "slug": "rant-in-e-minor",
-      "name": "Rant in E-Minor",
+      "name": "Rant In E-Minor",
       "artistCount": 1,
       "trackCount": 36,
       "artists": [
@@ -20804,7 +20804,7 @@
     },
     {
       "slug": "rehearsals-for-departure",
-      "name": "Rehearsals for Departure",
+      "name": "Rehearsals For Departure",
       "artistCount": 1,
       "trackCount": 7,
       "artists": [
@@ -22298,7 +22298,7 @@
     },
     {
       "slug": "selmasongs",
-      "name": "selmasongs",
+      "name": "Selmasongs",
       "artistCount": 2,
       "trackCount": 14,
       "artists": [
@@ -24131,7 +24131,7 @@
     },
     {
       "slug": "streethawk-a-seduction",
-      "name": "Streethawk A Seduction",
+      "name": "Streethawk: A Seduction",
       "artistCount": 1,
       "trackCount": 10,
       "artists": [
@@ -24509,7 +24509,7 @@
     },
     {
       "slug": "syl",
-      "name": "SYL",
+      "name": "Syl",
       "artistCount": 1,
       "trackCount": 5,
       "artists": [
@@ -25047,7 +25047,7 @@
     },
     {
       "slug": "the-art-of-self-defense",
-      "name": "the art of self defense",
+      "name": "The Art Of Self Defense",
       "artistCount": 2,
       "trackCount": 3,
       "artists": [
@@ -25778,7 +25778,7 @@
     },
     {
       "slug": "the-eye-of-every-storm",
-      "name": "The Eye of Every Storm",
+      "name": "The Eye Of Every Storm",
       "artistCount": 1,
       "trackCount": 8,
       "artists": [
@@ -27890,7 +27890,7 @@
     },
     {
       "slug": "time-out-of-mind",
-      "name": "Time Out Of Mind",
+      "name": "Time Out of Mind",
       "artistCount": 1,
       "trackCount": 22,
       "artists": [
@@ -28631,17 +28631,8 @@
       ]
     },
     {
-      "slug": "trip-hop-for-jazz-junkies",
-      "name": "Trip Hop For Jazz Junkies",
-      "artistCount": 1,
-      "trackCount": 10,
-      "artists": [
-        "Various Artists"
-      ]
-    },
-    {
       "slug": "trip-hop",
-      "name": "Trip-Hop",
+      "name": "Trip Hop",
       "artistCount": 31,
       "trackCount": 144,
       "artists": [
@@ -28676,6 +28667,15 @@
         "United",
         "Vanishing Peoples of the Earth",
         "no artist"
+      ]
+    },
+    {
+      "slug": "trip-hop-for-jazz-junkies",
+      "name": "Trip Hop For Jazz Junkies",
+      "artistCount": 1,
+      "trackCount": 10,
+      "artists": [
+        "Various Artists"
       ]
     },
     {
@@ -29050,7 +29050,7 @@
     },
     {
       "slug": "universal-culture-shock",
-      "name": "universal culture shock",
+      "name": "Universal Culture Shock",
       "artistCount": 1,
       "trackCount": 13,
       "artists": [
@@ -30581,21 +30581,21 @@
       ]
     },
     {
+      "slug": "untitled-unmastered",
+      "name": "Untitled (Unmastered)",
+      "artistCount": 1,
+      "trackCount": 16,
+      "artists": [
+        "Team Sleep"
+      ]
+    },
+    {
       "slug": "untitled-06-22-00",
       "name": "Untitled - 06-22-00",
       "artistCount": 1,
       "trackCount": 1,
       "artists": [
         "Erase Errata"
-      ]
-    },
-    {
-      "slug": "untitled-unmastered",
-      "name": "Untitled-Unmastered",
-      "artistCount": 1,
-      "trackCount": 16,
-      "artists": [
-        "Team Sleep"
       ]
     },
     {
@@ -31404,7 +31404,7 @@
     },
     {
       "slug": "vs",
-      "name": "VS.",
+      "name": "Vs.",
       "artistCount": 1,
       "trackCount": 40,
       "artists": [
