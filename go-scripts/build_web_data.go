@@ -33,6 +33,7 @@ type WebTrack struct {
 	DiscCount         *int   `json:"discCount"`
 	LastPlayed        string `json:"lastPlayed,omitempty"`
 	Rating            int    `json:"rating"`
+	PlayCount         int    `json:"playCount"`
 	DateAdded         string `json:"dateAdded,omitempty"`
 	DateModified      string `json:"dateModified,omitempty"`
 	Location          string `json:"location,omitempty"`
@@ -94,8 +95,96 @@ type Metadata struct {
 	Stats        Stats    `json:"stats"`
 }
 
+// PlayCountLookup represents the structure for looking up playcounts
+type PlayCountLookup struct {
+	Artist    string
+	Track     string
+	PlayCount int
+	FirstPlay int64
+	LastPlay  int64
+}
+
+// NormalizeForMatching normalizes a string for matching (same as in process_lastfm.go)
+func normalizeForMatching(s string) string {
+	s = strings.ToLower(s)
+	s = strings.ReplaceAll(s, " & ", " and ")
+	s = strings.ReplaceAll(s, "&", "and")
+
+	featuringPatterns := []string{
+		" feat. ", " feat ", " ft. ", " ft ", " featuring ",
+	}
+	for _, pattern := range featuringPatterns {
+		if idx := strings.Index(s, pattern); idx != -1 {
+			s = s[:idx]
+		}
+	}
+
+	// Remove anything in parentheses or brackets
+	s = strings.NewReplacer(
+		"(", "", ")", "",
+		"[", "", "]", "",
+	).Replace(s)
+
+	// Remove non-alphanumeric characters except spaces
+	var result strings.Builder
+	for _, r := range s {
+		if (r >= 'a' && r <= 'z') || (r >= '0' && r <= '9') || r == ' ' {
+			result.WriteRune(r)
+		}
+	}
+	s = result.String()
+
+	// Collapse multiple spaces
+	s = strings.Join(strings.Fields(s), " ")
+
+	return strings.TrimSpace(s)
+}
+
+// LoadPlayCounts loads the playcounts.json file and creates a lookup map
+func loadPlayCounts(playCountPath string) (map[string]PlayCountLookup, error) {
+	data, err := os.ReadFile(playCountPath)
+	if err != nil {
+		return nil, err
+	}
+
+	var playCountData struct {
+		TotalScrobbles int `json:"totalScrobbles"`
+		UniqueTracks   int `json:"uniqueTracks"`
+		PlayCounts     []struct {
+			Artist    string `json:"artist"`
+			Track     string `json:"track"`
+			PlayCount int    `json:"playCount"`
+			FirstPlay int64  `json:"firstPlay"`
+			LastPlay  int64  `json:"lastPlay"`
+		} `json:"playCounts"`
+	}
+
+	if err := json.Unmarshal(data, &playCountData); err != nil {
+		return nil, err
+	}
+
+	// Create lookup map with normalized keys
+	lookup := make(map[string]PlayCountLookup)
+	for _, pc := range playCountData.PlayCounts {
+		normalizedArtist := normalizeForMatching(pc.Artist)
+		normalizedTrack := normalizeForMatching(pc.Track)
+		key := normalizedArtist + "|" + normalizedTrack
+
+		lookup[key] = PlayCountLookup{
+			Artist:    pc.Artist,
+			Track:     pc.Track,
+			PlayCount: pc.PlayCount,
+			FirstPlay: pc.FirstPlay,
+			LastPlay:  pc.LastPlay,
+		}
+	}
+
+	return lookup, nil
+}
+
 func runBuildWebData() {
 	csvPath := filepath.Join("..", "archive", "compiled_itunes_library.csv")
+	playCountPath := filepath.Join("..", "data", "playcounts.json")
 	outputDir := filepath.Join("..", "web-data")
 	chunksDir := filepath.Join(outputDir, "chunks")
 
@@ -106,6 +195,16 @@ func runBuildWebData() {
 
 	fmt.Printf("Reading CSV from: %s\n", csvPath)
 	fmt.Printf("Output directory: %s\n\n", outputDir)
+
+	// Load playcounts
+	fmt.Println("Loading Last.fm playcounts...")
+	playCountLookup, err := loadPlayCounts(playCountPath)
+	if err != nil {
+		fmt.Printf("Warning: Could not load playcounts (%v). Continuing without playcount data.\n\n", err)
+		playCountLookup = make(map[string]PlayCountLookup)
+	} else {
+		fmt.Printf("Loaded %d unique track playcounts\n\n", len(playCountLookup))
+	}
 
 
 rows, err := ReadCSV(csvPath)
@@ -138,6 +237,7 @@ rows, err := ReadCSV(csvPath)
 	var totalDuration int64
 	var totalBitrateSum int64
 	var bitrateCount int64
+	var tracksWithPlayCount int
 
 	for _, row := range rows {
 		trackName := strings.TrimSpace(row["Name"])
@@ -208,6 +308,16 @@ equalizer := SafeStr(row["Equalizer"])
 			volPtr = &volumeAdjustment
 		}
 
+		// Look up playcount
+		playCount := 0
+		normalizedArtist := normalizeForMatching(artistName)
+		normalizedTrack := normalizeForMatching(trackName)
+		lookupKey := normalizedArtist + "|" + normalizedTrack
+		if pcEntry, found := playCountLookup[lookupKey]; found {
+			playCount = pcEntry.PlayCount
+			tracksWithPlayCount++
+		}
+
 		track := WebTrack{
 			ID:                trackID,
 			Name:              trackName,
@@ -230,6 +340,7 @@ equalizer := SafeStr(row["Equalizer"])
 			DiscCount:         intPtr(discCount),
 			LastPlayed:        lastPlayed,
 			Rating:            rating,
+			PlayCount:         playCount,
 			DateAdded:         dateAdded,
 			DateModified:      dateModified,
 			Location:          location,
@@ -429,6 +540,7 @@ tracksRated := 0
 	fmt.Printf("Total Duration:   %s\n", metadata.Stats.TotalDurationFormatted)
 	fmt.Printf("Avg Bit Rate:     %.1f kbps\n", metadata.Stats.AvgBitRate)
 	fmt.Printf("Tracks Rated:     %d\n", metadata.Stats.TracksWithRating)
+	fmt.Printf("Tracks w/ Plays:  %d (%.1f%%)\n", tracksWithPlayCount, float64(tracksWithPlayCount)/float64(metadata.TotalTracks)*100)
 	fmt.Println(strings.Repeat("=", 60))
 	
 	absOut, _ := filepath.Abs(outputDir)
