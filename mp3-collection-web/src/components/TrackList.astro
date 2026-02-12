@@ -9,15 +9,17 @@ interface Track {
   duration: number;
   durationFormatted: string;
   year?: number;
+  playCount?: number;
 }
 
 interface Props {
   tracks: Track[];
   showArtist?: boolean;
   showAlbum?: boolean;
+  showPlayCount?: boolean;
 }
 
-const { tracks, showArtist = true, showAlbum = true } = Astro.props;
+const { tracks, showArtist = true, showAlbum = true, showPlayCount = true } = Astro.props;
 
 const buildUrl = (path: string) => {
   const base = import.meta.env.BASE_URL;
@@ -47,6 +49,11 @@ const buildUrl = (path: string) => {
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Year
         </th>
+        {showPlayCount && (
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Plays
+          </th>
+        )}
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Duration
         </th>
@@ -81,6 +88,17 @@ const buildUrl = (path: string) => {
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
             {track.year || '-'}
           </td>
+          {showPlayCount && (
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              {track.playCount ? (
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  {track.playCount}
+                </span>
+              ) : (
+                <span class="text-gray-400">-</span>
+              )}
+            </td>
+          )}
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
             {track.durationFormatted}
           </td>

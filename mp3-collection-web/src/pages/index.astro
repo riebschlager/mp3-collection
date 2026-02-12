@@ -8,6 +8,10 @@ const metadata = await import('../../public/data/metadata.json');
 // Load first chunk of tracks
 const firstChunk = await import('../../public/data/chunks/tracks-001.json');
 
+// Load playcounts to show most played
+const playcounts = await import('../../public/data/playcounts.json');
+const mostPlayed = playcounts.playCounts.sort((a: any, b: any) => b.playCount - a.playCount).slice(0, 20);
+
 const buildUrl = (path: string) => {
   const base = import.meta.env.BASE_URL;
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
@@ -66,7 +70,7 @@ const buildUrl = (path: string) => {
     </div>
 
     <!-- Quick Navigation -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <a
         href={buildUrl('artists')}
         class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg shadow-lg p-8 hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105"
@@ -88,6 +92,41 @@ const buildUrl = (path: string) => {
         <h3 class="text-2xl font-bold mb-2">Browse Tracks</h3>
         <p class="text-purple-100">View all {metadata.totalTracks?.toLocaleString()} tracks</p>
       </a>
+      <a
+        href={buildUrl('history')}
+        class="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-lg shadow-lg p-8 hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105"
+      >
+        <h3 class="text-2xl font-bold mb-2">Listening History</h3>
+        <p class="text-orange-100">Explore your Last.fm timeline</p>
+      </a>
+    </div>
+
+    <!-- Most Played Tracks -->
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Most Played Tracks</h2>
+        <a href={buildUrl('history')} class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+          View Full History →
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {mostPlayed.map((track: any, index: number) => (
+          <div class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white text-sm flex items-center justify-center font-bold">
+              {index + 1}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-gray-900 truncate">{track.track}</div>
+              <div class="text-xs text-gray-600 truncate">{track.artist}</div>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                {track.playCount} plays
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
 
     <!-- Genre Cloud -->

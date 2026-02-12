@@ -22,6 +22,8 @@ func main() {
 		runExtractAlbums()
 	case "process-lastfm":
 		runProcessLastFm()
+	case "build-timeline":
+		runBuildTimeline()
 	case "build-web-data":
 		runBuildWebData()
 	default:
@@ -38,5 +40,6 @@ func printUsage() {
 	fmt.Println("  extract-artists   Extract artists to data/artists.json")
 	fmt.Println("  extract-albums    Extract albums to data/albums.json")
 	fmt.Println("  process-lastfm    Process Last.fm scrobbles to data/playcounts.json")
+	fmt.Println("  build-timeline    Build timeline data from Last.fm to web-data/timeline.json")
 	fmt.Println("  build-web-data    Build optimized web data to web-data/")
 }
