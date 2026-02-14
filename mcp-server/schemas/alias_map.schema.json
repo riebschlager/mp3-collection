@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "alias_map record",
+  "type": "object",
+  "required": [
+    "entityType",
+    "canonicalValue",
+    "aliasValue",
+    "normalizedAlias",
+    "confidence",
+    "createdAt"
+  ],
+  "properties": {
+    "aliasId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "entityType": {
+      "type": "string",
+      "enum": [
+        "artist",
+        "track",
+        "album"
+      ]
+    },
+    "canonicalTrackId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^ct_[a-zA-Z0-9_-]+$"
+    },
+    "canonicalValue": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliasValue": {
+      "type": "string",
+      "minLength": 1
+    },
+    "normalizedAlias": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

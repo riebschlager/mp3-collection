@@ -1,0 +1,16 @@
+{
+  "aliases": [
+    {
+      "entityType": "artist",
+      "aliasValue": "apc",
+      "canonicalValue": "a perfect circle",
+      "confidence": 1.0
+    },
+    {
+      "entityType": "track",
+      "aliasValue": "judith (album version)",
+      "canonicalValue": "judith",
+      "confidence": 1.0
+    }
+  ]
+}

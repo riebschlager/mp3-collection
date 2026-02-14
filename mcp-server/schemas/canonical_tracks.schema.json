@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "canonical_tracks record",
+  "type": "object",
+  "required": [
+    "canonicalTrackId",
+    "canonicalArtist",
+    "canonicalTrack",
+    "sourceCount",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "canonicalTrackId": {
+      "type": "string",
+      "pattern": "^ct_[a-zA-Z0-9_-]+$"
+    },
+    "canonicalArtist": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonicalTrack": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonicalAlbum": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "durationSec": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "releaseYear": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1000,
+      "maximum": 2100
+    },
+    "firstSeenTsMs": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lastSeenTsMs": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sourceCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

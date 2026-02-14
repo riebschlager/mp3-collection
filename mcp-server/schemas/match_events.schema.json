@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "match_events record",
+  "type": "object",
+  "required": [
+    "scrobbleHash",
+    "rawArtist",
+    "rawTrack",
+    "matchStatus",
+    "confidence",
+    "createdAt"
+  ],
+  "properties": {
+    "matchEventId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "scrobbleHash": {
+      "type": "string",
+      "minLength": 8
+    },
+    "scrobbleTsMs": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "rawArtist": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rawTrack": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rawAlbum": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalizedArtist": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalizedTrack": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonicalTrackId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^ct_[a-zA-Z0-9_-]+$"
+    },
+    "matchStatus": {
+      "type": "string",
+      "enum": [
+        "matched",
+        "ambiguous",
+        "unmatched"
+      ]
+    },
+    "matchMethod": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidence": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "signal",
+          "score"
+        ],
+        "properties": {
+          "signal": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "runId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

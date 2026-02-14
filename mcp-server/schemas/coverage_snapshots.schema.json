@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "coverage_snapshots record",
+  "type": "object",
+  "required": [
+    "snapshotDate",
+    "groupBy",
+    "totalScrobbles",
+    "matchedScrobbles",
+    "unmatchedScrobbles",
+    "matchRate",
+    "libraryTracksTotal",
+    "libraryTracksWithPlays",
+    "libraryTrackCoverage",
+    "createdAt"
+  ],
+  "properties": {
+    "snapshotId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "snapshotDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "periodStart": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "periodEnd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "groupBy": {
+      "type": "string",
+      "enum": [
+        "all",
+        "month",
+        "year"
+      ]
+    },
+    "totalScrobbles": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "matchedScrobbles": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unmatchedScrobbles": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "matchRate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "libraryTracksTotal": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "libraryTracksWithPlays": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "libraryTrackCoverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "failureClusters": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "pattern",
+          "count"
+        ],
+        "properties": {
+          "pattern": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "suggestedRule": {
+            "type": "string"
+          },
+          "estimatedImpact": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
