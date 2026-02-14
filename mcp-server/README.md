@@ -7,11 +7,13 @@ Minimal Go MCP server scaffold for deep analysis of the MP3 collection and Last.
 - `music.resolve_track_identity`
 - `music.audit_match_coverage`
 - `music.compare_eras`
+- `music.reload_alias_map`
 
 All three tools are implemented with real data-backed outputs.
 - `music.resolve_track_identity`: exact/fuzzy matching with alias override support.
 - `music.audit_match_coverage`: match-rate audit, failure clustering, and unmatched rankings.
 - `music.compare_eras`: overlap, novelty/entropy, rising/falling tracks, and genre shift.
+- `music.reload_alias_map`: in-process alias + resolver index reload after alias file edits.
 
 ## Run
 
@@ -59,7 +61,7 @@ or grouped:
 
 1. `music.audit_match_coverage` currently treats ambiguous matches as unmatched.
 2. `music.compare_eras` genre shifts depend on exact track-to-library resolution (unmatched tracks are excluded from genre stats).
-3. Alias map is loaded at startup; updates require restarting the server.
+3. `music.reload_alias_map` refreshes aliases in-process, but does not persist alias edits for you.
 
 ## Seed schemas
 

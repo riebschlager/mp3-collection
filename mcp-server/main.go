@@ -182,6 +182,7 @@ var (
 	resolverOnce     sync.Once
 	resolverInstance *trackResolver
 	resolverErr      error
+	resolverStateMu  sync.Mutex
 	lastFMOnce       sync.Once
 	lastFMCache      []lastFMScrobble
 	lastFMErr        error
@@ -325,6 +326,8 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 		payload, err = auditMatchCoverage(params.Arguments)
 	case "music.compare_eras":
 		payload, err = compareEras(params.Arguments)
+	case "music.reload_alias_map":
+		payload, err = reloadAliasMap(params.Arguments)
 	default:
 		return toolCallResult{
 			IsError: true,
@@ -519,6 +522,23 @@ func resolveTrackIdentity(args map[string]interface{}) (map[string]interface{}, 
 }
 
 func getResolver() (*trackResolver, error) {
+	resolverStateMu.Lock()
+	defer resolverStateMu.Unlock()
+
+	resolverOnce.Do(func() {
+		resolverInstance, resolverErr = loadResolver()
+	})
+	return resolverInstance, resolverErr
+}
+
+func forceReloadResolver() (*trackResolver, error) {
+	resolverStateMu.Lock()
+	defer resolverStateMu.Unlock()
+
+	resolverOnce = sync.Once{}
+	resolverInstance = nil
+	resolverErr = nil
+
 	resolverOnce.Do(func() {
 		resolverInstance, resolverErr = loadResolver()
 	})
@@ -848,6 +868,28 @@ func makeAliasEvidence(steps []aliasStep) []map[string]interface{} {
 		})
 	}
 	return evidence
+}
+
+func (a *aliasCatalog) Count() int {
+	if a == nil {
+		return 0
+	}
+	return len(a.artist) + len(a.track) + len(a.album)
+}
+
+func (a *aliasCatalog) CountByEntity() map[string]int {
+	if a == nil {
+		return map[string]int{
+			"artist": 0,
+			"track":  0,
+			"album":  0,
+		}
+	}
+	return map[string]int{
+		"artist": len(a.artist),
+		"track":  len(a.track),
+		"album":  len(a.album),
+	}
 }
 
 func buildExactKey(normArtist, normTrack string) string {
@@ -2131,6 +2173,53 @@ func minFloat(a, b float64) float64 {
 	return b
 }
 
+func reloadAliasMap(args map[string]interface{}) (map[string]interface{}, error) {
+	start := time.Now()
+	previousResolver, _ := getResolver()
+	previousAliasPath := ""
+	previousAliasCount := 0
+	if previousResolver != nil {
+		previousAliasPath = previousResolver.aliasPath
+		previousAliasCount = previousResolver.aliases.Count()
+	}
+
+	reloadedResolver, err := forceReloadResolver()
+	if err != nil {
+		return nil, fmt.Errorf("failed to reload resolver: %w", err)
+	}
+
+	reloadedAliasPath := reloadedResolver.aliasPath
+	status := "reloaded"
+	if previousAliasPath != reloadedAliasPath {
+		status = "reloaded_with_alias_path_change"
+	}
+
+	durationMs := time.Since(start).Milliseconds()
+	if durationMs < 0 {
+		durationMs = 0
+	}
+
+	return map[string]interface{}{
+		"status": status,
+		"timing": map[string]interface{}{
+			"durationMs": durationMs,
+		},
+		"aliases": map[string]interface{}{
+			"path":               reloadedAliasPath,
+			"loaded":             reloadedAliasPath != "",
+			"countTotal":         reloadedResolver.aliases.Count(),
+			"countByEntity":      reloadedResolver.aliases.CountByEntity(),
+			"previousPath":       previousAliasPath,
+			"previousCountTotal": previousAliasCount,
+		},
+		"resolver": map[string]interface{}{
+			"tracksIndexed": len(reloadedResolver.tracks),
+			"exactKeys":     len(reloadedResolver.exactIndex),
+		},
+		"note": "alias map and resolver indexes were reloaded in-process",
+	}, nil
+}
+
 func toolCatalog() []toolDefinition {
 	return []toolDefinition{
 		{
@@ -2191,6 +2280,18 @@ func toolCatalog() []toolDefinition {
 					"eraA": eraInputSchema("Era A"),
 					"eraB": eraInputSchema("Era B"),
 					"topN": map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+				},
+			},
+		},
+		{
+			Name:        "music.reload_alias_map",
+			Description: "Reload alias map and resolver indexes without restarting the MCP server.",
+			InputSchema: map[string]interface{}{
+				"type": "object",
+				"properties": map[string]interface{}{
+					"reason": map[string]interface{}{
+						"type": "string",
+					},
 				},
 			},
 		},
