@@ -353,15 +353,15 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 	)
 
 	switch params.Name {
-	case "music.resolve_track_identity":
+	case "music_resolve_track_identity":
 		payload, err = resolveTrackIdentity(params.Arguments)
-	case "music.audit_match_coverage":
+	case "music_audit_match_coverage":
 		payload, err = auditMatchCoverage(params.Arguments)
-	case "music.find_dormant_returns":
+	case "music_find_dormant_returns":
 		payload, err = findDormantReturns(params.Arguments)
-	case "music.compare_eras":
+	case "music_compare_eras":
 		payload, err = compareEras(params.Arguments)
-	case "music.reload_alias_map":
+	case "music_reload_alias_map":
 		payload, err = reloadAliasMap(params.Arguments)
 	default:
 		return toolCallResult{
@@ -2520,7 +2520,7 @@ func reloadAliasMap(args map[string]interface{}) (map[string]interface{}, error)
 func toolCatalog() []toolDefinition {
 	return []toolDefinition{
 		{
-			Name:        "music.resolve_track_identity",
+			Name:        "music_resolve_track_identity",
 			Description: "Resolve a track/scrobble to a canonical library track with confidence and evidence.",
 			InputSchema: map[string]interface{}{
 				"type":     "object",
@@ -2550,7 +2550,7 @@ func toolCatalog() []toolDefinition {
 			},
 		},
 		{
-			Name:        "music.audit_match_coverage",
+			Name:        "music_audit_match_coverage",
 			Description: "Analyze match quality between scrobbles and library tracks; return gaps, clusters, and suggested rule fixes.",
 			InputSchema: map[string]interface{}{
 				"type": "object",
@@ -2568,7 +2568,7 @@ func toolCatalog() []toolDefinition {
 			},
 		},
 		{
-			Name:        "music.compare_eras",
+			Name:        "music_compare_eras",
 			Description: "Compare two listening windows and quantify drift, overlap, and emerging/declining preferences.",
 			InputSchema: map[string]interface{}{
 				"type":     "object",
@@ -2581,7 +2581,7 @@ func toolCatalog() []toolDefinition {
 			},
 		},
 		{
-			Name:        "music.find_dormant_returns",
+			Name:        "music_find_dormant_returns",
 			Description: "Find tracks that were dormant for a long gap and then returned in a target listening window.",
 			InputSchema: map[string]interface{}{
 				"type":     "object",
@@ -2605,7 +2605,7 @@ func toolCatalog() []toolDefinition {
 			},
 		},
 		{
-			Name:        "music.reload_alias_map",
+			Name:        "music_reload_alias_map",
 			Description: "Reload alias map and resolver indexes without restarting the MCP server.",
 			InputSchema: map[string]interface{}{
 				"type": "object",
@@ -2818,10 +2818,11 @@ func writeResponse(writer *bufio.Writer, response rpcResponse) error {
 		return err
 	}
 
-	if _, err := fmt.Fprintf(writer, "Content-Length: %d\r\n\r\n", len(body)); err != nil {
+	// Use newline-delimited JSON for stdio transport (Claude Desktop compatibility)
+	if _, err := writer.Write(body); err != nil {
 		return err
 	}
-	if _, err := writer.Write(body); err != nil {
+	if _, err := writer.WriteString("\n"); err != nil {
 		return err
 	}
 	return writer.Flush()

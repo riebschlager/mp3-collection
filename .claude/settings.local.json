@@ -13,7 +13,10 @@
       "Bash(npm run preview:*)",
       "Bash(go run:*)",
       "Bash(go build:*)",
-      "Bash(jq:*)"
+      "Bash(jq:*)",
+      "Bash(./mcp-server:*)",
+      "Bash(/opt/homebrew/bin/go build:*)",
+      "Bash(/Users/criebschlager/Projects/mp3-collection/mcp-server/run-mcp.sh:*)"
     ]
   }
 }
