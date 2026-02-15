@@ -1,0 +1,33 @@
+---
+/**
+ * AlbumArt - Generated album artwork placeholder
+ */
+import { getAlbumGradient, getAlbumInitials } from '../../lib/album-art';
+
+export interface Props {
+  album: string;
+  artist: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+}
+
+const { album, artist, size = 'md', className = '' } = Astro.props;
+
+const gradient = getAlbumGradient(album, artist);
+const initials = getAlbumInitials(album);
+
+const sizeClasses = {
+  sm: 'w-10 h-10 text-xs',
+  md: 'w-16 h-16 text-sm',
+  lg: 'w-32 h-32 text-2xl',
+  xl: 'w-48 h-48 text-4xl',
+};
+---
+
+<div
+  class={`${sizeClasses[size]} rounded-lg flex items-center justify-center font-bold text-white shadow-lg ${className}`}
+  style={`background: ${gradient}`}
+  title={`${album} by ${artist}`}
+>
+  {initials}
+</div>
