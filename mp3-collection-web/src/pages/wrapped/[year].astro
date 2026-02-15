@@ -1,0 +1,171 @@
+---
+/**
+ * Wrapped Year Story - Slide-based presentation for a specific year
+ */
+import '../../styles/global.css';
+import '../../styles/wrapped.css';
+import { getTheme } from '../../lib/wrapped-themes';
+import { getAvailableYears } from '../../lib/wrapped-utils';
+import type { YearData } from '../../lib/wrapped-utils';
+
+// Import slide components
+import WelcomeSlide from '../../components/wrapped/slides/WelcomeSlide.astro';
+import BigNumberSlide from '../../components/wrapped/slides/BigNumberSlide.astro';
+import TopArtistSlide from '../../components/wrapped/slides/TopArtistSlide.astro';
+import TopTracksSlide from '../../components/wrapped/slides/TopTracksSlide.astro';
+import DiscoverySlide from '../../components/wrapped/slides/DiscoverySlide.astro';
+import PatternSlide from '../../components/wrapped/slides/PatternSlide.astro';
+import FunFactSlide from '../../components/wrapped/slides/FunFactSlide.astro';
+import BadgesSlide from '../../components/wrapped/slides/BadgesSlide.astro';
+import ThankYouSlide from '../../components/wrapped/slides/ThankYouSlide.astro';
+
+// Load timeline data
+const timelineData = await import('../../../public/data/timeline.json');
+
+// Generate static paths for all available years
+export async function getStaticPaths() {
+  const timelineData = await import('../../../public/data/timeline.json');
+  const years = getAvailableYears(timelineData);
+
+  return years.map((year: number) => ({
+    params: { year: year.toString() },
+  }));
+}
+
+// Get current year from params
+const { year } = Astro.params;
+const currentYear = parseInt(year);
+
+// Get year data
+const yearData = timelineData.years.find((y: any) => y.year === currentYear) as YearData;
+
+if (!yearData) {
+  return Astro.redirect('/wrapped');
+}
+
+// Get theme for this year
+const theme = getTheme(currentYear);
+
+// Get all years for navigation
+const allYears = getAvailableYears(timelineData);
+const currentIndex = allYears.indexOf(currentYear);
+const nextYear = currentIndex < allYears.length - 1 ? allYears[currentIndex + 1] : undefined;
+const prevYear = currentIndex > 0 ? allYears[currentIndex - 1] : undefined;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your {currentYear} Wrapped</title>
+  </head>
+  <body class="overflow-hidden">
+    <div class={`wrapped-container bg-gradient-to-br ${theme.gradient} text-white`}>
+      <!-- Slide 1: Welcome -->
+      <div class="wrapped-slide">
+        <WelcomeSlide year={currentYear} totalScrobbles={yearData.totalScrobbles} />
+      </div>
+
+      <!-- Slide 2: Big Number -->
+      <div class="wrapped-slide">
+        <BigNumberSlide totalScrobbles={yearData.totalScrobbles} />
+      </div>
+
+      <!-- Slide 3: Top Artist -->
+      {yearData.topTracks.length > 0 && (
+        <div class="wrapped-slide">
+          <TopArtistSlide topTracks={yearData.topTracks} />
+        </div>
+      )}
+
+      <!-- Slide 4: Top 5 Tracks -->
+      {yearData.topTracks.length >= 5 && (
+        <div class="wrapped-slide">
+          <TopTracksSlide topTracks={yearData.topTracks} />
+        </div>
+      )}
+
+      <!-- Slide 5: Discovery -->
+      <div class="wrapped-slide">
+        <DiscoverySlide
+          uniqueTracks={yearData.uniqueTracks}
+          totalScrobbles={yearData.totalScrobbles}
+        />
+      </div>
+
+      <!-- Slide 6: Listening Patterns -->
+      {yearData.months && yearData.months.length > 0 && (
+        <div class="wrapped-slide">
+          <PatternSlide months={yearData.months} />
+        </div>
+      )}
+
+      <!-- Slide 7: Fun Fact -->
+      <div class="wrapped-slide">
+        <FunFactSlide yearData={yearData} />
+      </div>
+
+      <!-- Slide 8: Badges -->
+      <div class="wrapped-slide">
+        <BadgesSlide yearData={yearData} />
+      </div>
+
+      <!-- Slide 9: Thank You -->
+      <div class="wrapped-slide">
+        <ThankYouSlide
+          year={currentYear}
+          totalScrobbles={yearData.totalScrobbles}
+          uniqueTracks={yearData.uniqueTracks}
+          nextYear={nextYear}
+          prevYear={prevYear}
+        />
+      </div>
+    </div>
+
+    <!-- Intersection Observer Script -->
+    <script>
+      // Intersection Observer for triggering slide animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        }
+      );
+
+      // Observe all slide content
+      document.querySelectorAll('.slide-content').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        const container = document.querySelector('.wrapped-container');
+        if (!container) return;
+
+        const slideHeight = window.innerHeight;
+        const currentScroll = container.scrollTop;
+
+        if (e.key === 'ArrowDown' || e.key === ' ') {
+          e.preventDefault();
+          container.scrollTo({
+            top: currentScroll + slideHeight,
+            behavior: 'smooth',
+          });
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          container.scrollTo({
+            top: currentScroll - slideHeight,
+            behavior: 'smooth',
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

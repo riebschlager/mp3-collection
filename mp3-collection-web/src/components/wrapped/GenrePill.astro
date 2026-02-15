@@ -1,0 +1,15 @@
+---
+/**
+ * GenrePill - Styled genre tag
+ */
+export interface Props {
+  genre: string;
+  className?: string;
+}
+
+const { genre, className = '' } = Astro.props;
+---
+
+<span class={`inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm md:text-base font-medium ${className}`}>
+  {genre}
+</span>

@@ -69,6 +69,31 @@ const buildUrl = (path: string) => {
       </div>
     </div>
 
+    <!-- Wrapped Feature -->
+    <div class="relative overflow-hidden">
+      <a
+        href={buildUrl('wrapped')}
+        class="block bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-600 text-white rounded-2xl shadow-2xl p-12 hover:from-pink-600 hover:via-purple-700 hover:to-indigo-700 transition-all transform hover:scale-[1.02]"
+      >
+        <div class="relative z-10">
+          <div class="text-sm font-semibold tracking-wide uppercase mb-2 opacity-90">
+            New Feature
+          </div>
+          <h3 class="text-4xl md:text-5xl font-bold mb-4">
+            Your Years Wrapped
+          </h3>
+          <p class="text-lg md:text-xl text-pink-100 mb-6 max-w-2xl">
+            Explore Spotify Wrapped-style presentations for each year of your listening history, from 2005 to 2026
+          </p>
+          <div class="inline-flex items-center gap-2 text-lg font-semibold">
+            <span>Explore Your Music Journey</span>
+            <span class="text-2xl">→</span>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10" />
+      </a>
+    </div>
+
     <!-- Quick Navigation -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <a

@@ -1,0 +1,34 @@
+---
+/**
+ * BadgesSlide - Display achievement badges
+ */
+import BadgeIcon from '../BadgeIcon.astro';
+import { getBadges } from '../../../lib/wrapped-utils';
+import type { YearData } from '../../../lib/wrapped-utils';
+
+export interface Props {
+  yearData: YearData;
+}
+
+const { yearData } = Astro.props;
+
+const badges = getBadges(yearData);
+---
+
+<div class="slide-content">
+  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+    Your Achievements
+  </h2>
+  {badges.length > 0 ? (
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {badges.map((badge) => (
+        <BadgeIcon badge={badge} />
+      ))}
+    </div>
+  ) : (
+    <div class="text-center text-xl opacity-75">
+      <p>Every listening journey is unique!</p>
+      <p class="mt-4">Keep exploring music to unlock badges next year.</p>
+    </div>
+  )}
+</div>

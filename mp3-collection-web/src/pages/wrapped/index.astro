@@ -1,0 +1,79 @@
+---
+/**
+ * Wrapped Gallery - Year selection page
+ */
+import '../../styles/wrapped.css';
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+import { getTheme } from '../../lib/wrapped-themes';
+import { getAvailableYears } from '../../lib/wrapped-utils';
+
+// Load timeline data
+const timelineData = await import('../../../public/data/timeline.json');
+
+// Get all available years (sorted chronologically, oldest first)
+const years = getAvailableYears(timelineData);
+---
+
+<Layout title="Your Years Wrapped">
+  <div class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <header class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+          Your Years Wrapped
+        </h1>
+        <p class="text-xl md:text-2xl opacity-90">
+          Explore {years.length} years of listening history
+        </p>
+        <p class="text-lg opacity-75 mt-2">
+          From {years[0]} to {years[years.length - 1]}
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+        {years.map((year) => {
+          const yearData = timelineData.years.find((y: any) => y.year === year);
+          const theme = getTheme(year);
+
+          return (
+            <a
+              href={buildUrl(`wrapped/${year}`)}
+              class="year-card block group"
+            >
+              <div class={`relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br ${theme.gradient} p-8 h-64 flex flex-col justify-between transition-transform hover:scale-105`}>
+                <div>
+                  <div class="text-sm font-medium opacity-75 mb-2">
+                    {theme.era.toUpperCase()}
+                  </div>
+                  <h2 class="text-5xl font-bold mb-4">
+                    {year}
+                  </h2>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm opacity-75">Scrobbles</span>
+                    <span class="font-bold text-lg">{yearData?.totalScrobbles.toLocaleString()}</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm opacity-75">Unique Tracks</span>
+                    <span class="font-bold text-lg">{yearData?.uniqueTracks.toLocaleString()}</span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <div class="text-center">
+        <a
+          href={buildUrl('history')}
+          class="inline-block px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm font-medium hover:bg-white/30 transition-colors"
+        >
+          View Full Timeline
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

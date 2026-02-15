@@ -1,0 +1,48 @@
+---
+/**
+ * MonthlyChart - CSS bar chart showing monthly listening patterns
+ */
+import type { MonthData } from '../../lib/wrapped-utils';
+
+export interface Props {
+  months: MonthData[];
+  className?: string;
+}
+
+const { months, className = '' } = Astro.props;
+
+// Calculate max scrobbles for scaling
+const maxScrobbles = Math.max(...months.map((m) => m.totalScrobbles), 1);
+
+// Month abbreviations
+const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// Create array of 12 months, filling in missing ones with 0
+const monthsArray = Array.from({ length: 12 }, (_, i) => {
+  const monthStr = `${months[0]?.month.split('-')[0] || new Date().getFullYear()}-${String(i + 1).padStart(2, '0')}`;
+  const monthData = months.find((m) => m.month === monthStr);
+  return monthData || { month: monthStr, totalScrobbles: 0, uniqueTracks: 0, topTracks: [] };
+});
+---
+
+<div class={`space-y-4 ${className}`}>
+  <div class="flex items-end justify-between gap-2 h-48">
+    {monthsArray.map((month, index) => {
+      // Calculate pixel height (h-48 = 192px)
+      const heightPx = month.totalScrobbles > 0 ? Math.round((month.totalScrobbles / maxScrobbles) * 192) : 0;
+      const isZero = month.totalScrobbles === 0;
+      return (
+        <div class="flex-1 flex flex-col items-center justify-end gap-2">
+          <div
+            class={`chart-bar w-full rounded-t ${isZero ? 'bg-white/10' : 'bg-white'} hover:bg-white transition-all`}
+            style={`height: ${heightPx}px; min-height: ${isZero ? '0' : '2px'}`}
+            title={`${monthNames[index]}: ${month.totalScrobbles} scrobbles`}
+          />
+          <div class="text-xs opacity-75 font-medium">
+            {monthNames[index]}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

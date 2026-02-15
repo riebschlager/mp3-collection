@@ -1,0 +1,28 @@
+---
+/**
+ * BigNumberSlide - Big number display for total listening time
+ */
+import StatCard from '../StatCard.astro';
+import { getTotalMinutes, formatListeningTime } from '../../../lib/wrapped-utils';
+
+export interface Props {
+  totalScrobbles: number;
+}
+
+const { totalScrobbles } = Astro.props;
+
+const totalMinutes = getTotalMinutes(totalScrobbles);
+const formattedTime = formatListeningTime(totalMinutes);
+---
+
+<div class="slide-content text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-12 opacity-90">
+    You listened to
+  </h2>
+  <StatCard
+    value={formattedTime}
+    label="of music"
+    sublabel={`That's ${totalMinutes.toLocaleString()} minutes!`}
+    size="lg"
+  />
+</div>

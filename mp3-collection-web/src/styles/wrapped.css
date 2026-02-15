@@ -1,0 +1,303 @@
+/**
+ * Wrapped Feature Styles
+ * Instagram Story-style scroll-based presentation
+ */
+
+/* Scroll snap container for smooth slide transitions */
+.wrapped-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Individual slides */
+.wrapped-slide {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+/* Slide content with entrance animation */
+.slide-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Visible state triggered by Intersection Observer */
+.slide-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .wrapped-container {
+    scroll-behavior: auto;
+  }
+
+  .slide-content {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .slide-content.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Number animation (fade in with slight scale) */
+.stat-number {
+  animation: numberReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@keyframes numberReveal {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide-content.visible .stat-number {
+  animation-delay: 0.2s;
+}
+
+/* Staggered list animations */
+.stagger-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slide-content.visible .stagger-item:nth-child(1) {
+  animation: slideInStagger 0.4s ease forwards 0.1s;
+}
+
+.slide-content.visible .stagger-item:nth-child(2) {
+  animation: slideInStagger 0.4s ease forwards 0.2s;
+}
+
+.slide-content.visible .stagger-item:nth-child(3) {
+  animation: slideInStagger 0.4s ease forwards 0.3s;
+}
+
+.slide-content.visible .stagger-item:nth-child(4) {
+  animation: slideInStagger 0.4s ease forwards 0.4s;
+}
+
+.slide-content.visible .stagger-item:nth-child(5) {
+  animation: slideInStagger 0.4s ease forwards 0.5s;
+}
+
+@keyframes slideInStagger {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Badge grid animations */
+.badge-item {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-content.visible .badge-item {
+  animation: badgePop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.slide-content.visible .badge-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.slide-content.visible .badge-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.slide-content.visible .badge-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.slide-content.visible .badge-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes badgePop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Chart bar animations */
+.chart-bar {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-content.visible .chart-bar {
+  transform: scaleY(1);
+}
+
+/* Stagger chart bars */
+.slide-content.visible .chart-bar:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.slide-content.visible .chart-bar:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.slide-content.visible .chart-bar:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.slide-content.visible .chart-bar:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.slide-content.visible .chart-bar:nth-child(5) {
+  transition-delay: 0.25s;
+}
+
+.slide-content.visible .chart-bar:nth-child(6) {
+  transition-delay: 0.3s;
+}
+
+.slide-content.visible .chart-bar:nth-child(7) {
+  transition-delay: 0.35s;
+}
+
+.slide-content.visible .chart-bar:nth-child(8) {
+  transition-delay: 0.4s;
+}
+
+.slide-content.visible .chart-bar:nth-child(9) {
+  transition-delay: 0.45s;
+}
+
+.slide-content.visible .chart-bar:nth-child(10) {
+  transition-delay: 0.5s;
+}
+
+.slide-content.visible .chart-bar:nth-child(11) {
+  transition-delay: 0.55s;
+}
+
+.slide-content.visible .chart-bar:nth-child(12) {
+  transition-delay: 0.6s;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, currentColor 0%, currentColor 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism effect for modern era */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Year gallery grid animations */
+.year-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.year-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.year-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.year-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.year-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.year-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.year-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.year-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.year-card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress indicator */
+.progress-dots {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.progress-dot.active {
+  background: white;
+  transform: scale(1.5);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .wrapped-slide {
+    padding: 1rem 0.75rem;
+  }
+
+  .slide-content {
+    max-width: 100%;
+  }
+
+  .progress-dots {
+    right: 0.5rem;
+  }
+}

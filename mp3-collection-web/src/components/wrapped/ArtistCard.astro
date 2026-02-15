@@ -1,0 +1,40 @@
+---
+/**
+ * ArtistCard - Display an artist with ranking and stats
+ */
+export interface Props {
+  rank: number;
+  artist: string;
+  playCount: number;
+  topTrack?: string;
+  className?: string;
+}
+
+const { rank, artist, playCount, topTrack, className = '' } = Astro.props;
+---
+
+<div class={`stagger-item p-4 rounded-lg bg-white/10 backdrop-blur-sm ${className}`}>
+  <div class="flex items-center gap-4 mb-2">
+    <div class="text-3xl md:text-4xl font-bold opacity-50">
+      {rank}
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class="text-xl md:text-2xl font-bold truncate">
+        {artist}
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="text-xl md:text-2xl font-bold">
+        {playCount}
+      </div>
+      <div class="text-xs opacity-75">
+        plays
+      </div>
+    </div>
+  </div>
+  {topTrack && (
+    <div class="text-sm md:text-base opacity-75 ml-14 truncate">
+      Top song: {topTrack}
+    </div>
+  )}
+</div>

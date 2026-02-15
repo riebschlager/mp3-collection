@@ -1,0 +1,28 @@
+---
+/**
+ * WelcomeSlide - Opening slide for Wrapped story
+ */
+import StatCard from '../StatCard.astro';
+
+export interface Props {
+  year: number;
+  totalScrobbles: number;
+}
+
+const { year, totalScrobbles } = Astro.props;
+---
+
+<div class="slide-content text-center">
+  <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
+    Your {year} <br />in Music
+  </h1>
+  <StatCard
+    value={totalScrobbles.toLocaleString()}
+    label="total scrobbles"
+    sublabel="Let's explore your year"
+    size="md"
+  />
+  <div class="mt-12 text-lg opacity-75 animate-bounce">
+    Scroll to explore ↓
+  </div>
+</div>

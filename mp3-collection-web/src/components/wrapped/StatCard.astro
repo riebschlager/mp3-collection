@@ -1,0 +1,35 @@
+---
+/**
+ * StatCard - Large number display with label
+ * Used for showcasing key statistics in Wrapped slides
+ */
+export interface Props {
+  value: string | number;
+  label: string;
+  sublabel?: string;
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const { value, label, sublabel, size = 'lg', className = '' } = Astro.props;
+
+const sizeClasses = {
+  sm: 'text-4xl md:text-5xl',
+  md: 'text-5xl md:text-6xl',
+  lg: 'text-6xl md:text-7xl lg:text-8xl'
+};
+---
+
+<div class={`text-center ${className}`}>
+  <div class={`stat-number font-bold ${sizeClasses[size]} mb-2`}>
+    {value}
+  </div>
+  <div class="text-xl md:text-2xl font-medium opacity-90">
+    {label}
+  </div>
+  {sublabel && (
+    <div class="text-base md:text-lg mt-2 opacity-75">
+      {sublabel}
+    </div>
+  )}
+</div>

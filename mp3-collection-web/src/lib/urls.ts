@@ -10,5 +10,6 @@ export function getBaseUrl(): string {
 export function buildUrl(path: string): string {
   const base = getBaseUrl();
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  return `${base}${cleanPath}`;
+  const separator = base.endsWith('/') ? '' : '/';
+  return `${base}${separator}${cleanPath}`;
 }

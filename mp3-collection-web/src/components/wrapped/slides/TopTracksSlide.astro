@@ -1,0 +1,32 @@
+---
+/**
+ * TopTracksSlide - Display top 5 tracks
+ */
+import TrackCard from '../TrackCard.astro';
+import type { Track } from '../../../lib/wrapped-utils';
+
+export interface Props {
+  topTracks: Track[];
+}
+
+const { topTracks } = Astro.props;
+
+// Get top 5 tracks (skip first one which was shown earlier)
+const top5Tracks = topTracks.slice(0, 5);
+---
+
+<div class="slide-content">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+    Your Top 5 Tracks
+  </h2>
+  <div class="space-y-3">
+    {top5Tracks.map((track, index) => (
+      <TrackCard
+        rank={index + 1}
+        track={track.track}
+        artist={track.artist}
+        playCount={track.playCount}
+      />
+    ))}
+  </div>
+</div>

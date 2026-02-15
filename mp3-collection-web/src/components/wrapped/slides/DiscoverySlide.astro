@@ -1,0 +1,41 @@
+---
+/**
+ * DiscoverySlide - Showcase variety and exploration metrics
+ */
+import StatCard from '../StatCard.astro';
+import { getVarietyScore } from '../../../lib/wrapped-utils';
+
+export interface Props {
+  uniqueTracks: number;
+  totalScrobbles: number;
+}
+
+const { uniqueTracks, totalScrobbles } = Astro.props;
+
+const varietyScore = getVarietyScore(uniqueTracks, totalScrobbles);
+---
+
+<div class="slide-content text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-12">
+    Your Discovery Journey
+  </h2>
+  <div class="space-y-8">
+    <StatCard
+      value={uniqueTracks.toLocaleString()}
+      label="unique tracks"
+      sublabel="explored this year"
+      size="md"
+    />
+    <div class="mt-12">
+      <div class="text-xl md:text-2xl opacity-75 mb-2">
+        Variety Score
+      </div>
+      <div class="text-5xl md:text-6xl font-bold">
+        {varietyScore}%
+      </div>
+      <div class="mt-4 text-lg opacity-75">
+        {varietyScore >= 70 ? "You're a true music explorer!" : varietyScore >= 50 ? "You have great musical variety!" : "You know what you like!"}
+      </div>
+    </div>
+  </div>
+</div>
