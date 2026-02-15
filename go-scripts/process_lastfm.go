@@ -80,8 +80,8 @@ func NormalizeForMatching(s string) string {
 
 func runProcessLastFm() {
 	// Paths
-	lastfmPath := filepath.Join("..", "lastfm", "lastfmstats-riebschlager.json")
-	outputPath := filepath.Join("..", "data", "playcounts.json")
+	lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
+	outputPath := filepath.Join(ProjectRoot, "data", "playcounts.json")
 
 	fmt.Println("Processing Last.fm scrobbles...")
 	fmt.Printf("Reading from: %s\n", lastfmPath)

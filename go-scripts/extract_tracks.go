@@ -24,8 +24,8 @@ func runExtractTracks() {
 	// Assuming running from go-scripts/ or similar, relative paths:
 	// In Python: Path(__file__).parent.parent / 'archive' / 'compiled_itunes_library.csv'
 	// Here, we'll assume we are in go-scripts/ when running.
-	csvPath := filepath.Join("..", "archive", "compiled_itunes_library.csv")
-	outPath := filepath.Join("..", "data", "tracks.json")
+	csvPath := filepath.Join(ProjectRoot, "archive", "compiled_itunes_library.csv")
+	outPath := filepath.Join(ProjectRoot, "data", "tracks.json")
 
 	// Ensure output dir exists
 	if err := os.MkdirAll(filepath.Dir(outPath), 0755); err != nil {

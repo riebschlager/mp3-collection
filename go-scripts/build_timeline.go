@@ -46,8 +46,8 @@ type TimelineData struct {
 }
 
 func runBuildTimeline() {
-	lastfmPath := filepath.Join("..", "lastfm", "lastfmstats-riebschlager.json")
-	outputPath := filepath.Join("..", "web-data", "timeline.json")
+	lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
+	outputPath := filepath.Join(ProjectRoot, "web-data", "timeline.json")
 
 	fmt.Println("Building timeline data from Last.fm scrobbles...")
 	fmt.Printf("Reading from: %s\n", lastfmPath)

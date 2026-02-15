@@ -55,6 +55,11 @@ go run . extract-albums
 
 # Build web data
 go run . build-web-data
+
+# Fetch recent Last.fm scrobbles
+# Requires LASTFM_API_KEY environment variable
+export LASTFM_API_KEY=your_api_key_here
+go run . fetch-lastfm
 ```
 
 ### Building the binary

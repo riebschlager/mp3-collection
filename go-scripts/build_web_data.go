@@ -183,9 +183,9 @@ func loadPlayCounts(playCountPath string) (map[string]PlayCountLookup, error) {
 }
 
 func runBuildWebData() {
-	csvPath := filepath.Join("..", "archive", "compiled_itunes_library.csv")
-	playCountPath := filepath.Join("..", "data", "playcounts.json")
-	outputDir := filepath.Join("..", "web-data")
+	csvPath := filepath.Join(ProjectRoot, "archive", "compiled_itunes_library.csv")
+	playCountPath := filepath.Join(ProjectRoot, "data", "playcounts.json")
+	outputDir := filepath.Join(ProjectRoot, "web-data")
 	chunksDir := filepath.Join(outputDir, "chunks")
 
 	if err := os.MkdirAll(chunksDir, 0755); err != nil {

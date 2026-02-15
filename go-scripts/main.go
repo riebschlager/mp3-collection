@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
+	// Load .env from root directory if it exists
+	LoadEnv()
+
 	if len(os.Args) < 2 {
 		printUsage()
 		os.Exit(1)
@@ -22,6 +25,8 @@ func main() {
 		runExtractAlbums()
 	case "process-lastfm":
 		runProcessLastFm()
+	case "fetch-lastfm":
+		runFetchLastFm()
 	case "build-timeline":
 		runBuildTimeline()
 	case "build-web-data":
@@ -39,6 +44,7 @@ func printUsage() {
 	fmt.Println("  extract-tracks    Extract tracks to data/tracks.json")
 	fmt.Println("  extract-artists   Extract artists to data/artists.json")
 	fmt.Println("  extract-albums    Extract albums to data/albums.json")
+	fmt.Println("  fetch-lastfm      Fetch recent scrobbles from Last.fm API")
 	fmt.Println("  process-lastfm    Process Last.fm scrobbles to data/playcounts.json")
 	fmt.Println("  build-timeline    Build timeline data from Last.fm to web-data/timeline.json")
 	fmt.Println("  build-web-data    Build optimized web data to web-data/")

@@ -20,8 +20,8 @@ type AlbumsOutput struct {
 }
 
 func runExtractAlbums() {
-	csvPath := filepath.Join("..", "archive", "compiled_itunes_library.csv")
-	outPath := filepath.Join("..", "data", "albums.json")
+	csvPath := filepath.Join(ProjectRoot, "archive", "compiled_itunes_library.csv")
+	outPath := filepath.Join(ProjectRoot, "data", "albums.json")
 
 	if err := os.MkdirAll(filepath.Dir(outPath), 0755); err != nil {
 		fmt.Fprintf(os.Stderr, "Error creating output directory: %v\n", err)

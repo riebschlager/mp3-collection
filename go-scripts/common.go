@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
@@ -233,4 +234,51 @@ func FormatDuration(seconds int) string {
 	minutes := seconds / 60
 	secs := seconds % 60
 	return fmt.Sprintf("%d:%02d", minutes, secs)
+}
+
+var ProjectRoot = ".."
+
+// LoadEnv searches for .env in current and parent directories, sets environment variables,
+// and returns the directory where it was found (project root).
+func LoadEnv() string {
+	cwd, err := os.Getwd()
+	if err != nil {
+		ProjectRoot = ".."
+		return ProjectRoot
+	}
+
+	dir := cwd
+	for {
+		path := filepath.Join(dir, ".env")
+		content, err := os.ReadFile(path)
+		if err == nil {
+			lines := strings.Split(string(content), "\n")
+			for _, line := range lines {
+				line = strings.TrimSpace(line)
+				if line == "" || strings.HasPrefix(line, "#") {
+					continue
+				}
+
+				parts := strings.SplitN(line, "=", 2)
+				if len(parts) == 2 {
+					key := strings.TrimSpace(parts[0])
+					value := strings.TrimSpace(parts[1])
+					// Remove quotes if present
+					value = strings.Trim(value, `"'`)
+					os.Setenv(key, value)
+				}
+			}
+			ProjectRoot = dir
+			return dir
+		}
+
+		parent := filepath.Dir(dir)
+		if parent == dir {
+			break
+		}
+		dir = parent
+	}
+
+	ProjectRoot = ".."
+	return ProjectRoot
 }
