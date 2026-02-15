@@ -181,7 +181,7 @@ type eraAnalysis struct {
 	TrackCounts    map[string]int
 	ArtistCounts   map[string]int
 	GenreCounts    map[string]int
-	TrackDisplay   map[string]topTrackStat
+	TrackDisplay   map[string]*topTrackStat
 }
 
 var (
@@ -361,6 +361,14 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 		payload, err = findDormantReturns(params.Arguments)
 	case "music_compare_eras":
 		payload, err = compareEras(params.Arguments)
+	case "music_listening_summary":
+		payload, err = musicListeningSummary(params.Arguments)
+	case "music_new_discoveries":
+		payload, err = musicNewDiscoveries(params.Arguments)
+	case "music_genre_profile":
+		payload, err = musicGenreProfile(params.Arguments)
+	case "music_listening_patterns":
+		payload, err = musicListeningPatterns(params.Arguments)
 	case "music_reload_alias_map":
 		payload, err = reloadAliasMap(params.Arguments)
 	default:
@@ -1318,6 +1326,7 @@ func auditMatchCoverage(args map[string]interface{}) (map[string]interface{}, er
 
 	periodSummary := map[string]*periodCounters{}
 	failureClusters := map[string]*clusterInfo{}
+	matchedArtistCounts := map[string]int{}
 	unmatchedArtistCounts := map[string]int{}
 	unmatchedTrackCounts := map[string]*topTrackStat{}
 	uniqueMatchedTrackIDs := map[string]struct{}{}
@@ -1347,6 +1356,7 @@ func auditMatchCoverage(args map[string]interface{}) (map[string]interface{}, er
 		if match.Status == "matched" {
 			counter.Matched++
 			matchedScrobbles++
+			matchedArtistCounts[sc.Artist]++
 			if match.CandidateIndex >= 0 && match.CandidateIndex < len(resolver.tracks) {
 				uniqueMatchedTrackIDs[resolver.tracks[match.CandidateIndex].ID] = struct{}{}
 			}
@@ -1463,10 +1473,284 @@ func auditMatchCoverage(args map[string]interface{}) (map[string]interface{}, er
 		},
 		"coverageByPeriod":    coverageByPeriod,
 		"failureClusters":     failureClusterList,
+		"topMatchedArtists":   rankedCounts(matchedArtistCounts, 20, "artist"),
 		"topUnmatchedArtists": rankedCounts(unmatchedArtistCounts, 20, "artist"),
 		"topUnmatchedTracks":  rankTrackStats(unmatchedTrackCounts, 20),
 		"notes":               notes,
 		"scope":               scope,
+	}, nil
+}
+
+func musicNewDiscoveries(args map[string]interface{}) (map[string]interface{}, error) {
+	start, end, label, err := parseEra(args, "Discovery")
+	if err != nil {
+		return nil, err
+	}
+	topN := 25
+	if v, ok := asInt(args["topN"]); ok {
+		if v < 5 {
+			v = 5
+		}
+		if v > 100 {
+			v = 100
+		}
+		topN = v
+	}
+
+	scrobbles, err := getLastFMScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("lastfm unavailable: %w", err)
+	}
+
+	firstArtistPlay := map[string]int64{}
+	firstTrackPlay := map[string]int64{}
+
+	for _, sc := range scrobbles {
+		normArtist := normalizeForMatching(sc.Artist)
+		normTrack := normalizeForMatching(sc.Track)
+		if normArtist == "" || normTrack == "" {
+			continue
+		}
+		trackKey := buildExactKey(normArtist, normTrack)
+
+		if old, ok := firstArtistPlay[normArtist]; !ok || sc.Date < old {
+			firstArtistPlay[normArtist] = sc.Date
+		}
+		if old, ok := firstTrackPlay[trackKey]; !ok || sc.Date < old {
+			firstTrackPlay[trackKey] = sc.Date
+		}
+	}
+
+	startMs := start.UTC().UnixMilli()
+	endMs := end.UTC().Add(24 * time.Hour).UnixMilli()
+
+	artistCounts := map[string]int{}
+	trackCounts := map[string]int{}
+	trackDisplay := map[string]*topTrackStat{}
+
+	for _, sc := range scrobbles {
+		if sc.Date < startMs || sc.Date >= endMs {
+			continue
+		}
+
+		normArtist := normalizeForMatching(sc.Artist)
+		normTrack := normalizeForMatching(sc.Track)
+		if normArtist == "" || normTrack == "" {
+			continue
+		}
+		trackKey := buildExactKey(normArtist, normTrack)
+
+		if firstArtistPlay[normArtist] >= startMs {
+			artistCounts[sc.Artist]++
+		}
+		if firstTrackPlay[trackKey] >= startMs {
+			trackCounts[trackKey]++
+			if _, exists := trackDisplay[trackKey]; !exists {
+				trackDisplay[trackKey] = &topTrackStat{
+					Key:    trackKey,
+					Artist: sc.Artist,
+					Track:  sc.Track,
+				}
+			}
+			trackDisplay[trackKey].Count++
+		}
+	}
+
+	return map[string]interface{}{
+		"period":     label,
+		"newArtists": rankedCounts(artistCounts, topN, "artist"),
+		"newTracks":  rankTrackStats(trackDisplay, topN),
+		"summary": map[string]interface{}{
+			"newArtistCount": len(artistCounts),
+			"newTrackCount":  len(trackCounts),
+		},
+	}, nil
+}
+
+func musicListeningPatterns(args map[string]interface{}) (map[string]interface{}, error) {
+	start, end, label, err := parseEra(args, "Patterns")
+	if err != nil {
+		return nil, err
+	}
+
+	scrobbles, err := getLastFMScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("lastfm unavailable: %w", err)
+	}
+
+	startMs := start.UTC().UnixMilli()
+	endMs := end.UTC().Add(24 * time.Hour).UnixMilli()
+
+	hourlyCounts := make([]int, 24)
+	dayOfWeekCounts := make([]int, 7)
+	artistCounts := map[string]int{}
+
+	type session struct {
+		start int64
+		end   int64
+		count int
+	}
+	sessions := []session{}
+	var currentSession *session
+
+	inPeriod := []lastFMScrobble{}
+	for _, sc := range scrobbles {
+		if sc.Date >= startMs && sc.Date < endMs {
+			inPeriod = append(inPeriod, sc)
+		}
+	}
+	sort.Slice(inPeriod, func(i, j int) bool {
+		return inPeriod[i].Date < inPeriod[j].Date
+	})
+
+	for _, sc := range inPeriod {
+		t := time.UnixMilli(sc.Date).UTC()
+		hourlyCounts[t.Hour()]++
+		dayOfWeekCounts[int(t.Weekday())]++
+		artistCounts[normalizeForMatching(sc.Artist)]++
+
+		if currentSession == nil {
+			currentSession = &session{start: sc.Date, end: sc.Date, count: 1}
+		} else {
+			if sc.Date-currentSession.end > 30*60*1000 {
+				sessions = append(sessions, *currentSession)
+				currentSession = &session{start: sc.Date, end: sc.Date, count: 1}
+			} else {
+				currentSession.end = sc.Date
+				currentSession.count++
+			}
+		}
+	}
+	if currentSession != nil {
+		sessions = append(sessions, *currentSession)
+	}
+
+	totalSessionDuration := 0.0
+	maxSessionDuration := 0.0
+	totalSessionTracks := 0
+	for _, s := range sessions {
+		dur := float64(s.end-s.start) / (1000 * 60)
+		totalSessionDuration += dur
+		totalSessionTracks += s.count
+		if dur > maxSessionDuration {
+			maxSessionDuration = dur
+		}
+	}
+
+	avgSessionDuration := 0.0
+	avgTracksPerSession := 0.0
+	if len(sessions) > 0 {
+		avgSessionDuration = totalSessionDuration / float64(len(sessions))
+		avgTracksPerSession = float64(totalSessionTracks) / float64(len(sessions))
+	}
+
+	days := []string{"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"}
+	dayStats := []map[string]interface{}{}
+	for i, count := range dayOfWeekCounts {
+		dayStats = append(dayStats, map[string]interface{}{
+			"day":   days[i],
+			"count": count,
+		})
+	}
+
+	hourStats := []map[string]interface{}{}
+	for i, count := range hourlyCounts {
+		hourStats = append(hourStats, map[string]interface{}{
+			"hour":  i,
+			"count": count,
+		})
+	}
+
+	return map[string]interface{}{
+		"period": label,
+		"sessions": map[string]interface{}{
+			"totalSessions":       len(sessions),
+			"avgDurationMinutes":  roundFloat(avgSessionDuration, 2),
+			"maxDurationMinutes":  roundFloat(maxSessionDuration, 2),
+			"avgTracksPerSession": roundFloat(avgTracksPerSession, 2),
+		},
+		"timeOfDay": hourStats,
+		"dayOfWeek": dayStats,
+		"diversity": map[string]interface{}{
+			"uniqueArtists":          len(artistCounts),
+			"artistsPer100Scrobbles": roundFloat(float64(len(artistCounts))/float64(len(inPeriod))*100, 2),
+		},
+	}, nil
+}
+
+func musicListeningSummary(args map[string]interface{}) (map[string]interface{}, error) {
+	start, end, label, err := parseEra(args, "Summary")
+	if err != nil {
+		return nil, err
+	}
+	topN := 25
+	if v, ok := asInt(args["topN"]); ok {
+		if v < 5 {
+			v = 5
+		}
+		if v > 100 {
+			v = 100
+		}
+		topN = v
+	}
+
+	resolver, err := getResolver()
+	if err != nil {
+		return nil, fmt.Errorf("resolver unavailable: %w", err)
+	}
+	scrobbles, err := getLastFMScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("lastfm unavailable: %w", err)
+	}
+
+	stats := analyzeEra(label, start, end, scrobbles, resolver)
+
+	return map[string]interface{}{
+		"summary": map[string]interface{}{
+			"totalScrobbles": stats.TotalScrobbles,
+			"uniqueTracks":   len(stats.TrackCounts),
+			"uniqueArtists":  len(stats.ArtistCounts),
+			"days":           roundFloat(stats.Days, 2),
+			"playsPerDay":    roundFloat(float64(stats.TotalScrobbles)/stats.Days, 2),
+		},
+		"topTracks":  rankTrackStats(stats.TrackDisplay, topN),
+		"topArtists": rankedCounts(stats.ArtistCounts, topN, "artist"),
+		"topGenres":  rankedCounts(stats.GenreCounts, topN, "genre"),
+	}, nil
+}
+
+func musicGenreProfile(args map[string]interface{}) (map[string]interface{}, error) {
+	start, end, label, err := parseEra(args, "Genre Profile")
+	if err != nil {
+		return nil, err
+	}
+	topN := 25
+	if v, ok := asInt(args["topN"]); ok {
+		if v < 5 {
+			v = 5
+		}
+		if v > 100 {
+			v = 100
+		}
+		topN = v
+	}
+
+	resolver, err := getResolver()
+	if err != nil {
+		return nil, fmt.Errorf("resolver unavailable: %w", err)
+	}
+	scrobbles, err := getLastFMScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("lastfm unavailable: %w", err)
+	}
+
+	stats := analyzeEra(label, start, end, scrobbles, resolver)
+
+	return map[string]interface{}{
+		"period":         label,
+		"totalScrobbles": stats.TotalScrobbles,
+		"topGenres":      rankedCounts(stats.GenreCounts, topN, "genre"),
+		"diversityEntropy": roundFloat(shannonEntropyNormalized(stats.GenreCounts), 4),
 	}, nil
 }
 
@@ -2147,7 +2431,7 @@ func analyzeEra(label string, start, end time.Time, scrobbles []lastFMScrobble, 
 		TrackCounts:    map[string]int{},
 		ArtistCounts:   map[string]int{},
 		GenreCounts:    map[string]int{},
-		TrackDisplay:   map[string]topTrackStat{},
+		TrackDisplay:   map[string]*topTrackStat{},
 	}
 
 	for _, sc := range scrobbles {
@@ -2168,7 +2452,8 @@ func analyzeEra(label string, start, end time.Time, scrobbles []lastFMScrobble, 
 		stats.TrackCounts[trackKey]++
 		stats.ArtistCounts[normArtist]++
 
-		if _, exists := stats.TrackDisplay[trackKey]; !exists {
+		trackStat, exists := stats.TrackDisplay[trackKey]
+		if !exists {
 			displayArtist := sc.Artist
 			displayTrack := sc.Track
 			if exact := resolver.exactIndex[trackKey]; len(exact) > 0 {
@@ -2180,12 +2465,14 @@ func analyzeEra(label string, start, end time.Time, scrobbles []lastFMScrobble, 
 					displayTrack = t.Name
 				}
 			}
-			stats.TrackDisplay[trackKey] = topTrackStat{
+			trackStat = &topTrackStat{
 				Key:    trackKey,
 				Artist: displayArtist,
 				Track:  displayTrack,
 			}
+			stats.TrackDisplay[trackKey] = trackStat
 		}
+		trackStat.Count++
 
 		if exact := resolver.exactIndex[trackKey]; len(exact) > 0 {
 			genre := strings.TrimSpace(resolver.tracks[exact[0]].Genre)
@@ -2275,8 +2562,11 @@ func computePersistentFavorites(a, b eraAnalysis, limit int) []map[string]interf
 			continue
 		}
 		display := a.TrackDisplay[key]
-		if display.Artist == "" && display.Track == "" {
+		if display == nil || (display.Artist == "" && display.Track == "") {
 			display = b.TrackDisplay[key]
+		}
+		if display == nil {
+			continue
 		}
 		rateA := float64(countA) / a.Days
 		rateB := float64(countB) / b.Days
@@ -2342,8 +2632,11 @@ func computeRisingFallingTracks(a, b eraAnalysis, limit int) ([]map[string]inter
 		rateA := float64(countA) / a.Days
 		rateB := float64(countB) / b.Days
 		display := b.TrackDisplay[key]
-		if display.Artist == "" && display.Track == "" {
+		if display == nil || (display.Artist == "" && display.Track == "") {
 			display = a.TrackDisplay[key]
+		}
+		if display == nil {
+			continue
 		}
 		rowVal := row{
 			Artist: display.Artist,
@@ -2577,6 +2870,57 @@ func toolCatalog() []toolDefinition {
 					"eraA": eraInputSchema("Era A"),
 					"eraB": eraInputSchema("Era B"),
 					"topN": map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+				},
+			},
+		},
+		{
+			Name:        "music_listening_summary",
+			Description: "Return top artists, tracks, and albums for a given period.",
+			InputSchema: map[string]interface{}{
+				"type":     "object",
+				"required": []string{"startDate", "endDate"},
+				"properties": map[string]interface{}{
+					"startDate": map[string]interface{}{"type": "string", "format": "date"},
+					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
+					"topN":      map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+				},
+			},
+		},
+		{
+			Name:        "music_new_discoveries",
+			Description: "Identify tracks and artists scrobbled for the first time in a given period.",
+			InputSchema: map[string]interface{}{
+				"type":     "object",
+				"required": []string{"startDate", "endDate"},
+				"properties": map[string]interface{}{
+					"startDate": map[string]interface{}{"type": "string", "format": "date"},
+					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
+					"topN":      map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+				},
+			},
+		},
+		{
+			Name:        "music_genre_profile",
+			Description: "Analyze genre and tag-level distribution for a given period.",
+			InputSchema: map[string]interface{}{
+				"type":     "object",
+				"required": []string{"startDate", "endDate"},
+				"properties": map[string]interface{}{
+					"startDate": map[string]interface{}{"type": "string", "format": "date"},
+					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
+					"topN":      map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+				},
+			},
+		},
+		{
+			Name:        "music_listening_patterns",
+			Description: "Analyze listening habits like session length, time of day, and bingeing vs. shuffling behavior.",
+			InputSchema: map[string]interface{}{
+				"type":     "object",
+				"required": []string{"startDate", "endDate"},
+				"properties": map[string]interface{}{
+					"startDate": map[string]interface{}{"type": "string", "format": "date"},
+					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
 				},
 			},
 		},
