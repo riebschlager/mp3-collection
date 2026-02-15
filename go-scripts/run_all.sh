@@ -25,6 +25,15 @@ echo "==> Running extract-albums"
 echo "==> Running extract-artists"
 ./mp3-scripts extract-artists
 
+echo "==> Running fetch-lastfm"
+./mp3-scripts fetch-lastfm
+
+echo "==> Running process-lastfm"
+./mp3-scripts process-lastfm
+
+echo "==> Running build-timeline"
+./mp3-scripts build-timeline
+
 echo "==> Running build-web-data"
 ./mp3-scripts build-web-data
 

@@ -80,11 +80,10 @@ func NormalizeForMatching(s string) string {
 
 func runProcessLastFm() {
 	// Paths
-	lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
-	outputPath := filepath.Join(ProjectRoot, "data", "playcounts.json")
-
-	fmt.Println("Processing Last.fm scrobbles...")
-	fmt.Printf("Reading from: %s\n", lastfmPath)
+	        lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
+	
+	        fmt.Println("Processing Last.fm scrobbles...")
+	        fmt.Printf("Reading from: %s\n", lastfmPath)
 
 	// Read Last.fm JSON
 	data, err := os.ReadFile(lastfmPath)
@@ -155,32 +154,35 @@ func runProcessLastFm() {
 		PlayCounts:     playCountsList,
 	}
 
-	// Write output
-	if err := os.MkdirAll(filepath.Dir(outputPath), 0755); err != nil {
-		fmt.Fprintf(os.Stderr, "Error creating output directory: %v\n", err)
-		os.Exit(1)
-	}
-
-	file, err := os.Create(outputPath)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error creating output file: %v\n", err)
-		os.Exit(1)
-	}
-	defer file.Close()
-
-	encoder := json.NewEncoder(file)
-	encoder.SetIndent("", "  ")
-	encoder.SetEscapeHTML(false)
-	if err := encoder.Encode(outputData); err != nil {
-		fmt.Fprintf(os.Stderr, "Error writing JSON: %v\n", err)
-		os.Exit(1)
-	}
-
-	fmt.Println("Processing complete!")
-	fmt.Printf("Total scrobbles:  %d\n", outputData.TotalScrobbles)
-	fmt.Printf("Unique tracks:    %d\n", outputData.UniqueTracks)
-	fmt.Printf("Output written to: %s\n", outputPath)
-
+	        // Write output to both data/ and web-data/
+	        outputPaths := []string{
+	                filepath.Join(ProjectRoot, "data", "playcounts.json"),
+	                filepath.Join(ProjectRoot, "web-data", "playcounts.json"),
+	        }
+	
+	        for _, path := range outputPaths {
+	                if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
+	                        fmt.Fprintf(os.Stderr, "Error creating output directory for %s: %v\n", path, err)
+	                        os.Exit(1)
+	                }
+	
+	                file, err := os.Create(path)
+	                if err != nil {
+	                        fmt.Fprintf(os.Stderr, "Error creating output file %s: %v\n", path, err)
+	                        os.Exit(1)
+	                }
+	
+	                encoder := json.NewEncoder(file)
+	                encoder.SetIndent("", "  ")
+	                encoder.SetEscapeHTML(false)
+	                if err := encoder.Encode(outputData); err != nil {
+	                        fmt.Fprintf(os.Stderr, "Error writing JSON to %s: %v\n", path, err)
+	                        file.Close()
+	                        os.Exit(1)
+	                }
+	                file.Close()
+	                fmt.Printf("Output written to: %s\n", path)
+	        }
 	// Show top 10 most played tracks
 	fmt.Println("\nTop 10 most played tracks:")
 
