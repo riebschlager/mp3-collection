@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import TrackList from '../../components/TrackList.astro';
+import AlbumArt from '../../components/wrapped/AlbumArt.astro';
+import { slugifyForLookup } from '../../lib/album-art';
 
 export async function getStaticPaths() {
   // Load album index
@@ -26,6 +28,19 @@ const buildUrl = (path: string) => {
 const allTracks: any[] = [];
 const totalChunks = 49; // We know there are 49 chunks
 
+let albumImages: any = { byKey: {} };
+let artistImages: any = { byArtistSlug: {} };
+try {
+  albumImages = await import('../../../public/data/album-images.json');
+} catch {
+  // Keep placeholder fallback when image metadata has not been generated yet.
+}
+try {
+  artistImages = await import('../../../public/data/artist-images.json');
+} catch {
+  // Keep placeholder fallback when image metadata has not been generated yet.
+}
+
 for (let i = 1; i <= totalChunks; i++) {
   const chunkNum = String(i).padStart(3, '0');
   try {
@@ -50,6 +65,22 @@ const totalDuration = allTracks.reduce((sum, t) => sum + (t.duration || 0), 0);
 
 // Get album year from first track
 const albumYear = allTracks[0]?.year;
+const primaryArtist = album.artists[0] || 'Unknown Artist';
+
+let albumImageUrl: string | undefined;
+for (const artistName of album.artists as string[]) {
+  const key = `${slugifyForLookup(artistName)}|${album.slug}`;
+  if (albumImages.byKey?.[key]) {
+    albumImageUrl = albumImages.byKey[key];
+    break;
+  }
+}
+if (!albumImageUrl && allTracks.length > 0) {
+  const key = `${allTracks[0].artistSlug}|${allTracks[0].albumSlug}`;
+  albumImageUrl = albumImages.byKey?.[key];
+}
+const artistImageUrl = artistImages.byArtistSlug?.[slugifyForLookup(primaryArtist)];
+const headerImageUrl = albumImageUrl || artistImageUrl;
 
 // Get disc information
 const discs = new Map<number, any[]>();
@@ -66,35 +97,46 @@ sortedTracks.forEach(track => {
   <div class="space-y-8">
     <!-- Album Header -->
     <div class="bg-white rounded-lg shadow-lg p-8">
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">{album.name}</h1>
-      <div class="flex items-center space-x-2 text-gray-600 mb-6">
-        {album.artists.map((artist: string, index: number) => {
-          const artistSlug = artist.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          return (
-            <>
-              <a href={buildUrl(`artists/${artistSlug}`)} class="text-blue-600 hover:text-blue-800">
-                {artist}
-              </a>
-              {index < album.artists.length - 1 && <span>•</span>}
-            </>
-          );
-        })}
-        {albumYear && (
-          <>
-            <span>•</span>
-            <span>{albumYear}</span>
-          </>
-        )}
-      </div>
+      <div class="flex flex-col md:flex-row gap-6">
+        <AlbumArt
+          album={album.name}
+          artist={primaryArtist}
+          size="xl"
+          imageUrl={headerImageUrl}
+          className="self-start"
+        />
+        <div class="flex-1">
+          <h1 class="text-4xl font-bold text-gray-900 mb-2">{album.name}</h1>
+          <div class="flex items-center space-x-2 text-gray-600 mb-6 flex-wrap">
+            {album.artists.map((artist: string, index: number) => {
+              const artistSlug = slugifyForLookup(artist);
+              return (
+                <>
+                  <a href={buildUrl(`artists/${artistSlug}`)} class="text-blue-600 hover:text-blue-800">
+                    {artist}
+                  </a>
+                  {index < album.artists.length - 1 && <span>•</span>}
+                </>
+              );
+            })}
+            {albumYear && (
+              <>
+                <span>•</span>
+                <span>{albumYear}</span>
+              </>
+            )}
+          </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div>
-          <div class="text-2xl font-bold text-blue-600">{allTracks.length}</div>
-          <div class="text-sm text-gray-600">Tracks</div>
-        </div>
-        <div>
-          <div class="text-2xl font-bold text-green-600">{Math.floor(totalDuration / 60)}m</div>
-          <div class="text-sm text-gray-600">Duration</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div>
+              <div class="text-2xl font-bold text-blue-600">{allTracks.length}</div>
+              <div class="text-sm text-gray-600">Tracks</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-green-600">{Math.floor(totalDuration / 60)}m</div>
+              <div class="text-sm text-gray-600">Duration</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

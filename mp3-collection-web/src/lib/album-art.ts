@@ -4,6 +4,20 @@
  */
 
 /**
+ * Slugify text using the same normalization style as the Go pipeline.
+ */
+export function slugifyForLookup(text: string): string {
+  if (!text) return 'unknown';
+  const normalized = text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[-\s]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  return normalized || 'unknown';
+}
+
+/**
  * Generate a consistent color from a string (album + artist name)
  * Returns HSL values for vibrant, distinct colors
  */

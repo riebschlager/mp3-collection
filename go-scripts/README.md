@@ -60,6 +60,13 @@ go run . build-web-data
 # Requires LASTFM_API_KEY environment variable
 export LASTFM_API_KEY=your_api_key_here
 go run . fetch-lastfm
+
+# Fetch/cached artist+album image metadata from Last.fm
+# Optional env:
+#   LASTFM_IMAGE_SCOPE=played|all (default: played)
+#   LASTFM_IMAGE_REFRESH_MISSING=true
+#   LASTFM_IMAGE_FORCE_REFRESH=true
+go run . fetch-images
 ```
 
 ### Building the binary

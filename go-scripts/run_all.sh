@@ -37,4 +37,7 @@ echo "==> Running build-timeline"
 echo "==> Running build-web-data"
 ./mp3-scripts build-web-data
 
+echo "==> Running fetch-images"
+./mp3-scripts fetch-images
+
 echo "All scripts completed."

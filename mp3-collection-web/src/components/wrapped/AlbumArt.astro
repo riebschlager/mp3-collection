@@ -2,19 +2,40 @@
 /**
  * AlbumArt - Generated album artwork placeholder
  */
-import { getAlbumGradient, getAlbumInitials } from '../../lib/album-art';
+import { getAlbumGradient, getAlbumInitials, slugifyForLookup } from '../../lib/album-art';
 
 export interface Props {
   album: string;
   artist: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+  imageUrl?: string;
 }
 
-const { album, artist, size = 'md', className = '' } = Astro.props;
+const { album, artist, size = 'md', className = '', imageUrl } = Astro.props;
 
 const gradient = getAlbumGradient(album, artist);
 const initials = getAlbumInitials(album);
+const artistSlug = slugifyForLookup(artist);
+const albumSlug = slugifyForLookup(album);
+
+let albumImages: any = { byKey: {} };
+let artistImages: any = { byArtistSlug: {} };
+try {
+  albumImages = await import('../../../public/data/album-images.json');
+} catch {
+  // Keep placeholder fallback when image metadata has not been generated yet.
+}
+try {
+  artistImages = await import('../../../public/data/artist-images.json');
+} catch {
+  // Keep placeholder fallback when image metadata has not been generated yet.
+}
+
+const resolvedImageUrl =
+  imageUrl ||
+  albumImages.byKey?.[`${artistSlug}|${albumSlug}`] ||
+  artistImages.byArtistSlug?.[artistSlug];
 
 const sizeClasses = {
   sm: 'w-10 h-10 text-xs',
@@ -24,10 +45,20 @@ const sizeClasses = {
 };
 ---
 
-<div
-  class={`${sizeClasses[size]} rounded-lg flex items-center justify-center font-bold text-white shadow-lg ${className}`}
-  style={`background: ${gradient}`}
-  title={`${album} by ${artist}`}
->
-  {initials}
-</div>
+{resolvedImageUrl ? (
+  <img
+    src={resolvedImageUrl}
+    alt={`${album} by ${artist}`}
+    title={`${album} by ${artist}`}
+    class={`${sizeClasses[size]} rounded-lg object-cover shadow-lg ${className}`}
+    loading="lazy"
+  />
+) : (
+  <div
+    class={`${sizeClasses[size]} rounded-lg flex items-center justify-center font-bold text-white shadow-lg ${className}`}
+    style={`background: ${gradient}`}
+    title={`${album} by ${artist}`}
+  >
+    {initials}
+  </div>
+)}

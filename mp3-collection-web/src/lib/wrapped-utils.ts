@@ -5,6 +5,7 @@
 export interface Track {
   track: string;
   artist: string;
+  album?: string;
   playCount: number;
 }
 

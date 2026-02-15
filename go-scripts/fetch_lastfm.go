@@ -9,6 +9,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"strings"
 )
 
 type LastFmResponse struct {
@@ -18,8 +19,10 @@ type LastFmResponse struct {
 				Text string `json:"#text"`
 			} `json:"artist"`
 			Name  string `json:"name"`
+			MBID  string `json:"mbid"`
 			Album struct {
 				Text string `json:"#text"`
+				MBID string `json:"mbid"`
 			} `json:"album"`
 			Date struct {
 				UTS string `json:"uts"`
@@ -64,7 +67,7 @@ func runFetchLastFm() {
 	// Load existing data
 	lastfmPath := filepath.Join(ProjectRoot, "lastfm", fmt.Sprintf("lastfmstats-%s.json", username))
 	var existingData LastFmData
-	
+
 	data, err := os.ReadFile(lastfmPath)
 	if err == nil {
 		if err := json.Unmarshal(data, &existingData); err != nil {
@@ -101,7 +104,7 @@ func runFetchLastFm() {
 				Track:   t.Name,
 				Artist:  t.Artist.Text,
 				Album:   t.Album.Text,
-				AlbumID: "",
+				AlbumID: strings.TrimSpace(t.Album.MBID),
 				Date:    ms,
 			}
 			toAdd = append(toAdd, scrobble)
@@ -111,14 +114,14 @@ func runFetchLastFm() {
 
 	if newScrobblesCount > 0 {
 		fmt.Printf("Adding %d new scrobbles to the collection.\n", newScrobblesCount)
-		
+
 		// Since API returns newest first, toAdd is newest first.
 		// We want to append them to the end of the existing (oldest first) list.
 		// But we must reverse toAdd so it's oldest first among the new ones.
 		for i, j := 0, len(toAdd)-1; i < j; i, j = i+1, j-1 {
 			toAdd[i], toAdd[j] = toAdd[j], toAdd[i]
 		}
-		
+
 		existingData.Scrobbles = append(existingData.Scrobbles, toAdd...)
 
 		// Write back to file
@@ -137,8 +140,10 @@ func fetchRecentTracks(username, apiKey string, page int) ([]struct {
 		Text string `json:"#text"`
 	} `json:"artist"`
 	Name  string `json:"name"`
+	MBID  string `json:"mbid"`
 	Album struct {
 		Text string `json:"#text"`
+		MBID string `json:"mbid"`
 	} `json:"album"`
 	Date struct {
 		UTS string `json:"uts"`

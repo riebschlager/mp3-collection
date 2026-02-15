@@ -27,6 +27,10 @@ func main() {
 		runProcessLastFm()
 	case "fetch-lastfm":
 		runFetchLastFm()
+	case "fetch-images":
+		runFetchMetadata()
+	case "fetch-metadata":
+		runFetchMetadata()
 	case "build-timeline":
 		runBuildTimeline()
 	case "build-web-data":
@@ -46,6 +50,7 @@ func printUsage() {
 	fmt.Println("  extract-albums    Extract albums to data/albums.json")
 	fmt.Println("  fetch-lastfm      Fetch recent scrobbles from Last.fm API")
 	fmt.Println("  process-lastfm    Process Last.fm scrobbles to data/playcounts.json")
+	fmt.Println("  fetch-images      Fetch artist/album image metadata from Last.fm")
 	fmt.Println("  build-timeline    Build timeline data from Last.fm to web-data/timeline.json")
 	fmt.Println("  build-web-data    Build optimized web data to web-data/")
 }

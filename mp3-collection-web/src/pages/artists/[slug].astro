@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import TrackList from '../../components/TrackList.astro';
+import AlbumArt from '../../components/wrapped/AlbumArt.astro';
+import { slugifyForLookup } from '../../lib/album-art';
 
 export async function getStaticPaths() {
   // Load artist index
@@ -25,6 +27,13 @@ const buildUrl = (path: string) => {
 // Load all tracks for this artist from all chunks
 const allTracks: any[] = [];
 const totalChunks = 49; // We know there are 49 chunks
+
+let artistImages: any = { byArtistSlug: {} };
+try {
+  artistImages = await import('../../../public/data/artist-images.json');
+} catch {
+  // Keep placeholder fallback when image metadata has not been generated yet.
+}
 
 for (let i = 1; i <= totalChunks; i++) {
   const chunkNum = String(i).padStart(3, '0');
@@ -64,28 +73,41 @@ const sortedAlbums = Array.from(albumGroups.entries())
 
 // Calculate statistics
 const totalDuration = allTracks.reduce((sum, t) => sum + (t.duration || 0), 0);
+const artistImageUrl =
+  artistImages.byArtistSlug?.[artist.slug] ||
+  artistImages.byArtistSlug?.[slugifyForLookup(artist.name)];
 ---
 
 <Layout title={`${artist.name} - MP3 Collection`} description={`Browse ${allTracks.length} tracks by ${artist.name} across ${artist.albumCount} albums`}>
   <div class="space-y-8">
     <!-- Artist Header -->
     <div class="bg-white rounded-lg shadow-lg p-8">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">{artist.name}</h1>
+      <div class="flex flex-col md:flex-row gap-6">
+        <AlbumArt
+          album={artist.name}
+          artist={artist.name}
+          size="xl"
+          imageUrl={artistImageUrl}
+          className="self-start"
+        />
+        <div class="flex-1">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">{artist.name}</h1>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-        <div>
-          <div class="text-2xl font-bold text-blue-600">{allTracks.length}</div>
-          <div class="text-sm text-gray-600">Tracks</div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+            <div>
+              <div class="text-2xl font-bold text-blue-600">{allTracks.length}</div>
+              <div class="text-sm text-gray-600">Tracks</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-green-600">{sortedAlbums.length}</div>
+              <div class="text-sm text-gray-600">Albums</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-purple-600">{Math.floor(totalDuration / 60)}m</div>
+              <div class="text-sm text-gray-600">Total Duration</div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="text-2xl font-bold text-green-600">{sortedAlbums.length}</div>
-          <div class="text-sm text-gray-600">Albums</div>
-        </div>
-        <div>
-          <div class="text-2xl font-bold text-purple-600">{Math.floor(totalDuration / 60)}m</div>
-          <div class="text-sm text-gray-600">Total Duration</div>
-        </div>
-
       </div>
     </div>
 
