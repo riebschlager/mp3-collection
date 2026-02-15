@@ -1,16 +1,22 @@
 {
   "aliases": [
-    {
-      "entityType": "artist",
-      "aliasValue": "apc",
-      "canonicalValue": "a perfect circle",
-      "confidence": 1.0
-    },
-    {
-      "entityType": "track",
-      "aliasValue": "judith (album version)",
-      "canonicalValue": "judith",
-      "confidence": 1.0
-    }
+    { "entityType": "track", "aliasValue": "Renholdër", "canonicalValue": "09 Renholder", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "Breña", "canonicalValue": "11 Brena", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "Weird Fishes/Arpeggi", "canonicalValue": "Weird Fishes Arpeggi", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "The Lifting - Live", "canonicalValue": "The Lifting", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "The Bromley East Roller - DJ Digital & Spirit Remix", "canonicalValue": "The Bromley East Roller", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "3 Libras", "canonicalValue": "06 3 Libras", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "The Hollow", "canonicalValue": "01 Hollow", "confidence": 1.0 },
+    { "entityType": "track", "aliasValue": "Kamera", "canonicalValue": "06_kamera", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Smashing Pumpkins", "canonicalValue": "Smashing Pumpkins", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Appleseed Cast", "canonicalValue": "Appleseed Cast", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Replacements", "canonicalValue": "Replacements", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "Björk", "canonicalValue": "Bjork", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "Hüsker Dü", "canonicalValue": "Husker Du", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Arrogant Worms", "canonicalValue": "Arrogant Worms", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Brian Jonestown Massacre", "canonicalValue": "Brian Jonestown Massacre", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Casket Lottery", "canonicalValue": "Casket Lottery", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Dead Milkmen", "canonicalValue": "Dead Milkmen", "confidence": 1.0 },
+    { "entityType": "artist", "aliasValue": "The Lemonheads", "canonicalValue": "Lemonheads", "confidence": 1.0 }
   ]
 }

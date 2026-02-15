@@ -47,6 +47,12 @@ type rpcResponse struct {
 	Error   *rpcError       `json:"error,omitempty"`
 }
 
+type initializeParams struct {
+	ProtocolVersion string                 `json:"protocolVersion"`
+	Capabilities    map[string]interface{} `json:"capabilities,omitempty"`
+	ClientInfo      map[string]interface{} `json:"clientInfo,omitempty"`
+}
+
 type toolDefinition struct {
 	Name        string                 `json:"name"`
 	Description string                 `json:"description"`
@@ -188,7 +194,22 @@ var (
 	lastFMErr        error
 )
 
+func debugMCP(format string, args ...interface{}) {
+	path := "/Users/criebschlager/Projects/mp3-collection/mcp-server/mcp-server.log"
+	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o644)
+	if err != nil {
+		return
+	}
+	defer f.Close()
+
+	line := fmt.Sprintf(format, args...)
+	ts := time.Now().UTC().Format(time.RFC3339)
+	_, _ = fmt.Fprintf(f, "%s %s\n", ts, line)
+}
+
 func main() {
+	debugMCP("START pid=%d argv=%q", os.Getpid(), os.Args)
+
 	reader := bufio.NewReader(os.Stdin)
 	writer := bufio.NewWriter(os.Stdout)
 	defer writer.Flush()
@@ -197,8 +218,10 @@ func main() {
 		payload, err := readMessage(reader)
 		if err != nil {
 			if errors.Is(err, io.EOF) {
+				debugMCP("EOF pid=%d", os.Getpid())
 				return
 			}
+			debugMCP("readMessage error: %v", err)
 			fmt.Fprintf(os.Stderr, "read error: %v\n", err)
 			continue
 		}
@@ -229,49 +252,58 @@ func main() {
 }
 
 func handleRequest(req rpcRequest) (rpcResponse, bool) {
-	hasID := len(req.ID) > 0
-
+	debugMCP("request method=%q id=%s", req.Method, rawMessageForLog(req.ID))
 	switch req.Method {
 	case methodInitialize:
-		if !hasID {
-			return rpcResponse{}, false
+		respID := req.ID
+		if len(respID) == 0 {
+			respID = json.RawMessage("null")
 		}
-		return rpcResponse{
+		clientProtocol := resolveInitializeProtocolVersion(req.Params)
+		debugMCP("initialize params raw=%s", rawMessageForLog(req.Params))
+		debugMCP("initialize request id=%s protocol=%q", rawMessageForLog(req.ID), clientProtocol)
+		resp := rpcResponse{
 			JSONRPC: "2.0",
-			ID:      req.ID,
+			ID:      respID,
 			Result: map[string]interface{}{
-				"protocolVersion": protocolVersion,
+				"protocolVersion": clientProtocol,
 				"serverInfo": map[string]interface{}{
 					"name":    serverName,
 					"version": serverVersion,
 				},
 				"capabilities": map[string]interface{}{
-					"tools": map[string]interface{}{},
+					"tools": map[string]interface{}{
+						"listChanged": false,
+					},
 				},
 			},
-		}, true
+		}
+		debugMCP("initialize response id=%s protocol=%q", rawMessageForLog(respID), clientProtocol)
+		return resp, true
 	case "notifications/initialized":
 		return rpcResponse{}, false
 	case methodToolsList:
-		if !hasID {
-			return rpcResponse{}, false
+		respID := req.ID
+		if len(respID) == 0 {
+			respID = json.RawMessage("null")
 		}
 		return rpcResponse{
 			JSONRPC: "2.0",
-			ID:      req.ID,
+			ID:      respID,
 			Result: map[string]interface{}{
 				"tools": toolCatalog(),
 			},
 		}, true
 	case methodToolsCall:
-		if !hasID {
-			return rpcResponse{}, false
+		respID := req.ID
+		if len(respID) == 0 {
+			respID = json.RawMessage("null")
 		}
 		result, err := handleToolsCall(req.Params)
 		if err != nil {
 			return rpcResponse{
 				JSONRPC: "2.0",
-				ID:      req.ID,
+				ID:      respID,
 				Error: &rpcError{
 					Code:    -32602,
 					Message: err.Error(),
@@ -280,11 +312,12 @@ func handleRequest(req rpcRequest) (rpcResponse, bool) {
 		}
 		return rpcResponse{
 			JSONRPC: "2.0",
-			ID:      req.ID,
+			ID:      respID,
 			Result:  result,
 		}, true
 	default:
-		if !hasID {
+		debugMCP("request unknown method=%q id=%s", req.Method, rawMessageForLog(req.ID))
+		if len(req.ID) == 0 {
 			return rpcResponse{}, false
 		}
 		return rpcResponse{
@@ -324,6 +357,8 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 		payload, err = resolveTrackIdentity(params.Arguments)
 	case "music.audit_match_coverage":
 		payload, err = auditMatchCoverage(params.Arguments)
+	case "music.find_dormant_returns":
+		payload, err = findDormantReturns(params.Arguments)
 	case "music.compare_eras":
 		payload, err = compareEras(params.Arguments)
 	case "music.reload_alias_map":
@@ -1525,6 +1560,268 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 	}, nil
 }
 
+func findDormantReturns(args map[string]interface{}) (map[string]interface{}, error) {
+	returnPeriod, ok := asMap(args["returnPeriod"])
+	if !ok {
+		return nil, errors.New("returnPeriod is required")
+	}
+	returnStart, err := parseDate(asString(returnPeriod["startDate"]))
+	if err != nil {
+		return nil, fmt.Errorf("invalid returnPeriod.startDate: %w", err)
+	}
+	returnEnd, err := parseDate(asString(returnPeriod["endDate"]))
+	if err != nil {
+		return nil, fmt.Errorf("invalid returnPeriod.endDate: %w", err)
+	}
+	if returnEnd.Before(returnStart) {
+		return nil, errors.New("returnPeriod.endDate must be on or after returnPeriod.startDate")
+	}
+
+	var historyStart *time.Time
+	if raw := asString(args["historyStartDate"]); raw != "" {
+		parsed, err := parseDate(raw)
+		if err != nil {
+			return nil, fmt.Errorf("invalid historyStartDate: %w", err)
+		}
+		historyStart = &parsed
+		if historyStart.After(returnEnd) {
+			return nil, errors.New("historyStartDate must be on or before returnPeriod.endDate")
+		}
+	}
+
+	minDormancyDays := 365 * 5
+	if v, ok := asInt(args["minDormancyDays"]); ok && v >= 30 {
+		minDormancyDays = v
+	}
+	minPreReturnPlays := 2
+	if v, ok := asInt(args["minPreReturnPlays"]); ok && v >= 1 {
+		minPreReturnPlays = v
+	}
+	minReturnPlays := 2
+	if v, ok := asInt(args["minReturnPlays"]); ok && v >= 1 {
+		minReturnPlays = v
+	}
+	topN := 25
+	if v, ok := asInt(args["topN"]); ok {
+		if v < 1 {
+			v = 1
+		}
+		if v > 200 {
+			v = 200
+		}
+		topN = v
+	}
+	strictness := "medium"
+	if v := asString(args["strictness"]); v != "" {
+		strictness = v
+	}
+	if strictness != "high" && strictness != "medium" && strictness != "low" {
+		return nil, errors.New("strictness must be 'high', 'medium', or 'low'")
+	}
+
+	resolver, err := getResolver()
+	if err != nil {
+		return nil, fmt.Errorf("resolver unavailable: %w", err)
+	}
+	scrobbles, err := getLastFMScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("lastfm unavailable: %w", err)
+	}
+
+	type dormantTrackAccumulator struct {
+		TrackID       string
+		Artist        string
+		Track         string
+		Album         string
+		PreCount      int
+		ReturnCount   int
+		ScopedCount   int
+		LastBeforeMs  int64
+		FirstReturnMs int64
+	}
+	byTrack := map[string]*dormantTrackAccumulator{}
+	totalScrobblesInScope := 0
+	matchedScrobblesInScope := 0
+	returnDays := int(returnEnd.Sub(returnStart).Hours()/24) + 1
+	if returnDays < 1 {
+		returnDays = 1
+	}
+
+	for _, sc := range scrobbles {
+		if historyStart != nil && sc.Date < historyStart.UTC().UnixMilli() {
+			continue
+		}
+		if !timestampInOptionalRange(sc.Date, nil, &returnEnd) {
+			continue
+		}
+		if strings.TrimSpace(sc.Artist) == "" || strings.TrimSpace(sc.Track) == "" {
+			continue
+		}
+		totalScrobblesInScope++
+
+		match := resolver.matchScrobble(sc, strictness, true)
+		if match.Status != "matched" || match.CandidateIndex < 0 || match.CandidateIndex >= len(resolver.tracks) {
+			continue
+		}
+		matchedScrobblesInScope++
+		canonical := resolver.tracks[match.CandidateIndex]
+		acc := byTrack[canonical.ID]
+		if acc == nil {
+			acc = &dormantTrackAccumulator{
+				TrackID: canonical.ID,
+				Artist:  canonical.Artist,
+				Track:   canonical.Name,
+				Album:   canonical.Album,
+			}
+			byTrack[canonical.ID] = acc
+		}
+		acc.ScopedCount++
+		if sc.Date < returnStart.UTC().UnixMilli() {
+			acc.PreCount++
+			if sc.Date > acc.LastBeforeMs {
+				acc.LastBeforeMs = sc.Date
+			}
+			continue
+		}
+		if timestampInOptionalRange(sc.Date, &returnStart, &returnEnd) {
+			acc.ReturnCount++
+			if acc.FirstReturnMs == 0 || sc.Date < acc.FirstReturnMs {
+				acc.FirstReturnMs = sc.Date
+			}
+		}
+	}
+
+	results := []map[string]interface{}{}
+	artistAggregate := map[string]map[string]int{}
+	for _, acc := range byTrack {
+		if acc.PreCount < minPreReturnPlays || acc.ReturnCount < minReturnPlays {
+			continue
+		}
+		if acc.LastBeforeMs == 0 || acc.FirstReturnMs == 0 {
+			continue
+		}
+		dormancyDays := int(time.UnixMilli(acc.FirstReturnMs).UTC().Sub(time.UnixMilli(acc.LastBeforeMs).UTC()).Hours() / 24)
+		if dormancyDays < minDormancyDays {
+			continue
+		}
+		dormancyYears := float64(dormancyDays) / 365.25
+		returnRate := float64(acc.ReturnCount) / float64(returnDays)
+		results = append(results, map[string]interface{}{
+			"trackId":              acc.TrackID,
+			"artist":               acc.Artist,
+			"track":                acc.Track,
+			"album":                acc.Album,
+			"lastPreReturnPlay":    time.UnixMilli(acc.LastBeforeMs).UTC().Format("2006-01-02"),
+			"firstReturnPlay":      time.UnixMilli(acc.FirstReturnMs).UTC().Format("2006-01-02"),
+			"dormancyDays":         dormancyDays,
+			"dormancyYears":        roundFloat(dormancyYears, 2),
+			"preReturnPlays":       acc.PreCount,
+			"returnPeriodPlays":    acc.ReturnCount,
+			"returnPeriodPlayRate": roundFloat(returnRate, 4),
+			"scopedPlays":          acc.ScopedCount,
+		})
+
+		agg := artistAggregate[acc.Artist]
+		if agg == nil {
+			agg = map[string]int{
+				"trackCount": 0,
+				"playCount":  0,
+			}
+			artistAggregate[acc.Artist] = agg
+		}
+		agg["trackCount"]++
+		agg["playCount"] += acc.ReturnCount
+	}
+
+	sort.Slice(results, func(i, j int) bool {
+		ir, _ := results[i]["returnPeriodPlays"].(int)
+		jr, _ := results[j]["returnPeriodPlays"].(int)
+		if ir == jr {
+			id, _ := results[i]["dormancyDays"].(int)
+			jd, _ := results[j]["dormancyDays"].(int)
+			if id == jd {
+				ia := strings.ToLower(fmt.Sprint(results[i]["artist"]))
+				ja := strings.ToLower(fmt.Sprint(results[j]["artist"]))
+				if ia == ja {
+					return strings.ToLower(fmt.Sprint(results[i]["track"])) < strings.ToLower(fmt.Sprint(results[j]["track"]))
+				}
+				return ia < ja
+			}
+			return id > jd
+		}
+		return ir > jr
+	})
+	totalDormantReturnedTracks := len(results)
+	if topN < len(results) {
+		results = results[:topN]
+	}
+
+	topArtists := []map[string]interface{}{}
+	for artist, agg := range artistAggregate {
+		topArtists = append(topArtists, map[string]interface{}{
+			"artist":            artist,
+			"dormantTrackCount": agg["trackCount"],
+			"returnPeriodPlays": agg["playCount"],
+		})
+	}
+	sort.Slice(topArtists, func(i, j int) bool {
+		ip, _ := topArtists[i]["returnPeriodPlays"].(int)
+		jp, _ := topArtists[j]["returnPeriodPlays"].(int)
+		if ip == jp {
+			it, _ := topArtists[i]["dormantTrackCount"].(int)
+			jt, _ := topArtists[j]["dormantTrackCount"].(int)
+			if it == jt {
+				return strings.ToLower(fmt.Sprint(topArtists[i]["artist"])) < strings.ToLower(fmt.Sprint(topArtists[j]["artist"]))
+			}
+			return it > jt
+		}
+		return ip > jp
+	})
+	totalDormantReturnedArtists := len(topArtists)
+	if topN < len(topArtists) {
+		topArtists = topArtists[:topN]
+	}
+
+	matchRate := 0.0
+	if totalScrobblesInScope > 0 {
+		matchRate = float64(matchedScrobblesInScope) / float64(totalScrobblesInScope)
+	}
+	scope := map[string]interface{}{
+		"returnPeriod": map[string]string{
+			"startDate": returnStart.Format("2006-01-02"),
+			"endDate":   returnEnd.Format("2006-01-02"),
+		},
+	}
+	if historyStart != nil {
+		scope["historyStartDate"] = historyStart.Format("2006-01-02")
+	}
+
+	notes := []string{
+		fmt.Sprintf("strictness=%s minDormancyDays=%d minPreReturnPlays=%d minReturnPlays=%d",
+			strictness, minDormancyDays, minPreReturnPlays, minReturnPlays),
+		"Only canonically matched scrobbles are considered for dormancy and return calculations.",
+	}
+	if resolver.aliasPath != "" {
+		notes = append(notes, fmt.Sprintf("alias map loaded: %s", resolver.aliasPath))
+	}
+
+	return map[string]interface{}{
+		"summary": map[string]interface{}{
+			"totalScrobblesInScope":      totalScrobblesInScope,
+			"matchedScrobblesInScope":    matchedScrobblesInScope,
+			"matchRateInScope":           roundFloat(matchRate, 4),
+			"dormantReturnedTrackCount":  totalDormantReturnedTracks,
+			"dormantReturnedArtistCount": totalDormantReturnedArtists,
+			"resultsReturned":            len(results),
+			"returnPeriodDays":           returnDays,
+		},
+		"scope":             scope,
+		"topDormantReturns": results,
+		"topReturnArtists":  topArtists,
+		"notes":             notes,
+	}, nil
+}
+
 func getLastFMScrobbles() ([]lastFMScrobble, error) {
 	lastFMOnce.Do(func() {
 		root, err := detectProjectRoot()
@@ -2284,6 +2581,30 @@ func toolCatalog() []toolDefinition {
 			},
 		},
 		{
+			Name:        "music.find_dormant_returns",
+			Description: "Find tracks that were dormant for a long gap and then returned in a target listening window.",
+			InputSchema: map[string]interface{}{
+				"type":     "object",
+				"required": []string{"returnPeriod"},
+				"properties": map[string]interface{}{
+					"returnPeriod": map[string]interface{}{
+						"type":     "object",
+						"required": []string{"startDate", "endDate"},
+						"properties": map[string]interface{}{
+							"startDate": map[string]interface{}{"type": "string", "format": "date"},
+							"endDate":   map[string]interface{}{"type": "string", "format": "date"},
+						},
+					},
+					"historyStartDate":  map[string]interface{}{"type": "string", "format": "date"},
+					"minDormancyDays":   map[string]interface{}{"type": "integer", "minimum": 30, "default": 1825},
+					"minPreReturnPlays": map[string]interface{}{"type": "integer", "minimum": 1, "default": 2},
+					"minReturnPlays":    map[string]interface{}{"type": "integer", "minimum": 1, "default": 2},
+					"topN":              map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 200, "default": 25},
+					"strictness":        map[string]interface{}{"type": "string", "enum": []string{"high", "medium", "low"}, "default": "medium"},
+				},
+			},
+		},
+		{
 			Name:        "music.reload_alias_map",
 			Description: "Reload alias map and resolver indexes without restarting the MCP server.",
 			InputSchema: map[string]interface{}{
@@ -2407,24 +2728,37 @@ func readMessage(reader *bufio.Reader) ([]byte, error) {
 		return nil, errors.New("empty frame prelude")
 	}
 
-	if !strings.HasPrefix(strings.ToLower(first), "content-length:") {
+	// Allow raw JSON messages without framed headers for local/manual testing.
+	if strings.HasPrefix(first, "{") || strings.HasPrefix(first, "[") {
 		return []byte(first), nil
 	}
 
-	length, err := parseContentLength(first)
-	if err != nil {
-		return nil, err
-	}
-
-	// Read remaining headers until blank line.
+	headers := []string{first}
 	for {
 		h, err := reader.ReadString('\n')
 		if err != nil {
 			return nil, err
 		}
-		if strings.TrimSpace(h) == "" {
+		trimmed := strings.TrimRight(h, "\r\n")
+		if strings.TrimSpace(trimmed) == "" {
 			break
 		}
+		headers = append(headers, trimmed)
+	}
+
+	length := -1
+	for _, h := range headers {
+		if strings.HasPrefix(strings.ToLower(h), "content-length:") {
+			n, err := parseContentLength(h)
+			if err != nil {
+				return nil, err
+			}
+			length = n
+			break
+		}
+	}
+	if length <= 0 {
+		return nil, errors.New("missing content-length header")
 	}
 
 	payload := make([]byte, length)
@@ -2447,6 +2781,31 @@ func parseContentLength(line string) (int, error) {
 		return 0, errors.New("content-length must be positive")
 	}
 	return n, nil
+}
+
+func resolveInitializeProtocolVersion(raw json.RawMessage) string {
+	if len(raw) == 0 {
+		return protocolVersion
+	}
+
+	var params initializeParams
+	if err := json.Unmarshal(raw, &params); err != nil {
+		debugMCP("initialize params parse error: %v", err)
+		return protocolVersion
+	}
+
+	version := strings.TrimSpace(params.ProtocolVersion)
+	if version == "" {
+		return protocolVersion
+	}
+	return version
+}
+
+func rawMessageForLog(raw json.RawMessage) string {
+	if len(raw) == 0 {
+		return "null"
+	}
+	return string(raw)
 }
 
 func writeResponse(writer *bufio.Writer, response rpcResponse) error {
