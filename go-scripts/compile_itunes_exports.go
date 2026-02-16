@@ -51,7 +51,7 @@ type formatDetail struct {
 }
 
 func runCompileITunesExports() {
-	baseDir := filepath.Join(ProjectRoot, "archive")
+	baseDir := Paths.ArchiveDir
 	if len(os.Args) >= 3 {
 		baseDir = strings.TrimSpace(os.Args[2])
 	}

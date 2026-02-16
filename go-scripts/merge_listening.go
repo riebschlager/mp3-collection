@@ -270,8 +270,8 @@ func dedupeSpotifyEventsAgainstLastFm(spotifyEvents, lastfmEvents []ListeningEve
 }
 
 func buildListeningHistory(config ListeningMergeConfig) (*ListeningHistoryData, *ListeningMergeReport, error) {
-	lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
-	spotifyDir := filepath.Join(ProjectRoot, "spotify")
+	lastfmPath := LastFMStatsPath("")
+	spotifyDir := Paths.SpotifyDir
 
 	report := &ListeningMergeReport{
 		GeneratedAt: time.Now().UTC().Format(time.RFC3339),
@@ -349,10 +349,10 @@ func writeJSONData(path string, value interface{}) error {
 }
 
 func writeListeningHistoryArtifacts(history *ListeningHistoryData, report *ListeningMergeReport) error {
-	historyPath := filepath.Join(ProjectRoot, "data", "listening-history.json")
+	historyPath := DataPath("listening-history.json")
 	reportPaths := []string{
-		filepath.Join(ProjectRoot, "data", "listening-merge-report.json"),
-		filepath.Join(ProjectRoot, "web-data", "listening-merge-report.json"),
+		DataPath("listening-merge-report.json"),
+		WebDataPath("listening-merge-report.json"),
 	}
 
 	if err := os.MkdirAll(filepath.Dir(historyPath), 0755); err != nil {
@@ -376,7 +376,7 @@ func writeListeningHistoryArtifacts(history *ListeningHistoryData, report *Liste
 }
 
 func loadListeningHistoryOrBuild() (*ListeningHistoryData, error) {
-	historyPath := filepath.Join(ProjectRoot, "data", "listening-history.json")
+	historyPath := DataPath("listening-history.json")
 
 	shouldRebuild, err := listeningHistoryIsStale(historyPath)
 	if err != nil {
@@ -416,7 +416,7 @@ func listeningHistoryIsStale(historyPath string) (bool, error) {
 	}
 
 	historyMod := historyInfo.ModTime()
-	lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
+	lastfmPath := LastFMStatsPath("")
 	lastfmInfo, err := os.Stat(lastfmPath)
 	if err != nil {
 		return false, err
@@ -425,7 +425,7 @@ func listeningHistoryIsStale(historyPath string) (bool, error) {
 		return true, nil
 	}
 
-	spotifyFiles, err := filepath.Glob(filepath.Join(ProjectRoot, "spotify", "Streaming_History_Audio_*.json"))
+	spotifyFiles, err := filepath.Glob(SpotifyPath("Streaming_History_Audio_*.json"))
 	if err != nil {
 		return false, err
 	}
@@ -457,8 +457,8 @@ func runMergeListening() {
 		os.Exit(1)
 	}
 
-	reportPath := filepath.Join(ProjectRoot, "data", "listening-merge-report.json")
-	historyPath := filepath.Join(ProjectRoot, "data", "listening-history.json")
+	reportPath := DataPath("listening-merge-report.json")
+	historyPath := DataPath("listening-history.json")
 
 	fmt.Printf("Last.fm valid events: %d\n", report.LastFm.ValidEvents)
 	fmt.Printf("Spotify qualified events: %d\n", report.Spotify.QualifiedEvents)

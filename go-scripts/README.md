@@ -16,6 +16,12 @@ The CLI auto-loads `.env` by searching current and parent directories.
 
 - `LASTFM_API_KEY`: required for `fetch-lastfm` and `fetch-images`.
 - `LASTFM_USERNAME`: optional, defaults to `riebschlager`.
+- `MP3_PROJECT_ROOT`: optional path override for repository root.
+- `MP3_ARCHIVE_DIR`: optional path override (default: `<root>/archive`).
+- `MP3_DATA_DIR`: optional path override (default: `<root>/data`).
+- `MP3_WEB_DATA_DIR`: optional path override (default: `<root>/web-data`).
+- `MP3_LASTFM_DIR`: optional path override (default: `<root>/lastfm`).
+- `MP3_SPOTIFY_DIR`: optional path override (default: `<root>/spotify`).
 - `SPOTIFY_MIN_MS_PLAYED`: optional, defaults to `30000`.
 - `SPOTIFY_LASTFM_DEDUPE_WINDOW_MS`: optional, defaults to `120000`.
 - `LASTFM_IMAGE_SCOPE`: `played` (default) or `all`.
@@ -74,6 +80,7 @@ Available commands:
 - `build-web-data`: builds chunked/indexed web artifacts in `web-data/`
 - `fetch-images`: fetches/caches Last.fm image metadata into `web-data/artist-images.json` and `web-data/album-images.json`
 - `fetch-metadata`: alias for `fetch-images`
+- `doctor`: validates resolved path config, required inputs, and output directories
 
 ## Notes
 

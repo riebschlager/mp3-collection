@@ -115,3 +115,15 @@ Acceptance:
 1. Execute Phase 1 in a small PR.
 2. Execute Phase 2 in a separate PR with no folder moves.
 3. Execute Phase 3 and 4 once path abstraction is proven.
+
+## Progress
+
+As of February 16, 2026:
+- Phase 1 item 1 completed: root `.gitignore` added.
+- Phase 1 item 2 completed: generated binaries are no longer tracked in git.
+- Phase 1 item 3 completed: root `Makefile` added for common workflows.
+- Phase 1 item 4 completed: root `README.md` now documents a daily workflow from repo root.
+- Phase 2 item 1 completed: centralized ETL path config added (`MP3_*_DIR` + `MP3_PROJECT_ROOT` support).
+- Phase 2 item 2 completed: ETL commands now resolve inputs/outputs via shared path config helpers.
+- Phase 2 item 3 completed: MCP root/data resolution now supports `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, and `MP3_LASTFM_FILE`.
+- Phase 2 item 4 completed: `doctor` command added to validate path config and required inputs.

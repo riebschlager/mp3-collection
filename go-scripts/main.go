@@ -41,6 +41,8 @@ func main() {
 		runBuildTimeline()
 	case "build-web-data":
 		runBuildWebData()
+	case "doctor":
+		runDoctor()
 	default:
 		fmt.Printf("Unknown command: %s\n", command)
 		printUsage()
@@ -62,4 +64,5 @@ func printUsage() {
 	fmt.Println("  fetch-images      Fetch artist/album image metadata from Last.fm")
 	fmt.Println("  build-timeline    Build timeline data from merged history to web-data/timeline.json")
 	fmt.Println("  build-web-data    Build optimized web data to web-data/")
+	fmt.Println("  doctor            Validate path config, required inputs, and output directories")
 }

@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temp files
+*.log
+tmp/
+.cache/
+
+# Generated Go binaries
+go-scripts/mp3-scripts
+mcp-server/mcp-server
+
+# Go profiling/test artifacts
+*.test
+*.prof
+coverage.out
+
+# Web build artifacts (also ignored inside mp3-collection-web/)
+mp3-collection-web/node_modules/
+mp3-collection-web/dist/
+mp3-collection-web/.astro/

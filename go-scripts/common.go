@@ -40,7 +40,7 @@ type RawTrack struct {
 	Equalizer        string
 }
 
-// Helper to map CSV header to struct fields could be complex, 
+// Helper to map CSV header to struct fields could be complex,
 // but since we know the header format, we can just read into a map or order.
 // However, CSV DictReader in Python handles headers automatically.
 // In Go, we'll read the header row first and map indices.
@@ -53,7 +53,7 @@ func ReadCSV(path string) ([]map[string]string, error) {
 	defer f.Close()
 
 	r := csv.NewReader(f)
-	
+
 	// Read header
 	header, err := r.Read()
 	if err != nil {
@@ -77,7 +77,8 @@ func ReadCSV(path string) ([]map[string]string, error) {
 				row[header[i]] = val
 			}
 		}
-		rows = append(rows, row)	}
+		rows = append(rows, row)
+	}
 	return rows, nil
 }
 
@@ -90,7 +91,7 @@ func IsValidName(name string) bool {
 	if cleanName == "" || cleanName == "?" {
 		return false
 	}
-	
+
 	allQ := true
 	for _, c := range cleanName {
 		if c != '?' {
@@ -141,7 +142,7 @@ func trimQuotes(s string) string {
 			s = s[1:]
 			changed = true
 		}
-		
+
 		if strings.HasSuffix(s, "\"\"\"") {
 			s = s[:len(s)-3]
 			changed = true
@@ -149,7 +150,7 @@ func trimQuotes(s string) string {
 			s = s[:len(s)-1]
 			changed = true
 		}
-		
+
 		if !changed {
 			break
 		}
@@ -163,15 +164,15 @@ func Slugify(text string) string {
 		return "unknown"
 	}
 	text = strings.ToLower(text)
-	
+
 	// Remove non-word characters (keep alphanumeric, spaces, hyphens)
 	reg := regexp.MustCompile(`[^\w\s-]`)
 	text = reg.ReplaceAllString(text, "")
-	
+
 	// Replace spaces and multiple hyphens with single hyphen
 	regSpace := regexp.MustCompile(`[-\s]+`)
 	text = regSpace.ReplaceAllString(text, "-")
-	
+
 	text = strings.Trim(text, "-")
 	if text == "" {
 		return "unknown"
@@ -185,7 +186,7 @@ func SanitizeGenre(genre string) string {
 		return ""
 	}
 	g := trimQuotes(strings.TrimSpace(genre))
-	
+
 	// Check if there is at least one letter
 	hasLetter, _ := regexp.MatchString(`[A-Za-z]`, g)
 	if hasLetter {
@@ -237,7 +238,17 @@ func FormatDuration(seconds int) string {
 	return fmt.Sprintf("%d:%02d", minutes, secs)
 }
 
+type PathConfig struct {
+	Root       string
+	ArchiveDir string
+	DataDir    string
+	WebDataDir string
+	LastFMDir  string
+	SpotifyDir string
+}
+
 var ProjectRoot = ".."
+var Paths = resolvePathConfig(ProjectRoot)
 
 // LoadEnv searches for .env in current and parent directories, sets environment variables,
 // and returns the directory where it was found (project root).
@@ -245,6 +256,7 @@ func LoadEnv() string {
 	cwd, err := os.Getwd()
 	if err != nil {
 		ProjectRoot = ".."
+		Paths = resolvePathConfig(ProjectRoot)
 		return ProjectRoot
 	}
 
@@ -270,6 +282,7 @@ func LoadEnv() string {
 				}
 			}
 			ProjectRoot = dir
+			Paths = resolvePathConfig(ProjectRoot)
 			return dir
 		}
 
@@ -280,6 +293,88 @@ func LoadEnv() string {
 		dir = parent
 	}
 
-	ProjectRoot = ".."
+	ProjectRoot = fallbackProjectRoot(cwd)
+	Paths = resolvePathConfig(ProjectRoot)
 	return ProjectRoot
+}
+
+func fallbackProjectRoot(cwd string) string {
+	if filepath.Base(cwd) == "go-scripts" {
+		return filepath.Dir(cwd)
+	}
+	return cwd
+}
+
+func resolvePathConfig(discoveredRoot string) PathConfig {
+	root := discoveredRoot
+	if envRoot := strings.TrimSpace(os.Getenv("MP3_PROJECT_ROOT")); envRoot != "" {
+		root = resolvePath(discoveredRoot, envRoot)
+	}
+
+	return PathConfig{
+		Root:       root,
+		ArchiveDir: resolvePath(root, envOrDefault("MP3_ARCHIVE_DIR", "archive")),
+		DataDir:    resolvePath(root, envOrDefault("MP3_DATA_DIR", "data")),
+		WebDataDir: resolvePath(root, envOrDefault("MP3_WEB_DATA_DIR", "web-data")),
+		LastFMDir:  resolvePath(root, envOrDefault("MP3_LASTFM_DIR", "lastfm")),
+		SpotifyDir: resolvePath(root, envOrDefault("MP3_SPOTIFY_DIR", "spotify")),
+	}
+}
+
+func envOrDefault(key, defaultVal string) string {
+	if value := strings.TrimSpace(os.Getenv(key)); value != "" {
+		return value
+	}
+	return defaultVal
+}
+
+func resolvePath(base, value string) string {
+	if value == "" {
+		return base
+	}
+	if filepath.IsAbs(value) {
+		return filepath.Clean(value)
+	}
+	return filepath.Clean(filepath.Join(base, value))
+}
+
+func joinPath(base string, parts ...string) string {
+	elements := make([]string, 0, len(parts)+1)
+	elements = append(elements, base)
+	elements = append(elements, parts...)
+	return filepath.Join(elements...)
+}
+
+func ArchivePath(parts ...string) string {
+	return joinPath(Paths.ArchiveDir, parts...)
+}
+
+func DataPath(parts ...string) string {
+	return joinPath(Paths.DataDir, parts...)
+}
+
+func WebDataPath(parts ...string) string {
+	return joinPath(Paths.WebDataDir, parts...)
+}
+
+func LastFMPath(parts ...string) string {
+	return joinPath(Paths.LastFMDir, parts...)
+}
+
+func SpotifyPath(parts ...string) string {
+	return joinPath(Paths.SpotifyDir, parts...)
+}
+
+func LastFMUsername() string {
+	if username := strings.TrimSpace(os.Getenv("LASTFM_USERNAME")); username != "" {
+		return username
+	}
+	return "riebschlager"
+}
+
+func LastFMStatsPath(username string) string {
+	if strings.TrimSpace(username) == "" {
+		username = LastFMUsername()
+	}
+	return LastFMPath(fmt.Sprintf("lastfmstats-%s.json", username))
 }

@@ -160,8 +160,8 @@ func runProcessLastFm() {
 
 	// Write output to both data/ and web-data/
 	outputPaths := []string{
-		filepath.Join(ProjectRoot, "data", "playcounts.json"),
-		filepath.Join(ProjectRoot, "web-data", "playcounts.json"),
+		DataPath("playcounts.json"),
+		WebDataPath("playcounts.json"),
 	}
 
 	for _, path := range outputPaths {

@@ -20,16 +20,15 @@ type AlbumsOutput struct {
 }
 
 func runExtractAlbums() {
-	csvPath := filepath.Join(ProjectRoot, "archive", "compiled_itunes_library.csv")
-	outPath := filepath.Join(ProjectRoot, "data", "albums.json")
+	csvPath := ArchivePath("compiled_itunes_library.csv")
+	outPath := DataPath("albums.json")
 
 	if err := os.MkdirAll(filepath.Dir(outPath), 0755); err != nil {
 		fmt.Fprintf(os.Stderr, "Error creating output directory: %v\n", err)
 		os.Exit(1)
 	}
 
-
-rows, err := ReadCSV(csvPath)
+	rows, err := ReadCSV(csvPath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error reading CSV: %v\n", err)
 		os.Exit(1)
@@ -94,17 +93,17 @@ rows, err := ReadCSV(csvPath)
 	fmt.Printf("Wrote %d unique albums to %s\n", len(albumList), outPath)
 	fmt.Printf("\nFound %d unique albums\n", len(albumList))
 	fmt.Println("\nFirst 10 albums:")
-	
+
 	for i, entry := range albumList {
 		if i >= 10 {
 			break
 		}
-		
+
 		artistsStr := "Unknown Artist"
 		if len(entry.Artists) > 0 {
 			artistsStr = strings.Join(entry.Artists, ", ")
 		}
-		
+
 		fmt.Printf("  - %s — %s\n", entry.Album, artistsStr)
 	}
 }

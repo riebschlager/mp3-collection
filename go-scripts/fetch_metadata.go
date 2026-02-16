@@ -159,10 +159,7 @@ func runFetchMetadata() {
 		os.Exit(1)
 	}
 
-	username := strings.TrimSpace(os.Getenv("LASTFM_USERNAME"))
-	if username == "" {
-		username = "riebschlager"
-	}
+	username := LastFMUsername()
 
 	scope := strings.ToLower(strings.TrimSpace(os.Getenv("LASTFM_IMAGE_SCOPE")))
 	if scope != "all" {
@@ -174,12 +171,12 @@ func runFetchMetadata() {
 	maxArtists := envInt("LASTFM_IMAGE_MAX_ARTISTS")
 	maxAlbums := envInt("LASTFM_IMAGE_MAX_ALBUMS")
 
-	artistIndexPath := filepath.Join(ProjectRoot, "web-data", "artists-index.json")
-	albumIndexPath := filepath.Join(ProjectRoot, "web-data", "albums-index.json")
-	lastFmPath := filepath.Join(ProjectRoot, "lastfm", fmt.Sprintf("lastfmstats-%s.json", username))
-	cachePath := filepath.Join(ProjectRoot, "lastfm", "image-cache.json")
-	artistOutputPath := filepath.Join(ProjectRoot, "web-data", "artist-images.json")
-	albumOutputPath := filepath.Join(ProjectRoot, "web-data", "album-images.json")
+	artistIndexPath := WebDataPath("artists-index.json")
+	albumIndexPath := WebDataPath("albums-index.json")
+	lastFmPath := LastFMStatsPath(username)
+	cachePath := LastFMPath("image-cache.json")
+	artistOutputPath := WebDataPath("artist-images.json")
+	albumOutputPath := WebDataPath("album-images.json")
 
 	fmt.Printf("Fetching image metadata (scope=%s)\n", scope)
 	fmt.Printf("Using Last.fm data: %s\n", lastFmPath)
@@ -404,7 +401,7 @@ func buildImageCandidates(scope, artistIndexPath, albumIndexPath string) ([]cand
 	if scope == "all" {
 		return loadCandidatesFromIndexes(artistIndexPath, albumIndexPath)
 	}
-	return loadCandidatesFromPlayedTracks(filepath.Join(ProjectRoot, "web-data", "chunks"))
+	return loadCandidatesFromPlayedTracks(WebDataPath("chunks"))
 }
 
 func loadCandidatesFromIndexes(artistIndexPath, albumIndexPath string) ([]candidateArtist, []candidateAlbum, error) {

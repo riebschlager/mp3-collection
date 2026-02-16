@@ -22,10 +22,13 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 
 ## Data Dependencies
 
-- `web-data/chunks/tracks-*.json` (resolver index source)
-- `lastfm/lastfmstats-riebschlager.json` (scrobble analyses)
+- `<web-data>/chunks/tracks-*.json` (resolver index source)
+- `<lastfm>/lastfmstats-<username>.json` (scrobble analyses)
 
-Note: current server code reads Last.fm scrobbles from `lastfm/lastfmstats-riebschlager.json`.
+Default values:
+- `<web-data>` resolves to `<root>/web-data`
+- `<lastfm>` resolves to `<root>/lastfm`
+- `<username>` resolves to `LASTFM_USERNAME` or `riebschlager`
 
 ## Run
 
@@ -46,6 +49,9 @@ Or use launcher (builds binary if missing and sets env defaults):
 
 - Project root auto-discovery: walks parent directories until `web-data/chunks` exists.
 - Optional override: `MP3_COLLECTION_ROOT=/absolute/path/to/repo`.
+- Optional web-data override: `MP3_WEB_DATA_DIR=/absolute/or/relative/path/to/web-data`.
+- Optional Last.fm dir override: `MP3_LASTFM_DIR=/absolute/or/relative/path/to/lastfm`.
+- Optional Last.fm file override: `MP3_LASTFM_FILE=/absolute/or/relative/path/to/lastfmstats-*.json`.
 - Alias file optional override: `MP3_ALIAS_MAP_PATH=/absolute/or/relative/path/to/alias_map.json`.
 - Default alias lookup order:
   - `<root>/data/alias_map.json`

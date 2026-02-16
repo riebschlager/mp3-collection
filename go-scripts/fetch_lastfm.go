@@ -48,10 +48,7 @@ func runFetchLastFm() {
 		os.Exit(1)
 	}
 
-	username := os.Getenv("LASTFM_USERNAME")
-	if username == "" {
-		username = "riebschlager"
-	}
+	username := LastFMUsername()
 
 	fmt.Printf("Fetching recent tracks for user: %s\n", username)
 
@@ -65,7 +62,7 @@ func runFetchLastFm() {
 	fmt.Printf("Fetched %d recent tracks.\n", len(tracks))
 
 	// Load existing data
-	lastfmPath := filepath.Join(ProjectRoot, "lastfm", fmt.Sprintf("lastfmstats-%s.json", username))
+	lastfmPath := LastFMStatsPath(username)
 	var existingData LastFmData
 
 	data, err := os.ReadFile(lastfmPath)
@@ -181,6 +178,10 @@ func fetchRecentTracks(username, apiKey string, page int) ([]struct {
 }
 
 func saveLastFmData(path string, data LastFmData) error {
+	if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
+		return err
+	}
+
 	file, err := os.Create(path)
 	if err != nil {
 		return err

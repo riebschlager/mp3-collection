@@ -598,7 +598,7 @@ func loadResolver() (*trackResolver, error) {
 		return nil, err
 	}
 
-	pattern := filepath.Join(root, "web-data", "chunks", "tracks-*.json")
+	pattern := trackChunkPattern(root)
 	chunkFiles, err := filepath.Glob(pattern)
 	if err != nil {
 		return nil, fmt.Errorf("failed to discover chunk files: %w", err)
@@ -663,11 +663,16 @@ func detectProjectRoot() (string, error) {
 		if hasTrackChunks(envRoot) {
 			return envRoot, nil
 		}
+		return "", fmt.Errorf("MP3_COLLECTION_ROOT=%s does not contain track chunks at %s", envRoot, trackChunkPattern(envRoot))
 	}
 
 	cwd, err := os.Getwd()
 	if err != nil {
 		return "", err
+	}
+
+	if hasTrackChunks(cwd) {
+		return inferRootFromWebDataDir(cwd), nil
 	}
 
 	checked := map[string]bool{}
@@ -690,15 +695,34 @@ func detectProjectRoot() (string, error) {
 		}
 	}
 
-	return "", errors.New("could not locate project root containing web-data/chunks")
+	return "", errors.New("could not locate project root containing track chunk data")
 }
 
 func hasTrackChunks(root string) bool {
-	matches, err := filepath.Glob(filepath.Join(root, "web-data", "chunks", "tracks-*.json"))
+	matches, err := filepath.Glob(trackChunkPattern(root))
 	if err != nil {
 		return false
 	}
 	return len(matches) > 0
+}
+
+func trackChunkPattern(root string) string {
+	return filepath.Join(resolveWebDataDir(root), "chunks", "tracks-*.json")
+}
+
+func resolveWebDataDir(root string) string {
+	if envDir := strings.TrimSpace(os.Getenv("MP3_WEB_DATA_DIR")); envDir != "" {
+		return resolvePath(root, envDir)
+	}
+	return filepath.Join(root, "web-data")
+}
+
+func inferRootFromWebDataDir(defaultRoot string) string {
+	webDataDir := resolveWebDataDir(defaultRoot)
+	if filepath.Base(webDataDir) == "web-data" {
+		return filepath.Dir(webDataDir)
+	}
+	return defaultRoot
 }
 
 func loadAliasCatalog(root string) (*aliasCatalog, string, error) {
@@ -744,10 +768,7 @@ func loadAliasCatalog(root string) (*aliasCatalog, string, error) {
 func resolveAliasMapPath(root string) (path string, required bool, err error) {
 	if envPath := strings.TrimSpace(os.Getenv("MP3_ALIAS_MAP_PATH")); envPath != "" {
 		required = true
-		resolved := envPath
-		if !filepath.IsAbs(resolved) {
-			resolved = filepath.Join(root, resolved)
-		}
+		resolved := resolvePath(root, envPath)
 		if _, statErr := os.Stat(resolved); statErr != nil {
 			return "", required, fmt.Errorf("MP3_ALIAS_MAP_PATH points to unreadable file %s: %w", resolved, statErr)
 		}
@@ -764,6 +785,13 @@ func resolveAliasMapPath(root string) (path string, required bool, err error) {
 		}
 	}
 	return "", false, nil
+}
+
+func resolvePath(root, value string) string {
+	if filepath.IsAbs(value) {
+		return filepath.Clean(value)
+	}
+	return filepath.Clean(filepath.Join(root, value))
 }
 
 func parseAliasEntries(raw []byte) ([]aliasEntry, error) {
@@ -1747,9 +1775,9 @@ func musicGenreProfile(args map[string]interface{}) (map[string]interface{}, err
 	stats := analyzeEra(label, start, end, scrobbles, resolver)
 
 	return map[string]interface{}{
-		"period":         label,
-		"totalScrobbles": stats.TotalScrobbles,
-		"topGenres":      rankedCounts(stats.GenreCounts, topN, "genre"),
+		"period":           label,
+		"totalScrobbles":   stats.TotalScrobbles,
+		"topGenres":        rankedCounts(stats.GenreCounts, topN, "genre"),
 		"diversityEntropy": roundFloat(shannonEntropyNormalized(stats.GenreCounts), 4),
 	}, nil
 }
@@ -2113,7 +2141,7 @@ func getLastFMScrobbles() ([]lastFMScrobble, error) {
 			lastFMErr = err
 			return
 		}
-		path := filepath.Join(root, "lastfm", "lastfmstats-riebschlager.json")
+		path := resolveLastFMStatsPath(root)
 		raw, err := os.ReadFile(path)
 		if err != nil {
 			lastFMErr = fmt.Errorf("read %s: %w", path, err)
@@ -2127,6 +2155,24 @@ func getLastFMScrobbles() ([]lastFMScrobble, error) {
 		lastFMCache = data.Scrobbles
 	})
 	return lastFMCache, lastFMErr
+}
+
+func resolveLastFMStatsPath(root string) string {
+	if path := strings.TrimSpace(os.Getenv("MP3_LASTFM_FILE")); path != "" {
+		return resolvePath(root, path)
+	}
+	filename := fmt.Sprintf("lastfmstats-%s.json", lastFMUsername())
+	if dir := strings.TrimSpace(os.Getenv("MP3_LASTFM_DIR")); dir != "" {
+		return filepath.Join(resolvePath(root, dir), filename)
+	}
+	return filepath.Join(root, "lastfm", filename)
+}
+
+func lastFMUsername() string {
+	if username := strings.TrimSpace(os.Getenv("LASTFM_USERNAME")); username != "" {
+		return username
+	}
+	return "riebschlager"
 }
 
 func timestampInOptionalRange(tsMs int64, start, end *time.Time) bool {

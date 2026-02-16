@@ -45,7 +45,7 @@ type TimelineData struct {
 }
 
 func runBuildTimeline() {
-	outputPath := filepath.Join(ProjectRoot, "web-data", "timeline.json")
+	outputPath := WebDataPath("timeline.json")
 
 	fmt.Println("Building timeline data from merged listening history...")
 

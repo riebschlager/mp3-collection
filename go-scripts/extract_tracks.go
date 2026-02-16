@@ -20,12 +20,8 @@ type TracksOutput struct {
 }
 
 func runExtractTracks() {
-	// Paths
-	// Assuming running from go-scripts/ or similar, relative paths:
-	// In Python: Path(__file__).parent.parent / 'archive' / 'compiled_itunes_library.csv'
-	// Here, we'll assume we are in go-scripts/ when running.
-	csvPath := filepath.Join(ProjectRoot, "archive", "compiled_itunes_library.csv")
-	outPath := filepath.Join(ProjectRoot, "data", "tracks.json")
+	csvPath := ArchivePath("compiled_itunes_library.csv")
+	outPath := DataPath("tracks.json")
 
 	// Ensure output dir exists
 	if err := os.MkdirAll(filepath.Dir(outPath), 0755); err != nil {
@@ -58,7 +54,7 @@ func runExtractTracks() {
 			// 'artist': artist if artist else None
 			// So yes, we strictly should output null if empty.
 			// But for simplicity in this script, let's keep it simple or use logic.
-			
+
 			// Let's stick to the struct fields being string and just omitempty.
 			// If Python outputted null, omitempty on string outputs nothing (missing key).
 			// If we want literal null, we need pointers.
@@ -66,11 +62,11 @@ func runExtractTracks() {
 			// So "artist": null.
 			// omitempty on string makes the key disappear.
 			// Let's try to match it closely.
-			
+
 			entry := TrackEntry{
-				Track: trackName,
+				Track:  trackName,
 				Artist: artist,
-				Album: album,
+				Album:  album,
 			}
 			tracksList = append(tracksList, entry)
 		}
@@ -98,7 +94,7 @@ func runExtractTracks() {
 	}
 
 	fmt.Printf("Wrote %d tracks to %s\n", len(tracksList), outPath)
-	
+
 	fmt.Printf("\nFound %d tracks\n", len(tracksList))
 	fmt.Println("\nFirst 10 tracks:")
 	for i, entry := range tracksList {

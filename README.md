@@ -35,6 +35,27 @@ cp .env.example .env
 `.env` is used by Go commands (auto-loaded from current/parent directories):
 - `LASTFM_API_KEY` (required for Last.fm API calls)
 - `LASTFM_USERNAME` (optional, defaults to `riebschlager`)
+- Optional path overrides for ETL commands:
+  - `MP3_PROJECT_ROOT`
+  - `MP3_ARCHIVE_DIR`, `MP3_DATA_DIR`, `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, `MP3_SPOTIFY_DIR`
+
+## Daily Workflow (from Repo Root)
+
+Use root `make` targets for the common workflows:
+
+```bash
+make pipeline   # full Go pipeline refresh
+make web-dev    # run Astro dev server
+make mcp        # start MCP server
+```
+
+Other useful targets:
+- `make compile` (rebuild compiled iTunes CSV)
+- `make listening` (refresh merged listening history + playcounts)
+- `make web-data` (rebuild web JSON/chunks/indexes)
+- `make images` (refresh artist/album image metadata)
+- `make doctor` (validate ETL path config + required inputs)
+- `make help` (list all targets)
 
 ## Data Pipelines
 
@@ -84,6 +105,7 @@ Common commands:
 - `build-timeline`
 - `build-web-data`
 - `fetch-images` (alias: `fetch-metadata`)
+- `doctor` (validate resolved path config and required inputs)
 
 ## Generated Artifact Summary
 
