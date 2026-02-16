@@ -1,104 +1,151 @@
-# MP3 Collection Manager
+# MP3 Collection
 
-A comprehensive system for archiving, processing, and exploring a massive music collection. This project ingests raw iTunes library export files, normalizes the data, and presents it through a modern, searchable web interface.
+Historical iTunes archive + listening-history analytics + static web explorer.
 
-## 🚀 Overview
+This repo combines:
+- iTunes export compilation from many legacy files.
+- Data extraction/build pipelines (Go-first, with Python equivalents).
+- Last.fm + Spotify listening-history merge and derived analytics.
+- A static Astro site for browsing artists, albums, tracks, timeline, and wrapped-style yearly summaries.
+- A local MCP server for deeper music-intel analysis workflows.
 
-The system operates in two main stages:
-1.  **Data Pipeline (Python):** Consolidates scattered iTunes export files into a unified dataset, cleanses metadata, and generates optimized JSON chunks.
-2.  **Web Interface (Astro):** A static-site generated (SSG) web application that provides a fast, responsive UI to browse artists, albums, and tracks.
+## Repository Layout
 
-## 📂 Project Structure
+- `archive/`: raw iTunes export files, compiler script, compiled CSV output.
+- `scripts/`: Python extract/build scripts.
+- `go-scripts/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
+- `data/`: intermediate JSON artifacts.
+- `web-data/`: web-ready JSON artifacts used by the Astro app.
+- `mp3-collection-web/`: Astro frontend (`public/data` is a symlink to `../../web-data`).
+- `mcp-server/`: Go MCP server for data-backed music analysis tools.
 
--   `scripts/`: Python "agents" that handle data extraction and processing.
--   `mp3-collection-web/`: The frontend application built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
--   `archive/`: Storage for raw iTunes export files and the compilation script.
--   `data/`: Intermediate JSON data (artists, albums, tracks).
--   `web-data/`: Optimized, chunked data ready for the web application.
+## Prerequisites
 
-## 🛠️ Prerequisites
+- Python 3.8+
+- Go 1.22+ (Go 1.21 works for `go-scripts`; `mcp-server` targets Go 1.22)
+- Node.js 20+ (matches CI workflow)
 
--   **Python 3.8+**
--   **Node.js 18+** (for the web interface)
-
-## 🏁 Quick Start
-
-### 1. Data Processing Pipeline
-
-The pipeline transforms raw exports into web-ready data.
+## Environment Setup
 
 ```bash
-# 1. Compile raw exports into a single CSV (if needed)
-# Navigate to archive/ and run the compiler (check script for specific args)
-python3 archive/compile_itunes_exports.py
-
-# 2. Build the optimized web data
-# This reads the compiled CSV and generates JSON chunks in web-data/
-python3 scripts/build_web_data.py
-
-# (Optional) specific extractions
-python3 scripts/extract_tracks.py
+cp .env.example .env
 ```
 
-### 2. Web Application
+`.env` is used by Go commands (auto-loaded from current/parent directories):
+- `LASTFM_API_KEY` (required for Last.fm API calls)
+- `LASTFM_USERNAME` (optional, defaults to `riebschlager`)
 
-Initialize and run the frontend.
+## Data Pipelines
+
+### 1. Compile iTunes Exports (when source archives change)
+
+```bash
+python3 archive/compile_itunes_exports.py
+```
+
+Outputs:
+- `archive/compiled_itunes_library.csv`
+- `archive/validation_report.txt`
+
+### 2. Build Data with Go (recommended)
+
+```bash
+cd go-scripts
+./run_all.sh
+```
+
+`run_all.sh` executes:
+1. `extract-tracks`
+2. `extract-albums`
+3. `extract-artists`
+4. `fetch-lastfm`
+5. `merge-listening`
+6. `process-lastfm`
+7. `build-timeline`
+8. `build-web-data`
+9. `fetch-images`
+
+You can run any step individually:
+
+```bash
+cd go-scripts
+go run . <command>
+```
+
+Common commands:
+- `extract-tracks`, `extract-albums`, `extract-artists`
+- `fetch-lastfm`
+- `merge-listening`
+- `process-lastfm`
+- `build-timeline`
+- `build-web-data`
+- `fetch-images` (alias: `fetch-metadata`)
+
+### 3. Python Pipeline (legacy/compatibility)
+
+```bash
+./scripts/run_all.sh
+```
+
+This runs Python extractors plus `scripts/build_web_data.py`.
+
+## Generated Artifact Summary
+
+- `data/tracks.json`, `data/albums.json`, `data/artists.json`
+- `data/listening-history.json`, `data/listening-merge-report.json`
+- `data/playcounts.json`
+- `web-data/chunks/tracks-*.json`
+- `web-data/artists-index.json`, `web-data/albums-index.json`, `web-data/metadata.json`
+- `web-data/timeline.json`
+- `web-data/playcounts.json`, `web-data/listening-merge-report.json`
+- `web-data/artist-images.json`, `web-data/album-images.json`
+
+## Run the Web App
 
 ```bash
 cd mp3-collection-web
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
 ```
 
-Visit `http://localhost:4321` to browse the collection.
+Default dev URL: `http://localhost:4321`
 
-## � Deployment to GitHub Pages
-
-The project is configured for automatic deployment to GitHub Pages. Deployment happens automatically when you push changes to the `main` or `master` branch.
-
-### Configuration
-
-The deployment is configured in:
-- **Astro config:** `mp3-collection-web/astro.config.mjs` (sets `site` and `base` for GitHub Pages)
-- **GitHub Actions:** `.github/workflows/deploy.yml` (automates the build and deployment)
-
-### Accessing the Deployed Site
-
-Once deployed, the site will be available at:
-```
-https://riebschlager.github.io/mp3-collection
-```
-
-### Manual Deployment
-
-To manually trigger a deployment:
-1. Go to the [Actions](https://github.com/riebschlager/mp3-collection/actions) tab in the repository
-2. Select the "Deploy to GitHub Pages" workflow
-3. Click "Run workflow"
-
-### Building for Production Locally
-
-To test a production build locally:
+Build/preview locally:
 
 ```bash
-cd mp3-collection-web
 npm run build
 npm run preview
 ```
 
-## �📦 Data Architecture
+## Deployment
 
-The system uses a "static database" approach:
--   **Indexes:** `artists-index.json`, `albums-index.json` provide O(1) lookups for routing.
--   **Chunks:** Data is split into manageable JSON chunks in `web-data/chunks/` to avoid loading the entire library size in the browser.
--   **Search:** Powered by [Pagefind](https://pagefind.app/) for static, full-text search capabilities.
+GitHub Pages deployment is automated via `.github/workflows/deploy.yml`.
 
-## 🤝 Contributing
+- Trigger: push to `main`/`master` with changes in `mp3-collection-web/**`, `web-data/**`, or the workflow file.
+- Site URL: `https://riebschlager.github.io/mp3-collection`
 
-1.  Ensure all Python scripts use type hinting where possible.
-2.  Web components should be kept small and functional.
-3.  Run `npm run build` to verify the production build before committing.
+See `DEPLOYMENT.md` for full details.
+
+## MCP Server
+
+```bash
+cd mcp-server
+go run .
+```
+
+Or use the launcher script:
+
+```bash
+./mcp-server/run-mcp.sh
+```
+
+Current tools:
+- `music_resolve_track_identity`
+- `music_audit_match_coverage`
+- `music_compare_eras`
+- `music_listening_summary`
+- `music_new_discoveries`
+- `music_genre_profile`
+- `music_listening_patterns`
+- `music_find_dormant_returns`
+- `music_reload_alias_map`

@@ -1,43 +1,60 @@
-# Astro Starter Kit: Minimal
+# MP3 Collection Web
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Astro frontend for browsing the MP3 archive and listening-history outputs.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Routes
 
-## 🚀 Project Structure
+- `/`: overview dashboard with collection stats and most-played tracks
+- `/artists`: artist index
+- `/artists/[slug]`: artist detail page with grouped albums/tracks
+- `/albums`: album index
+- `/albums/[slug]`: album detail page with tracklist
+- `/tracks/[page]`: paginated track browser
+- `/history`: yearly/monthly listening timeline view
+- `/wrapped`: wrapped-year gallery
+- `/wrapped/[year]`: slide-based yearly wrapped story
 
-Inside of your Astro project, you'll see the following folders and files:
+## Data Source
+
+The app reads static JSON from `public/data`, which is a symlink to the repository `web-data` folder:
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+public/data -> ../../web-data
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+If the symlink is missing, recreate it from `mp3-collection-web/`:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+ln -s ../../web-data public/data
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Commands
 
-## 🧞 Commands
+Run from `mp3-collection-web/`:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm install
+npm run dev
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Additional commands:
+- `npm run build`: production build to `dist/`
+- `npm run preview`: preview production build
+- `npm run astro -- --help`: Astro CLI help
 
-## 👀 Want to learn more?
+## GitHub Pages Configuration
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`astro.config.mjs` is configured for GitHub Pages:
+- `site: 'https://riebschlager.github.io'`
+- `base: '/mp3-collection'`
+- `output: 'static'`
+
+Route links in the app use `import.meta.env.BASE_URL` helpers to stay base-path safe.
+
+## Current Implementation Notes
+
+- Several dynamic pages currently assume `49` track chunks:
+  - `src/pages/tracks/[page].astro`
+  - `src/pages/artists/[slug].astro`
+  - `src/pages/albums/[slug].astro`
+- If `web-data/chunks` count changes, update those constants to match.

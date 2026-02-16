@@ -1,91 +1,86 @@
 # Go Scripts for MP3 Collection
 
-This folder contains Go implementations of the data extraction and build scripts for the MP3 Collection project.
+This directory contains the primary data pipeline for the project. The commands are implemented as one Go CLI with subcommands.
 
-## Setup Instructions for macOS
+## Requirements
 
-### 1. Install Go
+- Go 1.21+ (`go-scripts/go.mod` uses `go 1.21`)
+- Repository root contains:
+  - `archive/compiled_itunes_library.csv` (from `archive/compile_itunes_exports.py`)
+  - `spotify/Streaming_History_Audio_*.json` (for merge/timeline/playcount flow)
+  - `lastfm/lastfmstats-<username>.json` (created/updated by `fetch-lastfm`)
 
-If you haven't installed Go yet, you can do so using Homebrew or by downloading the installer from the official website.
+## Environment Variables
 
-**Option A: Using Homebrew (Recommended)**
+The CLI auto-loads `.env` by searching current and parent directories.
+
+- `LASTFM_API_KEY`: required for `fetch-lastfm` and `fetch-images`.
+- `LASTFM_USERNAME`: optional, defaults to `riebschlager`.
+- `SPOTIFY_MIN_MS_PLAYED`: optional, defaults to `30000`.
+- `SPOTIFY_LASTFM_DEDUPE_WINDOW_MS`: optional, defaults to `120000`.
+- `LASTFM_IMAGE_SCOPE`: `played` (default) or `all`.
+- `LASTFM_IMAGE_FORCE_REFRESH`: optional boolean (`true/false`).
+- `LASTFM_IMAGE_REFRESH_MISSING`: optional boolean (`true/false`).
+- `LASTFM_IMAGE_MAX_ARTISTS`: optional int limit for fetch runs.
+- `LASTFM_IMAGE_MAX_ALBUMS`: optional int limit for fetch runs.
+
+## Quick Start
+
+From repository root, ensure compiled CSV exists:
+
 ```bash
-brew install go
+python3 archive/compile_itunes_exports.py
 ```
 
-**Option B: Official Installer**
-Download the macOS package from [go.dev/dl](https://go.dev/dl/) and run the installer.
-
-### 2. Verify Installation
-
-Open your terminal and run:
-```bash
-go version
-```
-You should see output similar to `go version go1.21.0 darwin/arm64`.
-
-### 3. Setup Workspace (Optional)
-
-Go generally works best with modules (which this project uses). You don't need to set up a `GOPATH` for modern Go development.
-
-## Running the Scripts
-
-The scripts are consolidated into a single Go application with subcommands.
-
-### One-shot command
-To run the equivalent of the `run_all.sh` Python script:
+Then run the Go pipeline:
 
 ```bash
+cd go-scripts
 ./run_all.sh
 ```
 
-### Running individual commands manually
+`run_all.sh` builds `mp3-scripts` and runs:
+1. `extract-tracks`
+2. `extract-albums`
+3. `extract-artists`
+4. `fetch-lastfm`
+5. `merge-listening`
+6. `process-lastfm`
+7. `build-timeline`
+8. `build-web-data`
+9. `fetch-images`
 
-You can run individual steps using `go run .`:
+## Command Reference
+
+Run commands with:
 
 ```bash
-# Extract tracks
-go run . extract-tracks
-
-# Extract artists
-go run . extract-artists
-
-# Extract albums
-go run . extract-albums
-
-# Build web data
-go run . build-web-data
-
-# Fetch recent Last.fm scrobbles
-# Requires LASTFM_API_KEY environment variable
-export LASTFM_API_KEY=your_api_key_here
-go run . fetch-lastfm
-
-# Merge Last.fm + Spotify history with duplicate suppression
-# Optional env:
-#   SPOTIFY_MIN_MS_PLAYED=30000
-#   SPOTIFY_LASTFM_DEDUPE_WINDOW_MS=120000
-go run . merge-listening
-
-# Build playcounts from merged history
-go run . process-lastfm
-
-# Build yearly/monthly timeline from merged history
-go run . build-timeline
-
-# Fetch/cached artist+album image metadata from Last.fm
-# Optional env:
-#   LASTFM_IMAGE_SCOPE=played|all (default: played)
-#   LASTFM_IMAGE_REFRESH_MISSING=true
-#   LASTFM_IMAGE_FORCE_REFRESH=true
-go run . fetch-images
+cd go-scripts
+go run . <command>
 ```
 
-### Building the binary
+Available commands:
+- `extract-tracks`: writes `data/tracks.json`
+- `extract-artists`: writes `data/artists.json`
+- `extract-albums`: writes `data/albums.json`
+- `fetch-lastfm`: fetches latest Last.fm page (up to 200 recent tracks) and appends new scrobbles
+- `merge-listening`: merges Last.fm + Spotify into `data/listening-history.json` and merge reports
+- `process-lastfm`: builds `data/playcounts.json` and `web-data/playcounts.json`
+- `build-timeline`: builds `web-data/timeline.json`
+- `build-web-data`: builds chunked/indexed web artifacts in `web-data/`
+- `fetch-images`: fetches/caches Last.fm image metadata into `web-data/artist-images.json` and `web-data/album-images.json`
+- `fetch-metadata`: alias for `fetch-images`
 
-For faster execution, you can build the binary once:
+## Notes
+
+- `process-lastfm` and `build-timeline` call shared logic that rebuilds listening history when stale relative to Last.fm/Spotify source files.
+- `build-web-data` enriches tracks with playcounts from `data/playcounts.json` when available.
+- Track chunks are written as `web-data/chunks/tracks-###.json` (chunk size currently 1000).
+
+## Build Binary (optional)
 
 ```bash
+cd go-scripts
 go build -o mp3-scripts
-./mp3-scripts extract-tracks
+./mp3-scripts build-web-data
 ```

@@ -1,55 +1,78 @@
-# music-intel-mcp (starter)
+# music-intel-mcp
 
-Minimal Go MCP server scaffold for deep analysis of the MP3 collection and Last.fm timeline.
+Go MCP server for data-backed analysis of the MP3 collection and listening history.
 
-## Included tools
+## Protocol and Transport
 
-- `music.resolve_track_identity`
-- `music.audit_match_coverage`
-- `music.compare_eras`
-- `music.find_dormant_returns`
-- `music.reload_alias_map`
+- JSON-RPC 2.0 over stdio
+- `Content-Length` framed messages
+- MCP protocol version advertised by server: `2024-11-05`
 
-All tools are implemented with real data-backed outputs.
-- `music.resolve_track_identity`: exact/fuzzy matching with alias override support.
-- `music.audit_match_coverage`: match-rate audit, failure clustering, and unmatched rankings.
-- `music.compare_eras`: overlap, novelty/entropy, rising/falling tracks, and genre shift.
-- `music.find_dormant_returns`: tracks with long inactivity gaps that reappear in a target return window.
-- `music.reload_alias_map`: in-process alias + resolver index reload after alias file edits.
+## Included Tools
+
+- `music_resolve_track_identity`
+- `music_audit_match_coverage`
+- `music_compare_eras`
+- `music_listening_summary`
+- `music_new_discoveries`
+- `music_genre_profile`
+- `music_listening_patterns`
+- `music_find_dormant_returns`
+- `music_reload_alias_map`
+
+## Data Dependencies
+
+- `web-data/chunks/tracks-*.json` (resolver index source)
+- `lastfm/lastfmstats-riebschlager.json` (scrobble analyses)
+
+Note: current server code reads Last.fm scrobbles from `lastfm/lastfmstats-riebschlager.json`.
 
 ## Run
 
+From repo root:
+
 ```bash
-cd /Users/criebschlager/Projects/mp3-collection/mcp-server
+cd mcp-server
 go run .
 ```
 
-The server speaks JSON-RPC 2.0 over stdio with `Content-Length` framing.
-By default it auto-discovers the repo root by walking parent directories for `web-data/chunks`.
-You can also set `MP3_COLLECTION_ROOT` explicitly.
+Or use launcher (builds binary if missing and sets env defaults):
 
-## Alias overrides
+```bash
+./mcp-server/run-mcp.sh
+```
 
-The resolver supports manual alias overrides to force canonical matching.
+## Root and Alias Path Resolution
 
-- Default alias file lookup:
-  - `/Users/criebschlager/Projects/mp3-collection/data/alias_map.json`
-  - `/Users/criebschlager/Projects/mp3-collection/mcp-server/data/alias_map.json`
-- Override with env var:
-  - `MP3_ALIAS_MAP_PATH=/absolute/or/relative/path/to/alias_map.json`
+- Project root auto-discovery: walks parent directories until `web-data/chunks` exists.
+- Optional override: `MP3_COLLECTION_ROOT=/absolute/path/to/repo`.
+- Alias file optional override: `MP3_ALIAS_MAP_PATH=/absolute/or/relative/path/to/alias_map.json`.
+- Default alias lookup order:
+  - `<root>/data/alias_map.json`
+  - `<root>/mcp-server/data/alias_map.json`
 
-Supported formats:
+## Alias Map Formats
+
+Supported format 1:
 
 ```json
 {
   "aliases": [
-    { "entityType": "artist", "aliasValue": "apc", "canonicalValue": "a perfect circle" },
-    { "entityType": "track", "aliasValue": "judith (album version)", "canonicalValue": "judith" }
+    {
+      "entityType": "artist",
+      "aliasValue": "apc",
+      "canonicalValue": "a perfect circle"
+    },
+    {
+      "entityType": "track",
+      "aliasValue": "judith (album version)",
+      "canonicalValue": "judith"
+    }
   ]
 }
 ```
 
-or grouped:
+Supported format 2:
 
 ```json
 {
@@ -59,17 +82,16 @@ or grouped:
 }
 ```
 
-## Current limitations
+## Current Limitations
 
-1. `music.audit_match_coverage` currently treats ambiguous matches as unmatched.
-2. `music.compare_eras` genre shifts depend on exact track-to-library resolution (unmatched tracks are excluded from genre stats).
-3. `music.find_dormant_returns` only analyzes canonically matched scrobbles.
-4. `music.reload_alias_map` refreshes aliases in-process, but does not persist alias edits for you.
+1. `music_audit_match_coverage` treats ambiguous matches as unmatched.
+2. `music_compare_eras` genre shifts exclude unmatched tracks.
+3. `music_find_dormant_returns` only evaluates canonically matched scrobbles.
+4. `music_reload_alias_map` reloads in process only; it does not edit alias files.
 
-## Seed schemas
+## Schemas
 
-`/Users/criebschlager/Projects/mp3-collection/mcp-server/schemas` contains:
-
+`mcp-server/schemas/` includes:
 - `sqlite_seed.sql`
 - `canonical_tracks.schema.json`
 - `alias_map.schema.json`
