@@ -16,16 +16,16 @@ Astro frontend for browsing the MP3 archive and listening-history outputs.
 
 ## Data Source
 
-The app reads static JSON from `public/data`, which is a symlink to the repository `web-data` compatibility link (`data/derived/web` canonical location):
+The app reads static JSON from `public/data`, which is a symlink to the canonical repository data path:
 
 ```text
-public/data -> ../../../web-data
+public/data -> ../../../data/derived/web
 ```
 
 If the symlink is missing, recreate it from `apps/web/`:
 
 ```bash
-ln -s ../../../web-data public/data
+ln -s ../../../data/derived/web public/data
 ```
 
 ## Commands
@@ -57,4 +57,4 @@ Route links in the app use `import.meta.env.BASE_URL` helpers to stay base-path 
   - `src/pages/tracks/[page].astro`
   - `src/pages/artists/[slug].astro`
   - `src/pages/albums/[slug].astro`
-- If `web-data/chunks` count changes, update those constants to match.
+- If `data/derived/web/chunks` count changes, update those constants to match.

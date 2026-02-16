@@ -11,7 +11,7 @@ This repo combines:
 
 ## Repository Layout
 
-- `apps/web/`: Astro frontend (`public/data` symlinks to `../../../web-data`).
+- `apps/web/`: Astro frontend (`public/data` symlinks to `../../../data/derived/web`).
 - `apps/mcp-server/`: Go MCP server for data-backed music analysis tools.
 - `tools/pipeline/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
 - `data/`: intermediate pipeline artifacts plus organized input/derived datasets.
@@ -25,7 +25,6 @@ This repo combines:
   - `data/*.json -> data/derived/core/*.json`
   - `lastfm -> data/inputs/lastfm`
   - `spotify -> data/inputs/spotify`
-  - `web-data -> data/derived/web`
 
 ## Prerequisites
 

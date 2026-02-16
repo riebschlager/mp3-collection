@@ -7,12 +7,12 @@ Reorganize the repository so code, raw inputs, generated artifacts, and deploy o
 ## Current Friction
 
 1. Root mixes concerns: source code, raw data, generated data, deploy assets, and binaries.
-2. Go scripts and MCP server rely on hardcoded directory names (`archive`, `data`, `web-data`, `spotify`, `lastfm`).
+2. Legacy tooling historically relied on hardcoded directory names (`archive`, `data`, `spotify`, `lastfm`), increasing migration risk.
 3. Generated binaries are currently committed:
    - `go-scripts/mp3-scripts`
    - `mcp-server/mcp-server`
 4. No root `.gitignore`, so ignore rules are fragmented.
-5. Deployment and web app currently depend on `web-data/` living at repository root.
+5. Deployment/web path assumptions required phased compatibility links during migration.
 
 ## Design Principles
 
@@ -49,7 +49,7 @@ docs/
 ```
 
 Transitional compatibility:
-- keep `web-data/` as a symlink or mirror to `data/derived/web` until deployment updates are complete.
+- compatibility links should be retired in Phase 4 after deploy/docs updates are confirmed stable.
 
 ## Migration Plan
 
@@ -133,5 +133,5 @@ As of February 16, 2026:
 - Phase 3 item 3 completed for data paths: legacy compatibility links added (`lastfm`, `spotify`, `web-data`, archive import/output links, and `data/*.json` links to `data/derived/core`).
 - Phase 3 item 4 partially completed: root Makefile, deployment workflow, LFS config, runtime defaults, and docs now prefer new data/code paths.
 - Phase 4 item 1 completed: deploy workflow triggers now watch only canonical paths (`apps/web/**`, `data/derived/web/**`) plus workflow source.
-- Phase 4 item 2 partially completed: retired legacy code-directory compatibility links (`mp3-collection-web`, `go-scripts`, `mcp-server`).
-- Phase 4 item 3 partially completed: deployment and agent docs updated to canonical paths with compatibility notes where links still exist.
+- Phase 4 item 2 partially completed: retired legacy code-directory compatibility links (`mp3-collection-web`, `go-scripts`, `mcp-server`) and retired `web-data` after switching `apps/web/public/data` to `data/derived/web`.
+- Phase 4 item 3 partially completed: deployment, web app, and agent docs updated to canonical paths with compatibility notes where links still exist.

@@ -53,7 +53,7 @@ npm run preview
 ```
 
 Note:
-- The web app reads data from `public/data` (symlink to `../../../web-data`, which resolves to canonical `data/derived/web`).
+- The web app reads data from `public/data` (symlink to `../../../data/derived/web`).
 - If data changed but `data/derived/web/**` was not updated, deployment will not include new data.
 
 ## Troubleshooting
