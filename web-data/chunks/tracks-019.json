@@ -3533,8 +3533,8 @@
     },
     {
       "id": "track-18147",
-      "name": "Syndir Gu�s (Recyled By Biogen)",
-      "artist": "Sigur R�s",
+      "name": "Syndir Gu\ufffds (Recyled By Biogen)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3557,8 +3557,8 @@
     },
     {
       "id": "track-18148",
-      "name": "Syndir Gu�s (Recycled By M�m)",
-      "artist": "Sigur R�s",
+      "name": "Syndir Gu\ufffds (Recycled By M\ufffdm)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3581,8 +3581,8 @@
     },
     {
       "id": "track-18149",
-      "name": "Leit Af L�fi (Recycled By Plastmic)",
-      "artist": "Sigur R�s",
+      "name": "Leit Af L\ufffdfi (Recycled By Plastmic)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3606,7 +3606,7 @@
     {
       "id": "track-18150",
       "name": "Myrkur (Recycled By Ila)",
-      "artist": "Sigur R�s",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3630,7 +3630,7 @@
     {
       "id": "track-18151",
       "name": "Myrkur (Recycled By Dirty-Bix)",
-      "artist": "Sigur R�s",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3653,8 +3653,8 @@
     },
     {
       "id": "track-18152",
-      "name": "180 Sek�ndur Fyrir S�laruppr�s (Recycled By Curver)",
-      "artist": "Sigur R�s",
+      "name": "180 Sek\ufffdndur Fyrir S\ufffdlaruppr\ufffds (Recycled By Curver)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3677,8 +3677,8 @@
     },
     {
       "id": "track-18153",
-      "name": "H�n J�r� (Recycled By Hassbr��ur)",
-      "artist": "Sigur R�s",
+      "name": "H\ufffdn J\ufffdr\ufffd (Recycled By Hassbr\ufffd\ufffdur)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3701,8 +3701,8 @@
     },
     {
       "id": "track-18154",
-      "name": "Leit Af L�fi (Recycled By Thor)",
-      "artist": "Sigur R�s",
+      "name": "Leit Af L\ufffdfi (Recycled By Thor)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3726,7 +3726,7 @@
     {
       "id": "track-18155",
       "name": "Von (Recyled By Gus Gus)",
-      "artist": "Sigur R�s",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -3749,8 +3749,8 @@
     },
     {
       "id": "track-18156",
-      "name": "Leit Af L�fi (Recycled By Sigur R�s)",
-      "artist": "Sigur R�s",
+      "name": "Leit Af L\ufffdfi (Recycled By Sigur R\ufffds)",
+      "artist": "Sigur R\ufffds",
       "artistSlug": "sigur-rs",
       "composer": "Recycle Bin",
       "album": "Other",
@@ -13494,7 +13494,7 @@
     {
       "id": "track-18562",
       "name": "smell memory bix remix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13518,7 +13518,7 @@
     {
       "id": "track-18563",
       "name": "ballao ruxpin remix 1",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13542,7 +13542,7 @@
     {
       "id": "track-18564",
       "name": "ballao ilo mix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13566,7 +13566,7 @@
     {
       "id": "track-18565",
       "name": "smell memory traktor remix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13590,7 +13590,7 @@
     {
       "id": "track-18566",
       "name": "number of mu-Ziq straight mix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13614,7 +13614,7 @@
     {
       "id": "track-18567",
       "name": "ballao biogen mix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13638,7 +13638,7 @@
     {
       "id": "track-18568",
       "name": "ballao ruxpin remix 2",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13662,7 +13662,7 @@
     {
       "id": "track-18569",
       "name": "asleep el hombre trajeado mix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -13686,7 +13686,7 @@
     {
       "id": "track-18570",
       "name": "number mu-Ziq fucked mix",
-      "artist": "m�m",
+      "artist": "m\ufffdm",
       "artistSlug": "mm",
       "composer": "mum remixed",
       "album": "Electronic",
@@ -18245,7 +18245,7 @@
     },
     {
       "id": "track-18760",
-      "name": "10 Jahre lebensl�nglich",
+      "name": "10 Jahre lebensl\ufffdnglich",
       "artist": "A.R. & Machines",
       "artistSlug": "ar-machines",
       "composer": "III",
@@ -18317,7 +18317,7 @@
     },
     {
       "id": "track-18763",
-      "name": "Heute ist es w�rmer als draussen",
+      "name": "Heute ist es w\ufffdrmer als draussen",
       "artist": "A.R. & Machines",
       "artistSlug": "ar-machines",
       "composer": "III",

@@ -4829,7 +4829,7 @@
       "name": "Dame un cachito pa'huele",
       "artist": "Marc Ribot y Los Cubanos Posti",
       "artistSlug": "marc-ribot-y-los-cubanos-posti",
-      "composer": "�Muy Divertido! (Very Entertai",
+      "composer": "\ufffdMuy Divertido! (Very Entertai",
       "album": "Jazz",
       "albumSlug": "jazz",
       "grouping": "3119648",
@@ -7605,7 +7605,7 @@
     },
     {
       "id": "track-11319",
-      "name": "\"it�s all over now, baby blue\"",
+      "name": "\"it\ufffds all over now, baby blue\"",
       "artist": "them",
       "artistSlug": "them",
       "composer": "The Hits Of The World",
@@ -16797,7 +16797,7 @@
     },
     {
       "id": "track-11702",
-      "name": "Map Ref. 41� N 93� W",
+      "name": "Map Ref. 41\ufffd N 93\ufffd W",
       "artist": "Wire",
       "artistSlug": "wire",
       "composer": "154",

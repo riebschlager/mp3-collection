@@ -5,7 +5,7 @@
   "tracks": [
     {
       "id": "track-33000",
-      "name": "Glad you�re here with me",
+      "name": "Glad you\ufffdre here with me",
       "artist": "Papa M",
       "artistSlug": "papa-m",
       "album": "Whatever, mortal",
@@ -24128,7 +24128,7 @@
     },
     {
       "id": "track-33964",
-      "name": "The Suspension Bridge at Iguaz� Falls",
+      "name": "The Suspension Bridge at Iguaz\ufffd Falls",
       "artist": "Tortoise",
       "artistSlug": "tortoise",
       "album": "TNT",

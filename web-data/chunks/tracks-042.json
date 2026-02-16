@@ -1776,8 +1776,8 @@
     },
     {
       "id": "track-41068",
-      "name": "Sno�",
-      "artist": "Hilmar �rn Hilmarsson & Sigurr�s",
+      "name": "Sno\ufffd",
+      "artist": "Hilmar \ufffdrn Hilmarsson & Sigurr\ufffds",
       "artistSlug": "hilmar-rn-hilmarsson-sigurrs",
       "album": "Englar Alheimsins",
       "albumSlug": "englar-alheimsins",
@@ -1796,7 +1796,7 @@
       "playCount": 0,
       "dateAdded": "10/28/04 9:09 AM",
       "dateModified": "7/6/04 12:17 AM",
-      "location": "MP3Vol329:Souls Go Missing :15__Sno�.mp3",
+      "location": "MP3Vol329:Souls Go Missing :15__Sno\ufffd.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -9931,7 +9931,7 @@
     },
     {
       "id": "track-41389",
-      "name": "J�ljet",
+      "name": "J\ufffdljet",
       "artist": "Circle",
       "artistSlug": "circle",
       "album": "Forest",
@@ -13658,7 +13658,7 @@
     },
     {
       "id": "track-41538",
-      "name": "Du E F�r Fin F�r Mig",
+      "name": "Du E F\ufffdr Fin F\ufffdr Mig",
       "artist": "Dungen",
       "artistSlug": "dungen",
       "album": "Ta Det Lugnt",
@@ -13708,7 +13708,7 @@
     },
     {
       "id": "track-41540",
-      "name": "Det Du T�nker Idag �r Du I Morgon",
+      "name": "Det Du T\ufffdnker Idag \ufffdr Du I Morgon",
       "artist": "Dungen",
       "artistSlug": "dungen",
       "album": "Ta Det Lugnt",
@@ -13758,7 +13758,7 @@
     },
     {
       "id": "track-41542",
-      "name": "Bortgl�md",
+      "name": "Bortgl\ufffdmd",
       "artist": "Dungen",
       "artistSlug": "dungen",
       "album": "Ta Det Lugnt",
@@ -13783,7 +13783,7 @@
     },
     {
       "id": "track-41543",
-      "name": "Gl�md Konst Kommer Stundom �nyo Till Heders",
+      "name": "Gl\ufffdmd Konst Kommer Stundom \ufffdnyo Till Heders",
       "artist": "Dungen",
       "artistSlug": "dungen",
       "album": "Ta Det Lugnt",
@@ -13883,7 +13883,7 @@
     },
     {
       "id": "track-41547",
-      "name": "Sluta F�lja Efter",
+      "name": "Sluta F\ufffdlja Efter",
       "artist": "Dungen",
       "artistSlug": "dungen",
       "album": "Ta Det Lugnt",
@@ -22147,7 +22147,7 @@
     },
     {
       "id": "track-41880",
-      "name": "Tiefensch�rfe",
+      "name": "Tiefensch\ufffdrfe",
       "artist": "Radian",
       "artistSlug": "radian",
       "album": "Juxtaposition",

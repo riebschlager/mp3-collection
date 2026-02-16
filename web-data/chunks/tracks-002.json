@@ -54,7 +54,7 @@
     {
       "id": "track-01002",
       "name": "Tomber 7 Fois",
-      "artist": "Myl�ne Farmer",
+      "artist": "Myl\ufffdne Farmer",
       "artistSlug": "mylne-farmer",
       "album": "Aiwa Commercial",
       "albumSlug": "aiwa-commercial",
@@ -1806,7 +1806,7 @@
     },
     {
       "id": "track-01072",
-      "name": "Weezer -- 01. M�me Is Jonas.mp3",
+      "name": "Weezer -- 01. M\ufffdme Is Jonas.mp3",
       "artist": "Weezer",
       "artistSlug": "weezer",
       "album": "Weezer",
@@ -1854,7 +1854,7 @@
     },
     {
       "id": "track-01074",
-      "name": "Weezer -- 03. T� Has Turned.mp3",
+      "name": "Weezer -- 03. T\ufffd Has Turned.mp3",
       "artist": "Weezer",
       "artistSlug": "weezer",
       "album": "Weezer",
@@ -1902,7 +1902,7 @@
     },
     {
       "id": "track-01076",
-      "name": "Weezer -- 05. U�weater Song.mp3",
+      "name": "Weezer -- 05. U\ufffdweater Song.mp3",
       "artist": "Weezer",
       "artistSlug": "weezer",
       "album": "Weezer",
@@ -1926,7 +1926,7 @@
     },
     {
       "id": "track-01077",
-      "name": "Weezer -- 06. S�Wax America.mp3",
+      "name": "Weezer -- 06. S\ufffdWax America.mp3",
       "artist": "Weezer",
       "artistSlug": "weezer",
       "album": "Weezer",
@@ -1950,7 +1950,7 @@
     },
     {
       "id": "track-01078",
-      "name": "Weezer -- 07. S�It Ain't So.mp3",
+      "name": "Weezer -- 07. S\ufffdIt Ain't So.mp3",
       "artist": "Weezer",
       "artistSlug": "weezer",
       "album": "Weezer",
@@ -2022,7 +2022,7 @@
     },
     {
       "id": "track-01081",
-      "name": "Weezer -- 10. O�y In Dreams.mp3",
+      "name": "Weezer -- 10. O\ufffdy In Dreams.mp3",
       "artist": "Weezer",
       "artistSlug": "weezer",
       "album": "Weezer",
@@ -3428,7 +3428,7 @@
     },
     {
       "id": "track-01139",
-      "name": "01 - chemical b�ockin beats.mp3",
+      "name": "01 - chemical b\ufffdockin beats.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3452,7 +3452,7 @@
     },
     {
       "id": "track-01140",
-      "name": "02 - chemical b�ur own hole.mp3",
+      "name": "02 - chemical b\ufffdur own hole.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3476,7 +3476,7 @@
     },
     {
       "id": "track-01141",
-      "name": "03 - chemical b�elektrobank.mp3",
+      "name": "03 - chemical b\ufffdelektrobank.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3500,7 +3500,7 @@
     },
     {
       "id": "track-01142",
-      "name": "04 - chemical b�hers - piku.mp3",
+      "name": "04 - chemical b\ufffdhers - piku.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3524,7 +3524,7 @@
     },
     {
       "id": "track-01143",
-      "name": "05 - chemical b�setting sun.mp3",
+      "name": "05 - chemical b\ufffdsetting sun.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3548,7 +3548,7 @@
     },
     {
       "id": "track-01144",
-      "name": "06 - chemical b�esnt matter.mp3",
+      "name": "06 - chemical b\ufffdesnt matter.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3572,7 +3572,7 @@
     },
     {
       "id": "track-01145",
-      "name": "07 - chemical b�op the rock.mp3",
+      "name": "07 - chemical b\ufffdop the rock.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3596,7 +3596,7 @@
     },
     {
       "id": "track-01146",
-      "name": "08 - chemical b�t like this.mp3",
+      "name": "08 - chemical b\ufffdt like this.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3620,7 +3620,7 @@
     },
     {
       "id": "track-01147",
-      "name": "09 - chemical b� the k-hole.mp3",
+      "name": "09 - chemical b\ufffd the k-hole.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3644,7 +3644,7 @@
     },
     {
       "id": "track-01148",
-      "name": "10 - chemical b� do i begin.mp3",
+      "name": "10 - chemical b\ufffd do i begin.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3668,7 +3668,7 @@
     },
     {
       "id": "track-01149",
-      "name": "11 - chemical b�adelic reel.mp3",
+      "name": "11 - chemical b\ufffdadelic reel.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Dig Your Own Hole",
@@ -3692,7 +3692,7 @@
     },
     {
       "id": "track-01150",
-      "name": "chemical brothe� forever be.mp3",
+      "name": "chemical brothe\ufffd forever be.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3716,7 +3716,7 @@
     },
     {
       "id": "track-01151",
-      "name": "chemical brothe� influenced.mp3",
+      "name": "chemical brothe\ufffd influenced.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3740,7 +3740,7 @@
     },
     {
       "id": "track-01152",
-      "name": "chemical brothe� of control.mp3",
+      "name": "chemical brothe\ufffd of control.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3764,7 +3764,7 @@
     },
     {
       "id": "track-01153",
-      "name": "chemical brothe�- got glint.mp3",
+      "name": "chemical brothe\ufffd- got glint.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3788,7 +3788,7 @@
     },
     {
       "id": "track-01154",
-      "name": "chemical brothe�1- dream on.mp3",
+      "name": "chemical brothe\ufffd1- dream on.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3812,7 +3812,7 @@
     },
     {
       "id": "track-01155",
-      "name": "chemical brothe�ep from day.mp3",
+      "name": "chemical brothe\ufffdep from day.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3836,7 +3836,7 @@
     },
     {
       "id": "track-01156",
-      "name": "chemical brothe�ic response.mp3",
+      "name": "chemical brothe\ufffdic response.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3860,7 +3860,7 @@
     },
     {
       "id": "track-01157",
-      "name": "chemical brothe�ng the tide.mp3",
+      "name": "chemical brothe\ufffdng the tide.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3884,7 +3884,7 @@
     },
     {
       "id": "track-01158",
-      "name": "chemical brothe�oy hey girl.mp3",
+      "name": "chemical brothe\ufffdoy hey girl.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3908,7 +3908,7 @@
     },
     {
       "id": "track-01159",
-      "name": "chemical brothe�range wedge.mp3",
+      "name": "chemical brothe\ufffdrange wedge.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -3932,7 +3932,7 @@
     },
     {
       "id": "track-01160",
-      "name": "chemical brothe�underground.mp3",
+      "name": "chemical brothe\ufffdunderground.mp3",
       "artist": "Chemical Brothers",
       "artistSlug": "chemical-brothers",
       "album": "Surrender",
@@ -13057,7 +13057,7 @@
     },
     {
       "id": "track-01531",
-      "name": "05 - Don't leav�ght on baby.mp3",
+      "name": "05 - Don't leav\ufffdght on baby.mp3",
       "artist": "Belle and Sebastian",
       "artistSlug": "belle-and-sebastian",
       "album": "Fold Your Hands Child, You Walk Like A Peasant",
@@ -19479,7 +19479,7 @@
     },
     {
       "id": "track-01792",
-      "name": "05 rhonda don't� she's dead.mp3",
+      "name": "05 rhonda don't\ufffd she's dead.mp3",
       "artist": "Mister Baby",
       "artistSlug": "mister-baby",
       "album": "Demo",
@@ -19599,7 +19599,7 @@
     },
     {
       "id": "track-01797",
-      "name": "10 argument abo� the lepers.mp3",
+      "name": "10 argument abo\ufffd the lepers.mp3",
       "artist": "Mister Baby",
       "artistSlug": "mister-baby",
       "album": "Demo",

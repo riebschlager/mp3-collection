@@ -2166,7 +2166,7 @@
     },
     {
       "id": "track-04088",
-      "name": "03-Another Bric�all (pt. 1)",
+      "name": "03-Another Bric\ufffdall (pt. 1)",
       "artist": "Pink Floyd",
       "artistSlug": "pink-floyd",
       "album": "The Wall (Disc One)",
@@ -2184,13 +2184,13 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "12/14/01 19:02",
-      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:03-Another Bric�all (pt. 1).mp3",
+      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:03-Another Bric\ufffdall (pt. 1).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
     {
       "id": "track-04089",
-      "name": "04-The Happiest�f Our Lives",
+      "name": "04-The Happiest\ufffdf Our Lives",
       "artist": "Pink Floyd",
       "artistSlug": "pink-floyd",
       "album": "The Wall (Disc One)",
@@ -2208,13 +2208,13 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "12/14/01 19:02",
-      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:04-The Happiest�f Our Lives.mp3",
+      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:04-The Happiest\ufffdf Our Lives.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
     {
       "id": "track-04090",
-      "name": "05-Another Bric�all (pt. 2)",
+      "name": "05-Another Bric\ufffdall (pt. 2)",
       "artist": "Pink Floyd",
       "artistSlug": "pink-floyd",
       "album": "The Wall (Disc One)",
@@ -2232,7 +2232,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "12/14/01 19:02",
-      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:05-Another Bric�all (pt. 2).mp3",
+      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:05-Another Bric\ufffdall (pt. 2).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -2382,7 +2382,7 @@
     },
     {
       "id": "track-04097",
-      "name": "12-Another Bric�all (pt. 3)",
+      "name": "12-Another Bric\ufffdall (pt. 3)",
       "artist": "Pink Floyd",
       "artistSlug": "pink-floyd",
       "album": "The Wall (Disc One)",
@@ -2400,7 +2400,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "12/14/01 19:02",
-      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:12-Another Bric�all (pt. 3).mp3",
+      "location": "MP3Vol33:Pink Floyd - The Wall:Disk1:12-Another Bric\ufffdall (pt. 3).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -2454,7 +2454,7 @@
     },
     {
       "id": "track-04100",
-      "name": "02-Is There Any�y Out There",
+      "name": "02-Is There Any\ufffdy Out There",
       "artist": "Pink Floyd",
       "artistSlug": "pink-floyd",
       "album": "The Wall (Disc Two)",
@@ -2472,7 +2472,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "12/14/01 19:02",
-      "location": "MP3Vol33:Pink Floyd - The Wall:Disk2:02-Is There Any�y Out There.mp3",
+      "location": "MP3Vol33:Pink Floyd - The Wall:Disk2:02-Is There Any\ufffdy Out There.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -4712,7 +4712,7 @@
     {
       "id": "track-04193",
       "name": "The Godfather",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4737,7 +4737,7 @@
     {
       "id": "track-04194",
       "name": "The Golem",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4762,7 +4762,7 @@
     {
       "id": "track-04195",
       "name": "Experiment In Terror",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4787,7 +4787,7 @@
     {
       "id": "track-04196",
       "name": "One Step Beyond",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4812,7 +4812,7 @@
     {
       "id": "track-04197",
       "name": "Night Of The Hunter",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4837,7 +4837,7 @@
     {
       "id": "track-04198",
       "name": "Cape Fear",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4862,7 +4862,7 @@
     {
       "id": "track-04199",
       "name": "Rosemary's Baby",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4887,7 +4887,7 @@
     {
       "id": "track-04200",
       "name": "The Devil Rides Out",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4912,7 +4912,7 @@
     {
       "id": "track-04201",
       "name": "Spider Baby",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4937,7 +4937,7 @@
     {
       "id": "track-04202",
       "name": "The Omen Ave Satani",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4962,7 +4962,7 @@
     {
       "id": "track-04203",
       "name": "Henry: Portrait Of A Serial Killer",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -4987,7 +4987,7 @@
     {
       "id": "track-04204",
       "name": "Vendetta",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -5012,7 +5012,7 @@
     {
       "id": "track-04205",
       "name": "Untitled",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -5037,7 +5037,7 @@
     {
       "id": "track-04206",
       "name": "Investigation Of A Citizen Above Suspicion",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -5062,7 +5062,7 @@
     {
       "id": "track-04207",
       "name": "Twin Peaks: Fire Walk With Me",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -5087,7 +5087,7 @@
     {
       "id": "track-04208",
       "name": "Charade",
-      "artist": "Fant�mas",
+      "artist": "Fant\ufffdmas",
       "artistSlug": "fantmas",
       "album": "The Director's Cut",
       "albumSlug": "the-directors-cut",
@@ -11339,7 +11339,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�5 - Bad Day.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd5 - Bad Day.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11365,7 +11365,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�- 08 - Down.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd- 08 - Down.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11391,7 +11391,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�- 07 - Easy.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd- 07 - Easy.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11417,7 +11417,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�mpty Spaces.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffdmpty Spaces.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11443,7 +11443,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�n My Hands).mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffdn My Hands).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know.  Ughghg."
@@ -11469,7 +11469,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�- Innocent .mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd- Innocent .mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11495,7 +11495,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�10 - Knives.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd10 - Knives.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11521,7 +11521,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�- Last Time.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd- Last Time.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11547,7 +11547,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin� 06 - Prove.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd 06 - Prove.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11573,7 +11573,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�- 04 - Scar.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd- 04 - Scar.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11599,7 +11599,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�09 - Solace.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd09 - Solace.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know."
@@ -11625,14 +11625,14 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin�- 12 - Slow.mp3",
+      "location": "MP3Vol36:Fuel - Something Like Human:Fuel - Somethin\ufffd- 12 - Slow.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Yeah, more pop music, I know"
     },
     {
       "id": "track-04465",
-      "name": "02 - Shirley Ba� do I begin",
+      "name": "02 - Shirley Ba\ufffd do I begin",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "Hotel Costes Volume 3",
@@ -11651,14 +11651,14 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:02 - Shirley Ba� do I begin.MP3",
+      "location": "MP3Vol36:Hotel Costes - Etage:02 - Shirley Ba\ufffd do I begin.MP3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
     },
     {
       "id": "track-04466",
-      "name": "03 - Cosmos Sou�rysanth�mes",
+      "name": "03 - Cosmos Sou\ufffdrysanth\ufffdmes",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "Hotel Costes Volume 3",
@@ -11677,14 +11677,14 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:03 - Cosmos Sou�rysanth�mes.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:03 - Cosmos Sou\ufffdrysanth\ufffdmes.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
     },
     {
       "id": "track-04467",
-      "name": "04 - Stereo Act�Brazil Mix)",
+      "name": "04 - Stereo Act\ufffdBrazil Mix)",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "Hotel Costes Volume 3",
@@ -11703,14 +11703,14 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:04 - Stereo Act�Brazil Mix).mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:04 - Stereo Act\ufffdBrazil Mix).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
     },
     {
       "id": "track-04468",
-      "name": "07 - Funky Lowl�es - Latazz",
+      "name": "07 - Funky Lowl\ufffdes - Latazz",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "Hotel Costes Volume 3",
@@ -11729,7 +11729,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:07 - Funky Lowl�es - Latazz.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:07 - Funky Lowl\ufffdes - Latazz.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11762,7 +11762,7 @@
     },
     {
       "id": "track-04470",
-      "name": "11 - Stephane P� aux portes",
+      "name": "11 - Stephane P\ufffd aux portes",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "Hotel Costes Volume 3",
@@ -11781,14 +11781,14 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:11 - Stephane P� aux portes.MP3",
+      "location": "MP3Vol36:Hotel Costes - Etage:11 - Stephane P\ufffd aux portes.MP3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
     },
     {
       "id": "track-04471",
-      "name": "14 - Gotan Proj�go In Paris",
+      "name": "14 - Gotan Proj\ufffdgo In Paris",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "Hotel Costes Volume 3",
@@ -11807,7 +11807,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:14 - Gotan Proj�go In Paris.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:14 - Gotan Proj\ufffdgo In Paris.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11832,7 +11832,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:15 - Lustral - �aric Remix).mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:15 - Lustral - \ufffdaric Remix).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11858,7 +11858,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:05 - Coco Steel�d Adam Mix).mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:05 - Coco Steel\ufffdd Adam Mix).mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11884,7 +11884,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:01 - A Reminesc� - Ambrosia.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:01 - A Reminesc\ufffd - Ambrosia.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11909,7 +11909,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:06 - Hacienda -�ounge Lover.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:06 - Hacienda -\ufffdounge Lover.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11934,7 +11934,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:08 - Cujo - Sup�ck - Apollo.MP3",
+      "location": "MP3Vol36:Hotel Costes - Etage:08 - Cujo - Sup\ufffdck - Apollo.MP3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -11985,7 +11985,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:12 - Nickodemus�In New York.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:12 - Nickodemus\ufffdIn New York.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
@@ -12011,14 +12011,14 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - Etage:13 - Troublemak�lectrorloge.mp3",
+      "location": "MP3Vol36:Hotel Costes - Etage:13 - Troublemak\ufffdlectrorloge.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "Wimpy Electronic"
     },
     {
       "id": "track-04480",
-      "name": "13 - The Assass�e Originals",
+      "name": "13 - The Assass\ufffde Originals",
       "artist": "Hotel Costes",
       "artistSlug": "hotel-costes",
       "album": "La Suite",
@@ -12037,7 +12037,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:13 - The Assass�e Originals.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:13 - The Assass\ufffde Originals.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12063,7 +12063,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:05 - Lizzie's B�on - 45 Dip.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:05 - Lizzie's B\ufffdon - 45 Dip.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12089,7 +12089,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:12 - Night Over�Boozoo Baju.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:12 - Night Over\ufffdBoozoo Baju.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12115,7 +12115,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:08 - Carnaval D�saria Evora.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:08 - Carnaval D\ufffdsaria Evora.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12141,7 +12141,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:01 - To Ulrike � Doris Days.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:01 - To Ulrike \ufffd Doris Days.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12193,7 +12193,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:03 - Symphatiqu�ink Martini.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:03 - Symphatiqu\ufffdink Martini.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12219,7 +12219,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:11 - Get A Move�- Mr Scruff.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:11 - Get A Move\ufffd- Mr Scruff.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12245,7 +12245,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:14 - Sorry Sorr�- Femi Kuti.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:14 - Sorry Sorr\ufffd- Femi Kuti.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12271,7 +12271,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:15 - Guess I Wa�other Level.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:15 - Guess I Wa\ufffdother Level.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12323,7 +12323,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:04 - Flyin Away�o' Horizons.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:04 - Flyin Away\ufffdo' Horizons.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12349,7 +12349,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:10 - Salvation �ve - Pascal.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:10 - Salvation \ufffdve - Pascal.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12375,7 +12375,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:06 - Palais Mas� Rollercone.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:06 - Palais Mas\ufffd Rollercone.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12401,7 +12401,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Hotel Costes - La Suite:09 - You Are Lo� LoveTronic.mp3",
+      "location": "MP3Vol36:Hotel Costes - La Suite:09 - You Are Lo\ufffd LoveTronic.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "See 00-INFO.txt for details."
@@ -12713,7 +12713,7 @@
       "rating": 0,
       "playCount": 2,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:03-Led_Zeppelin�n_Breakdown.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:03-Led_Zeppelin\ufffdn_Breakdown.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12738,7 +12738,7 @@
       "rating": 0,
       "playCount": 2,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:07-Led_Zeppelin�Breakdown-1.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:07-Led_Zeppelin\ufffdBreakdown-1.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12763,7 +12763,7 @@
       "rating": 0,
       "playCount": 2,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:11-Led_Zeppelin�Breakdown-2.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:11-Led_Zeppelin\ufffdBreakdown-2.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12788,7 +12788,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:04-Led_Zeppelin�nd_Confused.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:04-Led_Zeppelin\ufffdnd_Confused.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12813,7 +12813,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:02-Led_Zeppelin�it_You_Baby.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:02-Led_Zeppelin\ufffdit_You_Baby.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12838,7 +12838,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:12-Led_Zeppelin�_You_Baby-1.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:12-Led_Zeppelin\ufffd_You_Baby-1.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12863,7 +12863,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:10-Led_Zeppelin�ethin'_Else.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:10-Led_Zeppelin\ufffdethin'_Else.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12888,7 +12888,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:05-Led_Zeppelin�k_Wavy_Hair.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:05-Led_Zeppelin\ufffdk_Wavy_Hair.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12913,7 +12913,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:08-Led_Zeppelin�rside_Blues.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:08-Led_Zeppelin\ufffdrside_Blues.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12938,7 +12938,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:06-Led_Zeppelin�ld_Never_Be.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:06-Led_Zeppelin\ufffdld_Never_Be.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12963,7 +12963,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:09-Led_Zeppelin�_Lotta_Love.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:09-Led_Zeppelin\ufffd_Lotta_Love.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -12988,7 +12988,7 @@
       "rating": 0,
       "playCount": 3,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:01-Led_Zeppelin�ou_Shook_Me.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:01-Led_Zeppelin\ufffdou_Shook_Me.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -13013,7 +13013,7 @@
       "rating": 0,
       "playCount": 3,
       "dateAdded": "2/6/02 2:33 PM",
-      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:13-Led_Zeppelin�_Shook_Me-1.mp3",
+      "location": "MP3Vol36:Led Zeppelin - BBC Sessions:13-Led_Zeppelin\ufffd_Shook_Me-1.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -13776,7 +13776,7 @@
     },
     {
       "id": "track-04549",
-      "name": "H�mminki",
+      "name": "H\ufffdmminki",
       "artist": "George Cotton Country Band",
       "artistSlug": "george-cotton-country-band",
       "album": "Mynthon",
@@ -13823,7 +13823,7 @@
       "location": "MP3Vol37: misc:Green Day - Brain Stew.MP3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
-      "comments": "Sven V�th Productions 1998"
+      "comments": "Sven V\ufffdth Productions 1998"
     },
     {
       "id": "track-04551",
@@ -14447,7 +14447,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:34 PM",
-      "location": "MP3Vol37:Moby - Play (B sides):09 - Flying Ove�he Dateline.mp3",
+      "location": "MP3Vol37:Moby - Play (B sides):09 - Flying Ove\ufffdhe Dateline.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "-= MGC =-"
@@ -14629,7 +14629,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:34 PM",
-      "location": "MP3Vol37:Moby - Play (B sides):11 - The Sun Ne�ops Setting.mp3",
+      "location": "MP3Vol37:Moby - Play (B sides):11 - The Sun Ne\ufffdops Setting.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null,
       "comments": "-= MGC =-"
@@ -16017,7 +16017,7 @@
       "rating": 0,
       "playCount": 11,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Sneaker Pimps - Becoming X:09-wasted early�day morning.mp3",
+      "location": "MP3Vol37:Sneaker Pimps - Becoming X:09-wasted early\ufffdday morning.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16713,7 +16713,7 @@
       "rating": 0,
       "playCount": 2,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Tripping Daisy - Tripping Daisy:14 the sudden s�worried him.mp3",
+      "location": "MP3Vol37:Tripping Daisy - Tripping Daisy:14 the sudden s\ufffdworried him.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16809,7 +16809,7 @@
       "rating": 0,
       "playCount": 3,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -�aris hilton.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffdaris hilton.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16833,7 +16833,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -�- 02 - when.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffd- 02 - when.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16857,7 +16857,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -�l white dog.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffdl white dog.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16881,7 +16881,7 @@
       "rating": 0,
       "playCount": 0,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -� - 04 - was.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffd - 04 - was.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16905,7 +16905,7 @@
       "rating": 0,
       "playCount": 4,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -�honey bunny.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffdhoney bunny.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16929,7 +16929,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -� 06 - laura.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffd 06 - laura.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16953,7 +16953,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -�07 - cracks.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffd07 - cracks.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -16977,7 +16977,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -� apple girl.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffd apple girl.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -17001,7 +17001,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -� i'm lonely.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffd i'm lonely.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -17025,7 +17025,7 @@
       "rating": 0,
       "playCount": 1,
       "dateAdded": "2/6/02 2:35 PM",
-      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -�ture of her.mp3",
+      "location": "MP3Vol37:Vincent Gallo - When:vincent gallo -\ufffdture of her.mp3",
       "kind": "MPEG audio file",
       "volumeAdjustment": null
     },
@@ -19350,7 +19350,7 @@
       "discNumber": null,
       "discCount": null,
       "rating": 0,
-      "playCount": 2,
+      "playCount": 6,
       "dateAdded": "2/22/02 10:27 AM",
       "location": "MP3Vol38:Bad Religion:Stranger Than Fiction:21st Century (Digital Boy).mp3",
       "kind": "MPEG audio file",

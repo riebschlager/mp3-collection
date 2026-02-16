@@ -3988,7 +3988,7 @@
     {
       "id": "track-31162",
       "name": "07 - New World",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4014,7 +4014,7 @@
     {
       "id": "track-31163",
       "name": "06 - 107 Steps",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4039,7 +4039,7 @@
     {
       "id": "track-31164",
       "name": "05 - In the Musicals 1 & 2",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4064,7 +4064,7 @@
     {
       "id": "track-31165",
       "name": "04 - Scatterheart",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4090,7 +4090,7 @@
     {
       "id": "track-31166",
       "name": "03 - I've Seen It All",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4115,7 +4115,7 @@
     {
       "id": "track-31167",
       "name": "02 - Cvalda",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4140,7 +4140,7 @@
     {
       "id": "track-31168",
       "name": "01 - Overture",
-      "artist": "Bj�rk",
+      "artist": "Bj\ufffdrk",
       "artistSlug": "bjrk",
       "album": "selmasongs",
       "albumSlug": "selmasongs",
@@ -4190,10 +4190,10 @@
     },
     {
       "id": "track-31170",
-      "name": "Bella S�mam�r",
+      "name": "Bella S\ufffdmam\ufffdr",
       "artist": "bjork",
       "artistSlug": "bjork",
-      "album": "Gling-Gl�",
+      "album": "Gling-Gl\ufffd",
       "albumSlug": "gling-gl",
       "genre": "Other",
       "year": 1990,
@@ -4309,11 +4309,11 @@
       "dateModified": "5/14/04 10:13 AM",
       "location": "254",
       "volumeAdjustment": null,
-      "equalizer": "Merci � mp3 France"
+      "equalizer": "Merci \ufffd mp3 France"
     },
     {
       "id": "track-31175",
-      "name": "Astart�frar",
+      "name": "Astart\ufffdfrar",
       "artist": "bjork",
       "artistSlug": "bjork",
       "album": "Gling Glo",
@@ -5079,7 +5079,7 @@
     },
     {
       "id": "track-31206",
-      "name": "Rising Thermal 14� 16' N; 32� 28' E",
+      "name": "Rising Thermal 14\ufffd 16' N; 32\ufffd 28' E",
       "artist": "Jon Hassell/Brian Eno",
       "artistSlug": "jon-hassellbrian-eno",
       "album": "Fourth World, Vol. 1: Possible Musics",
@@ -5105,7 +5105,7 @@
     },
     {
       "id": "track-31207",
-      "name": "Ba-Benz�l�",
+      "name": "Ba-Benz\ufffdl\ufffd",
       "artist": "Jon Hassell/Brian Eno",
       "artistSlug": "jon-hassellbrian-eno",
       "album": "Fourth World, Vol. 1: Possible Musics",

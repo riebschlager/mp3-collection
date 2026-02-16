@@ -4103,7 +4103,7 @@
         "Electronic",
         "Gling Glo",
         "Gling glo",
-        "Gling-Gl�",
+        "Gling-Gl\ufffd",
         "Homogenic",
         "Live at the Wireless",
         "N/A",
@@ -4131,7 +4131,7 @@
     },
     {
       "slug": "bjrk",
-      "name": "Bj�rk",
+      "name": "Bj\ufffdrk",
       "albumCount": 2,
       "trackCount": 21,
       "albums": [
@@ -4141,7 +4141,7 @@
     },
     {
       "slug": "bjrn-berge",
-      "name": "Bj�rn Berge",
+      "name": "Bj\ufffdrn Berge",
       "albumCount": 1,
       "trackCount": 10,
       "albums": [
@@ -4658,7 +4658,7 @@
     },
     {
       "slug": "bo-kaspersljus-p-mig",
-      "name": "Bo Kaspersljus p� mig",
+      "name": "Bo Kaspersljus p\ufffd mig",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -4805,7 +4805,7 @@
     },
     {
       "slug": "boban-markovic-orkestar",
-      "name": "Boban Markovic� Orkestar",
+      "name": "Boban Markovic\ufffd Orkestar",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -6656,7 +6656,7 @@
     },
     {
       "slug": "cinkusi",
-      "name": "Cinkus�i",
+      "name": "Cinkus\ufffdi",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -7934,7 +7934,7 @@
     },
     {
       "slug": "clera",
-      "name": "C�lera",
+      "name": "C\ufffdlera",
       "albumCount": 3,
       "trackCount": 5,
       "albums": [
@@ -9209,7 +9209,7 @@
     },
     {
       "slug": "die-rzte",
-      "name": "Die �rzte",
+      "name": "Die \ufffdrzte",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -10037,7 +10037,7 @@
     },
     {
       "slug": "dolly-parton-ryksopp",
-      "name": "Dolly Parton & R�yksopp",
+      "name": "Dolly Parton & R\ufffdyksopp",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -10596,7 +10596,7 @@
     },
     {
       "slug": "dlek",
-      "name": "D�lek",
+      "name": "D\ufffdlek",
       "albumCount": 1,
       "trackCount": 10,
       "albums": [
@@ -10724,7 +10724,7 @@
     },
     {
       "slug": "ebba-grn",
-      "name": "Ebba Gr�n",
+      "name": "Ebba Gr\ufffdn",
       "albumCount": 1,
       "trackCount": 12,
       "albums": [
@@ -11915,7 +11915,7 @@
     },
     {
       "slug": "fanfare-ciocrlia",
-      "name": "Fanfare Cioc�rlia",
+      "name": "Fanfare Cioc\ufffdrlia",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -11952,7 +11952,7 @@
     },
     {
       "slug": "fantmas",
-      "name": "Fant�mas",
+      "name": "Fant\ufffdmas",
       "albumCount": 1,
       "trackCount": 16,
       "albums": [
@@ -13681,7 +13681,7 @@
     },
     {
       "slug": "glennmark-eriksson-strmsted",
-      "name": "Glennmark, Eriksson, Str�msted",
+      "name": "Glennmark, Eriksson, Str\ufffdmsted",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -14549,7 +14549,7 @@
     },
     {
       "slug": "hayano-with-jrgen-paape-the",
-      "name": "Hayano with J�rgen Paape & the",
+      "name": "Hayano with J\ufffdrgen Paape & the",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -14905,7 +14905,7 @@
     },
     {
       "slug": "hilmar-rn-hilmarsson-sigurrs",
-      "name": "Hilmar �rn Hilmarsson & Sigurr�s",
+      "name": "Hilmar \ufffdrn Hilmarsson & Sigurr\ufffds",
       "albumCount": 2,
       "trackCount": 15,
       "albums": [
@@ -15418,7 +15418,7 @@
     },
     {
       "slug": "hkan-hellstrm",
-      "name": "H�kan Hellstr�m",
+      "name": "H\ufffdkan Hellstr\ufffdm",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -15427,7 +15427,7 @@
     },
     {
       "slug": "hsker-d",
-      "name": "H�sker D�",
+      "name": "H\ufffdsker D\ufffd",
       "albumCount": 1,
       "trackCount": 20,
       "albums": [
@@ -16464,7 +16464,7 @@
       "albumCount": 1,
       "trackCount": 22,
       "albums": [
-        "Carniv�le"
+        "Carniv\ufffdle"
       ]
     },
     {
@@ -17487,7 +17487,7 @@
     },
     {
       "slug": "jos-gonzlez",
-      "name": "Jos� Gonz�lez",
+      "name": "Jos\ufffd Gonz\ufffdlez",
       "albumCount": 1,
       "trackCount": 4,
       "albums": [
@@ -18347,7 +18347,7 @@
     },
     {
       "slug": "kim-hiorthy",
-      "name": "Kim Hiorth�y",
+      "name": "Kim Hiorth\ufffdy",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -19376,7 +19376,7 @@
     },
     {
       "slug": "levynhvittjt-yhtye-solisteina-pentti-anis-kullervo-pellinen-ja-lauluyhtye-pallilla-kuiskaten",
-      "name": "Levynh�vitt�j�t yhtye solisteina Pentti Anis, Kullervo Pellinen ja lauluyhtye Pallilla Kuiskaten",
+      "name": "Levynh\ufffdvitt\ufffdj\ufffdt yhtye solisteina Pentti Anis, Kullervo Pellinen ja lauluyhtye Pallilla Kuiskaten",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -19767,7 +19767,7 @@
       "trackCount": 33,
       "albums": [
         "Metal",
-        "Naken, Bl�strad Och Skitsur",
+        "Naken, Bl\ufffdstrad Och Skitsur",
         "Rock",
         "Unknown Album"
       ]
@@ -20175,7 +20175,7 @@
     },
     {
       "slug": "lgbj",
-      "name": "L�gb�j�",
+      "name": "L\ufffdgb\ufffdj\ufffd",
       "albumCount": 1,
       "trackCount": 10,
       "albums": [
@@ -20698,7 +20698,7 @@
     },
     {
       "slug": "marusic-is-trio",
-      "name": "Marus�ic� Is Trio",
+      "name": "Marus\ufffdic\ufffd Is Trio",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -21637,7 +21637,7 @@
       "trackCount": 41,
       "albums": [
         "Animositisomina",
-        "Houses of the Mol�",
+        "Houses of the Mol\ufffd",
         "The Land Of Rape And Honey",
         "The Mind Is A Terrible Thing To Taste"
       ]
@@ -21740,7 +21740,7 @@
       "trackCount": 19,
       "albums": [
         "First Album",
-        "Gigolo Rec. [024] - Intimit�s"
+        "Gigolo Rec. [024] - Intimit\ufffds"
       ]
     },
     {
@@ -22257,7 +22257,7 @@
     },
     {
       "slug": "motrhead",
-      "name": "Mot�rhead",
+      "name": "Mot\ufffdrhead",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -22879,7 +22879,7 @@
     },
     {
       "slug": "mylne-farmer",
-      "name": "Myl�ne Farmer",
+      "name": "Myl\ufffdne Farmer",
       "albumCount": 1,
       "trackCount": 2,
       "albums": [
@@ -22897,7 +22897,7 @@
     },
     {
       "slug": "mm",
-      "name": "m�m",
+      "name": "m\ufffdm",
       "albumCount": 3,
       "trackCount": 26,
       "albums": [
@@ -22908,7 +22908,7 @@
     },
     {
       "slug": "mtley-crue",
-      "name": "m�tley crue",
+      "name": "m\ufffdtley crue",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -22917,7 +22917,7 @@
     },
     {
       "slug": "mtley-cre",
-      "name": "M�tley Cr�e",
+      "name": "M\ufffdtley Cr\ufffde",
       "albumCount": 1,
       "trackCount": 15,
       "albums": [
@@ -24682,7 +24682,7 @@
     },
     {
       "slug": "panamerican",
-      "name": "Pan�American",
+      "name": "Pan\ufffdAmerican",
       "albumCount": 1,
       "trackCount": 8,
       "albums": [
@@ -24727,7 +24727,7 @@
     },
     {
       "slug": "paris-dernire",
-      "name": "Paris Derni�re",
+      "name": "Paris Derni\ufffdre",
       "albumCount": 2,
       "trackCount": 32,
       "albums": [
@@ -25271,7 +25271,7 @@
     },
     {
       "slug": "peter-jback",
-      "name": "Peter J�back",
+      "name": "Peter J\ufffdback",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -28442,7 +28442,7 @@
       "albumCount": 1,
       "trackCount": 13,
       "albums": [
-        "Ch�vez Ravine"
+        "Ch\ufffdvez Ravine"
       ]
     },
     {
@@ -29735,7 +29735,7 @@
     },
     {
       "slug": "sigur-rs",
-      "name": "Sigur R�s",
+      "name": "Sigur R\ufffds",
       "albumCount": 3,
       "trackCount": 30,
       "albums": [
@@ -29902,7 +29902,7 @@
     },
     {
       "slug": "sinad-oconnor",
-      "name": "Sin�ad O'Connor",
+      "name": "Sin\ufffdad O'Connor",
       "albumCount": 1,
       "trackCount": 15,
       "albums": [
@@ -31481,7 +31481,7 @@
     },
     {
       "slug": "steinbrchel",
-      "name": "Steinbr�chel",
+      "name": "Steinbr\ufffdchel",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -32587,7 +32587,7 @@
     },
     {
       "slug": "saban-bajramovic-mostar-sevdah-reunion",
-      "name": "S�aban Bajramovic� & Mostar Sevdah Reunion",
+      "name": "S\ufffdaban Bajramovic\ufffd & Mostar Sevdah Reunion",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -35192,7 +35192,7 @@
     },
     {
       "slug": "the-monastery-of-gyt-tibet",
-      "name": "The Monastery of Gy�t�, Tibet",
+      "name": "The Monastery of Gy\ufffdt\ufffd, Tibet",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -37643,7 +37643,7 @@
       "albumCount": 1,
       "trackCount": 17,
       "albums": [
-        "Hogwash � The Horseyspeak Theory"
+        "Hogwash \ufffd The Horseyspeak Theory"
       ]
     },
     {
@@ -38005,7 +38005,7 @@
     },
     {
       "slug": "tyskarna-frn-lund",
-      "name": "Tyskarna fr�n Lund",
+      "name": "Tyskarna fr\ufffdn Lund",
       "albumCount": 1,
       "trackCount": 1,
       "albums": [
@@ -40275,7 +40275,7 @@
     },
     {
       "slug": "zumbis-do-espao",
-      "name": "Zumbis Do Espa�o",
+      "name": "Zumbis Do Espa\ufffdo",
       "albumCount": 3,
       "trackCount": 3,
       "albums": [
