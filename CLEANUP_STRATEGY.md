@@ -135,3 +135,4 @@ As of February 16, 2026:
 - Phase 4 item 1 completed: deploy workflow triggers now watch only canonical paths (`apps/web/**`, `data/derived/web/**`) plus workflow source.
 - Phase 4 item 2 completed: retired all legacy compatibility links (`mp3-collection-web`, `go-scripts`, `mcp-server`, `web-data`, `lastfm`, `spotify`, `archive/*`, and `data/*.json`) after canonical path cutover.
 - Phase 4 item 3 completed: deployment, web app, agent, and root docs now reflect canonical paths and compatibility retirement.
+- Post-cleanup hardening completed: MCP launcher is now path-portable, local Claude settings are untracked/ignored, and repo-wide `make validate` + CI workflow are in place.

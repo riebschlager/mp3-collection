@@ -13,6 +13,9 @@
 *.swp
 *.swo
 
+# Local assistant settings
+.claude/*.local.json
+
 # Logs and temp files
 *.log
 tmp/

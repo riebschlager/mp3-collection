@@ -65,6 +65,7 @@ Other useful targets:
 - `make web-data` (rebuild web JSON/chunks/indexes)
 - `make images` (refresh artist/album image metadata)
 - `make doctor` (validate ETL path config + required inputs)
+- `make validate` (run doctor + Go builds + web build)
 - `make help` (list all targets)
 
 ## Data Pipelines
@@ -153,6 +154,10 @@ GitHub Pages deployment is automated via `.github/workflows/deploy.yml`.
 - Site URL: `https://riebschlager.github.io/mp3-collection`
 
 See `DEPLOYMENT.md` for full details.
+
+## Validation CI
+
+Repository validation runs in GitHub Actions via `.github/workflows/validate.yml` on pull requests and relevant pushes.
 
 ## MCP Server
 

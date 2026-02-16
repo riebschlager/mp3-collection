@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: help pipeline compile extract listening timeline web-data images doctor web-dev web-build web-preview mcp clean-bins
+.PHONY: help pipeline compile extract listening timeline web-data images doctor validate web-dev web-build web-preview mcp clean-bins
 
 help:
 	@echo "Targets:"
@@ -12,6 +12,7 @@ help:
 	@echo "  web-data    Rebuild web-data JSON/chunks/indexes"
 	@echo "  images      Refresh Last.fm artist/album image metadata"
 	@echo "  doctor      Validate ETL path config and required inputs"
+	@echo "  validate    Run full repo validation (doctor + Go builds + web build)"
 	@echo "  web-dev     Start Astro dev server"
 	@echo "  web-build   Build Astro site for production"
 	@echo "  web-preview Preview built Astro site"
@@ -45,6 +46,14 @@ images:
 
 doctor:
 	cd tools/pipeline && go run . doctor
+
+validate:
+	mkdir -p .cache/go-build
+	LASTFM_API_KEY="$${LASTFM_API_KEY:-ci-placeholder}" GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" $(MAKE) doctor
+	GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" go -C tools/pipeline build ./...
+	GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" go -C apps/mcp-server build ./...
+	npm -C apps/web ci
+	npm -C apps/web run build
 
 web-dev:
 	cd apps/web && npm install && npm run dev
