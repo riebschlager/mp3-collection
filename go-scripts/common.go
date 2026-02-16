@@ -208,6 +208,7 @@ func SanitizeYear(val string) int {
 }
 
 func SafeInt(val string) int {
+	val = strings.TrimSpace(val)
 	if val == "" {
 		return 0
 	}

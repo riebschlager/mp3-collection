@@ -40,7 +40,8 @@ cp .env.example .env
 ### 1. Compile iTunes Exports (when source archives change)
 
 ```bash
-python3 archive/compile_itunes_exports.py
+cd go-scripts
+go run . compile-itunes-exports
 ```
 
 Outputs:

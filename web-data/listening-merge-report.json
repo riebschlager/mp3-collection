@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-02-16T13:47:25Z",
+  "generatedAt": "2026-02-16T14:45:45Z",
   "config": {
     "spotifyMinMsPlayed": 30000,
     "crossSourceDedupeWindowMs": 120000
   },
   "lastfm": {
-    "inputEvents": 61460,
-    "validEvents": 61460
+    "inputEvents": 61497,
+    "validEvents": 61497
   },
   "spotify": {
     "inputFiles": 4,
@@ -16,17 +16,17 @@
     "filteredInvalidTimestamp": 0,
     "qualifiedEvents": 50047,
     "dedupedExactWithinSpotify": 348,
-    "dedupedAgainstLastfm": 168,
-    "addedEvents": 49440
+    "dedupedAgainstLastfm": 169,
+    "addedEvents": 49439
   },
   "output": {
-    "totalEvents": 110900,
+    "totalEvents": 110936,
     "sourceCounts": {
-      "lastfm": 61460,
-      "spotify": 49440
+      "lastfm": 61497,
+      "spotify": 49439
     },
     "firstEvent": 1108339195000,
-    "lastEvent": 1771112977000,
+    "lastEvent": 1771247915000,
     "years": {
       "2005": 3532,
       "2006": 2510,
@@ -49,7 +49,7 @@
       "2023": 4699,
       "2024": 7550,
       "2025": 8449,
-      "2026": 1662
+      "2026": 1698
     }
   }
 }

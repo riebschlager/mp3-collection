@@ -6,7 +6,7 @@ This directory contains the primary data pipeline for the project. The commands 
 
 - Go 1.21+ (`go-scripts/go.mod` uses `go 1.21`)
 - Repository root contains:
-  - `archive/compiled_itunes_library.csv` (from `archive/compile_itunes_exports.py`)
+  - `archive/compiled_itunes_library.csv` (from `go run . compile-itunes-exports`)
   - `spotify/Streaming_History_Audio_*.json` (for merge/timeline/playcount flow)
   - `lastfm/lastfmstats-<username>.json` (created/updated by `fetch-lastfm`)
 
@@ -29,7 +29,8 @@ The CLI auto-loads `.env` by searching current and parent directories.
 From repository root, ensure compiled CSV exists:
 
 ```bash
-python3 archive/compile_itunes_exports.py
+cd go-scripts
+go run . compile-itunes-exports
 ```
 
 Then run the Go pipeline:
@@ -60,6 +61,8 @@ go run . <command>
 ```
 
 Available commands:
+- `compile-itunes-exports`: compiles raw exports in `archive/` into `archive/compiled_itunes_library.csv` and `archive/validation_report.txt`
+- `compile-exports`: alias for `compile-itunes-exports`
 - `extract-tracks`: writes `data/tracks.json`
 - `extract-artists`: writes `data/artists.json`
 - `extract-albums`: writes `data/albums.json`

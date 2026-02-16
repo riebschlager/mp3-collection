@@ -17,6 +17,10 @@ func main() {
 	command := os.Args[1]
 
 	switch command {
+	case "compile-itunes-exports":
+		runCompileITunesExports()
+	case "compile-exports":
+		runCompileITunesExports()
 	case "extract-tracks":
 		runExtractTracks()
 	case "extract-artists":
@@ -47,6 +51,8 @@ func main() {
 func printUsage() {
 	fmt.Println("Usage: mp3-scripts <command>")
 	fmt.Println("Commands:")
+	fmt.Println("  compile-itunes-exports [archiveDir] Compile raw exports to compiled_itunes_library.csv")
+	fmt.Println("  compile-exports  Alias for compile-itunes-exports")
 	fmt.Println("  extract-tracks    Extract tracks to data/tracks.json")
 	fmt.Println("  extract-artists   Extract artists to data/artists.json")
 	fmt.Println("  extract-albums    Extract albums to data/albums.json")

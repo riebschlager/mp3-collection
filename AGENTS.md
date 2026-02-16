@@ -21,7 +21,7 @@ python3 scripts/build_web_data.py
 ---
 
 ## 📚 The Compiler Agent
-**Script:** `archive/compile_itunes_exports.py`
+**Script:** `go-scripts/compile_itunes_exports.go` (invoked via `mp3-scripts compile-itunes-exports`)
 
 The archivist. Its job is to ingest the chaotic collection of disjointed export files and unify them.
 
@@ -33,7 +33,8 @@ The archivist. Its job is to ingest the chaotic collection of disjointed export 
 
 **Usage:**
 ```bash
-python3 archive/compile_itunes_exports.py
+cd go-scripts
+go run . compile-itunes-exports
 ```
 
 ---
