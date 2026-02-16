@@ -300,11 +300,34 @@ func LoadEnv() string {
 }
 
 func fallbackProjectRoot(cwd string) string {
+	dir := filepath.Clean(cwd)
+	for {
+		if looksLikeProjectRoot(dir) {
+			return dir
+		}
+
+		parent := filepath.Dir(dir)
+		if parent == dir {
+			break
+		}
+		dir = parent
+	}
+
 	base := filepath.Base(cwd)
-	if base == "pipeline" {
+	if base == "pipeline" || base == "go-scripts" {
 		return filepath.Dir(cwd)
 	}
 	return cwd
+}
+
+func looksLikeProjectRoot(dir string) bool {
+	return pathExists(filepath.Join(dir, "tools", "pipeline", "go.mod")) ||
+		pathExists(filepath.Join(dir, "go-scripts", "go.mod"))
+}
+
+func pathExists(path string) bool {
+	_, err := os.Stat(path)
+	return err == nil
 }
 
 func resolvePathConfig(discoveredRoot string) PathConfig {
