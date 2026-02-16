@@ -20,9 +20,6 @@ This repo combines:
   - `data/derived/compiled`: compiled iTunes CSV + validation report.
   - `data/derived/core`: canonical tracks/albums/artists/history/playcounts artifacts.
   - `data/derived/web`: web-ready JSON artifacts used by the Astro app.
-- Legacy compatibility links remain:
-  - `archive/* -> data/inputs/itunes/*` for historical import batch folders (plus compiled output links)
-  - `data/*.json -> data/derived/core/*.json`
 
 ## Prerequisites
 
@@ -80,12 +77,8 @@ go run . compile-itunes-exports
 ```
 
 Outputs:
-- Canonical:
-  - `data/derived/compiled/compiled_itunes_library.csv`
-  - `data/derived/compiled/validation_report.txt`
-- Compatibility links:
-  - `archive/compiled_itunes_library.csv`
-  - `archive/validation_report.txt`
+- `data/derived/compiled/compiled_itunes_library.csv`
+- `data/derived/compiled/validation_report.txt`
 
 ### 2. Build Data with Go (recommended)
 

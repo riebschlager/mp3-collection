@@ -69,7 +69,7 @@ go run . <command>
 ```
 
 Available commands:
-- `compile-itunes-exports`: compiles raw exports in `data/inputs/itunes/` into `data/derived/compiled/compiled_itunes_library.csv` and `data/derived/compiled/validation_report.txt` (also exposed via compatibility links in `archive/`)
+- `compile-itunes-exports`: compiles raw exports in `data/inputs/itunes/` into `data/derived/compiled/compiled_itunes_library.csv` and `data/derived/compiled/validation_report.txt`
 - `compile-exports`: alias for `compile-itunes-exports`
 - `extract-tracks`: writes `data/derived/core/tracks.json`
 - `extract-artists`: writes `data/derived/core/artists.json`
