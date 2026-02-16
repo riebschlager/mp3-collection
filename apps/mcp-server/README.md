@@ -35,14 +35,14 @@ Default values:
 From repo root:
 
 ```bash
-cd mcp-server
+cd apps/mcp-server
 go run .
 ```
 
 Or use launcher (builds binary if missing and sets env defaults):
 
 ```bash
-./mcp-server/run-mcp.sh
+./apps/mcp-server/run-mcp.sh
 ```
 
 ## Root and Alias Path Resolution
@@ -55,7 +55,7 @@ Or use launcher (builds binary if missing and sets env defaults):
 - Alias file optional override: `MP3_ALIAS_MAP_PATH=/absolute/or/relative/path/to/alias_map.json`.
 - Default alias lookup order:
   - `<root>/data/alias_map.json`
-  - `<root>/mcp-server/data/alias_map.json`
+  - `<root>/apps/mcp-server/data/alias_map.json`
 
 ## Alias Map Formats
 
@@ -97,7 +97,7 @@ Supported format 2:
 
 ## Schemas
 
-`mcp-server/schemas/` includes:
+`apps/mcp-server/schemas/` includes:
 - `sqlite_seed.sql`
 - `canonical_tracks.schema.json`
 - `alias_map.schema.json`

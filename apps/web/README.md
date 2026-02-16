@@ -19,18 +19,18 @@ Astro frontend for browsing the MP3 archive and listening-history outputs.
 The app reads static JSON from `public/data`, which is a symlink to the repository `web-data` folder:
 
 ```text
-public/data -> ../../web-data
+public/data -> ../../../web-data
 ```
 
-If the symlink is missing, recreate it from `mp3-collection-web/`:
+If the symlink is missing, recreate it from `apps/web/`:
 
 ```bash
-ln -s ../../web-data public/data
+ln -s ../../../web-data public/data
 ```
 
 ## Commands
 
-Run from `mp3-collection-web/`:
+Run from `apps/web/`:
 
 ```bash
 npm install

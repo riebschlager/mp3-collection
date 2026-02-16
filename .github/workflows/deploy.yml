@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main, master ]
     paths:
+      - 'apps/web/**'
       - 'mp3-collection-web/**'
       - 'web-data/**'
       - '.github/workflows/deploy.yml'
@@ -19,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BUILD_PATH: ./mp3-collection-web
+  BUILD_PATH: ./apps/web
 
 jobs:
   build:

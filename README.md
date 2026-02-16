@@ -11,16 +11,20 @@ This repo combines:
 
 ## Repository Layout
 
+- `apps/web/`: Astro frontend (`public/data` symlinks to `../../../web-data`).
+- `apps/mcp-server/`: Go MCP server for data-backed music analysis tools.
+- `tools/pipeline/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
 - `archive/`: raw iTunes export files plus compiled CSV/validation outputs.
-- `go-scripts/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
 - `data/`: intermediate JSON artifacts.
 - `web-data/`: web-ready JSON artifacts used by the Astro app.
-- `mp3-collection-web/`: Astro frontend (`public/data` is a symlink to `../../web-data`).
-- `mcp-server/`: Go MCP server for data-backed music analysis tools.
+- Legacy compatibility links remain:
+  - `mp3-collection-web -> apps/web`
+  - `mcp-server -> apps/mcp-server`
+  - `go-scripts -> tools/pipeline`
 
 ## Prerequisites
 
-- Go 1.22+ (Go 1.21 works for `go-scripts`; `mcp-server` targets Go 1.22)
+- Go 1.22+ (Go 1.21 works for `tools/pipeline`; `apps/mcp-server` targets Go 1.22)
 - Node.js 20+ (matches CI workflow)
 - Git LFS (required for large dataset files tracked in this repo)
 
@@ -62,7 +66,7 @@ Other useful targets:
 ### 1. Compile iTunes Exports (when source archives change)
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . compile-itunes-exports
 ```
 
@@ -73,7 +77,7 @@ Outputs:
 ### 2. Build Data with Go (recommended)
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 ./run_all.sh
 ```
 
@@ -92,7 +96,7 @@ cd go-scripts
 You can run any step individually:
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . <command>
 ```
 
@@ -121,7 +125,7 @@ Common commands:
 ## Run the Web App
 
 ```bash
-cd mp3-collection-web
+cd apps/web
 npm install
 npm run dev
 ```
@@ -139,7 +143,7 @@ npm run preview
 
 GitHub Pages deployment is automated via `.github/workflows/deploy.yml`.
 
-- Trigger: push to `main`/`master` with changes in `mp3-collection-web/**`, `web-data/**`, or the workflow file.
+- Trigger: push to `main`/`master` with changes in `apps/web/**`, `web-data/**`, or the workflow file.
 - Site URL: `https://riebschlager.github.io/mp3-collection`
 
 See `DEPLOYMENT.md` for full details.
@@ -147,14 +151,14 @@ See `DEPLOYMENT.md` for full details.
 ## MCP Server
 
 ```bash
-cd mcp-server
+cd apps/mcp-server
 go run .
 ```
 
 Or use the launcher script:
 
 ```bash
-./mcp-server/run-mcp.sh
+./apps/mcp-server/run-mcp.sh
 ```
 
 Current tools:

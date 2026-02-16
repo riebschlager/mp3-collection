@@ -1,10 +1,10 @@
-# Go Scripts for MP3 Collection
+# Pipeline CLI for MP3 Collection
 
 This directory contains the primary data pipeline for the project. The commands are implemented as one Go CLI with subcommands.
 
 ## Requirements
 
-- Go 1.21+ (`go-scripts/go.mod` uses `go 1.21`)
+- Go 1.21+ (`tools/pipeline/go.mod` uses `go 1.21`)
 - Repository root contains:
   - `archive/` raw export files (`Library.export*`, `.txt`) for `compile-itunes-exports`
   - `spotify/Streaming_History_Audio_*.json` (for merge/timeline/playcount flow)
@@ -35,14 +35,14 @@ The CLI auto-loads `.env` by searching current and parent directories.
 From repository root, ensure compiled CSV exists:
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . compile-itunes-exports
 ```
 
 Then run the Go pipeline:
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 ./run_all.sh
 ```
 
@@ -63,7 +63,7 @@ cd go-scripts
 Run commands with:
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . <command>
 ```
 
@@ -91,7 +91,7 @@ Available commands:
 ## Build Binary (optional)
 
 ```bash
-cd go-scripts
+cd tools/pipeline
 go build -o mp3-scripts
 ./mp3-scripts build-web-data
 ```

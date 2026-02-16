@@ -299,7 +299,8 @@ func LoadEnv() string {
 }
 
 func fallbackProjectRoot(cwd string) string {
-	if filepath.Base(cwd) == "go-scripts" {
+	base := filepath.Base(cwd)
+	if base == "go-scripts" || base == "pipeline" {
 		return filepath.Dir(cwd)
 	}
 	return cwd

@@ -127,3 +127,6 @@ As of February 16, 2026:
 - Phase 2 item 2 completed: ETL commands now resolve inputs/outputs via shared path config helpers.
 - Phase 2 item 3 completed: MCP root/data resolution now supports `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, and `MP3_LASTFM_FILE`.
 - Phase 2 item 4 completed: `doctor` command added to validate path config and required inputs.
+- Phase 3 item 1 partially completed: code directories moved to `apps/web`, `apps/mcp-server`, and `tools/pipeline`.
+- Phase 3 item 3 partially completed: legacy compatibility links added (`mp3-collection-web`, `mcp-server`, `go-scripts`).
+- Phase 3 item 4 partially completed: root Makefile, deployment workflow, and docs now prefer new code directory paths.

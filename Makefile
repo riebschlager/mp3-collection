@@ -19,44 +19,44 @@ help:
 	@echo "  clean-bins  Remove generated local Go binaries"
 
 pipeline:
-	cd go-scripts && ./run_all.sh
+	cd tools/pipeline && ./run_all.sh
 
 compile:
-	cd go-scripts && go run . compile-itunes-exports
+	cd tools/pipeline && go run . compile-itunes-exports
 
 extract:
-	cd go-scripts && go run . extract-tracks
-	cd go-scripts && go run . extract-albums
-	cd go-scripts && go run . extract-artists
+	cd tools/pipeline && go run . extract-tracks
+	cd tools/pipeline && go run . extract-albums
+	cd tools/pipeline && go run . extract-artists
 
 listening:
-	cd go-scripts && go run . fetch-lastfm
-	cd go-scripts && go run . merge-listening
-	cd go-scripts && go run . process-lastfm
+	cd tools/pipeline && go run . fetch-lastfm
+	cd tools/pipeline && go run . merge-listening
+	cd tools/pipeline && go run . process-lastfm
 
 timeline:
-	cd go-scripts && go run . build-timeline
+	cd tools/pipeline && go run . build-timeline
 
 web-data:
-	cd go-scripts && go run . build-web-data
+	cd tools/pipeline && go run . build-web-data
 
 images:
-	cd go-scripts && go run . fetch-images
+	cd tools/pipeline && go run . fetch-images
 
 doctor:
-	cd go-scripts && go run . doctor
+	cd tools/pipeline && go run . doctor
 
 web-dev:
-	cd mp3-collection-web && npm install && npm run dev
+	cd apps/web && npm install && npm run dev
 
 web-build:
-	cd mp3-collection-web && npm ci && npm run build
+	cd apps/web && npm ci && npm run build
 
 web-preview:
-	cd mp3-collection-web && npm run preview
+	cd apps/web && npm run preview
 
 mcp:
-	./mcp-server/run-mcp.sh
+	./apps/mcp-server/run-mcp.sh
 
 clean-bins:
-	rm -f go-scripts/mp3-scripts mcp-server/mcp-server
+	rm -f tools/pipeline/mp3-scripts apps/mcp-server/mcp-server go-scripts/mp3-scripts mcp-server/mcp-server
