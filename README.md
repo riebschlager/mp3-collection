@@ -23,8 +23,6 @@ This repo combines:
 - Legacy compatibility links remain:
   - `archive/* -> data/inputs/itunes/*` for historical import batch folders (plus compiled output links)
   - `data/*.json -> data/derived/core/*.json`
-  - `lastfm -> data/inputs/lastfm`
-  - `spotify -> data/inputs/spotify`
 
 ## Prerequisites
 

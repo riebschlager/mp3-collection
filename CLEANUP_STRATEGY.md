@@ -133,5 +133,5 @@ As of February 16, 2026:
 - Phase 3 item 3 completed for data paths: legacy compatibility links added (`lastfm`, `spotify`, `web-data`, archive import/output links, and `data/*.json` links to `data/derived/core`).
 - Phase 3 item 4 partially completed: root Makefile, deployment workflow, LFS config, runtime defaults, and docs now prefer new data/code paths.
 - Phase 4 item 1 completed: deploy workflow triggers now watch only canonical paths (`apps/web/**`, `data/derived/web/**`) plus workflow source.
-- Phase 4 item 2 partially completed: retired legacy code-directory compatibility links (`mp3-collection-web`, `go-scripts`, `mcp-server`) and retired `web-data` after switching `apps/web/public/data` to `data/derived/web`.
+- Phase 4 item 2 completed: retired legacy compatibility links (`mp3-collection-web`, `go-scripts`, `mcp-server`, `web-data`, `lastfm`, `spotify`) after canonical path cutover.
 - Phase 4 item 3 partially completed: deployment, web app, and agent docs updated to canonical paths with compatibility notes where links still exist.
