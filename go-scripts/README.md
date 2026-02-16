@@ -61,6 +61,18 @@ go run . build-web-data
 export LASTFM_API_KEY=your_api_key_here
 go run . fetch-lastfm
 
+# Merge Last.fm + Spotify history with duplicate suppression
+# Optional env:
+#   SPOTIFY_MIN_MS_PLAYED=30000
+#   SPOTIFY_LASTFM_DEDUPE_WINDOW_MS=120000
+go run . merge-listening
+
+# Build playcounts from merged history
+go run . process-lastfm
+
+# Build yearly/monthly timeline from merged history
+go run . build-timeline
+
 # Fetch/cached artist+album image metadata from Last.fm
 # Optional env:
 #   LASTFM_IMAGE_SCOPE=played|all (default: played)

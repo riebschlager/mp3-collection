@@ -28,6 +28,9 @@ echo "==> Running extract-artists"
 echo "==> Running fetch-lastfm"
 ./mp3-scripts fetch-lastfm
 
+echo "==> Running merge-listening"
+./mp3-scripts merge-listening
+
 echo "==> Running process-lastfm"
 ./mp3-scripts process-lastfm
 

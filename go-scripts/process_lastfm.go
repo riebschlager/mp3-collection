@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"sort"
 	"strings"
 )
 
@@ -28,11 +29,11 @@ type TrackKey struct {
 }
 
 type PlayCountEntry struct {
-	Artist     string `json:"artist"`
-	Track      string `json:"track"`
-	PlayCount  int    `json:"playCount"`
-	FirstPlay  int64  `json:"firstPlay"`
-	LastPlay   int64  `json:"lastPlay"`
+	Artist    string `json:"artist"`
+	Track     string `json:"track"`
+	PlayCount int    `json:"playCount"`
+	FirstPlay int64  `json:"firstPlay"`
+	LastPlay  int64  `json:"lastPlay"`
 }
 
 type PlayCountData struct {
@@ -79,43 +80,46 @@ func NormalizeForMatching(s string) string {
 }
 
 func runProcessLastFm() {
-	// Paths
-	        lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
-	
-	        fmt.Println("Processing Last.fm scrobbles...")
-	        fmt.Printf("Reading from: %s\n", lastfmPath)
+	fmt.Println("Processing listening history into playcounts...")
 
-	// Read Last.fm JSON
-	data, err := os.ReadFile(lastfmPath)
+	history, err := loadListeningHistoryOrBuild()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error reading Last.fm file: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error loading listening history: %v\n", err)
 		os.Exit(1)
 	}
 
-	var lastfmData LastFmData
-	if err := json.Unmarshal(data, &lastfmData); err != nil {
-		fmt.Fprintf(os.Stderr, "Error parsing Last.fm JSON: %v\n", err)
-		os.Exit(1)
+	fmt.Printf("Found %d total listening events\n", len(history.Events))
+	if len(history.SourceCounts) > 0 {
+		fmt.Println("Source breakdown:")
+		sourceNames := make([]string, 0, len(history.SourceCounts))
+		for source := range history.SourceCounts {
+			sourceNames = append(sourceNames, source)
+		}
+		sort.Strings(sourceNames)
+		for _, source := range sourceNames {
+			fmt.Printf("  - %s: %d\n", source, history.SourceCounts[source])
+		}
 	}
-
-	fmt.Printf("Found %d scrobbles for user: %s\n\n", len(lastfmData.Scrobbles), lastfmData.Username)
+	fmt.Println()
 
 	// Aggregate playcounts
 	playCounts := make(map[TrackKey]*PlayCountEntry)
+	totalCountedEvents := 0
 
-	for _, scrobble := range lastfmData.Scrobbles {
+	for _, event := range history.Events {
 		// Skip empty tracks or artists
-		if strings.TrimSpace(scrobble.Track) == "" || strings.TrimSpace(scrobble.Artist) == "" {
+		if strings.TrimSpace(event.Track) == "" || strings.TrimSpace(event.Artist) == "" {
 			continue
 		}
 
 		// Create normalized key for matching
-		normalizedArtist := NormalizeForMatching(scrobble.Artist)
-		normalizedTrack := NormalizeForMatching(scrobble.Track)
+		normalizedArtist := NormalizeForMatching(event.Artist)
+		normalizedTrack := NormalizeForMatching(event.Track)
 
 		if normalizedArtist == "" || normalizedTrack == "" {
 			continue
 		}
+		totalCountedEvents++
 
 		key := TrackKey{
 			Artist: normalizedArtist,
@@ -124,20 +128,20 @@ func runProcessLastFm() {
 
 		if entry, exists := playCounts[key]; exists {
 			entry.PlayCount++
-			if scrobble.Date < entry.FirstPlay {
-				entry.FirstPlay = scrobble.Date
+			if event.Date < entry.FirstPlay {
+				entry.FirstPlay = event.Date
 			}
-			if scrobble.Date > entry.LastPlay {
-				entry.LastPlay = scrobble.Date
+			if event.Date > entry.LastPlay {
+				entry.LastPlay = event.Date
 			}
 		} else {
 			// Use the original (non-normalized) names for display
 			playCounts[key] = &PlayCountEntry{
-				Artist:    scrobble.Artist,
-				Track:     scrobble.Track,
+				Artist:    event.Artist,
+				Track:     event.Track,
 				PlayCount: 1,
-				FirstPlay: scrobble.Date,
-				LastPlay:  scrobble.Date,
+				FirstPlay: event.Date,
+				LastPlay:  event.Date,
 			}
 		}
 	}
@@ -149,40 +153,40 @@ func runProcessLastFm() {
 	}
 
 	outputData := PlayCountData{
-		TotalScrobbles: len(lastfmData.Scrobbles),
+		TotalScrobbles: totalCountedEvents,
 		UniqueTracks:   len(playCountsList),
 		PlayCounts:     playCountsList,
 	}
 
-	        // Write output to both data/ and web-data/
-	        outputPaths := []string{
-	                filepath.Join(ProjectRoot, "data", "playcounts.json"),
-	                filepath.Join(ProjectRoot, "web-data", "playcounts.json"),
-	        }
-	
-	        for _, path := range outputPaths {
-	                if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
-	                        fmt.Fprintf(os.Stderr, "Error creating output directory for %s: %v\n", path, err)
-	                        os.Exit(1)
-	                }
-	
-	                file, err := os.Create(path)
-	                if err != nil {
-	                        fmt.Fprintf(os.Stderr, "Error creating output file %s: %v\n", path, err)
-	                        os.Exit(1)
-	                }
-	
-	                encoder := json.NewEncoder(file)
-	                encoder.SetIndent("", "  ")
-	                encoder.SetEscapeHTML(false)
-	                if err := encoder.Encode(outputData); err != nil {
-	                        fmt.Fprintf(os.Stderr, "Error writing JSON to %s: %v\n", path, err)
-	                        file.Close()
-	                        os.Exit(1)
-	                }
-	                file.Close()
-	                fmt.Printf("Output written to: %s\n", path)
-	        }
+	// Write output to both data/ and web-data/
+	outputPaths := []string{
+		filepath.Join(ProjectRoot, "data", "playcounts.json"),
+		filepath.Join(ProjectRoot, "web-data", "playcounts.json"),
+	}
+
+	for _, path := range outputPaths {
+		if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
+			fmt.Fprintf(os.Stderr, "Error creating output directory for %s: %v\n", path, err)
+			os.Exit(1)
+		}
+
+		file, err := os.Create(path)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error creating output file %s: %v\n", path, err)
+			os.Exit(1)
+		}
+
+		encoder := json.NewEncoder(file)
+		encoder.SetIndent("", "  ")
+		encoder.SetEscapeHTML(false)
+		if err := encoder.Encode(outputData); err != nil {
+			fmt.Fprintf(os.Stderr, "Error writing JSON to %s: %v\n", path, err)
+			file.Close()
+			os.Exit(1)
+		}
+		file.Close()
+		fmt.Printf("Output written to: %s\n", path)
+	}
 	// Show top 10 most played tracks
 	fmt.Println("\nTop 10 most played tracks:")
 

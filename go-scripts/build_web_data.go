@@ -197,7 +197,7 @@ func runBuildWebData() {
 	fmt.Printf("Output directory: %s\n\n", outputDir)
 
 	// Load playcounts
-	fmt.Println("Loading Last.fm playcounts...")
+	fmt.Println("Loading listening-history playcounts...")
 	playCountLookup, err := loadPlayCounts(playCountPath)
 	if err != nil {
 		fmt.Printf("Warning: Could not load playcounts (%v). Continuing without playcount data.\n\n", err)
@@ -206,15 +206,14 @@ func runBuildWebData() {
 		fmt.Printf("Loaded %d unique track playcounts\n\n", len(playCountLookup))
 	}
 
-
-rows, err := ReadCSV(csvPath)
+	rows, err := ReadCSV(csvPath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error reading CSV: %v\n", err)
 		os.Exit(1)
 	}
 
 	var tracks []WebTrack
-	
+
 	// Index maps
 	type ArtistData struct {
 		Name     string
@@ -261,7 +260,7 @@ rows, err := ReadCSV(csvPath)
 		composer := SafeStr(row["Composer"])
 		genre := SanitizeGenre(SafeStr(row["Genre"]))
 		yearVal := SanitizeYear(row["Year"])
-		
+
 		size := SafeInt(row["Size"])
 		duration := SafeInt(row["Time"])
 		bitRate := SafeInt(row["Bit Rate"])
@@ -273,29 +272,29 @@ rows, err := ReadCSV(csvPath)
 		discCount := SafeInt(row["Disc Count"])
 
 		rating := SafeInt(row["My Rating"])
-		
-dateAdded := SafeStr(row["Date Added"])
-dateModified := SafeStr(row["Date Modified"])
-lastPlayed := SafeStr(row["Last Played"])
-location := SafeStr(row["Location"])
-kind := SafeStr(row["Kind"])
-grouping := SafeStr(row["Grouping"])
-comments := SafeStr(row["Comments"])
-volumeAdjustment := SafeInt(row["Volume Adjustment"])
-equalizer := SafeStr(row["Equalizer"])
+
+		dateAdded := SafeStr(row["Date Added"])
+		dateModified := SafeStr(row["Date Modified"])
+		lastPlayed := SafeStr(row["Last Played"])
+		location := SafeStr(row["Location"])
+		kind := SafeStr(row["Kind"])
+		grouping := SafeStr(row["Grouping"])
+		comments := SafeStr(row["Comments"])
+		volumeAdjustment := SafeInt(row["Volume Adjustment"])
+		equalizer := SafeStr(row["Equalizer"])
 
 		trackID := fmt.Sprintf("track-%05d", len(tracks))
 		artistSlug := Slugify(artistName)
 		albumSlug := Slugify(albumName)
 
 		// Helpers for nullable fields
-	intPtr := func(v int) *int {
+		intPtr := func(v int) *int {
 			if v > 0 {
 				return &v
 			}
 			return nil
 		}
-		
+
 		// Year: 0 -> nil
 		var yearPtr *int
 		if yearVal > 0 {
@@ -349,7 +348,7 @@ equalizer := SafeStr(row["Equalizer"])
 			Equalizer:         equalizer,
 			Comments:          comments,
 		}
-		
+
 		tracks = append(tracks, track)
 
 		// Update indices
@@ -405,7 +404,7 @@ equalizer := SafeStr(row["Equalizer"])
 			end = len(tracks)
 		}
 		chunkTracks := tracks[start:end]
-		
+
 		chunkData := ChunkData{
 			Chunk:       i + 1,
 			TotalChunks: totalChunks,
@@ -430,7 +429,7 @@ equalizer := SafeStr(row["Equalizer"])
 			albums = append(albums, alb)
 		}
 		sort.Strings(albums)
-		
+
 		artistIndexList = append(artistIndexList, ArtistIndexEntry{
 			Slug:       slug,
 			Name:       data.Name,
@@ -459,8 +458,8 @@ equalizer := SafeStr(row["Equalizer"])
 			artists = append(artists, art)
 		}
 		sort.Strings(artists)
-		
-albumIndexList = append(albumIndexList, AlbumIndexEntry{
+
+		albumIndexList = append(albumIndexList, AlbumIndexEntry{
 			Slug:        slug,
 			Name:        data.Name,
 			ArtistCount: len(artists),
@@ -500,8 +499,8 @@ albumIndexList = append(albumIndexList, AlbumIndexEntry{
 
 	totalHours := float64(totalDuration) / 3600.0
 	totalSizeGB := float64(totalSize) / (1024 * 1024 * 1024)
-	
-tracksRated := 0
+
+	tracksRated := 0
 	for _, t := range tracks {
 		if t.Rating > 0 {
 			tracksRated++
@@ -542,7 +541,7 @@ tracksRated := 0
 	fmt.Printf("Tracks Rated:     %d\n", metadata.Stats.TracksWithRating)
 	fmt.Printf("Tracks w/ Plays:  %d (%.1f%%)\n", tracksWithPlayCount, float64(tracksWithPlayCount)/float64(metadata.TotalTracks)*100)
 	fmt.Println(strings.Repeat("=", 60))
-	
+
 	absOut, _ := filepath.Abs(outputDir)
 	fmt.Printf("\nOutput directory: %s\n", absOut)
 	fmt.Printf("Track chunks:     %d files in chunks/\n", totalChunks)

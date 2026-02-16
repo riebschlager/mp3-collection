@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -24,18 +23,18 @@ type TimelineTrackEntry struct {
 }
 
 type MonthData struct {
-	Month         string                `json:"month"` // "2005-01"
+	Month          string               `json:"month"` // "2005-01"
 	TotalScrobbles int                  `json:"totalScrobbles"`
 	UniqueTracks   int                  `json:"uniqueTracks"`
 	TopTracks      []TimelineTrackEntry `json:"topTracks"`
 }
 
 type YearData struct {
-	Year           int                   `json:"year"`
-	TotalScrobbles int                   `json:"totalScrobbles"`
-	UniqueTracks   int                   `json:"uniqueTracks"`
-	TopTracks      []TimelineTrackEntry  `json:"topTracks"`
-	Months         []MonthData           `json:"months"`
+	Year           int                  `json:"year"`
+	TotalScrobbles int                  `json:"totalScrobbles"`
+	UniqueTracks   int                  `json:"uniqueTracks"`
+	TopTracks      []TimelineTrackEntry `json:"topTracks"`
+	Months         []MonthData          `json:"months"`
 }
 
 type TimelineData struct {
@@ -46,45 +45,39 @@ type TimelineData struct {
 }
 
 func runBuildTimeline() {
-	lastfmPath := filepath.Join(ProjectRoot, "lastfm", "lastfmstats-riebschlager.json")
 	outputPath := filepath.Join(ProjectRoot, "web-data", "timeline.json")
 
-	fmt.Println("Building timeline data from Last.fm scrobbles...")
-	fmt.Printf("Reading from: %s\n", lastfmPath)
+	fmt.Println("Building timeline data from merged listening history...")
 
-	// Read Last.fm JSON
-	data, err := os.ReadFile(lastfmPath)
+	history, err := loadListeningHistoryOrBuild()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error reading Last.fm file: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error loading listening history: %v\n", err)
 		os.Exit(1)
 	}
 
-	var lastfmData LastFmData
-	if err := json.Unmarshal(data, &lastfmData); err != nil {
-		fmt.Fprintf(os.Stderr, "Error parsing Last.fm JSON: %v\n", err)
-		os.Exit(1)
-	}
-
-	fmt.Printf("Processing %d scrobbles...\n\n", len(lastfmData.Scrobbles))
+	fmt.Printf("Processing %d listening events...\n\n", len(history.Events))
 
 	// Group scrobbles by year and month
 	yearMap := make(map[int]map[string][]TimelineScrobble)
 	var firstScrobble, lastScrobble int64
 
-	for i, scrobble := range lastfmData.Scrobbles {
-		if scrobble.Track == "" || scrobble.Artist == "" {
+	validScrobbles := 0
+
+	for _, event := range history.Events {
+		if event.Track == "" || event.Artist == "" {
 			continue
 		}
+		validScrobbles++
 
 		// Track first and last scrobbles
-		if i == 0 || scrobble.Date < firstScrobble {
-			firstScrobble = scrobble.Date
+		if validScrobbles == 1 || event.Date < firstScrobble {
+			firstScrobble = event.Date
 		}
-		if i == 0 || scrobble.Date > lastScrobble {
-			lastScrobble = scrobble.Date
+		if validScrobbles == 1 || event.Date > lastScrobble {
+			lastScrobble = event.Date
 		}
 
-		t := time.Unix(scrobble.Date/1000, 0)
+		t := time.Unix(event.Date/1000, 0)
 		year := t.Year()
 		month := fmt.Sprintf("%04d-%02d", year, t.Month())
 
@@ -93,10 +86,10 @@ func runBuildTimeline() {
 		}
 
 		yearMap[year][month] = append(yearMap[year][month], TimelineScrobble{
-			Track:     scrobble.Track,
-			Artist:    scrobble.Artist,
-			Album:     scrobble.Album,
-			Timestamp: scrobble.Date,
+			Track:     event.Track,
+			Artist:    event.Artist,
+			Album:     event.Album,
+			Timestamp: event.Date,
 		})
 	}
 
@@ -201,7 +194,7 @@ func runBuildTimeline() {
 	timeline := TimelineData{
 		FirstScrobble:  firstScrobble,
 		LastScrobble:   lastScrobble,
-		TotalScrobbles: len(lastfmData.Scrobbles),
+		TotalScrobbles: validScrobbles,
 		Years:          years,
 	}
 

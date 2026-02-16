@@ -25,6 +25,8 @@ func main() {
 		runExtractAlbums()
 	case "process-lastfm":
 		runProcessLastFm()
+	case "merge-listening":
+		runMergeListening()
 	case "fetch-lastfm":
 		runFetchLastFm()
 	case "fetch-images":
@@ -49,8 +51,9 @@ func printUsage() {
 	fmt.Println("  extract-artists   Extract artists to data/artists.json")
 	fmt.Println("  extract-albums    Extract albums to data/albums.json")
 	fmt.Println("  fetch-lastfm      Fetch recent scrobbles from Last.fm API")
-	fmt.Println("  process-lastfm    Process Last.fm scrobbles to data/playcounts.json")
+	fmt.Println("  merge-listening   Merge Last.fm + Spotify history with dedupe")
+	fmt.Println("  process-lastfm    Process merged listening history to data/playcounts.json")
 	fmt.Println("  fetch-images      Fetch artist/album image metadata from Last.fm")
-	fmt.Println("  build-timeline    Build timeline data from Last.fm to web-data/timeline.json")
+	fmt.Println("  build-timeline    Build timeline data from merged history to web-data/timeline.json")
 	fmt.Println("  build-web-data    Build optimized web data to web-data/")
 }
