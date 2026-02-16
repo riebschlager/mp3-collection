@@ -26,8 +26,8 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `<lastfm>/lastfmstats-<username>.json` (scrobble analyses)
 
 Default values:
-- `<web-data>` resolves to `<root>/web-data`
-- `<lastfm>` resolves to `<root>/lastfm`
+- `<web-data>` resolves to `<root>/data/derived/web`
+- `<lastfm>` resolves to `<root>/data/inputs/lastfm`
 - `<username>` resolves to `LASTFM_USERNAME` or `riebschlager`
 
 ## Run
@@ -47,7 +47,7 @@ Or use launcher (builds binary if missing and sets env defaults):
 
 ## Root and Alias Path Resolution
 
-- Project root auto-discovery: walks parent directories until `web-data/chunks` exists.
+- Project root auto-discovery: walks parent directories until track chunk data is found.
 - Optional override: `MP3_COLLECTION_ROOT=/absolute/path/to/repo`.
 - Optional web-data override: `MP3_WEB_DATA_DIR=/absolute/or/relative/path/to/web-data`.
 - Optional Last.fm dir override: `MP3_LASTFM_DIR=/absolute/or/relative/path/to/lastfm`.

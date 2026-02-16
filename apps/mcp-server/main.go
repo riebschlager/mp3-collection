@@ -714,7 +714,7 @@ func resolveWebDataDir(root string) string {
 	if envDir := strings.TrimSpace(os.Getenv("MP3_WEB_DATA_DIR")); envDir != "" {
 		return resolvePath(root, envDir)
 	}
-	return filepath.Join(root, "web-data")
+	return filepath.Join(root, "data", "derived", "web")
 }
 
 func inferRootFromWebDataDir(defaultRoot string) string {
@@ -2165,7 +2165,7 @@ func resolveLastFMStatsPath(root string) string {
 	if dir := strings.TrimSpace(os.Getenv("MP3_LASTFM_DIR")); dir != "" {
 		return filepath.Join(resolvePath(root, dir), filename)
 	}
-	return filepath.Join(root, "lastfm", filename)
+	return filepath.Join(root, "data", "inputs", "lastfm", filename)
 }
 
 func lastFMUsername() string {

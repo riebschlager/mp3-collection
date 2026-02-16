@@ -17,6 +17,7 @@ Current workflow behavior:
 - Trigger only when these paths change:
   - `apps/web/**`
   - `mp3-collection-web/**`
+  - `data/derived/web/**`
   - `web-data/**`
   - `.github/workflows/deploy.yml`
 - Also supports manual trigger (`workflow_dispatch`)
@@ -54,8 +55,8 @@ npm run preview
 ```
 
 Note:
-- The web app reads data from `public/data` (symlink to `../../../web-data`).
-- If data changed but `web-data/**` was not updated, deployment will not include new data.
+- The web app reads data from `public/data` (symlink to `../../../web-data`, which points to `data/derived/web`).
+- If data changed but `data/derived/web/**` was not updated, deployment will not include new data.
 
 ## Troubleshooting
 

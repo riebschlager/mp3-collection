@@ -16,7 +16,7 @@ Astro frontend for browsing the MP3 archive and listening-history outputs.
 
 ## Data Source
 
-The app reads static JSON from `public/data`, which is a symlink to the repository `web-data` folder:
+The app reads static JSON from `public/data`, which is a symlink to the repository `web-data` compatibility link (`data/derived/web` canonical location):
 
 ```text
 public/data -> ../../../web-data

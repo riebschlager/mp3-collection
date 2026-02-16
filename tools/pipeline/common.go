@@ -316,9 +316,9 @@ func resolvePathConfig(discoveredRoot string) PathConfig {
 		Root:       root,
 		ArchiveDir: resolvePath(root, envOrDefault("MP3_ARCHIVE_DIR", "archive")),
 		DataDir:    resolvePath(root, envOrDefault("MP3_DATA_DIR", "data")),
-		WebDataDir: resolvePath(root, envOrDefault("MP3_WEB_DATA_DIR", "web-data")),
-		LastFMDir:  resolvePath(root, envOrDefault("MP3_LASTFM_DIR", "lastfm")),
-		SpotifyDir: resolvePath(root, envOrDefault("MP3_SPOTIFY_DIR", "spotify")),
+		WebDataDir: resolvePath(root, envOrDefault("MP3_WEB_DATA_DIR", "data/derived/web")),
+		LastFMDir:  resolvePath(root, envOrDefault("MP3_LASTFM_DIR", "data/inputs/lastfm")),
+		SpotifyDir: resolvePath(root, envOrDefault("MP3_SPOTIFY_DIR", "data/inputs/spotify")),
 	}
 }
 

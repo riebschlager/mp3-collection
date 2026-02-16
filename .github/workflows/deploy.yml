@@ -6,6 +6,7 @@ on:
     paths:
       - 'apps/web/**'
       - 'mp3-collection-web/**'
+      - 'data/derived/web/**'
       - 'web-data/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:

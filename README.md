@@ -14,13 +14,18 @@ This repo combines:
 - `apps/web/`: Astro frontend (`public/data` symlinks to `../../../web-data`).
 - `apps/mcp-server/`: Go MCP server for data-backed music analysis tools.
 - `tools/pipeline/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
-- `archive/`: raw iTunes export files plus compiled CSV/validation outputs.
-- `data/`: intermediate JSON artifacts.
-- `web-data/`: web-ready JSON artifacts used by the Astro app.
+- `archive/`: raw iTunes export files (`Library.export*`, `.txt`).
+- `data/`: intermediate pipeline artifacts plus organized input/derived datasets.
+  - `data/inputs/lastfm`, `data/inputs/spotify`: source listening-history inputs.
+  - `data/derived/compiled`: compiled iTunes CSV + validation report.
+  - `data/derived/web`: web-ready JSON artifacts used by the Astro app.
 - Legacy compatibility links remain:
   - `mp3-collection-web -> apps/web`
   - `mcp-server -> apps/mcp-server`
   - `go-scripts -> tools/pipeline`
+  - `lastfm -> data/inputs/lastfm`
+  - `spotify -> data/inputs/spotify`
+  - `web-data -> data/derived/web`
 
 ## Prerequisites
 
@@ -42,6 +47,10 @@ cp .env.example .env
 - Optional path overrides for ETL commands:
   - `MP3_PROJECT_ROOT`
   - `MP3_ARCHIVE_DIR`, `MP3_DATA_DIR`, `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, `MP3_SPOTIFY_DIR`
+  - Defaults now point to the organized layout:
+    - `MP3_WEB_DATA_DIR=data/derived/web`
+    - `MP3_LASTFM_DIR=data/inputs/lastfm`
+    - `MP3_SPOTIFY_DIR=data/inputs/spotify`
 
 ## Daily Workflow (from Repo Root)
 
@@ -71,8 +80,12 @@ go run . compile-itunes-exports
 ```
 
 Outputs:
-- `archive/compiled_itunes_library.csv`
-- `archive/validation_report.txt`
+- Canonical:
+  - `data/derived/compiled/compiled_itunes_library.csv`
+  - `data/derived/compiled/validation_report.txt`
+- Compatibility links:
+  - `archive/compiled_itunes_library.csv`
+  - `archive/validation_report.txt`
 
 ### 2. Build Data with Go (recommended)
 
@@ -116,11 +129,11 @@ Common commands:
 - `data/tracks.json`, `data/albums.json`, `data/artists.json`
 - `data/listening-history.json`, `data/listening-merge-report.json`
 - `data/playcounts.json`
-- `web-data/chunks/tracks-*.json`
-- `web-data/artists-index.json`, `web-data/albums-index.json`, `web-data/metadata.json`
-- `web-data/timeline.json`
-- `web-data/playcounts.json`, `web-data/listening-merge-report.json`
-- `web-data/artist-images.json`, `web-data/album-images.json`
+- `data/derived/web/chunks/tracks-*.json`
+- `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
+- `data/derived/web/timeline.json`
+- `data/derived/web/playcounts.json`, `data/derived/web/listening-merge-report.json`
+- `data/derived/web/artist-images.json`, `data/derived/web/album-images.json`
 
 ## Run the Web App
 
@@ -143,7 +156,7 @@ npm run preview
 
 GitHub Pages deployment is automated via `.github/workflows/deploy.yml`.
 
-- Trigger: push to `main`/`master` with changes in `apps/web/**`, `web-data/**`, or the workflow file.
+- Trigger: push to `main`/`master` with changes in `apps/web/**`, `data/derived/web/**`, or the workflow file.
 - Site URL: `https://riebschlager.github.io/mp3-collection`
 
 See `DEPLOYMENT.md` for full details.
