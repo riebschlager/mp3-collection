@@ -1,0 +1,6 @@
+spotify/Streaming_History_*.json filter=lfs diff=lfs merge=lfs -text
+archive/compiled_itunes_library.csv filter=lfs diff=lfs merge=lfs -text
+data/listening-history.json filter=lfs diff=lfs merge=lfs -text
+data/playcounts.json filter=lfs diff=lfs merge=lfs -text
+web-data/playcounts.json filter=lfs diff=lfs merge=lfs -text
+lastfm/lastfmstats-*.json filter=lfs diff=lfs merge=lfs -text

@@ -20,12 +20,14 @@ Current workflow behavior:
   - `.github/workflows/deploy.yml`
 - Also supports manual trigger (`workflow_dispatch`)
 - Builds with Node `20`
+- Checks out Git LFS objects (`actions/checkout` with `lfs: true`)
 - Runs `npm ci` and `npm run build` in `mp3-collection-web/`
 
 ## Prerequisites
 
 - Repository configured with GitHub Pages
 - Node.js 20+ locally (to mirror CI)
+- Git LFS installed locally (`git lfs install`)
 
 ## Deployment Flow
 

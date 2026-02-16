@@ -22,10 +22,13 @@ This repo combines:
 
 - Go 1.22+ (Go 1.21 works for `go-scripts`; `mcp-server` targets Go 1.22)
 - Node.js 20+ (matches CI workflow)
+- Git LFS (required for large dataset files tracked in this repo)
 
 ## Environment Setup
 
 ```bash
+git lfs install
+git lfs pull
 cp .env.example .env
 ```
 
