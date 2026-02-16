@@ -132,3 +132,5 @@ As of February 16, 2026:
 - Phase 3 item 2 completed: canonical data roots moved to `data/inputs/{itunes,lastfm,spotify}` and `data/derived/{compiled,core,web}`.
 - Phase 3 item 3 completed for data paths: legacy compatibility links added (`lastfm`, `spotify`, `web-data`, archive import/output links, and `data/*.json` links to `data/derived/core`).
 - Phase 3 item 4 partially completed: root Makefile, deployment workflow, LFS config, runtime defaults, and docs now prefer new data/code paths.
+- Phase 4 item 1 completed: deploy workflow triggers now watch only canonical paths (`apps/web/**`, `data/derived/web/**`) plus workflow source.
+- Phase 4 item 3 partially completed: deployment and agent docs updated to canonical paths with compatibility notes where links still exist.

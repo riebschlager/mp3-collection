@@ -4,27 +4,27 @@ This project uses a suite of Go-based "Agents" (subcommands) to manage the lifec
 Each agent has a specific responsibility in the ETL (Extract, Transform, Load) pipeline.
 
 ## 🏗️ The Builder Agent
-**Script:** `go-scripts/build_web_data.go` (invoked via `mp3-scripts build-web-data`)
+**Script:** `tools/pipeline/build_web_data.go` (invoked via `mp3-scripts build-web-data`)
 
 Transforms compiled CSV + playcount data into web-optimized JSON artifacts.
 
 **Capabilities:**
 -   **Slugification:** Converts artist and album names into URL-safe slugs.
 -   **Indexing:** Creates `artists-index.json` and `albums-index.json`.
--   **Chunking:** Partitions tracks into `web-data/chunks/tracks-###.json`.
+-   **Chunking:** Partitions tracks into `data/derived/web/chunks/tracks-###.json`.
 -   **Enrichment:** Merges listening `playCount` data onto track records.
 -   **Sanitization:** Handles missing values, type conversion, and duration formatting.
 
 **Usage:**
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . build-web-data
 ```
 
 ---
 
 ## 📚 The Compiler Agent
-**Script:** `go-scripts/compile_itunes_exports.go` (invoked via `mp3-scripts compile-itunes-exports`)
+**Script:** `tools/pipeline/compile_itunes_exports.go` (invoked via `mp3-scripts compile-itunes-exports`)
 
 Ingests disjointed iTunes export files and compiles them into one normalized CSV.
 
@@ -37,7 +37,7 @@ Ingests disjointed iTunes export files and compiles them into one normalized CSV
 
 **Usage:**
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . compile-itunes-exports
 ```
 
@@ -45,9 +45,9 @@ go run . compile-itunes-exports
 
 ## 🔍 The Extractor Agents
 **Scripts:**
--   `go-scripts/extract_tracks.go`
--   `go-scripts/extract_albums.go`
--   `go-scripts/extract_artists.go`
+-   `tools/pipeline/extract_tracks.go`
+-   `tools/pipeline/extract_albums.go`
+-   `tools/pipeline/extract_artists.go`
 
 Specialized workers focused on isolating specific entities from the dataset.
 
@@ -57,7 +57,7 @@ Specialized workers focused on isolating specific entities from the dataset.
 
 **Usage:**
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . extract-tracks
 go run . extract-albums
 go run . extract-artists
@@ -67,11 +67,11 @@ go run . extract-artists
 
 ## 📈 Listening History Agents
 **Scripts:**
--   `go-scripts/fetch_lastfm.go`
--   `go-scripts/merge_listening.go`
--   `go-scripts/process_lastfm.go`
--   `go-scripts/build_timeline.go`
--   `go-scripts/fetch_metadata.go`
+-   `tools/pipeline/fetch_lastfm.go`
+-   `tools/pipeline/merge_listening.go`
+-   `tools/pipeline/process_lastfm.go`
+-   `tools/pipeline/build_timeline.go`
+-   `tools/pipeline/fetch_metadata.go`
 
 Builds and enriches listening-history data from Last.fm and Spotify sources.
 
@@ -84,7 +84,7 @@ Builds and enriches listening-history data from Last.fm and Spotify sources.
 
 **Usage:**
 ```bash
-cd go-scripts
+cd tools/pipeline
 go run . fetch-lastfm
 go run . merge-listening
 go run . process-lastfm
