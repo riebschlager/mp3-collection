@@ -128,9 +128,10 @@ As of February 16, 2026:
 - Phase 2 item 3 completed: MCP root/data resolution now supports `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, and `MP3_LASTFM_FILE`.
 - Phase 2 item 4 completed: `doctor` command added to validate path config and required inputs.
 - Phase 3 item 1 partially completed: code directories moved to `apps/web`, `apps/mcp-server`, and `tools/pipeline`.
-- Phase 3 item 3 partially completed: legacy compatibility links added (`mp3-collection-web`, `mcp-server`, `go-scripts`).
+- Phase 3 item 3 completed during transition: legacy compatibility links were added for moved code directories (`mp3-collection-web`, `mcp-server`, `go-scripts`).
 - Phase 3 item 2 completed: canonical data roots moved to `data/inputs/{itunes,lastfm,spotify}` and `data/derived/{compiled,core,web}`.
 - Phase 3 item 3 completed for data paths: legacy compatibility links added (`lastfm`, `spotify`, `web-data`, archive import/output links, and `data/*.json` links to `data/derived/core`).
 - Phase 3 item 4 partially completed: root Makefile, deployment workflow, LFS config, runtime defaults, and docs now prefer new data/code paths.
 - Phase 4 item 1 completed: deploy workflow triggers now watch only canonical paths (`apps/web/**`, `data/derived/web/**`) plus workflow source.
+- Phase 4 item 2 partially completed: retired legacy code-directory compatibility links (`mp3-collection-web`, `go-scripts`, `mcp-server`).
 - Phase 4 item 3 partially completed: deployment and agent docs updated to canonical paths with compatibility notes where links still exist.

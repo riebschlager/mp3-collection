@@ -19,8 +19,6 @@ tmp/
 .cache/
 
 # Generated Go binaries
-go-scripts/mp3-scripts
-mcp-server/mcp-server
 tools/pipeline/mp3-scripts
 apps/mcp-server/mcp-server
 
@@ -30,9 +28,6 @@ apps/mcp-server/mcp-server
 coverage.out
 
 # Web build artifacts (also ignored inside app-level .gitignore)
-mp3-collection-web/node_modules/
-mp3-collection-web/dist/
-mp3-collection-web/.astro/
 apps/web/node_modules/
 apps/web/dist/
 apps/web/.astro/

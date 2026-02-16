@@ -192,10 +192,28 @@ var (
 	lastFMOnce       sync.Once
 	lastFMCache      []lastFMScrobble
 	lastFMErr        error
+	debugLogOnce     sync.Once
+	debugLogPath     string
 )
 
+func resolveDebugLogPath() string {
+	debugLogOnce.Do(func() {
+		if envPath := strings.TrimSpace(os.Getenv("MP3_MCP_LOG_PATH")); envPath != "" {
+			debugLogPath = filepath.Clean(envPath)
+			return
+		}
+		if root, err := detectProjectRoot(); err == nil {
+			debugLogPath = filepath.Join(root, "apps", "mcp-server", "mcp-server.log")
+			return
+		}
+		debugLogPath = filepath.Join(os.TempDir(), "mp3-mcp-server.log")
+	})
+	return debugLogPath
+}
+
 func debugMCP(format string, args ...interface{}) {
-	path := "/Users/criebschlager/Projects/mp3-collection/mcp-server/mcp-server.log"
+	path := resolveDebugLogPath()
+	_ = os.MkdirAll(filepath.Dir(path), 0o755)
 	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o644)
 	if err != nil {
 		return
@@ -777,7 +795,7 @@ func resolveAliasMapPath(root string) (path string, required bool, err error) {
 
 	candidates := []string{
 		filepath.Join(root, "data", "alias_map.json"),
-		filepath.Join(root, "mcp-server", "data", "alias_map.json"),
+		filepath.Join(root, "apps", "mcp-server", "data", "alias_map.json"),
 	}
 	for _, candidate := range candidates {
 		if _, statErr := os.Stat(candidate); statErr == nil {

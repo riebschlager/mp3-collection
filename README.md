@@ -22,9 +22,6 @@ This repo combines:
   - `data/derived/web`: web-ready JSON artifacts used by the Astro app.
 - Legacy compatibility links remain:
   - `archive/* -> data/inputs/itunes/*` for historical import batch folders (plus compiled output links)
-  - `mp3-collection-web -> apps/web`
-  - `mcp-server -> apps/mcp-server`
-  - `go-scripts -> tools/pipeline`
   - `data/*.json -> data/derived/core/*.json`
   - `lastfm -> data/inputs/lastfm`
   - `spotify -> data/inputs/spotify`

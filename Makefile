@@ -59,4 +59,4 @@ mcp:
 	./apps/mcp-server/run-mcp.sh
 
 clean-bins:
-	rm -f tools/pipeline/mp3-scripts apps/mcp-server/mcp-server go-scripts/mp3-scripts mcp-server/mcp-server
+	rm -f tools/pipeline/mp3-scripts apps/mcp-server/mcp-server
