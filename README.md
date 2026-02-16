@@ -4,15 +4,14 @@ Historical iTunes archive + listening-history analytics + static web explorer.
 
 This repo combines:
 - iTunes export compilation from many legacy files.
-- Data extraction/build pipelines (Go-first, with Python equivalents).
+- Data extraction/build pipelines in Go.
 - Last.fm + Spotify listening-history merge and derived analytics.
 - A static Astro site for browsing artists, albums, tracks, timeline, and wrapped-style yearly summaries.
 - A local MCP server for deeper music-intel analysis workflows.
 
 ## Repository Layout
 
-- `archive/`: raw iTunes export files, compiler script, compiled CSV output.
-- `scripts/`: Python extract/build scripts.
+- `archive/`: raw iTunes export files plus compiled CSV/validation outputs.
 - `go-scripts/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
 - `data/`: intermediate JSON artifacts.
 - `web-data/`: web-ready JSON artifacts used by the Astro app.
@@ -21,7 +20,6 @@ This repo combines:
 
 ## Prerequisites
 
-- Python 3.8+
 - Go 1.22+ (Go 1.21 works for `go-scripts`; `mcp-server` targets Go 1.22)
 - Node.js 20+ (matches CI workflow)
 
@@ -56,15 +54,16 @@ cd go-scripts
 ```
 
 `run_all.sh` executes:
-1. `extract-tracks`
-2. `extract-albums`
-3. `extract-artists`
-4. `fetch-lastfm`
-5. `merge-listening`
-6. `process-lastfm`
-7. `build-timeline`
-8. `build-web-data`
-9. `fetch-images`
+1. `compile-itunes-exports`
+2. `extract-tracks`
+3. `extract-albums`
+4. `extract-artists`
+5. `fetch-lastfm`
+6. `merge-listening`
+7. `process-lastfm`
+8. `build-timeline`
+9. `build-web-data`
+10. `fetch-images`
 
 You can run any step individually:
 
@@ -74,6 +73,7 @@ go run . <command>
 ```
 
 Common commands:
+- `compile-itunes-exports` (alias: `compile-exports`)
 - `extract-tracks`, `extract-albums`, `extract-artists`
 - `fetch-lastfm`
 - `merge-listening`
@@ -81,14 +81,6 @@ Common commands:
 - `build-timeline`
 - `build-web-data`
 - `fetch-images` (alias: `fetch-metadata`)
-
-### 3. Python Pipeline (legacy/compatibility)
-
-```bash
-./scripts/run_all.sh
-```
-
-This runs Python extractors plus `scripts/build_web_data.py`.
 
 ## Generated Artifact Summary
 

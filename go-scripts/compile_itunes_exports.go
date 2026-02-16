@@ -15,7 +15,6 @@ import (
 var compilerExcludeFiles = map[string]struct{}{
 	"validation_report.txt":       {},
 	"compiled_itunes_library.csv": {},
-	"compile_itunes_exports.py":   {},
 }
 
 var compilerHeaderProbeFields = []string{

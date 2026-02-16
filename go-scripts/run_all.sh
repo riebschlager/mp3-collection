@@ -16,6 +16,9 @@ fi
 
 go build -o mp3-scripts
 
+echo "==> Running compile-itunes-exports"
+./mp3-scripts compile-itunes-exports
+
 echo "==> Running extract-tracks"
 ./mp3-scripts extract-tracks
 

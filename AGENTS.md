@@ -1,21 +1,24 @@
 # System Agents
 
-This project utilizes a suite of specialized "Agents" (scripts) to manage the lifecycle of the music data. Each agent has a specific responsibility in the ETL (Extract, Transform, Load) pipeline.
+This project uses a suite of Go-based "Agents" (subcommands) to manage the lifecycle of music data.
+Each agent has a specific responsibility in the ETL (Extract, Transform, Load) pipeline.
 
 ## 🏗️ The Builder Agent
-**Script:** `scripts/build_web_data.py`
+**Script:** `go-scripts/build_web_data.go` (invoked via `mp3-scripts build-web-data`)
 
-The core intelligence of the pipeline. It transforms the flat CSV data into a relational, web-optimized structure.
+Transforms compiled CSV + playcount data into web-optimized JSON artifacts.
 
 **Capabilities:**
--   **Slugification:** Converts arbitrary text (Artist names, Albums) into URL-safe slugs.
--   **Indexing:** Creates lookup maps for artists and albums.
--   **Chunking:** Partitions data into small JSON files to ensure the web app remains performant.
--   **Sanitization:** Handles missing values, type conversions (`safe_int`, `safe_str`), and duration formatting.
+-   **Slugification:** Converts artist and album names into URL-safe slugs.
+-   **Indexing:** Creates `artists-index.json` and `albums-index.json`.
+-   **Chunking:** Partitions tracks into `web-data/chunks/tracks-###.json`.
+-   **Enrichment:** Merges listening `playCount` data onto track records.
+-   **Sanitization:** Handles missing values, type conversion, and duration formatting.
 
 **Usage:**
 ```bash
-python3 scripts/build_web_data.py
+cd go-scripts
+go run . build-web-data
 ```
 
 ---
@@ -23,13 +26,14 @@ python3 scripts/build_web_data.py
 ## 📚 The Compiler Agent
 **Script:** `go-scripts/compile_itunes_exports.go` (invoked via `mp3-scripts compile-itunes-exports`)
 
-The archivist. Its job is to ingest the chaotic collection of disjointed export files and unify them.
+Ingests disjointed iTunes export files and compiles them into one normalized CSV.
 
 **Capabilities:**
 -   **Discovery:** Recursively finds `Library.export*` and `.txt` files across nested directories.
 -   **Pattern Recognition:** Automatically detects header rows and data start points in non-standard text files.
 -   **Unification:** Merges hundreds of files into a single `compiled_itunes_library.csv`.
--   **Validation:** Filters out system files and ensures data integrity during the merge.
+-   **Deduplication:** Removes exact duplicate song rows (excluding metadata fields).
+-   **Validation:** Writes `validation_report.txt` with file format and quality stats.
 
 **Usage:**
 ```bash
@@ -41,9 +45,9 @@ go run . compile-itunes-exports
 
 ## 🔍 The Extractor Agents
 **Scripts:**
--   `scripts/extract_tracks.py`
--   `scripts/extract_albums.py`
--   `scripts/extract_artists.py`
+-   `go-scripts/extract_tracks.go`
+-   `go-scripts/extract_albums.go`
+-   `go-scripts/extract_artists.go`
 
 Specialized workers focused on isolating specific entities from the dataset.
 
@@ -53,5 +57,37 @@ Specialized workers focused on isolating specific entities from the dataset.
 
 **Usage:**
 ```bash
-python3 scripts/extract_tracks.py
+cd go-scripts
+go run . extract-tracks
+go run . extract-albums
+go run . extract-artists
+```
+
+---
+
+## 📈 Listening History Agents
+**Scripts:**
+-   `go-scripts/fetch_lastfm.go`
+-   `go-scripts/merge_listening.go`
+-   `go-scripts/process_lastfm.go`
+-   `go-scripts/build_timeline.go`
+-   `go-scripts/fetch_metadata.go`
+
+Builds and enriches listening-history data from Last.fm and Spotify sources.
+
+**Capabilities:**
+-   **Fetch:** Pulls latest scrobbles from Last.fm.
+-   **Merge:** Deduplicates and merges Last.fm + Spotify listening events.
+-   **Aggregate:** Computes track playcounts and source breakdowns.
+-   **Timeline:** Produces yearly/monthly timeline summaries.
+-   **Artwork Metadata:** Caches artist/album image URLs from Last.fm.
+
+**Usage:**
+```bash
+cd go-scripts
+go run . fetch-lastfm
+go run . merge-listening
+go run . process-lastfm
+go run . build-timeline
+go run . fetch-images
 ```

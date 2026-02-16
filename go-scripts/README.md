@@ -6,7 +6,7 @@ This directory contains the primary data pipeline for the project. The commands 
 
 - Go 1.21+ (`go-scripts/go.mod` uses `go 1.21`)
 - Repository root contains:
-  - `archive/compiled_itunes_library.csv` (from `go run . compile-itunes-exports`)
+  - `archive/` raw export files (`Library.export*`, `.txt`) for `compile-itunes-exports`
   - `spotify/Streaming_History_Audio_*.json` (for merge/timeline/playcount flow)
   - `lastfm/lastfmstats-<username>.json` (created/updated by `fetch-lastfm`)
 
@@ -41,15 +41,16 @@ cd go-scripts
 ```
 
 `run_all.sh` builds `mp3-scripts` and runs:
-1. `extract-tracks`
-2. `extract-albums`
-3. `extract-artists`
-4. `fetch-lastfm`
-5. `merge-listening`
-6. `process-lastfm`
-7. `build-timeline`
-8. `build-web-data`
-9. `fetch-images`
+1. `compile-itunes-exports`
+2. `extract-tracks`
+3. `extract-albums`
+4. `extract-artists`
+5. `fetch-lastfm`
+6. `merge-listening`
+7. `process-lastfm`
+8. `build-timeline`
+9. `build-web-data`
+10. `fetch-images`
 
 ## Command Reference
 
