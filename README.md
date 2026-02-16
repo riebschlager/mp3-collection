@@ -14,15 +14,18 @@ This repo combines:
 - `apps/web/`: Astro frontend (`public/data` symlinks to `../../../web-data`).
 - `apps/mcp-server/`: Go MCP server for data-backed music analysis tools.
 - `tools/pipeline/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
-- `archive/`: raw iTunes export files (`Library.export*`, `.txt`).
 - `data/`: intermediate pipeline artifacts plus organized input/derived datasets.
+  - `data/inputs/itunes`: raw iTunes export files (`Library.export*`, `.txt`).
   - `data/inputs/lastfm`, `data/inputs/spotify`: source listening-history inputs.
   - `data/derived/compiled`: compiled iTunes CSV + validation report.
+  - `data/derived/core`: canonical tracks/albums/artists/history/playcounts artifacts.
   - `data/derived/web`: web-ready JSON artifacts used by the Astro app.
 - Legacy compatibility links remain:
+  - `archive/* -> data/inputs/itunes/*` for historical import batch folders (plus compiled output links)
   - `mp3-collection-web -> apps/web`
   - `mcp-server -> apps/mcp-server`
   - `go-scripts -> tools/pipeline`
+  - `data/*.json -> data/derived/core/*.json`
   - `lastfm -> data/inputs/lastfm`
   - `spotify -> data/inputs/spotify`
   - `web-data -> data/derived/web`
@@ -46,8 +49,11 @@ cp .env.example .env
 - `LASTFM_USERNAME` (optional, defaults to `riebschlager`)
 - Optional path overrides for ETL commands:
   - `MP3_PROJECT_ROOT`
-  - `MP3_ARCHIVE_DIR`, `MP3_DATA_DIR`, `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, `MP3_SPOTIFY_DIR`
+  - `MP3_ARCHIVE_DIR`, `MP3_COMPILED_DIR`, `MP3_DATA_DIR`, `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, `MP3_SPOTIFY_DIR`
   - Defaults now point to the organized layout:
+    - `MP3_ARCHIVE_DIR=data/inputs/itunes`
+    - `MP3_COMPILED_DIR=data/derived/compiled`
+    - `MP3_DATA_DIR=data/derived/core`
     - `MP3_WEB_DATA_DIR=data/derived/web`
     - `MP3_LASTFM_DIR=data/inputs/lastfm`
     - `MP3_SPOTIFY_DIR=data/inputs/spotify`
@@ -126,9 +132,9 @@ Common commands:
 
 ## Generated Artifact Summary
 
-- `data/tracks.json`, `data/albums.json`, `data/artists.json`
-- `data/listening-history.json`, `data/listening-merge-report.json`
-- `data/playcounts.json`
+- `data/derived/core/tracks.json`, `data/derived/core/albums.json`, `data/derived/core/artists.json`
+- `data/derived/core/listening-history.json`, `data/derived/core/listening-merge-report.json`
+- `data/derived/core/playcounts.json`
 - `data/derived/web/chunks/tracks-*.json`
 - `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
 - `data/derived/web/timeline.json`

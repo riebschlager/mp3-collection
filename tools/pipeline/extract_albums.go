@@ -20,7 +20,7 @@ type AlbumsOutput struct {
 }
 
 func runExtractAlbums() {
-	csvPath := ArchivePath("compiled_itunes_library.csv")
+	csvPath := CompiledPath("compiled_itunes_library.csv")
 	outPath := DataPath("albums.json")
 
 	if err := os.MkdirAll(filepath.Dir(outPath), 0755); err != nil {

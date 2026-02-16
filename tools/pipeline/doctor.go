@@ -34,8 +34,9 @@ func runDoctor() {
 
 	fmt.Println("mp3-scripts doctor")
 	fmt.Printf("Root:      %s\n", Paths.Root)
-	fmt.Printf("Archive:   %s\n", Paths.ArchiveDir)
-	fmt.Printf("Data:      %s\n", Paths.DataDir)
+	fmt.Printf("Inputs:    %s\n", Paths.ArchiveDir)
+	fmt.Printf("Compiled:  %s\n", Paths.CompiledDir)
+	fmt.Printf("Core data: %s\n", Paths.DataDir)
 	fmt.Printf("Web data:  %s\n", Paths.WebDataDir)
 	fmt.Printf("Last.fm:   %s\n", Paths.LastFMDir)
 	fmt.Printf("Spotify:   %s\n\n", Paths.SpotifyDir)
@@ -46,6 +47,12 @@ func runDoctor() {
 		record("PASS", "data output dir", "writable")
 	}
 
+	if err := os.MkdirAll(Paths.CompiledDir, 0755); err != nil {
+		record("FAIL", "compiled output dir", err.Error())
+	} else {
+		record("PASS", "compiled output dir", "writable")
+	}
+
 	if err := os.MkdirAll(Paths.WebDataDir, 0755); err != nil {
 		record("FAIL", "web-data output dir", err.Error())
 	} else {
@@ -54,12 +61,12 @@ func runDoctor() {
 
 	if info, err := os.Stat(Paths.ArchiveDir); err != nil || !info.IsDir() {
 		if err == nil {
-			record("FAIL", "archive dir", "path exists but is not a directory")
+			record("FAIL", "itunes input dir", "path exists but is not a directory")
 		} else {
-			record("FAIL", "archive dir", err.Error())
+			record("FAIL", "itunes input dir", err.Error())
 		}
 	} else {
-		record("PASS", "archive dir", "found")
+		record("PASS", "itunes input dir", "found")
 	}
 
 	exportFiles, err := findAllExportFiles(Paths.ArchiveDir)
@@ -71,7 +78,7 @@ func runDoctor() {
 		record("PASS", "itunes export discovery", fmt.Sprintf("%d files found", len(exportFiles)))
 	}
 
-	if _, err := os.Stat(ArchivePath("compiled_itunes_library.csv")); err != nil {
+	if _, err := os.Stat(CompiledPath("compiled_itunes_library.csv")); err != nil {
 		record("WARN", "compiled iTunes CSV", "not found (run compile-itunes-exports)")
 	} else {
 		record("PASS", "compiled iTunes CSV", "found")

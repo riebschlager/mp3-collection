@@ -129,6 +129,6 @@ As of February 16, 2026:
 - Phase 2 item 4 completed: `doctor` command added to validate path config and required inputs.
 - Phase 3 item 1 partially completed: code directories moved to `apps/web`, `apps/mcp-server`, and `tools/pipeline`.
 - Phase 3 item 3 partially completed: legacy compatibility links added (`mp3-collection-web`, `mcp-server`, `go-scripts`).
-- Phase 3 item 2 partially completed: listening/web/compiled data moved into `data/inputs` and `data/derived`.
-- Phase 3 item 3 completed for data paths: legacy compatibility links added (`lastfm`, `spotify`, `web-data`, plus archive output links).
+- Phase 3 item 2 completed: canonical data roots moved to `data/inputs/{itunes,lastfm,spotify}` and `data/derived/{compiled,core,web}`.
+- Phase 3 item 3 completed for data paths: legacy compatibility links added (`lastfm`, `spotify`, `web-data`, archive import/output links, and `data/*.json` links to `data/derived/core`).
 - Phase 3 item 4 partially completed: root Makefile, deployment workflow, LFS config, runtime defaults, and docs now prefer new data/code paths.

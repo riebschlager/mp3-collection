@@ -239,12 +239,13 @@ func FormatDuration(seconds int) string {
 }
 
 type PathConfig struct {
-	Root       string
-	ArchiveDir string
-	DataDir    string
-	WebDataDir string
-	LastFMDir  string
-	SpotifyDir string
+	Root        string
+	ArchiveDir  string
+	CompiledDir string
+	DataDir     string
+	WebDataDir  string
+	LastFMDir   string
+	SpotifyDir  string
 }
 
 var ProjectRoot = ".."
@@ -313,12 +314,13 @@ func resolvePathConfig(discoveredRoot string) PathConfig {
 	}
 
 	return PathConfig{
-		Root:       root,
-		ArchiveDir: resolvePath(root, envOrDefault("MP3_ARCHIVE_DIR", "archive")),
-		DataDir:    resolvePath(root, envOrDefault("MP3_DATA_DIR", "data")),
-		WebDataDir: resolvePath(root, envOrDefault("MP3_WEB_DATA_DIR", "data/derived/web")),
-		LastFMDir:  resolvePath(root, envOrDefault("MP3_LASTFM_DIR", "data/inputs/lastfm")),
-		SpotifyDir: resolvePath(root, envOrDefault("MP3_SPOTIFY_DIR", "data/inputs/spotify")),
+		Root:        root,
+		ArchiveDir:  resolvePath(root, envOrDefault("MP3_ARCHIVE_DIR", "data/inputs/itunes")),
+		CompiledDir: resolvePath(root, envOrDefault("MP3_COMPILED_DIR", "data/derived/compiled")),
+		DataDir:     resolvePath(root, envOrDefault("MP3_DATA_DIR", "data/derived/core")),
+		WebDataDir:  resolvePath(root, envOrDefault("MP3_WEB_DATA_DIR", "data/derived/web")),
+		LastFMDir:   resolvePath(root, envOrDefault("MP3_LASTFM_DIR", "data/inputs/lastfm")),
+		SpotifyDir:  resolvePath(root, envOrDefault("MP3_SPOTIFY_DIR", "data/inputs/spotify")),
 	}
 }
 
@@ -348,6 +350,10 @@ func joinPath(base string, parts ...string) string {
 
 func ArchivePath(parts ...string) string {
 	return joinPath(Paths.ArchiveDir, parts...)
+}
+
+func CompiledPath(parts ...string) string {
+	return joinPath(Paths.CompiledDir, parts...)
 }
 
 func DataPath(parts ...string) string {

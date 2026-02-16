@@ -51,19 +51,19 @@ type formatDetail struct {
 }
 
 func runCompileITunesExports() {
-	baseDir := Paths.ArchiveDir
+	inputDir := Paths.ArchiveDir
 	if len(os.Args) >= 3 {
-		baseDir = strings.TrimSpace(os.Args[2])
+		inputDir = strings.TrimSpace(os.Args[2])
 	}
 
-	outputFile := filepath.Join(baseDir, "compiled_itunes_library.csv")
-	validationReport := filepath.Join(baseDir, "validation_report.txt")
+	outputFile := CompiledPath("compiled_itunes_library.csv")
+	validationReport := CompiledPath("validation_report.txt")
 
 	fmt.Println("iTunes Export Compiler")
 	fmt.Println(strings.Repeat("=", 60))
-	fmt.Printf("\nSearching for export files in: %s\n", baseDir)
+	fmt.Printf("\nSearching for export files in: %s\n", inputDir)
 
-	exportFiles, err := findAllExportFiles(baseDir)
+	exportFiles, err := findAllExportFiles(inputDir)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error discovering export files: %v\n", err)
 		os.Exit(1)
@@ -146,6 +146,11 @@ func runCompileITunesExports() {
 
 	fmt.Printf("  Found %d duplicate rows\n", stats.Duplicates)
 	fmt.Printf("  Keeping %d unique songs\n", stats.UniqueSongs)
+
+	if err := os.MkdirAll(Paths.CompiledDir, 0755); err != nil {
+		fmt.Fprintf(os.Stderr, "Error creating compiled output directory: %v\n", err)
+		os.Exit(1)
+	}
 
 	fmt.Printf("\nWriting compiled CSV to: %s\n", outputFile)
 	if err := writeCompiledCSV(outputFile, unifiedHeaders, dedupedRows); err != nil {

@@ -6,7 +6,7 @@ This directory contains the primary data pipeline for the project. The commands 
 
 - Go 1.21+ (`tools/pipeline/go.mod` uses `go 1.21`)
 - Repository root contains:
-  - `archive/` raw export files (`Library.export*`, `.txt`) for `compile-itunes-exports`
+  - `data/inputs/itunes/` raw export files (`Library.export*`, `.txt`) for `compile-itunes-exports`
   - `data/inputs/spotify/Streaming_History_Audio_*.json` (for merge/timeline/playcount flow)
   - `data/inputs/lastfm/lastfmstats-<username>.json` (created/updated by `fetch-lastfm`)
 
@@ -17,8 +17,9 @@ The CLI auto-loads `.env` by searching current and parent directories.
 - `LASTFM_API_KEY`: required for `fetch-lastfm` and `fetch-images`.
 - `LASTFM_USERNAME`: optional, defaults to `riebschlager`.
 - `MP3_PROJECT_ROOT`: optional path override for repository root.
-- `MP3_ARCHIVE_DIR`: optional path override (default: `<root>/archive`).
-- `MP3_DATA_DIR`: optional path override (default: `<root>/data`).
+- `MP3_ARCHIVE_DIR`: optional path override (default: `<root>/data/inputs/itunes`).
+- `MP3_COMPILED_DIR`: optional path override (default: `<root>/data/derived/compiled`).
+- `MP3_DATA_DIR`: optional path override (default: `<root>/data/derived/core`).
 - `MP3_WEB_DATA_DIR`: optional path override (default: `<root>/data/derived/web`).
 - `MP3_LASTFM_DIR`: optional path override (default: `<root>/data/inputs/lastfm`).
 - `MP3_SPOTIFY_DIR`: optional path override (default: `<root>/data/inputs/spotify`).
@@ -68,14 +69,14 @@ go run . <command>
 ```
 
 Available commands:
-- `compile-itunes-exports`: compiles raw exports in `archive/` into `data/derived/compiled/compiled_itunes_library.csv` and `data/derived/compiled/validation_report.txt` (via compatibility links at `archive/`)
+- `compile-itunes-exports`: compiles raw exports in `data/inputs/itunes/` into `data/derived/compiled/compiled_itunes_library.csv` and `data/derived/compiled/validation_report.txt` (also exposed via compatibility links in `archive/`)
 - `compile-exports`: alias for `compile-itunes-exports`
-- `extract-tracks`: writes `data/tracks.json`
-- `extract-artists`: writes `data/artists.json`
-- `extract-albums`: writes `data/albums.json`
+- `extract-tracks`: writes `data/derived/core/tracks.json`
+- `extract-artists`: writes `data/derived/core/artists.json`
+- `extract-albums`: writes `data/derived/core/albums.json`
 - `fetch-lastfm`: fetches latest Last.fm page (up to 200 recent tracks) and appends new scrobbles
-- `merge-listening`: merges Last.fm + Spotify into `data/listening-history.json` and merge reports
-- `process-lastfm`: builds `data/playcounts.json` and `data/derived/web/playcounts.json`
+- `merge-listening`: merges Last.fm + Spotify into `data/derived/core/listening-history.json` and merge reports
+- `process-lastfm`: builds `data/derived/core/playcounts.json` and `data/derived/web/playcounts.json`
 - `build-timeline`: builds `data/derived/web/timeline.json`
 - `build-web-data`: builds chunked/indexed web artifacts in `data/derived/web/`
 - `fetch-images`: fetches/caches Last.fm image metadata into `data/derived/web/artist-images.json` and `data/derived/web/album-images.json`
@@ -85,7 +86,7 @@ Available commands:
 ## Notes
 
 - `process-lastfm` and `build-timeline` call shared logic that rebuilds listening history when stale relative to Last.fm/Spotify source files.
-- `build-web-data` enriches tracks with playcounts from `data/playcounts.json` when available.
+- `build-web-data` enriches tracks with playcounts from `data/derived/core/playcounts.json` when available.
 - Track chunks are written as `data/derived/web/chunks/tracks-###.json` (chunk size currently 1000).
 
 ## Build Binary (optional)

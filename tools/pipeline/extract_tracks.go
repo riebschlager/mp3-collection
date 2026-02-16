@@ -20,7 +20,7 @@ type TracksOutput struct {
 }
 
 func runExtractTracks() {
-	csvPath := ArchivePath("compiled_itunes_library.csv")
+	csvPath := CompiledPath("compiled_itunes_library.csv")
 	outPath := DataPath("tracks.json")
 
 	// Ensure output dir exists
