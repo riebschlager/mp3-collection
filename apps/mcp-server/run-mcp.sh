@@ -9,11 +9,19 @@ GO_BIN="${GO_BIN:-$(command -v go || true)}"
 
 export MP3_COLLECTION_ROOT="$ROOT"
 export MP3_WEB_DATA_DIR="${MP3_WEB_DATA_DIR:-$ROOT/data/derived/web}"
+export MP3_DATA_DIR="${MP3_DATA_DIR:-$ROOT/data/derived/core}"
 export MP3_LASTFM_DIR="${MP3_LASTFM_DIR:-$ROOT/data/inputs/lastfm}"
 export MP3_ALIAS_MAP_PATH="$ROOT/apps/mcp-server/data/alias_map.json"
 export GOCACHE="${GOCACHE:-/tmp/mp3-go-build}"
 
+needs_build=0
 if [[ ! -x "$SERVER_BIN" ]]; then
+  needs_build=1
+elif find "$ROOT/apps/mcp-server" -name '*.go' -newer "$SERVER_BIN" | grep -q .; then
+  needs_build=1
+fi
+
+if [[ "$needs_build" -eq 1 ]]; then
   if [[ -z "$GO_BIN" ]]; then
     echo "Error: go binary not found in PATH. Install Go or set GO_BIN." >&2
     exit 1

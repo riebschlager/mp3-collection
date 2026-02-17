@@ -17,16 +17,20 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `music_new_discoveries`
 - `music_genre_profile`
 - `music_listening_patterns`
+- `music_streaks_and_bursts`
+- `music_year_story`
 - `music_find_dormant_returns`
 - `music_reload_alias_map`
 
 ## Data Dependencies
 
 - `<web-data>/chunks/tracks-*.json` (resolver index source)
-- `<lastfm>/lastfmstats-<username>.json` (scrobble analyses)
+- `<core>/listening-history.json` (merged Last.fm + Spotify listening events)
+- legacy fallback: `<lastfm>/lastfmstats-<username>.json` (if merged history is unavailable)
 
 Default values:
 - `<web-data>` resolves to `<root>/data/derived/web`
+- `<core>` resolves to `<root>/data/derived/core`
 - `<lastfm>` resolves to `<root>/data/inputs/lastfm`
 - `<username>` resolves to `LASTFM_USERNAME` or `riebschlager`
 
@@ -50,6 +54,8 @@ Or use launcher (builds binary if missing and sets env defaults):
 - Project root auto-discovery: walks parent directories until track chunk data is found.
 - Optional override: `MP3_COLLECTION_ROOT=/absolute/path/to/repo`.
 - Optional web-data override: `MP3_WEB_DATA_DIR=/absolute/or/relative/path/to/web-data`.
+- Optional merged-history file override: `MP3_LISTENING_HISTORY_FILE=/absolute/or/relative/path/to/listening-history.json`.
+- Optional derived-core dir override: `MP3_DATA_DIR=/absolute/or/relative/path/to/data/derived/core`.
 - Optional Last.fm dir override: `MP3_LASTFM_DIR=/absolute/or/relative/path/to/lastfm`.
 - Optional Last.fm file override: `MP3_LASTFM_FILE=/absolute/or/relative/path/to/lastfmstats-*.json`.
 - Alias file optional override: `MP3_ALIAS_MAP_PATH=/absolute/or/relative/path/to/alias_map.json`.
@@ -93,7 +99,8 @@ Supported format 2:
 1. `music_audit_match_coverage` treats ambiguous matches as unmatched.
 2. `music_compare_eras` genre shifts exclude unmatched tracks.
 3. `music_find_dormant_returns` only evaluates canonically matched scrobbles.
-4. `music_reload_alias_map` reloads in process only; it does not edit alias files.
+4. Most date-bucketed tools evaluate timestamps in UTC (timezone-aware bucketing is currently explicit in selected tools only).
+5. `music_reload_alias_map` reloads in process only; it does not edit alias files.
 
 ## Schemas
 
