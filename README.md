@@ -64,6 +64,7 @@ Other useful targets:
 - `make listening` (refresh merged listening history + playcounts)
 - `make web-data` (rebuild web JSON/chunks/indexes)
 - `make wrapped-stories` (rebuild wrapped story JSON via MCP)
+- `make wrapped-month-stories` (rebuild wrapped month story JSON via MCP)
 - `make images` (refresh artist/album image metadata)
 - `make doctor` (validate ETL path config + required inputs)
 - `make validate` (run doctor + Go builds + web build)
@@ -99,8 +100,9 @@ cd tools/pipeline
 7. `process-lastfm`
 8. `build-timeline`
 9. `build-wrapped-stories`
-10. `build-web-data`
-11. `fetch-images`
+10. `build-wrapped-month-stories`
+11. `build-web-data`
+12. `fetch-images`
 
 You can run any step individually:
 
@@ -117,6 +119,7 @@ Common commands:
 - `process-lastfm`
 - `build-timeline`
 - `build-wrapped-stories`
+- `build-wrapped-month-stories`
 - `build-web-data`
 - `fetch-images` (alias: `fetch-metadata`)
 - `doctor` (validate resolved path config and required inputs)
@@ -130,6 +133,7 @@ Common commands:
 - `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
 - `data/derived/web/timeline.json`
 - `data/derived/web/wrapped-stories.json`
+- `data/derived/web/wrapped-month-stories.json`
 - `data/derived/web/playcounts.json`, `data/derived/web/listening-merge-report.json`
 - `data/derived/web/artist-images.json`, `data/derived/web/album-images.json`
 
@@ -185,6 +189,10 @@ Current tools:
 - `music_genre_profile`
 - `music_listening_patterns`
 - `music_streaks_and_bursts`
+- `music_month_story`
 - `music_year_story`
+- `music_batch_year_story`
 - `music_find_dormant_returns`
 - `music_reload_alias_map`
+
+Most analytics tools support `source` filtering (`all|lastfm|spotify`), and discovery tools support `discoveryBaseline` (`global|source|window`).

@@ -1,0 +1,273 @@
+---
+/**
+ * Wrapped Month Story - Slide-based presentation for a specific month
+ */
+import '../../../../styles/global.css';
+import '../../../../styles/wrapped.css';
+import { readFile } from 'node:fs/promises';
+import { getTheme } from '../../../../lib/wrapped-themes';
+import { formatMonth } from '../../../../lib/wrapped-utils';
+import type {
+  MonthData,
+  MonthStoryData,
+  StoryCard,
+  Track,
+  WrappedMonthStoriesData,
+  YearData,
+} from '../../../../lib/wrapped-utils';
+
+import MonthWelcomeSlide from '../../../../components/wrapped/slides/MonthWelcomeSlide.astro';
+import BigNumberSlide from '../../../../components/wrapped/slides/BigNumberSlide.astro';
+import TopArtistSlide from '../../../../components/wrapped/slides/TopArtistSlide.astro';
+import TopTracksSlide from '../../../../components/wrapped/slides/TopTracksSlide.astro';
+import DiscoverySlide from '../../../../components/wrapped/slides/DiscoverySlide.astro';
+import PatternSlide from '../../../../components/wrapped/slides/PatternSlide.astro';
+import FunFactSlide from '../../../../components/wrapped/slides/FunFactSlide.astro';
+import BadgesSlide from '../../../../components/wrapped/slides/BadgesSlide.astro';
+import MonthThankYouSlide from '../../../../components/wrapped/slides/MonthThankYouSlide.astro';
+
+const timelineData = await import('../../../../../public/data/timeline.json');
+let monthStories: WrappedMonthStoriesData | null = null;
+try {
+  const monthStoriesPath = new URL('../../../../../public/data/wrapped-month-stories.json', import.meta.url);
+  const monthStoriesRaw = await readFile(monthStoriesPath, 'utf-8');
+  monthStories = JSON.parse(monthStoriesRaw) as WrappedMonthStoriesData;
+} catch {
+  monthStories = null;
+}
+
+function parseMonthKey(key: string): [number, string] | null {
+  const parts = key.split('-');
+  if (parts.length !== 2) return null;
+  const year = parseInt(parts[0], 10);
+  const month = parts[1];
+  if (!Number.isFinite(year) || month.length !== 2) return null;
+  return [year, month];
+}
+
+function collectMonthKeys(timeline: any, wrappedMonthStories: WrappedMonthStoriesData | null): string[] {
+  if (wrappedMonthStories?.months?.length) {
+    return wrappedMonthStories.months;
+  }
+  const keys = new Set<string>();
+  for (const yearData of timeline.years) {
+    for (const monthData of yearData.months) {
+      if (monthData.month) keys.add(monthData.month);
+    }
+  }
+  return Array.from(keys.values()).sort();
+}
+
+export async function getStaticPaths() {
+  const timelineData = await import('../../../../../public/data/timeline.json');
+  let monthStories: WrappedMonthStoriesData | null = null;
+  try {
+    const monthStoriesPath = new URL('../../../../../public/data/wrapped-month-stories.json', import.meta.url);
+    const monthStoriesRaw = await readFile(monthStoriesPath, 'utf-8');
+    monthStories = JSON.parse(monthStoriesRaw) as WrappedMonthStoriesData;
+  } catch {
+    monthStories = null;
+  }
+
+  const monthKeys = monthStories?.months?.length
+    ? monthStories.months
+    : Array.from(
+        new Set(
+          timelineData.years.flatMap((yearData: { months: Array<{ month?: string }> }) =>
+            yearData.months
+              .map((monthData) => monthData.month)
+              .filter((month): month is string => typeof month === 'string' && month.length > 0)
+          )
+        )
+      ).sort();
+
+  return monthKeys
+    .map((key) => {
+      const [yearPart, monthPart] = key.split('-');
+      const parsedYear = parseInt(yearPart, 10);
+      if (!Number.isFinite(parsedYear) || monthPart?.length !== 2) return null;
+      return {
+        params: {
+          year: parsedYear.toString(),
+          month: monthPart,
+        },
+      };
+    })
+    .filter(Boolean);
+}
+
+const { year, month } = Astro.params;
+const currentYear = parseInt(year, 10);
+const currentMonth = month?.padStart(2, '0') || '';
+const monthKey = `${currentYear}-${currentMonth}`;
+const monthLabel = formatMonth(monthKey);
+
+const yearData = timelineData.years.find((y: any) => y.year === currentYear) as YearData | undefined;
+const monthData = yearData?.months?.find((m: MonthData) => m.month === monthKey);
+const monthStory: MonthStoryData | null = monthStories?.stories?.[monthKey] ?? null;
+
+if (!monthData && !monthStory) {
+  return Astro.redirect('/wrapped/monthly');
+}
+
+const monthStorySummary = monthStory?.summary;
+const totalScrobbles = typeof monthStorySummary?.totalScrobbles === 'number'
+  ? monthStorySummary.totalScrobbles
+  : monthData?.totalScrobbles || 0;
+const uniqueTracks = typeof monthStorySummary?.uniqueTracks === 'number'
+  ? monthStorySummary.uniqueTracks
+  : monthData?.uniqueTracks || 0;
+
+const storyTopTracks: Track[] = Array.isArray(monthStory?.topTracks)
+  ? monthStory.topTracks
+      .filter((track) => typeof track.artist === 'string' && typeof track.track === 'string')
+      .map((track) => ({
+        track: track.track,
+        artist: track.artist,
+        album: '',
+        playCount: typeof track.count === 'number' ? track.count : 0,
+      }))
+      .filter((track) => track.playCount > 0)
+  : [];
+const displayTopTracks = storyTopTracks.length > 0 ? storyTopTracks : monthData?.topTracks || [];
+
+const storyMinutes = typeof monthStorySummary?.estimatedTotalMinutes === 'number'
+  ? Math.round(monthStorySummary.estimatedTotalMinutes)
+  : undefined;
+const storyActiveDays = typeof monthStorySummary?.activeDays === 'number' ? monthStorySummary.activeDays : undefined;
+const storyNightShare = typeof monthStorySummary?.nightPlayShare === 'number'
+  ? monthStorySummary.nightPlayShare
+  : undefined;
+const storyPeakDay = monthStory?.streaksAndBursts?.topBurstDays?.[0];
+const discoverySummary = monthStory?.discoveries?.summary;
+const storyInsightBullets = Array.isArray(monthStory?.insightBullets) ? monthStory.insightBullets : [];
+const storyCards: StoryCard[] = Array.isArray(monthStory?.storyCards) ? monthStory.storyCards : [];
+const topArtist = monthStory?.topArtists?.[0];
+
+const monthAsYearData: YearData = {
+  year: currentYear,
+  totalScrobbles,
+  uniqueTracks,
+  topTracks: displayTopTracks,
+  months: monthData ? [monthData] : [],
+};
+
+const allMonthKeys = collectMonthKeys(timelineData, monthStories).sort();
+const monthIndex = allMonthKeys.indexOf(monthKey);
+const prevMonth = monthIndex > 0 ? allMonthKeys[monthIndex - 1] : undefined;
+const nextMonth = monthIndex >= 0 && monthIndex < allMonthKeys.length - 1 ? allMonthKeys[monthIndex + 1] : undefined;
+
+const yearMonths = yearData?.months || [];
+const theme = getTheme(currentYear);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your {monthLabel} Wrapped</title>
+  </head>
+  <body class="overflow-hidden">
+    <div class={`wrapped-container bg-gradient-to-br ${theme.gradient} text-white`}>
+      <div class="wrapped-slide">
+        <MonthWelcomeSlide monthLabel={monthLabel} totalScrobbles={totalScrobbles} />
+      </div>
+
+      <div class="wrapped-slide">
+        <BigNumberSlide
+          totalScrobbles={totalScrobbles}
+          totalMinutes={storyMinutes}
+          activeDays={storyActiveDays}
+        />
+      </div>
+
+      {displayTopTracks.length > 0 && (
+        <div class="wrapped-slide">
+          <TopArtistSlide topTracks={displayTopTracks} topArtist={topArtist} />
+        </div>
+      )}
+
+      {displayTopTracks.length >= 5 && (
+        <div class="wrapped-slide">
+          <TopTracksSlide topTracks={displayTopTracks} />
+        </div>
+      )}
+
+      <div class="wrapped-slide">
+        <DiscoverySlide
+          uniqueTracks={uniqueTracks}
+          totalScrobbles={totalScrobbles}
+          newArtistCount={discoverySummary?.newArtistCount}
+          newTrackCount={discoverySummary?.newTrackCount}
+        />
+      </div>
+
+      {yearMonths.length > 0 && (
+        <div class="wrapped-slide">
+          <PatternSlide months={yearMonths} nightPlayShare={storyNightShare} peakDay={storyPeakDay} />
+        </div>
+      )}
+
+      <div class="wrapped-slide">
+        <FunFactSlide yearData={monthAsYearData} insightBullets={storyInsightBullets} storyCards={storyCards} />
+      </div>
+
+      <div class="wrapped-slide">
+        <BadgesSlide yearData={monthAsYearData} storyCards={storyCards} />
+      </div>
+
+      <div class="wrapped-slide">
+        <MonthThankYouSlide
+          monthLabel={monthLabel}
+          year={currentYear}
+          totalScrobbles={totalScrobbles}
+          uniqueTracks={uniqueTracks}
+          prevMonth={prevMonth}
+          nextMonth={nextMonth}
+        />
+      </div>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        }
+      );
+
+      document.querySelectorAll('.slide-content').forEach((el) => {
+        observer.observe(el);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        const container = document.querySelector('.wrapped-container');
+        if (!container) return;
+
+        const slideHeight = window.innerHeight;
+        const currentScroll = container.scrollTop;
+
+        if (e.key === 'ArrowDown' || e.key === ' ') {
+          e.preventDefault();
+          container.scrollTo({
+            top: currentScroll + slideHeight,
+            behavior: 'smooth',
+          });
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          container.scrollTo({
+            top: currentScroll - slideHeight,
+            behavior: 'smooth',
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

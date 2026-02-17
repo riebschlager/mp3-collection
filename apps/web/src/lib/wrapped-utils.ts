@@ -69,6 +69,7 @@ export interface StorySummary {
 export interface YearStoryData {
   year: number;
   source?: string;
+  discoveryBaseline?: 'global' | 'source' | 'window';
   summary?: StorySummary;
   topArtists?: StoryArtist[];
   topTracks?: StoryTrack[];
@@ -95,9 +96,52 @@ export interface WrappedStoriesData {
   generatedAt: string;
   timezone: string;
   source: string;
+  discoveryBaseline?: 'global' | 'source' | 'window';
   topN: number;
   years: number[];
   stories: Record<string, YearStoryData>;
+  batchSummary?: Record<string, unknown>;
+}
+
+export interface MonthStoryData {
+  year: number;
+  month: number;
+  period: string;
+  source?: string;
+  discoveryBaseline?: 'global' | 'source' | 'window';
+  summary?: StorySummary;
+  topArtists?: StoryArtist[];
+  topTracks?: StoryTrack[];
+  discoveries?: {
+    summary?: {
+      newArtistCount?: number;
+      newTrackCount?: number;
+    };
+  };
+  streaksAndBursts?: {
+    summary?: {
+      nightPlayShare?: number;
+    };
+    topBurstDays?: Array<{
+      date?: string;
+      plays?: number;
+    }>;
+  };
+  monthOverMonth?: Record<string, unknown>;
+  dormantReturns?: Record<string, unknown>;
+  storyCards?: StoryCard[];
+  insightBullets?: string[];
+}
+
+export interface WrappedMonthStoriesData {
+  generatedAt: string;
+  timezone: string;
+  source: string;
+  discoveryBaseline?: 'global' | 'source' | 'window';
+  topN: number;
+  months: string[];
+  stories: Record<string, MonthStoryData>;
+  summary?: Record<string, unknown>;
 }
 
 /**

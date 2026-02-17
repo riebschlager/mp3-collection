@@ -67,12 +67,20 @@ const years = getAvailableYears(timelineData);
       </div>
 
       <div class="text-center">
-        <a
-          href={buildUrl('history')}
-          class="inline-block px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm font-medium hover:bg-white/30 transition-colors"
-        >
-          View Full Timeline
-        </a>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <a
+            href={buildUrl('wrapped/monthly')}
+            class="inline-block px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm font-medium hover:bg-white/30 transition-colors"
+          >
+            Browse monthly wrapped
+          </a>
+          <a
+            href={buildUrl('history')}
+            class="inline-block px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm font-medium hover:bg-white/30 transition-colors"
+          >
+            View Full Timeline
+          </a>
+        </div>
       </div>
     </div>
   </div>

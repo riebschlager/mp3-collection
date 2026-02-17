@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-02-17T00:57:12Z",
+  "generatedAt": "2026-02-17T01:29:54Z",
   "timezone": "UTC",
   "source": "all",
+  "discoveryBaseline": "global",
   "topN": 10,
   "years": [
     2005,
@@ -30,6 +31,7 @@
   "stories": {
     "2005": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Morphine",
@@ -131,6 +133,7 @@
           "newTrackCount": 2604
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -164,6 +167,7 @@
         "29% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2005-12-31",
         "source": "all",
         "startDate": "2005-01-01",
@@ -698,6 +702,7 @@
       },
       "summary": {
         "activeDays": 21,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 3532,
         "estimatedTotalMinutes": 12362,
         "measuredSpotifyMinutes": 0,
@@ -984,6 +989,7 @@
     },
     "2006": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Yo La Tengo",
@@ -1085,6 +1091,7 @@
           "newTrackCount": 1621
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -1118,6 +1125,7 @@
         "26% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2006-12-31",
         "source": "all",
         "startDate": "2006-01-01",
@@ -1588,6 +1596,7 @@
       },
       "summary": {
         "activeDays": 28,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 2510,
         "estimatedTotalMinutes": 8785,
         "measuredSpotifyMinutes": 0,
@@ -2046,6 +2055,7 @@
     },
     "2007": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "The Clash",
@@ -2147,6 +2157,7 @@
           "newTrackCount": 4180
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -2180,6 +2191,7 @@
         "20% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2007-12-31",
         "source": "all",
         "startDate": "2007-01-01",
@@ -2741,6 +2753,7 @@
       },
       "summary": {
         "activeDays": 183,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 6790,
         "estimatedTotalMinutes": 23765,
         "measuredSpotifyMinutes": 0,
@@ -3199,6 +3212,7 @@
     },
     "2008": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Dead Hollywood Stars",
@@ -3300,6 +3314,7 @@
           "newTrackCount": 4668
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -3333,6 +3348,7 @@
         "10% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2008-12-31",
         "source": "all",
         "startDate": "2008-01-01",
@@ -3894,6 +3910,7 @@
       },
       "summary": {
         "activeDays": 234,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 8462,
         "estimatedTotalMinutes": 29617,
         "measuredSpotifyMinutes": 0,
@@ -4352,6 +4369,7 @@
     },
     "2009": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "The William Blakes",
@@ -4453,6 +4471,7 @@
           "newTrackCount": 3681
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -4486,6 +4505,7 @@
         "18% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2009-12-31",
         "source": "all",
         "startDate": "2009-01-01",
@@ -5047,6 +5067,7 @@
       },
       "summary": {
         "activeDays": 177,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 6475,
         "estimatedTotalMinutes": 22662.5,
         "measuredSpotifyMinutes": 0,
@@ -5505,6 +5526,7 @@
     },
     "2010": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Rock Plaza Central",
@@ -5606,6 +5628,7 @@
           "newTrackCount": 2338
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -5639,6 +5662,7 @@
         "13% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2010-12-31",
         "source": "all",
         "startDate": "2010-01-01",
@@ -6200,6 +6224,7 @@
       },
       "summary": {
         "activeDays": 170,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 5166,
         "estimatedTotalMinutes": 18081,
         "measuredSpotifyMinutes": 0,
@@ -6658,6 +6683,7 @@
     },
     "2011": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Two Fingers",
@@ -6759,6 +6785,7 @@
           "newTrackCount": 4399
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -6792,6 +6819,7 @@
         "18% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2011-12-31",
         "source": "all",
         "startDate": "2011-01-01",
@@ -7358,6 +7386,7 @@
       },
       "summary": {
         "activeDays": 231,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 8608,
         "estimatedTotalMinutes": 30173.02,
         "measuredSpotifyMinutes": 45.02,
@@ -7821,6 +7850,7 @@
     },
     "2012": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Lana Del Rey",
@@ -7922,6 +7952,7 @@
           "newTrackCount": 1637
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -7955,6 +7986,7 @@
         "32% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2012-12-31",
         "source": "all",
         "startDate": "2012-01-01",
@@ -8521,6 +8553,7 @@
       },
       "summary": {
         "activeDays": 175,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 4047,
         "estimatedTotalMinutes": 14168.02,
         "measuredSpotifyMinutes": 3.52,
@@ -8984,6 +9017,7 @@
     },
     "2013": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Amor de Días",
@@ -9085,6 +9119,7 @@
           "newTrackCount": 1774
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -9118,6 +9153,7 @@
         "34% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2013-12-31",
         "source": "all",
         "startDate": "2013-01-01",
@@ -9679,6 +9715,7 @@
       },
       "summary": {
         "activeDays": 119,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 3614,
         "estimatedTotalMinutes": 12649,
         "measuredSpotifyMinutes": 0,
@@ -10137,6 +10174,7 @@
     },
     "2014": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "alt-J",
@@ -10238,6 +10276,7 @@
           "newTrackCount": 1782
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -10271,6 +10310,7 @@
         "17% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2014-12-31",
         "source": "all",
         "startDate": "2014-01-01",
@@ -10837,6 +10877,7 @@
       },
       "summary": {
         "activeDays": 151,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 4148,
         "estimatedTotalMinutes": 14538.15,
         "measuredSpotifyMinutes": 20.15,
@@ -11300,6 +11341,7 @@
     },
     "2015": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "White Noise Therapy",
@@ -11401,6 +11443,7 @@
           "newTrackCount": 1786
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -11434,6 +11477,7 @@
         "20% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2015-12-31",
         "source": "all",
         "startDate": "2015-01-01",
@@ -12000,6 +12044,7 @@
       },
       "summary": {
         "activeDays": 161,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 4232,
         "estimatedTotalMinutes": 16616.33,
         "measuredSpotifyMinutes": 1804.33,
@@ -12463,6 +12508,7 @@
     },
     "2016": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Leon Bridges",
@@ -12564,6 +12610,7 @@
           "newTrackCount": 2884
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -12597,6 +12644,7 @@
         "26% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2016-12-31",
         "source": "all",
         "startDate": "2016-01-01",
@@ -13188,6 +13236,7 @@
       },
       "summary": {
         "activeDays": 148,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 704,
         "estimatedTotalMinutes": 53501.36,
         "measuredSpotifyMinutes": 51037.36,
@@ -13651,6 +13700,7 @@
     },
     "2017": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Datsik",
@@ -13752,6 +13802,7 @@
           "newTrackCount": 753
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -13785,6 +13836,7 @@
         "40% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2017-12-31",
         "source": "all",
         "startDate": "2017-01-01",
@@ -14346,6 +14398,7 @@
       },
       "summary": {
         "activeDays": 130,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 8072.73,
         "measuredSpotifyMinutes": 8072.73,
@@ -14804,6 +14857,7 @@
     },
     "2018": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "DILLY DALLY",
@@ -14905,6 +14959,7 @@
           "newTrackCount": 1263
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -14959,6 +15014,7 @@
         "26% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2018-12-31",
         "source": "all",
         "startDate": "2018-01-01",
@@ -15526,6 +15582,7 @@
       },
       "summary": {
         "activeDays": 169,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 13048.78,
         "measuredSpotifyMinutes": 13048.78,
@@ -15984,6 +16041,7 @@
     },
     "2019": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Crumb",
@@ -16085,6 +16143,7 @@
           "newTrackCount": 1602
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -16215,6 +16274,7 @@
         "22% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2019-12-31",
         "source": "all",
         "startDate": "2019-01-01",
@@ -16782,6 +16842,7 @@
       },
       "summary": {
         "activeDays": 164,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 14541.53,
         "measuredSpotifyMinutes": 14541.53,
@@ -17240,6 +17301,7 @@
     },
     "2020": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Periphery",
@@ -17341,6 +17403,7 @@
           "newTrackCount": 1978
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -17395,6 +17458,7 @@
         "27% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2020-12-31",
         "source": "all",
         "startDate": "2020-01-01",
@@ -17962,6 +18026,7 @@
       },
       "summary": {
         "activeDays": 221,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 18935.48,
         "measuredSpotifyMinutes": 18935.48,
@@ -18420,6 +18485,7 @@
     },
     "2021": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "The Techniques",
@@ -18521,6 +18587,7 @@
           "newTrackCount": 1715
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -18594,6 +18661,7 @@
         "32% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2021-12-31",
         "source": "all",
         "startDate": "2021-01-01",
@@ -19161,6 +19229,7 @@
       },
       "summary": {
         "activeDays": 249,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 16087.17,
         "measuredSpotifyMinutes": 16087.17,
@@ -19619,6 +19688,7 @@
     },
     "2022": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Genesis Owusu",
@@ -19720,6 +19790,7 @@
           "newTrackCount": 1443
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -19831,6 +19902,7 @@
         "31% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2022-12-31",
         "source": "all",
         "startDate": "2022-01-01",
@@ -20398,6 +20470,7 @@
       },
       "summary": {
         "activeDays": 252,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 12403.6,
         "measuredSpotifyMinutes": 12403.6,
@@ -20856,6 +20929,7 @@
     },
     "2023": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "FKJ",
@@ -20957,6 +21031,7 @@
           "newTrackCount": 1660
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -21087,6 +21162,7 @@
         "48% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2023-12-31",
         "source": "all",
         "startDate": "2023-01-01",
@@ -21654,6 +21730,7 @@
       },
       "summary": {
         "activeDays": 250,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 16622.53,
         "measuredSpotifyMinutes": 16622.53,
@@ -22112,6 +22189,7 @@
     },
     "2024": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Arc De Soleil",
@@ -22213,6 +22291,7 @@
           "newTrackCount": 3060
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -22343,6 +22422,7 @@
         "42% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2024-12-31",
         "source": "all",
         "startDate": "2024-01-01",
@@ -22910,6 +22990,7 @@
       },
       "summary": {
         "activeDays": 295,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 0,
         "estimatedTotalMinutes": 23630.68,
         "measuredSpotifyMinutes": 23630.68,
@@ -23368,6 +23449,7 @@
     },
     "2025": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Alabaster DePlume",
@@ -23469,6 +23551,7 @@
           "newTrackCount": 2385
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -23599,6 +23682,7 @@
         "56% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2025-12-31",
         "source": "all",
         "startDate": "2025-01-01",
@@ -24236,6 +24320,7 @@
       },
       "summary": {
         "activeDays": 281,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 2174,
         "estimatedTotalMinutes": 30621.13,
         "measuredSpotifyMinutes": 23012.13,
@@ -24699,6 +24784,7 @@
     },
     "2026": {
       "discoveries": {
+        "discoveryBaseline": "global",
         "newArtists": [
           {
             "artist": "Danalogue",
@@ -24729,11 +24815,11 @@
             "count": 4
           },
           {
-            "artist": "Marty Stuart And His Fabulous Superlatives",
+            "artist": "Marty Stuart and His Fabulous Superlatives",
             "count": 3
           },
           {
-            "artist": "Marty Stuart and His Fabulous Superlatives",
+            "artist": "Marty Stuart And His Fabulous Superlatives",
             "count": 3
           },
           {
@@ -24800,6 +24886,7 @@
           "newTrackCount": 313
         }
       },
+      "discoveryBaseline": "global",
       "dormantReturns": {
         "notes": [
           "strictness=medium minDormancyDays=3650 minPreReturnPlays=2 minReturnPlays=2",
@@ -24930,6 +25017,7 @@
         "57% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
+        "discoveryBaseline": "global",
         "endDate": "2026-12-31",
         "source": "all",
         "startDate": "2026-01-01",
@@ -25602,6 +25690,7 @@
       },
       "summary": {
         "activeDays": 40,
+        "discoveryBaseline": "global",
         "estimatedFromNonSpotify": 1035,
         "estimatedTotalMinutes": 6203.59,
         "measuredSpotifyMinutes": 2581.09,
@@ -26063,5 +26152,65 @@
         "trackOverlapJaccard": 0.0733
       }
     }
+  },
+  "batchSummary": {
+    "discoveryBaseline": "global",
+    "failedCount": 0,
+    "failedYears": [],
+    "generatedCount": 22,
+    "generatedYears": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "includeDormantReturns": true,
+    "requestedCount": 22,
+    "requestedYears": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "sessionGapMinutes": 30,
+    "source": "all",
+    "timezone": "UTC",
+    "topN": 10
   }
 }

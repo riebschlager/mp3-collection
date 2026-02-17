@@ -15,18 +15,21 @@ import (
 )
 
 const (
-	defaultWrappedTopN     = 10
-	defaultWrappedTimezone = "UTC"
-	defaultWrappedSource   = "all"
+	defaultWrappedTopN              = 10
+	defaultWrappedTimezone          = "UTC"
+	defaultWrappedSource            = "all"
+	defaultWrappedDiscoveryBaseline = "global"
 )
 
 type wrappedStoriesData struct {
-	GeneratedAt string                            `json:"generatedAt"`
-	Timezone    string                            `json:"timezone"`
-	Source      string                            `json:"source"`
-	TopN        int                               `json:"topN"`
-	Years       []int                             `json:"years"`
-	Stories     map[string]map[string]interface{} `json:"stories"`
+	GeneratedAt       string                            `json:"generatedAt"`
+	Timezone          string                            `json:"timezone"`
+	Source            string                            `json:"source"`
+	DiscoveryBaseline string                            `json:"discoveryBaseline"`
+	TopN              int                               `json:"topN"`
+	Years             []int                             `json:"years"`
+	Stories           map[string]map[string]interface{} `json:"stories"`
+	BatchSummary      map[string]interface{}            `json:"batchSummary,omitempty"`
 }
 
 type mcpRPCResponse struct {
@@ -70,6 +73,7 @@ func runBuildWrappedStories() {
 		timezone = defaultWrappedTimezone
 	}
 	source := normalizeWrappedSource(os.Getenv("MP3_WRAPPED_SOURCE"))
+	discoveryBaseline := normalizeWrappedDiscoveryBaseline(os.Getenv("MP3_WRAPPED_DISCOVERY_BASELINE"))
 
 	if _, err := os.Stat(timelinePath); os.IsNotExist(err) {
 		fmt.Println("Timeline data missing; running build-timeline first...")
@@ -98,7 +102,7 @@ func runBuildWrappedStories() {
 	}
 
 	fmt.Printf("Generating wrapped stories for %d years (%d-%d)\n", len(years), years[0], years[len(years)-1])
-	fmt.Printf("Timezone=%s Source=%s TopN=%d\n\n", timezone, source, topN)
+	fmt.Printf("Timezone=%s Source=%s DiscoveryBaseline=%s TopN=%d\n\n", timezone, source, discoveryBaseline, topN)
 
 	client, err := startMCPProcessClient()
 	if err != nil {
@@ -107,24 +111,47 @@ func runBuildWrappedStories() {
 	}
 	defer client.Close()
 
-	stories := make(map[string]map[string]interface{}, len(years))
-	for idx, year := range years {
-		fmt.Printf("  [%d/%d] %d\n", idx+1, len(years), year)
-		story, err := client.callYearStory(year, topN, timezone, source)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error generating story for %d: %v\n", year, err)
-			os.Exit(1)
+	fmt.Println("Running batch MCP request...")
+	stories, batchSummary, err := client.callBatchYearStory(years, topN, timezone, source, discoveryBaseline)
+	if err != nil {
+		fmt.Printf("Batch MCP request failed: %v\n", err)
+		fmt.Println("Falling back to per-year MCP requests...")
+		stories = make(map[string]map[string]interface{}, len(years))
+		for idx, year := range years {
+			fmt.Printf("  [%d/%d] %d\n", idx+1, len(years), year)
+			story, fallbackErr := client.callYearStory(year, topN, timezone, source, discoveryBaseline)
+			if fallbackErr != nil {
+				fmt.Fprintf(os.Stderr, "Error generating story for %d: %v\n", year, fallbackErr)
+				os.Exit(1)
+			}
+			stories[strconv.Itoa(year)] = story
 		}
-		stories[strconv.Itoa(year)] = story
+	} else if len(stories) < len(years) {
+		fmt.Printf("Batch MCP request returned %d/%d years; filling gaps via per-year fallback...\n", len(stories), len(years))
+		for _, year := range years {
+			key := strconv.Itoa(year)
+			if _, exists := stories[key]; exists {
+				continue
+			}
+			fmt.Printf("  [fallback] %d\n", year)
+			story, fallbackErr := client.callYearStory(year, topN, timezone, source, discoveryBaseline)
+			if fallbackErr != nil {
+				fmt.Fprintf(os.Stderr, "Error generating story for %d: %v\n", year, fallbackErr)
+				os.Exit(1)
+			}
+			stories[key] = story
+		}
 	}
 
 	payload := wrappedStoriesData{
-		GeneratedAt: time.Now().UTC().Format(time.RFC3339),
-		Timezone:    timezone,
-		Source:      source,
-		TopN:        topN,
-		Years:       years,
-		Stories:     stories,
+		GeneratedAt:       time.Now().UTC().Format(time.RFC3339),
+		Timezone:          timezone,
+		Source:            source,
+		DiscoveryBaseline: discoveryBaseline,
+		TopN:              topN,
+		Years:             years,
+		Stories:           stories,
+		BatchSummary:      batchSummary,
 	}
 
 	if err := os.MkdirAll(filepath.Dir(outputPath), 0o755); err != nil {
@@ -145,6 +172,19 @@ func normalizeWrappedSource(raw string) string {
 	default:
 		fmt.Printf("Warning: unsupported MP3_WRAPPED_SOURCE=%q; defaulting to %q\n", raw, defaultWrappedSource)
 		return defaultWrappedSource
+	}
+}
+
+func normalizeWrappedDiscoveryBaseline(raw string) string {
+	baseline := strings.ToLower(strings.TrimSpace(raw))
+	switch baseline {
+	case "", "global":
+		return "global"
+	case "source", "window":
+		return baseline
+	default:
+		fmt.Printf("Warning: unsupported MP3_WRAPPED_DISCOVERY_BASELINE=%q; defaulting to %q\n", raw, defaultWrappedDiscoveryBaseline)
+		return defaultWrappedDiscoveryBaseline
 	}
 }
 
@@ -226,16 +266,10 @@ func (c *mcpProcessClient) Close() {
 	}
 }
 
-func (c *mcpProcessClient) callYearStory(year, topN int, timezone, source string) (map[string]interface{}, error) {
+func (c *mcpProcessClient) callTool(name string, arguments map[string]interface{}) (map[string]interface{}, error) {
 	resultRaw, err := c.call("tools/call", map[string]interface{}{
-		"name": "music_year_story",
-		"arguments": map[string]interface{}{
-			"year":                  year,
-			"topN":                  topN,
-			"timezone":              timezone,
-			"source":                source,
-			"includeDormantReturns": true,
-		},
+		"name":      name,
+		"arguments": arguments,
 	})
 	if err != nil {
 		return nil, err
@@ -257,6 +291,60 @@ func (c *mcpProcessClient) callYearStory(year, topN int, timezone, source string
 	}
 
 	return toolResult.StructuredContent, nil
+}
+
+func (c *mcpProcessClient) callYearStory(year, topN int, timezone, source, discoveryBaseline string) (map[string]interface{}, error) {
+	return c.callTool("music_year_story", map[string]interface{}{
+		"year":                  year,
+		"topN":                  topN,
+		"timezone":              timezone,
+		"source":                source,
+		"discoveryBaseline":     discoveryBaseline,
+		"includeDormantReturns": true,
+	})
+}
+
+func (c *mcpProcessClient) callMonthStory(year, month, topN int, timezone, source, discoveryBaseline string, includeDormantReturns bool) (map[string]interface{}, error) {
+	return c.callTool("music_month_story", map[string]interface{}{
+		"year":                  year,
+		"month":                 month,
+		"topN":                  topN,
+		"timezone":              timezone,
+		"source":                source,
+		"discoveryBaseline":     discoveryBaseline,
+		"includeDormantReturns": includeDormantReturns,
+	})
+}
+
+func (c *mcpProcessClient) callBatchYearStory(years []int, topN int, timezone, source, discoveryBaseline string) (map[string]map[string]interface{}, map[string]interface{}, error) {
+	toolResult, err := c.callTool("music_batch_year_story", map[string]interface{}{
+		"years":                 years,
+		"topN":                  topN,
+		"timezone":              timezone,
+		"source":                source,
+		"discoveryBaseline":     discoveryBaseline,
+		"includeDormantReturns": true,
+	})
+	if err != nil {
+		return nil, nil, err
+	}
+
+	storiesByYearRaw, ok := toolResult["storiesByYear"].(map[string]interface{})
+	if !ok || len(storiesByYearRaw) == 0 {
+		return nil, nil, fmt.Errorf("batch tool response missing storiesByYear")
+	}
+
+	stories := make(map[string]map[string]interface{}, len(storiesByYearRaw))
+	for key, raw := range storiesByYearRaw {
+		story, ok := raw.(map[string]interface{})
+		if !ok {
+			return nil, nil, fmt.Errorf("batch tool response has invalid story payload for year %s", key)
+		}
+		stories[key] = story
+	}
+
+	summary, _ := toolResult["summary"].(map[string]interface{})
+	return stories, summary, nil
 }
 
 func (c *mcpProcessClient) notify(method string, params interface{}) error {

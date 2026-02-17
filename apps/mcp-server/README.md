@@ -18,11 +18,14 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `music_genre_profile`
 - `music_listening_patterns`
 - `music_streaks_and_bursts`
+- `music_month_story`
 - `music_year_story`
+- `music_batch_year_story`
 - `music_find_dormant_returns`
 - `music_reload_alias_map`
 
 Most analytics tools accept optional `source` filtering: `all` (default), `lastfm`, or `spotify`.
+Discovery-oriented tools (`music_new_discoveries`, `music_month_story`, `music_year_story`, `music_batch_year_story`) also accept `discoveryBaseline`: `global` (default), `source`, or `window`.
 
 ## Data Dependencies
 

@@ -57,8 +57,9 @@ cd tools/pipeline
 7. `process-lastfm`
 8. `build-timeline`
 9. `build-wrapped-stories`
-10. `build-web-data`
-11. `fetch-images`
+10. `build-wrapped-month-stories`
+11. `build-web-data`
+12. `fetch-images`
 
 ## Command Reference
 
@@ -79,7 +80,8 @@ Available commands:
 - `merge-listening`: merges Last.fm + Spotify into `data/derived/core/listening-history.json` and merge reports
 - `process-lastfm`: builds `data/derived/core/playcounts.json` and `data/derived/web/playcounts.json`
 - `build-timeline`: builds `data/derived/web/timeline.json`
-- `build-wrapped-stories`: calls MCP `music_year_story` for each timeline year and writes `data/derived/web/wrapped-stories.json`
+- `build-wrapped-stories`: calls MCP `music_batch_year_story` (with per-year fallback) and writes `data/derived/web/wrapped-stories.json`
+- `build-wrapped-month-stories`: calls MCP `music_month_story` for each available month and writes `data/derived/web/wrapped-month-stories.json`
 - `build-web-data`: builds chunked/indexed web artifacts in `data/derived/web/`
 - `fetch-images`: fetches/caches Last.fm image metadata into `data/derived/web/artist-images.json` and `data/derived/web/album-images.json`
 - `fetch-metadata`: alias for `fetch-images`
@@ -91,6 +93,9 @@ Available commands:
 - `build-wrapped-stories` launches the local MCP server (`apps/mcp-server/run-mcp.sh`) and can be tuned with:
   - `MP3_WRAPPED_TIMEZONE` (default: `UTC`)
   - `MP3_WRAPPED_SOURCE` (default: `all`, options: `all|lastfm|spotify`)
+  - `MP3_WRAPPED_DISCOVERY_BASELINE` (default: `global`, options: `global|source|window`)
+- `build-wrapped-month-stories` shares the same env vars above and also supports:
+  - `MP3_WRAPPED_MONTH_INCLUDE_DORMANT` (default: `false`, options: `true|false`)
 - `build-web-data` enriches tracks with playcounts from `data/derived/core/playcounts.json` when available.
 - Track chunks are written as `data/derived/web/chunks/tracks-###.json` (chunk size currently 1000).
 

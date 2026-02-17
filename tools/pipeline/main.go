@@ -41,6 +41,8 @@ func main() {
 		runBuildTimeline()
 	case "build-wrapped-stories":
 		runBuildWrappedStories()
+	case "build-wrapped-month-stories":
+		runBuildWrappedMonthStories()
 	case "build-web-data":
 		runBuildWebData()
 	case "doctor":
@@ -66,6 +68,7 @@ func printUsage() {
 	fmt.Println("  fetch-images      Fetch artist/album image metadata from Last.fm")
 	fmt.Println("  build-timeline    Build timeline data from merged history to data/derived/web/timeline.json")
 	fmt.Println("  build-wrapped-stories Build wrapped story artifact from MCP year-story tool to data/derived/web/wrapped-stories.json")
+	fmt.Println("  build-wrapped-month-stories Build wrapped month story artifact from MCP month-story tool to data/derived/web/wrapped-month-stories.json")
 	fmt.Println("  build-web-data    Build optimized web data to data/derived/web/")
 	fmt.Println("  doctor            Validate path config, required inputs, and output directories")
 }

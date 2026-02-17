@@ -84,6 +84,7 @@ const recapTotalScrobbles = typeof storySummary?.totalScrobbles === 'number'
 const recapUniqueTracks = typeof storySummary?.uniqueTracks === 'number'
   ? storySummary.uniqueTracks
   : yearData.uniqueTracks;
+const firstMonthKey = yearData.months?.[0]?.month;
 
 // Get theme for this year
 const theme = getTheme(currentYear);
@@ -167,6 +168,7 @@ const prevYear = currentIndex > 0 ? allYears[currentIndex - 1] : undefined;
           uniqueTracks={recapUniqueTracks}
           nextYear={nextYear}
           prevYear={prevYear}
+          monthlyMonthKey={firstMonthKey}
         />
       </div>
     </div>

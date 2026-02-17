@@ -22,7 +22,18 @@ const topArtistName = topArtist?.artist || fallbackTopArtist?.artist || 'Unknown
 const topArtistCount = typeof topArtist?.count === 'number'
   ? topArtist.count
   : fallbackTopArtist?.playCount || 0;
-const favoriteTrack = fallbackTopArtist?.topTrack || topTracks[0]?.track || '';
+
+function normalizeArtistName(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+const topArtistTrack = topTracks.find((track) =>
+  normalizeArtistName(track.artist) === normalizeArtistName(topArtistName)
+)?.track;
+
+const favoriteTrack = topArtist
+  ? topArtistTrack || ''
+  : topArtistTrack || fallbackTopArtist?.topTrack || topTracks[0]?.track || '';
 ---
 
 <div class="slide-content text-center">

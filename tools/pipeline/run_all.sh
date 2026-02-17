@@ -43,6 +43,9 @@ echo "==> Running build-timeline"
 echo "==> Running build-wrapped-stories"
 ./mp3-scripts build-wrapped-stories
 
+echo "==> Running build-wrapped-month-stories"
+./mp3-scripts build-wrapped-month-stories
+
 echo "==> Running build-web-data"
 ./mp3-scripts build-web-data
 
