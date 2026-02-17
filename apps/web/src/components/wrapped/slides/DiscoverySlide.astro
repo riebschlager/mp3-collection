@@ -8,11 +8,14 @@ import { getVarietyScore } from '../../../lib/wrapped-utils';
 export interface Props {
   uniqueTracks: number;
   totalScrobbles: number;
+  newArtistCount?: number;
+  newTrackCount?: number;
 }
 
-const { uniqueTracks, totalScrobbles } = Astro.props;
+const { uniqueTracks, totalScrobbles, newArtistCount, newTrackCount } = Astro.props;
 
 const varietyScore = getVarietyScore(uniqueTracks, totalScrobbles);
+const hasStoryDiscoveries = typeof newArtistCount === 'number' || typeof newTrackCount === 'number';
 ---
 
 <div class="slide-content text-center">
@@ -26,6 +29,22 @@ const varietyScore = getVarietyScore(uniqueTracks, totalScrobbles);
       sublabel="explored this year"
       size="md"
     />
+    {hasStoryDiscoveries && (
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+        <StatCard
+          value={typeof newArtistCount === 'number' ? newArtistCount.toLocaleString() : '0'}
+          label="new artists"
+          sublabel="first plays this year"
+          size="sm"
+        />
+        <StatCard
+          value={typeof newTrackCount === 'number' ? newTrackCount.toLocaleString() : '0'}
+          label="new tracks"
+          sublabel="first plays this year"
+          size="sm"
+        />
+      </div>
+    )}
     <div class="mt-12">
       <div class="text-xl md:text-2xl opacity-75 mb-2">
         Variety Score

@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: help pipeline compile extract listening timeline web-data images doctor validate web-dev web-build web-preview mcp clean-bins
+.PHONY: help pipeline compile extract listening timeline wrapped-stories web-data images doctor validate web-dev web-build web-preview mcp clean-bins
 
 help:
 	@echo "Targets:"
@@ -9,6 +9,7 @@ help:
 	@echo "  extract     Build tracks/albums/artists JSON artifacts"
 	@echo "  listening   Refresh Last.fm + Spotify merged listening data"
 	@echo "  timeline    Rebuild timeline JSON"
+	@echo "  wrapped-stories Rebuild wrapped story JSON via MCP year-story"
 	@echo "  web-data    Rebuild web-data JSON/chunks/indexes"
 	@echo "  images      Refresh Last.fm artist/album image metadata"
 	@echo "  doctor      Validate ETL path config and required inputs"
@@ -37,6 +38,9 @@ listening:
 
 timeline:
 	cd tools/pipeline && go run . build-timeline
+
+wrapped-stories:
+	cd tools/pipeline && go run . build-wrapped-stories
 
 web-data:
 	cd tools/pipeline && go run . build-web-data

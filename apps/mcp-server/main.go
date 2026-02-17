@@ -1347,6 +1347,10 @@ func auditMatchCoverage(args map[string]interface{}) (map[string]interface{}, er
 	if groupBy != "month" && groupBy != "year" {
 		return nil, errors.New("groupBy must be 'month' or 'year'")
 	}
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
 	minClusterSize := 10
 	if v, ok := asInt(args["minClusterSize"]); ok && v >= 3 {
 		minClusterSize = v
@@ -1387,6 +1391,7 @@ func auditMatchCoverage(args map[string]interface{}) (map[string]interface{}, er
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	periodSummary := map[string]*periodCounters{}
 	failureClusters := map[string]*clusterInfo{}
@@ -1525,6 +1530,7 @@ func auditMatchCoverage(args map[string]interface{}) (map[string]interface{}, er
 	if resolver.aliasPath != "" {
 		notes = append(notes, fmt.Sprintf("alias map loaded: %s", resolver.aliasPath))
 	}
+	scope["source"] = sourceFilter
 
 	return map[string]interface{}{
 		"summary": map[string]interface{}{
@@ -1550,6 +1556,10 @@ func musicNewDiscoveries(args map[string]interface{}) (map[string]interface{}, e
 	if err != nil {
 		return nil, err
 	}
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
 	topN := 25
 	if v, ok := asInt(args["topN"]); ok {
 		if v < 5 {
@@ -1565,6 +1575,7 @@ func musicNewDiscoveries(args map[string]interface{}) (map[string]interface{}, e
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	firstArtistPlay := map[string]int64{}
 	firstTrackPlay := map[string]int64{}
@@ -1622,6 +1633,7 @@ func musicNewDiscoveries(args map[string]interface{}) (map[string]interface{}, e
 
 	return map[string]interface{}{
 		"period":     label,
+		"source":     sourceFilter,
 		"newArtists": rankedCounts(artistCounts, topN, "artist"),
 		"newTracks":  rankTrackStats(trackDisplay, topN),
 		"summary": map[string]interface{}{
@@ -1636,11 +1648,16 @@ func musicListeningPatterns(args map[string]interface{}) (map[string]interface{}
 	if err != nil {
 		return nil, err
 	}
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
 
 	scrobbles, err := getListeningScrobbles()
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	startMs := start.UTC().UnixMilli()
 	endMs := end.UTC().Add(24 * time.Hour).UnixMilli()
@@ -1732,6 +1749,7 @@ func musicListeningPatterns(args map[string]interface{}) (map[string]interface{}
 
 	return map[string]interface{}{
 		"period": label,
+		"source": sourceFilter,
 		"sessions": map[string]interface{}{
 			"totalSessions":       len(sessions),
 			"avgDurationMinutes":  roundFloat(avgSessionDuration, 2),
@@ -1752,44 +1770,7 @@ func musicListeningSummary(args map[string]interface{}) (map[string]interface{},
 	if err != nil {
 		return nil, err
 	}
-	topN := 25
-	if v, ok := asInt(args["topN"]); ok {
-		if v < 5 {
-			v = 5
-		}
-		if v > 100 {
-			v = 100
-		}
-		topN = v
-	}
-
-	resolver, err := getResolver()
-	if err != nil {
-		return nil, fmt.Errorf("resolver unavailable: %w", err)
-	}
-	scrobbles, err := getListeningScrobbles()
-	if err != nil {
-		return nil, fmt.Errorf("listening history unavailable: %w", err)
-	}
-
-	stats := analyzeEra(label, start, end, scrobbles, resolver)
-
-	return map[string]interface{}{
-		"summary": map[string]interface{}{
-			"totalScrobbles": stats.TotalScrobbles,
-			"uniqueTracks":   len(stats.TrackCounts),
-			"uniqueArtists":  len(stats.ArtistCounts),
-			"days":           roundFloat(stats.Days, 2),
-			"playsPerDay":    roundFloat(float64(stats.TotalScrobbles)/stats.Days, 2),
-		},
-		"topTracks":  rankTrackStats(stats.TrackDisplay, topN),
-		"topArtists": rankedCounts(stats.ArtistCounts, topN, "artist"),
-		"topGenres":  rankedCounts(stats.GenreCounts, topN, "genre"),
-	}, nil
-}
-
-func musicGenreProfile(args map[string]interface{}) (map[string]interface{}, error) {
-	start, end, label, err := parseEra(args, "Genre Profile")
+	sourceFilter, err := parseSourceFilter(args)
 	if err != nil {
 		return nil, err
 	}
@@ -1812,11 +1793,64 @@ func musicGenreProfile(args map[string]interface{}) (map[string]interface{}, err
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
+
+	stats := analyzeEra(label, start, end, scrobbles, resolver)
+	playsPerDay := 0.0
+	if stats.Days > 0 {
+		playsPerDay = roundFloat(float64(stats.TotalScrobbles)/stats.Days, 2)
+	}
+
+	return map[string]interface{}{
+		"summary": map[string]interface{}{
+			"totalScrobbles": stats.TotalScrobbles,
+			"uniqueTracks":   len(stats.TrackCounts),
+			"uniqueArtists":  len(stats.ArtistCounts),
+			"days":           roundFloat(stats.Days, 2),
+			"playsPerDay":    playsPerDay,
+		},
+		"source":     sourceFilter,
+		"topTracks":  rankTrackStats(stats.TrackDisplay, topN),
+		"topArtists": rankedCounts(stats.ArtistCounts, topN, "artist"),
+		"topGenres":  rankedCounts(stats.GenreCounts, topN, "genre"),
+	}, nil
+}
+
+func musicGenreProfile(args map[string]interface{}) (map[string]interface{}, error) {
+	start, end, label, err := parseEra(args, "Genre Profile")
+	if err != nil {
+		return nil, err
+	}
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
+	topN := 25
+	if v, ok := asInt(args["topN"]); ok {
+		if v < 5 {
+			v = 5
+		}
+		if v > 100 {
+			v = 100
+		}
+		topN = v
+	}
+
+	resolver, err := getResolver()
+	if err != nil {
+		return nil, fmt.Errorf("resolver unavailable: %w", err)
+	}
+	scrobbles, err := getListeningScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("listening history unavailable: %w", err)
+	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	stats := analyzeEra(label, start, end, scrobbles, resolver)
 
 	return map[string]interface{}{
 		"period":           label,
+		"source":           sourceFilter,
 		"totalScrobbles":   stats.TotalScrobbles,
 		"topGenres":        rankedCounts(stats.GenreCounts, topN, "genre"),
 		"diversityEntropy": roundFloat(shannonEntropyNormalized(stats.GenreCounts), 4),
@@ -1851,6 +1885,10 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 		}
 		topN = v
 	}
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
 
 	resolver, err := getResolver()
 	if err != nil {
@@ -1860,6 +1898,7 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	aStats := analyzeEra(aLabel, aStart, aEnd, scrobbles, resolver)
 	bStats := analyzeEra(bLabel, bStart, bEnd, scrobbles, resolver)
@@ -1891,6 +1930,7 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 	}
 
 	return map[string]interface{}{
+		"source": sourceFilter,
 		"summary": map[string]interface{}{
 			"scrobblesA":        aStats.TotalScrobbles,
 			"scrobblesB":        bStats.TotalScrobbles,
@@ -1914,6 +1954,11 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 }
 
 func findDormantReturns(args map[string]interface{}) (map[string]interface{}, error) {
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
+
 	returnPeriod, ok := asMap(args["returnPeriod"])
 	if !ok {
 		return nil, errors.New("returnPeriod is required")
@@ -1980,6 +2025,7 @@ func findDormantReturns(args map[string]interface{}) (map[string]interface{}, er
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	type dormantTrackAccumulator struct {
 		TrackID       string
@@ -2148,10 +2194,12 @@ func findDormantReturns(args map[string]interface{}) (map[string]interface{}, er
 	if historyStart != nil {
 		scope["historyStartDate"] = historyStart.Format("2006-01-02")
 	}
+	scope["source"] = sourceFilter
 
 	notes := []string{
 		fmt.Sprintf("strictness=%s minDormancyDays=%d minPreReturnPlays=%d minReturnPlays=%d",
 			strictness, minDormancyDays, minPreReturnPlays, minReturnPlays),
+		fmt.Sprintf("source=%s", sourceFilter),
 		"Only canonically matched scrobbles are considered for dormancy and return calculations.",
 	}
 	if resolver.aliasPath != "" {
@@ -2177,6 +2225,10 @@ func findDormantReturns(args map[string]interface{}) (map[string]interface{}, er
 
 func musicStreaksAndBursts(args map[string]interface{}) (map[string]interface{}, error) {
 	start, end, label, err := parseEra(args, "Streaks & Bursts")
+	if err != nil {
+		return nil, err
+	}
+	sourceFilter, err := parseSourceFilter(args)
 	if err != nil {
 		return nil, err
 	}
@@ -2212,13 +2264,16 @@ func musicStreaksAndBursts(args map[string]interface{}) (map[string]interface{},
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	report := buildStreakBurstReport(scrobbles, start, end, loc, sessionGapMinutes, topN)
 	report["period"] = label
 	report["timezone"] = tzName
+	report["source"] = sourceFilter
 	report["scope"] = map[string]string{
 		"startDate": start.Format("2006-01-02"),
 		"endDate":   end.Format("2006-01-02"),
+		"source":    sourceFilter,
 	}
 
 	return report, nil
@@ -2230,6 +2285,10 @@ func musicYearStory(args map[string]interface{}) (map[string]interface{}, error)
 		return nil, errors.New("year is required")
 	}
 	start, end, err := yearBounds(year)
+	if err != nil {
+		return nil, err
+	}
+	sourceFilter, err := parseSourceFilter(args)
 	if err != nil {
 		return nil, err
 	}
@@ -2270,6 +2329,7 @@ func musicYearStory(args map[string]interface{}) (map[string]interface{}, error)
 	if err != nil {
 		return nil, fmt.Errorf("listening history unavailable: %w", err)
 	}
+	scrobbles = filterScrobblesBySource(scrobbles, sourceFilter)
 
 	resolver, err := getResolver()
 	if err != nil {
@@ -2300,6 +2360,7 @@ func musicYearStory(args map[string]interface{}) (map[string]interface{}, error)
 		"startDate": start.Format("2006-01-02"),
 		"endDate":   end.Format("2006-01-02"),
 		"topN":      topN,
+		"source":    sourceFilter,
 	}
 	discovery, discoveryErr := musicNewDiscoveries(discoveryArgs)
 	if discoveryErr != nil {
@@ -2344,7 +2405,8 @@ func musicYearStory(args map[string]interface{}) (map[string]interface{}, error)
 					"endDate":   end.Format("2006-01-02"),
 					"label":     fmt.Sprintf("%d", year),
 				},
-				"topN": topN,
+				"topN":   topN,
+				"source": sourceFilter,
 			}
 			if cmp, cmpErr := compareEras(compareArgs); cmpErr == nil {
 				summary, _ := cmp["summary"].(map[string]interface{})
@@ -2379,6 +2441,7 @@ func musicYearStory(args map[string]interface{}) (map[string]interface{}, error)
 			"minReturnPlays":    2,
 			"topN":              minInt(topN, 5),
 			"strictness":        "medium",
+			"source":            sourceFilter,
 		}
 		if dr, drErr := findDormantReturns(dormantArgs); drErr == nil {
 			dormantReturns = dr
@@ -2505,14 +2568,17 @@ func musicYearStory(args map[string]interface{}) (map[string]interface{}, error)
 		"measuredSpotifyMinutes":  roundFloat(measuredSpotifyMinutes, 2),
 		"estimatedTotalMinutes":   roundFloat(estimatedMinutes, 2),
 		"estimatedFromNonSpotify": estimatedCount,
+		"source":                  sourceFilter,
 	}
 
 	return map[string]interface{}{
-		"year": year,
+		"year":   year,
+		"source": sourceFilter,
 		"scope": map[string]string{
 			"startDate": start.Format("2006-01-02"),
 			"endDate":   end.Format("2006-01-02"),
 			"timezone":  tzName,
+			"source":    sourceFilter,
 		},
 		"summary":          summary,
 		"topArtists":       topArtists,
@@ -2599,10 +2665,7 @@ func buildStreakBurstReport(scrobbles []lastFMScrobble, start, end time.Time, lo
 	var currentSession *sessionAccumulator
 
 	for _, sc := range inPeriod {
-		source := strings.TrimSpace(sc.Source)
-		if source == "" {
-			source = "unknown"
-		}
+		source := scrobbleSource(sc)
 		sourceCounts[source]++
 
 		normArtist := normalizeForMatching(sc.Artist)
@@ -3076,6 +3139,42 @@ func sortSourceCounts(counts map[string]int, total int) []map[string]interface{}
 		})
 	}
 	return out
+}
+
+func parseSourceFilter(args map[string]interface{}) (string, error) {
+	source := strings.ToLower(strings.TrimSpace(asString(args["source"])))
+	if source == "" || source == "all" || source == "both" {
+		return "all", nil
+	}
+	if source != "lastfm" && source != "spotify" {
+		return "", errors.New("source must be 'all', 'lastfm', or 'spotify'")
+	}
+	return source, nil
+}
+
+func scrobbleSource(sc lastFMScrobble) string {
+	source := strings.ToLower(strings.TrimSpace(sc.Source))
+	switch source {
+	case "", "last.fm":
+		return "lastfm"
+	case "lastfm", "spotify":
+		return source
+	default:
+		return source
+	}
+}
+
+func filterScrobblesBySource(scrobbles []lastFMScrobble, source string) []lastFMScrobble {
+	if source == "" || source == "all" {
+		return scrobbles
+	}
+	filtered := make([]lastFMScrobble, 0, len(scrobbles))
+	for _, sc := range scrobbles {
+		if scrobbleSource(sc) == source {
+			filtered = append(filtered, sc)
+		}
+	}
+	return filtered
 }
 
 func parseTimezoneArg(args map[string]interface{}) (*time.Location, string, error) {
@@ -3914,6 +4013,7 @@ func toolCatalog() []toolDefinition {
 					},
 					"groupBy":        map[string]interface{}{"type": "string", "enum": []string{"month", "year"}, "default": "month"},
 					"minClusterSize": map[string]interface{}{"type": "integer", "minimum": 3, "default": 10},
+					"source":         sourceFilterSchema(),
 				},
 			},
 		},
@@ -3924,9 +4024,10 @@ func toolCatalog() []toolDefinition {
 				"type":     "object",
 				"required": []string{"eraA", "eraB"},
 				"properties": map[string]interface{}{
-					"eraA": eraInputSchema("Era A"),
-					"eraB": eraInputSchema("Era B"),
-					"topN": map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+					"eraA":   eraInputSchema("Era A"),
+					"eraB":   eraInputSchema("Era B"),
+					"topN":   map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+					"source": sourceFilterSchema(),
 				},
 			},
 		},
@@ -3940,6 +4041,7 @@ func toolCatalog() []toolDefinition {
 					"startDate": map[string]interface{}{"type": "string", "format": "date"},
 					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
 					"topN":      map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+					"source":    sourceFilterSchema(),
 				},
 			},
 		},
@@ -3953,6 +4055,7 @@ func toolCatalog() []toolDefinition {
 					"startDate": map[string]interface{}{"type": "string", "format": "date"},
 					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
 					"topN":      map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+					"source":    sourceFilterSchema(),
 				},
 			},
 		},
@@ -3966,6 +4069,7 @@ func toolCatalog() []toolDefinition {
 					"startDate": map[string]interface{}{"type": "string", "format": "date"},
 					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
 					"topN":      map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 100, "default": 25},
+					"source":    sourceFilterSchema(),
 				},
 			},
 		},
@@ -3978,6 +4082,7 @@ func toolCatalog() []toolDefinition {
 				"properties": map[string]interface{}{
 					"startDate": map[string]interface{}{"type": "string", "format": "date"},
 					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
+					"source":    sourceFilterSchema(),
 				},
 			},
 		},
@@ -3994,6 +4099,7 @@ func toolCatalog() []toolDefinition {
 					"timezone":          map[string]interface{}{"type": "string", "default": "UTC"},
 					"topN":              map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 100, "default": 10},
 					"sessionGapMinutes": map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 180, "default": 30},
+					"source":            sourceFilterSchema(),
 				},
 			},
 		},
@@ -4009,6 +4115,7 @@ func toolCatalog() []toolDefinition {
 					"timezone":              map[string]interface{}{"type": "string", "default": "UTC"},
 					"sessionGapMinutes":     map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 180, "default": 30},
 					"includeDormantReturns": map[string]interface{}{"type": "boolean", "default": true},
+					"source":                sourceFilterSchema(),
 				},
 			},
 		},
@@ -4033,6 +4140,7 @@ func toolCatalog() []toolDefinition {
 					"minReturnPlays":    map[string]interface{}{"type": "integer", "minimum": 1, "default": 2},
 					"topN":              map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 200, "default": 25},
 					"strictness":        map[string]interface{}{"type": "string", "enum": []string{"high", "medium", "low"}, "default": "medium"},
+					"source":            sourceFilterSchema(),
 				},
 			},
 		},
@@ -4060,6 +4168,14 @@ func eraInputSchema(defaultLabel string) map[string]interface{} {
 			"endDate":   map[string]interface{}{"type": "string", "format": "date"},
 			"label":     map[string]interface{}{"type": "string", "default": defaultLabel},
 		},
+	}
+}
+
+func sourceFilterSchema() map[string]interface{} {
+	return map[string]interface{}{
+		"type":    "string",
+		"enum":    []string{"all", "lastfm", "spotify"},
+		"default": "all",
 	}
 }
 

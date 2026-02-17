@@ -22,6 +22,8 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `music_find_dormant_returns`
 - `music_reload_alias_map`
 
+Most analytics tools accept optional `source` filtering: `all` (default), `lastfm`, or `spotify`.
+
 ## Data Dependencies
 
 - `<web-data>/chunks/tracks-*.json` (resolver index source)

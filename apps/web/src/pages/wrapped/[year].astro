@@ -4,9 +4,10 @@
  */
 import '../../styles/global.css';
 import '../../styles/wrapped.css';
+import { readFile } from 'node:fs/promises';
 import { getTheme } from '../../lib/wrapped-themes';
 import { getAvailableYears } from '../../lib/wrapped-utils';
-import type { YearData } from '../../lib/wrapped-utils';
+import type { StoryCard, Track, WrappedStoriesData, YearData, YearStoryData } from '../../lib/wrapped-utils';
 
 // Import slide components
 import WelcomeSlide from '../../components/wrapped/slides/WelcomeSlide.astro';
@@ -21,6 +22,14 @@ import ThankYouSlide from '../../components/wrapped/slides/ThankYouSlide.astro';
 
 // Load timeline data
 const timelineData = await import('../../../public/data/timeline.json');
+let wrappedStories: WrappedStoriesData | null = null;
+try {
+  const wrappedStoriesPath = new URL('../../../public/data/wrapped-stories.json', import.meta.url);
+  const wrappedStoriesRaw = await readFile(wrappedStoriesPath, 'utf-8');
+  wrappedStories = JSON.parse(wrappedStoriesRaw) as WrappedStoriesData;
+} catch {
+  wrappedStories = null;
+}
 
 // Generate static paths for all available years
 export async function getStaticPaths() {
@@ -42,6 +51,39 @@ const yearData = timelineData.years.find((y: any) => y.year === currentYear) as 
 if (!yearData) {
   return Astro.redirect('/wrapped');
 }
+
+const yearStory: YearStoryData | null = wrappedStories?.stories?.[String(currentYear)] ?? null;
+const storyTopTracks: Track[] = Array.isArray(yearStory?.topTracks)
+  ? yearStory.topTracks
+      .filter((track) => typeof track.artist === 'string' && typeof track.track === 'string')
+      .map((track) => ({
+        track: track.track,
+        artist: track.artist,
+        album: '',
+        playCount: typeof track.count === 'number' ? track.count : 0,
+      }))
+      .filter((track) => track.playCount > 0)
+  : [];
+const displayTopTracks = storyTopTracks.length > 0 ? storyTopTracks : yearData.topTracks;
+const storySummary = yearStory?.summary;
+const topArtist = yearStory?.topArtists?.[0];
+const discoverySummary = yearStory?.discoveries?.summary;
+const storyActiveDays = typeof storySummary?.activeDays === 'number' ? storySummary.activeDays : undefined;
+const storyMinutes = typeof storySummary?.estimatedTotalMinutes === 'number'
+  ? Math.round(storySummary.estimatedTotalMinutes)
+  : undefined;
+const storyNightShare = typeof storySummary?.nightPlayShare === 'number'
+  ? storySummary.nightPlayShare
+  : undefined;
+const storyPeakDay = yearStory?.streaksAndBursts?.topBurstDays?.[0];
+const storyInsightBullets = Array.isArray(yearStory?.insightBullets) ? yearStory.insightBullets : [];
+const storyCards: StoryCard[] = Array.isArray(yearStory?.storyCards) ? yearStory.storyCards : [];
+const recapTotalScrobbles = typeof storySummary?.totalScrobbles === 'number'
+  ? storySummary.totalScrobbles
+  : yearData.totalScrobbles;
+const recapUniqueTracks = typeof storySummary?.uniqueTracks === 'number'
+  ? storySummary.uniqueTracks
+  : yearData.uniqueTracks;
 
 // Get theme for this year
 const theme = getTheme(currentYear);
@@ -69,20 +111,24 @@ const prevYear = currentIndex > 0 ? allYears[currentIndex - 1] : undefined;
 
       <!-- Slide 2: Big Number -->
       <div class="wrapped-slide">
-        <BigNumberSlide totalScrobbles={yearData.totalScrobbles} />
+        <BigNumberSlide
+          totalScrobbles={yearData.totalScrobbles}
+          totalMinutes={storyMinutes}
+          activeDays={storyActiveDays}
+        />
       </div>
 
       <!-- Slide 3: Top Artist -->
-      {yearData.topTracks.length > 0 && (
+      {displayTopTracks.length > 0 && (
         <div class="wrapped-slide">
-          <TopArtistSlide topTracks={yearData.topTracks} />
+          <TopArtistSlide topTracks={displayTopTracks} topArtist={topArtist} />
         </div>
       )}
 
       <!-- Slide 4: Top 5 Tracks -->
-      {yearData.topTracks.length >= 5 && (
+      {displayTopTracks.length >= 5 && (
         <div class="wrapped-slide">
-          <TopTracksSlide topTracks={yearData.topTracks} />
+          <TopTracksSlide topTracks={displayTopTracks} />
         </div>
       )}
 
@@ -91,32 +137,34 @@ const prevYear = currentIndex > 0 ? allYears[currentIndex - 1] : undefined;
         <DiscoverySlide
           uniqueTracks={yearData.uniqueTracks}
           totalScrobbles={yearData.totalScrobbles}
+          newArtistCount={discoverySummary?.newArtistCount}
+          newTrackCount={discoverySummary?.newTrackCount}
         />
       </div>
 
       <!-- Slide 6: Listening Patterns -->
       {yearData.months && yearData.months.length > 0 && (
         <div class="wrapped-slide">
-          <PatternSlide months={yearData.months} />
+          <PatternSlide months={yearData.months} nightPlayShare={storyNightShare} peakDay={storyPeakDay} />
         </div>
       )}
 
       <!-- Slide 7: Fun Fact -->
       <div class="wrapped-slide">
-        <FunFactSlide yearData={yearData} />
+        <FunFactSlide yearData={yearData} insightBullets={storyInsightBullets} storyCards={storyCards} />
       </div>
 
       <!-- Slide 8: Badges -->
       <div class="wrapped-slide">
-        <BadgesSlide yearData={yearData} />
+        <BadgesSlide yearData={yearData} storyCards={storyCards} />
       </div>
 
       <!-- Slide 9: Thank You -->
       <div class="wrapped-slide">
         <ThankYouSlide
           year={currentYear}
-          totalScrobbles={yearData.totalScrobbles}
-          uniqueTracks={yearData.uniqueTracks}
+          totalScrobbles={recapTotalScrobbles}
+          uniqueTracks={recapUniqueTracks}
           nextYear={nextYear}
           prevYear={prevYear}
         />

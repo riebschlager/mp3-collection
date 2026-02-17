@@ -8,12 +8,21 @@ import AlbumArt from '../AlbumArt.astro';
 
 export interface Props {
   topTracks: Track[];
+  topArtist?: {
+    artist: string;
+    count: number;
+  };
 }
 
-const { topTracks } = Astro.props;
+const { topTracks, topArtist } = Astro.props;
 
 const topArtists = getTopArtists(topTracks, 1);
-const topArtist = topArtists[0];
+const fallbackTopArtist = topArtists[0];
+const topArtistName = topArtist?.artist || fallbackTopArtist?.artist || 'Unknown Artist';
+const topArtistCount = typeof topArtist?.count === 'number'
+  ? topArtist.count
+  : fallbackTopArtist?.playCount || 0;
+const favoriteTrack = fallbackTopArtist?.topTrack || topTracks[0]?.track || '';
 ---
 
 <div class="slide-content text-center">
@@ -22,19 +31,21 @@ const topArtist = topArtists[0];
   </h2>
   <div class="mb-8 flex flex-col items-center gap-6">
     <AlbumArt
-      album={topArtist.topTrack}
-      artist={topArtist.artist}
+      album={favoriteTrack}
+      artist={topArtistName}
       size="xl"
       className="shadow-2xl"
     />
     <div class="text-6xl md:text-7xl lg:text-8xl font-bold">
-      {topArtist.artist}
+      {topArtistName}
     </div>
     <div class="text-3xl md:text-4xl font-semibold opacity-90">
-      {topArtist.playCount.toLocaleString()} plays
+      {topArtistCount.toLocaleString()} plays
     </div>
   </div>
-  <div class="mt-12 text-lg md:text-xl opacity-75">
-    Your favorite: <span class="font-semibold">"{topArtist.topTrack}"</span>
-  </div>
+  {favoriteTrack && (
+    <div class="mt-12 text-lg md:text-xl opacity-75">
+      Your favorite: <span class="font-semibold">"{favoriteTrack}"</span>
+    </div>
+  )}
 </div>

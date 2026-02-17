@@ -7,12 +7,22 @@ import { getTotalMinutes, formatListeningTime } from '../../../lib/wrapped-utils
 
 export interface Props {
   totalScrobbles: number;
+  totalMinutes?: number;
+  activeDays?: number;
 }
 
-const { totalScrobbles } = Astro.props;
+const { totalScrobbles, totalMinutes, activeDays } = Astro.props;
 
-const totalMinutes = getTotalMinutes(totalScrobbles);
-const formattedTime = formatListeningTime(totalMinutes);
+const computedTotalMinutes = typeof totalMinutes === 'number' && totalMinutes > 0
+  ? Math.round(totalMinutes)
+  : getTotalMinutes(totalScrobbles);
+const formattedTime = formatListeningTime(computedTotalMinutes);
+const avgPerActiveDay = typeof activeDays === 'number' && activeDays > 0
+  ? Math.round(totalScrobbles / activeDays)
+  : null;
+const sublabel = avgPerActiveDay
+  ? `That's ${computedTotalMinutes.toLocaleString()} minutes (${avgPerActiveDay} plays per active day).`
+  : `That's ${computedTotalMinutes.toLocaleString()} minutes!`;
 ---
 
 <div class="slide-content text-center">
@@ -22,7 +32,7 @@ const formattedTime = formatListeningTime(totalMinutes);
   <StatCard
     value={formattedTime}
     label="of music"
-    sublabel={`That's ${totalMinutes.toLocaleString()} minutes!`}
+    sublabel={sublabel}
     size="lg"
   />
 </div>

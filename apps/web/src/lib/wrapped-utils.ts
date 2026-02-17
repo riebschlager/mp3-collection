@@ -37,6 +37,69 @@ export interface Badge {
   icon: string;
 }
 
+export interface StoryCard {
+  id: string;
+  title: string;
+  headline: string;
+  detail: string;
+}
+
+export interface StoryTrack {
+  artist: string;
+  track: string;
+  count: number;
+}
+
+export interface StoryArtist {
+  artist: string;
+  count: number;
+}
+
+export interface StorySummary {
+  totalScrobbles?: number;
+  uniqueTracks?: number;
+  uniqueArtists?: number;
+  activeDays?: number;
+  playsPerActiveDay?: number;
+  nightPlayShare?: number;
+  measuredSpotifyMinutes?: number;
+  estimatedTotalMinutes?: number;
+}
+
+export interface YearStoryData {
+  year: number;
+  source?: string;
+  summary?: StorySummary;
+  topArtists?: StoryArtist[];
+  topTracks?: StoryTrack[];
+  discoveries?: {
+    summary?: {
+      newArtistCount?: number;
+      newTrackCount?: number;
+    };
+  };
+  streaksAndBursts?: {
+    summary?: {
+      nightPlayShare?: number;
+    };
+    topBurstDays?: Array<{
+      date?: string;
+      plays?: number;
+    }>;
+  };
+  storyCards?: StoryCard[];
+  insightBullets?: string[];
+}
+
+export interface WrappedStoriesData {
+  generatedAt: string;
+  timezone: string;
+  source: string;
+  topN: number;
+  years: number[];
+  stories: Record<string, YearStoryData>;
+}
+
 /**
  * Derive top artists from top tracks by aggregating play counts
  */

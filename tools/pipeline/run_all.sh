@@ -40,6 +40,9 @@ echo "==> Running process-lastfm"
 echo "==> Running build-timeline"
 ./mp3-scripts build-timeline
 
+echo "==> Running build-wrapped-stories"
+./mp3-scripts build-wrapped-stories
+
 echo "==> Running build-web-data"
 ./mp3-scripts build-web-data
 
