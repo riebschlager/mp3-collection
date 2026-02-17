@@ -29,6 +29,8 @@ func main() {
 		runExtractAlbums()
 	case "process-lastfm":
 		runProcessLastFm()
+	case "process-listening":
+		runProcessLastFm()
 	case "merge-listening":
 		runMergeListening()
 	case "fetch-lastfm":
@@ -64,7 +66,8 @@ func printUsage() {
 	fmt.Println("  extract-albums    Extract albums to data/derived/core/albums.json")
 	fmt.Println("  fetch-lastfm      Fetch recent scrobbles from Last.fm API")
 	fmt.Println("  merge-listening   Merge Last.fm + Spotify history with dedupe")
-	fmt.Println("  process-lastfm    Process merged listening history to data/derived/core/playcounts.json")
+	fmt.Println("  process-lastfm    Process merged Last.fm + Spotify listening history to data/derived/core/playcounts.json")
+	fmt.Println("  process-listening Alias for process-lastfm")
 	fmt.Println("  fetch-images      Fetch artist/album image metadata from Last.fm")
 	fmt.Println("  build-timeline    Build timeline data from merged history to data/derived/web/timeline.json")
 	fmt.Println("  build-wrapped-stories Build wrapped story artifact from MCP year-story tool to data/derived/web/wrapped-stories.json")

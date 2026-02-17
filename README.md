@@ -54,7 +54,7 @@ cp .env.example .env
 Use root `make` targets for the common workflows:
 
 ```bash
-make pipeline   # full Go pipeline refresh
+make pipeline   # full Go pipeline refresh (images default to LASTFM_IMAGE_SCOPE=all)
 make web-dev    # run Astro dev server
 make mcp        # start MCP server
 ```
@@ -65,7 +65,7 @@ Other useful targets:
 - `make web-data` (rebuild web JSON/chunks/indexes)
 - `make wrapped-stories` (rebuild wrapped story JSON via MCP)
 - `make wrapped-month-stories` (rebuild wrapped month story JSON via MCP)
-- `make images` (refresh artist/album image metadata)
+- `make images` (refresh merged Last.fm+Spotify listening data, rebuild web-data, then refresh artist/album image metadata; default `LASTFM_IMAGE_SCOPE=all`)
 - `make doctor` (validate ETL path config + required inputs)
 - `make validate` (run doctor + Go builds + web build)
 - `make help` (list all targets)

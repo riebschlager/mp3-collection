@@ -25,7 +25,7 @@ The CLI auto-loads `.env` by searching current and parent directories.
 - `MP3_SPOTIFY_DIR`: optional path override (default: `<root>/data/inputs/spotify`).
 - `SPOTIFY_MIN_MS_PLAYED`: optional, defaults to `30000`.
 - `SPOTIFY_LASTFM_DEDUPE_WINDOW_MS`: optional, defaults to `120000`.
-- `LASTFM_IMAGE_SCOPE`: `played` (default) or `all`.
+- `LASTFM_IMAGE_SCOPE`: `played` or `all` (CLI default: `played`; `run_all.sh` default: `all`).
 - `LASTFM_IMAGE_FORCE_REFRESH`: optional boolean (`true/false`).
 - `LASTFM_IMAGE_REFRESH_MISSING`: optional boolean (`true/false`).
 - `LASTFM_IMAGE_MAX_ARTISTS`: optional int limit for fetch runs.
@@ -61,7 +61,7 @@ cd tools/pipeline
 9. `build-wrapped-stories`
 10. `build-wrapped-month-stories`
 11. `build-web-data`
-12. `fetch-images`
+12. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
 
 ## Command Reference
 
@@ -81,6 +81,7 @@ Available commands:
 - `fetch-lastfm`: fetches latest Last.fm page (up to 200 recent tracks) and appends new scrobbles
 - `merge-listening`: merges Last.fm + Spotify into `data/derived/core/listening-history.json` and merge reports
 - `process-lastfm`: builds `data/derived/core/playcounts.json` and `data/derived/web/playcounts.json`
+- `process-listening`: alias for `process-lastfm`
 - `build-timeline`: builds `data/derived/web/timeline.json`
 - `build-wrapped-stories`: calls MCP `music_batch_year_story` (with per-year fallback) and writes `data/derived/web/wrapped-stories.json`
 - `build-wrapped-month-stories`: calls MCP `music_month_story` for each available month and writes `data/derived/web/wrapped-month-stories.json`

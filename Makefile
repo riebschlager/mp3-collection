@@ -1,10 +1,11 @@
 SHELL := /bin/bash
+LASTFM_IMAGE_SCOPE ?= all
 
 .PHONY: help pipeline compile extract listening timeline wrapped-stories wrapped-month-stories web-data images doctor validate web-dev web-build web-preview mcp clean-bins
 
 help:
 	@echo "Targets:"
-	@echo "  pipeline    Run full Go data pipeline (compile -> web data + images)"
+	@echo "  pipeline    Run full Go data pipeline (compile -> web data + images, scope=$(LASTFM_IMAGE_SCOPE))"
 	@echo "  compile     Compile raw iTunes exports into one CSV"
 	@echo "  extract     Build tracks/albums/artists JSON artifacts"
 	@echo "  listening   Refresh Last.fm + Spotify merged listening data"
@@ -12,7 +13,7 @@ help:
 	@echo "  wrapped-stories Rebuild wrapped story JSON via MCP year-story"
 	@echo "  wrapped-month-stories Rebuild wrapped month story JSON via MCP month-story"
 	@echo "  web-data    Rebuild web-data JSON/chunks/indexes"
-	@echo "  images      Refresh Last.fm artist/album image metadata"
+	@echo "  images      Refresh merged listening (Last.fm+Spotify), rebuild web-data, then refresh image metadata (scope=$(LASTFM_IMAGE_SCOPE))"
 	@echo "  doctor      Validate ETL path config and required inputs"
 	@echo "  validate    Run full repo validation (doctor + Go builds + web build)"
 	@echo "  web-dev     Start Astro dev server"
@@ -22,7 +23,7 @@ help:
 	@echo "  clean-bins  Remove generated local Go binaries"
 
 pipeline:
-	cd tools/pipeline && ./run_all.sh
+	cd tools/pipeline && LASTFM_IMAGE_SCOPE=$(LASTFM_IMAGE_SCOPE) ./run_all.sh
 
 compile:
 	cd tools/pipeline && go run . compile-itunes-exports
@@ -50,7 +51,9 @@ web-data:
 	cd tools/pipeline && go run . build-web-data
 
 images:
-	cd tools/pipeline && go run . fetch-images
+	$(MAKE) listening
+	cd tools/pipeline && go run . build-web-data
+	cd tools/pipeline && LASTFM_IMAGE_SCOPE=$(LASTFM_IMAGE_SCOPE) go run . fetch-images
 
 doctor:
 	cd tools/pipeline && go run . doctor

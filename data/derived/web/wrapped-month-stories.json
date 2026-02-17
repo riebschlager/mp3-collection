@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T01:25:22Z",
+  "generatedAt": "2026-02-17T14:01:51Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -119650,13 +119650,13 @@
             "start": "2016-05-09T20:16:11Z"
           },
           "longestTrackRun": {
-            "artist": "The Jon Spencer Blues Explosion",
+            "artist": "Cop Shoot Cop",
             "count": 2,
-            "durationMinutes": 2.9,
-            "end": "2016-05-01T14:42:28Z",
-            "start": "2016-05-01T14:39:34Z",
-            "track": "Shake That Bat",
-            "trackNormKey": "the jon spencer blues explosion|shake that bat"
+            "durationMinutes": 5.13,
+            "end": "2016-05-01T14:29:43Z",
+            "start": "2016-05-01T14:24:35Z",
+            "track": "Room 429",
+            "trackNormKey": "cop shoot cop|room 429"
           }
         },
         "summary": {
@@ -123456,13 +123456,13 @@
             "start": "2016-09-22T17:05:44Z"
           },
           "longestTrackRun": {
-            "artist": "American Aquarium",
+            "artist": "Le Butcherettes",
             "count": 2,
-            "durationMinutes": 4.52,
-            "end": "2016-09-07T17:38:30Z",
-            "start": "2016-09-07T17:33:59Z",
-            "track": "End Over End",
-            "trackNormKey": "american aquarium|end over end"
+            "durationMinutes": 2.63,
+            "end": "2016-09-07T17:26:14Z",
+            "start": "2016-09-07T17:23:36Z",
+            "track": "Shave The Pride",
+            "trackNormKey": "le butcherettes|shave the pride"
           }
         },
         "summary": {
@@ -236366,11 +236366,11 @@
             "count": 3
           },
           {
-            "artist": "Nightcrawl",
+            "artist": "NightCrawl",
             "count": 3
           },
           {
-            "artist": "NightCrawl",
+            "artist": "Nightcrawl",
             "count": 3
           },
           {
@@ -238171,13 +238171,13 @@
             "start": "2025-11-04T22:00:04Z"
           },
           "longestTrackRun": {
-            "artist": "Gary Jules",
-            "count": 2,
-            "durationMinutes": 3.02,
-            "end": "2025-11-02T22:08:24Z",
-            "start": "2025-11-02T22:05:23Z",
-            "track": "Mad World",
-            "trackNormKey": "gary jules|mad world"
+            "artist": "Placebo",
+            "count": 3,
+            "durationMinutes": 152.83,
+            "end": "2025-11-03T22:30:58Z",
+            "start": "2025-11-03T19:58:08Z",
+            "track": "Running Up That Hill",
+            "trackNormKey": "placebo|running up that hill"
           }
         },
         "summary": {
@@ -239993,11 +239993,11 @@
             "count": 4
           },
           {
-            "artist": "Marty Stuart and His Fabulous Superlatives",
+            "artist": "Marty Stuart And His Fabulous Superlatives",
             "count": 3
           },
           {
-            "artist": "Marty Stuart And His Fabulous Superlatives",
+            "artist": "Marty Stuart and His Fabulous Superlatives",
             "count": 3
           },
           {
@@ -240475,7 +240475,7 @@
           "title": "Peak Day"
         },
         {
-          "detail": "23 consecutive plays",
+          "detail": "24 consecutive plays",
           "headline": "Shelby Lynne",
           "id": "artist_streak",
           "title": "Longest Artist Run"
@@ -240574,17 +240574,17 @@
           "longestArtistRun": {
             "artist": "Shelby Lynne",
             "artistNormKey": "shelby lynne",
-            "count": 23,
-            "durationMinutes": 44.85,
-            "end": "2026-01-10T23:02:35Z",
+            "count": 24,
+            "durationMinutes": 48.58,
+            "end": "2026-01-10T23:06:19Z",
             "start": "2026-01-10T22:17:44Z"
           },
           "longestTrackRun": {
             "artist": "Alabaster Deplume",
-            "count": 4,
-            "durationMinutes": 4537.35,
+            "count": 3,
+            "durationMinutes": 4531.88,
             "end": "2026-01-09T21:37:08Z",
-            "start": "2026-01-06T17:59:47Z",
+            "start": "2026-01-06T18:05:15Z",
             "track": "I Hope",
             "trackNormKey": "alabaster deplume|i hope"
           }
@@ -241194,11 +241194,19 @@
             "count": 4
           },
           {
+            "artist": "Comedown Room",
+            "count": 2
+          },
+          {
             "artist": "Goldie Boutilier",
             "count": 2
           },
           {
             "artist": "Literature",
+            "count": 2
+          },
+          {
+            "artist": "Redbud",
             "count": 2
           },
           {
@@ -241210,23 +241218,15 @@
             "count": 2
           },
           {
+            "artist": "'59",
+            "count": 1
+          },
+          {
             "artist": "Afar",
             "count": 1
           },
           {
-            "artist": "Chartreuse",
-            "count": 1
-          },
-          {
-            "artist": "Kae Tempest",
-            "count": 1
-          },
-          {
-            "artist": "Lund Quartet",
-            "count": 1
-          },
-          {
-            "artist": "mary in the junkyard",
+            "artist": "Alice Costelloe",
             "count": 1
           }
         ],
@@ -241285,28 +241285,28 @@
         "period": "Discovery",
         "source": "all",
         "summary": {
-          "newArtistCount": 17,
-          "newTrackCount": 77
+          "newArtistCount": 50,
+          "newTrackCount": 119
         }
       },
       "discoveryBaseline": "global",
       "dormantReturns": null,
       "insightBullets": [
-        "You logged 479 plays in 2026-02 across 14 active days.",
+        "You logged 527 plays in 2026-02 across 15 active days.",
         "Top artist: A Perfect Circle (29 plays).",
-        "You discovered 17 new artists and 77 new tracks.",
-        "53% of plays happened at night (10pm-6am, UTC)."
+        "You discovered 50 new artists and 119 new tracks.",
+        "56% of plays happened at night (10pm-6am, UTC)."
       ],
       "month": 2,
       "monthOverMonth": {
-        "artistOverlapJaccard": 0.1589,
+        "artistOverlapJaccard": 0.1496,
         "comparisonBulletPoints": [
-          "2026-01 had 1219 scrobbles across 633 unique tracks; 2026-02 had 479 scrobbles across 294 unique tracks.",
-          "Artist overlap (Jaccard) was 0.159 and track overlap was 0.078.",
-          "Novelty shifted from 0.299 to 0.412; diversity entropy shifted from 0.985 to 0.989.",
+          "2026-01 had 1219 scrobbles across 633 unique tracks; 2026-02 had 527 scrobbles across 341 unique tracks.",
+          "Artist overlap (Jaccard) was 0.150 and track overlap was 0.075.",
+          "Novelty shifted from 0.299 to 0.490; diversity entropy shifted from 0.985 to 0.989.",
           "Strongest rising track: Talk Talk - Eden - 1997 Remaster (delta 0.143 plays/day)."
         ],
-        "diversityCurrent": 0.9894,
+        "diversityCurrent": 0.9887,
         "diversityPrev": 0.9851,
         "genreShift": [
           {
@@ -241370,7 +241370,7 @@
             "rateB": 0
           }
         ],
-        "noveltyRateCurrent": 0.4116,
+        "noveltyRateCurrent": 0.4897,
         "noveltyRatePrevious": 0.2986,
         "persistentFavorites": [
           {
@@ -241639,7 +241639,7 @@
             "track": "05 Orestes"
           }
         ],
-        "trackOverlapJaccard": 0.0779
+        "trackOverlapJaccard": 0.0751
       },
       "period": "2026-02",
       "scope": {
@@ -241652,14 +241652,14 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "14 active days (34.21 plays per active day)",
-          "headline": "479 plays",
+          "detail": "15 active days (35.13 plays per active day)",
+          "headline": "527 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this month",
-          "headline": "lastfm 67% (319) · spotify 33% (160)",
+          "headline": "lastfm 70% (367) · spotify 30% (160)",
           "id": "source_mix",
           "title": "Source Mix"
         },
@@ -241676,8 +241676,8 @@
           "title": "Top Track"
         },
         {
-          "detail": "77 new tracks first heard in 2026-02",
-          "headline": "17 new artists",
+          "detail": "119 new tracks first heard in 2026-02",
+          "headline": "50 new artists",
           "id": "discovery",
           "title": "Discovery"
         },
@@ -241704,21 +241704,21 @@
         "concentratedTracks": [],
         "sourceBreakdown": [
           {
-            "count": 319,
-            "share": 0.666,
+            "count": 367,
+            "share": 0.6964,
             "source": "lastfm"
           },
           {
             "count": 160,
-            "share": 0.334,
+            "share": 0.3036,
             "source": "spotify"
           }
         ],
         "streaks": {
           "longestActiveDayStreak": {
-            "days": 5,
-            "endDate": "2026-02-05",
-            "startDate": "2026-02-01"
+            "days": 6,
+            "endDate": "2026-02-17",
+            "startDate": "2026-02-12"
           },
           "longestArtistRun": {
             "artist": "A Perfect Circle",
@@ -241739,14 +241739,14 @@
           }
         },
         "summary": {
-          "activeDays": 14,
-          "avgSessionMinutes": 59.07,
-          "avgTracksPerSession": 20.78,
+          "activeDays": 15,
+          "avgSessionMinutes": 61.62,
+          "avgTracksPerSession": 21.04,
           "maxDailyPlays": 78,
           "medianDailyPlays": 27,
-          "nightPlayShare": 0.5303,
-          "totalScrobbles": 479,
-          "totalSessions": 23
+          "nightPlayShare": 0.5579,
+          "totalScrobbles": 527,
+          "totalSessions": 25
         },
         "topBurstDays": [
           {
@@ -241835,6 +241835,19 @@
             "uniqueTracks": 34
           },
           {
+            "date": "2026-02-17",
+            "plays": 47,
+            "sources": [
+              {
+                "count": 47,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 42,
+            "uniqueTracks": 46
+          },
+          {
             "date": "2026-02-10",
             "plays": 32,
             "sources": [
@@ -241900,24 +241913,6 @@
             ],
             "uniqueArtists": 9,
             "uniqueTracks": 10
-          },
-          {
-            "date": "2026-02-12",
-            "plays": 18,
-            "sources": [
-              {
-                "count": 9,
-                "share": 0.5,
-                "source": "lastfm"
-              },
-              {
-                "count": 9,
-                "share": 0.5,
-                "source": "spotify"
-              }
-            ],
-            "uniqueArtists": 9,
-            "uniqueTracks": 9
           }
         ],
         "topBurstSessions": [
@@ -242036,6 +242031,30 @@
             },
             "uniqueArtists": 24,
             "uniqueTracks": 34
+          },
+          {
+            "durationMin": 144.45,
+            "end": "2026-02-17T02:58:12Z",
+            "plays": 40,
+            "sources": [
+              {
+                "count": 40,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-02-17T00:33:45Z",
+            "topArtist": {
+              "artist": "strongboi",
+              "count": 4
+            },
+            "topTrack": {
+              "artist": "Redbud",
+              "count": 2,
+              "track": "Island"
+            },
+            "uniqueArtists": 35,
+            "uniqueTracks": 39
           },
           {
             "durationMin": 131.43,
@@ -242166,62 +242185,33 @@
             },
             "uniqueArtists": 10,
             "uniqueTracks": 11
-          },
-          {
-            "durationMin": 44.4,
-            "end": "2026-02-12T15:44:28Z",
-            "plays": 17,
-            "sources": [
-              {
-                "count": 9,
-                "share": 0.5294,
-                "source": "lastfm"
-              },
-              {
-                "count": 8,
-                "share": 0.4706,
-                "source": "spotify"
-              }
-            ],
-            "start": "2026-02-12T15:00:04Z",
-            "topArtist": {
-              "artist": "Aphex Twin",
-              "count": 2
-            },
-            "topTrack": {
-              "artist": "Aphex Twin",
-              "count": 2,
-              "track": "Tha"
-            },
-            "uniqueArtists": 10,
-            "uniqueTracks": 9
           }
         ]
       },
       "summary": {
-        "activeDays": 14,
+        "activeDays": 15,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 319,
-        "estimatedTotalMinutes": 1769.68,
+        "estimatedFromNonSpotify": 367,
+        "estimatedTotalMinutes": 1937.68,
         "measuredSpotifyMinutes": 653.18,
-        "nightPlayShare": 0.5303,
-        "playsPerActiveDay": 34.21,
+        "nightPlayShare": 0.5579,
+        "playsPerActiveDay": 35.13,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 319,
-            "share": 0.666,
+            "count": 367,
+            "share": 0.6964,
             "source": "lastfm"
           },
           {
             "count": 160,
-            "share": 0.334,
+            "share": 0.3036,
             "source": "spotify"
           }
         ],
-        "totalScrobbles": 479,
-        "uniqueArtists": 174,
-        "uniqueTracks": 294
+        "totalScrobbles": 527,
+        "uniqueArtists": 215,
+        "uniqueTracks": 341
       },
       "topArtists": [
         {

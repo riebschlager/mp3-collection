@@ -16,6 +16,9 @@ fi
 
 go build -o mp3-scripts
 
+LASTFM_IMAGE_SCOPE="${LASTFM_IMAGE_SCOPE:-all}"
+echo "Using LASTFM_IMAGE_SCOPE=${LASTFM_IMAGE_SCOPE}"
+
 echo "==> Running compile-itunes-exports"
 ./mp3-scripts compile-itunes-exports
 
@@ -50,6 +53,6 @@ echo "==> Running build-web-data"
 ./mp3-scripts build-web-data
 
 echo "==> Running fetch-images"
-./mp3-scripts fetch-images
+LASTFM_IMAGE_SCOPE="${LASTFM_IMAGE_SCOPE}" ./mp3-scripts fetch-images
 
 echo "All scripts completed."

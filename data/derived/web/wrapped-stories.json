@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T01:29:54Z",
+  "generatedAt": "2026-02-17T14:01:16Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -24815,16 +24815,16 @@
             "count": 4
           },
           {
-            "artist": "Marty Stuart and His Fabulous Superlatives",
-            "count": 3
-          },
-          {
             "artist": "Marty Stuart And His Fabulous Superlatives",
             "count": 3
           },
           {
-            "artist": "Amo Amo",
-            "count": 2
+            "artist": "Marty Stuart and His Fabulous Superlatives",
+            "count": 3
+          },
+          {
+            "artist": "Moon Panda",
+            "count": 3
           }
         ],
         "newTracks": [
@@ -24882,8 +24882,8 @@
         "period": "Discovery",
         "source": "all",
         "summary": {
-          "newArtistCount": 59,
-          "newTrackCount": 313
+          "newArtistCount": 92,
+          "newTrackCount": 355
         }
       },
       "discoveryBaseline": "global",
@@ -24904,11 +24904,11 @@
         "summary": {
           "dormantReturnedArtistCount": 5,
           "dormantReturnedTrackCount": 6,
-          "matchRateInScope": 0.2385,
+          "matchRateInScope": 0.2384,
           "matchedScrobblesInScope": 26455,
           "resultsReturned": 5,
           "returnPeriodDays": 365,
-          "totalScrobblesInScope": 110936
+          "totalScrobblesInScope": 110984
         },
         "topDormantReturns": [
           {
@@ -25011,10 +25011,10 @@
         ]
       },
       "insightBullets": [
-        "You logged 1698 plays in 2026 across 40 active days.",
+        "You logged 1746 plays in 2026 across 41 active days.",
         "Top artist: Radiohead (59 plays).",
-        "You discovered 59 new artists and 313 new tracks.",
-        "57% of plays happened at night (10pm-6am, UTC)."
+        "You discovered 92 new artists and 355 new tracks.",
+        "58% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
         "discoveryBaseline": "global",
@@ -25026,14 +25026,14 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "40 active days (42.45 plays per active day)",
-          "headline": "1698 plays",
+          "detail": "41 active days (42.59 plays per active day)",
+          "headline": "1746 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this year",
-          "headline": "lastfm 61% (1035) · spotify 39% (663)",
+          "headline": "lastfm 62% (1083) · spotify 38% (663)",
           "id": "source_mix",
           "title": "Source Mix"
         },
@@ -25050,8 +25050,8 @@
           "title": "Top Track"
         },
         {
-          "detail": "313 new tracks first heard in 2026",
-          "headline": "59 new artists",
+          "detail": "355 new tracks first heard in 2026",
+          "headline": "92 new artists",
           "id": "discovery",
           "title": "Discovery"
         },
@@ -25169,13 +25169,13 @@
         ],
         "sourceBreakdown": [
           {
-            "count": 1035,
-            "share": 0.6095,
+            "count": 1083,
+            "share": 0.6203,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.3905,
+            "share": 0.3797,
             "source": "spotify"
           }
         ],
@@ -25195,23 +25195,23 @@
           },
           "longestTrackRun": {
             "artist": "Alabaster Deplume",
-            "count": 4,
-            "durationMinutes": 4537.35,
+            "count": 3,
+            "durationMinutes": 4531.88,
             "end": "2026-01-09T21:37:08Z",
-            "start": "2026-01-06T17:59:47Z",
+            "start": "2026-01-06T18:05:15Z",
             "track": "I Hope",
             "trackNormKey": "alabaster deplume|i hope"
           }
         },
         "summary": {
-          "activeDays": 40,
-          "avgSessionMinutes": 57.71,
-          "avgTracksPerSession": 22.61,
+          "activeDays": 41,
+          "avgSessionMinutes": 58.57,
+          "avgTracksPerSession": 22.65,
           "maxDailyPlays": 214,
           "medianDailyPlays": 29,
-          "nightPlayShare": 0.5736,
-          "totalScrobbles": 1698,
-          "totalSessions": 75
+          "nightPlayShare": 0.5808,
+          "totalScrobbles": 1746,
+          "totalSessions": 77
         },
         "topBurstDays": [
           {
@@ -25689,29 +25689,29 @@
         ]
       },
       "summary": {
-        "activeDays": 40,
+        "activeDays": 41,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 1035,
-        "estimatedTotalMinutes": 6203.59,
+        "estimatedFromNonSpotify": 1083,
+        "estimatedTotalMinutes": 6371.59,
         "measuredSpotifyMinutes": 2581.09,
-        "nightPlayShare": 0.5736,
-        "playsPerActiveDay": 42.45,
+        "nightPlayShare": 0.5808,
+        "playsPerActiveDay": 42.59,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 1035,
-            "share": 0.6095,
+            "count": 1083,
+            "share": 0.6203,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.3905,
+            "share": 0.3797,
             "source": "spotify"
           }
         ],
-        "totalScrobbles": 1698,
-        "uniqueArtists": 409,
-        "uniqueTracks": 860
+        "totalScrobbles": 1746,
+        "uniqueArtists": 448,
+        "uniqueTracks": 906
       },
       "topArtists": [
         {
@@ -25809,14 +25809,14 @@
       ],
       "year": 2026,
       "yearOverYear": {
-        "artistOverlapJaccard": 0.1245,
+        "artistOverlapJaccard": 0.1237,
         "comparisonBulletPoints": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 1698 scrobbles across 860 unique tracks.",
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
           "Artist overlap (Jaccard) was 0.124 and track overlap was 0.073.",
-          "Novelty shifted from 0.508 to 0.292; diversity entropy shifted from 0.970 to 0.984.",
+          "Novelty shifted from 0.508 to 0.327; diversity entropy shifted from 0.970 to 0.984.",
           "Strongest rising track: Black Country, New Road - Track X (delta 0.019 plays/day)."
         ],
-        "diversityCurrent": 0.9845,
+        "diversityCurrent": 0.9839,
         "diversityPrev": 0.97,
         "genreShift": [
           {
@@ -25880,7 +25880,7 @@
             "rateB": 0
           }
         ],
-        "noveltyRateCurrent": 0.2919,
+        "noveltyRateCurrent": 0.3267,
         "noveltyRatePrevious": 0.5076,
         "persistentFavorites": [
           {
@@ -25976,15 +25976,6 @@
             "track": "Myth"
           },
           {
-            "artist": "strongboi",
-            "countA": 18,
-            "countB": 2,
-            "delta": -0.0438,
-            "rateA": 0.0493,
-            "rateB": 0.0055,
-            "track": "fool around"
-          },
-          {
             "artist": "Drugdealer",
             "countA": 17,
             "countB": 2,
@@ -26001,6 +25992,15 @@
             "rateA": 0.0411,
             "rateB": 0,
             "track": "Loved"
+          },
+          {
+            "artist": "strongboi",
+            "countA": 18,
+            "countB": 3,
+            "delta": -0.0411,
+            "rateA": 0.0493,
+            "rateB": 0.0082,
+            "track": "fool around"
           },
           {
             "artist": "Jaco Jaco",
@@ -26149,7 +26149,7 @@
             "track": "Under Wraps"
           }
         ],
-        "trackOverlapJaccard": 0.0733
+        "trackOverlapJaccard": 0.073
       }
     }
   },
