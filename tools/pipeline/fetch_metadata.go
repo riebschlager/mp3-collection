@@ -24,6 +24,41 @@ const (
 	cacheStatusError    = "error"
 )
 
+var (
+	nonCanonicalAlbumLabels = map[string]struct{}{
+		"alternative":      {},
+		"alternative punk": {},
+		"alternative rock": {},
+		"alternrock":       {},
+		"blues":            {},
+		"dance":            {},
+		"default":          {},
+		"electronic":       {},
+		"garajerock":       {},
+		"general rock":     {},
+		"genre":            {},
+		"hip hop":          {},
+		"jazz":             {},
+		"lo fi":            {},
+		"metal":            {},
+		"misc":             {},
+		"other":            {},
+		"pop":              {},
+		"punk":             {},
+		"punk rock":        {},
+		"rock":             {},
+		"rock pop":         {},
+		"techno":           {},
+		"trip hop":         {},
+		"unclassifiable":   {},
+		"unknown":          {},
+		"world":            {},
+	}
+
+	reAlbumHasDateToken = regexp.MustCompile(`(?i)\b(\d{1,2}[./\-]\d{1,2}[./\-]\d{2,4}|\d{4}[./\-]\d{1,2}[./\-]\d{1,2})\b`)
+	reAlbumBootlegToken = regexp.MustCompile(`(?i)\b(boot|bootleg|soundboard|demo|demos|advance|sampler|promo|vinyl rip|radio rip)\b`)
+)
+
 type ImageCache struct {
 	Version   int                         `json:"version"`
 	UpdatedAt string                      `json:"updatedAt"`
@@ -336,6 +371,7 @@ func runFetchMetadata() {
 
 	var albumFetches, albumHits, albumMisses, albumErrors int
 	var albumDeferredNotFound, albumDeferredError int
+	var albumArtistFallbacks, albumFilteredSkips int
 	for i, candidate := range albums {
 		if i > 0 && i%100 == 0 {
 			fmt.Printf("Processed albums: %d/%d\n", i, len(albums))
@@ -362,6 +398,30 @@ func runFetchMetadata() {
 			cache.Albums[candidate.NormKey] = entry
 			continue
 		}
+
+		applyArtistFallback, fallbackReason := shouldUseArtistFallbackForAlbum(candidate.Album)
+		if applyArtistFallback {
+			if artistImageURL := artistOutput[candidate.ArtistSlug]; artistImageURL != "" {
+				entry.ImageURL = artistImageURL
+				entry.Status = cacheStatusOK
+				entry.Source = "artist_fallback:" + fallbackReason
+				entry.ErrorMessage = ""
+				entry.LastSuccessAt = now
+				cache.Albums[candidate.NormKey] = entry
+				albumOutput[candidate.OutputKey] = artistImageURL
+				albumArtistFallbacks++
+				continue
+			}
+
+			entry.Status = cacheStatusNotFound
+			entry.Source = "filtered:" + fallbackReason
+			entry.ErrorMessage = ""
+			cache.Albums[candidate.NormKey] = entry
+			albumMisses++
+			albumFilteredSkips++
+			continue
+		}
+
 		if exists && entry.Status == cacheStatusNotFound && !refreshMissing && !forceRefresh {
 			if !shouldRetryByTTL(entry.LastAttemptAt, notFoundTTL, nowTime) {
 				albumDeferredNotFound++
@@ -469,6 +529,7 @@ func runFetchMetadata() {
 		len(artistOutput), artistHits, artistFetches, artistMisses, artistErrors, artistDeferredNotFound, artistDeferredError)
 	fmt.Printf("Album images:  %d (cache hits: %d, fetched: %d, misses: %d, errors: %d, deferred not_found: %d, deferred error: %d)\n",
 		len(albumOutput), albumHits, albumFetches, albumMisses, albumErrors, albumDeferredNotFound, albumDeferredError)
+	fmt.Printf("Album fallback: artist=%d filtered_skip=%d\n", albumArtistFallbacks, albumFilteredSkips)
 	fmt.Printf("Wrote: %s\n", artistOutputPath)
 	fmt.Printf("Wrote: %s\n", albumOutputPath)
 }
@@ -944,6 +1005,7 @@ func buildAlbumQueryVariants(album string) []string {
 	reBracketSuffix := regexp.MustCompile(`(?i)\s*[\(\[][^)\]]*[\)\]]\s*$`)
 	reEditionSuffix := regexp.MustCompile(`(?i)\s*[-:]\s*(deluxe|expanded|remaster(ed)?|special edition|collector'?s edition|anniversary edition|bonus tracks?.*)\s*$`)
 	reDiscSuffix := regexp.MustCompile(`(?i)\s*[-:]\s*(disc|cd)\s*\d+\s*$`)
+	reNoiseToken := regexp.MustCompile(`(?i)\s*[-:]\s*(boot|bootleg|soundboard|demo(s)?|advance|sampler|promo)\s*$`)
 	reWhitespace := regexp.MustCompile(`\s+`)
 
 	candidates := []string{original}
@@ -974,6 +1036,12 @@ func buildAlbumQueryVariants(album string) []string {
 			candidates = append(candidates, working)
 			changed = true
 		}
+		next = strings.TrimSpace(reNoiseToken.ReplaceAllString(working, ""))
+		if next != working && next != "" {
+			working = next
+			candidates = append(candidates, working)
+			changed = true
+		}
 		if !changed {
 			break
 		}
@@ -996,4 +1064,29 @@ func buildAlbumQueryVariants(album string) []string {
 	}
 
 	return deduped
+}
+
+func shouldUseArtistFallbackForAlbum(album string) (bool, string) {
+	normalized := normalizeForMatching(album)
+	if normalized == "" {
+		return true, "empty"
+	}
+	if _, exists := nonCanonicalAlbumLabels[normalized]; exists {
+		return true, "genre_like"
+	}
+	if strings.HasPrefix(normalized, "top ") {
+		return true, "chart_bucket"
+	}
+
+	albumLower := strings.ToLower(strings.TrimSpace(album))
+	hasLiveQualifier := strings.Contains(albumLower, "live at") ||
+		strings.Contains(albumLower, "live in") ||
+		strings.Contains(albumLower, "live from")
+	hasBootlegToken := reAlbumBootlegToken.MatchString(album)
+	hasDateToken := reAlbumHasDateToken.MatchString(album)
+	if hasBootlegToken || (hasLiveQualifier && hasDateToken) {
+		return true, "live_or_bootleg"
+	}
+
+	return false, ""
 }

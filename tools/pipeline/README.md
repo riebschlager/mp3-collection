@@ -100,6 +100,7 @@ Available commands:
 - `build-wrapped-month-stories` shares the same env vars above and also supports:
   - `MP3_WRAPPED_MONTH_INCLUDE_DORMANT` (default: `false`, options: `true|false`)
 - `build-web-data` enriches tracks with playcounts from `data/derived/core/playcounts.json` when available.
+- `fetch-images` applies artist-image fallback for non-canonical album labels (genre buckets, chart buckets, obvious live/bootleg labels) to reduce visible missing artwork.
 - Track chunks are written as `data/derived/web/chunks/tracks-###.json` (chunk size currently 1000).
 
 ## Build Binary (optional)
