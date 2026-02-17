@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -151,6 +152,33 @@ func envInt(name string) int {
 	return n
 }
 
+func envIntDefault(name string, defaultVal int) int {
+	raw := strings.TrimSpace(os.Getenv(name))
+	if raw == "" {
+		return defaultVal
+	}
+	n, err := strconv.Atoi(raw)
+	if err != nil || n < 0 {
+		return defaultVal
+	}
+	return n
+}
+
+func shouldRetryByTTL(lastAttemptAt string, ttl time.Duration, now time.Time) bool {
+	if ttl <= 0 {
+		return true
+	}
+	lastAttemptAt = strings.TrimSpace(lastAttemptAt)
+	if lastAttemptAt == "" {
+		return true
+	}
+	lastAttempt, err := time.Parse(time.RFC3339, lastAttemptAt)
+	if err != nil {
+		return true
+	}
+	return now.Sub(lastAttempt) >= ttl
+}
+
 func runFetchMetadata() {
 	apiKey := strings.TrimSpace(os.Getenv("LASTFM_API_KEY"))
 	if apiKey == "" {
@@ -170,6 +198,10 @@ func runFetchMetadata() {
 	refreshMissing := envBool("LASTFM_IMAGE_REFRESH_MISSING")
 	maxArtists := envInt("LASTFM_IMAGE_MAX_ARTISTS")
 	maxAlbums := envInt("LASTFM_IMAGE_MAX_ALBUMS")
+	notFoundTTLDays := envIntDefault("LASTFM_IMAGE_NOT_FOUND_TTL_DAYS", 30)
+	errorTTLHours := envIntDefault("LASTFM_IMAGE_ERROR_TTL_HOURS", 24)
+	notFoundTTL := time.Duration(notFoundTTLDays) * 24 * time.Hour
+	errorTTL := time.Duration(errorTTLHours) * time.Hour
 
 	artistIndexPath := WebDataPath("artists-index.json")
 	albumIndexPath := WebDataPath("albums-index.json")
@@ -181,6 +213,7 @@ func runFetchMetadata() {
 	fmt.Printf("Fetching image metadata (scope=%s)\n", scope)
 	fmt.Printf("Using Last.fm data: %s\n", lastFmPath)
 	fmt.Printf("Using cache: %s\n\n", cachePath)
+	fmt.Printf("Retry TTLs: not_found=%dd error=%dh\n\n", notFoundTTLDays, errorTTLHours)
 
 	artists, albums, err := buildImageCandidates(scope, artistIndexPath, albumIndexPath)
 	if err != nil {
@@ -213,12 +246,14 @@ func runFetchMetadata() {
 	}
 
 	client := &http.Client{Timeout: 20 * time.Second}
-	now := time.Now().UTC().Format(time.RFC3339)
+	nowTime := time.Now().UTC()
+	now := nowTime.Format(time.RFC3339)
 
 	artistOutput := make(map[string]string)
 	albumOutput := make(map[string]string)
 
 	var artistFetches, artistHits, artistMisses, artistErrors int
+	var artistDeferredNotFound, artistDeferredError int
 	for i, candidate := range artists {
 		if i > 0 && i%100 == 0 {
 			fmt.Printf("Processed artists: %d/%d\n", i, len(artists))
@@ -236,6 +271,24 @@ func runFetchMetadata() {
 			artistOutput[candidate.Slug] = entry.ImageURL
 			artistHits++
 			continue
+		}
+		if exists && entry.Status == cacheStatusNotFound && !refreshMissing && !forceRefresh {
+			if !shouldRetryByTTL(entry.LastAttemptAt, notFoundTTL, nowTime) {
+				artistDeferredNotFound++
+				artistMisses++
+				continue
+			}
+		}
+		if exists && entry.Status == cacheStatusError && !forceRefresh {
+			if !shouldRetryByTTL(entry.LastAttemptAt, errorTTL, nowTime) {
+				artistDeferredError++
+				if entry.ImageURL != "" {
+					artistOutput[candidate.Slug] = entry.ImageURL
+				} else {
+					artistErrors++
+				}
+				continue
+			}
 		}
 		if exists && entry.Status == cacheStatusNotFound && !refreshMissing && !forceRefresh {
 			artistMisses++
@@ -282,6 +335,7 @@ func runFetchMetadata() {
 	}
 
 	var albumFetches, albumHits, albumMisses, albumErrors int
+	var albumDeferredNotFound, albumDeferredError int
 	for i, candidate := range albums {
 		if i > 0 && i%100 == 0 {
 			fmt.Printf("Processed albums: %d/%d\n", i, len(albums))
@@ -307,6 +361,26 @@ func runFetchMetadata() {
 			albumHits++
 			cache.Albums[candidate.NormKey] = entry
 			continue
+		}
+		if exists && entry.Status == cacheStatusNotFound && !refreshMissing && !forceRefresh {
+			if !shouldRetryByTTL(entry.LastAttemptAt, notFoundTTL, nowTime) {
+				albumDeferredNotFound++
+				albumMisses++
+				cache.Albums[candidate.NormKey] = entry
+				continue
+			}
+		}
+		if exists && entry.Status == cacheStatusError && !forceRefresh {
+			if !shouldRetryByTTL(entry.LastAttemptAt, errorTTL, nowTime) {
+				albumDeferredError++
+				if entry.ImageURL != "" {
+					albumOutput[candidate.OutputKey] = entry.ImageURL
+				} else {
+					albumErrors++
+				}
+				cache.Albums[candidate.NormKey] = entry
+				continue
+			}
 		}
 		if exists && entry.Status == cacheStatusNotFound && !refreshMissing && !forceRefresh {
 			albumMisses++
@@ -391,8 +465,10 @@ func runFetchMetadata() {
 	}
 
 	fmt.Println("\nImage metadata fetch complete.")
-	fmt.Printf("Artist images: %d (cache hits: %d, fetched: %d, misses: %d, errors: %d)\n", len(artistOutput), artistHits, artistFetches, artistMisses, artistErrors)
-	fmt.Printf("Album images:  %d (cache hits: %d, fetched: %d, misses: %d, errors: %d)\n", len(albumOutput), albumHits, albumFetches, albumMisses, albumErrors)
+	fmt.Printf("Artist images: %d (cache hits: %d, fetched: %d, misses: %d, errors: %d, deferred not_found: %d, deferred error: %d)\n",
+		len(artistOutput), artistHits, artistFetches, artistMisses, artistErrors, artistDeferredNotFound, artistDeferredError)
+	fmt.Printf("Album images:  %d (cache hits: %d, fetched: %d, misses: %d, errors: %d, deferred not_found: %d, deferred error: %d)\n",
+		len(albumOutput), albumHits, albumFetches, albumMisses, albumErrors, albumDeferredNotFound, albumDeferredError)
 	fmt.Printf("Wrote: %s\n", artistOutputPath)
 	fmt.Printf("Wrote: %s\n", albumOutputPath)
 }
@@ -688,6 +764,16 @@ func doLastFmRequest(client *http.Client, apiKey string, params url.Values) ([]b
 	}
 
 	if resp.StatusCode != http.StatusOK {
+		var apiErrorBody struct {
+			Error   int    `json:"error"`
+			Message string `json:"message"`
+		}
+		if err := json.Unmarshal(body, &apiErrorBody); err == nil && apiErrorBody.Error != 0 {
+			return nil, &lastFmAPIError{
+				Code:    apiErrorBody.Error,
+				Message: apiErrorBody.Message,
+			}
+		}
 		return nil, fmt.Errorf("http %d from last.fm: %s", resp.StatusCode, strings.TrimSpace(string(body)))
 	}
 
@@ -739,18 +825,32 @@ func fetchLastFmAlbumImage(client *http.Client, apiKey, artist, album, mbid stri
 		return "", mbid, nil
 	}
 
-	response, err := fetchLastFmAlbumByName(client, apiKey, artist, album)
-	if err != nil {
-		return "", mbid, err
+	var lastNotFound error
+	for _, albumQuery := range buildAlbumQueryVariants(album) {
+		response, err := fetchLastFmAlbumByName(client, apiKey, artist, albumQuery)
+		if err != nil {
+			if isLastFmNotFoundError(err) {
+				lastNotFound = err
+				continue
+			}
+			return "", mbid, err
+		}
+
+		imageURL := pickBestLastFmImage(response.Album.Image)
+		resolvedMBID := strings.TrimSpace(response.Album.MBID)
+		if resolvedMBID == "" {
+			resolvedMBID = mbid
+		}
+		if imageURL != "" {
+			return imageURL, resolvedMBID, nil
+		}
+		mbid = resolvedMBID
 	}
 
-	imageURL := pickBestLastFmImage(response.Album.Image)
-	resolvedMBID := strings.TrimSpace(response.Album.MBID)
-	if resolvedMBID == "" {
-		resolvedMBID = mbid
+	if lastNotFound != nil {
+		return "", mbid, lastNotFound
 	}
-
-	return imageURL, resolvedMBID, nil
+	return "", mbid, nil
 }
 
 func fetchLastFmAlbumByMBID(client *http.Client, apiKey, mbid string) (lastFmAlbumInfoResponse, error) {
@@ -832,4 +932,68 @@ func pickBestLastFmImage(images []lastFmImage) string {
 	}
 
 	return bestURL
+}
+
+func buildAlbumQueryVariants(album string) []string {
+	original := strings.TrimSpace(album)
+	if original == "" {
+		return nil
+	}
+
+	reDateSuffix := regexp.MustCompile(`(?i)[\s,\-]+(\d{1,2}[./\-]\d{1,2}[./\-]\d{2,4}|\d{4}[./\-]\d{1,2}[./\-]\d{1,2})$`)
+	reBracketSuffix := regexp.MustCompile(`(?i)\s*[\(\[][^)\]]*[\)\]]\s*$`)
+	reEditionSuffix := regexp.MustCompile(`(?i)\s*[-:]\s*(deluxe|expanded|remaster(ed)?|special edition|collector'?s edition|anniversary edition|bonus tracks?.*)\s*$`)
+	reDiscSuffix := regexp.MustCompile(`(?i)\s*[-:]\s*(disc|cd)\s*\d+\s*$`)
+	reWhitespace := regexp.MustCompile(`\s+`)
+
+	candidates := []string{original}
+	working := original
+	for i := 0; i < 3; i++ {
+		changed := false
+		next := strings.TrimSpace(reBracketSuffix.ReplaceAllString(working, ""))
+		if next != working && next != "" {
+			working = next
+			candidates = append(candidates, working)
+			changed = true
+		}
+		next = strings.TrimSpace(reEditionSuffix.ReplaceAllString(working, ""))
+		if next != working && next != "" {
+			working = next
+			candidates = append(candidates, working)
+			changed = true
+		}
+		next = strings.TrimSpace(reDiscSuffix.ReplaceAllString(working, ""))
+		if next != working && next != "" {
+			working = next
+			candidates = append(candidates, working)
+			changed = true
+		}
+		next = strings.TrimSpace(reDateSuffix.ReplaceAllString(working, ""))
+		if next != working && next != "" {
+			working = next
+			candidates = append(candidates, working)
+			changed = true
+		}
+		if !changed {
+			break
+		}
+	}
+
+	deduped := make([]string, 0, len(candidates))
+	seen := make(map[string]bool, len(candidates))
+	for _, candidate := range candidates {
+		candidate = strings.TrimSpace(candidate)
+		if candidate == "" {
+			continue
+		}
+		candidate = reWhitespace.ReplaceAllString(candidate, " ")
+		key := strings.ToLower(candidate)
+		if seen[key] {
+			continue
+		}
+		seen[key] = true
+		deduped = append(deduped, candidate)
+	}
+
+	return deduped
 }

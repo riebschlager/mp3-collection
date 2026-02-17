@@ -30,6 +30,8 @@ The CLI auto-loads `.env` by searching current and parent directories.
 - `LASTFM_IMAGE_REFRESH_MISSING`: optional boolean (`true/false`).
 - `LASTFM_IMAGE_MAX_ARTISTS`: optional int limit for fetch runs.
 - `LASTFM_IMAGE_MAX_ALBUMS`: optional int limit for fetch runs.
+- `LASTFM_IMAGE_NOT_FOUND_TTL_DAYS`: optional int, default `30` (retry cached `not_found` entries after this many days).
+- `LASTFM_IMAGE_ERROR_TTL_HOURS`: optional int, default `24` (retry cached `error` entries after this many hours).
 
 ## Quick Start
 
