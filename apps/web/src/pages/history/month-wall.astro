@@ -1,0 +1,699 @@
+---
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+import { formatMonth, type MonthStoryData, type WrappedMonthStoriesData } from '../../lib/wrapped-utils';
+
+interface SourceBreakdownEntry {
+  source?: string;
+  share?: number;
+  count?: number;
+}
+
+interface MonthWallEntry {
+  key: string;
+  year: number;
+  month: string;
+  label: string;
+  totalScrobbles: number;
+  uniqueTracks: number;
+  uniqueArtists: number;
+  activeDays: number;
+  playsPerActiveDay: number;
+  nightPlayShare: number;
+  spotifyShare: number;
+  lastfmShare: number;
+  newArtists: number;
+  newTracks: number;
+  noveltyCurrent: number;
+  noveltyPrevious: number;
+  noveltyDelta: number;
+  trackOverlap: number;
+  artistOverlap: number;
+  topArtist: string;
+  topTrack: string;
+  riser: string;
+  decliner: string;
+  previousMonth: string;
+  insightBullets: string[];
+  wrappedUrl: string;
+  energy: number;
+  flags: {
+    discovery: boolean;
+    replay: boolean;
+    spotify: boolean;
+    lastfm: boolean;
+    night: boolean;
+    volatile: boolean;
+  };
+  vibeTags: string[];
+}
+
+const monthStoriesPath = resolve(process.cwd(), '../../data/derived/web/wrapped-month-stories.json');
+const monthStoriesData = JSON.parse(readFileSync(monthStoriesPath, 'utf8')) as WrappedMonthStoriesData;
+
+const clamp = (value: number, min: number, max: number): number => {
+  return Math.max(min, Math.min(max, value));
+};
+
+const percentile = (values: number[], p: number): number => {
+  if (values.length === 0) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
+  const idx = Math.floor(clamp(p, 0, 1) * (sorted.length - 1));
+  return sorted[idx];
+};
+
+const parseMonthKey = (key: string): { year: number; month: string } | null => {
+  const [yearPart, monthPart] = key.split('-');
+  if (!yearPart || !monthPart || monthPart.length !== 2) return null;
+  const year = Number.parseInt(yearPart, 10);
+  if (!Number.isFinite(year)) return null;
+  return { year, month: monthPart };
+};
+
+const findShare = (sourceBreakdown: SourceBreakdownEntry[] | undefined, source: 'spotify' | 'lastfm'): number => {
+  if (!Array.isArray(sourceBreakdown)) return 0;
+  const match = sourceBreakdown.find((entry) => entry?.source === source);
+  const share = typeof match?.share === 'number' ? match.share : 0;
+  return clamp(share, 0, 1);
+};
+
+const monthKeys = (Array.isArray(monthStoriesData.months) ? monthStoriesData.months : Object.keys(monthStoriesData.stories || {}))
+  .filter((key) => typeof key === 'string')
+  .sort((a, b) => b.localeCompare(a));
+
+const rawEntries: Omit<MonthWallEntry, 'energy' | 'flags' | 'vibeTags'>[] = monthKeys
+  .map((key) => {
+    const parsed = parseMonthKey(key);
+    if (!parsed) return null;
+    const story = monthStoriesData.stories?.[key] as MonthStoryData | undefined;
+    if (!story) return null;
+
+    const summary = story.summary || {};
+    const discoveriesSummary = story.discoveries?.summary || {};
+    const monthOverMonth = (story.monthOverMonth || {}) as Record<string, unknown>;
+
+    const totalScrobbles = typeof summary.totalScrobbles === 'number' ? summary.totalScrobbles : 0;
+    const uniqueTracks = typeof summary.uniqueTracks === 'number' ? summary.uniqueTracks : 0;
+    const uniqueArtists = typeof summary.uniqueArtists === 'number' ? summary.uniqueArtists : 0;
+    const activeDays = typeof summary.activeDays === 'number' ? summary.activeDays : 0;
+    const playsPerActiveDay = typeof summary.playsPerActiveDay === 'number' ? summary.playsPerActiveDay : 0;
+    const nightPlayShare = typeof summary.nightPlayShare === 'number' ? summary.nightPlayShare : 0;
+    const spotifyShare = findShare(summary.sourceBreakdown as SourceBreakdownEntry[] | undefined, 'spotify');
+    const lastfmShare = findShare(summary.sourceBreakdown as SourceBreakdownEntry[] | undefined, 'lastfm');
+    const newArtists = typeof discoveriesSummary.newArtistCount === 'number' ? discoveriesSummary.newArtistCount : 0;
+    const newTracks = typeof discoveriesSummary.newTrackCount === 'number' ? discoveriesSummary.newTrackCount : 0;
+
+    const noveltyCurrent = typeof monthOverMonth.noveltyRateCurrent === 'number'
+      ? monthOverMonth.noveltyRateCurrent
+      : uniqueTracks > 0 ? newTracks / uniqueTracks : 0;
+    const noveltyPrevious = typeof monthOverMonth.noveltyRatePrevious === 'number'
+      ? monthOverMonth.noveltyRatePrevious
+      : 0;
+    const noveltyDelta = noveltyCurrent - noveltyPrevious;
+    const trackOverlap = typeof monthOverMonth.trackOverlapJaccard === 'number'
+      ? monthOverMonth.trackOverlapJaccard
+      : 0;
+    const artistOverlap = typeof monthOverMonth.artistOverlapJaccard === 'number'
+      ? monthOverMonth.artistOverlapJaccard
+      : 0;
+    const previousMonth = typeof monthOverMonth.previousMonth === 'string'
+      ? monthOverMonth.previousMonth
+      : '';
+
+    const topArtistRow = Array.isArray(story.topArtists) ? story.topArtists[0] : undefined;
+    const topTrackRow = Array.isArray(story.topTracks) ? story.topTracks[0] : undefined;
+    const topRiserRow = Array.isArray((monthOverMonth as any).topRisers) ? (monthOverMonth as any).topRisers[0] : undefined;
+    const topDeclinerRow = Array.isArray((monthOverMonth as any).topDecliners) ? (monthOverMonth as any).topDecliners[0] : undefined;
+
+    const topArtist = typeof topArtistRow?.artist === 'string' ? topArtistRow.artist : 'N/A';
+    const topTrack = typeof topTrackRow?.artist === 'string' && typeof topTrackRow?.track === 'string'
+      ? `${topTrackRow.artist} - ${topTrackRow.track}`
+      : 'N/A';
+    const riser = typeof topRiserRow?.artist === 'string' && typeof topRiserRow?.track === 'string'
+      ? `${topRiserRow.artist} - ${topRiserRow.track}`
+      : 'N/A';
+    const decliner = typeof topDeclinerRow?.artist === 'string' && typeof topDeclinerRow?.track === 'string'
+      ? `${topDeclinerRow.artist} - ${topDeclinerRow.track}`
+      : 'N/A';
+
+    const insightBullets = Array.isArray(story.insightBullets)
+      ? story.insightBullets.filter((bullet): bullet is string => typeof bullet === 'string').slice(0, 3)
+      : [];
+
+    return {
+      key,
+      year: parsed.year,
+      month: parsed.month,
+      label: formatMonth(key),
+      totalScrobbles,
+      uniqueTracks,
+      uniqueArtists,
+      activeDays,
+      playsPerActiveDay,
+      nightPlayShare: clamp(nightPlayShare, 0, 1),
+      spotifyShare,
+      lastfmShare,
+      newArtists,
+      newTracks,
+      noveltyCurrent: clamp(noveltyCurrent, 0, 1),
+      noveltyPrevious: clamp(noveltyPrevious, 0, 1),
+      noveltyDelta,
+      trackOverlap: clamp(trackOverlap, 0, 1),
+      artistOverlap: clamp(artistOverlap, 0, 1),
+      topArtist,
+      topTrack,
+      riser,
+      decliner,
+      previousMonth,
+      insightBullets,
+      wrappedUrl: buildUrl(`wrapped/monthly/${parsed.year}/${parsed.month}`),
+    };
+  })
+  .filter((entry): entry is Omit<MonthWallEntry, 'energy' | 'flags' | 'vibeTags'> => entry !== null);
+
+const maxScrobbles = Math.max(1, ...rawEntries.map((entry) => entry.totalScrobbles));
+const maxPlaysPerActiveDay = Math.max(1, ...rawEntries.map((entry) => entry.playsPerActiveDay));
+const maxNewTracks = Math.max(1, ...rawEntries.map((entry) => entry.newTracks));
+
+const discoveryThreshold = Math.max(5, percentile(rawEntries.map((entry) => entry.newTracks), 0.75));
+const replayThreshold = Math.max(14, percentile(rawEntries.map((entry) => entry.playsPerActiveDay), 0.75));
+const nightThreshold = Math.max(0.5, percentile(rawEntries.map((entry) => entry.nightPlayShare), 0.72));
+const volatilityThreshold = Math.max(0.09, percentile(rawEntries.map((entry) => Math.abs(entry.noveltyDelta)), 0.72));
+
+const monthEntries: MonthWallEntry[] = rawEntries.map((entry) => {
+  const volumeScore = entry.totalScrobbles / maxScrobbles;
+  const paceScore = entry.playsPerActiveDay / maxPlaysPerActiveDay;
+  const discoveryScore = entry.newTracks / maxNewTracks;
+  const noveltyScore = entry.noveltyCurrent;
+  const energy = Math.round(clamp(
+    (paceScore * 0.34 + volumeScore * 0.30 + noveltyScore * 0.20 + discoveryScore * 0.16) * 100,
+    0,
+    100
+  ));
+
+  const flags = {
+    discovery: entry.newTracks >= discoveryThreshold || entry.noveltyCurrent >= 0.5,
+    replay: entry.playsPerActiveDay >= replayThreshold && entry.noveltyCurrent <= 0.34,
+    spotify: entry.spotifyShare >= 0.65,
+    lastfm: entry.lastfmShare >= 0.65,
+    night: entry.nightPlayShare >= nightThreshold,
+    volatile: Math.abs(entry.noveltyDelta) >= volatilityThreshold || (entry.trackOverlap > 0 && entry.trackOverlap <= 0.10),
+  };
+
+  const vibeTags: string[] = [];
+  if (flags.discovery) vibeTags.push('Discovery');
+  if (flags.replay) vibeTags.push('Comfort');
+  if (flags.volatile) vibeTags.push('Shift');
+  if (flags.night) vibeTags.push('Night');
+  if (vibeTags.length === 0) vibeTags.push('Steady');
+
+  return {
+    ...entry,
+    energy,
+    flags,
+    vibeTags: vibeTags.slice(0, 2),
+  };
+});
+
+const totalScrobblesAcrossMonths = monthEntries.reduce((sum, entry) => sum + entry.totalScrobbles, 0);
+const firstMonthLabel = monthEntries[monthEntries.length - 1]?.label ?? 'N/A';
+const latestMonthLabel = monthEntries[0]?.label ?? 'N/A';
+const averageEnergy = monthEntries.length > 0
+  ? Math.round(monthEntries.reduce((sum, entry) => sum + entry.energy, 0) / monthEntries.length)
+  : 0;
+
+const filterCounts = {
+  all: monthEntries.length,
+  discovery: monthEntries.filter((entry) => entry.flags.discovery).length,
+  replay: monthEntries.filter((entry) => entry.flags.replay).length,
+  spotify: monthEntries.filter((entry) => entry.flags.spotify).length,
+  lastfm: monthEntries.filter((entry) => entry.flags.lastfm).length,
+  night: monthEntries.filter((entry) => entry.flags.night).length,
+  volatile: monthEntries.filter((entry) => entry.flags.volatile).length,
+};
+
+const initialSelectedKey = monthEntries[0]?.key ?? '';
+---
+
+<Layout title="Monthly Story Wall - MP3 Collection">
+  <div class="space-y-8 month-wall-body">
+    <section class="rounded-3xl bg-gradient-to-br from-emerald-900 via-cyan-900 to-slate-900 text-slate-100 px-6 py-10 md:px-10 md:py-12 shadow-2xl">
+      <p class="text-xs uppercase tracking-[0.3em] text-slate-300">History Lens</p>
+      <h1 class="month-wall-title mt-3 text-4xl md:text-5xl font-bold">Monthly Story Wall</h1>
+      <p class="mt-4 max-w-3xl text-slate-200 text-base md:text-lg">
+        A poster-style grid of every month in your listening history.
+        Scan for discovery spikes, replay phases, source shifts, and unstable taste transitions.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <a
+          href={buildUrl('history')}
+          class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-white/45"
+        >
+          Back to History
+        </a>
+        <a
+          href={buildUrl('wrapped/monthly')}
+          class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-white/45"
+        >
+          Open Monthly Wrapped
+        </a>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Months</div>
+          <div class="mt-2 text-3xl font-bold">{monthEntries.length}</div>
+          <div class="text-sm text-slate-200">{firstMonthLabel} -> {latestMonthLabel}</div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Total Plays</div>
+          <div class="mt-2 text-3xl font-bold">{totalScrobblesAcrossMonths.toLocaleString()}</div>
+          <div class="text-sm text-slate-200">Across all month stories</div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Average Energy</div>
+          <div class="mt-2 text-3xl font-bold">{averageEnergy}</div>
+          <div class="text-sm text-slate-200">Composite of pace, volume, novelty, discovery</div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">High Discovery</div>
+          <div class="mt-2 text-3xl font-bold">{filterCounts.discovery}</div>
+          <div class="text-sm text-slate-200">Months above discovery threshold</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
+      <article class="rounded-3xl bg-slate-950 text-slate-100 shadow-2xl p-5 md:p-7">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 class="month-wall-title text-3xl font-bold">Wall View</h2>
+            <p id="wall-context" class="mt-1 text-sm text-slate-300">
+              Showing all months in reverse chronological order.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" data-sort="recent" class="sort-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Recent</button>
+            <button type="button" data-sort="oldest" class="sort-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Oldest</button>
+            <button type="button" data-sort="energy" class="sort-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Energy</button>
+            <button type="button" data-sort="discovery" class="sort-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Discovery</button>
+          </div>
+        </div>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          <button type="button" data-filter="all" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">All ({filterCounts.all})</button>
+          <button type="button" data-filter="discovery" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Discovery ({filterCounts.discovery})</button>
+          <button type="button" data-filter="replay" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Replay ({filterCounts.replay})</button>
+          <button type="button" data-filter="spotify" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Spotify Heavy ({filterCounts.spotify})</button>
+          <button type="button" data-filter="lastfm" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Last.fm Heavy ({filterCounts.lastfm})</button>
+          <button type="button" data-filter="night" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Night Owl ({filterCounts.night})</button>
+          <button type="button" data-filter="volatile" class="filter-btn rounded-full border border-slate-600 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-slate-400">Volatile ({filterCounts.volatile})</button>
+        </div>
+
+        <div id="month-wall-grid" class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 text-sm text-slate-400">
+            Loading month wall...
+          </div>
+        </div>
+      </article>
+
+      <aside class="rounded-3xl bg-white shadow-xl p-5 md:p-6 h-fit sticky top-24">
+        <div id="detail-empty" class="text-sm text-gray-600">
+          Select a month tile to inspect details.
+        </div>
+
+        <div id="detail-content" class="hidden space-y-4">
+          <div>
+            <p id="detail-month-key" class="text-xs uppercase tracking-[0.2em] text-gray-500"></p>
+            <h3 id="detail-label" class="month-wall-title text-2xl font-bold text-gray-900 mt-1"></h3>
+            <p id="detail-position" class="text-xs text-gray-500 mt-1"></p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-xl bg-slate-100 p-3">
+              <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Energy</div>
+              <div id="detail-energy" class="text-xl font-bold text-slate-900 mt-1"></div>
+            </div>
+            <div class="rounded-xl bg-slate-100 p-3">
+              <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Plays</div>
+              <div id="detail-plays" class="text-xl font-bold text-slate-900 mt-1"></div>
+            </div>
+            <div class="rounded-xl bg-slate-100 p-3">
+              <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Top Artist</div>
+              <div id="detail-top-artist" class="text-sm font-semibold text-slate-900 mt-1"></div>
+            </div>
+            <div class="rounded-xl bg-slate-100 p-3">
+              <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Top Track</div>
+              <div id="detail-top-track" class="text-sm font-semibold text-slate-900 mt-1"></div>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 p-3">
+            <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Source Mix</div>
+            <div class="mt-2 h-3 w-full rounded-full bg-slate-100 overflow-hidden flex">
+              <span id="detail-lastfm-bar" class="bg-emerald-500"></span>
+              <span id="detail-spotify-bar" class="bg-cyan-500"></span>
+            </div>
+            <div id="detail-source-label" class="mt-2 text-xs text-slate-600"></div>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 p-3">
+            <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Discovery and Drift</div>
+            <div id="detail-discovery" class="mt-2 text-sm text-slate-700"></div>
+            <div id="detail-overlap" class="mt-1 text-sm text-slate-700"></div>
+            <div id="detail-previous" class="mt-1 text-sm text-slate-700"></div>
+          </div>
+
+          <div class="rounded-xl border border-slate-200 p-3">
+            <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Motion</div>
+            <div id="detail-riser" class="mt-2 text-sm text-emerald-700"></div>
+            <div id="detail-decliner" class="mt-1 text-sm text-rose-700"></div>
+          </div>
+
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-slate-500">Insights</div>
+            <ul id="detail-insights" class="mt-2 space-y-1 text-sm text-slate-700"></ul>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <button
+              id="detail-prev"
+              type="button"
+              class="rounded-full border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:border-slate-500 disabled:opacity-40"
+            >
+              Previous
+            </button>
+            <button
+              id="detail-next"
+              type="button"
+              class="rounded-full border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:border-slate-500 disabled:opacity-40"
+            >
+              Next
+            </button>
+            <a
+              id="detail-open"
+              href="#"
+              class="rounded-full bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white hover:bg-slate-700"
+            >
+              Open Month
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ monthEntries, initialSelectedKey }}>
+    const months = Array.isArray(monthEntries) ? [...monthEntries] : [];
+    let currentFilter = 'all';
+    let currentSort = 'recent';
+    let selectedKey = initialSelectedKey || (months[0] ? months[0].key : '');
+    let visibleMonths = [];
+
+    const gridEl = document.getElementById('month-wall-grid');
+    const wallContextEl = document.getElementById('wall-context');
+    const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+    const sortButtons = Array.from(document.querySelectorAll('[data-sort]'));
+
+    const detailEmptyEl = document.getElementById('detail-empty');
+    const detailContentEl = document.getElementById('detail-content');
+    const detailMonthKeyEl = document.getElementById('detail-month-key');
+    const detailLabelEl = document.getElementById('detail-label');
+    const detailPositionEl = document.getElementById('detail-position');
+    const detailEnergyEl = document.getElementById('detail-energy');
+    const detailPlaysEl = document.getElementById('detail-plays');
+    const detailTopArtistEl = document.getElementById('detail-top-artist');
+    const detailTopTrackEl = document.getElementById('detail-top-track');
+    const detailLastfmBarEl = document.getElementById('detail-lastfm-bar');
+    const detailSpotifyBarEl = document.getElementById('detail-spotify-bar');
+    const detailSourceLabelEl = document.getElementById('detail-source-label');
+    const detailDiscoveryEl = document.getElementById('detail-discovery');
+    const detailOverlapEl = document.getElementById('detail-overlap');
+    const detailPreviousEl = document.getElementById('detail-previous');
+    const detailRiserEl = document.getElementById('detail-riser');
+    const detailDeclinerEl = document.getElementById('detail-decliner');
+    const detailInsightsEl = document.getElementById('detail-insights');
+    const detailPrevButton = document.getElementById('detail-prev');
+    const detailNextButton = document.getElementById('detail-next');
+    const detailOpenLink = document.getElementById('detail-open');
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+    const percent = (value) => `${Math.round(clamp(value, 0, 1) * 100)}%`;
+    const escapeHtml = (value) => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const sorters = {
+      recent: (a, b) => b.key.localeCompare(a.key),
+      oldest: (a, b) => a.key.localeCompare(b.key),
+      energy: (a, b) => b.energy - a.energy || b.key.localeCompare(a.key),
+      discovery: (a, b) => b.newTracks - a.newTracks || b.noveltyCurrent - a.noveltyCurrent || b.key.localeCompare(a.key),
+    };
+
+    const filters = {
+      all: (month) => true,
+      discovery: (month) => Boolean(month.flags?.discovery),
+      replay: (month) => Boolean(month.flags?.replay),
+      spotify: (month) => Boolean(month.flags?.spotify),
+      lastfm: (month) => Boolean(month.flags?.lastfm),
+      night: (month) => Boolean(month.flags?.night),
+      volatile: (month) => Boolean(month.flags?.volatile),
+    };
+
+    const energyGradient = (energy) => {
+      const safe = clamp(energy, 0, 100);
+      const hueA = Math.round(210 - safe * 1.25);
+      const hueB = Math.round(235 - safe * 0.95);
+      const lightA = Math.round(28 + safe * 0.24);
+      const lightB = Math.round(14 + safe * 0.16);
+      return `linear-gradient(155deg, hsl(${hueA} 72% ${lightA}%), hsl(${hueB} 66% ${lightB}%))`;
+    };
+
+    const getVisibleMonths = () => {
+      const predicate = filters[currentFilter] || filters.all;
+      const sorter = sorters[currentSort] || sorters.recent;
+      return months.filter(predicate).sort(sorter);
+    };
+
+    const updateControlState = () => {
+      filterButtons.forEach((button) => {
+        const isActive = button.getAttribute('data-filter') === currentFilter;
+        button.classList.toggle('bg-slate-100', isActive);
+        button.classList.toggle('text-slate-900', isActive);
+        button.classList.toggle('border-slate-100', isActive);
+      });
+
+      sortButtons.forEach((button) => {
+        const isActive = button.getAttribute('data-sort') === currentSort;
+        button.classList.toggle('bg-slate-100', isActive);
+        button.classList.toggle('text-slate-900', isActive);
+        button.classList.toggle('border-slate-100', isActive);
+      });
+    };
+
+    const renderGrid = () => {
+      if (!gridEl) return;
+      gridEl.innerHTML = '';
+
+      if (visibleMonths.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'rounded-2xl border border-slate-700 bg-slate-900/70 p-6 text-sm text-slate-400';
+        empty.textContent = 'No months match this filter.';
+        gridEl.appendChild(empty);
+        return;
+      }
+
+      visibleMonths.forEach((month) => {
+        const tile = document.createElement('button');
+        tile.type = 'button';
+        tile.dataset.key = month.key;
+        tile.className = 'group relative overflow-hidden rounded-2xl p-4 text-left text-white shadow-lg transition-transform duration-200 hover:scale-[1.01] focus:outline-none';
+        tile.style.background = energyGradient(month.energy);
+
+        if (month.key === selectedKey) {
+          tile.classList.add('ring-2', 'ring-white', 'ring-offset-2', 'ring-offset-slate-950');
+        }
+
+        const vibeA = month.vibeTags?.[0] ? `<span class="rounded-full bg-white/20 px-2 py-0.5 text-[10px] uppercase tracking-[0.15em]">${escapeHtml(month.vibeTags[0])}</span>` : '';
+        const vibeB = month.vibeTags?.[1] ? `<span class="rounded-full bg-white/20 px-2 py-0.5 text-[10px] uppercase tracking-[0.15em]">${escapeHtml(month.vibeTags[1])}</span>` : '';
+
+        tile.innerHTML = `
+          <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-black/15 pointer-events-none"></div>
+          <div class="relative z-10 flex h-full flex-col justify-between gap-4">
+            <div>
+              <div class="text-xs uppercase tracking-[0.2em] text-white/80">${escapeHtml(month.key)}</div>
+              <div class="mt-1 text-xl font-bold leading-tight">${escapeHtml(month.label)}</div>
+              <div class="mt-1 text-xs text-white/85">Top: ${escapeHtml(month.topArtist)}</div>
+            </div>
+            <div class="space-y-2">
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="rounded-lg bg-black/20 px-2 py-1">Plays ${month.totalScrobbles.toLocaleString()}</div>
+                <div class="rounded-lg bg-black/20 px-2 py-1">Energy ${month.energy}</div>
+              </div>
+              <div class="flex flex-wrap gap-1">${vibeA}${vibeB}</div>
+            </div>
+          </div>
+        `;
+
+        tile.addEventListener('click', () => {
+          selectedKey = month.key;
+          renderAll();
+        });
+
+        gridEl.appendChild(tile);
+      });
+    };
+
+    const renderDetail = () => {
+      if (!detailEmptyEl || !detailContentEl) return;
+      if (visibleMonths.length === 0) {
+        detailEmptyEl.classList.remove('hidden');
+        detailContentEl.classList.add('hidden');
+        return;
+      }
+
+      const selectedMonth = visibleMonths.find((month) => month.key === selectedKey) || visibleMonths[0];
+      if (!selectedMonth) {
+        detailEmptyEl.classList.remove('hidden');
+        detailContentEl.classList.add('hidden');
+        return;
+      }
+      selectedKey = selectedMonth.key;
+
+      const index = visibleMonths.findIndex((month) => month.key === selectedMonth.key);
+      const previous = index > 0 ? visibleMonths[index - 1] : null;
+      const next = index < visibleMonths.length - 1 ? visibleMonths[index + 1] : null;
+
+      detailEmptyEl.classList.add('hidden');
+      detailContentEl.classList.remove('hidden');
+
+      if (detailMonthKeyEl) detailMonthKeyEl.textContent = selectedMonth.key;
+      if (detailLabelEl) detailLabelEl.textContent = selectedMonth.label;
+      if (detailPositionEl) detailPositionEl.textContent = `${index + 1} / ${visibleMonths.length} in current view`;
+      if (detailEnergyEl) detailEnergyEl.textContent = String(selectedMonth.energy);
+      if (detailPlaysEl) detailPlaysEl.textContent = selectedMonth.totalScrobbles.toLocaleString();
+      if (detailTopArtistEl) detailTopArtistEl.textContent = selectedMonth.topArtist;
+      if (detailTopTrackEl) detailTopTrackEl.textContent = selectedMonth.topTrack;
+
+      if (detailLastfmBarEl) detailLastfmBarEl.style.width = percent(selectedMonth.lastfmShare);
+      if (detailSpotifyBarEl) detailSpotifyBarEl.style.width = percent(selectedMonth.spotifyShare);
+      if (detailSourceLabelEl) {
+        detailSourceLabelEl.textContent = `Last.fm ${percent(selectedMonth.lastfmShare)} | Spotify ${percent(selectedMonth.spotifyShare)}`;
+      }
+
+      if (detailDiscoveryEl) {
+        detailDiscoveryEl.textContent = `${selectedMonth.newArtists} new artists, ${selectedMonth.newTracks} new tracks.`;
+      }
+      if (detailOverlapEl) {
+        detailOverlapEl.textContent = `Track overlap ${percent(selectedMonth.trackOverlap)} | Artist overlap ${percent(selectedMonth.artistOverlap)}.`;
+      }
+      if (detailPreviousEl) {
+        detailPreviousEl.textContent = selectedMonth.previousMonth
+          ? `Compared to ${selectedMonth.previousMonth}, novelty moved ${selectedMonth.noveltyDelta >= 0 ? 'up' : 'down'} by ${Math.abs(selectedMonth.noveltyDelta).toFixed(2)}.`
+          : 'No previous-month comparison available.';
+      }
+
+      if (detailRiserEl) detailRiserEl.textContent = `Riser: ${selectedMonth.riser}`;
+      if (detailDeclinerEl) detailDeclinerEl.textContent = `Decliner: ${selectedMonth.decliner}`;
+
+      if (detailInsightsEl) {
+        detailInsightsEl.innerHTML = '';
+        const bullets = selectedMonth.insightBullets?.length
+          ? selectedMonth.insightBullets
+          : ['No generated insight bullets for this month.'];
+        bullets.slice(0, 3).forEach((bullet) => {
+          const li = document.createElement('li');
+          li.textContent = bullet;
+          detailInsightsEl.appendChild(li);
+        });
+      }
+
+      if (detailPrevButton instanceof HTMLButtonElement) {
+        detailPrevButton.disabled = !previous;
+      }
+      if (detailNextButton instanceof HTMLButtonElement) {
+        detailNextButton.disabled = !next;
+      }
+      if (detailOpenLink instanceof HTMLAnchorElement) {
+        detailOpenLink.href = selectedMonth.wrappedUrl;
+      }
+    };
+
+    const renderAll = () => {
+      visibleMonths = getVisibleMonths();
+      if (!visibleMonths.some((month) => month.key === selectedKey)) {
+        selectedKey = visibleMonths[0] ? visibleMonths[0].key : '';
+      }
+      renderGrid();
+      renderDetail();
+      updateControlState();
+
+      if (wallContextEl) {
+        const sortLabel = currentSort === 'recent'
+          ? 'recent first'
+          : currentSort === 'oldest'
+            ? 'oldest first'
+            : currentSort === 'energy'
+              ? 'highest energy first'
+              : 'highest discovery first';
+        wallContextEl.textContent = `Showing ${visibleMonths.length} of ${months.length} months (${sortLabel}).`;
+      }
+    };
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextFilter = button.getAttribute('data-filter');
+        if (!nextFilter) return;
+        currentFilter = nextFilter;
+        renderAll();
+      });
+    });
+
+    sortButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextSort = button.getAttribute('data-sort');
+        if (!nextSort) return;
+        currentSort = nextSort;
+        renderAll();
+      });
+    });
+
+    if (detailPrevButton instanceof HTMLButtonElement) {
+      detailPrevButton.addEventListener('click', () => {
+        const idx = visibleMonths.findIndex((month) => month.key === selectedKey);
+        if (idx > 0) {
+          selectedKey = visibleMonths[idx - 1].key;
+          renderAll();
+        }
+      });
+    }
+
+    if (detailNextButton instanceof HTMLButtonElement) {
+      detailNextButton.addEventListener('click', () => {
+        const idx = visibleMonths.findIndex((month) => month.key === selectedKey);
+        if (idx >= 0 && idx < visibleMonths.length - 1) {
+          selectedKey = visibleMonths[idx + 1].key;
+          renderAll();
+        }
+      });
+    }
+
+    renderAll();
+  </script>
+
+  <style>
+    .month-wall-title {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      letter-spacing: 0.01em;
+    }
+
+    .month-wall-body {
+      font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+    }
+  </style>
+</Layout>

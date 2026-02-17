@@ -1,12 +1,37 @@
 ---
 import { readFileSync } from 'node:fs';
-import Layout from '../../layouts/Layout.astro';
-import { buildUrl } from '../../lib/urls';
+import { resolve } from 'node:path';
+import Layout from '../../../layouts/Layout.astro';
+import { buildUrl } from '../../../lib/urls';
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 const MIN_DORMANCY_DAYS = 365;
 const MIN_DORMANCY_MS = MIN_DORMANCY_DAYS * MS_PER_DAY;
 const CHART_SAMPLE_SIZE = 220;
+const CURATED_ARTIST_CANDIDATES = [
+  'Radiohead',
+  'Nine Inch Nails',
+  'R.E.M.',
+  'PJ Harvey',
+  'The Smashing Pumpkins',
+  'Pixies',
+  'Nirvana',
+  'Wilco',
+  'Eels',
+  'A Perfect Circle',
+  'Aphex Twin',
+  'Portishead',
+  'Massive Attack',
+  'TOOL',
+  'Boards of Canada',
+  'Pavement',
+  'My Morning Jacket',
+  'Drive-By Truckers',
+  'Spoon',
+  'Low',
+  'Soul Coughing',
+  'Morphine',
+];
 
 interface ListeningEvent {
   artist?: string;
@@ -30,6 +55,35 @@ interface DormantReturnEntry {
   preReturnPlays: number;
   returnPeriodPlays: number;
 }
+
+interface ArtistAggregate {
+  norm: string;
+  name: string;
+  count: number;
+  maxDormancyYears: number;
+  avgDormancyYears: number;
+}
+
+interface CuratedArtist {
+  norm: string;
+  name: string;
+  slug: string;
+  count: number;
+  maxDormancyYears: number;
+  avgDormancyYears: number;
+}
+
+const normalizeArtist = (value: string): string => value.trim().toLowerCase();
+
+const slugify = (value: string): string => {
+  const base = value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return base || 'artist';
+};
 
 const toIsoDate = (timestampMs: number): string => {
   return new Date(timestampMs).toISOString().slice(0, 10);
@@ -64,7 +118,7 @@ const sampleEvenly = <T>(rows: T[], limit: number): T[] => {
   return Array.from(selected).sort((a, b) => a - b).map((idx) => rows[idx]);
 };
 
-const listeningHistoryPath = new URL('../../../../../data/derived/core/listening-history.json', import.meta.url);
+const listeningHistoryPath = resolve(process.cwd(), '../../data/derived/core/listening-history.json');
 const listeningHistoryData = JSON.parse(readFileSync(listeningHistoryPath, 'utf8')) as { events?: ListeningEvent[] };
 const events = Array.isArray(listeningHistoryData.events) ? [...listeningHistoryData.events] : [];
 events.sort((a, b) => (Number(a?.date) || 0) - (Number(b?.date) || 0));
@@ -115,12 +169,107 @@ for (const event of events) {
   lastSeenByTrack.set(trackId, { date, album });
 }
 
-const dormantReturnsByDormancyDesc = [...dormantReturns].sort((a, b) => {
+const dormantReturnsByArtist = new Map<string, DormantReturnEntry[]>();
+for (const entry of dormantReturns) {
+  const norm = normalizeArtist(entry.artist);
+  const list = dormantReturnsByArtist.get(norm) ?? [];
+  list.push(entry);
+  dormantReturnsByArtist.set(norm, list);
+}
+
+const artistAggregates: ArtistAggregate[] = Array.from(dormantReturnsByArtist.entries())
+  .map(([norm, entries]) => {
+    const count = entries.length;
+    const maxDormancyYears = Math.max(...entries.map((entry) => entry.dormancyYears));
+    const avgDormancyYears = entries.reduce((sum, entry) => sum + entry.dormancyYears, 0) / count;
+    const name = entries[0]?.artist ?? norm;
+    return {
+      norm,
+      name,
+      count,
+      maxDormancyYears,
+      avgDormancyYears,
+    };
+  })
+  .sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return b.maxDormancyYears - a.maxDormancyYears;
+  });
+
+const aggregateByNorm = new Map(artistAggregates.map((artist) => [artist.norm, artist]));
+const usedNorms = new Set<string>();
+const usedSlugs = new Set<string>();
+const curatedArtists: CuratedArtist[] = [];
+
+const pushCuratedArtist = (aggregate: ArtistAggregate | undefined) => {
+  if (!aggregate || usedNorms.has(aggregate.norm)) return;
+  usedNorms.add(aggregate.norm);
+  const baseSlug = slugify(aggregate.name);
+  let slug = baseSlug;
+  let suffix = 2;
+  while (usedSlugs.has(slug)) {
+    slug = `${baseSlug}-${suffix}`;
+    suffix += 1;
+  }
+  usedSlugs.add(slug);
+  curatedArtists.push({
+    norm: aggregate.norm,
+    name: aggregate.name,
+    slug,
+    count: aggregate.count,
+    maxDormancyYears: aggregate.maxDormancyYears,
+    avgDormancyYears: aggregate.avgDormancyYears,
+  });
+};
+
+for (const candidate of CURATED_ARTIST_CANDIDATES) {
+  pushCuratedArtist(aggregateByNorm.get(normalizeArtist(candidate)));
+}
+if (curatedArtists.length === 0 && artistAggregates.length > 0) {
+  pushCuratedArtist(artistAggregates[0]);
+}
+
+export function getStaticPaths() {
+  return [
+    'radiohead',
+    'nine-inch-nails',
+    'r-e-m',
+    'pj-harvey',
+    'the-smashing-pumpkins',
+    'pixies',
+    'nirvana',
+    'wilco',
+    'eels',
+    'a-perfect-circle',
+    'aphex-twin',
+    'portishead',
+    'massive-attack',
+    'tool',
+    'boards-of-canada',
+    'pavement',
+    'my-morning-jacket',
+    'drive-by-truckers',
+    'spoon',
+    'low',
+    'soul-coughing',
+    'morphine',
+  ].map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const selectedArtistSlug = Astro.params.slug ?? curatedArtists[0]?.slug ?? '';
+const selectedArtist = curatedArtists.find((artist) => artist.slug === selectedArtistSlug) ?? curatedArtists[0] ?? null;
+const selectedArtistReturns = selectedArtist
+  ? (dormantReturnsByArtist.get(selectedArtist.norm) ?? [])
+  : [];
+
+const dormantReturnsByDormancyDesc = [...selectedArtistReturns].sort((a, b) => {
   if (b.dormancyDays !== a.dormancyDays) return b.dormancyDays - a.dormancyDays;
   return b.preReturnPlays - a.preReturnPlays;
 });
 
-const dormantReturnsByDormancyAsc = [...dormantReturns].sort((a, b) => {
+const dormantReturnsByDormancyAsc = [...selectedArtistReturns].sort((a, b) => {
   if (a.dormancyDays !== b.dormancyDays) return a.dormancyDays - b.dormancyDays;
   return a.returnYear - b.returnYear;
 });
@@ -128,15 +277,15 @@ const dormantReturnsByDormancyAsc = [...dormantReturns].sort((a, b) => {
 const arcEntries = sampleEvenly(dormantReturnsByDormancyAsc, CHART_SAMPLE_SIZE);
 const spotlightEntries = dormantReturnsByDormancyDesc.slice(0, 12);
 
-const latestReturnYear = dormantReturns.length > 0
-  ? Math.max(...dormantReturns.map((entry) => entry.returnYear))
+const latestReturnYear = selectedArtistReturns.length > 0
+  ? Math.max(...selectedArtistReturns.map((entry) => entry.returnYear))
   : new Date().getFullYear();
 
 const latestYearEntries = dormantReturnsByDormancyDesc
   .filter((entry) => entry.returnYear === latestReturnYear)
   .slice(0, 8);
 
-const allDormancyYears = dormantReturns
+const allDormancyYears = selectedArtistReturns
   .map((entry) => entry.dormancyYears)
   .filter((value) => Number.isFinite(value))
   .sort((a, b) => a - b);
@@ -148,11 +297,8 @@ const medianDormancyYears = allDormancyYears.length === 0
     ? allDormancyYears[middle]
     : (allDormancyYears[middle - 1] + allDormancyYears[middle]) / 2;
 
-const returnsByArtist = new Map<string, number>();
-for (const entry of dormantReturns) {
-  returnsByArtist.set(entry.artist, (returnsByArtist.get(entry.artist) ?? 0) + 1);
-}
-const topReturningArtist = Array.from(returnsByArtist.entries()).sort((a, b) => b[1] - a[1])[0] ?? null;
+const selectedArtistUniqueTracks = new Set(selectedArtistReturns.map((entry) => entry.trackId)).size;
+const selectedArtistDisplayName = selectedArtist?.name ?? 'Unknown Artist';
 
 const dormancyLegend = [
   { label: '15+ years', dotClass: 'bg-rose-400' },
@@ -237,34 +383,60 @@ if (tickYears[tickYears.length - 1] !== maxYear) {
 const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
 ---
 
-<Layout title="Rediscovery Arcs - MP3 Collection">
+<Layout title={`${selectedArtistDisplayName} Rediscovery Arcs - MP3 Collection`}>
   <div class="space-y-10">
     <section class="rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 px-6 py-10 md:px-10 md:py-12 text-slate-100 shadow-2xl">
-      <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Listening History Lens</p>
-      <h1 class="mt-3 text-4xl md:text-5xl font-bold">Rediscovery Arcs</h1>
+      <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Artist Lens</p>
+      <h1 class="mt-3 text-4xl md:text-5xl font-bold">{selectedArtistDisplayName} Rediscovery Arcs</h1>
       <p class="mt-4 max-w-3xl text-slate-200 text-base md:text-lg">
-        Every curve links the year you last played a track to the year it came back.
-        This view uses the full listening history with a {MIN_DORMANCY_DAYS}-day dormancy threshold.
+        Explore dormant returns for a curated artist list.
+        Each arc connects the last pre-return play to the first return play with a {MIN_DORMANCY_DAYS}-day dormancy threshold.
       </p>
-      <div class="mt-5">
-        <a
-          href={buildUrl('history/rediscovery-artists')}
-          class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-white/45"
-        >
-          Open Artist Mode
-        </a>
+      <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="w-full max-w-xl">
+          <label for="artist-select" class="block text-xs uppercase tracking-[0.2em] text-slate-300 mb-2">
+            Select Artist
+          </label>
+          <select
+            id="artist-select"
+            class="w-full rounded-xl border border-white/20 bg-slate-950/70 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-sky-400"
+          >
+            {curatedArtists.map((artist) => (
+              <option
+                value={buildUrl(`history/rediscovery-artists/${artist.slug}`)}
+                selected={artist.slug === selectedArtist?.slug}
+              >
+                {artist.name} ({artist.count})
+              </option>
+            ))}
+          </select>
+        </div>
+        <div class="flex gap-2">
+          <a
+            href={buildUrl('history/rediscovery')}
+            class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-white/45"
+          >
+            Global View
+          </a>
+          <a
+            href={buildUrl('history')}
+            class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-slate-100 hover:border-white/45"
+          >
+            History
+          </a>
+        </div>
       </div>
 
       <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
           <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Tracked Returns</div>
-          <div class="mt-2 text-3xl font-bold">{dormantReturns.length}</div>
-          <div class="text-sm text-slate-200">Dormant return events in listening-history.json</div>
+          <div class="mt-2 text-3xl font-bold">{selectedArtistReturns.length}</div>
+          <div class="text-sm text-slate-200">Dormant return events for {selectedArtistDisplayName}</div>
         </div>
         <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
           <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Median Dormancy</div>
           <div class="mt-2 text-3xl font-bold">{medianDormancyYears.toFixed(1)}y</div>
-          <div class="text-sm text-slate-200">Typical gap before a track returns</div>
+          <div class="text-sm text-slate-200">Typical gap before this artist returns</div>
         </div>
         <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
           <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Longest Gap</div>
@@ -272,9 +444,9 @@ const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
           <div class="text-sm text-slate-200">{longestDormancy ? `${longestDormancy.artist} - ${longestDormancy.track}` : 'No dormant returns available'}</div>
         </div>
         <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
-          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Most Returning Artist</div>
-          <div class="mt-2 text-3xl font-bold">{topReturningArtist ? topReturningArtist[0] : '-'}</div>
-          <div class="text-sm text-slate-200">{topReturningArtist ? `${topReturningArtist[1]} dormant track returns` : 'No data yet'}</div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Unique Returned Tracks</div>
+          <div class="mt-2 text-3xl font-bold">{selectedArtistUniqueTracks}</div>
+          <div class="text-sm text-slate-200">Distinct tracks with >= {MIN_DORMANCY_DAYS} day gaps</div>
         </div>
       </div>
     </section>
@@ -285,7 +457,7 @@ const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
           <div>
             <h2 class="text-2xl font-bold text-white">Dormancy Timeline</h2>
             <p class="mt-1 text-sm text-slate-300">
-              Sampled {arcShapes.length} of {dormantReturns.length} dormant returns to keep the chart readable.
+              Sampled {arcShapes.length} of {selectedArtistReturns.length} dormant returns to keep the chart readable.
             </p>
           </div>
           <a
@@ -414,14 +586,14 @@ const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
       <section class="rounded-2xl bg-white shadow p-8 text-center">
         <h2 class="text-2xl font-bold text-gray-900">No dormant returns yet</h2>
         <p class="mt-2 text-gray-600">
-          No track had a gap of at least {MIN_DORMANCY_DAYS} days between consecutive plays.
+          {selectedArtistDisplayName} had no track with a gap of at least {MIN_DORMANCY_DAYS} days between consecutive plays.
         </p>
       </section>
     )}
 
     <section class="grid gap-6 lg:grid-cols-5">
       <article class="lg:col-span-3 rounded-2xl bg-white p-6 shadow">
-        <h2 class="text-2xl font-bold text-gray-900">Longest Dormancy Returns</h2>
+        <h2 class="text-2xl font-bold text-gray-900">{selectedArtistDisplayName}: Longest Dormancy Returns</h2>
         <p class="mt-1 text-sm text-gray-600">
           Ranked by years between the last pre-return play and first return play.
         </p>
@@ -445,7 +617,7 @@ const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
       </article>
 
       <article class="lg:col-span-2 rounded-2xl bg-white p-6 shadow">
-        <h2 class="text-2xl font-bold text-gray-900">{latestReturnYear} Return Highlights</h2>
+        <h2 class="text-2xl font-bold text-gray-900">{selectedArtistDisplayName}: {latestReturnYear} Return Highlights</h2>
         <p class="mt-1 text-sm text-gray-600">Most prominent rediscoveries in the latest return year.</p>
         <div class="mt-5 space-y-3">
           {latestYearEntries.length > 0 ? latestYearEntries.map((entry) => (
@@ -474,6 +646,15 @@ const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
     </section>
   </div>
   <script is:inline define:vars={{ arcShapes }}>
+    const artistSelect = document.getElementById('artist-select');
+    if (artistSelect instanceof HTMLSelectElement) {
+      artistSelect.addEventListener('change', () => {
+        if (artistSelect.value) {
+          window.location.assign(artistSelect.value);
+        }
+      });
+    }
+
     const arcs = Array.isArray(arcShapes) ? arcShapes : [];
     if (arcs.length > 0) {
       const arcById = new Map(arcs.map((arc) => [arc.id, arc]));

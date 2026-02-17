@@ -1,0 +1,228 @@
+---
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import Layout from '../../../layouts/Layout.astro';
+import { buildUrl } from '../../../lib/urls';
+
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+const MIN_DORMANCY_DAYS = 365;
+const MIN_DORMANCY_MS = MIN_DORMANCY_DAYS * MS_PER_DAY;
+const CURATED_ARTIST_CANDIDATES = [
+  'Radiohead',
+  'Nine Inch Nails',
+  'R.E.M.',
+  'PJ Harvey',
+  'The Smashing Pumpkins',
+  'Pixies',
+  'Nirvana',
+  'Wilco',
+  'Eels',
+  'A Perfect Circle',
+  'Aphex Twin',
+  'Portishead',
+  'Massive Attack',
+  'TOOL',
+  'Boards of Canada',
+  'Pavement',
+  'My Morning Jacket',
+  'Drive-By Truckers',
+  'Spoon',
+  'Low',
+  'Soul Coughing',
+  'Morphine',
+];
+
+interface ListeningEvent {
+  artist?: string;
+  track?: string;
+  date?: number;
+}
+
+interface ArtistAggregate {
+  norm: string;
+  name: string;
+  count: number;
+  maxDormancyYears: number;
+  avgDormancyYears: number;
+}
+
+interface CuratedArtist extends ArtistAggregate {
+  slug: string;
+}
+
+const normalizeArtist = (value: string): string => value.trim().toLowerCase();
+
+const slugify = (value: string): string => {
+  const base = value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return base || 'artist';
+};
+
+const listeningHistoryPath = resolve(process.cwd(), '../../data/derived/core/listening-history.json');
+const listeningHistoryData = JSON.parse(readFileSync(listeningHistoryPath, 'utf8')) as { events?: ListeningEvent[] };
+const events = Array.isArray(listeningHistoryData.events) ? [...listeningHistoryData.events] : [];
+events.sort((a, b) => (Number(a?.date) || 0) - (Number(b?.date) || 0));
+
+const lastSeenByTrack = new Map<string, number>();
+const byArtist = new Map<string, { name: string; count: number; maxDormancyYears: number; totalDormancyYears: number }>();
+
+for (const event of events) {
+  const artist = typeof event.artist === 'string' ? event.artist.trim() : '';
+  const track = typeof event.track === 'string' ? event.track.trim() : '';
+  const date = Number(event.date);
+
+  if (!artist || !track || !Number.isFinite(date) || date <= 0) continue;
+
+  const trackId = `${artist.toLowerCase()}|${track.toLowerCase()}`;
+  const previousDate = lastSeenByTrack.get(trackId);
+  if (previousDate && date > previousDate) {
+    const gapMs = date - previousDate;
+    if (gapMs >= MIN_DORMANCY_MS) {
+      const dormancyYears = gapMs / MS_PER_DAY / 365.25;
+      const norm = normalizeArtist(artist);
+      const aggregate = byArtist.get(norm) ?? { name: artist, count: 0, maxDormancyYears: 0, totalDormancyYears: 0 };
+      aggregate.count += 1;
+      aggregate.maxDormancyYears = Math.max(aggregate.maxDormancyYears, dormancyYears);
+      aggregate.totalDormancyYears += dormancyYears;
+      byArtist.set(norm, aggregate);
+    }
+  }
+
+  lastSeenByTrack.set(trackId, date);
+}
+
+const artistAggregates: ArtistAggregate[] = Array.from(byArtist.entries())
+  .map(([norm, aggregate]) => ({
+    norm,
+    name: aggregate.name,
+    count: aggregate.count,
+    maxDormancyYears: aggregate.maxDormancyYears,
+    avgDormancyYears: aggregate.totalDormancyYears / Math.max(1, aggregate.count),
+  }))
+  .sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return b.maxDormancyYears - a.maxDormancyYears;
+  });
+
+const aggregateByNorm = new Map(artistAggregates.map((artist) => [artist.norm, artist]));
+const usedNorms = new Set<string>();
+const usedSlugs = new Set<string>();
+const curatedArtists: CuratedArtist[] = [];
+
+const pushCuratedArtist = (aggregate: ArtistAggregate | undefined) => {
+  if (!aggregate || usedNorms.has(aggregate.norm)) return;
+  usedNorms.add(aggregate.norm);
+
+  const baseSlug = slugify(aggregate.name);
+  let slug = baseSlug;
+  let suffix = 2;
+  while (usedSlugs.has(slug)) {
+    slug = `${baseSlug}-${suffix}`;
+    suffix += 1;
+  }
+  usedSlugs.add(slug);
+
+  curatedArtists.push({
+    ...aggregate,
+    slug,
+  });
+};
+
+for (const candidate of CURATED_ARTIST_CANDIDATES) {
+  pushCuratedArtist(aggregateByNorm.get(normalizeArtist(candidate)));
+}
+if (curatedArtists.length === 0 && artistAggregates.length > 0) {
+  pushCuratedArtist(artistAggregates[0]);
+}
+
+const defaultArtist = curatedArtists[0] ?? null;
+---
+
+<Layout title="Artist Rediscovery Arcs - MP3 Collection">
+  <div class="space-y-8">
+    <section class="rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 px-6 py-10 md:px-10 md:py-12 text-slate-100 shadow-2xl">
+      <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Curated Mode</p>
+      <h1 class="mt-3 text-4xl md:text-5xl font-bold">Rediscovery Arcs by Artist</h1>
+      <p class="mt-4 max-w-3xl text-slate-200 text-base md:text-lg">
+        Pick from a curated artist list and explore their dormant returns with the same range-chip spotlight controls.
+      </p>
+      <p class="mt-2 text-sm text-slate-300">
+        Dormancy threshold: {MIN_DORMANCY_DAYS} days. Curated artists: {curatedArtists.length}.
+      </p>
+
+      {curatedArtists.length > 0 ? (
+        <div class="mt-6 grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+          <div>
+            <label for="artist-select" class="block text-xs uppercase tracking-[0.2em] text-slate-300 mb-2">
+              Select Artist
+            </label>
+            <select
+              id="artist-select"
+              class="w-full rounded-xl border border-white/20 bg-slate-950/70 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-sky-400"
+            >
+              {curatedArtists.map((artist) => (
+                <option value={buildUrl(`history/rediscovery-artists/${artist.slug}`)}>
+                  {artist.name} ({artist.count})
+                </option>
+              ))}
+            </select>
+          </div>
+          {defaultArtist && (
+            <a
+              href={buildUrl(`history/rediscovery-artists/${defaultArtist.slug}`)}
+              class="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-slate-100 hover:border-white/45"
+            >
+              Open Artist View
+            </a>
+          )}
+        </div>
+      ) : (
+        <div class="mt-6 rounded-xl bg-white/10 p-4 text-sm text-slate-200">
+          No artists currently meet the dormant-return threshold.
+        </div>
+      )}
+    </section>
+
+    {curatedArtists.length > 0 && (
+      <section class="rounded-2xl bg-white p-6 shadow">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h2 class="text-2xl font-bold text-gray-900">Curated Artists</h2>
+          <a
+            href={buildUrl('history/rediscovery')}
+            class="inline-flex items-center rounded-full border border-gray-300 px-4 py-2 text-xs font-semibold text-gray-700 hover:border-gray-400"
+          >
+            Back to Global Rediscovery
+          </a>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {curatedArtists.map((artist) => (
+            <a
+              href={buildUrl(`history/rediscovery-artists/${artist.slug}`)}
+              class="rounded-xl border border-gray-200 p-4 hover:border-slate-400 hover:bg-slate-50 transition-colors"
+            >
+              <div class="text-sm font-semibold text-gray-900">{artist.name}</div>
+              <div class="mt-1 text-xs text-gray-600">
+                {artist.count} returns - max {artist.maxDormancyYears.toFixed(1)}y - avg {artist.avgDormancyYears.toFixed(1)}y
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+
+  <script is:inline>
+    const artistSelect = document.getElementById('artist-select');
+    if (artistSelect instanceof HTMLSelectElement) {
+      artistSelect.addEventListener('change', () => {
+        if (artistSelect.value) {
+          window.location.assign(artistSelect.value);
+        }
+      });
+    }
+  </script>
+</Layout>
