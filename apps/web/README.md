@@ -11,6 +11,7 @@ Astro frontend for browsing the MP3 archive and listening-history outputs.
 - `/albums/[slug]`: album detail page with tracklist
 - `/tracks/[page]`: paginated track browser
 - `/history`: yearly/monthly listening timeline view
+- `/history/rediscovery`: arc visualization of dormant tracks returning after long gaps
 - `/wrapped`: wrapped-year gallery
 - `/wrapped/[year]`: slide-based yearly wrapped story
 - `/wrapped/monthly`: month gallery

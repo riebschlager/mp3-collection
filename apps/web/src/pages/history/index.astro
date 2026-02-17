@@ -38,6 +38,25 @@ const formatMonth = (monthStr: string) => {
       </p>
     </div>
 
+    <!-- Rediscovery Arcs -->
+    <div class="rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-white p-8 shadow-xl">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-2">New Visualization</p>
+          <h2 class="text-3xl font-bold">Rediscovery Arcs</h2>
+          <p class="mt-2 text-slate-200 max-w-2xl">
+            See tracks that disappeared for years and then came back, with each arc linking pre-return and return years.
+          </p>
+        </div>
+        <a
+          href={buildUrl('history/rediscovery')}
+          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
+        >
+          Open Rediscovery Arcs ->
+        </a>
+      </div>
+    </div>
+
     <!-- Timeline Overview -->
     <div class="bg-white rounded-lg shadow p-6">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Timeline Overview</h2>

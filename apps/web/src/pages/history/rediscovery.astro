@@ -1,0 +1,639 @@
+---
+import { readFileSync } from 'node:fs';
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+const MIN_DORMANCY_DAYS = 365;
+const MIN_DORMANCY_MS = MIN_DORMANCY_DAYS * MS_PER_DAY;
+const CHART_SAMPLE_SIZE = 220;
+
+interface ListeningEvent {
+  artist?: string;
+  track?: string;
+  album?: string;
+  date?: number;
+}
+
+interface DormantReturnEntry {
+  year: number;
+  trackId: string;
+  artist: string;
+  track: string;
+  album: string;
+  dormancyDays: number;
+  dormancyYears: number;
+  firstReturnPlay: string;
+  lastPreReturnPlay: string;
+  preReturnYear: number;
+  returnYear: number;
+  preReturnPlays: number;
+  returnPeriodPlays: number;
+}
+
+const toIsoDate = (timestampMs: number): string => {
+  return new Date(timestampMs).toISOString().slice(0, 10);
+};
+
+const colorForDormancy = (years: number): string => {
+  if (years >= 15) return '#fb7185';
+  if (years >= 10) return '#f97316';
+  if (years >= 7) return '#facc15';
+  if (years >= 4) return '#22d3ee';
+  if (years >= 2) return '#38bdf8';
+  return '#60a5fa';
+};
+
+const dormancyBucketForYears = (years: number): string => {
+  if (years >= 15) return '15+ years';
+  if (years >= 10) return '10-14 years';
+  if (years >= 7) return '7-9 years';
+  if (years >= 4) return '4-6 years';
+  if (years >= 2) return '2-3 years';
+  return '1-2 years';
+};
+
+const sampleEvenly = <T>(rows: T[], limit: number): T[] => {
+  if (rows.length <= limit) return rows;
+  if (limit <= 1) return [rows[0]];
+  const selected = new Set<number>();
+  for (let i = 0; i < limit; i++) {
+    const idx = Math.round((i * (rows.length - 1)) / (limit - 1));
+    selected.add(idx);
+  }
+  return Array.from(selected).sort((a, b) => a - b).map((idx) => rows[idx]);
+};
+
+const listeningHistoryPath = new URL('../../../../../data/derived/core/listening-history.json', import.meta.url);
+const listeningHistoryData = JSON.parse(readFileSync(listeningHistoryPath, 'utf8')) as { events?: ListeningEvent[] };
+const events = Array.isArray(listeningHistoryData.events) ? [...listeningHistoryData.events] : [];
+events.sort((a, b) => (Number(a?.date) || 0) - (Number(b?.date) || 0));
+
+const lastSeenByTrack = new Map<string, { date: number; album: string }>();
+const playCountByTrack = new Map<string, number>();
+const dormantReturns: DormantReturnEntry[] = [];
+
+for (const event of events) {
+  const artist = typeof event.artist === 'string' ? event.artist.trim() : '';
+  const track = typeof event.track === 'string' ? event.track.trim() : '';
+  const album = typeof event.album === 'string' && event.album.trim()
+    ? event.album.trim()
+    : 'Unknown Album';
+  const date = Number(event.date);
+
+  if (!artist || !track || !Number.isFinite(date) || date <= 0) continue;
+
+  const trackId = `${artist.toLowerCase()}|${track.toLowerCase()}`;
+  const previous = lastSeenByTrack.get(trackId);
+  const priorPlays = playCountByTrack.get(trackId) ?? 0;
+
+  if (previous && date > previous.date) {
+    const gapMs = date - previous.date;
+    if (gapMs >= MIN_DORMANCY_MS) {
+      const dormancyDays = Math.floor(gapMs / MS_PER_DAY);
+      const preReturnYear = new Date(previous.date).getUTCFullYear();
+      const returnYear = new Date(date).getUTCFullYear();
+      dormantReturns.push({
+        year: returnYear,
+        trackId,
+        artist,
+        track,
+        album,
+        dormancyDays,
+        dormancyYears: dormancyDays / 365.25,
+        firstReturnPlay: toIsoDate(date),
+        lastPreReturnPlay: toIsoDate(previous.date),
+        preReturnYear,
+        returnYear,
+        preReturnPlays: priorPlays,
+        returnPeriodPlays: 1,
+      });
+    }
+  }
+
+  playCountByTrack.set(trackId, priorPlays + 1);
+  lastSeenByTrack.set(trackId, { date, album });
+}
+
+const dormantReturnsByDormancyDesc = [...dormantReturns].sort((a, b) => {
+  if (b.dormancyDays !== a.dormancyDays) return b.dormancyDays - a.dormancyDays;
+  return b.preReturnPlays - a.preReturnPlays;
+});
+
+const dormantReturnsByDormancyAsc = [...dormantReturns].sort((a, b) => {
+  if (a.dormancyDays !== b.dormancyDays) return a.dormancyDays - b.dormancyDays;
+  return a.returnYear - b.returnYear;
+});
+
+const arcEntries = sampleEvenly(dormantReturnsByDormancyAsc, CHART_SAMPLE_SIZE);
+const spotlightEntries = dormantReturnsByDormancyDesc.slice(0, 12);
+
+const latestReturnYear = dormantReturns.length > 0
+  ? Math.max(...dormantReturns.map((entry) => entry.returnYear))
+  : new Date().getFullYear();
+
+const latestYearEntries = dormantReturnsByDormancyDesc
+  .filter((entry) => entry.returnYear === latestReturnYear)
+  .slice(0, 8);
+
+const allDormancyYears = dormantReturns
+  .map((entry) => entry.dormancyYears)
+  .filter((value) => Number.isFinite(value))
+  .sort((a, b) => a - b);
+
+const middle = Math.floor(allDormancyYears.length / 2);
+const medianDormancyYears = allDormancyYears.length === 0
+  ? 0
+  : allDormancyYears.length % 2 === 1
+    ? allDormancyYears[middle]
+    : (allDormancyYears[middle - 1] + allDormancyYears[middle]) / 2;
+
+const returnsByArtist = new Map<string, number>();
+for (const entry of dormantReturns) {
+  returnsByArtist.set(entry.artist, (returnsByArtist.get(entry.artist) ?? 0) + 1);
+}
+const topReturningArtist = Array.from(returnsByArtist.entries()).sort((a, b) => b[1] - a[1])[0] ?? null;
+
+const dormancyLegend = [
+  { label: '15+ years', dotClass: 'bg-rose-400' },
+  { label: '10-14 years', dotClass: 'bg-orange-400' },
+  { label: '7-9 years', dotClass: 'bg-amber-300' },
+  { label: '4-6 years', dotClass: 'bg-cyan-400' },
+  { label: '2-3 years', dotClass: 'bg-sky-400' },
+  { label: '1-2 years', dotClass: 'bg-blue-400' },
+];
+
+const dormancyBucketCounts = new Map<string, number>();
+for (const entry of arcEntries) {
+  const bucket = dormancyBucketForYears(entry.dormancyYears);
+  dormancyBucketCounts.set(bucket, (dormancyBucketCounts.get(bucket) ?? 0) + 1);
+}
+
+const chartWidth = 1280;
+const chartHeight = 560;
+const axisY = 470;
+const leftPadding = 90;
+const rightPadding = 70;
+const chartTop = 70;
+
+const minDormancyYears = arcEntries.length > 0
+  ? Math.min(...arcEntries.map((entry) => entry.dormancyYears))
+  : 0;
+const maxDormancyYears = arcEntries.length > 0
+  ? Math.max(...arcEntries.map((entry) => entry.dormancyYears))
+  : 0;
+const dormancyRangeYears = Math.max(0.0001, maxDormancyYears - minDormancyYears);
+
+const minYear = arcEntries.length > 0
+  ? Math.min(...arcEntries.map((entry) => entry.preReturnYear))
+  : latestReturnYear - 5;
+const maxYear = arcEntries.length > 0
+  ? Math.max(...arcEntries.map((entry) => entry.returnYear))
+  : latestReturnYear;
+const yearSpan = Math.max(1, maxYear - minYear);
+
+const xForYear = (year: number): number => {
+  return leftPadding + ((year - minYear) / yearSpan) * (chartWidth - leftPadding - rightPadding);
+};
+
+const arcShapes = arcEntries
+  .map((entry, index) => {
+    const startX = xForYear(entry.preReturnYear);
+    const endX = xForYear(entry.returnYear);
+    const midpointX = (startX + endX) / 2;
+    const maxLift = axisY - chartTop - 16;
+    const minLift = 24;
+    const normalizedDormancy = (entry.dormancyYears - minDormancyYears) / dormancyRangeYears;
+    const liftFromDormancy = minLift + normalizedDormancy * (maxLift - minLift);
+    const jitter = (index % 8) * 3;
+    const lift = Math.min(maxLift, liftFromDormancy + jitter);
+    const controlY = Math.max(chartTop + 8, axisY - lift);
+    const strokeWidth = Math.min(5.2, 1.2 + Math.log(entry.preReturnPlays + 1));
+    const bucket = dormancyBucketForYears(entry.dormancyYears);
+    return {
+      id: `arc-${index}`,
+      bucket,
+      ...entry,
+      startX,
+      endX,
+      midpointX,
+      controlY,
+      strokeWidth,
+      stroke: colorForDormancy(entry.dormancyYears),
+      path: `M ${startX} ${axisY} Q ${midpointX} ${controlY} ${endX} ${axisY}`,
+    };
+  })
+  .sort((a, b) => a.dormancyYears - b.dormancyYears);
+
+const tickStep = (maxYear - minYear) > 16 ? 2 : 1;
+const tickYears: number[] = [];
+for (let year = minYear; year <= maxYear; year += tickStep) {
+  tickYears.push(year);
+}
+if (tickYears[tickYears.length - 1] !== maxYear) {
+  tickYears.push(maxYear);
+}
+
+const longestDormancy = dormantReturnsByDormancyDesc[0] ?? null;
+---
+
+<Layout title="Rediscovery Arcs - MP3 Collection">
+  <div class="space-y-10">
+    <section class="rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 px-6 py-10 md:px-10 md:py-12 text-slate-100 shadow-2xl">
+      <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Listening History Lens</p>
+      <h1 class="mt-3 text-4xl md:text-5xl font-bold">Rediscovery Arcs</h1>
+      <p class="mt-4 max-w-3xl text-slate-200 text-base md:text-lg">
+        Every curve links the year you last played a track to the year it came back.
+        This view uses the full listening history with a {MIN_DORMANCY_DAYS}-day dormancy threshold.
+      </p>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Tracked Returns</div>
+          <div class="mt-2 text-3xl font-bold">{dormantReturns.length}</div>
+          <div class="text-sm text-slate-200">Dormant return events in listening-history.json</div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Median Dormancy</div>
+          <div class="mt-2 text-3xl font-bold">{medianDormancyYears.toFixed(1)}y</div>
+          <div class="text-sm text-slate-200">Typical gap before a track returns</div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Longest Gap</div>
+          <div class="mt-2 text-3xl font-bold">{longestDormancy ? `${longestDormancy.dormancyYears.toFixed(1)}y` : '-'}</div>
+          <div class="text-sm text-slate-200">{longestDormancy ? `${longestDormancy.artist} - ${longestDormancy.track}` : 'No dormant returns available'}</div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-300">Most Returning Artist</div>
+          <div class="mt-2 text-3xl font-bold">{topReturningArtist ? topReturningArtist[0] : '-'}</div>
+          <div class="text-sm text-slate-200">{topReturningArtist ? `${topReturningArtist[1]} dormant track returns` : 'No data yet'}</div>
+        </div>
+      </div>
+    </section>
+
+    {arcShapes.length > 0 ? (
+      <section class="rounded-3xl bg-slate-950 p-4 md:p-8 shadow-2xl">
+        <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 class="text-2xl font-bold text-white">Dormancy Timeline</h2>
+            <p class="mt-1 text-sm text-slate-300">
+              Sampled {arcShapes.length} of {dormantReturns.length} dormant returns to keep the chart readable.
+            </p>
+          </div>
+          <a
+            href={buildUrl('history')}
+            class="inline-flex items-center rounded-full border border-slate-600 px-4 py-2 text-sm font-medium text-slate-200 hover:border-slate-400 hover:text-white transition-colors"
+          >
+            Back to timeline
+          </a>
+        </div>
+
+        <div class="overflow-x-auto pb-2">
+          <svg
+            viewBox={`0 0 ${chartWidth} ${chartHeight}`}
+            class="min-w-[920px] w-full h-auto rounded-2xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950"
+            role="img"
+            aria-label="Dormant listening returns represented as arcs from last pre-return year to return year."
+          >
+            <defs>
+              <linearGradient id="axisGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#475569" />
+                <stop offset="100%" stop-color="#94a3b8" />
+              </linearGradient>
+            </defs>
+
+            {tickYears.map((year) => {
+              const x = xForYear(year);
+              return (
+                <g>
+                  <line x1={x} y1={chartTop} x2={x} y2={axisY} stroke="#1e293b" stroke-width="1" />
+                  <text x={x} y={axisY + 24} text-anchor="middle" fill="#94a3b8" font-size="13">{year}</text>
+                </g>
+              );
+            })}
+
+            <line x1={leftPadding} y1={axisY} x2={chartWidth - rightPadding} y2={axisY} stroke="url(#axisGradient)" stroke-width="2" />
+
+            {arcShapes.map((arc) => (
+              <g
+                class="arc-connection transition-opacity duration-200"
+                data-arc-id={arc.id}
+                data-bucket={arc.bucket}
+              >
+                <path
+                  d={arc.path}
+                  fill="none"
+                  stroke={arc.stroke}
+                  stroke-width={arc.strokeWidth}
+                  stroke-linecap="round"
+                  opacity="0.82"
+                  data-base-width={arc.strokeWidth}
+                />
+                <circle cx={arc.startX} cy={axisY} r="1.7" fill="#64748b" />
+                <circle cx={arc.endX} cy={axisY} r="2.4" fill={arc.stroke} />
+                <title>{`${arc.artist} - ${arc.track} | ${arc.dormancyYears.toFixed(1)} years dormant | ${arc.lastPreReturnPlay} -> ${arc.firstReturnPlay}`}</title>
+              </g>
+            ))}
+          </svg>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-3 text-xs text-slate-200">
+          {dormancyLegend.map((item) => {
+            const count = dormancyBucketCounts.get(item.label) ?? 0;
+            return (
+              <button
+                type="button"
+                data-range-button="true"
+                data-bucket={item.label}
+                class="inline-flex items-center gap-2 rounded-full bg-slate-800 px-3 py-1 hover:bg-slate-700 transition-colors disabled:opacity-40 disabled:hover:bg-slate-800"
+                disabled={count === 0}
+                aria-pressed="false"
+              >
+                <span class={`h-2 w-2 rounded-full ${item.dotClass}`}></span>
+                {item.label} ({count})
+              </button>
+            );
+          })}
+        </div>
+        <p class="mt-2 text-xs text-slate-400">
+          Click a range chip to spotlight a random arc, then use Back/Next to browse others in that range.
+        </p>
+        <div id="arc-focus-panel" class="mt-4 hidden rounded-2xl border border-slate-700 bg-slate-900/80 p-4">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div class="space-y-1">
+              <p id="focus-range-label" class="text-xs uppercase tracking-[0.2em] text-slate-400">Range</p>
+              <h3 id="focus-track" class="text-lg font-semibold text-white">-</h3>
+              <p id="focus-dates" class="text-sm text-slate-300">-</p>
+              <p id="focus-meta" class="text-xs text-slate-400">-</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button
+                id="focus-back"
+                type="button"
+                class="rounded-full border border-slate-600 px-3 py-1.5 text-xs font-medium text-slate-100 hover:border-slate-400 disabled:opacity-40"
+              >
+                Back
+              </button>
+              <button
+                id="focus-next"
+                type="button"
+                class="rounded-full border border-slate-600 px-3 py-1.5 text-xs font-medium text-slate-100 hover:border-slate-400 disabled:opacity-40"
+              >
+                Next
+              </button>
+              <button
+                id="focus-random"
+                type="button"
+                class="rounded-full border border-slate-600 px-3 py-1.5 text-xs font-medium text-slate-100 hover:border-slate-400 disabled:opacity-40"
+              >
+                Random
+              </button>
+              <button
+                id="focus-dismiss"
+                type="button"
+                class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-900 hover:bg-white"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-xs text-slate-400">
+          Displayed dormancy window: {minDormancyYears.toFixed(1)}y to {maxDormancyYears.toFixed(1)}y.
+        </p>
+      </section>
+    ) : (
+      <section class="rounded-2xl bg-white shadow p-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-900">No dormant returns yet</h2>
+        <p class="mt-2 text-gray-600">
+          No track had a gap of at least {MIN_DORMANCY_DAYS} days between consecutive plays.
+        </p>
+      </section>
+    )}
+
+    <section class="grid gap-6 lg:grid-cols-5">
+      <article class="lg:col-span-3 rounded-2xl bg-white p-6 shadow">
+        <h2 class="text-2xl font-bold text-gray-900">Longest Dormancy Returns</h2>
+        <p class="mt-1 text-sm text-gray-600">
+          Ranked by years between the last pre-return play and first return play.
+        </p>
+        <div class="mt-5 space-y-3">
+          {spotlightEntries.map((entry, index) => (
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <div class="text-sm text-gray-500">#{index + 1} - {entry.artist}</div>
+                  <div class="text-base font-semibold text-gray-900">{entry.track}</div>
+                  <div class="text-sm text-gray-600">{entry.album}</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-lg font-bold text-indigo-700">{entry.dormancyYears.toFixed(1)}y dormant</div>
+                  <div class="text-sm text-gray-600">{entry.lastPreReturnPlay} -> {entry.firstReturnPlay}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </article>
+
+      <article class="lg:col-span-2 rounded-2xl bg-white p-6 shadow">
+        <h2 class="text-2xl font-bold text-gray-900">{latestReturnYear} Return Highlights</h2>
+        <p class="mt-1 text-sm text-gray-600">Most prominent rediscoveries in the latest return year.</p>
+        <div class="mt-5 space-y-3">
+          {latestYearEntries.length > 0 ? latestYearEntries.map((entry) => (
+            <div class="rounded-xl border border-slate-200 p-4">
+              <div class="text-sm font-semibold text-slate-900">{entry.artist}</div>
+              <div class="text-sm text-slate-700">{entry.track}</div>
+              <div class="mt-2 text-xs text-slate-500">
+                Dormant {entry.dormancyYears.toFixed(1)} years - {entry.lastPreReturnPlay} -> {entry.firstReturnPlay}
+              </div>
+            </div>
+          )) : (
+            <div class="rounded-xl border border-slate-200 p-4 text-sm text-slate-600">
+              No return highlights for {latestReturnYear}.
+            </div>
+          )}
+        </div>
+
+        <div class="mt-6 rounded-xl bg-slate-900 p-4 text-slate-100">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Interpretation</div>
+          <p class="mt-2 text-sm leading-relaxed">
+            Long, high arcs usually signal catalog memory resurfacing.
+            Dense low arcs suggest short-cycle revisits and stable favorites.
+          </p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <script is:inline define:vars={{ arcShapes }}>
+    const arcs = Array.isArray(arcShapes) ? arcShapes : [];
+    if (arcs.length > 0) {
+      const arcById = new Map(arcs.map((arc) => [arc.id, arc]));
+      const arcGroups = new Map();
+      document.querySelectorAll('[data-arc-id]').forEach((node) => {
+        const id = node.getAttribute('data-arc-id');
+        if (id) arcGroups.set(id, node);
+      });
+
+      const rangeButtons = Array.from(document.querySelectorAll('[data-range-button="true"]'));
+      const panel = document.getElementById('arc-focus-panel');
+      const rangeLabel = document.getElementById('focus-range-label');
+      const focusTrack = document.getElementById('focus-track');
+      const focusDates = document.getElementById('focus-dates');
+      const focusMeta = document.getElementById('focus-meta');
+      const backButton = document.getElementById('focus-back');
+      const nextButton = document.getElementById('focus-next');
+      const randomButton = document.getElementById('focus-random');
+      const dismissButton = document.getElementById('focus-dismiss');
+
+      let activeBucket = '';
+      let activeArcIds = [];
+      let activeIndex = -1;
+
+      const resetArcVisual = (group) => {
+        group.style.opacity = '1';
+        const path = group.querySelector('path');
+        if (path) {
+          path.setAttribute('opacity', '0.82');
+          const baseWidth = path.getAttribute('data-base-width');
+          if (baseWidth) path.setAttribute('stroke-width', baseWidth);
+        }
+        const circles = group.querySelectorAll('circle');
+        if (circles[0]) circles[0].setAttribute('r', '1.7');
+        if (circles[1]) circles[1].setAttribute('r', '2.4');
+      };
+
+      const dimArcVisual = (group) => {
+        group.style.opacity = '0.14';
+        const path = group.querySelector('path');
+        if (path) path.setAttribute('opacity', '0.22');
+        const circles = group.querySelectorAll('circle');
+        if (circles[0]) circles[0].setAttribute('r', '1.4');
+        if (circles[1]) circles[1].setAttribute('r', '2.0');
+      };
+
+      const spotlightArcVisual = (group) => {
+        group.style.opacity = '1';
+        const path = group.querySelector('path');
+        if (path) {
+          path.setAttribute('opacity', '1');
+          const baseWidth = Number(path.getAttribute('data-base-width') ?? '2');
+          path.setAttribute('stroke-width', String(baseWidth + 1.4));
+        }
+        const circles = group.querySelectorAll('circle');
+        if (circles[0]) circles[0].setAttribute('r', '2.2');
+        if (circles[1]) circles[1].setAttribute('r', '3.4');
+      };
+
+      const updateLegendState = () => {
+        rangeButtons.forEach((button) => {
+          const isActive = button.getAttribute('data-bucket') === activeBucket && activeBucket !== '';
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          button.classList.toggle('ring-2', isActive);
+          button.classList.toggle('ring-slate-300', isActive);
+          button.classList.toggle('bg-slate-700', isActive);
+        });
+      };
+
+      const showAllArcs = () => {
+        arcGroups.forEach((group) => resetArcVisual(group));
+      };
+
+      const renderFocusState = () => {
+        updateLegendState();
+
+        if (
+          !panel || !rangeLabel || !focusTrack || !focusDates || !focusMeta ||
+          !backButton || !nextButton || !randomButton || !dismissButton
+        ) {
+          showAllArcs();
+          return;
+        }
+
+        if (!activeBucket || activeArcIds.length === 0 || activeIndex < 0) {
+          panel.classList.add('hidden');
+          showAllArcs();
+          return;
+        }
+
+        const activeArcId = activeArcIds[activeIndex];
+        const activeArc = arcById.get(activeArcId);
+
+        if (!activeArc) {
+          panel.classList.add('hidden');
+          showAllArcs();
+          return;
+        }
+
+        panel.classList.remove('hidden');
+        rangeLabel.textContent = `${activeBucket} (${activeIndex + 1}/${activeArcIds.length})`;
+        focusTrack.textContent = `${activeArc.artist} - ${activeArc.track}`;
+        focusDates.textContent = `${activeArc.lastPreReturnPlay} -> ${activeArc.firstReturnPlay}`;
+        focusMeta.textContent = `${activeArc.dormancyYears.toFixed(1)} years dormant | ${activeArc.preReturnPlays} plays before return`;
+
+        backButton.disabled = activeArcIds.length < 2;
+        nextButton.disabled = activeArcIds.length < 2;
+        randomButton.disabled = activeArcIds.length < 2;
+
+        arcGroups.forEach((group, id) => {
+          if (id === activeArcId) {
+            spotlightArcVisual(group);
+          } else {
+            dimArcVisual(group);
+          }
+        });
+      };
+
+      const clearFocus = () => {
+        activeBucket = '';
+        activeArcIds = [];
+        activeIndex = -1;
+        renderFocusState();
+      };
+
+      const pickBucket = (bucket) => {
+        const idsInBucket = arcs.filter((arc) => arc.bucket === bucket).map((arc) => arc.id);
+        if (idsInBucket.length === 0) {
+          clearFocus();
+          return;
+        }
+        activeBucket = bucket;
+        activeArcIds = idsInBucket;
+        activeIndex = Math.floor(Math.random() * activeArcIds.length);
+        renderFocusState();
+      };
+
+      const stepFocus = (delta) => {
+        if (activeArcIds.length === 0) return;
+        const size = activeArcIds.length;
+        activeIndex = (activeIndex + delta + size) % size;
+        renderFocusState();
+      };
+
+      const randomFocus = () => {
+        if (activeArcIds.length < 2) return;
+        let nextIndex = activeIndex;
+        while (nextIndex === activeIndex) {
+          nextIndex = Math.floor(Math.random() * activeArcIds.length);
+        }
+        activeIndex = nextIndex;
+        renderFocusState();
+      };
+
+      rangeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const bucket = button.getAttribute('data-bucket');
+          if (!bucket) return;
+          pickBucket(bucket);
+        });
+      });
+
+      if (backButton) backButton.addEventListener('click', () => stepFocus(-1));
+      if (nextButton) nextButton.addEventListener('click', () => stepFocus(1));
+      if (randomButton) randomButton.addEventListener('click', randomFocus);
+      if (dismissButton) dismissButton.addEventListener('click', clearFocus);
+
+      renderFocusState();
+    }
+  </script>
+</Layout>
