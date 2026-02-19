@@ -94,6 +94,31 @@ const buildUrl = (path: string) => {
       </a>
     </div>
 
+    <!-- Transition Atlas Feature -->
+    <div class="relative overflow-hidden">
+      <a
+        href={buildUrl('history/transitions')}
+        class="block bg-gradient-to-br from-fuchsia-700 via-indigo-700 to-cyan-700 text-white rounded-2xl shadow-2xl p-10 hover:from-fuchsia-800 hover:via-indigo-800 hover:to-cyan-800 transition-all transform hover:scale-[1.01]"
+      >
+        <div class="relative z-10">
+          <div class="text-sm font-semibold tracking-wide uppercase mb-2 opacity-90">
+            New Visualization
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-3">
+            Transition Flow Atlas
+          </h3>
+          <p class="text-base md:text-lg text-fuchsia-100 mb-5 max-w-3xl">
+            Explore directional listening flows and session-based handoffs between tracks and artists.
+          </p>
+          <div class="inline-flex items-center gap-2 text-base font-semibold">
+            <span>Open the Atlas</span>
+            <span class="text-xl">→</span>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10" />
+      </a>
+    </div>
+
     <!-- Quick Navigation -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <a

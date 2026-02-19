@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 LASTFM_IMAGE_SCOPE ?= all
 
-.PHONY: help pipeline compile extract listening timeline wrapped-stories wrapped-month-stories web-data images doctor validate web-dev web-build web-preview mcp clean-bins
+.PHONY: help pipeline compile extract listening timeline transitions wrapped-stories wrapped-month-stories web-data images doctor validate web-dev web-build web-preview mcp clean-bins
 
 help:
 	@echo "Targets:"
@@ -10,6 +10,7 @@ help:
 	@echo "  extract     Build tracks/albums/artists JSON artifacts"
 	@echo "  listening   Refresh Last.fm + Spotify merged listening data"
 	@echo "  timeline    Rebuild timeline JSON"
+	@echo "  transitions Rebuild listening transition graph JSON"
 	@echo "  wrapped-stories Rebuild wrapped story JSON via MCP year-story"
 	@echo "  wrapped-month-stories Rebuild wrapped month story JSON via MCP month-story"
 	@echo "  web-data    Rebuild web-data JSON/chunks/indexes"
@@ -40,6 +41,9 @@ listening:
 
 timeline:
 	cd tools/pipeline && go run . build-timeline
+
+transitions:
+	cd tools/pipeline && go run . build-transition-graph
 
 wrapped-stories:
 	cd tools/pipeline && go run . build-wrapped-stories

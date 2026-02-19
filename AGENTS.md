@@ -91,3 +91,22 @@ go run . process-lastfm
 go run . build-timeline
 go run . fetch-images
 ```
+
+---
+
+## 🔁 Transition Graph Agent
+**Script:** `tools/pipeline/build_transition_graph.go` (invoked via `mp3-scripts build-transition-graph`)
+
+Builds a session-aware transition graph from merged listening history for flow visualizations.
+
+**Capabilities:**
+-   **Session Segmentation:** Applies a configurable session gap (default 30 minutes).
+-   **Flow Edges:** Computes weighted transitions for both `track` and `artist` scopes.
+-   **Probability Metrics:** Includes per-edge conditional transition probabilities.
+-   **Noise Control:** Supports edge-count filtering and max-edge caps for visualization-ready output.
+
+**Usage:**
+```bash
+cd tools/pipeline
+go run . build-transition-graph
+```

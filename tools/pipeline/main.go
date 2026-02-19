@@ -47,6 +47,8 @@ func main() {
 		runBuildWrappedMonthStories()
 	case "build-web-data":
 		runBuildWebData()
+	case "build-transition-graph":
+		runBuildTransitionGraph()
 	case "doctor":
 		runDoctor()
 	default:
@@ -73,5 +75,6 @@ func printUsage() {
 	fmt.Println("  build-wrapped-stories Build wrapped story artifact from MCP year-story tool to data/derived/web/wrapped-stories.json")
 	fmt.Println("  build-wrapped-month-stories Build wrapped month story artifact from MCP month-story tool to data/derived/web/wrapped-month-stories.json")
 	fmt.Println("  build-web-data    Build optimized web data to data/derived/web/")
+	fmt.Println("  build-transition-graph Build listening transition graph to data/derived/core/transition-graph.json and data/derived/web/transition-graph.json")
 	fmt.Println("  doctor            Validate path config, required inputs, and output directories")
 }

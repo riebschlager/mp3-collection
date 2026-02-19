@@ -396,6 +396,8 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 		payload, err = musicListeningPatterns(params.Arguments)
 	case "music_streaks_and_bursts":
 		payload, err = musicStreaksAndBursts(params.Arguments)
+	case "music_transition_graph":
+		payload, err = musicTransitionGraph(params.Arguments)
 	case "music_month_story":
 		payload, err = musicMonthStory(params.Arguments)
 	case "music_year_story":
@@ -4664,6 +4666,23 @@ func toolCatalog() []toolDefinition {
 					"topN":              map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 100, "default": 10},
 					"sessionGapMinutes": map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 180, "default": 30},
 					"source":            sourceFilterSchema(),
+				},
+			},
+		},
+		{
+			Name:        "music_transition_graph",
+			Description: "Build a transition graph for track-to-track and/or artist-to-artist listening flows within sessions.",
+			InputSchema: map[string]interface{}{
+				"type": "object",
+				"properties": map[string]interface{}{
+					"startDate":          map[string]interface{}{"type": "string", "format": "date"},
+					"endDate":            map[string]interface{}{"type": "string", "format": "date"},
+					"scope":              map[string]interface{}{"type": "string", "enum": []string{"track", "artist", "both"}, "default": "both"},
+					"sessionGapMinutes":  map[string]interface{}{"type": "integer", "minimum": 5, "maximum": 180, "default": 30},
+					"minTransitionCount": map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 1000, "default": 2},
+					"maxEdges":           map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 50000, "default": 1000},
+					"includeSelfLoops":   map[string]interface{}{"type": "boolean", "default": false},
+					"source":             sourceFilterSchema(),
 				},
 			},
 		},

@@ -99,10 +99,11 @@ cd tools/pipeline
 6. `merge-listening`
 7. `process-lastfm`
 8. `build-timeline`
-9. `build-wrapped-stories`
-10. `build-wrapped-month-stories`
-11. `build-web-data`
-12. `fetch-images`
+9. `build-transition-graph`
+10. `build-wrapped-stories`
+11. `build-wrapped-month-stories`
+12. `build-web-data`
+13. `fetch-images`
 
 You can run any step individually:
 
@@ -118,6 +119,7 @@ Common commands:
 - `merge-listening`
 - `process-lastfm`
 - `build-timeline`
+- `build-transition-graph`
 - `build-wrapped-stories`
 - `build-wrapped-month-stories`
 - `build-web-data`
@@ -132,6 +134,7 @@ Common commands:
 - `data/derived/web/chunks/tracks-*.json`
 - `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
 - `data/derived/web/timeline.json`
+- `data/derived/core/transition-graph.json`, `data/derived/web/transition-graph.json`
 - `data/derived/web/wrapped-stories.json`
 - `data/derived/web/wrapped-month-stories.json`
 - `data/derived/web/playcounts.json`, `data/derived/web/listening-merge-report.json`
@@ -189,6 +192,7 @@ Current tools:
 - `music_genre_profile`
 - `music_listening_patterns`
 - `music_streaks_and_bursts`
+- `music_transition_graph`
 - `music_month_story`
 - `music_year_story`
 - `music_batch_year_story`

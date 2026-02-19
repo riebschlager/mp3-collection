@@ -1,0 +1,634 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+
+interface TransitionNode {
+  id: string;
+  label: string;
+  artist?: string;
+  track?: string;
+  playCount: number;
+  inDegree: number;
+  outDegree: number;
+  inWeight: number;
+  outWeight: number;
+}
+
+interface TransitionEdge {
+  source: string;
+  target: string;
+  sourceLabel: string;
+  targetLabel: string;
+  count: number;
+  probability: number;
+  avgGapMinutes: number;
+  minGapMinutes: number;
+  maxGapMinutes: number;
+  firstSeen: number;
+  lastSeen: number;
+}
+
+interface TransitionScopeData {
+  summary: {
+    totalDistinctNodes: number;
+    nodesInGraph: number;
+    isolatedNodes: number;
+    totalEdges: number;
+    edgesRetained: number;
+    totalTransitions: number;
+  };
+  nodes: TransitionNode[];
+  edges: TransitionEdge[];
+}
+
+interface TransitionArtifact {
+  generatedAt: string;
+  summary: {
+    totalEvents: number;
+    validEvents: number;
+    skippedEvents: number;
+    totalSessions: number;
+    transitionsWithinSessions: number;
+    transitionsAcrossSessionGap: number;
+  };
+  config: {
+    sessionGapMinutes: number;
+    minTransitionCount: number;
+    maxEdgesPerScope: number;
+    includeSelfLoops: boolean;
+  };
+  scopes: {
+    track: TransitionScopeData;
+    artist: TransitionScopeData;
+  };
+}
+
+interface FlowTarget {
+  label: string;
+  count: number;
+  share: number;
+  avgGapMinutes: number;
+}
+
+interface FlowLadder {
+  source: string;
+  total: number;
+  targets: FlowTarget[];
+}
+
+const transitionArtifact = await import('../../../public/data/transition-graph.json') as TransitionArtifact;
+
+const emptyScope: TransitionScopeData = {
+  summary: {
+    totalDistinctNodes: 0,
+    nodesInGraph: 0,
+    isolatedNodes: 0,
+    totalEdges: 0,
+    edgesRetained: 0,
+    totalTransitions: 0,
+  },
+  nodes: [],
+  edges: [],
+};
+
+const trackScope = transitionArtifact.scopes?.track ?? emptyScope;
+const artistScope = transitionArtifact.scopes?.artist ?? emptyScope;
+
+const clamp = (value: number, min: number, max: number): number => Math.max(min, Math.min(max, value));
+
+const compactScope = (scope: TransitionScopeData, edgeLimit: number, nodeLimit: number): TransitionScopeData => {
+  const edgesByWeight = [...scope.edges].sort((a, b) => b.count - a.count);
+  let edges = edgesByWeight.slice(0, edgeLimit);
+
+  const nodeIds = new Set<string>();
+  edges.forEach((edge) => {
+    nodeIds.add(edge.source);
+    nodeIds.add(edge.target);
+  });
+
+  let nodes = scope.nodes
+    .filter((node) => nodeIds.has(node.id))
+    .sort((a, b) => b.playCount - a.playCount);
+
+  if (nodes.length > nodeLimit) {
+    const keepNodeIds = new Set(nodes.slice(0, nodeLimit).map((node) => node.id));
+    nodes = nodes.slice(0, nodeLimit);
+    edges = edges.filter((edge) => keepNodeIds.has(edge.source) && keepNodeIds.has(edge.target));
+
+    if (edges.length < edgeLimit) {
+      for (const candidate of edgesByWeight.slice(edgeLimit)) {
+        if (edges.length >= edgeLimit) break;
+        if (!keepNodeIds.has(candidate.source) || !keepNodeIds.has(candidate.target)) continue;
+        const exists = edges.some((edge) => edge.source === candidate.source && edge.target === candidate.target);
+        if (!exists) edges.push(candidate);
+      }
+    }
+  }
+
+  edges.sort((a, b) => b.count - a.count);
+
+  return {
+    summary: scope.summary,
+    nodes,
+    edges,
+  };
+};
+
+const buildFlowLadders = (scope: TransitionScopeData, sourceLimit: number, targetLimit: number): FlowLadder[] => {
+  const grouped = new Map<string, { source: string; total: number; targets: Map<string, FlowTarget> }>();
+  for (const edge of scope.edges) {
+    const sourceKey = edge.source;
+    const existing = grouped.get(sourceKey) ?? { source: edge.sourceLabel, total: 0, targets: new Map<string, FlowTarget>() };
+    existing.total += edge.count;
+
+    const target = existing.targets.get(edge.target) ?? {
+      label: edge.targetLabel,
+      count: 0,
+      share: 0,
+      avgGapMinutes: edge.avgGapMinutes,
+    };
+    target.count += edge.count;
+    target.avgGapMinutes = edge.avgGapMinutes;
+    existing.targets.set(edge.target, target);
+    grouped.set(sourceKey, existing);
+  }
+
+  return [...grouped.values()]
+    .sort((a, b) => b.total - a.total)
+    .slice(0, sourceLimit)
+    .map((group) => {
+      const targets = [...group.targets.values()]
+        .sort((a, b) => b.count - a.count)
+        .slice(0, targetLimit)
+        .map((target) => ({
+          ...target,
+          share: group.total > 0 ? clamp(target.count / group.total, 0, 1) : 0,
+        }));
+      return {
+        source: group.source,
+        total: group.total,
+        targets,
+      };
+    });
+};
+
+const compactTrack = compactScope(trackScope, 280, 140);
+const compactArtist = compactScope(artistScope, 240, 110);
+
+const networkPayload = {
+  track: compactTrack,
+  artist: compactArtist,
+};
+
+const flowPayload = {
+  track: buildFlowLadders(trackScope, 8, 5),
+  artist: buildFlowLadders(artistScope, 8, 6),
+};
+
+const handoffPayload = {
+  track: [...trackScope.edges].sort((a, b) => b.count - a.count).slice(0, 18),
+  artist: [...artistScope.edges].sort((a, b) => b.count - a.count).slice(0, 18),
+};
+
+const combinedEdges = [...trackScope.edges, ...artistScope.edges];
+const earliestEdge = combinedEdges.reduce((min, edge) => Math.min(min, edge.firstSeen), Number.POSITIVE_INFINITY);
+const latestEdge = combinedEdges.reduce((max, edge) => Math.max(max, edge.lastSeen), 0);
+
+const formatDate = (timestampMs: number): string => {
+  if (!Number.isFinite(timestampMs) || timestampMs <= 0) return 'Unknown';
+  return new Date(timestampMs).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+};
+---
+
+<Layout title="Transition Flow Atlas - MP3 Collection">
+  <div class="space-y-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-3">Transition Flow Atlas</h1>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Session-aware listening handoffs built from {transitionArtifact.summary.validEvents.toLocaleString()} valid events.
+        Follow the next-song and next-artist paths to surface your strongest listening corridors.
+      </p>
+    </div>
+
+    <div class="rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-900 to-sky-900 text-white p-8 shadow-xl">
+      <div class="flex flex-col lg:flex-row gap-6 lg:items-end lg:justify-between">
+        <div class="space-y-3">
+          <p class="text-xs uppercase tracking-[0.25em] text-sky-100/80">Flow Intelligence</p>
+          <h2 class="text-3xl font-bold">What This Captures</h2>
+          <p class="text-slate-100 max-w-3xl">
+            A transition is counted when two consecutive listens occur within {transitionArtifact.config.sessionGapMinutes} minutes.
+            This view excludes session breaks and keeps only the strongest edges for visual clarity.
+          </p>
+          <div class="text-sm text-slate-200">
+            Time span: {formatDate(earliestEdge)} to {formatDate(latestEdge)}
+          </div>
+        </div>
+        <a
+          href={buildUrl('history')}
+          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
+        >
+          Back to History ->
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl shadow p-5">
+        <div class="text-xs uppercase tracking-[0.2em] text-gray-500">Sessions</div>
+        <div class="mt-2 text-3xl font-bold text-slate-900">{transitionArtifact.summary.totalSessions.toLocaleString()}</div>
+        <div class="mt-1 text-sm text-gray-600">Boundaries defined by inactivity</div>
+      </div>
+      <div class="bg-white rounded-xl shadow p-5">
+        <div class="text-xs uppercase tracking-[0.2em] text-gray-500">In-Session Transitions</div>
+        <div class="mt-2 text-3xl font-bold text-indigo-700">{transitionArtifact.summary.transitionsWithinSessions.toLocaleString()}</div>
+        <div class="mt-1 text-sm text-gray-600">Edges used to build this graph</div>
+      </div>
+      <div class="bg-white rounded-xl shadow p-5">
+        <div class="text-xs uppercase tracking-[0.2em] text-gray-500">Track Edges</div>
+        <div class="mt-2 text-3xl font-bold text-fuchsia-700">{trackScope.summary.totalEdges.toLocaleString()}</div>
+        <div class="mt-1 text-sm text-gray-600">Distinct track-to-track handoffs</div>
+      </div>
+      <div class="bg-white rounded-xl shadow p-5">
+        <div class="text-xs uppercase tracking-[0.2em] text-gray-500">Artist Edges</div>
+        <div class="mt-2 text-3xl font-bold text-cyan-700">{artistScope.summary.totalEdges.toLocaleString()}</div>
+        <div class="mt-1 text-sm text-gray-600">Distinct artist-to-artist handoffs</div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900">Transition Network</h2>
+          <p class="text-sm text-gray-600" id="network-caption">Weighted directional graph of your strongest handoffs.</p>
+        </div>
+        <div class="inline-flex rounded-full bg-gray-100 p-1 shadow-inner">
+          <button type="button" data-scope="track" class="scope-btn rounded-full px-4 py-2 text-sm font-semibold transition-colors">
+            Track Flow
+          </button>
+          <button type="button" data-scope="artist" class="scope-btn rounded-full px-4 py-2 text-sm font-semibold transition-colors">
+            Artist Flow
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div class="lg:col-span-3 rounded-xl border border-slate-200 bg-slate-950/95 p-3">
+          <svg id="transition-network" viewBox="0 0 1000 620" class="w-full h-[460px] md:h-[620px] rounded-lg"></svg>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50">
+            <h3 class="text-sm uppercase tracking-[0.18em] text-slate-600">Current Scope</h3>
+            <div class="mt-3 text-lg font-bold text-slate-900" id="scope-name">Track</div>
+            <div class="mt-2 text-sm text-slate-700">
+              <div>Nodes: <span id="scope-nodes" class="font-semibold"></span></div>
+              <div>Edges: <span id="scope-edges" class="font-semibold"></span></div>
+              <div>Transitions: <span id="scope-transitions" class="font-semibold"></span></div>
+            </div>
+          </div>
+          <div id="network-details" class="rounded-xl border border-indigo-200 bg-indigo-50 p-4 text-sm text-indigo-900">
+            Click a node to inspect incoming and outgoing handoffs.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">Sankey Ladders</h2>
+      <p class="text-sm text-gray-600 mb-5">
+        Top source nodes and where they hand off next. Bars represent share of outbound transitions.
+      </p>
+      <div id="flow-ladders" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">Top Handoffs</h2>
+      <p class="text-sm text-gray-600 mb-5">
+        Highest-volume directional transitions with conditional probability and average gap.
+      </p>
+      <div id="top-handoffs" class="space-y-2"></div>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ networkPayload, flowPayload, handoffPayload }}>
+    const svg = document.getElementById('transition-network');
+    const flowLaddersEl = document.getElementById('flow-ladders');
+    const topHandoffsEl = document.getElementById('top-handoffs');
+    const detailsEl = document.getElementById('network-details');
+    const captionEl = document.getElementById('network-caption');
+    const scopeNameEl = document.getElementById('scope-name');
+    const scopeNodesEl = document.getElementById('scope-nodes');
+    const scopeEdgesEl = document.getElementById('scope-edges');
+    const scopeTransitionsEl = document.getElementById('scope-transitions');
+    const scopeButtons = Array.from(document.querySelectorAll('.scope-btn'));
+
+    const scopeMeta = {
+      track: {
+        name: 'Track',
+        edgeColor: '#c026d3',
+        nodeColor: '#f472b6',
+        gradient: 'linear-gradient(90deg, #d946ef 0%, #8b5cf6 100%)',
+      },
+      artist: {
+        name: 'Artist',
+        edgeColor: '#0891b2',
+        nodeColor: '#22d3ee',
+        gradient: 'linear-gradient(90deg, #06b6d4 0%, #0ea5e9 100%)',
+      },
+    };
+
+    const NS = 'http://www.w3.org/2000/svg';
+    let currentScope = 'track';
+    let selectedNodeId = '';
+
+    const escapeHtml = (value) => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const hashCode = (value) => {
+      let hash = 0;
+      for (let i = 0; i < value.length; i += 1) {
+        hash = ((hash << 5) - hash) + value.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    };
+
+    const setScopeButtonState = () => {
+      scopeButtons.forEach((button) => {
+        const scope = button.getAttribute('data-scope');
+        const active = scope === currentScope;
+        button.classList.toggle('bg-white', active);
+        button.classList.toggle('text-slate-900', active);
+        button.classList.toggle('shadow', active);
+        button.classList.toggle('text-slate-500', !active);
+      });
+    };
+
+    const updateScopeSummary = () => {
+      const scopeData = networkPayload[currentScope];
+      const summary = scopeData?.summary ?? {};
+      const meta = scopeMeta[currentScope];
+      if (scopeNameEl) scopeNameEl.textContent = meta.name;
+      if (scopeNodesEl) scopeNodesEl.textContent = Number(summary.nodesInGraph || 0).toLocaleString();
+      if (scopeEdgesEl) scopeEdgesEl.textContent = Number(summary.edgesRetained || 0).toLocaleString();
+      if (scopeTransitionsEl) scopeTransitionsEl.textContent = Number(summary.totalTransitions || 0).toLocaleString();
+      if (captionEl) captionEl.textContent = `${meta.name}-to-${meta.name.toLowerCase()} flow graph rendered from strongest edges.`;
+    };
+
+    const buildLayout = (nodes) => {
+      const ranked = [...nodes].sort((a, b) => ((b.inWeight + b.outWeight) - (a.inWeight + a.outWeight)));
+      const bands = [
+        ranked.slice(0, 10),
+        ranked.slice(10, 34),
+        ranked.slice(34, 76),
+        ranked.slice(76),
+      ];
+      const radii = [110, 200, 285, 370];
+      const center = { x: 500, y: 310 };
+      const positions = new Map();
+
+      bands.forEach((band, bandIndex) => {
+        const total = band.length || 1;
+        band.forEach((node, i) => {
+          const angleBase = (Math.PI * 2 * i) / total;
+          const jitter = ((hashCode(node.id) % 28) - 14) * 0.015;
+          const angle = angleBase + jitter;
+          const radiusJitter = ((hashCode(`${node.id}-r`) % 24) - 12);
+          const radius = radii[bandIndex] + radiusJitter;
+          positions.set(node.id, {
+            x: center.x + Math.cos(angle) * radius,
+            y: center.y + Math.sin(angle) * radius,
+          });
+        });
+      });
+
+      return { positions, ranked };
+    };
+
+    const renderDetails = () => {
+      if (!detailsEl) return;
+      if (!selectedNodeId) {
+        detailsEl.innerHTML = 'Click a node to inspect incoming and outgoing handoffs.';
+        return;
+      }
+
+      const scopeData = networkPayload[currentScope];
+      const node = scopeData.nodes.find((entry) => entry.id === selectedNodeId);
+      if (!node) {
+        detailsEl.innerHTML = 'Click a node to inspect incoming and outgoing handoffs.';
+        return;
+      }
+
+      const outgoing = scopeData.edges
+        .filter((edge) => edge.source === selectedNodeId)
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 4);
+      const incoming = scopeData.edges
+        .filter((edge) => edge.target === selectedNodeId)
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 4);
+
+      const outgoingHtml = outgoing.length
+        ? outgoing.map((edge) => `<li>${escapeHtml(edge.targetLabel)} <span class="font-semibold text-slate-900">(${edge.count})</span></li>`).join('')
+        : '<li>No outgoing transitions in this slice.</li>';
+      const incomingHtml = incoming.length
+        ? incoming.map((edge) => `<li>${escapeHtml(edge.sourceLabel)} <span class="font-semibold text-slate-900">(${edge.count})</span></li>`).join('')
+        : '<li>No incoming transitions in this slice.</li>';
+
+      detailsEl.innerHTML = `
+        <div class="space-y-2">
+          <div class="font-bold text-indigo-950">${escapeHtml(node.label)}</div>
+          <div class="text-xs uppercase tracking-[0.12em] text-indigo-700">Play count ${Number(node.playCount).toLocaleString()}</div>
+          <div class="pt-1">
+            <div class="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Outgoing</div>
+            <ul class="mt-1 space-y-1 text-slate-700">${outgoingHtml}</ul>
+          </div>
+          <div class="pt-1">
+            <div class="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Incoming</div>
+            <ul class="mt-1 space-y-1 text-slate-700">${incomingHtml}</ul>
+          </div>
+        </div>
+      `;
+    };
+
+    const renderNetwork = () => {
+      if (!(svg instanceof SVGElement)) return;
+      const scopeData = networkPayload[currentScope];
+      const meta = scopeMeta[currentScope];
+      const nodes = scopeData.nodes || [];
+      const edges = scopeData.edges || [];
+      const maxEdgeCount = Math.max(1, ...edges.map((edge) => edge.count));
+      const maxPlayCount = Math.max(1, ...nodes.map((node) => node.playCount));
+      const { positions, ranked } = buildLayout(nodes);
+
+      svg.innerHTML = '';
+
+      const edgeLayer = document.createElementNS(NS, 'g');
+      const nodeLayer = document.createElementNS(NS, 'g');
+      const labelLayer = document.createElementNS(NS, 'g');
+
+      edges.forEach((edge) => {
+        const sourcePos = positions.get(edge.source);
+        const targetPos = positions.get(edge.target);
+        if (!sourcePos || !targetPos) return;
+
+        const isInSelection = !selectedNodeId || edge.source === selectedNodeId || edge.target === selectedNodeId;
+        const line = document.createElementNS(NS, 'line');
+        line.setAttribute('x1', String(sourcePos.x));
+        line.setAttribute('y1', String(sourcePos.y));
+        line.setAttribute('x2', String(targetPos.x));
+        line.setAttribute('y2', String(targetPos.y));
+        line.setAttribute('stroke', meta.edgeColor);
+        line.setAttribute('stroke-opacity', isInSelection ? String(0.2 + (edge.count / maxEdgeCount) * 0.65) : '0.04');
+        line.setAttribute('stroke-width', String(0.5 + (edge.count / maxEdgeCount) * 7.5));
+        line.setAttribute('stroke-linecap', 'round');
+        line.innerHTML = `<title>${escapeHtml(edge.sourceLabel)} -> ${escapeHtml(edge.targetLabel)} | ${edge.count} plays | ${(edge.probability * 100).toFixed(1)}%</title>`;
+        edgeLayer.appendChild(line);
+      });
+
+      const labelSet = new Set(ranked.slice(0, 18).map((node) => node.id));
+      if (selectedNodeId) {
+        labelSet.add(selectedNodeId);
+        edges.forEach((edge) => {
+          if (edge.source === selectedNodeId || edge.target === selectedNodeId) {
+            labelSet.add(edge.source);
+            labelSet.add(edge.target);
+          }
+        });
+      }
+
+      nodes.forEach((node) => {
+        const position = positions.get(node.id);
+        if (!position) return;
+        const isSelected = selectedNodeId === node.id;
+        const isRelated = !selectedNodeId
+          || isSelected
+          || edges.some((edge) =>
+            (edge.source === selectedNodeId && edge.target === node.id) ||
+            (edge.target === selectedNodeId && edge.source === node.id)
+          );
+
+        const circle = document.createElementNS(NS, 'circle');
+        circle.setAttribute('cx', String(position.x));
+        circle.setAttribute('cy', String(position.y));
+        circle.setAttribute('r', String(3 + Math.sqrt(node.playCount / maxPlayCount) * 13));
+        circle.setAttribute('fill', meta.nodeColor);
+        circle.setAttribute('fill-opacity', isRelated ? '0.95' : '0.28');
+        circle.setAttribute('stroke', '#ffffff');
+        circle.setAttribute('stroke-width', isSelected ? '2.4' : '0.9');
+        circle.style.cursor = 'pointer';
+        circle.innerHTML = `<title>${escapeHtml(node.label)} | plays ${node.playCount.toLocaleString()} | out ${node.outWeight.toLocaleString()} | in ${node.inWeight.toLocaleString()}</title>`;
+        circle.addEventListener('click', (event) => {
+          event.stopPropagation();
+          selectedNodeId = selectedNodeId === node.id ? '' : node.id;
+          renderDetails();
+          renderNetwork();
+        });
+        nodeLayer.appendChild(circle);
+
+        if (labelSet.has(node.id)) {
+          const text = document.createElementNS(NS, 'text');
+          text.setAttribute('x', String(position.x + 8));
+          text.setAttribute('y', String(position.y + 3));
+          text.setAttribute('font-size', '11');
+          text.setAttribute('font-family', 'ui-sans-serif, system-ui, sans-serif');
+          text.setAttribute('fill', '#e2e8f0');
+          text.setAttribute('fill-opacity', isRelated ? '0.95' : '0.42');
+          text.textContent = node.label.length > 34 ? `${node.label.slice(0, 34)}...` : node.label;
+          labelLayer.appendChild(text);
+        }
+      });
+
+      svg.onclick = () => {
+        if (!selectedNodeId) return;
+        selectedNodeId = '';
+        renderDetails();
+        renderNetwork();
+      };
+
+      svg.appendChild(edgeLayer);
+      svg.appendChild(nodeLayer);
+      svg.appendChild(labelLayer);
+    };
+
+    const renderFlowLadders = () => {
+      if (!flowLaddersEl) return;
+      const meta = scopeMeta[currentScope];
+      const ladders = flowPayload[currentScope] || [];
+      flowLaddersEl.innerHTML = '';
+
+      ladders.forEach((ladder) => {
+        const card = document.createElement('article');
+        card.className = 'rounded-xl border border-slate-200 p-4 bg-slate-50';
+        const rows = ladder.targets.map((target) => `
+          <div class="space-y-1">
+            <div class="flex items-center justify-between gap-3 text-sm">
+              <span class="truncate text-slate-700">${escapeHtml(target.label)}</span>
+              <span class="font-semibold text-slate-900">${target.count}</span>
+            </div>
+            <div class="h-2 rounded-full bg-slate-200 overflow-hidden">
+              <div class="h-full" style="width: ${(target.share * 100).toFixed(1)}%; background: ${meta.gradient};"></div>
+            </div>
+          </div>
+        `).join('');
+
+        card.innerHTML = `
+          <header class="mb-3 flex items-center justify-between gap-3">
+            <h3 class="font-semibold text-slate-900 truncate">${escapeHtml(ladder.source)}</h3>
+            <span class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">${ladder.total} out</span>
+          </header>
+          <div class="space-y-3">${rows}</div>
+        `;
+        flowLaddersEl.appendChild(card);
+      });
+    };
+
+    const renderTopHandoffs = () => {
+      if (!topHandoffsEl) return;
+      const handoffs = handoffPayload[currentScope] || [];
+      topHandoffsEl.innerHTML = handoffs.map((edge, idx) => `
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
+          <div class="flex items-start gap-3 min-w-0">
+            <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white text-xs font-bold">${idx + 1}</span>
+            <div class="min-w-0">
+              <div class="font-medium text-slate-900 truncate">${escapeHtml(edge.sourceLabel)} -> ${escapeHtml(edge.targetLabel)}</div>
+              <div class="text-xs text-slate-500">Avg gap ${edge.avgGapMinutes.toFixed(2)} min</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <span class="rounded-full bg-slate-200 px-2.5 py-1 font-semibold text-slate-700">${edge.count} plays</span>
+            <span class="rounded-full bg-indigo-100 px-2.5 py-1 font-semibold text-indigo-700">${(edge.probability * 100).toFixed(1)}%</span>
+          </div>
+        </div>
+      `).join('');
+    };
+
+    const renderAll = () => {
+      setScopeButtonState();
+      updateScopeSummary();
+      renderDetails();
+      renderNetwork();
+      renderFlowLadders();
+      renderTopHandoffs();
+    };
+
+    scopeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextScope = button.getAttribute('data-scope');
+        if (!nextScope || nextScope === currentScope) return;
+        currentScope = nextScope;
+        selectedNodeId = '';
+        renderAll();
+      });
+    });
+
+    renderAll();
+  </script>
+</Layout>

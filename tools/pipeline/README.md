@@ -32,6 +32,10 @@ The CLI auto-loads `.env` by searching current and parent directories.
 - `LASTFM_IMAGE_MAX_ALBUMS`: optional int limit for fetch runs.
 - `LASTFM_IMAGE_NOT_FOUND_TTL_DAYS`: optional int, default `30` (retry cached `not_found` entries after this many days).
 - `LASTFM_IMAGE_ERROR_TTL_HOURS`: optional int, default `24` (retry cached `error` entries after this many hours).
+- `MP3_TRANSITION_SESSION_GAP_MINUTES`: optional int for transition graph session boundary, defaults to `30`.
+- `MP3_TRANSITION_MIN_EDGE_WEIGHT`: optional int minimum transition count to keep an edge, defaults to `2`.
+- `MP3_TRANSITION_MAX_EDGES`: optional int maximum retained edges per scope (`track`, `artist`), defaults to `2500`.
+- `MP3_TRANSITION_INCLUDE_SELF_LOOPS`: optional boolean (`true/false`), defaults to `false`.
 
 ## Quick Start
 
@@ -58,10 +62,11 @@ cd tools/pipeline
 6. `merge-listening`
 7. `process-lastfm`
 8. `build-timeline`
-9. `build-wrapped-stories`
-10. `build-wrapped-month-stories`
-11. `build-web-data`
-12. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
+9. `build-transition-graph`
+10. `build-wrapped-stories`
+11. `build-wrapped-month-stories`
+12. `build-web-data`
+13. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
 
 ## Command Reference
 
@@ -83,6 +88,7 @@ Available commands:
 - `process-lastfm`: builds `data/derived/core/playcounts.json` and `data/derived/web/playcounts.json`
 - `process-listening`: alias for `process-lastfm`
 - `build-timeline`: builds `data/derived/web/timeline.json`
+- `build-transition-graph`: builds `data/derived/core/transition-graph.json` and `data/derived/web/transition-graph.json`
 - `build-wrapped-stories`: calls MCP `music_batch_year_story` (with per-year fallback) and writes `data/derived/web/wrapped-stories.json`
 - `build-wrapped-month-stories`: calls MCP `music_month_story` for each available month and writes `data/derived/web/wrapped-month-stories.json`
 - `build-web-data`: builds chunked/indexed web artifacts in `data/derived/web/`

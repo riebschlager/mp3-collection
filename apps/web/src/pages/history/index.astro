@@ -76,6 +76,25 @@ const formatMonth = (monthStr: string) => {
       </div>
     </div>
 
+    <!-- Transition Flow Atlas -->
+    <div class="rounded-2xl bg-gradient-to-br from-fuchsia-900 via-indigo-900 to-slate-900 text-white p-8 shadow-xl">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-2">New Visualization</p>
+          <h2 class="text-3xl font-bold">Transition Flow Atlas</h2>
+          <p class="mt-2 text-slate-200 max-w-2xl">
+            Inspect your strongest within-session handoffs, from track-to-track tunnels to artist-to-artist corridors.
+          </p>
+        </div>
+        <a
+          href={buildUrl('history/transitions')}
+          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
+        >
+          Open Transition Atlas ->
+        </a>
+      </div>
+    </div>
+
     <!-- Timeline Overview -->
     <div class="bg-white rounded-lg shadow p-6">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Timeline Overview</h2>
