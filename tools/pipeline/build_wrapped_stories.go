@@ -363,6 +363,31 @@ func (c *mcpProcessClient) callTransitionGraph(startDate, endDate, source string
 	return c.callTool("music_transition_graph", args)
 }
 
+func (c *mcpProcessClient) callCompareEras(
+	aStartDate, aEndDate, aLabel string,
+	bStartDate, bEndDate, bLabel string,
+	source string,
+	topN int,
+) (map[string]interface{}, error) {
+	args := map[string]interface{}{
+		"eraA": map[string]interface{}{
+			"startDate": aStartDate,
+			"endDate":   aEndDate,
+			"label":     aLabel,
+		},
+		"eraB": map[string]interface{}{
+			"startDate": bStartDate,
+			"endDate":   bEndDate,
+			"label":     bLabel,
+		},
+		"topN": topN,
+	}
+	if strings.TrimSpace(source) != "" {
+		args["source"] = source
+	}
+	return c.callTool("music_compare_eras", args)
+}
+
 func (c *mcpProcessClient) notify(method string, params interface{}) error {
 	req := map[string]interface{}{
 		"jsonrpc": "2.0",

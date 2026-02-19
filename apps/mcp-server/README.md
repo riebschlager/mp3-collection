@@ -27,6 +27,7 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 
 Most analytics tools accept optional `source` filtering: `all` (default), `lastfm`, or `spotify`.
 Discovery-oriented tools (`music_new_discoveries`, `music_month_story`, `music_year_story`, `music_batch_year_story`) also accept `discoveryBaseline`: `global` (default), `source`, or `window`.
+`music_compare_eras` also returns an Era Similarity payload (`similarity`) with a 0-100 index, confidence, and component drivers.
 
 ## Data Dependencies
 

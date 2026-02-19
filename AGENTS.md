@@ -114,3 +114,22 @@ cd tools/pipeline
 go run . build-transition-graph
 go run . build-transition-query-cache
 ```
+
+---
+
+## 🧭 Era Similarity Agent
+**Script:** `tools/pipeline/build_era_similarity_cache.go` (invoked via `mp3-scripts build-era-similarity-cache`)
+
+Builds a year-to-year similarity matrix from MCP `music_compare_eras`, ready for heatmap and inspector visualizations.
+
+**Capabilities:**
+-   **Pairwise Era Analysis:** Evaluates all year pairs across configurable sources (`all`, `lastfm`, `spotify`).
+-   **Similarity Index Caching:** Stores compact Era Similarity Index details (score, confidence, component drivers).
+-   **Visualization-Ready Matrix:** Materializes symmetric matrices for fast frontend rendering.
+-   **Insight Compression:** Keeps top persistent favorites, risers, decliners, and key insight bullets per pair.
+
+**Usage:**
+```bash
+cd tools/pipeline
+go run . build-era-similarity-cache
+```

@@ -65,6 +65,7 @@ Other useful targets:
 - `make web-data` (rebuild web JSON/chunks/indexes)
 - `make wrapped-stories` (rebuild wrapped story JSON via MCP)
 - `make wrapped-month-stories` (rebuild wrapped month story JSON via MCP)
+- `make era-similarity-cache` (rebuild MCP-backed era similarity matrix cache)
 - `make images` (refresh merged Last.fm+Spotify listening data, rebuild web-data, then refresh artist/album image metadata; default `LASTFM_IMAGE_SCOPE=all`)
 - `make doctor` (validate ETL path config + required inputs)
 - `make validate` (run doctor + Go builds + web build)
@@ -101,10 +102,11 @@ cd tools/pipeline
 8. `build-timeline`
 9. `build-transition-graph`
 10. `build-transition-query-cache`
-11. `build-wrapped-stories`
-12. `build-wrapped-month-stories`
-13. `build-web-data`
-14. `fetch-images`
+11. `build-era-similarity-cache`
+12. `build-wrapped-stories`
+13. `build-wrapped-month-stories`
+14. `build-web-data`
+15. `fetch-images`
 
 You can run any step individually:
 
@@ -122,6 +124,7 @@ Common commands:
 - `build-timeline`
 - `build-transition-graph`
 - `build-transition-query-cache`
+- `build-era-similarity-cache`
 - `build-wrapped-stories`
 - `build-wrapped-month-stories`
 - `build-web-data`
@@ -138,6 +141,7 @@ Common commands:
 - `data/derived/web/timeline.json`
 - `data/derived/core/transition-graph.json`, `data/derived/web/transition-graph.json`
 - `data/derived/web/transition-query-cache.json`
+- `data/derived/web/era-similarity-cache.json`
 - `data/derived/web/wrapped-stories.json`
 - `data/derived/web/wrapped-month-stories.json`
 - `data/derived/web/playcounts.json`, `data/derived/web/listening-merge-report.json`

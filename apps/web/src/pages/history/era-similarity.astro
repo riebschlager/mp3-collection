@@ -1,0 +1,1025 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+
+const defaultDataRoot = buildUrl('data');
+---
+
+<Layout title="Era Similarity Index - MP3 Collection">
+  <div class="era-page">
+    <section class="era-hero reveal">
+      <div class="era-hero__copy">
+        <p class="era-kicker">History Lab</p>
+        <h1>Era Similarity Index</h1>
+        <p>
+          Compare every listening year against every other year to find your closest echoes,
+          sharp pivots, and recurring identities.
+        </p>
+      </div>
+      <div class="era-hero__actions">
+        <a href={buildUrl('history')} class="era-link">Back to History</a>
+      </div>
+    </section>
+
+    <section class="era-controls reveal" aria-label="Similarity controls">
+      <label>
+        Source
+        <select id="source-select"></select>
+      </label>
+      <label>
+        Focus Year
+        <select id="focus-year-select"></select>
+      </label>
+      <div class="era-controls__status" id="load-status">Loading era similarity cache...</div>
+    </section>
+
+    <section class="era-grid reveal">
+      <article class="era-card era-card--matrix">
+        <div class="era-card__header">
+          <div>
+            <p class="era-eyebrow">Similarity Matrix</p>
+            <h2>Year-to-Year Heatmap</h2>
+          </div>
+          <div class="era-legend" aria-label="Similarity legend">
+            <span>Far</span>
+            <div class="era-legend__bar"></div>
+            <span>Close</span>
+          </div>
+          <div id="legend-range" class="era-legend__range">Scale range: -</div>
+        </div>
+        <div class="era-matrix-wrap">
+          <table id="era-matrix" class="era-matrix">
+            <caption class="sr-only">Era similarity matrix</caption>
+          </table>
+        </div>
+      </article>
+
+      <article class="era-card era-card--inspector">
+        <p class="era-eyebrow">Pair Inspector</p>
+        <h2 id="pair-title">Select a pair</h2>
+        <div class="era-scoreline">
+          <div>
+            <div class="era-scoreline__label">ESI</div>
+            <div id="pair-score" class="era-scoreline__value">-</div>
+          </div>
+          <div>
+            <div class="era-scoreline__label">Confidence</div>
+            <div id="pair-confidence" class="era-scoreline__value era-scoreline__value--small">-</div>
+          </div>
+        </div>
+        <div id="pair-components" class="era-components"></div>
+        <div class="era-lists">
+          <div>
+            <h3>Persistent Favorites</h3>
+            <ol id="pair-persistent"></ol>
+          </div>
+          <div>
+            <h3>Top Risers</h3>
+            <ol id="pair-rising"></ol>
+          </div>
+          <div>
+            <h3>Top Decliners</h3>
+            <ol id="pair-falling"></ol>
+          </div>
+        </div>
+        <ul id="pair-bullets" class="era-bullets"></ul>
+      </article>
+    </section>
+
+    <section class="era-nearest reveal">
+      <div class="era-nearest__header">
+        <p class="era-eyebrow">Echo Finder</p>
+        <h2>Nearest Eras To <span id="focus-year-label">-</span></h2>
+      </div>
+      <div id="nearest-list" class="era-nearest__list"></div>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ defaultDataRoot }}>
+    const sourceSelectEl = document.getElementById('source-select');
+    const focusYearSelectEl = document.getElementById('focus-year-select');
+    const statusEl = document.getElementById('load-status');
+    const matrixEl = document.getElementById('era-matrix');
+    const legendRangeEl = document.getElementById('legend-range');
+
+    const pairTitleEl = document.getElementById('pair-title');
+    const pairScoreEl = document.getElementById('pair-score');
+    const pairConfidenceEl = document.getElementById('pair-confidence');
+    const pairComponentsEl = document.getElementById('pair-components');
+    const pairPersistentEl = document.getElementById('pair-persistent');
+    const pairRisingEl = document.getElementById('pair-rising');
+    const pairFallingEl = document.getElementById('pair-falling');
+    const pairBulletsEl = document.getElementById('pair-bullets');
+
+    const focusYearLabelEl = document.getElementById('focus-year-label');
+    const nearestListEl = document.getElementById('nearest-list');
+
+    const sourceLabels = {
+      all: 'All Sources',
+      lastfm: 'Last.fm',
+      spotify: 'Spotify',
+    };
+
+    const componentLabels = {
+      artistOverlap: 'Artist Overlap',
+      trackOverlap: 'Track Overlap',
+      genreSimilarity: 'Genre Similarity',
+      noveltyAlignment: 'Novelty Alignment',
+      diversityAlignment: 'Diversity Alignment',
+      persistentStrength: 'Persistent Strength',
+    };
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+    const escapeHtml = (value) => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const asNumber = (value, fallback = 0) => {
+      const n = Number(value);
+      return Number.isFinite(n) ? n : fallback;
+    };
+
+    const pairKey = (a, b) => {
+      const lo = Math.min(a, b);
+      const hi = Math.max(a, b);
+      return `${lo}/${hi}`;
+    };
+
+    let colorDomain = { min: 0, max: 100 };
+
+    const normalizeForColor = (score) => {
+      const safe = clamp(asNumber(score), 0, 100);
+      const range = colorDomain.max - colorDomain.min;
+      if (!Number.isFinite(range) || Math.abs(range) < 0.0001) return 0.5;
+      return clamp((safe - colorDomain.min) / range, 0, 1);
+    };
+
+    const contrastNormalize = (value) => {
+      const safe = clamp(value, 0, 1);
+      const k = 9;
+      const lo = 1 / (1 + Math.exp(k / 2));
+      const hi = 1 / (1 + Math.exp(-k / 2));
+      const curved = 1 / (1 + Math.exp(-k * (safe - 0.5)));
+      return clamp((curved - lo) / (hi - lo), 0, 1);
+    };
+
+    const mix = (a, b, t) => a + ((b - a) * t);
+
+    const colorForScore = (score, isDiagonal = false) => {
+      if (isDiagonal) return 'linear-gradient(145deg, #eff5ef 0%, #dbe6dd 100%)';
+
+      const normalized = normalizeForColor(score);
+      const t = contrastNormalize(normalized);
+      const low = { h: 225, s: 44, l: 20 };
+      const high = { h: 162, s: 78, l: 72 };
+      const hue = mix(low.h, high.h, t);
+      const sat = mix(low.s, high.s, t);
+      const light = mix(low.l, high.l, t);
+
+      return `hsl(${hue.toFixed(1)} ${sat.toFixed(1)}% ${light.toFixed(1)}%)`;
+    };
+
+    const textColorForScore = (score, isDiagonal = false) => {
+      if (isDiagonal) return '#34484f';
+      return contrastNormalize(normalizeForColor(score)) >= 0.52 ? '#052317' : '#f8f8ff';
+    };
+
+    const renderTrackList = (target, rows, formatter) => {
+      if (!target) return;
+      if (!Array.isArray(rows) || rows.length === 0) {
+        target.innerHTML = '<li class="muted">No data</li>';
+        return;
+      }
+      target.innerHTML = rows.map((row) => formatter(row)).join('');
+    };
+
+    const renderBullets = (target, bullets) => {
+      if (!target) return;
+      if (!Array.isArray(bullets) || bullets.length === 0) {
+        target.innerHTML = '<li class="muted">No insight bullets available for this pair.</li>';
+        return;
+      }
+      target.innerHTML = bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('');
+    };
+
+    const renderComponents = (target, components = {}) => {
+      if (!target) return;
+      const keys = [
+        'artistOverlap',
+        'trackOverlap',
+        'genreSimilarity',
+        'noveltyAlignment',
+        'diversityAlignment',
+        'persistentStrength',
+      ];
+
+      target.innerHTML = keys.map((key) => {
+        const score = clamp(asNumber(components[key], 0), 0, 1);
+        const pct = Math.round(score * 100);
+        return `
+          <div class="era-component">
+            <div class="era-component__meta">
+              <span>${escapeHtml(componentLabels[key] || key)}</span>
+              <strong>${pct}</strong>
+            </div>
+            <div class="era-component__bar">
+              <span style="width: ${pct}%"></span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    };
+
+    const buildFallbackDetail = (yearA, yearB, score) => ({
+      eraA: yearA,
+      eraB: yearB,
+      similarityIndex: score,
+      confidence: 0,
+      confidenceBand: 'low',
+      components: {
+        artistOverlap: 0,
+        trackOverlap: 0,
+        genreSimilarity: 0,
+        noveltyAlignment: 0,
+        diversityAlignment: 0,
+        persistentStrength: 0,
+      },
+      persistentFavorites: [],
+      rising: [],
+      falling: [],
+      insightBullets: ['Detailed similarity payload unavailable for this year pair.'],
+    });
+
+    let cache = null;
+    let years = [];
+    let sources = [];
+    let selectedSource = 'all';
+    let selectedPair = null;
+    let focusYear = null;
+
+    const getScore = (source, rowIndex, colIndex) => {
+      const matrix = cache?.matrices?.[source];
+      if (!Array.isArray(matrix)) return 0;
+      const row = matrix[rowIndex];
+      if (!Array.isArray(row)) return 0;
+      return clamp(asNumber(row[colIndex], 0), 0, 100);
+    };
+
+    const getDetail = (source, yearA, yearB, score) => {
+      const details = cache?.details?.[source] || {};
+      const key = pairKey(yearA, yearB);
+      return details[key] || buildFallbackDetail(yearA, yearB, score);
+    };
+
+    const computeColorDomain = (source) => {
+      const matrix = cache?.matrices?.[source];
+      if (!Array.isArray(matrix) || matrix.length === 0) {
+        return { min: 0, max: 100 };
+      }
+
+      let min = Number.POSITIVE_INFINITY;
+      let max = Number.NEGATIVE_INFINITY;
+      for (let rowIndex = 0; rowIndex < matrix.length; rowIndex += 1) {
+        const row = matrix[rowIndex];
+        if (!Array.isArray(row)) continue;
+        for (let colIndex = 0; colIndex < row.length; colIndex += 1) {
+          if (rowIndex === colIndex) continue;
+          const score = clamp(asNumber(row[colIndex], 0), 0, 100);
+          min = Math.min(min, score);
+          max = Math.max(max, score);
+        }
+      }
+
+      if (!Number.isFinite(min) || !Number.isFinite(max)) {
+        return { min: 0, max: 100 };
+      }
+      if (Math.abs(max - min) < 0.0001) {
+        return {
+          min: clamp(min - 1, 0, 100),
+          max: clamp(max + 1, 0, 100),
+        };
+      }
+      return { min, max };
+    };
+
+    const updateLegendRange = () => {
+      if (!legendRangeEl) return;
+      legendRangeEl.textContent = `Scale range: ${colorDomain.min.toFixed(1)} to ${colorDomain.max.toFixed(1)} (off-diagonal)`;
+    };
+
+    const updateInspector = () => {
+      if (!selectedPair) return;
+      const { yearA, yearB, score } = selectedPair;
+      const detail = getDetail(selectedSource, yearA, yearB, score);
+
+      if (pairTitleEl) pairTitleEl.textContent = `${yearA} vs ${yearB}`;
+      if (pairScoreEl) pairScoreEl.textContent = `${clamp(asNumber(detail.similarityIndex, score), 0, 100).toFixed(1)}`;
+      if (pairConfidenceEl) {
+        const conf = clamp(asNumber(detail.confidence, 0), 0, 1);
+        const band = (detail.confidenceBand || 'low').toUpperCase();
+        pairConfidenceEl.textContent = `${Math.round(conf * 100)}% (${band})`;
+      }
+
+      renderComponents(pairComponentsEl, detail.components);
+
+      renderTrackList(
+        pairPersistentEl,
+        detail.persistentFavorites,
+        (row) => `<li>${escapeHtml(row.artist || 'Unknown')} - ${escapeHtml(row.track || 'Unknown')}</li>`,
+      );
+      renderTrackList(
+        pairRisingEl,
+        detail.rising,
+        (row) => `<li>${escapeHtml(row.artist || 'Unknown')} - ${escapeHtml(row.track || 'Unknown')} <span>+${asNumber(row.delta, 0).toFixed(3)}</span></li>`,
+      );
+      renderTrackList(
+        pairFallingEl,
+        detail.falling,
+        (row) => `<li>${escapeHtml(row.artist || 'Unknown')} - ${escapeHtml(row.track || 'Unknown')} <span>${asNumber(row.delta, 0).toFixed(3)}</span></li>`,
+      );
+      renderBullets(pairBulletsEl, detail.insightBullets);
+    };
+
+    const updateNearestList = () => {
+      if (!Number.isFinite(focusYear) || !nearestListEl) return;
+      if (focusYearLabelEl) focusYearLabelEl.textContent = String(focusYear);
+      const rowIndex = years.indexOf(focusYear);
+      if (rowIndex < 0) {
+        nearestListEl.innerHTML = '<div class="muted">No focus year selected.</div>';
+        return;
+      }
+
+      const rows = years
+        .map((year, colIndex) => ({
+          year,
+          score: getScore(selectedSource, rowIndex, colIndex),
+        }))
+        .filter((row) => row.year !== focusYear)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 6);
+
+      if (rows.length === 0) {
+        nearestListEl.innerHTML = '<div class="muted">No neighboring eras available.</div>';
+        return;
+      }
+
+      nearestListEl.innerHTML = rows.map((row) => {
+        return `
+          <button class="nearest-pill" data-year="${row.year}" type="button">
+            <span>${row.year}</span>
+            <strong>${row.score.toFixed(1)}</strong>
+          </button>
+        `;
+      }).join('');
+
+      nearestListEl.querySelectorAll('.nearest-pill').forEach((button) => {
+        button.addEventListener('click', () => {
+          const yearB = Number(button.dataset.year);
+          if (!Number.isFinite(yearB)) return;
+          selectedPair = {
+            yearA: focusYear,
+            yearB,
+            score: getScore(selectedSource, years.indexOf(focusYear), years.indexOf(yearB)),
+          };
+          updateMatrixSelection();
+          updateInspector();
+        });
+      });
+    };
+
+    const updateMatrixSelection = () => {
+      const buttons = matrixEl?.querySelectorAll('button[data-a][data-b]') || [];
+      buttons.forEach((button) => {
+        const yearA = Number(button.dataset.a);
+        const yearB = Number(button.dataset.b);
+        const active = selectedPair && (
+          (selectedPair.yearA === yearA && selectedPair.yearB === yearB) ||
+          (selectedPair.yearA === yearB && selectedPair.yearB === yearA)
+        );
+        button.classList.toggle('is-active', Boolean(active));
+      });
+    };
+
+    const renderMatrix = () => {
+      if (!matrixEl || years.length === 0) return;
+
+      const head = `
+        <thead>
+          <tr>
+            <th class="axis axis--corner" aria-hidden="true"></th>
+            ${years.map((year) => `<th class="axis axis--x">&nbsp;&nbsp;${year}&nbsp;&nbsp;</th>`).join('')}
+          </tr>
+        </thead>
+      `;
+
+      const bodyRows = years.map((rowYear, rowIndex) => {
+        const cells = years.map((colYear, colIndex) => {
+          const score = getScore(selectedSource, rowIndex, colIndex);
+          const isDiagonal = rowIndex === colIndex;
+          const active = selectedPair && (
+            (selectedPair.yearA === rowYear && selectedPair.yearB === colYear) ||
+            (selectedPair.yearA === colYear && selectedPair.yearB === rowYear)
+          );
+
+          return `
+            <td>
+              <button
+                type="button"
+                class="cell${active ? ' is-active' : ''}${isDiagonal ? ' is-diagonal' : ''}"
+                data-a="${rowYear}"
+                data-b="${colYear}"
+                style="background:${colorForScore(score, isDiagonal)};color:${textColorForScore(score, isDiagonal)};width:100%"
+                title="${rowYear} vs ${colYear}: ${score.toFixed(1)}"
+              >
+                ${score.toFixed(0)}
+              </button>
+            </td>
+          `;
+        }).join('');
+
+        return `
+          <tr>
+            <th class="axis axis--y">${rowYear}</th>
+            ${cells}
+          </tr>
+        `;
+      }).join('');
+
+      matrixEl.innerHTML = `${head}<tbody>${bodyRows}</tbody>`;
+
+      matrixEl.querySelectorAll('button[data-a][data-b]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const yearA = Number(button.dataset.a);
+          const yearB = Number(button.dataset.b);
+          if (!Number.isFinite(yearA) || !Number.isFinite(yearB)) return;
+
+          const rowIndex = years.indexOf(yearA);
+          const colIndex = years.indexOf(yearB);
+          selectedPair = {
+            yearA,
+            yearB,
+            score: getScore(selectedSource, rowIndex, colIndex),
+          };
+
+          updateMatrixSelection();
+          updateInspector();
+        });
+      });
+    };
+
+    const renderSourceControls = () => {
+      if (!sourceSelectEl) return;
+      sourceSelectEl.innerHTML = sources.map((source) => {
+        const label = sourceLabels[source] || source;
+        const selected = source === selectedSource ? 'selected' : '';
+        return `<option value="${source}" ${selected}>${label}</option>`;
+      }).join('');
+
+      sourceSelectEl.addEventListener('change', () => {
+        selectedSource = sourceSelectEl.value;
+        colorDomain = computeColorDomain(selectedSource);
+        updateLegendRange();
+        renderMatrix();
+        updateNearestList();
+        updateInspector();
+      });
+    };
+
+    const renderFocusControls = () => {
+      if (!focusYearSelectEl) return;
+      focusYearSelectEl.innerHTML = years.map((year) => {
+        const selected = year === focusYear ? 'selected' : '';
+        return `<option value="${year}" ${selected}>${year}</option>`;
+      }).join('');
+
+      focusYearSelectEl.addEventListener('change', () => {
+        focusYear = Number(focusYearSelectEl.value);
+        updateNearestList();
+      });
+    };
+
+    const setStatus = (text) => {
+      if (statusEl) statusEl.textContent = text;
+    };
+
+    const initialize = async () => {
+      try {
+        const response = await fetch(`${defaultDataRoot}/era-similarity-cache.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        cache = await response.json();
+        years = Array.isArray(cache?.years)
+          ? cache.years.map((year) => Number(year)).filter((year) => Number.isFinite(year))
+          : [];
+        years.sort((a, b) => a - b);
+
+        sources = Array.isArray(cache?.sources)
+          ? cache.sources.filter((source) => typeof source === 'string' && source.trim() !== '')
+          : ['all'];
+
+        if (years.length === 0) {
+          throw new Error('No years available in era similarity cache');
+        }
+
+        if (!sources.includes(selectedSource)) {
+          selectedSource = sources[0];
+        }
+
+        colorDomain = computeColorDomain(selectedSource);
+        updateLegendRange();
+
+        focusYear = years[years.length - 1];
+        selectedPair = {
+          yearA: years[0],
+          yearB: years[years.length - 1],
+          score: getScore(selectedSource, 0, years.length - 1),
+        };
+
+        renderSourceControls();
+        renderFocusControls();
+        renderMatrix();
+        updateInspector();
+        updateNearestList();
+
+        const generatedAt = cache?.generatedAt ? new Date(cache.generatedAt).toLocaleString() : 'unknown time';
+        setStatus(`Loaded ${sources.length} source views across ${years.length} years. Cache generated ${generatedAt}.`);
+      } catch (error) {
+        setStatus(`Unable to load era similarity cache: ${error instanceof Error ? error.message : 'unknown error'}`);
+      }
+    };
+
+    initialize();
+  </script>
+</Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;700;800&display=swap');
+
+  :root {
+    --era-bg: #f6f8f2;
+    --era-paper: #fffdfa;
+    --era-text: #162126;
+    --era-muted: #4d5a60;
+    --era-line: #d0d8d1;
+    --era-accent: #0f9f90;
+    --era-accent-soft: #d9f5ef;
+    --era-coral: #f26f45;
+    --era-shadow: 0 18px 50px rgba(11, 28, 31, 0.14);
+  }
+
+  .era-page {
+    font-family: 'Manrope', 'Avenir Next', 'Trebuchet MS', sans-serif;
+    color: var(--era-text);
+    display: grid;
+    gap: 1.4rem;
+    background:
+      radial-gradient(circle at 10% -15%, #d6f5eb 0%, transparent 40%),
+      radial-gradient(circle at 95% 10%, #ffd7bd 0%, transparent 30%),
+      linear-gradient(180deg, #f9fbf6 0%, #edf2ec 80%);
+    padding: 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .reveal {
+    animation: fade-slide 540ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  }
+
+  .era-hero {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: linear-gradient(115deg, #d9f3eb 0%, #fff6ef 52%, #fce0cc 100%);
+    border: 1px solid #c6d9d0;
+    border-radius: 1.25rem;
+    padding: 1.3rem;
+    box-shadow: var(--era-shadow);
+  }
+
+  .era-kicker,
+  .era-eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #47636a;
+    margin: 0 0 0.35rem;
+    font-weight: 700;
+  }
+
+  .era-hero h1,
+  .era-card h2,
+  .era-nearest h2 {
+    font-family: 'Fraunces', 'Georgia', serif;
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  .era-hero h1 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+  }
+
+  .era-hero p {
+    margin: 0.55rem 0 0;
+    color: #34474f;
+    max-width: 58ch;
+  }
+
+  .era-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #2a6f76;
+    color: #1f5f66;
+    font-weight: 700;
+    text-decoration: none;
+    background: #ffffff99;
+    transition: transform 140ms ease, background-color 140ms ease;
+  }
+
+  .era-link:hover {
+    transform: translateY(-1px);
+    background: #ffffff;
+  }
+
+  .era-controls {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, minmax(0, 240px)) minmax(0, 1fr);
+    background: var(--era-paper);
+    border-radius: 1rem;
+    border: 1px solid var(--era-line);
+    padding: 0.8rem;
+  }
+
+  .era-controls label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #557077;
+    font-weight: 700;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .era-controls select {
+    border: 1px solid #b5c4bc;
+    border-radius: 0.7rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.95rem;
+    background: white;
+    color: #203238;
+  }
+
+  .era-controls__status {
+    align-self: end;
+    color: #516167;
+    font-size: 0.86rem;
+  }
+
+  .era-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+  }
+
+  .era-card {
+    background: var(--era-paper);
+    border-radius: 1rem;
+    border: 1px solid var(--era-line);
+    box-shadow: var(--era-shadow);
+    padding: 1rem;
+  }
+
+  .era-card__header {
+    display: flex;
+    gap: 0.8rem;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+
+  .era-card h2 {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+  }
+
+  .era-legend {
+    display: inline-flex;
+    gap: 0.45rem;
+    align-items: center;
+    color: #496067;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .era-legend__bar {
+    width: 6rem;
+    height: 0.58rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, hsl(225 44% 20%) 0%, hsl(162 78% 72%) 100%);
+    border: 1px solid #b8cac2;
+  }
+
+  .era-legend__range {
+    margin-top: 0.35rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #566b72;
+    font-weight: 700;
+  }
+
+  .era-matrix-wrap {
+    overflow: auto;
+    border-radius: 0.8rem;
+    border: 1px solid #c8d2ca;
+    background: white;
+  }
+
+  .era-matrix {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    min-width: max-content;
+  }
+
+  .era-matrix td {
+    padding: 0;
+  }
+
+  .axis {
+    position: sticky;
+    background: #f2f6f2;
+    color: #4e666d;
+    z-index: 2;
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .axis--x {
+    top: 0;
+    padding: 0.3rem 0.2rem;
+    text-align: center;
+  }
+
+  .axis--y {
+    left: 0;
+    padding: 0.2rem 0.4rem;
+    text-align: right;
+  }
+
+  .axis--corner {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 3.2rem;
+  }
+
+  .cell {
+    display: block;
+    width: 2.25rem;
+    height: 2.1rem;
+    border-radius: 0;
+    border: 0;
+    font-size: 0.73rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+
+  .cell:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(23, 43, 56, 0.18);
+  }
+
+  .cell.is-active {
+    outline: 2px solid #113238;
+    outline-offset: 1px;
+  }
+
+  .cell.is-diagonal {
+    outline: 1px dashed #8ea29b;
+    outline-offset: -1px;
+  }
+
+  .era-scoreline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.7rem;
+  }
+
+  .era-scoreline > div {
+    border: 1px solid #ccd5cf;
+    border-radius: 0.9rem;
+    padding: 0.6rem 0.75rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f6faf7 100%);
+  }
+
+  .era-scoreline__label {
+    color: #52666c;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.66rem;
+    font-weight: 700;
+  }
+
+  .era-scoreline__value {
+    margin-top: 0.35rem;
+    font-family: 'Fraunces', 'Georgia', serif;
+    font-size: 2rem;
+  }
+
+  .era-scoreline__value--small {
+    font-size: 1.2rem;
+  }
+
+  .era-components {
+    margin-top: 0.9rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .era-component {
+    background: #fff;
+    border: 1px solid #d7dfd9;
+    border-radius: 0.65rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .era-component__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    color: #3b4d52;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .era-component__bar {
+    margin-top: 0.3rem;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: #e8efeb;
+    overflow: hidden;
+  }
+
+  .era-component__bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #f26f45 0%, #e9c769 42%, #18b0a0 100%);
+  }
+
+  .era-lists {
+    margin-top: 0.95rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .era-lists h3 {
+    margin: 0 0 0.25rem;
+    font-size: 0.77rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #42555b;
+  }
+
+  .era-lists ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.28rem;
+  }
+
+  .era-lists li {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    border: 1px solid #d6e0da;
+    border-radius: 0.55rem;
+    padding: 0.35rem 0.45rem;
+    background: #fbfdfb;
+    font-size: 0.8rem;
+  }
+
+  .era-bullets {
+    margin: 0.95rem 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.35rem;
+    color: #2f4047;
+    font-size: 0.86rem;
+  }
+
+  .era-nearest {
+    background: linear-gradient(120deg, #f3fffb 0%, #fff7ef 100%);
+    border: 1px solid #cedcd5;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: var(--era-shadow);
+  }
+
+  .era-nearest__header {
+    margin-bottom: 0.65rem;
+  }
+
+  .era-nearest__list {
+    display: grid;
+    gap: 0.55rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .nearest-pill {
+    border: 1px solid #b8cbc3;
+    border-radius: 999px;
+    background: #fff;
+    padding: 0.46rem 0.78rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #24353c;
+    font-size: 0.86rem;
+    cursor: pointer;
+    transition: transform 130ms ease, border-color 130ms ease;
+  }
+
+  .nearest-pill strong {
+    font-family: 'Fraunces', 'Georgia', serif;
+    font-size: 1rem;
+  }
+
+  .nearest-pill:hover {
+    transform: translateY(-1px);
+    border-color: #84b5aa;
+  }
+
+  .muted {
+    color: var(--era-muted);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @keyframes fade-slide {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1160px) {
+    .era-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .era-page {
+      padding: 0.7rem;
+    }
+
+    .era-hero {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .era-controls {
+      grid-template-columns: 1fr;
+    }
+
+    .cell {
+      width: 1.9rem;
+      height: 1.8rem;
+      font-size: 0.67rem;
+    }
+  }
+</style>

@@ -1922,6 +1922,26 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 
 	artistJaccard := jaccardFromCountMaps(aStats.ArtistCounts, bStats.ArtistCounts)
 	trackJaccard := jaccardFromCountMaps(aStats.TrackCounts, bStats.TrackCounts)
+	genreSimilarity := distributionSimilarityFromCounts(aStats.GenreCounts, bStats.GenreCounts)
+	noveltyAlignment := clamp01(1 - math.Abs(noveltyRateA-noveltyRateB))
+	diversityAlignment := clamp01(1 - math.Abs(entropyA-entropyB))
+	persistentStrength := weightedTrackRateJaccard(aStats, bStats)
+	weightArtist := 0.35
+	weightTrack := 0.25
+	weightGenre := 0.15
+	weightNovelty := 0.10
+	weightDiversity := 0.10
+	weightPersistent := 0.05
+	eraSimilarityScore := clamp01(
+		(weightArtist * artistJaccard) +
+			(weightTrack * trackJaccard) +
+			(weightGenre * genreSimilarity) +
+			(weightNovelty * noveltyAlignment) +
+			(weightDiversity * diversityAlignment) +
+			(weightPersistent * persistentStrength),
+	)
+	eraSimilarityIndex := roundFloat(eraSimilarityScore*100, 2)
+	similarityConfidence := roundFloat(eraSimilarityConfidence(aStats, bStats), 4)
 	persistentFavorites := computePersistentFavorites(aStats, bStats, 10)
 	rising, falling := computeRisingFallingTracks(aStats, bStats, topN)
 	genreShift := computeGenreShift(aStats, bStats, minInt(topN, 20))
@@ -1932,6 +1952,7 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 		fmt.Sprintf("Artist overlap (Jaccard) was %.3f and track overlap was %.3f.", artistJaccard, trackJaccard),
 		fmt.Sprintf("Novelty shifted from %.3f to %.3f; diversity entropy shifted from %.3f to %.3f.",
 			noveltyRateA, noveltyRateB, entropyA, entropyB),
+		fmt.Sprintf("Era Similarity Index: %.2f/100 (confidence %.3f).", eraSimilarityIndex, similarityConfidence),
 	}
 	if len(rising) > 0 {
 		artist, _ := rising[0]["artist"].(string)
@@ -1944,19 +1965,43 @@ func compareEras(args map[string]interface{}) (map[string]interface{}, error) {
 	return map[string]interface{}{
 		"source": sourceFilter,
 		"summary": map[string]interface{}{
-			"scrobblesA":        aStats.TotalScrobbles,
-			"scrobblesB":        bStats.TotalScrobbles,
-			"uniqueTracksA":     len(aStats.TrackCounts),
-			"uniqueTracksB":     len(bStats.TrackCounts),
-			"noveltyRateA":      roundFloat(noveltyRateA, 4),
-			"noveltyRateB":      roundFloat(noveltyRateB, 4),
-			"diversityEntropyA": roundFloat(entropyA, 4),
-			"diversityEntropyB": roundFloat(entropyB, 4),
+			"scrobblesA":           aStats.TotalScrobbles,
+			"scrobblesB":           bStats.TotalScrobbles,
+			"uniqueTracksA":        len(aStats.TrackCounts),
+			"uniqueTracksB":        len(bStats.TrackCounts),
+			"noveltyRateA":         roundFloat(noveltyRateA, 4),
+			"noveltyRateB":         roundFloat(noveltyRateB, 4),
+			"diversityEntropyA":    roundFloat(entropyA, 4),
+			"diversityEntropyB":    roundFloat(entropyB, 4),
+			"genreSimilarity":      roundFloat(genreSimilarity, 4),
+			"eraSimilarity":        eraSimilarityIndex,
+			"similarityConfidence": similarityConfidence,
 		},
 		"overlap": map[string]interface{}{
 			"artistJaccard":       roundFloat(artistJaccard, 4),
 			"trackJaccard":        roundFloat(trackJaccard, 4),
 			"persistentFavorites": persistentFavorites,
+		},
+		"similarity": map[string]interface{}{
+			"eraSimilarityIndex": eraSimilarityIndex,
+			"confidence":         similarityConfidence,
+			"confidenceBand":     eraSimilarityConfidenceBand(similarityConfidence),
+			"weights": map[string]interface{}{
+				"artistOverlap":      weightArtist,
+				"trackOverlap":       weightTrack,
+				"genreSimilarity":    weightGenre,
+				"noveltyAlignment":   weightNovelty,
+				"diversityAlignment": weightDiversity,
+				"persistentStrength": weightPersistent,
+			},
+			"components": map[string]interface{}{
+				"artistOverlap":      roundFloat(artistJaccard, 4),
+				"trackOverlap":       roundFloat(trackJaccard, 4),
+				"genreSimilarity":    roundFloat(genreSimilarity, 4),
+				"noveltyAlignment":   roundFloat(noveltyAlignment, 4),
+				"diversityAlignment": roundFloat(diversityAlignment, 4),
+				"persistentStrength": roundFloat(persistentStrength, 4),
+			},
 		},
 		"rising":         rising,
 		"falling":        falling,
@@ -4266,6 +4311,96 @@ func jaccardFromCountMaps(a, b map[string]int) float64 {
 	return float64(intersection) / float64(len(union))
 }
 
+func distributionSimilarityFromCounts(a, b map[string]int) float64 {
+	if len(a) == 0 || len(b) == 0 {
+		return 0
+	}
+
+	totalA := 0
+	totalB := 0
+	for _, count := range a {
+		if count > 0 {
+			totalA += count
+		}
+	}
+	for _, count := range b {
+		if count > 0 {
+			totalB += count
+		}
+	}
+	if totalA == 0 || totalB == 0 {
+		return 0
+	}
+
+	sumMin := 0.0
+	keys := map[string]struct{}{}
+	for key := range a {
+		keys[key] = struct{}{}
+	}
+	for key := range b {
+		keys[key] = struct{}{}
+	}
+	for key := range keys {
+		pa := float64(a[key]) / float64(totalA)
+		pb := float64(b[key]) / float64(totalB)
+		sumMin += math.Min(pa, pb)
+	}
+	return clamp01(sumMin)
+}
+
+func weightedTrackRateJaccard(a, b eraAnalysis) float64 {
+	if len(a.TrackCounts) == 0 || len(b.TrackCounts) == 0 {
+		return 0
+	}
+	keys := map[string]struct{}{}
+	for key := range a.TrackCounts {
+		keys[key] = struct{}{}
+	}
+	for key := range b.TrackCounts {
+		keys[key] = struct{}{}
+	}
+
+	sumMin := 0.0
+	sumMax := 0.0
+	for key := range keys {
+		rateA := float64(a.TrackCounts[key]) / a.Days
+		rateB := float64(b.TrackCounts[key]) / b.Days
+		sumMin += math.Min(rateA, rateB)
+		sumMax += math.Max(rateA, rateB)
+	}
+	if sumMax <= 0 {
+		return 0
+	}
+	return clamp01(sumMin / sumMax)
+}
+
+func eraSimilarityConfidence(a, b eraAnalysis) float64 {
+	if a.TotalScrobbles == 0 || b.TotalScrobbles == 0 {
+		return 0
+	}
+
+	sampleA := clamp01(float64(a.TotalScrobbles) / 5000.0)
+	sampleB := clamp01(float64(b.TotalScrobbles) / 5000.0)
+	balance := 0.0
+	maxScrobbles := maxInt(a.TotalScrobbles, b.TotalScrobbles)
+	if maxScrobbles > 0 {
+		balance = float64(minInt(a.TotalScrobbles, b.TotalScrobbles)) / float64(maxScrobbles)
+	}
+
+	return clamp01((0.4 * sampleA) + (0.4 * sampleB) + (0.2 * balance))
+}
+
+func eraSimilarityConfidenceBand(confidence float64) string {
+	switch {
+	case confidence >= 0.8:
+		return "high"
+	case confidence >= 0.55:
+		return "medium"
+	default:
+		return "low"
+	}
+}
+
 func computePersistentFavorites(a, b eraAnalysis, limit int) []map[string]interface{} {
 	type item struct {
 		Artist string
@@ -4584,7 +4719,7 @@ func toolCatalog() []toolDefinition {
 		},
 		{
 			Name:        "music_compare_eras",
-			Description: "Compare two listening windows and quantify drift, overlap, and emerging/declining preferences.",
+			Description: "Compare two listening windows and quantify drift, overlap, emerging/declining preferences, and a weighted Era Similarity Index.",
 			InputSchema: map[string]interface{}{
 				"type":     "object",
 				"required": []string{"eraA", "eraB"},

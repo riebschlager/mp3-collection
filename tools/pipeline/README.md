@@ -41,6 +41,8 @@ The CLI auto-loads `.env` by searching current and parent directories.
 - `MP3_TRANSITION_QUERY_MIN_EDGE_WEIGHT`: optional int minimum transition count for MCP slices, defaults to `2`.
 - `MP3_TRANSITION_QUERY_MAX_EDGES`: optional int maximum retained edges per MCP slice scope, defaults to `180`.
 - `MP3_TRANSITION_QUERY_INCLUDE_SELF_LOOPS`: optional boolean (`true/false`), defaults to `false`.
+- `MP3_ERA_SIMILARITY_SOURCES`: optional comma-delimited source list for era cache (default: `all,lastfm,spotify`).
+- `MP3_ERA_SIMILARITY_TOP_N`: optional int `topN` passed to MCP `music_compare_eras`, defaults to `20`.
 
 ## Quick Start
 
@@ -69,10 +71,11 @@ cd tools/pipeline
 8. `build-timeline`
 9. `build-transition-graph`
 10. `build-transition-query-cache`
-11. `build-wrapped-stories`
-12. `build-wrapped-month-stories`
-13. `build-web-data`
-14. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
+11. `build-era-similarity-cache`
+12. `build-wrapped-stories`
+13. `build-wrapped-month-stories`
+14. `build-web-data`
+15. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
 
 ## Command Reference
 
@@ -96,6 +99,7 @@ Available commands:
 - `build-timeline`: builds `data/derived/web/timeline.json`
 - `build-transition-graph`: builds `data/derived/core/transition-graph.json` and `data/derived/web/transition-graph.json`
 - `build-transition-query-cache`: calls MCP `music_transition_graph` per source/year and writes `data/derived/web/transition-query-cache.json`
+- `build-era-similarity-cache`: calls MCP `music_compare_eras` across year pairs and sources, then writes `data/derived/web/era-similarity-cache.json`
 - `build-wrapped-stories`: calls MCP `music_batch_year_story` (with per-year fallback) and writes `data/derived/web/wrapped-stories.json`
 - `build-wrapped-month-stories`: calls MCP `music_month_story` for each available month and writes `data/derived/web/wrapped-month-stories.json`
 - `build-web-data`: builds chunked/indexed web artifacts in `data/derived/web/`
