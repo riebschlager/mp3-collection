@@ -193,6 +193,10 @@ const handoffPayload = {
 const combinedEdges = [...trackScope.edges, ...artistScope.edges];
 const earliestEdge = combinedEdges.reduce((min, edge) => Math.min(min, edge.firstSeen), Number.POSITIVE_INFINITY);
 const latestEdge = combinedEdges.reduce((max, edge) => Math.max(max, edge.lastSeen), 0);
+const earliestYear = Number.isFinite(earliestEdge) ? new Date(earliestEdge).getUTCFullYear() : new Date().getUTCFullYear();
+const latestYear = latestEdge > 0 ? new Date(latestEdge).getUTCFullYear() : earliestYear;
+const fallbackYears = earliestYear <= latestYear ? [earliestYear, latestYear] : [earliestYear];
+const defaultDataRoot = buildUrl('data');
 
 const formatDate = (timestampMs: number): string => {
   if (!Number.isFinite(timestampMs) || timestampMs <= 0) return 'Unknown';
@@ -260,6 +264,53 @@ const formatDate = (timestampMs: number): string => {
     </div>
 
     <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900">Query Controls</h2>
+          <p class="text-sm text-gray-600 mt-1">
+            Source and year-range controls are powered by MCP `music_transition_graph` slices.
+          </p>
+        </div>
+        <div class="text-sm text-slate-600" id="query-range-label">
+          Showing full-range fallback slice.
+        </div>
+      </div>
+
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3">
+        <label class="text-sm">
+          <span class="block font-semibold text-slate-700 mb-1">Source</span>
+          <select id="source-filter" class="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white text-slate-800">
+            <option value="all">All Sources</option>
+            <option value="lastfm">Last.fm</option>
+            <option value="spotify">Spotify</option>
+          </select>
+        </label>
+        <label class="text-sm">
+          <span class="block font-semibold text-slate-700 mb-1">Start Year</span>
+          <select id="start-year-filter" class="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white text-slate-800"></select>
+        </label>
+        <label class="text-sm">
+          <span class="block font-semibold text-slate-700 mb-1">End Year</span>
+          <select id="end-year-filter" class="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white text-slate-800"></select>
+        </label>
+        <div class="flex items-end">
+          <button id="apply-query-btn" type="button" class="w-full rounded-lg bg-slate-900 text-white px-4 py-2.5 font-semibold hover:bg-slate-800 transition-colors">
+            Apply Query
+          </button>
+        </div>
+        <div class="flex items-end">
+          <button id="reset-query-btn" type="button" class="w-full rounded-lg border border-slate-300 bg-white text-slate-700 px-4 py-2.5 font-semibold hover:bg-slate-50 transition-colors">
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <div id="query-status" class="mt-4 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-sm text-sky-800">
+        Loading MCP query cache...
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
         <div>
           <h2 class="text-2xl font-bold text-gray-900">Transition Network</h2>
@@ -313,7 +364,10 @@ const formatDate = (timestampMs: number): string => {
     </div>
   </div>
 
-  <script is:inline define:vars={{ networkPayload, flowPayload, handoffPayload }}>
+  <script
+    is:inline
+    define:vars={{ networkPayload, flowPayload, handoffPayload, fallbackYears, defaultDataRoot }}
+  >
     const svg = document.getElementById('transition-network');
     const flowLaddersEl = document.getElementById('flow-ladders');
     const topHandoffsEl = document.getElementById('top-handoffs');
@@ -324,6 +378,14 @@ const formatDate = (timestampMs: number): string => {
     const scopeEdgesEl = document.getElementById('scope-edges');
     const scopeTransitionsEl = document.getElementById('scope-transitions');
     const scopeButtons = Array.from(document.querySelectorAll('.scope-btn'));
+
+    const sourceFilterEl = document.getElementById('source-filter');
+    const startYearEl = document.getElementById('start-year-filter');
+    const endYearEl = document.getElementById('end-year-filter');
+    const applyQueryEl = document.getElementById('apply-query-btn');
+    const resetQueryEl = document.getElementById('reset-query-btn');
+    const queryStatusEl = document.getElementById('query-status');
+    const queryRangeLabelEl = document.getElementById('query-range-label');
 
     const scopeMeta = {
       track: {
@@ -340,9 +402,58 @@ const formatDate = (timestampMs: number): string => {
       },
     };
 
+    const sourceLabels = {
+      all: 'All Sources',
+      lastfm: 'Last.fm',
+      spotify: 'Spotify',
+    };
+
     const NS = 'http://www.w3.org/2000/svg';
     let currentScope = 'track';
     let selectedNodeId = '';
+
+    const normalizeFallbackYears = () => {
+      if (!Array.isArray(fallbackYears) || fallbackYears.length === 0) {
+        const y = new Date().getUTCFullYear();
+        return [y];
+      }
+      if (fallbackYears.length === 1) {
+        return [Number(fallbackYears[0])];
+      }
+      const a = Number(fallbackYears[0]);
+      const b = Number(fallbackYears[1]);
+      const start = Number.isFinite(a) ? a : new Date().getUTCFullYear();
+      const end = Number.isFinite(b) ? b : start;
+      return start <= end ? [start, end] : [end, start];
+    };
+
+    const fallbackYearBounds = normalizeFallbackYears();
+    const fallbackYearMin = fallbackYearBounds[0];
+    const fallbackYearMax = fallbackYearBounds[fallbackYearBounds.length - 1];
+
+    let activeNetworkPayload = networkPayload;
+    let activeFlowPayload = flowPayload;
+    let activeHandoffPayload = handoffPayload;
+
+    let availableYears = [];
+    for (let year = fallbackYearMin; year <= fallbackYearMax; year += 1) {
+      availableYears.push(year);
+    }
+    if (availableYears.length === 0) {
+      availableYears = [fallbackYearMin];
+    }
+    let availableSources = ['all'];
+    let selectedSource = 'all';
+    let selectedStartYear = availableYears[0];
+    let selectedEndYear = availableYears[availableYears.length - 1];
+    let querySlices = null;
+
+    const toNumber = (value, fallback = 0) => {
+      const num = Number(value);
+      return Number.isFinite(num) ? num : fallback;
+    };
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
     const escapeHtml = (value) => String(value)
       .replaceAll('&', '&amp;')
@@ -360,6 +471,252 @@ const formatDate = (timestampMs: number): string => {
       return Math.abs(hash);
     };
 
+    const compactScope = (scope, edgeLimit, nodeLimit) => {
+      const edgesByWeight = [...(scope.edges || [])].sort((a, b) => toNumber(b.count) - toNumber(a.count));
+      let edges = edgesByWeight.slice(0, edgeLimit);
+
+      const nodeIds = new Set();
+      edges.forEach((edge) => {
+        nodeIds.add(edge.source);
+        nodeIds.add(edge.target);
+      });
+
+      let nodes = [...(scope.nodes || [])]
+        .filter((node) => nodeIds.has(node.id))
+        .sort((a, b) => toNumber(b.playCount) - toNumber(a.playCount));
+
+      if (nodes.length > nodeLimit) {
+        const keepNodeIds = new Set(nodes.slice(0, nodeLimit).map((node) => node.id));
+        nodes = nodes.slice(0, nodeLimit);
+        edges = edges.filter((edge) => keepNodeIds.has(edge.source) && keepNodeIds.has(edge.target));
+      }
+
+      const uniqueNodeIds = new Set();
+      edges.forEach((edge) => {
+        uniqueNodeIds.add(edge.source);
+        uniqueNodeIds.add(edge.target);
+      });
+
+      return {
+        summary: {
+          ...(scope.summary || {}),
+          edgesRetained: edges.length,
+          nodesInGraph: uniqueNodeIds.size,
+        },
+        nodes,
+        edges,
+      };
+    };
+
+    const buildFlowLaddersFromScope = (scope, sourceLimit, targetLimit) => {
+      const grouped = new Map();
+      for (const edge of scope.edges || []) {
+        const sourceKey = edge.source;
+        const existing = grouped.get(sourceKey) || { source: edge.sourceLabel, total: 0, targets: new Map() };
+        existing.total += toNumber(edge.count);
+
+        const target = existing.targets.get(edge.target) || {
+          label: edge.targetLabel,
+          count: 0,
+          share: 0,
+          avgGapMinutes: toNumber(edge.avgGapMinutes),
+        };
+        target.count += toNumber(edge.count);
+        target.avgGapMinutes = toNumber(edge.avgGapMinutes);
+        existing.targets.set(edge.target, target);
+        grouped.set(sourceKey, existing);
+      }
+
+      return [...grouped.values()]
+        .sort((a, b) => b.total - a.total)
+        .slice(0, sourceLimit)
+        .map((group) => ({
+          source: group.source,
+          total: group.total,
+          targets: [...group.targets.values()]
+            .sort((a, b) => b.count - a.count)
+            .slice(0, targetLimit)
+            .map((target) => ({
+              ...target,
+              share: group.total > 0 ? clamp(target.count / group.total, 0, 1) : 0,
+            })),
+        }));
+    };
+
+    const buildScopeFromSlices = (scopeName, slices) => {
+      const edgeMap = new Map();
+      const nodeMap = new Map();
+      let totalTransitions = 0;
+
+      slices.forEach((slice) => {
+        const scope = slice?.graphs?.[scopeName];
+        if (!scope) return;
+
+        totalTransitions += toNumber(scope.summary?.totalTransitions);
+
+        for (const rawNode of scope.nodes || []) {
+          const nodeId = String(rawNode.id || '');
+          if (!nodeId) continue;
+          const existing = nodeMap.get(nodeId) || {
+            id: nodeId,
+            label: rawNode.label || nodeId,
+            artist: rawNode.artist || '',
+            track: rawNode.track || '',
+            playCount: 0,
+            inDegree: 0,
+            outDegree: 0,
+            inWeight: 0,
+            outWeight: 0,
+          };
+          existing.playCount += toNumber(rawNode.playCount);
+          if (!existing.label && rawNode.label) existing.label = rawNode.label;
+          if (!existing.artist && rawNode.artist) existing.artist = rawNode.artist;
+          if (!existing.track && rawNode.track) existing.track = rawNode.track;
+          nodeMap.set(nodeId, existing);
+        }
+
+        for (const rawEdge of scope.edges || []) {
+          const source = String(rawEdge.source || '');
+          const target = String(rawEdge.target || '');
+          if (!source || !target) continue;
+          const count = toNumber(rawEdge.count);
+          if (count <= 0) continue;
+
+          const key = `${source}>>${target}`;
+          const existing = edgeMap.get(key) || {
+            source,
+            target,
+            sourceLabel: rawEdge.sourceLabel || source,
+            targetLabel: rawEdge.targetLabel || target,
+            count: 0,
+            avgGapMinutes: 0,
+            minGapMinutes: Number.POSITIVE_INFINITY,
+            maxGapMinutes: 0,
+            firstSeen: Number.POSITIVE_INFINITY,
+            lastSeen: 0,
+            _gapWeight: 0,
+          };
+
+          const avgGap = toNumber(rawEdge.avgGapMinutes);
+          existing.count += count;
+          existing._gapWeight += avgGap * count;
+          existing.minGapMinutes = Math.min(existing.minGapMinutes, toNumber(rawEdge.minGapMinutes, avgGap));
+          existing.maxGapMinutes = Math.max(existing.maxGapMinutes, toNumber(rawEdge.maxGapMinutes, avgGap));
+          existing.firstSeen = Math.min(existing.firstSeen, toNumber(rawEdge.firstSeen, Number.POSITIVE_INFINITY));
+          existing.lastSeen = Math.max(existing.lastSeen, toNumber(rawEdge.lastSeen, 0));
+          if (!existing.sourceLabel && rawEdge.sourceLabel) existing.sourceLabel = rawEdge.sourceLabel;
+          if (!existing.targetLabel && rawEdge.targetLabel) existing.targetLabel = rawEdge.targetLabel;
+
+          edgeMap.set(key, existing);
+        }
+      });
+
+      const outgoingTotals = new Map();
+      const nodesInGraphIds = new Set();
+      const edges = [...edgeMap.values()]
+        .map((edge) => {
+          const outTotal = outgoingTotals.get(edge.source) || 0;
+          outgoingTotals.set(edge.source, outTotal + edge.count);
+          return edge;
+        });
+
+      edges.forEach((edge) => {
+        nodesInGraphIds.add(edge.source);
+        nodesInGraphIds.add(edge.target);
+
+        const sourceNode = nodeMap.get(edge.source) || {
+          id: edge.source,
+          label: edge.sourceLabel || edge.source,
+          artist: '',
+          track: '',
+          playCount: 0,
+          inDegree: 0,
+          outDegree: 0,
+          inWeight: 0,
+          outWeight: 0,
+        };
+        const targetNode = nodeMap.get(edge.target) || {
+          id: edge.target,
+          label: edge.targetLabel || edge.target,
+          artist: '',
+          track: '',
+          playCount: 0,
+          inDegree: 0,
+          outDegree: 0,
+          inWeight: 0,
+          outWeight: 0,
+        };
+
+        sourceNode.outDegree += 1;
+        sourceNode.outWeight += edge.count;
+        targetNode.inDegree += 1;
+        targetNode.inWeight += edge.count;
+        if (!sourceNode.playCount) sourceNode.playCount = sourceNode.outWeight + sourceNode.inWeight;
+        if (!targetNode.playCount) targetNode.playCount = targetNode.outWeight + targetNode.inWeight;
+        nodeMap.set(edge.source, sourceNode);
+        nodeMap.set(edge.target, targetNode);
+      });
+
+      const normalizedEdges = edges
+        .map((edge) => {
+          const outTotal = outgoingTotals.get(edge.source) || 0;
+          const avgGap = edge.count > 0 ? edge._gapWeight / edge.count : 0;
+          return {
+            source: edge.source,
+            target: edge.target,
+            sourceLabel: edge.sourceLabel || edge.source,
+            targetLabel: edge.targetLabel || edge.target,
+            count: edge.count,
+            probability: outTotal > 0 ? edge.count / outTotal : 0,
+            avgGapMinutes: avgGap,
+            minGapMinutes: Number.isFinite(edge.minGapMinutes) ? edge.minGapMinutes : avgGap,
+            maxGapMinutes: edge.maxGapMinutes,
+            firstSeen: Number.isFinite(edge.firstSeen) ? edge.firstSeen : 0,
+            lastSeen: edge.lastSeen,
+          };
+        })
+        .sort((a, b) => b.count - a.count);
+
+      const nodes = [...nodeMap.values()]
+        .filter((node) => nodesInGraphIds.has(node.id))
+        .sort((a, b) => b.playCount - a.playCount);
+
+      if (totalTransitions === 0) {
+        totalTransitions = normalizedEdges.reduce((sum, edge) => sum + toNumber(edge.count), 0);
+      }
+
+      return {
+        summary: {
+          totalDistinctNodes: nodeMap.size,
+          nodesInGraph: nodes.length,
+          isolatedNodes: Math.max(0, nodeMap.size - nodes.length),
+          totalEdges: normalizedEdges.length,
+          edgesRetained: normalizedEdges.length,
+          totalTransitions,
+        },
+        nodes,
+        edges: normalizedEdges,
+      };
+    };
+
+    const buildDatasetFromSlices = (slices) => {
+      const trackRaw = buildScopeFromSlices('track', slices);
+      const artistRaw = buildScopeFromSlices('artist', slices);
+      const track = compactScope(trackRaw, 280, 140);
+      const artist = compactScope(artistRaw, 240, 110);
+      return {
+        network: { track, artist },
+        flow: {
+          track: buildFlowLaddersFromScope(trackRaw, 8, 5),
+          artist: buildFlowLaddersFromScope(artistRaw, 8, 6),
+        },
+        handoffs: {
+          track: [...trackRaw.edges].slice(0, 18),
+          artist: [...artistRaw.edges].slice(0, 18),
+        },
+      };
+    };
+
     const setScopeButtonState = () => {
       scopeButtons.forEach((button) => {
         const scope = button.getAttribute('data-scope');
@@ -372,14 +729,18 @@ const formatDate = (timestampMs: number): string => {
     };
 
     const updateScopeSummary = () => {
-      const scopeData = networkPayload[currentScope];
+      const scopeData = activeNetworkPayload[currentScope];
       const summary = scopeData?.summary ?? {};
       const meta = scopeMeta[currentScope];
       if (scopeNameEl) scopeNameEl.textContent = meta.name;
       if (scopeNodesEl) scopeNodesEl.textContent = Number(summary.nodesInGraph || 0).toLocaleString();
       if (scopeEdgesEl) scopeEdgesEl.textContent = Number(summary.edgesRetained || 0).toLocaleString();
       if (scopeTransitionsEl) scopeTransitionsEl.textContent = Number(summary.totalTransitions || 0).toLocaleString();
-      if (captionEl) captionEl.textContent = `${meta.name}-to-${meta.name.toLowerCase()} flow graph rendered from strongest edges.`;
+
+      const sourceLabel = sourceLabels[selectedSource] || selectedSource;
+      if (captionEl) {
+        captionEl.textContent = `${meta.name}-to-${meta.name.toLowerCase()} flow for ${sourceLabel}, ${selectedStartYear}-${selectedEndYear}.`;
+      }
     };
 
     const buildLayout = (nodes) => {
@@ -419,33 +780,33 @@ const formatDate = (timestampMs: number): string => {
         return;
       }
 
-      const scopeData = networkPayload[currentScope];
-      const node = scopeData.nodes.find((entry) => entry.id === selectedNodeId);
+      const scopeData = activeNetworkPayload[currentScope];
+      const node = (scopeData.nodes || []).find((entry) => entry.id === selectedNodeId);
       if (!node) {
         detailsEl.innerHTML = 'Click a node to inspect incoming and outgoing handoffs.';
         return;
       }
 
-      const outgoing = scopeData.edges
+      const outgoing = (scopeData.edges || [])
         .filter((edge) => edge.source === selectedNodeId)
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b) => toNumber(b.count) - toNumber(a.count))
         .slice(0, 4);
-      const incoming = scopeData.edges
+      const incoming = (scopeData.edges || [])
         .filter((edge) => edge.target === selectedNodeId)
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b) => toNumber(b.count) - toNumber(a.count))
         .slice(0, 4);
 
       const outgoingHtml = outgoing.length
-        ? outgoing.map((edge) => `<li>${escapeHtml(edge.targetLabel)} <span class="font-semibold text-slate-900">(${edge.count})</span></li>`).join('')
+        ? outgoing.map((edge) => `<li>${escapeHtml(edge.targetLabel)} <span class="font-semibold text-slate-900">(${toNumber(edge.count).toLocaleString()})</span></li>`).join('')
         : '<li>No outgoing transitions in this slice.</li>';
       const incomingHtml = incoming.length
-        ? incoming.map((edge) => `<li>${escapeHtml(edge.sourceLabel)} <span class="font-semibold text-slate-900">(${edge.count})</span></li>`).join('')
+        ? incoming.map((edge) => `<li>${escapeHtml(edge.sourceLabel)} <span class="font-semibold text-slate-900">(${toNumber(edge.count).toLocaleString()})</span></li>`).join('')
         : '<li>No incoming transitions in this slice.</li>';
 
       detailsEl.innerHTML = `
         <div class="space-y-2">
           <div class="font-bold text-indigo-950">${escapeHtml(node.label)}</div>
-          <div class="text-xs uppercase tracking-[0.12em] text-indigo-700">Play count ${Number(node.playCount).toLocaleString()}</div>
+          <div class="text-xs uppercase tracking-[0.12em] text-indigo-700">Play count ${toNumber(node.playCount).toLocaleString()}</div>
           <div class="pt-1">
             <div class="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Outgoing</div>
             <ul class="mt-1 space-y-1 text-slate-700">${outgoingHtml}</ul>
@@ -460,15 +821,28 @@ const formatDate = (timestampMs: number): string => {
 
     const renderNetwork = () => {
       if (!(svg instanceof SVGElement)) return;
-      const scopeData = networkPayload[currentScope];
+      const scopeData = activeNetworkPayload[currentScope];
       const meta = scopeMeta[currentScope];
       const nodes = scopeData.nodes || [];
       const edges = scopeData.edges || [];
-      const maxEdgeCount = Math.max(1, ...edges.map((edge) => edge.count));
-      const maxPlayCount = Math.max(1, ...nodes.map((node) => node.playCount));
-      const { positions, ranked } = buildLayout(nodes);
 
       svg.innerHTML = '';
+      if (nodes.length === 0 || edges.length === 0) {
+        const empty = document.createElementNS(NS, 'text');
+        empty.setAttribute('x', '500');
+        empty.setAttribute('y', '310');
+        empty.setAttribute('text-anchor', 'middle');
+        empty.setAttribute('fill', '#cbd5e1');
+        empty.setAttribute('font-size', '18');
+        empty.setAttribute('font-family', 'ui-sans-serif, system-ui, sans-serif');
+        empty.textContent = 'No transitions for the selected source and year range.';
+        svg.appendChild(empty);
+        return;
+      }
+
+      const maxEdgeCount = Math.max(1, ...edges.map((edge) => toNumber(edge.count)));
+      const maxPlayCount = Math.max(1, ...nodes.map((node) => toNumber(node.playCount)));
+      const { positions, ranked } = buildLayout(nodes);
 
       const edgeLayer = document.createElementNS(NS, 'g');
       const nodeLayer = document.createElementNS(NS, 'g');
@@ -479,6 +853,7 @@ const formatDate = (timestampMs: number): string => {
         const targetPos = positions.get(edge.target);
         if (!sourcePos || !targetPos) return;
 
+        const edgeCount = toNumber(edge.count);
         const isInSelection = !selectedNodeId || edge.source === selectedNodeId || edge.target === selectedNodeId;
         const line = document.createElementNS(NS, 'line');
         line.setAttribute('x1', String(sourcePos.x));
@@ -486,10 +861,10 @@ const formatDate = (timestampMs: number): string => {
         line.setAttribute('x2', String(targetPos.x));
         line.setAttribute('y2', String(targetPos.y));
         line.setAttribute('stroke', meta.edgeColor);
-        line.setAttribute('stroke-opacity', isInSelection ? String(0.2 + (edge.count / maxEdgeCount) * 0.65) : '0.04');
-        line.setAttribute('stroke-width', String(0.5 + (edge.count / maxEdgeCount) * 7.5));
+        line.setAttribute('stroke-opacity', isInSelection ? String(0.2 + (edgeCount / maxEdgeCount) * 0.65) : '0.04');
+        line.setAttribute('stroke-width', String(0.5 + (edgeCount / maxEdgeCount) * 7.5));
         line.setAttribute('stroke-linecap', 'round');
-        line.innerHTML = `<title>${escapeHtml(edge.sourceLabel)} -> ${escapeHtml(edge.targetLabel)} | ${edge.count} plays | ${(edge.probability * 100).toFixed(1)}%</title>`;
+        line.innerHTML = `<title>${escapeHtml(edge.sourceLabel)} -> ${escapeHtml(edge.targetLabel)} | ${edgeCount.toLocaleString()} plays | ${(toNumber(edge.probability) * 100).toFixed(1)}%</title>`;
         edgeLayer.appendChild(line);
       });
 
@@ -518,13 +893,13 @@ const formatDate = (timestampMs: number): string => {
         const circle = document.createElementNS(NS, 'circle');
         circle.setAttribute('cx', String(position.x));
         circle.setAttribute('cy', String(position.y));
-        circle.setAttribute('r', String(3 + Math.sqrt(node.playCount / maxPlayCount) * 13));
+        circle.setAttribute('r', String(3 + Math.sqrt(toNumber(node.playCount) / maxPlayCount) * 13));
         circle.setAttribute('fill', meta.nodeColor);
         circle.setAttribute('fill-opacity', isRelated ? '0.95' : '0.28');
         circle.setAttribute('stroke', '#ffffff');
         circle.setAttribute('stroke-width', isSelected ? '2.4' : '0.9');
         circle.style.cursor = 'pointer';
-        circle.innerHTML = `<title>${escapeHtml(node.label)} | plays ${node.playCount.toLocaleString()} | out ${node.outWeight.toLocaleString()} | in ${node.inWeight.toLocaleString()}</title>`;
+        circle.innerHTML = `<title>${escapeHtml(node.label)} | plays ${toNumber(node.playCount).toLocaleString()} | out ${toNumber(node.outWeight).toLocaleString()} | in ${toNumber(node.inWeight).toLocaleString()}</title>`;
         circle.addEventListener('click', (event) => {
           event.stopPropagation();
           selectedNodeId = selectedNodeId === node.id ? '' : node.id;
@@ -541,7 +916,8 @@ const formatDate = (timestampMs: number): string => {
           text.setAttribute('font-family', 'ui-sans-serif, system-ui, sans-serif');
           text.setAttribute('fill', '#e2e8f0');
           text.setAttribute('fill-opacity', isRelated ? '0.95' : '0.42');
-          text.textContent = node.label.length > 34 ? `${node.label.slice(0, 34)}...` : node.label;
+          const label = String(node.label || '');
+          text.textContent = label.length > 34 ? `${label.slice(0, 34)}...` : label;
           labelLayer.appendChild(text);
         }
       });
@@ -561,20 +937,20 @@ const formatDate = (timestampMs: number): string => {
     const renderFlowLadders = () => {
       if (!flowLaddersEl) return;
       const meta = scopeMeta[currentScope];
-      const ladders = flowPayload[currentScope] || [];
+      const ladders = activeFlowPayload[currentScope] || [];
       flowLaddersEl.innerHTML = '';
 
       ladders.forEach((ladder) => {
         const card = document.createElement('article');
         card.className = 'rounded-xl border border-slate-200 p-4 bg-slate-50';
-        const rows = ladder.targets.map((target) => `
+        const rows = (ladder.targets || []).map((target) => `
           <div class="space-y-1">
             <div class="flex items-center justify-between gap-3 text-sm">
               <span class="truncate text-slate-700">${escapeHtml(target.label)}</span>
-              <span class="font-semibold text-slate-900">${target.count}</span>
+              <span class="font-semibold text-slate-900">${toNumber(target.count).toLocaleString()}</span>
             </div>
             <div class="h-2 rounded-full bg-slate-200 overflow-hidden">
-              <div class="h-full" style="width: ${(target.share * 100).toFixed(1)}%; background: ${meta.gradient};"></div>
+              <div class="h-full" style="width: ${(toNumber(target.share) * 100).toFixed(1)}%; background: ${meta.gradient};"></div>
             </div>
           </div>
         `).join('');
@@ -582,7 +958,7 @@ const formatDate = (timestampMs: number): string => {
         card.innerHTML = `
           <header class="mb-3 flex items-center justify-between gap-3">
             <h3 class="font-semibold text-slate-900 truncate">${escapeHtml(ladder.source)}</h3>
-            <span class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">${ladder.total} out</span>
+            <span class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">${toNumber(ladder.total).toLocaleString()} out</span>
           </header>
           <div class="space-y-3">${rows}</div>
         `;
@@ -592,19 +968,19 @@ const formatDate = (timestampMs: number): string => {
 
     const renderTopHandoffs = () => {
       if (!topHandoffsEl) return;
-      const handoffs = handoffPayload[currentScope] || [];
+      const handoffs = activeHandoffPayload[currentScope] || [];
       topHandoffsEl.innerHTML = handoffs.map((edge, idx) => `
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
           <div class="flex items-start gap-3 min-w-0">
             <span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white text-xs font-bold">${idx + 1}</span>
             <div class="min-w-0">
               <div class="font-medium text-slate-900 truncate">${escapeHtml(edge.sourceLabel)} -> ${escapeHtml(edge.targetLabel)}</div>
-              <div class="text-xs text-slate-500">Avg gap ${edge.avgGapMinutes.toFixed(2)} min</div>
+              <div class="text-xs text-slate-500">Avg gap ${toNumber(edge.avgGapMinutes).toFixed(2)} min</div>
             </div>
           </div>
           <div class="flex items-center gap-3 text-sm">
-            <span class="rounded-full bg-slate-200 px-2.5 py-1 font-semibold text-slate-700">${edge.count} plays</span>
-            <span class="rounded-full bg-indigo-100 px-2.5 py-1 font-semibold text-indigo-700">${(edge.probability * 100).toFixed(1)}%</span>
+            <span class="rounded-full bg-slate-200 px-2.5 py-1 font-semibold text-slate-700">${toNumber(edge.count).toLocaleString()} plays</span>
+            <span class="rounded-full bg-indigo-100 px-2.5 py-1 font-semibold text-indigo-700">${(toNumber(edge.probability) * 100).toFixed(1)}%</span>
           </div>
         </div>
       `).join('');
@@ -619,6 +995,205 @@ const formatDate = (timestampMs: number): string => {
       renderTopHandoffs();
     };
 
+    const populateSourceControl = () => {
+      if (!(sourceFilterEl instanceof HTMLSelectElement)) return;
+      const options = Array.from(sourceFilterEl.options);
+      options.forEach((option) => {
+        option.disabled = !availableSources.includes(option.value);
+      });
+      if (!availableSources.includes(selectedSource)) {
+        selectedSource = availableSources[0] || 'all';
+      }
+      sourceFilterEl.value = selectedSource;
+    };
+
+    const populateYearControl = (el, value) => {
+      if (!(el instanceof HTMLSelectElement)) return;
+      el.innerHTML = '';
+      availableYears.forEach((year) => {
+        const option = document.createElement('option');
+        option.value = String(year);
+        option.textContent = String(year);
+        el.appendChild(option);
+      });
+      el.value = String(value);
+    };
+
+    const updateQueryLabel = () => {
+      if (queryRangeLabelEl) {
+        const source = sourceLabels[selectedSource] || selectedSource;
+        queryRangeLabelEl.textContent = `${source} · ${selectedStartYear} to ${selectedEndYear}`;
+      }
+    };
+
+    const updateQueryStatus = (text, tone = 'info') => {
+      if (!queryStatusEl) return;
+      queryStatusEl.textContent = text;
+      queryStatusEl.classList.remove('border-sky-200', 'bg-sky-50', 'text-sky-800', 'border-amber-200', 'bg-amber-50', 'text-amber-800');
+      if (tone === 'warn') {
+        queryStatusEl.classList.add('border-amber-200', 'bg-amber-50', 'text-amber-800');
+      } else {
+        queryStatusEl.classList.add('border-sky-200', 'bg-sky-50', 'text-sky-800');
+      }
+    };
+
+    const collectSlicesForCurrentRange = () => {
+      if (!querySlices) return [];
+      const slices = [];
+      for (let year = selectedStartYear; year <= selectedEndYear; year += 1) {
+        const key = `${selectedSource}/${year}`;
+        if (querySlices[key]) slices.push(querySlices[key]);
+      }
+      return slices;
+    };
+
+    const applyCurrentQuery = () => {
+      if (!Array.isArray(availableYears) || availableYears.length === 0) return;
+
+      selectedStartYear = Math.max(availableYears[0], selectedStartYear);
+      selectedEndYear = Math.min(availableYears[availableYears.length - 1], selectedEndYear);
+      if (selectedStartYear > selectedEndYear) {
+        selectedEndYear = selectedStartYear;
+      }
+
+      if (!querySlices) {
+        activeNetworkPayload = networkPayload;
+        activeFlowPayload = flowPayload;
+        activeHandoffPayload = handoffPayload;
+        updateQueryLabel();
+        renderAll();
+        return;
+      }
+
+      const slices = collectSlicesForCurrentRange();
+      if (slices.length === 0) {
+        activeNetworkPayload = { track: { summary: {}, nodes: [], edges: [] }, artist: { summary: {}, nodes: [], edges: [] } };
+        activeFlowPayload = { track: [], artist: [] };
+        activeHandoffPayload = { track: [], artist: [] };
+      } else {
+        const dataset = buildDatasetFromSlices(slices);
+        activeNetworkPayload = dataset.network;
+        activeFlowPayload = dataset.flow;
+        activeHandoffPayload = dataset.handoffs;
+      }
+
+      selectedNodeId = '';
+      updateQueryLabel();
+      renderAll();
+    };
+
+    const syncFilterValuesFromControls = () => {
+      if (sourceFilterEl instanceof HTMLSelectElement) {
+        selectedSource = sourceFilterEl.value || selectedSource;
+      }
+      if (startYearEl instanceof HTMLSelectElement) {
+        selectedStartYear = toNumber(startYearEl.value, selectedStartYear);
+      }
+      if (endYearEl instanceof HTMLSelectElement) {
+        selectedEndYear = toNumber(endYearEl.value, selectedEndYear);
+      }
+      if (selectedStartYear > selectedEndYear) {
+        selectedEndYear = selectedStartYear;
+        if (endYearEl instanceof HTMLSelectElement) endYearEl.value = String(selectedEndYear);
+      }
+    };
+
+    const initializeControls = () => {
+      populateSourceControl();
+      populateYearControl(startYearEl, selectedStartYear);
+      populateYearControl(endYearEl, selectedEndYear);
+      updateQueryLabel();
+
+      if (applyQueryEl instanceof HTMLButtonElement) {
+        applyQueryEl.addEventListener('click', () => {
+          syncFilterValuesFromControls();
+          applyCurrentQuery();
+        });
+      }
+
+      if (resetQueryEl instanceof HTMLButtonElement) {
+        resetQueryEl.addEventListener('click', () => {
+          selectedSource = availableSources.includes('all') ? 'all' : availableSources[0];
+          selectedStartYear = availableYears[0];
+          selectedEndYear = availableYears[availableYears.length - 1];
+          populateSourceControl();
+          populateYearControl(startYearEl, selectedStartYear);
+          populateYearControl(endYearEl, selectedEndYear);
+          applyCurrentQuery();
+        });
+      }
+
+      if (sourceFilterEl instanceof HTMLSelectElement) {
+        sourceFilterEl.addEventListener('change', () => {
+          selectedSource = sourceFilterEl.value;
+          applyCurrentQuery();
+        });
+      }
+
+      if (startYearEl instanceof HTMLSelectElement) {
+        startYearEl.addEventListener('change', () => {
+          selectedStartYear = toNumber(startYearEl.value, selectedStartYear);
+          if (selectedStartYear > selectedEndYear) {
+            selectedEndYear = selectedStartYear;
+            if (endYearEl instanceof HTMLSelectElement) endYearEl.value = String(selectedEndYear);
+          }
+          applyCurrentQuery();
+        });
+      }
+
+      if (endYearEl instanceof HTMLSelectElement) {
+        endYearEl.addEventListener('change', () => {
+          selectedEndYear = toNumber(endYearEl.value, selectedEndYear);
+          if (selectedEndYear < selectedStartYear) {
+            selectedStartYear = selectedEndYear;
+            if (startYearEl instanceof HTMLSelectElement) startYearEl.value = String(selectedStartYear);
+          }
+          applyCurrentQuery();
+        });
+      }
+    };
+
+    const loadQueryCache = async () => {
+      try {
+        const response = await fetch(`${defaultDataRoot}/transition-query-cache.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const payload = await response.json();
+
+        const years = Array.isArray(payload?.years)
+          ? payload.years.map((year) => toNumber(year)).filter((year) => Number.isFinite(year))
+          : [];
+        years.sort((a, b) => a - b);
+
+        const sources = Array.isArray(payload?.sources)
+          ? payload.sources.filter((source) => typeof source === 'string')
+          : [];
+
+        if (!payload?.slices || typeof payload.slices !== 'object' || years.length === 0) {
+          throw new Error('missing slices/years');
+        }
+
+        querySlices = payload.slices;
+        availableYears = years;
+        availableSources = sources.length ? sources : ['all'];
+        selectedSource = availableSources.includes('all') ? 'all' : availableSources[0];
+        selectedStartYear = availableYears[0];
+        selectedEndYear = availableYears[availableYears.length - 1];
+
+        const generatedAt = typeof payload.generatedAt === 'string' ? payload.generatedAt : '';
+        updateQueryStatus(
+          generatedAt
+            ? `Loaded MCP query cache (${generatedAt}).`
+            : 'Loaded MCP query cache.',
+          'info'
+        );
+      } catch (error) {
+        updateQueryStatus('MCP query cache unavailable; using full-range fallback slice.', 'warn');
+        querySlices = null;
+      }
+    };
+
     scopeButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const nextScope = button.getAttribute('data-scope');
@@ -629,6 +1204,12 @@ const formatDate = (timestampMs: number): string => {
       });
     });
 
-    renderAll();
+    const init = async () => {
+      await loadQueryCache();
+      initializeControls();
+      applyCurrentQuery();
+    };
+
+    init();
   </script>
 </Layout>

@@ -347,6 +347,22 @@ func (c *mcpProcessClient) callBatchYearStory(years []int, topN int, timezone, s
 	return stories, summary, nil
 }
 
+func (c *mcpProcessClient) callTransitionGraph(startDate, endDate, source string, sessionGapMinutes, minTransitionCount, maxEdges int, includeSelfLoops bool) (map[string]interface{}, error) {
+	args := map[string]interface{}{
+		"startDate":          startDate,
+		"endDate":            endDate,
+		"scope":              "both",
+		"sessionGapMinutes":  sessionGapMinutes,
+		"minTransitionCount": minTransitionCount,
+		"maxEdges":           maxEdges,
+		"includeSelfLoops":   includeSelfLoops,
+	}
+	if strings.TrimSpace(source) != "" {
+		args["source"] = source
+	}
+	return c.callTool("music_transition_graph", args)
+}
+
 func (c *mcpProcessClient) notify(method string, params interface{}) error {
 	req := map[string]interface{}{
 		"jsonrpc": "2.0",

@@ -95,7 +95,9 @@ go run . fetch-images
 ---
 
 ## 🔁 Transition Graph Agent
-**Script:** `tools/pipeline/build_transition_graph.go` (invoked via `mp3-scripts build-transition-graph`)
+**Scripts:**
+-   `tools/pipeline/build_transition_graph.go` (invoked via `mp3-scripts build-transition-graph`)
+-   `tools/pipeline/build_transition_query_cache.go` (invoked via `mp3-scripts build-transition-query-cache`)
 
 Builds a session-aware transition graph from merged listening history for flow visualizations.
 
@@ -104,9 +106,11 @@ Builds a session-aware transition graph from merged listening history for flow v
 -   **Flow Edges:** Computes weighted transitions for both `track` and `artist` scopes.
 -   **Probability Metrics:** Includes per-edge conditional transition probabilities.
 -   **Noise Control:** Supports edge-count filtering and max-edge caps for visualization-ready output.
+-   **MCP Query Cache:** Materializes per-year, per-source transition slices from `music_transition_graph` for interactive date/source controls.
 
 **Usage:**
 ```bash
 cd tools/pipeline
 go run . build-transition-graph
+go run . build-transition-query-cache
 ```

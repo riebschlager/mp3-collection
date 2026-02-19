@@ -100,10 +100,11 @@ cd tools/pipeline
 7. `process-lastfm`
 8. `build-timeline`
 9. `build-transition-graph`
-10. `build-wrapped-stories`
-11. `build-wrapped-month-stories`
-12. `build-web-data`
-13. `fetch-images`
+10. `build-transition-query-cache`
+11. `build-wrapped-stories`
+12. `build-wrapped-month-stories`
+13. `build-web-data`
+14. `fetch-images`
 
 You can run any step individually:
 
@@ -120,6 +121,7 @@ Common commands:
 - `process-lastfm`
 - `build-timeline`
 - `build-transition-graph`
+- `build-transition-query-cache`
 - `build-wrapped-stories`
 - `build-wrapped-month-stories`
 - `build-web-data`
@@ -135,6 +137,7 @@ Common commands:
 - `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
 - `data/derived/web/timeline.json`
 - `data/derived/core/transition-graph.json`, `data/derived/web/transition-graph.json`
+- `data/derived/web/transition-query-cache.json`
 - `data/derived/web/wrapped-stories.json`
 - `data/derived/web/wrapped-month-stories.json`
 - `data/derived/web/playcounts.json`, `data/derived/web/listening-merge-report.json`
