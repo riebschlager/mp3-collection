@@ -1,0 +1,540 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+
+const defaultDataRoot = buildUrl('data');
+---
+
+<Layout title="Obsession Timeline - MP3 Collection">
+  <div class="obsessions-page">
+    <section class="hero reveal">
+      <div class="hero__copy">
+        <p class="kicker">History Lab</p>
+        <h1>Obsession Timeline</h1>
+        <p>
+          Track your most intense musical fixations over time. Uncover the bursts when a single track took over your rotation for days or weeks.
+        </p>
+      </div>
+      <div class="hero__actions">
+        <a href={buildUrl('history')} class="back-link">Back to History</a>
+      </div>
+    </section>
+
+    <section class="controls reveal" aria-label="Timeline controls">
+      <label>
+        Source
+        <select id="source-select"></select>
+      </label>
+      <label>
+        Year
+        <select id="year-select"></select>
+      </label>
+      <div class="controls__status" id="load-status">Loading streaks cache...</div>
+    </section>
+
+    <section class="content reveal">
+      <article class="timeline-card">
+        <div class="timeline-header">
+          <div>
+            <p class="eyebrow">Burst Intensity</p>
+            <h2 id="current-year-heading">Intense Bursts</h2>
+          </div>
+          <div class="legend" aria-label="Intensity legend">
+            <span>Warm</span>
+            <div class="legend__bar"></div>
+            <span>Scorching</span>
+          </div>
+        </div>
+
+        <div id="bursts-list" class="bursts-grid"></div>
+      </article>
+
+      <article class="stats-card">
+        <p class="eyebrow">Year Insights</p>
+        <h2>Obsession Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-label">Total Bursts</div>
+            <div id="stat-count" class="stat-value">-</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Hottest Track</div>
+            <div id="stat-hottest" class="stat-value stat-value--text">-</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Shortest Fixation</div>
+            <div id="stat-shortest" class="stat-value">-</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Longest Streak</div>
+            <div id="stat-longest" class="stat-value">-</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ defaultDataRoot }}>
+    const sourceSelectEl = document.getElementById('source-select');
+    const yearSelectEl = document.getElementById('year-select');
+    const statusEl = document.getElementById('load-status');
+    const burstsListEl = document.getElementById('bursts-list');
+    const currentYearTitle = document.getElementById('current-year-heading');
+
+    const statCountEl = document.getElementById('stat-count');
+    const statHottestEl = document.getElementById('stat-hottest');
+    const statShortestEl = document.getElementById('stat-shortest');
+    const statLongestEl = document.getElementById('stat-longest');
+
+    const sourceLabels = {
+      all: 'All Sources',
+      lastfm: 'Last.fm',
+      spotify: 'Spotify',
+    };
+
+    let cache = null;
+    let years = [];
+    let selectedSource = 'all';
+    let selectedYear = null;
+
+    const escapeHtml = (value) => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const formatDate = (dateStr) => {
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    };
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+    const colorForBurst = (score) => {
+      // Score is usually between 0.01 and 1.5. Higher is hotter.
+      const normalized = clamp(score / 0.5, 0, 1);
+      
+      const low = { h: 320, s: 70, l: 30 }; // Deep purple
+      const high = { h: 20, s: 90, l: 60 };  // Intense orange/amber
+      
+      const mix = (a, b, t) => a + ((b - a) * t);
+      const hue = mix(low.h, high.h, normalized);
+      const sat = mix(low.s, high.s, normalized);
+      const light = mix(low.l, high.l, normalized);
+
+      return `hsl(${hue.toFixed(1)} ${sat.toFixed(1)}% ${light.toFixed(1)}%)`;
+    };
+
+    const updateView = () => {
+      if (!cache || !selectedYear) return;
+
+      const yearData = cache.streaksByYear[String(selectedYear)];
+      if (!yearData) {
+        burstsListEl.innerHTML = '<div class="muted">No data available for this year.</div>';
+        return;
+      }
+
+      currentYearTitle.textContent = `${selectedYear} Fixations`;
+
+      const bursts = Array.isArray(yearData.concentratedTracks) 
+        ? [...yearData.concentratedTracks].sort((a, b) => b.burstScore - a.burstScore)
+        : [];
+
+      if (bursts.length === 0) {
+        burstsListEl.innerHTML = '<div class="muted">No intense track bursts found this year.</div>';
+        statCountEl.textContent = '0';
+        statHottestEl.textContent = '-';
+        statShortestEl.textContent = '-';
+        statLongestEl.textContent = '-';
+        return;
+      }
+
+      // Populate Stats
+      statCountEl.textContent = bursts.length;
+      statHottestEl.textContent = bursts[0] ? escapeHtml(bursts[0].track) : '-';
+      
+      const spanDays = bursts.map(b => b.spanDays).filter(Number.isFinite);
+      if (spanDays.length > 0) {
+        statShortestEl.textContent = `${Math.min(...spanDays)} days`;
+        statLongestEl.textContent = `${Math.max(...spanDays)} days`;
+      }
+
+      // Render Burst Cards
+      burstsListEl.innerHTML = bursts.map((burst, index) => {
+        const bg = colorForBurst(burst.burstScore);
+        const rank = index + 1;
+        const heatPct = clamp((burst.burstScore / 0.5) * 100, 10, 100);
+
+        return `
+          <div class="burst-item" style="--burst-color: ${bg}; border-left: 4px solid var(--burst-color);">
+            <div class="burst-item__rank">#${rank}</div>
+            <div class="burst-item__body">
+              <div class="burst-item__track">${escapeHtml(burst.track)}</div>
+              <div class="burst-item__artist">${escapeHtml(burst.artist)}</div>
+              <div class="burst-item__meta">
+                <span>🔥 ${burst.plays} plays</span>
+                <span class="dot">•</span>
+                <span>${formatDate(burst.firstPlay)} &rarr; ${formatDate(burst.lastPlay)}</span>
+                <span class="dot">•</span>
+                <span>${burst.spanDays} days</span>
+              </div>
+            </div>
+            <div class="burst-item__heat" title="Burst Score: ${burst.burstScore.toFixed(3)}">
+               <div class="heat-bar"><div class="heat-fill" style="width: ${heatPct}%; background:${bg}"></div></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    };
+
+    const renderSourceControls = () => {
+      // Stub for source change (for now mostly 'all')
+      if (sourceSelectEl) {
+        sourceSelectEl.innerHTML = `<option value="all">All Sources</option>`;
+        sourceSelectEl.disabled = true;
+      }
+    };
+
+    const renderYearControls = () => {
+      if (!yearSelectEl) return;
+      yearSelectEl.innerHTML = years.map((year) => {
+        const selected = year === selectedYear ? 'selected' : '';
+        return `<option value="${year}" ${selected}>${year}</option>`;
+      }).join('');
+
+      yearSelectEl.addEventListener('change', () => {
+        selectedYear = Number(yearSelectEl.value);
+        updateView();
+      });
+    };
+
+    const setStatus = (text) => {
+      if (statusEl) statusEl.textContent = text;
+    };
+
+    const initialize = async () => {
+      try {
+        const response = await fetch(`${defaultDataRoot}/streaks-cache.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        cache = await response.json();
+        years = Array.isArray(cache?.years)
+          ? cache.years.map((y) => Number(y)).filter(Number.isFinite)
+          : [];
+        years.sort((a, b) => b - a); // Newest first
+
+        if (years.length === 0) {
+          throw new Error('No years available in streaks cache');
+        }
+
+        selectedYear = years[0];
+        
+        renderSourceControls();
+        renderYearControls();
+        updateView();
+        
+        const generatedAt = cache?.generatedAt ? new Date(cache.generatedAt).toLocaleString() : 'unknown time';
+        setStatus(`Loaded streaks cache. Generated ${generatedAt}.`);
+      } catch (error) {
+        setStatus(`Unable to load streaks cache: ${error instanceof Error ? error.message : 'unknown error'}`);
+      }
+    };
+
+    initialize();
+  </script>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Manrope:wght@400;500;700;800&display=swap');
+
+  :root {
+    --bg-page: #100818;
+    --bg-card: #1c112b;
+    --text-main: #fcf8ff;
+    --text-muted: #a69bb3;
+    --line: #3b2a4a;
+    --accent: #fc8832;
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .obsessions-page {
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-main);
+    display: grid;
+    gap: 1.5rem;
+    background:
+      radial-gradient(circle at top right, #381240 0%, transparent 40%),
+      radial-gradient(circle at bottom left, #1c0e25 0%, transparent 50%),
+      var(--bg-page);
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    min-height: 80vh;
+  }
+
+  .reveal {
+    animation: fade-slide 500ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  }
+  @keyframes fade-slide {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: linear-gradient(135deg, #411d51 0%, #200f2e 100%);
+    border: 1px solid var(--line);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .kicker, .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #df9ffb;
+    margin: 0 0 0.5rem;
+    font-weight: 800;
+  }
+
+  .hero h1, h2 {
+    font-family: 'Fraunces', serif;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    color: #fff;
+  }
+
+  .hero p {
+    margin: 0.8rem 0 0;
+    color: #e3d2eb;
+    max-width: 60ch;
+    font-size: 1.05rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 150ms ease;
+  }
+  .back-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .controls {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 1rem;
+    border: 1px solid var(--line);
+    padding: 1rem 1.5rem;
+    align-items: center;
+  }
+  
+  .controls label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .controls select {
+    background: #100818;
+    border: 1px solid var(--line);
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    min-width: 140px;
+    font-size: 0.95rem;
+  }
+
+  .controls__status {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: #7b6d88;
+  }
+
+  .content {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  }
+  @media (max-width: 800px) {
+    .content { grid-template-columns: 1fr; }
+  }
+
+  .timeline-card, .stats-card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    border: 1px solid var(--line);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .legend {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+
+  .legend__bar {
+    width: 80px;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, hsl(320 70% 30%), hsl(20 90% 60%));
+  }
+
+  .bursts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .burst-item {
+    display: flex;
+    gap: 1.25rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem 1.25rem 2.5rem;
+    align-items: center;
+    transition: transform 150ms ease, background 150ms ease;
+  }
+  .burst-item:hover {
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .burst-item__rank {
+    font-size: 1.75rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--burst-color);
+    min-width: 2.5rem;
+    text-align: left;
+  }
+
+  .burst-item__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .burst-item__track {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .burst-item__artist {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .burst-item__meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .dot { color: #554460; font-size: 0.6rem; }
+
+  .burst-item__heat {
+    width: 80px;
+  }
+
+  .heat-bar {
+    width: 100%;
+    height: 8px;
+    background: #2a1b38;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .heat-fill {
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .stat-value {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .stat-value--text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    color: #df9ffb;
+  }
+
+  .muted {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+</style>

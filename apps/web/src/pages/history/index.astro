@@ -114,6 +114,25 @@ const formatMonth = (monthStr: string) => {
       </div>
     </div>
 
+    <!-- Obsession Timeline -->
+    <div class="rounded-2xl bg-gradient-to-br from-purple-900 via-rose-900 to-amber-900 text-white p-8 shadow-xl">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-purple-300 mb-2">New Visualization</p>
+          <h2 class="text-3xl font-bold">Obsession Timeline</h2>
+          <p class="mt-2 text-rose-200 max-w-2xl">
+            See your most intense listening bursts—the tracks you played repeatedly in a short span of days, sorted by burst heat.
+          </p>
+        </div>
+        <a
+          href={buildUrl('history/obsessions')}
+          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
+        >
+          Open Obsessions ->
+        </a>
+      </div>
+    </div>
+
     <!-- Timeline Overview -->
     <div class="bg-white rounded-lg shadow p-6">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Timeline Overview</h2>

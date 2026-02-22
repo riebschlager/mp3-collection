@@ -53,6 +53,8 @@ func main() {
 		runBuildTransitionQueryCache()
 	case "build-era-similarity-cache":
 		runBuildEraSimilarityCache()
+	case "build-streaks-cache":
+		runBuildStreaksCache()
 	case "doctor":
 		runDoctor()
 	default:
@@ -82,5 +84,6 @@ func printUsage() {
 	fmt.Println("  build-transition-graph Build listening transition graph to data/derived/core/transition-graph.json and data/derived/web/transition-graph.json")
 	fmt.Println("  build-transition-query-cache Build MCP-backed per-year transition slices to data/derived/web/transition-query-cache.json")
 	fmt.Println("  build-era-similarity-cache Build MCP-backed era similarity matrix/cache to data/derived/web/era-similarity-cache.json")
+	fmt.Println("  build-streaks-cache Build MCP-backed streaks and bursts cache to data/derived/web/streaks-cache.json")
 	fmt.Println("  doctor            Validate path config, required inputs, and output directories")
 }

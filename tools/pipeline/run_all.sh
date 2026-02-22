@@ -52,6 +52,9 @@ echo "==> Running build-transition-query-cache"
 echo "==> Running build-era-similarity-cache"
 ./mp3-scripts build-era-similarity-cache
 
+echo "==> Running build-streaks-cache"
+./mp3-scripts build-streaks-cache
+
 echo "==> Running build-wrapped-stories"
 ./mp3-scripts build-wrapped-stories
 
