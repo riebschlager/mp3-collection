@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-02-17T14:13:24Z",
+  "updatedAt": "2026-03-06T03:56:36Z",
   "artists": {
     "1 giant leap": {
       "artist": "1 Giant Leap",
@@ -431,8 +431,8 @@
     "aaly trio dkv trio": {
       "artist": "AALY Trio DKV Trio",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "aaron bingle": {
@@ -612,8 +612,8 @@
     "adam nocien": {
       "artist": "Adam Nocien",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "add n to x": {
@@ -673,8 +673,8 @@
     "adolf hitler": {
       "artist": "Adolf Hitler",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "adrian belew": {
@@ -2627,8 +2627,8 @@
     "baby please dont leave me edit": {
       "artist": "Baby Please Don't Leave Me (Edit)",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "babybird": {
@@ -3048,8 +3048,8 @@
     "beckyandmelineh": {
       "artist": "beckyandmelineh",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "bedhead": {
@@ -3247,8 +3247,8 @@
     "bentuttle": {
       "artist": "bentuttle",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "best of belly dance": {
@@ -3287,8 +3287,8 @@
     "bethscalet": {
       "artist": "bethscalet",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "better than ezra": {
@@ -3363,8 +3363,8 @@
     "bible voice inc": {
       "artist": "Bible Voice, Inc.",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "big black": {
@@ -3703,8 +3703,8 @@
     "bjrn berge": {
       "artist": "Bj�rn Berge",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "black audio": {
@@ -4178,8 +4178,8 @@
     "bo kaspersljus p mig": {
       "artist": "Bo Kaspersljus p� mig",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "boards of canada": {
@@ -4290,8 +4290,8 @@
     "boban markovic orkestar": {
       "artist": "Boban Markovic� Orkestar",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:11:50Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "bobbi humphrey": {
@@ -4435,8 +4435,8 @@
     "boogie woogie no 5": {
       "artist": "Boogie Woogie No. 5",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "boom bip": {
@@ -4694,8 +4694,8 @@
     "bridgesandsmith": {
       "artist": "bridgesandsmith",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "bright eyes": {
@@ -4755,8 +4755,8 @@
     "brooksnewton": {
       "artist": "brooksnewton",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "brother ali": {
@@ -4858,8 +4858,8 @@
     "bryanmasters": {
       "artist": "bryanmasters",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "bside players": {
@@ -5594,8 +5594,8 @@
     "charlesmcvey": {
       "artist": "charlesmcvey",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "charlie brown christmas": {
@@ -5937,8 +5937,8 @@
     "cinkusi": {
       "artist": "Cinkus�i",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "cinnamon": {
@@ -6040,8 +6040,8 @@
     "clera": {
       "artist": "C�lera",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "click tha supah latinstyles of beyond": {
@@ -6428,8 +6428,8 @@
     "conn75": {
       "artist": "conn75",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "conor oberst": {
@@ -6621,8 +6621,8 @@
     "cousingabriel": {
       "artist": "cousingabriel",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "cowboy bebop": {
@@ -7297,8 +7297,8 @@
     "dankozak": {
       "artist": "dankozak",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "danny and the dressmakers": {
@@ -7877,8 +7877,8 @@
     "del mccoury watson wiseman": {
       "artist": "Del McCoury, Watson, Wiseman",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "del tha funkee homosapher": {
@@ -8007,8 +8007,8 @@
     "destro800": {
       "artist": "destro800",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "destroyer": {
@@ -8890,8 +8890,8 @@
     "dob schneider": {
       "artist": "Dob Schneider",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "dock boggs": {
@@ -8936,8 +8936,8 @@
     "dolly parton and ryksopp": {
       "artist": "Dolly Parton & R�yksopp",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "dolphins": {
@@ -9282,8 +9282,8 @@
     "dsnlg shaun inman": {
       "artist": "DSNLG / Shaun Inman",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "dstyles": {
@@ -9571,8 +9571,8 @@
     "eb labs sampler ii": {
       "artist": "EB Labs SAMPLER II",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "ebba grn": {
@@ -9707,8 +9707,8 @@
     "egyptian hits": {
       "artist": "Egyptian Hits",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "eib": {
@@ -9843,8 +9843,8 @@
     "elephant man and lil jon": {
       "artist": "Elephant Man And Lil Jon*",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "elf power": {
@@ -10213,8 +10213,8 @@
     "ericnicolas": {
       "artist": "ericnicolas",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "erik voeks": {
@@ -10289,8 +10289,8 @@
     "esko linnanvalli and esa katajavuori": {
       "artist": "Esko Linnanvalli & Esa Katajavuori",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "esma redzepova": {
@@ -10356,8 +10356,8 @@
     "euphoriastringband": {
       "artist": "euphoriastringband",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "euro boys": {
@@ -10462,8 +10462,8 @@
     "everybodysx": {
       "artist": "everybodysx",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "everything": {
@@ -10670,8 +10670,8 @@
     "fashionstatements": {
       "artist": "fashionstatements",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "fast forward": {
@@ -10887,8 +10887,8 @@
     "filthyjim": {
       "artist": "filthyjim",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "final fantasy vii": {
@@ -11023,8 +11023,8 @@
     "flatteryleadstoruins": {
       "artist": "flatteryleadstoruins",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "fleetwood mac": {
@@ -11039,8 +11039,8 @@
     "flexiblebullit": {
       "artist": "flexiblebullit",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "flipmode squad": {
@@ -11196,8 +11196,8 @@
     "forrestwhitlow": {
       "artist": "forrestwhitlow",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "foster sylvers": {
@@ -11593,8 +11593,8 @@
     "fuse22": {
       "artist": "fuse22",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "futro": {
@@ -11897,8 +11897,8 @@
     "george cotton country band": {
       "artist": "George Cotton Country Band",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "gerald collier": {
@@ -11913,8 +11913,8 @@
     "gerald japan doll": {
       "artist": "gerald / japan doll",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "german rap": {
@@ -12178,8 +12178,8 @@
     "givenwithhonor": {
       "artist": "givenwithhonor",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "glass cage": {
@@ -12218,8 +12218,8 @@
     "glennmark eriksson strmsted": {
       "artist": "Glennmark, Eriksson, Str�msted",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "go back snowball": {
@@ -12984,8 +12984,8 @@
     "hayano with jrgen paape and the": {
       "artist": "Hayano with J�rgen Paape & the",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "hayden": {
@@ -13303,8 +13303,8 @@
     "hilmar rn hilmarsson and sigurrs": {
       "artist": "Hilmar �rn Hilmarsson & Sigurr�s",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "him": {
@@ -13475,8 +13475,8 @@
     "hookandladder": {
       "artist": "hookandladder",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "hoover": {
@@ -13689,8 +13689,8 @@
     "humanritual": {
       "artist": "humanritual",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "humate": {
@@ -13729,8 +13729,8 @@
     "hurtboy live oak decline": {
       "artist": "hurtboy / Live Oak Decline",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "husker du": {
@@ -14087,8 +14087,8 @@
     "iommi f dave grohl": {
       "artist": "Iommi F. Dave Grohl",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "iron and wine": {
@@ -14319,8 +14319,8 @@
     "jaderaven": {
       "artist": "jaderaven",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "jah division": {
@@ -14437,8 +14437,8 @@
     "jan garbarek and agnes buen garnes": {
       "artist": "Jan Garbarek and Agnes Buen Garnes",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "jan jelinek": {
@@ -14747,8 +14747,8 @@
     "jenkinsdirt": {
       "artist": "jenkinsdirt",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "jennifer brown": {
@@ -14772,8 +14772,8 @@
     "jeremyparr": {
       "artist": "jeremyparr",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "jermaine stewart": {
@@ -15100,8 +15100,8 @@
     "joe fondamichael jefry steven": {
       "artist": "Joe Fonda-Michael Jefry Steven",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "joe guy": {
@@ -15404,8 +15404,8 @@
     "johnnylokke": {
       "artist": "johnnylokke",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "jolene": {
@@ -15672,8 +15672,8 @@
     "juliapeterson": {
       "artist": "juliapeterson",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "julio": {
@@ -15973,8 +15973,8 @@
     "kathleenlague": {
       "artist": "kathleenlague",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "kathryn lorenzen": {
@@ -15986,8 +15986,8 @@
     "kathrynlorenzen": {
       "artist": "kathrynlorenzen",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "katrina and the waves": {
@@ -16062,8 +16062,8 @@
     "kelleyhunt": {
       "artist": "kelleyhunt",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "kelly herman": {
@@ -16174,8 +16174,8 @@
     "kevinjacks": {
       "artist": "kevinjacks",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "key": {
@@ -16328,8 +16328,8 @@
     "kim hiorthy": {
       "artist": "Kim Hiorth�y",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "kim mazelle": {
@@ -16734,8 +16734,8 @@
     "kudzu": {
       "artist": "kud-zu",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "kula shaker": {
@@ -17089,8 +17089,8 @@
     "leftegrove": {
       "artist": "leftegrove",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "leftfield": {
@@ -17279,8 +17279,8 @@
     "levynhvittjt yhtye solisteina pentti anis kullervo pellinen ja lauluyhtye pallilla kuiskaten": {
       "artist": "Levynh�vitt�j�t yhtye solisteina Pentti Anis, Kullervo Pellinen ja lauluyhtye Pallilla Kuiskaten",
       "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "lewis": {
@@ -17643,8 +17643,8 @@
     "lonesomehobos": {
       "artist": "lonesomehobos",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "long ryders": {
@@ -17719,8 +17719,8 @@
     "lorenaprater": {
       "artist": "lorenaprater",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "loretta lynn": {
@@ -17753,8 +17753,8 @@
     "lostinthezoo": {
       "artist": "lostinthezoo",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "lou barlow": {
@@ -18072,8 +18072,8 @@
     "madawkward": {
       "artist": "madawkward",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "madlib": {
@@ -18478,8 +18478,8 @@
     "marusic is trio": {
       "artist": "Marus�ic� Is Trio",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "marvin gay": {
@@ -19640,8 +19640,8 @@
     "molly ringworm 14 yrs of kc g": {
       "artist": "Molly Ringworm -14 yrs of KC g",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mongo santamaria": {
@@ -19821,8 +19821,8 @@
     "motherkali": {
       "artist": "motherkali",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "motion city soundtrack": {
@@ -19924,43 +19924,43 @@
     "mp3vol72alkaline trio b sides02alkaline triousticeismp3": {
       "artist": "MP3Vol72:alkaline trio - b sides:02-alkaline trioustic)-EiS.mp3",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mp3vol72alkaline trio b sides05alkaline triiginaleismp3": {
       "artist": "MP3Vol72:alkaline trio - b sides:05-alkaline triiginal)-EiS.mp3",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mp3vol72alkaline trio b sides06alkaline trind roadeismp3": {
       "artist": "MP3Vol72:alkaline trio - b sides:06-alkaline trind road-EiS.mp3",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mp3vol72alkaline trio b sides08alkaline triiginaleismp3": {
       "artist": "MP3Vol72:alkaline trio - b sides:08-alkaline triiginal)-EiS.mp3",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mp3vol72alkaline trio b sides09alkaline triof paineismp3": {
       "artist": "MP3Vol72:alkaline trio - b sides:09-alkaline triof pain-EiS.mp3",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mp3vol72alkaline trio b sides11alkaline triooftopseismp3": {
       "artist": "MP3Vol72:alkaline trio - b sides:11-alkaline triooftops-EiS.mp3",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mr big": {
@@ -19984,8 +19984,8 @@
     "mr boone ried": {
       "artist": "Mr. Boone Ried",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mr bungle": {
@@ -20114,8 +20114,8 @@
     "mrfieldtrip": {
       "artist": "mrfieldtrip",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "mrs edd presnell": {
@@ -20502,8 +20502,8 @@
     "nationalfiretheory": {
       "artist": "nationalfiretheory",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "natural born killers soundtrack": {
@@ -20755,8 +20755,8 @@
     "newmemphis": {
       "artist": "newmemphis",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "newton neurotics": {
@@ -20870,8 +20870,8 @@
     "nifkin blood sucking baby hookers": {
       "artist": "nifkin / Blood Sucking Baby Hookers",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "nigel simpkins": {
@@ -21081,8 +21081,8 @@
     "nofleshspared": {
       "artist": "nofleshspared",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "nofx": {
@@ -21202,8 +21202,8 @@
     "nothingtogain": {
       "artist": "nothingtogain",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "notomorrow": {
@@ -21314,8 +21314,8 @@
     "oddseven": {
       "artist": "oddseven",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "of montreal": {
@@ -21474,8 +21474,8 @@
     "onesadmonkey": {
       "artist": "onesadmonkey",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "onward crispin glover": {
@@ -21490,8 +21490,8 @@
     "onwardcrispinglover": {
       "artist": "onwardcrispinglover",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "op": {
@@ -21512,8 +21512,8 @@
     "opensunday": {
       "artist": "opensunday",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "operation ivy": {
@@ -21726,8 +21726,8 @@
     "outerlords": {
       "artist": "outerlords",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "outkast": {
@@ -21826,8 +21826,8 @@
     "panamerican": {
       "artist": "Pan�American",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "paola": {
@@ -21866,8 +21866,8 @@
     "paris dernire": {
       "artist": "Paris Derni�re",
       "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "paris inc": {
@@ -21963,8 +21963,8 @@
     "patreyhle": {
       "artist": "patreyhle",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "patrik isaksson": {
@@ -22726,8 +22726,8 @@
     "platte wilson miner": {
       "artist": "platte / Wilson Miner",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "playboy": {
@@ -22880,8 +22880,8 @@
     "pondmonkeys": {
       "artist": "pondmonkeys",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "pop rivets": {
@@ -23061,8 +23061,8 @@
     "primetimeheroes": {
       "artist": "primetimeheroes",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "primus": {
@@ -23290,8 +23290,8 @@
     "puncturedbicycle": {
       "artist": "puncturedbicycle",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "punk covers": {
@@ -24212,15 +24212,15 @@
     "rexhobart": {
       "artist": "rexhobart",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "rhbtum": {
       "artist": "RH/BTUM",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "rhettmaticstyles of beyond": {
@@ -24769,8 +24769,8 @@
     "roundups": {
       "artist": "roundups",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "roxette": {
@@ -24971,8 +24971,8 @@
     "saban bajramovic and mostar sevdah reunion": {
       "artist": "S�aban Bajramovic� & Mostar Sevdah Reunion",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sabers": {
@@ -25032,8 +25032,8 @@
     "salttheearth": {
       "artist": "salttheearth",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sam chatmon": {
@@ -25378,8 +25378,8 @@
     "scion cd sampler v8": {
       "artist": "Scion CD Sampler v.8",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "scissor fits": {
@@ -25502,64 +25502,64 @@
     "sean pyros successful living aesop rock": {
       "artist": "Sean Pyro's Successful Living: Aesop Rock",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living braintax": {
       "artist": "Sean Pyro's Successful Living: Braintax",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living cunninlynguists": {
       "artist": "Sean Pyro's Successful Living: Cunninlynguists",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living defintion": {
       "artist": "Sean Pyro's Successful Living: Defintion",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living dilated": {
       "artist": "Sean Pyro's Successful Living: Dilated ft. Last Emperor",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living dj shadow": {
       "artist": "Sean Pyro's Successful Living: DJ Shadow",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living grand agent": {
       "artist": "Sean Pyro's Successful Living: Grand Agent",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living meth": {
       "artist": "Sean Pyro's Successful Living: Meth ft. Pete Rock",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living people under the stairs": {
       "artist": "Sean Pyro's Successful Living: People Under The Stairs",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living pete rock and grand agent": {
@@ -25571,22 +25571,22 @@
     "sean pyros successful living sean pyro": {
       "artist": "Sean Pyro's Successful Living: Sean Pyro ft. Kool Keith",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living shabaam sahdeeq": {
       "artist": "Sean Pyro's Successful Living: Shabaam Sahdeeq",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sean pyros successful living the last emporer": {
       "artist": "Sean Pyro's Successful Living: The Last Emporer",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "seasontorisk": {
@@ -25772,8 +25772,8 @@
     "sevenmiledrive": {
       "artist": "sevenmiledrive",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "seventhcircle": {
@@ -25818,8 +25818,8 @@
     "shakingtree": {
       "artist": "shakingtree",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "shakira": {
@@ -25978,8 +25978,8 @@
     "shotgunjenny": {
       "artist": "shotgunjenny",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "showoff": {
@@ -26300,8 +26300,8 @@
     "sistermaryrottencrotch": {
       "artist": "sistermaryrottencrotch",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "six by seven": {
@@ -26334,8 +26334,8 @@
     "sixyearsophomore": {
       "artist": "sixyearsophomore",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sizzla": {
@@ -26389,8 +26389,8 @@
     "skrapwud": {
       "artist": "skrapwud",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "skyzoo": {
@@ -26450,8 +26450,8 @@
     "sleepyeddie": {
       "artist": "sleepyeddie",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "slick shoes": {
@@ -26595,8 +26595,8 @@
     "smashing pumpkins with trent reznor": {
       "artist": "Smashing Pumpkins with Trent Reznor",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "smiling monarchs": {
@@ -26653,8 +26653,8 @@
     "snakebiteorphans": {
       "artist": "snakebiteorphans",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "snatch": {
@@ -26687,8 +26687,8 @@
     "snikerac": {
       "artist": "Snikerac",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "snoop dogg": {
@@ -26874,8 +26874,8 @@
     "somaina odiah": {
       "artist": "Somaina Odiah",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "someloves": {
@@ -26986,8 +26986,8 @@
     "sotonightimaysleep": {
       "artist": "sotonightimaysleep",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "soul asylum": {
@@ -27152,8 +27152,8 @@
     "space ghost": {
       "artist": "(Space Ghost)",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "spacehog": {
@@ -27267,8 +27267,8 @@
     "species49": {
       "artist": "species49",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "spherical objects": {
@@ -27343,8 +27343,8 @@
     "splitliprayfield": {
       "artist": "splitliprayfield",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "sponge": {
@@ -27527,8 +27527,8 @@
     "standtoreason": {
       "artist": "standtoreason",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "stanley black": {
@@ -27633,8 +27633,8 @@
     "steinbrchel": {
       "artist": "Steinbr�chel",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "stella link": {
@@ -27649,8 +27649,8 @@
     "stellalink": {
       "artist": "stellalink",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "stephen malkmus": {
@@ -28037,8 +28037,8 @@
     "strangeunit": {
       "artist": "strangeunit",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "stranglers": {
@@ -28128,15 +28128,15 @@
     "sturgeonmill": {
       "artist": "sturgeonmill",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "styler divinestyles of beyond": {
       "artist": "Styler, Divine/Styles of Beyond",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "styles of beyond": {
@@ -28628,8 +28628,8 @@
     "tablarasa": {
       "artist": "tablarasa",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "tagmemics": {
@@ -30966,8 +30966,8 @@
     "the monastery of gyt tibet": {
       "artist": "The Monastery of Gy�t�, Tibet",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "the monkees": {
@@ -31360,8 +31360,8 @@
     "the pushmen": {
       "artist": "THE PUSHMEN",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "the quadrajets": {
@@ -32231,8 +32231,8 @@
     "thecoolconcern": {
       "artist": "thecoolconcern",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "thee michelle gun elephant": {
@@ -32274,15 +32274,15 @@
     "theglitterkicks": {
       "artist": "theglitterkicks",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "thehefners": {
       "artist": "thehefners",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "thelonious monk": {
@@ -32387,8 +32387,8 @@
     "thescheme": {
       "artist": "thescheme",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "these arms are snakes": {
@@ -32403,8 +32403,8 @@
     "thesearinghour": {
       "artist": "thesearinghour",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "thesistermaria": {
@@ -32422,8 +32422,8 @@
     "thesunndogs": {
       "artist": "thesunndogs",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "thethyrday": {
@@ -32438,8 +32438,8 @@
     "theundefinablewillie": {
       "artist": "theundefinablewillie",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "they might be giants": {
@@ -32472,8 +32472,8 @@
     "theyards": {
       "artist": "theyards",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "thievery corporation": {
@@ -32515,8 +32515,8 @@
     "thirdstring": {
       "artist": "thirdstring",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "this heat": {
@@ -32684,8 +32684,8 @@
     "tilthen": {
       "artist": "tilthen",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "tim kasher": {
@@ -32892,8 +32892,8 @@
     "tommy fs skiva": {
       "artist": "Tommy F's Skiva",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "tommy guerrero": {
@@ -33298,15 +33298,15 @@
     "triphazzard": {
       "artist": "triphazzard",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "triphopchildren": {
       "artist": "triphopchildren",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "trippin daisy": {
@@ -33330,8 +33330,8 @@
     "tristateclicc": {
       "artist": "tristateclicc",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "tristeza": {
@@ -33364,8 +33364,8 @@
     "troublejunction": {
       "artist": "troublejunction",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "trs80": {
@@ -33395,8 +33395,8 @@
     "trusoul and jcity": {
       "artist": "Trusoul And J-City",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "trwynau coch": {
@@ -33507,15 +33507,15 @@
     "twodollarshoerevival": {
       "artist": "twodollarshoerevival",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "tyemurphy": {
       "artist": "tyemurphy",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "tyskarna frn lund": {
@@ -33617,8 +33617,8 @@
     "ultimatefakebook": {
       "artist": "ultimatefakebook",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "ultrasound": {
@@ -33909,8 +33909,8 @@
     "van criburn": {
       "artist": "Van Criburn",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "van halen": {
@@ -33970,8 +33970,8 @@
     "various artists brooklyn music": {
       "artist": "Various Artists - Brooklyn Music",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "various artists cleopatra records": {
@@ -34013,8 +34013,8 @@
     "various artists popsmear": {
       "artist": "Various Artists - PopSmear",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "various artists sympathy for the record industry": {
@@ -34653,8 +34653,8 @@
     "wfl think about the future mix": {
       "artist": "WFL (Think About The Future Mix)",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "wheatus": {
@@ -34870,8 +34870,8 @@
     "windsormedium": {
       "artist": "windsormedium",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "winger": {
@@ -35012,8 +35012,8 @@
     "wyco lowriders": {
       "artist": "Wyco Lowriders",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "wyrd": {
@@ -35046,8 +35046,8 @@
     "x106": {
       "artist": "X106",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "xavier blake": {
@@ -35464,8 +35464,8 @@
     "zumbis do espao": {
       "artist": "Zumbis Do Espa�o",
       "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
       "errorMessage": "last.fm api error 6: The artist you supplied could not be found"
     },
     "zwan": {
@@ -38034,10 +38034,9 @@
     "arab strap|lofi": {
       "artist": "Arab Strap",
       "album": "Lo-Fi",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "arab strap|misc": {
       "artist": "Arab Strap",
@@ -38399,10 +38398,9 @@
     "art tatum|jg32 art tatum the shout": {
       "artist": "Art Tatum",
       "album": "JG32 Art Tatum - The Shout",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "art tatum|the complete capitol recordings": {
       "artist": "Art Tatum",
@@ -38417,10 +38415,9 @@
     "art tatum|the complete decca and brunswick recordings 1932 1941": {
       "artist": "Art Tatum",
       "album": "The Complete Decca And Brunswick Recordings 1932 - 1941",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "art tatum|the genius of keyboard": {
       "artist": "Art Tatum",
@@ -39573,10 +39570,9 @@
     "ben folds five|ubrm": {
       "artist": "Ben Folds Five",
       "album": "UBRM",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "ben folds five|whatever and ever amen": {
       "artist": "Ben Folds Five",
@@ -39643,10 +39639,9 @@
     "benjamin hatton|benjamin hattons vinyl vulture summer swap 2005": {
       "artist": "Benjamin Hatton",
       "album": "Benjamin Hatton's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "benny carter|a gentleman and his music": {
       "artist": "Benny Carter",
@@ -40342,10 +40337,9 @@
     "bjrk|medulla": {
       "artist": "Bj�rk",
       "album": "Medulla",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "bjrk|selmasongs": {
       "artist": "Bj�rk",
@@ -40390,10 +40384,9 @@
     "black chiney|dexterityhollow point hip ho": {
       "artist": "Black Chiney*",
       "album": "Dexterity-Hollow Point (Hip Ho",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "black diamonds|little hits": {
       "artist": "Black Diamonds",
@@ -41355,10 +41348,9 @@
     "bonus|dexterityhollow point hip ho": {
       "artist": "Bonus*",
       "album": "Dexterity-Hollow Point (Hip Ho",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "boo radleys|everythings alright forever": {
       "artist": "Boo Radleys",
@@ -41464,18 +41456,16 @@
     "bounty killer and ciara|dexterityhollow point hip ho": {
       "artist": "Bounty Killer And Ciara*",
       "album": "Dexterity-Hollow Point (Hip Ho",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "bounty killer|dexterityhollow point hip ho": {
       "artist": "Bounty Killer*",
       "album": "Dexterity-Hollow Point (Hip Ho",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "bovine life|social electrics": {
       "artist": "Bovine Life",
@@ -41997,12 +41987,11 @@
       "lastSuccessAt": "2026-02-17T13:23:14Z"
     },
     "bud powell trio|jg48 monk and powell nice work if you can get it": {
-      "artist": "Bud Powell Trio",
+      "artist": "Bud Powell Trio /",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "bud powell|jazz giant": {
       "artist": "Bud Powell",
@@ -43089,10 +43078,9 @@
     "chari chari|lofi": {
       "artist": "chari chari",
       "album": "Lo-Fi",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "charles earland|the wonder of stevie disc 1wonderfull mix": {
       "artist": "Charles Earland",
@@ -43160,10 +43148,9 @@
     "charlie parker quintet|jg48 monk and powell nice work if you can get it": {
       "artist": "Charlie Parker Quintet",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "charlie parker|bop": {
       "artist": "Charlie Parker",
@@ -44161,10 +44148,9 @@
     "coleman hawkins quartet|jg48 monk and powell nice work if you can get it": {
       "artist": "Coleman Hawkins Quartet",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "colin hay|garden state": {
       "artist": "Colin Hay",
@@ -44895,10 +44881,9 @@
     "cul de sac|lofi": {
       "artist": "Cul de Sac",
       "album": "Lo-Fi",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "culture club|disco": {
       "artist": "Culture Club",
@@ -45021,10 +45006,9 @@
     "cursive|the disruption 7": {
       "artist": "Cursive",
       "album": "the disruption 7",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "cursive|the disruption 7 ep": {
       "artist": "Cursive",
@@ -45405,10 +45389,9 @@
     "dante carfagne|down town soulville": {
       "artist": "dante carfagne",
       "album": "down town soulville",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "danzig|666 satans child": {
       "artist": "Danzig",
@@ -46264,10 +46247,9 @@
     "delly ranks|dexterityhollow point hip ho": {
       "artist": "Delly Ranks*",
       "album": "Dexterity-Hollow Point (Hip Ho",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "del|both sides of the brain": {
       "artist": "Del",
@@ -46563,10 +46545,9 @@
     "dexter gordon quintet|jg48 monk and powell nice work if you can get it": {
       "artist": "Dexter Gordon Quintet",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "dexter gordon|go": {
       "artist": "Dexter Gordon",
@@ -46968,10 +46949,9 @@
     "dizzy gillespie quintet|toronto massey hall may 15 1953": {
       "artist": "Dizzy Gillespie Quintet",
       "album": "Toronto, Massey Hall, May 15, 1953",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "dizzy gillespie|ken burns jazz the story of americas music disc 3": {
       "artist": "Dizzy Gillespie",
@@ -46983,10 +46963,9 @@
     "dizzy gillespie|unknown album 342005 45215 pm": {
       "artist": "Dizzy Gillespie",
       "album": "Unknown Album (3/4/2005 4:52:15 PM)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "dj bnx and giraud anthony|monsoon wedding": {
       "artist": "DJ BNX & Giraud Anthony",
@@ -48176,10 +48155,9 @@
     "earthling|tribal": {
       "artist": "Earthling",
       "album": "Tribal",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "earthling|trip hop": {
       "artist": "Earthling",
@@ -48408,10 +48386,9 @@
     "eels|alternative and punk": {
       "artist": "Eels",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "eels|beautiful freak": {
       "artist": "Eels",
@@ -48925,10 +48902,9 @@
     "elvis costello|live eugene oregon 1979": {
       "artist": "Elvis Costello",
       "album": "Live Eugene Oregon 1979",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "elvis costello|my aim is true expanded 1 of 2": {
       "artist": "Elvis Costello",
@@ -51239,11 +51215,10 @@
     },
     "galerie stratique|ambient": {
       "artist": "Galerie Stratique",
-      "album": "Ambient",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "album": "ambient",
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "gang of four|postpunk": {
       "artist": "Gang Of Four",
@@ -52011,10 +51986,9 @@
     "godspeed you black emperor|avantgarde": {
       "artist": "Godspeed You Black Emperor!",
       "album": "Avantgarde",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "godspeed you black emperor|faoo": {
       "artist": "Godspeed You Black Emperor!",
@@ -52029,10 +52003,9 @@
     "godspeed you black emperor|instrumental": {
       "artist": "Godspeed You! Black Emperor",
       "album": "Instrumental",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "godspeed you black emperor|other": {
       "artist": "Godspeed You Black Emperor!",
@@ -52496,10 +52469,9 @@
     "gravity kills|rap": {
       "artist": "Gravity Kills",
       "album": "Rap",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "gravity kills|rock": {
       "artist": "Gravity Kills",
@@ -53276,10 +53248,9 @@
     "hayden|meditative": {
       "artist": "Hayden",
       "album": "Meditative",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "hazlewood lee|rock": {
       "artist": "Hazlewood, Lee",
@@ -54510,10 +54481,9 @@
     "igor koshkendey|ethnic": {
       "artist": "Igor Koshkendey",
       "album": "Ethnic",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "illes|hayess vinyl vulture summer swap 2005": {
       "artist": "illes",
@@ -55695,10 +55665,9 @@
     "jessica bailiff|indie": {
       "artist": "Jessica Bailiff",
       "album": "Indie",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "jessica folker|other": {
       "artist": "Jessica Folker",
@@ -56019,10 +55988,9 @@
     "joe guy|jg48 monk and powell nice work if you can get it": {
       "artist": "Joe Guy",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "joe harriottjohn mayer double|jazzfunk": {
       "artist": "joe harriott/john mayer double",
@@ -56417,10 +56385,9 @@
     "johnny cash|unearthed volume five best o": {
       "artist": "Johnny Cash",
       "album": "Unearthed Volume Five. Best o",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "johnny cash|unearthed volume four my mot": {
       "artist": "Johnny Cash",
@@ -56685,10 +56652,9 @@
     "joshua abrams|avantgarde": {
       "artist": "Joshua Abrams",
       "album": "Avantgarde",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "journey men|little hits": {
       "artist": "Journey Men",
@@ -56849,10 +56815,9 @@
     "juliana hatfield|generation x": {
       "artist": "Juliana Hatfield",
       "album": "Generation X",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "julio black and gilles lavannant|monsoon wedding": {
       "artist": "Julio Black & Gilles Lavannant",
@@ -57263,10 +57228,9 @@
     "kari larne group|aminos vinyl vulture summer swap 2005": {
       "artist": "Kari Larne Group",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "karolinek|psychedelic rock": {
       "artist": "karolinek",
@@ -57419,10 +57383,9 @@
     "kenny clarke and his 52nd street boys|jg48 monk and powell nice work if you can get it": {
       "artist": "Kenny Clarke & His 52nd Street Boys",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "kenny rogers|blues": {
       "artist": "Kenny Rogers",
@@ -58155,10 +58118,9 @@
     "kyoto jazz massive|lofi": {
       "artist": "Kyoto Jazz Massive",
       "album": "Lo-Fi",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "la funk mob|trip hop": {
       "artist": "La Funk Mob",
@@ -58474,10 +58436,9 @@
     "lea laven|aminos vinyl vulture summer swap 2005": {
       "artist": "Lea Laven",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "leadbelly|the best of leadbelly": {
       "artist": "Leadbelly",
@@ -58856,10 +58817,9 @@
     "levynhvittjt yhtye solisteina pentti anis kullervo pellinen ja lauluyhtye pallilla kuiskaten|aminos vinyl vulture summer swap 2005": {
       "artist": "Levynh�vitt�j�t yhtye solisteina Pentti Anis, Kullervo Pellinen ja lauluyhtye Pallilla Kuiskaten",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "lewis black|the end of the universe": {
       "artist": "Lewis Black",
@@ -59645,10 +59605,9 @@
     "luca pirozzi|il maresciallo": {
       "artist": "Luca Pirozzi",
       "album": "Il Maresciallo",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "lucy street|other": {
       "artist": "Lucy Street",
@@ -60814,10 +60773,9 @@
     "medeski martin and wood|fusion": {
       "artist": "Medeski, Martin, And Wood",
       "album": "Fusion",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "meja|other": {
       "artist": "Meja",
@@ -60959,10 +60917,9 @@
     "mf doom remixes|special blends": {
       "artist": "MF Doom remixes",
       "album": "Special Blends",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "mf doom|mm food": {
       "artist": "MF Doom",
@@ -61514,10 +61471,9 @@
     "minutemen|alternative and punk": {
       "artist": "Minutemen",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "minutemen|punk rock": {
       "artist": "Minutemen",
@@ -61912,10 +61868,9 @@
     "modernist and bochum welt|eldar ep": {
       "artist": "Modernist & Bochum Welt",
       "album": "Eldar EP",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "modeselektor|weissmix": {
       "artist": "modeselektor",
@@ -62492,10 +62447,9 @@
     "mr bungle|psychedelic rock": {
       "artist": "Mr. Bungle",
       "album": "Psychedelic Rock",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "mr dibbs|djztripurbanrevolutionsme": {
       "artist": "Mr. Dibbs",
@@ -62650,10 +62604,9 @@
     "mr magic|wbls show": {
       "artist": "Mr Magic",
       "album": "WBLS Show",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "mr mister|top 40": {
       "artist": "mr mister",
@@ -63446,18 +63399,20 @@
     "nada surf|100 percent hits volume 21": {
       "artist": "Nada Surf",
       "album": "100 Percent Hits Volume 21",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "nada surf|let go 192": {
       "artist": "Nada Surf",
       "album": "Let Go (192)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "mbid": "70ee9eea-6c2d-428f-a044-4ef03612815e",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/ddef102811b246a4be11cdbaf638370b.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "nada surf|north sixth street": {
       "artist": "Nada Surf",
@@ -63669,10 +63624,9 @@
     "neil campbell|acid": {
       "artist": "Neil Campbell",
       "album": "Acid",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "neil diamond|oldies": {
       "artist": "Neil Diamond",
@@ -63848,10 +63802,9 @@
     "neutral milk hotel|alternative and punk": {
       "artist": "neutral milk hotel",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "neutral milk hotel|beauty": {
       "artist": "Neutral Milk Hotel",
@@ -63900,10 +63853,9 @@
     "neutral|lofi": {
       "artist": "Neutral",
       "album": "Lo-Fi",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "neu|neu 75": {
       "artist": "Neu!",
@@ -65203,10 +65155,9 @@
     "okay temiz|aminos vinyl vulture summer swap 2005": {
       "artist": "okay temiz",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "okayplayer|true notes vol 1": {
       "artist": "Okayplayer",
@@ -65368,11 +65319,10 @@
     },
     "opiate|ambient": {
       "artist": "Opiate",
-      "album": "Ambient",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "album": "ambient",
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "optimus rhyme|optimus rhyme": {
       "artist": "Optimus Rhyme",
@@ -65730,10 +65680,9 @@
     "owls|rockpop": {
       "artist": "Owls",
       "album": "Rock/Pop",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "oxes|thrash metal": {
       "artist": "oxes",
@@ -65843,18 +65792,16 @@
     "paris dernire|la musique de paris derniere vol 3": {
       "artist": "Paris Derni�re",
       "album": "La Musique de Paris Derniere, Vol. 3",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "paris dernire|la musique de paris derniere vol 4": {
       "artist": "Paris Derni�re",
       "album": "La Musique de Paris Derniere, Vol. 4",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "paris inc|serious beats 41 2cd": {
       "artist": "Paris Inc",
@@ -65956,10 +65903,9 @@
     "patsy cline|sound clip": {
       "artist": "Patsy Cline",
       "album": "Sound Clip",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "patterson hood|killers and stars": {
       "artist": "Patterson Hood",
@@ -66110,10 +66056,9 @@
     "pavement|alternative and punk": {
       "artist": "Pavement",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "pavement|cut your hair": {
       "artist": "Pavement",
@@ -66616,10 +66561,9 @@
     "pete yorn|power pop": {
       "artist": "Pete Yorn",
       "album": "Power Pop",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "peter gabriel|rock": {
       "artist": "Peter Gabriel",
@@ -68194,10 +68138,9 @@
     "pronoia|instrumental": {
       "artist": "Pronoia",
       "album": "Instrumental",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "propellerheads|decksandrumsandrockandroll": {
       "artist": "Propellerheads",
@@ -68425,10 +68368,9 @@
     "q and not u|x polination single": {
       "artist": "Q And Not U",
       "album": "X Polination Single",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "quantic feat aspects|hiphop": {
       "artist": "Quantic (Feat Aspects)",
@@ -68862,10 +68804,9 @@
     "radiohead|general alternative": {
       "artist": "Radiohead",
       "album": "General Alternative",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "radiohead|general rock": {
       "artist": "Radiohead",
@@ -69940,42 +69881,37 @@
     "rem|athens ga 111992 01": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 02": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 03": {
       "artist": "R.E.M.",
       "album": "Athens, Ga 11.19.92 (03)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 04": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 05": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 06": {
       "artist": "R.E.M.",
@@ -69987,34 +69923,30 @@
     "rem|athens ga 111992 07": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 08": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 09": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 10": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (10)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|athens ga 111992 11": {
       "artist": "R.E.M.",
@@ -70026,26 +69958,23 @@
     "rem|athens ga 111992 12": {
       "artist": "R.E.M.",
       "album": "Athens, GA 11.19.92 (12)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 01": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 02": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 03": {
       "artist": "R.E.M.",
@@ -70057,50 +69986,44 @@
     "rem|atlanta ga 051482 04": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 05": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 06": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 07": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 08": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 09": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 10": {
       "artist": "R.E.M.",
@@ -70119,26 +70042,23 @@
     "rem|atlanta ga 051482 12": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (12)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 13": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (13)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 14": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (14)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|atlanta ga 051482 15": {
       "artist": "R.E.M.",
@@ -70150,10 +70070,9 @@
     "rem|atlanta ga 051482 16": {
       "artist": "R.E.M.",
       "album": "Atlanta, GA - 05.14.82 (16)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|automatic for the people": {
       "artist": "R.E.M.",
@@ -70169,34 +70088,30 @@
     "rem|boca raton fl 092984 01": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 02": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 03": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 04": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 05": {
       "artist": "R.E.M.",
@@ -70215,58 +70130,51 @@
     "rem|boca raton fl 092984 07": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 08": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 09": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 10": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (10)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 11": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 12": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (12)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 13": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (13)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 14": {
       "artist": "R.E.M.",
@@ -70285,34 +70193,30 @@
     "rem|boca raton fl 092984 16": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (16)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|boca raton fl 092984 17": {
       "artist": "R.E.M.",
       "album": "Boca Raton, FL 09.29.84 (17)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 01": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 02": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 03": {
       "artist": "R.E.M.",
@@ -70331,42 +70235,37 @@
     "rem|chicago 070784 05": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 06": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 07": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 08": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 09": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 10": {
       "artist": "R.E.M.",
@@ -70378,50 +70277,44 @@
     "rem|chicago 070784 11": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 12": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (12)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 13": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (13)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 14": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (14)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 15": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chicago 070784 16": {
       "artist": "R.E.M.",
       "album": "Chicago 07.07.84 (16)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|chronic town": {
       "artist": "REM",
@@ -70502,18 +70395,16 @@
     "rem|hamburg germany 110298 01": {
       "artist": "R.E.M.",
       "album": "Hamburg, Germany 11.02.98 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|hamburg germany 110298 02": {
       "artist": "R.E.M.",
       "album": "Hamburg, Germany 11.02.98 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|hamburg germany 110298 03": {
       "artist": "R.E.M.",
@@ -70532,26 +70423,23 @@
     "rem|hamburg germany 110298 05": {
       "artist": "R.E.M.",
       "album": "Hamburg, Germany 11.02.98 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|hamburg germany 110298 06": {
       "artist": "R.E.M.",
       "album": "Hamburg, Germany 11.02.98 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|hamburg germany 110298 08": {
       "artist": "R.E.M.",
       "album": "Hamburg, Germany 11.02.98 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|hamburg germany 110298 11": {
       "artist": "R.E.M.",
@@ -70563,10 +70451,9 @@
     "rem|hamburg germany 110298 13": {
       "artist": "R.E.M.",
       "album": "Hamburg, Germany 11.02.98 (13)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|hamburg germany 110298 14": {
       "artist": "R.E.M.",
@@ -70636,10 +70523,9 @@
     "rem|london 102985 01": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 02": {
       "artist": "R.E.M.",
@@ -70651,74 +70537,65 @@
     "rem|london 102985 03": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 04": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 05": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 06": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 07": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 08": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 09": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 10": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (10)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 11": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 12": {
       "artist": "R.E.M.",
@@ -70730,26 +70607,23 @@
     "rem|london 102985 13": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (13)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 14": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (14)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 15": {
       "artist": "R.E.M.",
       "album": "London 10.29.85 (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|london 102985 16": {
       "artist": "R.E.M.",
@@ -70775,50 +70649,44 @@
     "rem|madison wi 042482 03": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 04": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 05": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 06": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 07": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 08": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 09": {
       "artist": "R.E.M.",
@@ -70830,26 +70698,23 @@
     "rem|madison wi 042482 10": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (10)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 11": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 12": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (12)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 13": {
       "artist": "R.E.M.",
@@ -70861,18 +70726,16 @@
     "rem|madison wi 042482 14": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (14)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 15": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|madison wi 042482 16": {
       "artist": "R.E.M.",
@@ -70884,10 +70747,9 @@
     "rem|madison wi 042482 17": {
       "artist": "R.E.M.",
       "album": "Madison, WI 04.24.82 (17)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|misc": {
       "artist": "REM",
@@ -70988,74 +70850,65 @@
     "rem|seattle wa 062784 01": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 02": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 03": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 04": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 05": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 06": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 07": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 08": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 09": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 10": {
       "artist": "R.E.M.",
@@ -71074,58 +70927,51 @@
     "rem|seattle wa 062784 12": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (12)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 13": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (13)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 14": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (14)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 15": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 16": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (16)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 17": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (17)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 18": {
       "artist": "R.E.M.",
       "album": "Seattle, WA 06.27.84 (18)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|seattle wa 062784 19": {
       "artist": "R.E.M.",
@@ -71151,26 +70997,23 @@
     "rem|toronto 070983 01": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (01)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 02": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 04": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 05": {
       "artist": "R.E.M.",
@@ -71189,42 +71032,37 @@
     "rem|toronto 070983 07": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 08": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 09": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 10": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (10)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 11": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 12": {
       "artist": "R.E.M.",
@@ -71250,50 +71088,44 @@
     "rem|toronto 070983 15": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 16": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (16)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 17": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (17)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 18": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (18)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto 070983 19": {
       "artist": "R.E.M.",
       "album": "Toronto - 07.09.83 (19)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|toronto ca 050991": {
       "artist": "R.E.M.",
       "album": "Toronto, CA - 05.09.91",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|unplugged 041091 01": {
       "artist": "R.E.M.",
@@ -71380,10 +71212,13 @@
     "rem|unplugged 041091 11": {
       "artist": "R.E.M.",
       "album": "Unplugged 04.10.91 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "mbid": "b97b61b2-a07f-48a5-820c-b1abdc2aa545",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/05791d68644f4756c790d0e848b301dc.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|up": {
       "artist": "R.E.M.",
@@ -71399,10 +71234,9 @@
     "rem|uplink bowery 102198 01": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|uplink bowery 102198 02": {
       "artist": "R.E.M.",
@@ -71414,18 +71248,16 @@
     "rem|uplink bowery 102198 03": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|uplink bowery 102198 04": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|uplink bowery 102198 05": {
       "artist": "R.E.M.",
@@ -71437,90 +71269,79 @@
     "rem|uplink bowery 102198 06": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|uplink bowery 102198 07": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|uplink bowery 102198 08": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|uplink bowery 102198 09": {
       "artist": "R.E.M.",
       "album": "Uplink -Bowery- 10.21.98 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 01": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 02": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 03": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 04": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (04)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 05": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 06": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (06)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 07": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 08": {
       "artist": "R.E.M.",
@@ -71532,34 +71353,30 @@
     "rem|utecht holland 0911487 09": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 10": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (10)",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 11": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (11)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 12": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (12)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 13": {
       "artist": "R.E.M.",
@@ -71571,18 +71388,16 @@
     "rem|utecht holland 0911487 14": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (14)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 15": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 16": {
       "artist": "R.E.M.",
@@ -71594,18 +71409,16 @@
     "rem|utecht holland 0911487 17": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (17)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 18": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (18)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 19": {
       "artist": "R.E.M.",
@@ -71631,42 +71444,46 @@
     "rem|utecht holland 0911487 22": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (22)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|utecht holland 0911487 23": {
       "artist": "R.E.M.",
       "album": "Utecht, Holland 091.14.87 (23)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 01": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (01)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 02": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (02)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 03": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (03)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 04": {
       "artist": "R.E.M.",
@@ -71681,10 +71498,12 @@
     "rem|vh1 storytellers 05": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (05)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 06": {
       "artist": "R.E.M.",
@@ -71699,26 +71518,32 @@
     "rem|vh1 storytellers 07": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (07)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 08": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (08)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 09": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (09)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 10": {
       "artist": "R.E.M.",
@@ -71750,26 +71575,32 @@
     "rem|vh1 storytellers 13": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (13)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 14": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (14)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "rem|vh1 storytellers 15": {
       "artist": "R.E.M.",
       "album": "VH1 Storytellers (15)",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/d0446ea3876840e6826de96cfb22b361.jpg",
+      "status": "ok",
+      "source": "lastfm",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z",
+      "lastSuccessAt": "2026-03-06T03:56:36Z"
     },
     "renee and renato|disco": {
       "artist": "Renee & Renato",
@@ -72628,10 +72459,9 @@
     "royal trux|rock and roll": {
       "artist": "Royal Trux",
       "album": "Rock & Roll",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "rpm|trip hop": {
       "artist": "RPM",
@@ -72729,10 +72559,9 @@
     "ry cooder|chvez ravine": {
       "artist": "Ry Cooder",
       "album": "Ch�vez Ravine",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "ryan adams|alternative": {
       "artist": "Ryan Adams",
@@ -74329,10 +74158,9 @@
     "sleaterkinney|rockpop": {
       "artist": "Sleater-Kinney",
       "album": "Rock/Pop",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "sleaterkinney|the woods": {
       "artist": "Sleater-Kinney",
@@ -74535,10 +74363,9 @@
     "smashing pumpkins|19930630 netherlands": {
       "artist": "Smashing Pumpkins",
       "album": "1993.06.30 Netherlands",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "smashing pumpkins|19931212 universal la": {
       "artist": "Smashing Pumpkins",
@@ -74946,10 +74773,9 @@
     "social distortion|old school punk": {
       "artist": "Social Distortion",
       "album": "Old School Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "social distortion|rock": {
       "artist": "Social Distortion",
@@ -75422,10 +75248,9 @@
     "soulset|aminos vinyl vulture summer swap 2005": {
       "artist": "Soulset",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "soulstice|mixed illusions": {
       "artist": "Soulstice",
@@ -76468,10 +76293,9 @@
     "stone temple pilost|no 4": {
       "artist": "Stone Temple Pilost",
       "album": "No. 4",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "stone temple pilots|acoustic type thing": {
       "artist": "Stone Temple Pilots",
@@ -77346,10 +77170,9 @@
     "susumi yokota|dream": {
       "artist": "Susumi Yokota",
       "album": "Dream",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "susumi yokota|sakura": {
       "artist": "Susumi Yokota",
@@ -79963,10 +79786,9 @@
     "the good life|rockpop": {
       "artist": "The Good Life",
       "album": "Rock/Pop",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the grace period|bekampa tramset": {
       "artist": "The Grace Period",
@@ -80052,10 +79874,10 @@
     "the herbaliser|time to build": {
       "artist": "The Herbaliser",
       "album": "Time to Build",
-      "status": "error",
-      "attempts": 1,
-      "lastAttemptAt": "2026-02-17T13:23:14Z",
-      "errorMessage": "last.fm api error 8: Operation failed - Most likely the backend service failed. Please try again."
+      "mbid": "015d847e-04bc-46af-91d4-79f541297256",
+      "status": "not_found",
+      "attempts": 2,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the high llamas|pop": {
       "artist": "The High Llamas",
@@ -80108,10 +79930,9 @@
     "the hives|rock and roll": {
       "artist": "The Hives",
       "album": "Rock & Roll",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the holy ghost|color sympathy": {
       "artist": "The Holy Ghost",
@@ -80418,10 +80239,9 @@
     "the knife|hannah med h soundtrack": {
       "artist": "The Knife",
       "album": "Hannah med H\" -soundtrack",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the langley schools music project|innocence and despair": {
       "artist": "The Langley Schools Music Project",
@@ -81099,10 +80919,9 @@
     "the pogues|rock and roll": {
       "artist": "The Pogues",
       "album": "Rock & Roll",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the point fives|little hits": {
       "artist": "The Point Fives",
@@ -81771,10 +81590,9 @@
     "the streets ftkano donaeo lady sovereign and tinchy stryder|run the road": {
       "artist": "The Streets Ft.Kano, Donae'O, Lady Sovereign, & Tinchy Stryder",
       "album": "Run the Road",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the streets|grand dont come for free": {
       "artist": "The Streets",
@@ -82202,10 +82020,9 @@
     "the waterboys|disco": {
       "artist": "The Waterboys",
       "album": "Disco",
-      "status": "error",
-      "attempts": 2,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 3,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "the weekend|the weekend": {
       "artist": "The Weekend",
@@ -82470,26 +82287,23 @@
     "thelonious monk quintet|jg48 monk and powell nice work if you can get it": {
       "artist": "Thelonious Monk Quintet",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "thelonious monk sextet|jg48 monk and powell nice work if you can get it": {
       "artist": "Thelonious Monk Sextet",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "thelonious monk trio|jg48 monk and powell nice work if you can get it": {
       "artist": "Thelonious Monk Trio",
       "album": "JG48 Monk & Powell - Nice Work If You Can Get It",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "thelonious monk|jazz": {
       "artist": "Thelonious Monk",
@@ -82902,10 +82716,9 @@
     "tim obrien|arttus old time by j karjalainen": {
       "artist": "Tim O'Brien",
       "album": "Arttu's Old Time by J. Karjalainen",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "tim obrien|songs from the mountain": {
       "artist": "Tim O'Brien",
@@ -83097,10 +82910,9 @@
     "tom waits|cabaret": {
       "artist": "Tom Waits",
       "album": "Cabaret",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "tom waits|closing time": {
       "artist": "Tom Waits",
@@ -83116,10 +82928,9 @@
     "tom waits|folkrock": {
       "artist": "Tom Waits",
       "album": "Folk-Rock",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "tom waits|franks wild years": {
       "artist": "Tom Waits",
@@ -84347,10 +84158,9 @@
     "uncle tupelo|alternative and punk": {
       "artist": "Uncle Tupelo",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "uncle tupelo|alternative country": {
       "artist": "Uncle Tupelo",
@@ -84372,10 +84182,9 @@
     "uncle tupelo|lounge ax chicago 2593": {
       "artist": "Uncle Tupelo",
       "album": "Lounge Ax, Chicago  2/5/93",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "uncle tupelo|march 1620 1992 remastered": {
       "artist": "Uncle Tupelo",
@@ -84635,10 +84444,9 @@
     "utopia|aminos vinyl vulture summer swap 2005": {
       "artist": "Utopia",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "uusi fantasia|top ten suomalaiset people erikoisversio": {
       "artist": "Uusi Fantasia",
@@ -84668,10 +84476,9 @@
     "va mixed by dave stelfox|the real dancehall rock": {
       "artist": "v/a, mixed by dave stelfox",
       "album": "the real dancehall rock",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "van criburn|collection mozart debussy barber": {
       "artist": "Van Criburn",
@@ -85303,10 +85110,9 @@
     "vesamatti loiri|aminos vinyl vulture summer swap 2005": {
       "artist": "Vesa-Matti Loiri",
       "album": "Amino's Vinyl Vulture Summer Swap 2005",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "vetiver|the golden apples of the sun": {
       "artist": "Vetiver",
@@ -85370,10 +85176,9 @@
     "vincent gallo|dream": {
       "artist": "Vincent Gallo",
       "album": "Dream",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "vincent gallo|recordings of music for filma": {
       "artist": "Vincent Gallo",
@@ -85423,10 +85228,9 @@
     "violent femmes|alternative and punk": {
       "artist": "Violent Femmes",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "violent femmes|hallowed ground": {
       "artist": "Violent Femmes",
@@ -86471,10 +86275,9 @@
     "yo la tengo|alternative and punk": {
       "artist": "Yo La Tengo",
       "album": "Alternative & Punk",
-      "status": "error",
-      "attempts": 3,
-      "lastAttemptAt": "2026-02-16T14:54:34Z",
-      "errorMessage": "http 404 from last.fm: {\"message\":\"Album not found\",\"error\":6}"
+      "status": "not_found",
+      "attempts": 4,
+      "lastAttemptAt": "2026-03-06T03:56:36Z"
     },
     "yo la tengo|and then nothing turned itself inside out": {
       "artist": "Yo La Tengo",

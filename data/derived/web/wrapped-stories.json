@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T14:01:16Z",
+  "generatedAt": "2026-03-06T03:55:56Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -821,6 +821,7 @@
           "2004 had 0 scrobbles across 0 unique tracks; 2005 had 3532 scrobbles across 2604 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
           "Novelty shifted from 0.000 to 0.726; diversity entropy shifted from 0.000 to 0.988.",
+          "Era Similarity Index: 2.86/100 (confidence 0.000).",
           "Strongest rising track: Art Tatum - You Took Advantage of Me (delta 0.016 plays/day)."
         ],
         "diversityCurrent": 0.9879,
@@ -1715,6 +1716,7 @@
           "2005 had 3532 scrobbles across 2604 unique tracks; 2006 had 2510 scrobbles across 2228 unique tracks.",
           "Artist overlap (Jaccard) was 0.308 and track overlap was 0.144.",
           "Novelty shifted from 0.726 to 0.887; diversity entropy shifted from 0.988 to 0.995.",
+          "Era Similarity Index: 44.74/100 (confidence 0.625).",
           "Strongest rising track: The Postal Service - Nothing Better (delta 0.011 plays/day)."
         ],
         "diversityCurrent": 0.9946,
@@ -2872,6 +2874,7 @@
           "2006 had 2510 scrobbles across 2228 unique tracks; 2007 had 6790 scrobbles across 4856 unique tracks.",
           "Artist overlap (Jaccard) was 0.211 and track overlap was 0.057.",
           "Novelty shifted from 0.887 to 0.784; diversity entropy shifted from 0.995 to 0.979.",
+          "Era Similarity Index: 38.02/100 (confidence 0.675).",
           "Strongest rising track: Low - In The Drugs (delta 0.088 plays/day)."
         ],
         "diversityCurrent": 0.9789,
@@ -4029,6 +4032,7 @@
           "2007 had 6790 scrobbles across 4856 unique tracks; 2008 had 8462 scrobbles across 6252 unique tracks.",
           "Artist overlap (Jaccard) was 0.248 and track overlap was 0.127.",
           "Novelty shifted from 0.784 to 0.796; diversity entropy shifted from 0.979 to 0.981.",
+          "Era Similarity Index: 44.41/100 (confidence 0.961).",
           "Strongest rising track: Nine Inch Nails - 35 Ghosts IV (delta 0.068 plays/day)."
         ],
         "diversityCurrent": 0.9805,
@@ -5186,6 +5190,7 @@
           "2008 had 8462 scrobbles across 6252 unique tracks; 2009 had 6475 scrobbles across 5185 unique tracks.",
           "Artist overlap (Jaccard) was 0.268 and track overlap was 0.088.",
           "Novelty shifted from 0.796 to 0.842; diversity entropy shifted from 0.981 to 0.988.",
+          "Era Similarity Index: 43.77/100 (confidence 0.953).",
           "Strongest rising track: MGMT - Electric Feel (delta 0.033 plays/day)."
         ],
         "diversityCurrent": 0.9877,
@@ -6343,6 +6348,7 @@
           "2009 had 6475 scrobbles across 5185 unique tracks; 2010 had 5166 scrobbles across 3736 unique tracks.",
           "Artist overlap (Jaccard) was 0.235 and track overlap was 0.072.",
           "Novelty shifted from 0.842 to 0.811; diversity entropy shifted from 0.988 to 0.976.",
+          "Era Similarity Index: 41.06/100 (confidence 0.960).",
           "Strongest rising track: Helmet - Renovation (delta 0.142 plays/day)."
         ],
         "diversityCurrent": 0.9756,
@@ -7510,6 +7516,7 @@
           "2010 had 5166 scrobbles across 3736 unique tracks; 2011 had 8622 scrobbles across 6002 unique tracks.",
           "Artist overlap (Jaccard) was 0.250 and track overlap was 0.095.",
           "Novelty shifted from 0.811 to 0.781; diversity entropy shifted from 0.976 to 0.976.",
+          "Era Similarity Index: 42.54/100 (confidence 0.920).",
           "Strongest rising track: Massive Attack - Paradise Circus (delta 0.049 plays/day)."
         ],
         "diversityCurrent": 0.9765,
@@ -8677,6 +8684,7 @@
           "2011 had 8622 scrobbles across 6002 unique tracks; 2012 had 4049 scrobbles across 2666 unique tracks.",
           "Artist overlap (Jaccard) was 0.125 and track overlap was 0.095.",
           "Novelty shifted from 0.781 to 0.763; diversity entropy shifted from 0.976 to 0.968.",
+          "Era Similarity Index: 38.90/100 (confidence 0.818).",
           "Strongest rising track: Lana Del Rey - Blue Jeans (delta 0.041 plays/day)."
         ],
         "diversityCurrent": 0.9683,
@@ -9834,6 +9842,7 @@
           "2012 had 4049 scrobbles across 2666 unique tracks; 2013 had 3614 scrobbles across 2733 unique tracks.",
           "Artist overlap (Jaccard) was 0.139 and track overlap was 0.086.",
           "Novelty shifted from 0.763 to 0.802; diversity entropy shifted from 0.968 to 0.983.",
+          "Era Similarity Index: 37.40/100 (confidence 0.792).",
           "Strongest rising track: Amor de Días - Day (delta 0.022 plays/day)."
         ],
         "diversityCurrent": 0.9834,
@@ -11001,6 +11010,7 @@
           "2013 had 3614 scrobbles across 2733 unique tracks; 2014 had 4167 scrobbles across 2927 unique tracks.",
           "Artist overlap (Jaccard) was 0.204 and track overlap was 0.086.",
           "Novelty shifted from 0.802 to 0.835; diversity entropy shifted from 0.983 to 0.962.",
+          "Era Similarity Index: 39.36/100 (confidence 0.796).",
           "Strongest rising track: alt-J - Fitzpleasure (delta 0.066 plays/day)."
         ],
         "diversityCurrent": 0.9617,
@@ -12168,6 +12178,7 @@
           "2014 had 4167 scrobbles across 2927 unique tracks; 2015 had 4684 scrobbles across 3095 unique tracks.",
           "Artist overlap (Jaccard) was 0.176 and track overlap was 0.083.",
           "Novelty shifted from 0.835 to 0.802; diversity entropy shifted from 0.962 to 0.961.",
+          "Era Similarity Index: 38.87/100 (confidence 0.886).",
           "Strongest rising track: A Perfect Circle - Imagine (delta 0.036 plays/day)."
         ],
         "diversityCurrent": 0.9606,
@@ -13360,6 +13371,7 @@
           "2015 had 4684 scrobbles across 3095 unique tracks; 2016 had 8856 scrobbles across 4323 unique tracks.",
           "Artist overlap (Jaccard) was 0.187 and track overlap was 0.087.",
           "Novelty shifted from 0.802 to 0.620; diversity entropy shifted from 0.961 to 0.952.",
+          "Era Similarity Index: 38.28/100 (confidence 0.880).",
           "Strongest rising track: The Shins - New Slang (When You Notice the Stripes) (delta 0.093 plays/day)."
         ],
         "diversityCurrent": 0.9521,
@@ -14517,6 +14529,7 @@
           "2016 had 8856 scrobbles across 4323 unique tracks; 2017 had 2082 scrobbles across 1410 unique tracks.",
           "Artist overlap (Jaccard) was 0.095 and track overlap was 0.061.",
           "Novelty shifted from 0.620 to 0.784; diversity entropy shifted from 0.952 to 0.968.",
+          "Era Similarity Index: 34.78/100 (confidence 0.614).",
           "Strongest rising track: The Dandy Warhols - Bohemian Like You (delta 0.019 plays/day)."
         ],
         "diversityCurrent": 0.9682,
@@ -15701,6 +15714,7 @@
           "2017 had 2082 scrobbles across 1410 unique tracks; 2018 had 3327 scrobbles across 2054 unique tracks.",
           "Artist overlap (Jaccard) was 0.125 and track overlap was 0.089.",
           "Novelty shifted from 0.784 to 0.739; diversity entropy shifted from 0.968 to 0.953.",
+          "Era Similarity Index: 37.15/100 (confidence 0.558).",
           "Strongest rising track: Helmet - Speechless (delta 0.120 plays/day)."
         ],
         "diversityCurrent": 0.9534,
@@ -16961,6 +16975,7 @@
           "2018 had 3327 scrobbles across 2054 unique tracks; 2019 had 3798 scrobbles across 2430 unique tracks.",
           "Artist overlap (Jaccard) was 0.162 and track overlap was 0.090.",
           "Novelty shifted from 0.739 to 0.735; diversity entropy shifted from 0.953 to 0.969.",
+          "Era Similarity Index: 39.23/100 (confidence 0.745).",
           "Strongest rising track: TOOL - Eulogy (delta 0.049 plays/day)."
         ],
         "diversityCurrent": 0.969,
@@ -18145,6 +18160,7 @@
           "2019 had 3798 scrobbles across 2430 unique tracks; 2020 had 4897 scrobbles across 3285 unique tracks.",
           "Artist overlap (Jaccard) was 0.161 and track overlap was 0.104.",
           "Novelty shifted from 0.735 to 0.772; diversity entropy shifted from 0.969 to 0.969.",
+          "Era Similarity Index: 38.72/100 (confidence 0.851).",
           "Strongest rising track: Crumb - Nina (delta 0.046 plays/day)."
         ],
         "diversityCurrent": 0.9693,
@@ -19348,6 +19364,7 @@
           "2020 had 4897 scrobbles across 3285 unique tracks; 2021 had 4188 scrobbles across 2950 unique tracks.",
           "Artist overlap (Jaccard) was 0.212 and track overlap was 0.104.",
           "Novelty shifted from 0.772 to 0.764; diversity entropy shifted from 0.969 to 0.979.",
+          "Era Similarity Index: 41.85/100 (confidence 0.898).",
           "Strongest rising track: Holly Herndon - Frontier (delta 0.052 plays/day)."
         ],
         "diversityCurrent": 0.979,
@@ -20589,6 +20606,7 @@
           "2021 had 4188 scrobbles across 2950 unique tracks; 2022 had 3321 scrobbles across 2335 unique tracks.",
           "Artist overlap (Jaccard) was 0.150 and track overlap was 0.079.",
           "Novelty shifted from 0.764 to 0.744; diversity entropy shifted from 0.979 to 0.980.",
+          "Era Similarity Index: 38.89/100 (confidence 0.759).",
           "Strongest rising track: Crumb - Ghostride (delta 0.027 plays/day)."
         ],
         "diversityCurrent": 0.98,
@@ -21849,6 +21867,7 @@
           "2022 had 3321 scrobbles across 2335 unique tracks; 2023 had 4699 scrobbles across 2662 unique tracks.",
           "Artist overlap (Jaccard) was 0.142 and track overlap was 0.078.",
           "Novelty shifted from 0.744 to 0.672; diversity entropy shifted from 0.980 to 0.961.",
+          "Era Similarity Index: 36.31/100 (confidence 0.783).",
           "Strongest rising track: FKJ - Ylang Ylang (delta 0.156 plays/day)."
         ],
         "diversityCurrent": 0.961,
@@ -23109,6 +23128,7 @@
           "2023 had 4699 scrobbles across 2662 unique tracks; 2024 had 7550 scrobbles across 4347 unique tracks.",
           "Artist overlap (Jaccard) was 0.166 and track overlap was 0.070.",
           "Novelty shifted from 0.672 to 0.667; diversity entropy shifted from 0.961 to 0.968.",
+          "Era Similarity Index: 38.30/100 (confidence 0.900).",
           "Strongest rising track: Paul McCartney - Live And Let Die - Main Title (delta 0.076 plays/day)."
         ],
         "diversityCurrent": 0.9683,
@@ -24444,6 +24464,7 @@
           "2024 had 7550 scrobbles across 4347 unique tracks; 2025 had 8449 scrobbles across 4163 unique tracks.",
           "Artist overlap (Jaccard) was 0.237 and track overlap was 0.136.",
           "Novelty shifted from 0.667 to 0.508; diversity entropy shifted from 0.968 to 0.970.",
+          "Era Similarity Index: 41.97/100 (confidence 0.979).",
           "Strongest rising track: Beach House - Myth (delta 0.044 plays/day)."
         ],
         "diversityCurrent": 0.97,
@@ -24791,15 +24812,15 @@
             "count": 8
           },
           {
+            "artist": "Lime Garden",
+            "count": 5
+          },
+          {
             "artist": "Marty Stuart",
             "count": 5
           },
           {
             "artist": "Elizabeth Fraser",
-            "count": 4
-          },
-          {
-            "artist": "Lime Garden",
             "count": 4
           },
           {
@@ -24882,8 +24903,8 @@
         "period": "Discovery",
         "source": "all",
         "summary": {
-          "newArtistCount": 92,
-          "newTrackCount": 355
+          "newArtistCount": 113,
+          "newTrackCount": 422
         }
       },
       "discoveryBaseline": "global",
@@ -24904,11 +24925,11 @@
         "summary": {
           "dormantReturnedArtistCount": 5,
           "dormantReturnedTrackCount": 6,
-          "matchRateInScope": 0.2384,
-          "matchedScrobblesInScope": 26455,
+          "matchRateInScope": 0.238,
+          "matchedScrobblesInScope": 26463,
           "resultsReturned": 5,
           "returnPeriodDays": 365,
-          "totalScrobblesInScope": 110984
+          "totalScrobblesInScope": 111184
         },
         "topDormantReturns": [
           {
@@ -25011,10 +25032,10 @@
         ]
       },
       "insightBullets": [
-        "You logged 1746 plays in 2026 across 41 active days.",
+        "You logged 1946 plays in 2026 across 53 active days.",
         "Top artist: Radiohead (59 plays).",
-        "You discovered 92 new artists and 355 new tracks.",
-        "58% of plays happened at night (10pm-6am, UTC)."
+        "You discovered 113 new artists and 422 new tracks.",
+        "59% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
         "discoveryBaseline": "global",
@@ -25026,14 +25047,14 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "41 active days (42.59 plays per active day)",
-          "headline": "1746 plays",
+          "detail": "53 active days (36.72 plays per active day)",
+          "headline": "1946 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this year",
-          "headline": "lastfm 62% (1083) · spotify 38% (663)",
+          "headline": "lastfm 66% (1283) · spotify 34% (663)",
           "id": "source_mix",
           "title": "Source Mix"
         },
@@ -25050,8 +25071,8 @@
           "title": "Top Track"
         },
         {
-          "detail": "355 new tracks first heard in 2026",
-          "headline": "92 new artists",
+          "detail": "422 new tracks first heard in 2026",
+          "headline": "113 new artists",
           "id": "discovery",
           "title": "Discovery"
         },
@@ -25169,13 +25190,13 @@
         ],
         "sourceBreakdown": [
           {
-            "count": 1083,
-            "share": 0.6203,
+            "count": 1283,
+            "share": 0.6593,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.3797,
+            "share": 0.3407,
             "source": "spotify"
           }
         ],
@@ -25195,23 +25216,23 @@
           },
           "longestTrackRun": {
             "artist": "Alabaster Deplume",
-            "count": 3,
-            "durationMinutes": 4531.88,
+            "count": 4,
+            "durationMinutes": 4537.35,
             "end": "2026-01-09T21:37:08Z",
-            "start": "2026-01-06T18:05:15Z",
+            "start": "2026-01-06T17:59:47Z",
             "track": "I Hope",
             "trackNormKey": "alabaster deplume|i hope"
           }
         },
         "summary": {
-          "activeDays": 41,
-          "avgSessionMinutes": 58.57,
-          "avgTracksPerSession": 22.65,
+          "activeDays": 53,
+          "avgSessionMinutes": 54.13,
+          "avgTracksPerSession": 19.84,
           "maxDailyPlays": 214,
-          "medianDailyPlays": 29,
-          "nightPlayShare": 0.5808,
-          "totalScrobbles": 1746,
-          "totalSessions": 77
+          "medianDailyPlays": 23,
+          "nightPlayShare": 0.591,
+          "totalScrobbles": 1946,
+          "totalSessions": 98
         },
         "topBurstDays": [
           {
@@ -25689,29 +25710,29 @@
         ]
       },
       "summary": {
-        "activeDays": 41,
+        "activeDays": 53,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 1083,
-        "estimatedTotalMinutes": 6371.59,
+        "estimatedFromNonSpotify": 1283,
+        "estimatedTotalMinutes": 7071.59,
         "measuredSpotifyMinutes": 2581.09,
-        "nightPlayShare": 0.5808,
-        "playsPerActiveDay": 42.59,
+        "nightPlayShare": 0.591,
+        "playsPerActiveDay": 36.72,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 1083,
-            "share": 0.6203,
+            "count": 1283,
+            "share": 0.6593,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.3797,
+            "share": 0.3407,
             "source": "spotify"
           }
         ],
-        "totalScrobbles": 1746,
-        "uniqueArtists": 448,
-        "uniqueTracks": 906
+        "totalScrobbles": 1946,
+        "uniqueArtists": 524,
+        "uniqueTracks": 1036
       },
       "topArtists": [
         {
@@ -25724,35 +25745,35 @@
         },
         {
           "artist": "Khruangbin",
-          "count": 43
+          "count": 46
         },
         {
           "artist": "Beach House",
           "count": 36
         },
         {
+          "artist": "Wet Leg",
+          "count": 33
+        },
+        {
           "artist": "Men I Trust",
           "count": 31
+        },
+        {
+          "artist": "Portishead",
+          "count": 30
         },
         {
           "artist": "A Perfect Circle",
           "count": 29
         },
         {
+          "artist": "PJ Harvey",
+          "count": 29
+        },
+        {
           "artist": "Allah-Las",
           "count": 28
-        },
-        {
-          "artist": "Portishead",
-          "count": 26
-        },
-        {
-          "artist": "Wet Leg",
-          "count": 26
-        },
-        {
-          "artist": "PJ Harvey",
-          "count": 25
         }
       ],
       "topTracks": [
@@ -25777,6 +25798,16 @@
           "track": "Track X"
         },
         {
+          "artist": "Wet Leg",
+          "count": 7,
+          "track": "mangetout"
+        },
+        {
+          "artist": "Wet Leg",
+          "count": 7,
+          "track": "pokemon"
+        },
+        {
           "artist": "Allah-Las",
           "count": 6,
           "track": "Raspberry Jam"
@@ -25795,41 +25826,32 @@
           "artist": "The Smile",
           "count": 6,
           "track": "The Smoke"
-        },
-        {
-          "artist": "Wet Leg",
-          "count": 6,
-          "track": "pokemon"
-        },
-        {
-          "artist": "Beach House",
-          "count": 5,
-          "track": "Drunk in LA"
         }
       ],
       "year": 2026,
       "yearOverYear": {
-        "artistOverlapJaccard": 0.1237,
+        "artistOverlapJaccard": 0.1414,
         "comparisonBulletPoints": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.124 and track overlap was 0.073.",
-          "Novelty shifted from 0.508 to 0.327; diversity entropy shifted from 0.970 to 0.984.",
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.141 and track overlap was 0.079.",
+          "Novelty shifted from 0.508 to 0.369; diversity entropy shifted from 0.970 to 0.983.",
+          "Era Similarity Index: 34.98/100 (confidence 0.602).",
           "Strongest rising track: Black Country, New Road - Track X (delta 0.019 plays/day)."
         ],
-        "diversityCurrent": 0.9839,
+        "diversityCurrent": 0.9832,
         "diversityPrev": 0.97,
         "genreShift": [
           {
-            "delta": -0.2822,
+            "delta": -0.2767,
             "genre": "Rock",
             "rateA": 0.3233,
-            "rateB": 0.0411
+            "rateB": 0.0466
           },
           {
-            "delta": -0.0822,
+            "delta": -0.0795,
             "genre": "Pop",
             "rateA": 0.0877,
-            "rateB": 0.0055
+            "rateB": 0.0082
           },
           {
             "delta": -0.0685,
@@ -25856,16 +25878,16 @@
             "rateB": 0.0055
           },
           {
-            "delta": -0.0411,
+            "delta": -0.0384,
             "genre": "Alternative",
             "rateA": 0.0575,
-            "rateB": 0.0164
+            "rateB": 0.0192
           },
           {
-            "delta": -0.0384,
+            "delta": -0.0356,
             "genre": "Other",
             "rateA": 0.0767,
-            "rateB": 0.0384
+            "rateB": 0.0411
           },
           {
             "delta": -0.0164,
@@ -25880,7 +25902,7 @@
             "rateB": 0
           }
         ],
-        "noveltyRateCurrent": 0.3267,
+        "noveltyRateCurrent": 0.3687,
         "noveltyRatePrevious": 0.5076,
         "persistentFavorites": [
           {
@@ -25900,6 +25922,22 @@
             "track": "Lazuli"
           },
           {
+            "artist": "Wet Leg",
+            "countA": 6,
+            "countB": 7,
+            "rateA": 0.0164,
+            "rateB": 0.0192,
+            "track": "mangetout"
+          },
+          {
+            "artist": "Broadcast",
+            "countA": 5,
+            "countB": 5,
+            "rateA": 0.0137,
+            "rateB": 0.0137,
+            "track": "Come on Let's Go"
+          },
+          {
             "artist": "Men I Trust",
             "countA": 11,
             "countB": 5,
@@ -25908,12 +25946,12 @@
             "track": "Say, Can You Hear"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 6,
+            "artist": "Nilüfer Yanya",
+            "countA": 8,
             "countB": 5,
-            "rateA": 0.0164,
+            "rateA": 0.0219,
             "rateB": 0.0137,
-            "track": "mangetout"
+            "track": "Like I Say (I runaway)"
           },
           {
             "artist": "Alabaster DePlume",
@@ -25940,28 +25978,12 @@
             "track": "Roygbiv"
           },
           {
-            "artist": "Broadcast",
-            "countA": 5,
-            "countB": 4,
-            "rateA": 0.0137,
-            "rateB": 0.011,
-            "track": "Come on Let's Go"
-          },
-          {
             "artist": "Crumb",
             "countA": 9,
             "countB": 4,
             "rateA": 0.0247,
             "rateB": 0.011,
             "track": "Ghostride"
-          },
-          {
-            "artist": "Freak Slug",
-            "countA": 4,
-            "countB": 6,
-            "rateA": 0.011,
-            "rateB": 0.0164,
-            "track": "Care"
           }
         ],
         "previousYear": 2025,
@@ -26086,6 +26108,24 @@
             "track": "Star"
           },
           {
+            "artist": "Wet Leg",
+            "countA": 2,
+            "countB": 7,
+            "delta": 0.0137,
+            "rateA": 0.0055,
+            "rateB": 0.0192,
+            "track": "pokemon"
+          },
+          {
+            "artist": "Mannequin Pussy",
+            "countA": 0,
+            "countB": 5,
+            "delta": 0.0137,
+            "rateA": 0,
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
+          },
+          {
             "artist": "No Vacation",
             "countA": 0,
             "countB": 5,
@@ -26129,27 +26169,9 @@
             "rateA": 0,
             "rateB": 0.011,
             "track": "Pitch The Baby"
-          },
-          {
-            "artist": "Ghostwoman",
-            "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
-            "rateA": 0,
-            "rateB": 0.011,
-            "track": "The End Of A Gun"
-          },
-          {
-            "artist": "Her's",
-            "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
-            "rateA": 0,
-            "rateB": 0.011,
-            "track": "Under Wraps"
           }
         ],
-        "trackOverlapJaccard": 0.073
+        "trackOverlapJaccard": 0.0789
       }
     }
   },

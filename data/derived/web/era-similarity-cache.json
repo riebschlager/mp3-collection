@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T03:06:37Z",
+  "generatedAt": "2026-03-06T03:54:32Z",
   "years": [
     2005,
     2006,
@@ -56,7 +56,7 @@
         28.78,
         29.63,
         27.26,
-        23.49
+        24.1
       ],
       [
         44.74,
@@ -80,7 +80,7 @@
         29.91,
         30.64,
         28.43,
-        23.27
+        23.96
       ],
       [
         32.69,
@@ -104,7 +104,7 @@
         32.63,
         32.47,
         31.1,
-        25.33
+        26.14
       ],
       [
         32.11,
@@ -128,7 +128,7 @@
         32.6,
         32.63,
         30.5,
-        24.51
+        25.28
       ],
       [
         33.04,
@@ -152,7 +152,7 @@
         32.47,
         32.52,
         30.13,
-        24.48
+        25.32
       ],
       [
         31.7,
@@ -176,7 +176,7 @@
         32.7,
         32.62,
         31.45,
-        25.14
+        26.02
       ],
       [
         30.82,
@@ -200,7 +200,7 @@
         33.56,
         34.06,
         32.57,
-        25.89
+        26.79
       ],
       [
         30.3,
@@ -224,7 +224,7 @@
         32,
         32.88,
         30.95,
-        25.97
+        26.78
       ],
       [
         30.33,
@@ -248,7 +248,7 @@
         32.47,
         31.89,
         30.95,
-        25.71
+        26.42
       ],
       [
         27.62,
@@ -272,7 +272,7 @@
         30.33,
         30.34,
         28.24,
-        24.99
+        25.75
       ],
       [
         28.54,
@@ -296,7 +296,7 @@
         31.81,
         31.66,
         30.93,
-        25.37
+        26.36
       ],
       [
         29.08,
@@ -320,7 +320,7 @@
         33.04,
         34.16,
         32.85,
-        27.35
+        28.26
       ],
       [
         28.61,
@@ -344,7 +344,7 @@
         31.41,
         31.01,
         29.6,
-        26.96
+        27.49
       ],
       [
         29.15,
@@ -368,7 +368,7 @@
         34.66,
         33.23,
         32.25,
-        26.96
+        27.78
       ],
       [
         29.01,
@@ -392,7 +392,7 @@
         33.21,
         34.18,
         31.67,
-        27.68
+        28.32
       ],
       [
         29.86,
@@ -416,7 +416,7 @@
         36.06,
         37.22,
         34.81,
-        28.46
+        29.48
       ],
       [
         29.95,
@@ -440,7 +440,7 @@
         36.61,
         35.94,
         35.03,
-        27.26
+        28.33
       ],
       [
         29.83,
@@ -464,7 +464,7 @@
         36.31,
         34.85,
         33.4,
-        27.02
+        27.93
       ],
       [
         28.78,
@@ -488,7 +488,7 @@
         100,
         38.3,
         37.47,
-        30.85
+        31.63
       ],
       [
         29.63,
@@ -512,7 +512,7 @@
         38.3,
         100,
         41.97,
-        30.22
+        31.63
       ],
       [
         27.26,
@@ -536,30 +536,30 @@
         37.47,
         41.97,
         100,
-        33.54
+        34.98
       ],
       [
-        23.49,
-        23.27,
-        25.33,
-        24.51,
-        24.48,
-        25.14,
-        25.89,
-        25.97,
-        25.71,
-        24.99,
-        25.37,
-        27.35,
-        26.96,
-        26.96,
-        27.68,
-        28.46,
-        27.26,
-        27.02,
-        30.85,
-        30.22,
-        33.54,
+        24.1,
+        23.96,
+        26.14,
+        25.28,
+        25.32,
+        26.02,
+        26.79,
+        26.78,
+        26.42,
+        25.75,
+        26.36,
+        28.26,
+        27.49,
+        27.78,
+        28.32,
+        29.48,
+        28.33,
+        27.93,
+        31.63,
+        31.63,
+        34.98,
         100
       ]
     ],
@@ -586,7 +586,7 @@
         2.86,
         2.86,
         28.83,
-        26.67
+        27.26
       ],
       [
         44.74,
@@ -610,7 +610,7 @@
         1.19,
         1.19,
         30.94,
-        28.57
+        28.67
       ],
       [
         32.69,
@@ -634,7 +634,7 @@
         2.37,
         2.37,
         32.69,
-        29.45
+        30.4
       ],
       [
         32.11,
@@ -658,7 +658,7 @@
         2.24,
         2.24,
         32.88,
-        29
+        29.88
       ],
       [
         33.04,
@@ -682,7 +682,7 @@
         1.71,
         1.71,
         32.27,
-        29.66
+        30.1
       ],
       [
         31.7,
@@ -706,7 +706,7 @@
         2.13,
         2.13,
         33.29,
-        29.81
+        30.74
       ],
       [
         30.82,
@@ -730,7 +730,7 @@
         2.42,
         2.42,
         34.43,
-        29.92
+        30.94
       ],
       [
         30.29,
@@ -754,7 +754,7 @@
         2.69,
         2.69,
         33.27,
-        29.62
+        30.56
       ],
       [
         30.33,
@@ -778,7 +778,7 @@
         2.15,
         2.15,
         34.09,
-        30.38
+        31.11
       ],
       [
         27.65,
@@ -802,7 +802,7 @@
         2.04,
         2.04,
         30.67,
-        30.13
+        30.42
       ],
       [
         28.52,
@@ -826,7 +826,7 @@
         2.31,
         2.31,
         33.37,
-        30.01
+        30.86
       ],
       [
         27.36,
@@ -850,7 +850,7 @@
         1.59,
         1.59,
         31,
-        29.73
+        30.18
       ],
       [
         2.86,
@@ -874,7 +874,7 @@
         20,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -898,7 +898,7 @@
         20,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -922,7 +922,7 @@
         20,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -946,7 +946,7 @@
         20,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -970,7 +970,7 @@
         20,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -994,7 +994,7 @@
         20,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -1018,7 +1018,7 @@
         100,
         20,
         2.41,
-        1.79
+        2.07
       ],
       [
         2.86,
@@ -1042,7 +1042,7 @@
         20,
         100,
         2.41,
-        1.79
+        2.07
       ],
       [
         28.83,
@@ -1066,30 +1066,30 @@
         2.41,
         2.41,
         100,
-        37.81
+        39.07
       ],
       [
-        26.67,
-        28.57,
-        29.45,
-        29,
-        29.66,
-        29.81,
-        29.92,
-        29.62,
-        30.38,
-        30.13,
-        30.01,
-        29.73,
-        1.79,
-        1.79,
-        1.79,
-        1.79,
-        1.79,
-        1.79,
-        1.79,
-        1.79,
-        37.81,
+        27.26,
+        28.67,
+        30.4,
+        29.88,
+        30.1,
+        30.74,
+        30.94,
+        30.56,
+        31.11,
+        30.42,
+        30.86,
+        30.18,
+        2.07,
+        2.07,
+        2.07,
+        2.07,
+        2.07,
+        2.07,
+        2.07,
+        2.07,
+        39.07,
         100
       ]
     ],
@@ -4585,32 +4585,32 @@
       "2005/2026": {
         "eraA": 2005,
         "eraB": 2026,
-        "similarityIndex": 23.49,
-        "confidence": 0.5211,
+        "similarityIndex": 24.1,
+        "confidence": 0.5484,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0253,
-          "diversityAlignment": 0.996,
-          "genreSimilarity": 0.4394,
-          "noveltyAlignment": 0.6009,
-          "persistentStrength": 0.0011,
-          "trackOverlap": 0.0014
+          "artistOverlap": 0.0255,
+          "diversityAlignment": 0.9953,
+          "genreSimilarity": 0.4512,
+          "noveltyAlignment": 0.6429,
+          "persistentStrength": 0.0016,
+          "trackOverlap": 0.0022
         },
         "overlap": {
-          "artistJaccard": 0.0253,
-          "trackJaccard": 0.0014
+          "artistJaccard": 0.0255,
+          "trackJaccard": 0.0022
         },
         "novelty": {
-          "alignment": 0.6009,
+          "alignment": 0.6429,
           "eraA": 0.7258,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.996,
+          "alignment": 0.9953,
           "eraA": 0.9879,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.4394,
+        "genreSimilarity": 0.4512,
         "persistentFavorites": [
           {
             "artist": "Nine Inch Nails",
@@ -4637,12 +4637,12 @@
             "track": "River Man"
           },
           {
-            "artist": "Portishead",
+            "artist": "Pixies",
             "countA": 1,
-            "countB": 4,
+            "countB": 1,
             "rateA": 0.0027,
-            "rateB": 0.011,
-            "track": "Strangers"
+            "rateB": 0.0027,
+            "track": "Debaser"
           }
         ],
         "rising": [
@@ -4722,10 +4722,10 @@
           }
         ],
         "insightBullets": [
-          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.025 and track overlap was 0.001.",
-          "Novelty shifted from 0.726 to 0.327; diversity entropy shifted from 0.988 to 0.984.",
-          "Era Similarity Index: 23.49/100 (confidence 0.521)."
+          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.025 and track overlap was 0.002.",
+          "Novelty shifted from 0.726 to 0.369; diversity entropy shifted from 0.988 to 0.983.",
+          "Era Similarity Index: 24.10/100 (confidence 0.548)."
         ]
       },
       "2006/2006": {
@@ -7541,32 +7541,32 @@
       "2006/2026": {
         "eraA": 2006,
         "eraB": 2026,
-        "similarityIndex": 23.27,
-        "confidence": 0.4796,
+        "similarityIndex": 23.96,
+        "confidence": 0.5115,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0529,
-          "diversityAlignment": 0.9893,
-          "genreSimilarity": 0.4671,
-          "noveltyAlignment": 0.4398,
-          "persistentStrength": 0.0033,
-          "trackOverlap": 0.0042
+          "artistOverlap": 0.0541,
+          "diversityAlignment": 0.9886,
+          "genreSimilarity": 0.4804,
+          "noveltyAlignment": 0.4818,
+          "persistentStrength": 0.0041,
+          "trackOverlap": 0.0052
         },
         "overlap": {
-          "artistJaccard": 0.0529,
-          "trackJaccard": 0.0042
+          "artistJaccard": 0.0541,
+          "trackJaccard": 0.0052
         },
         "novelty": {
-          "alignment": 0.4398,
+          "alignment": 0.4818,
           "eraA": 0.8869,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9893,
+          "alignment": 0.9886,
           "eraA": 0.9946,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.4671,
+        "genreSimilarity": 0.4804,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -7585,20 +7585,20 @@
             "track": "The Outsider"
           },
           {
+            "artist": "Bjork",
+            "countA": 1,
+            "countB": 1,
+            "rateA": 0.0027,
+            "rateB": 0.0027,
+            "track": "Hunter"
+          },
+          {
             "artist": "Bob Dylan",
             "countA": 1,
             "countB": 2,
             "rateA": 0.0027,
             "rateB": 0.0055,
             "track": "Highway 61 Revisited"
-          },
-          {
-            "artist": "Interpol",
-            "countA": 1,
-            "countB": 2,
-            "rateA": 0.0027,
-            "rateB": 0.0055,
-            "track": "01 - Untitled"
           }
         ],
         "rising": [
@@ -7678,10 +7678,10 @@
           }
         ],
         "insightBullets": [
-          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.053 and track overlap was 0.004.",
-          "Novelty shifted from 0.887 to 0.327; diversity entropy shifted from 0.995 to 0.984.",
-          "Era Similarity Index: 23.27/100 (confidence 0.480)."
+          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.054 and track overlap was 0.005.",
+          "Novelty shifted from 0.887 to 0.369; diversity entropy shifted from 0.995 to 0.983.",
+          "Era Similarity Index: 23.96/100 (confidence 0.511)."
         ]
       },
       "2007/2007": {
@@ -10351,32 +10351,32 @@
       "2007/2026": {
         "eraA": 2007,
         "eraB": 2026,
-        "similarityIndex": 25.33,
-        "confidence": 0.5911,
+        "similarityIndex": 26.14,
+        "confidence": 0.613,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0578,
-          "diversityAlignment": 0.995,
-          "genreSimilarity": 0.5128,
-          "noveltyAlignment": 0.5427,
-          "persistentStrength": 0.0077,
-          "trackOverlap": 0.008
+          "artistOverlap": 0.0584,
+          "diversityAlignment": 0.9958,
+          "genreSimilarity": 0.5343,
+          "noveltyAlignment": 0.5847,
+          "persistentStrength": 0.0087,
+          "trackOverlap": 0.0092
         },
         "overlap": {
-          "artistJaccard": 0.0578,
-          "trackJaccard": 0.008
+          "artistJaccard": 0.0584,
+          "trackJaccard": 0.0092
         },
         "novelty": {
-          "alignment": 0.5427,
+          "alignment": 0.5847,
           "eraA": 0.784,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.995,
+          "alignment": 0.9958,
           "eraA": 0.9789,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5128,
+        "genreSimilarity": 0.5343,
         "persistentFavorites": [
           {
             "artist": "A Perfect Circle",
@@ -10488,10 +10488,10 @@
           }
         ],
         "insightBullets": [
-          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.058 and track overlap was 0.008.",
-          "Novelty shifted from 0.784 to 0.327; diversity entropy shifted from 0.979 to 0.984.",
-          "Era Similarity Index: 25.33/100 (confidence 0.591)."
+          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.058 and track overlap was 0.009.",
+          "Novelty shifted from 0.784 to 0.369; diversity entropy shifted from 0.979 to 0.983.",
+          "Era Similarity Index: 26.14/100 (confidence 0.613)."
         ]
       },
       "2008/2008": {
@@ -13015,32 +13015,32 @@
       "2008/2026": {
         "eraA": 2008,
         "eraB": 2026,
-        "similarityIndex": 24.51,
-        "confidence": 0.5809,
+        "similarityIndex": 25.28,
+        "confidence": 0.6017,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0418,
-          "diversityAlignment": 0.9966,
-          "genreSimilarity": 0.5066,
-          "noveltyAlignment": 0.531,
-          "persistentStrength": 0.0062,
-          "trackOverlap": 0.0056
+          "artistOverlap": 0.0432,
+          "diversityAlignment": 0.9973,
+          "genreSimilarity": 0.5236,
+          "noveltyAlignment": 0.573,
+          "persistentStrength": 0.0071,
+          "trackOverlap": 0.0069
         },
         "overlap": {
-          "artistJaccard": 0.0418,
-          "trackJaccard": 0.0056
+          "artistJaccard": 0.0432,
+          "trackJaccard": 0.0069
         },
         "novelty": {
-          "alignment": 0.531,
+          "alignment": 0.573,
           "eraA": 0.7957,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9966,
+          "alignment": 0.9973,
           "eraA": 0.9805,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5066,
+        "genreSimilarity": 0.5236,
         "persistentFavorites": [
           {
             "artist": "Bjork",
@@ -13152,10 +13152,10 @@
           }
         ],
         "insightBullets": [
-          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.042 and track overlap was 0.006.",
-          "Novelty shifted from 0.796 to 0.327; diversity entropy shifted from 0.981 to 0.984.",
-          "Era Similarity Index: 24.51/100 (confidence 0.581)."
+          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.007.",
+          "Novelty shifted from 0.796 to 0.369; diversity entropy shifted from 0.981 to 0.983.",
+          "Era Similarity Index: 25.28/100 (confidence 0.602)."
         ]
       },
       "2009/2009": {
@@ -15533,32 +15533,32 @@
       "2009/2026": {
         "eraA": 2009,
         "eraB": 2026,
-        "similarityIndex": 24.48,
-        "confidence": 0.5936,
+        "similarityIndex": 25.32,
+        "confidence": 0.6158,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0388,
-          "diversityAlignment": 0.9962,
-          "genreSimilarity": 0.5397,
-          "noveltyAlignment": 0.4851,
-          "persistentStrength": 0.0075,
-          "trackOverlap": 0.0073
+          "artistOverlap": 0.0402,
+          "diversityAlignment": 0.9955,
+          "genreSimilarity": 0.5639,
+          "noveltyAlignment": 0.5271,
+          "persistentStrength": 0.008,
+          "trackOverlap": 0.0078
         },
         "overlap": {
-          "artistJaccard": 0.0388,
-          "trackJaccard": 0.0073
+          "artistJaccard": 0.0402,
+          "trackJaccard": 0.0078
         },
         "novelty": {
-          "alignment": 0.4851,
+          "alignment": 0.5271,
           "eraA": 0.8417,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9962,
+          "alignment": 0.9955,
           "eraA": 0.9877,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5397,
+        "genreSimilarity": 0.5639,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -15567,6 +15567,14 @@
             "rateA": 0.0082,
             "rateB": 0.011,
             "track": "The Garden"
+          },
+          {
+            "artist": "The xx",
+            "countA": 3,
+            "countB": 3,
+            "rateA": 0.0082,
+            "rateB": 0.0082,
+            "track": "Crystalised"
           },
           {
             "artist": "A Perfect Circle",
@@ -15583,14 +15591,6 @@
             "rateA": 0.0055,
             "rateB": 0.0055,
             "track": "03 Rose"
-          },
-          {
-            "artist": "A Perfect Circle",
-            "countA": 5,
-            "countB": 2,
-            "rateA": 0.0137,
-            "rateB": 0.0055,
-            "track": "Blue"
           }
         ],
         "rising": [
@@ -15670,10 +15670,10 @@
           }
         ],
         "insightBullets": [
-          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.039 and track overlap was 0.007.",
-          "Novelty shifted from 0.842 to 0.327; diversity entropy shifted from 0.988 to 0.984.",
-          "Era Similarity Index: 24.48/100 (confidence 0.594)."
+          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.040 and track overlap was 0.008.",
+          "Novelty shifted from 0.842 to 0.369; diversity entropy shifted from 0.988 to 0.983.",
+          "Era Similarity Index: 25.32/100 (confidence 0.616)."
         ]
       },
       "2010/2010": {
@@ -17905,32 +17905,32 @@
       "2010/2026": {
         "eraA": 2010,
         "eraB": 2026,
-        "similarityIndex": 25.14,
-        "confidence": 0.6073,
+        "similarityIndex": 26.02,
+        "confidence": 0.631,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0431,
-          "diversityAlignment": 0.9917,
-          "genreSimilarity": 0.5453,
-          "noveltyAlignment": 0.5157,
-          "persistentStrength": 0.0128,
-          "trackOverlap": 0.0127
+          "artistOverlap": 0.0448,
+          "diversityAlignment": 0.9924,
+          "genreSimilarity": 0.5677,
+          "noveltyAlignment": 0.5577,
+          "persistentStrength": 0.0141,
+          "trackOverlap": 0.0147
         },
         "overlap": {
-          "artistJaccard": 0.0431,
-          "trackJaccard": 0.0127
+          "artistJaccard": 0.0448,
+          "trackJaccard": 0.0147
         },
         "novelty": {
-          "alignment": 0.5157,
+          "alignment": 0.5577,
           "eraA": 0.811,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9917,
+          "alignment": 0.9924,
           "eraA": 0.9756,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5453,
+        "genreSimilarity": 0.5677,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -18042,10 +18042,10 @@
           }
         ],
         "insightBullets": [
-          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.013.",
-          "Novelty shifted from 0.811 to 0.327; diversity entropy shifted from 0.976 to 0.984.",
-          "Era Similarity Index: 25.14/100 (confidence 0.607)."
+          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.045 and track overlap was 0.015.",
+          "Novelty shifted from 0.811 to 0.369; diversity entropy shifted from 0.976 to 0.983.",
+          "Era Similarity Index: 26.02/100 (confidence 0.631)."
         ]
       },
       "2011/2011": {
@@ -20131,32 +20131,32 @@
       "2011/2026": {
         "eraA": 2011,
         "eraB": 2026,
-        "similarityIndex": 25.89,
-        "confidence": 0.5802,
+        "similarityIndex": 26.79,
+        "confidence": 0.6008,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0488,
-          "diversityAlignment": 0.9926,
-          "genreSimilarity": 0.5619,
-          "noveltyAlignment": 0.5458,
-          "persistentStrength": 0.013,
-          "trackOverlap": 0.012
+          "artistOverlap": 0.0508,
+          "diversityAlignment": 0.9933,
+          "genreSimilarity": 0.5868,
+          "noveltyAlignment": 0.5878,
+          "persistentStrength": 0.0139,
+          "trackOverlap": 0.0131
         },
         "overlap": {
-          "artistJaccard": 0.0488,
-          "trackJaccard": 0.012
+          "artistJaccard": 0.0508,
+          "trackJaccard": 0.0131
         },
         "novelty": {
-          "alignment": 0.5458,
+          "alignment": 0.5878,
           "eraA": 0.7809,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9926,
+          "alignment": 0.9933,
           "eraA": 0.9765,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5619,
+        "genreSimilarity": 0.5868,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -20183,12 +20183,12 @@
             "track": "It Could Be Sweet"
           },
           {
-            "artist": "A Perfect Circle",
-            "countA": 5,
-            "countB": 2,
-            "rateA": 0.0137,
-            "rateB": 0.0055,
-            "track": "01 Hollow"
+            "artist": "The xx",
+            "countA": 14,
+            "countB": 3,
+            "rateA": 0.0384,
+            "rateB": 0.0082,
+            "track": "Crystalised"
           }
         ],
         "rising": [
@@ -20268,10 +20268,10 @@
           }
         ],
         "insightBullets": [
-          "2011 had 8622 scrobbles across 6002 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.049 and track overlap was 0.012.",
-          "Novelty shifted from 0.781 to 0.327; diversity entropy shifted from 0.976 to 0.984.",
-          "Era Similarity Index: 25.89/100 (confidence 0.580)."
+          "2011 had 8622 scrobbles across 6002 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.051 and track overlap was 0.013.",
+          "Novelty shifted from 0.781 to 0.369; diversity entropy shifted from 0.976 to 0.983.",
+          "Era Similarity Index: 26.79/100 (confidence 0.601)."
         ]
       },
       "2012/2012": {
@@ -22211,32 +22211,32 @@
       "2012/2026": {
         "eraA": 2012,
         "eraB": 2026,
-        "similarityIndex": 25.97,
-        "confidence": 0.5498,
-        "confidenceBand": "low",
+        "similarityIndex": 26.78,
+        "confidence": 0.5757,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0607,
-          "diversityAlignment": 0.9844,
-          "genreSimilarity": 0.5198,
-          "noveltyAlignment": 0.5641,
-          "persistentStrength": 0.0165,
-          "trackOverlap": 0.0191
+          "artistOverlap": 0.0603,
+          "diversityAlignment": 0.9851,
+          "genreSimilarity": 0.5447,
+          "noveltyAlignment": 0.6062,
+          "persistentStrength": 0.0173,
+          "trackOverlap": 0.0201
         },
         "overlap": {
-          "artistJaccard": 0.0607,
-          "trackJaccard": 0.0191
+          "artistJaccard": 0.0603,
+          "trackJaccard": 0.0201
         },
         "novelty": {
-          "alignment": 0.5641,
+          "alignment": 0.6062,
           "eraA": 0.7626,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9844,
+          "alignment": 0.9851,
           "eraA": 0.9683,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5198,
+        "genreSimilarity": 0.5447,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -22263,12 +22263,12 @@
             "track": "Reckoner"
           },
           {
-            "artist": "A Perfect Circle",
-            "countA": 3,
-            "countB": 2,
-            "rateA": 0.0082,
-            "rateB": 0.0055,
-            "track": "05 Orestes"
+            "artist": "The xx",
+            "countA": 4,
+            "countB": 3,
+            "rateA": 0.0109,
+            "rateB": 0.0082,
+            "track": "Crystalised"
           }
         ],
         "rising": [
@@ -22348,10 +22348,10 @@
           }
         ],
         "insightBullets": [
-          "2012 had 4049 scrobbles across 2666 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.061 and track overlap was 0.019.",
-          "Novelty shifted from 0.763 to 0.327; diversity entropy shifted from 0.968 to 0.984.",
-          "Era Similarity Index: 25.97/100 (confidence 0.550)."
+          "2012 had 4049 scrobbles across 2666 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.060 and track overlap was 0.020.",
+          "Novelty shifted from 0.763 to 0.369; diversity entropy shifted from 0.968 to 0.983.",
+          "Era Similarity Index: 26.78/100 (confidence 0.576)."
         ]
       },
       "2013/2013": {
@@ -24145,32 +24145,32 @@
       "2013/2026": {
         "eraA": 2013,
         "eraB": 2026,
-        "similarityIndex": 25.71,
-        "confidence": 0.5254,
-        "confidenceBand": "low",
+        "similarityIndex": 26.42,
+        "confidence": 0.5525,
+        "confidenceBand": "medium",
         "components": {
           "artistOverlap": 0.0566,
-          "diversityAlignment": 0.9994,
-          "genreSimilarity": 0.5437,
-          "noveltyAlignment": 0.5247,
-          "persistentStrength": 0.0115,
-          "trackOverlap": 0.0108
+          "diversityAlignment": 0.9998,
+          "genreSimilarity": 0.5611,
+          "noveltyAlignment": 0.5667,
+          "persistentStrength": 0.012,
+          "trackOverlap": 0.0118
         },
         "overlap": {
           "artistJaccard": 0.0566,
-          "trackJaccard": 0.0108
+          "trackJaccard": 0.0118
         },
         "novelty": {
-          "alignment": 0.5247,
+          "alignment": 0.5667,
           "eraA": 0.802,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9994,
+          "alignment": 0.9998,
           "eraA": 0.9834,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5437,
+        "genreSimilarity": 0.5611,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -24282,10 +24282,10 @@
           }
         ],
         "insightBullets": [
-          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.011.",
-          "Novelty shifted from 0.802 to 0.327; diversity entropy shifted from 0.983 to 0.984.",
-          "Era Similarity Index: 25.71/100 (confidence 0.525)."
+          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.012.",
+          "Novelty shifted from 0.802 to 0.369; diversity entropy shifted from 0.983 to 0.983.",
+          "Era Similarity Index: 26.42/100 (confidence 0.552)."
         ]
       },
       "2014/2014": {
@@ -25933,32 +25933,32 @@
       "2014/2026": {
         "eraA": 2014,
         "eraB": 2026,
-        "similarityIndex": 24.99,
-        "confidence": 0.5568,
+        "similarityIndex": 25.75,
+        "confidence": 0.5824,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0572,
-          "diversityAlignment": 0.9777,
-          "genreSimilarity": 0.5234,
-          "noveltyAlignment": 0.4914,
-          "persistentStrength": 0.0136,
-          "trackOverlap": 0.0151
+          "artistOverlap": 0.0579,
+          "diversityAlignment": 0.9785,
+          "genreSimilarity": 0.5431,
+          "noveltyAlignment": 0.5334,
+          "persistentStrength": 0.0138,
+          "trackOverlap": 0.0156
         },
         "overlap": {
-          "artistJaccard": 0.0572,
-          "trackJaccard": 0.0151
+          "artistJaccard": 0.0579,
+          "trackJaccard": 0.0156
         },
         "novelty": {
-          "alignment": 0.4914,
+          "alignment": 0.5334,
           "eraA": 0.8353,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9777,
+          "alignment": 0.9785,
           "eraA": 0.9617,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5234,
+        "genreSimilarity": 0.5431,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -26070,10 +26070,10 @@
           }
         ],
         "insightBullets": [
-          "2014 had 4167 scrobbles across 2927 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.015.",
-          "Novelty shifted from 0.835 to 0.327; diversity entropy shifted from 0.962 to 0.984.",
-          "Era Similarity Index: 24.99/100 (confidence 0.557)."
+          "2014 had 4167 scrobbles across 2927 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.058 and track overlap was 0.016.",
+          "Novelty shifted from 0.835 to 0.369; diversity entropy shifted from 0.962 to 0.983.",
+          "Era Similarity Index: 25.75/100 (confidence 0.582)."
         ]
       },
       "2015/2015": {
@@ -27575,32 +27575,32 @@
       "2015/2026": {
         "eraA": 2015,
         "eraB": 2026,
-        "similarityIndex": 25.37,
-        "confidence": 0.589,
+        "similarityIndex": 26.36,
+        "confidence": 0.6135,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0559,
-          "diversityAlignment": 0.9767,
-          "genreSimilarity": 0.5232,
-          "noveltyAlignment": 0.5251,
-          "persistentStrength": 0.0187,
-          "trackOverlap": 0.0181
+          "artistOverlap": 0.0594,
+          "diversityAlignment": 0.9774,
+          "genreSimilarity": 0.5525,
+          "noveltyAlignment": 0.5671,
+          "persistentStrength": 0.0189,
+          "trackOverlap": 0.0182
         },
         "overlap": {
-          "artistJaccard": 0.0559,
-          "trackJaccard": 0.0181
+          "artistJaccard": 0.0594,
+          "trackJaccard": 0.0182
         },
         "novelty": {
-          "alignment": 0.5251,
+          "alignment": 0.5671,
           "eraA": 0.8016,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9767,
+          "alignment": 0.9774,
           "eraA": 0.9606,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5232,
+        "genreSimilarity": 0.5525,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -27712,10 +27712,10 @@
           }
         ],
         "insightBullets": [
-          "2015 had 4684 scrobbles across 3095 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.018.",
-          "Novelty shifted from 0.802 to 0.327; diversity entropy shifted from 0.961 to 0.984.",
-          "Era Similarity Index: 25.37/100 (confidence 0.589)."
+          "2015 had 4684 scrobbles across 3095 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.018.",
+          "Novelty shifted from 0.802 to 0.369; diversity entropy shifted from 0.961 to 0.983.",
+          "Era Similarity Index: 26.36/100 (confidence 0.614)."
         ]
       },
       "2016/2016": {
@@ -29071,32 +29071,32 @@
       "2016/2026": {
         "eraA": 2016,
         "eraB": 2026,
-        "similarityIndex": 27.35,
-        "confidence": 0.5791,
+        "similarityIndex": 28.26,
+        "confidence": 0.5996,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0546,
-          "diversityAlignment": 0.9681,
-          "genreSimilarity": 0.5516,
-          "noveltyAlignment": 0.7065,
+          "artistOverlap": 0.0571,
+          "diversityAlignment": 0.9689,
+          "genreSimilarity": 0.5775,
+          "noveltyAlignment": 0.7486,
           "persistentStrength": 0.0116,
-          "trackOverlap": 0.0146
+          "trackOverlap": 0.0148
         },
         "overlap": {
-          "artistJaccard": 0.0546,
-          "trackJaccard": 0.0146
+          "artistJaccard": 0.0571,
+          "trackJaccard": 0.0148
         },
         "novelty": {
-          "alignment": 0.7065,
+          "alignment": 0.7486,
           "eraA": 0.6202,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9681,
+          "alignment": 0.9689,
           "eraA": 0.9521,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5516,
+        "genreSimilarity": 0.5775,
         "persistentFavorites": [
           {
             "artist": "Beach House",
@@ -29160,13 +29160,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
-            "track": "Raspberry Jam"
+            "rateB": 0.0192,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -29208,10 +29208,10 @@
           }
         ],
         "insightBullets": [
-          "2016 had 8856 scrobbles across 4323 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.055 and track overlap was 0.015.",
-          "Novelty shifted from 0.620 to 0.327; diversity entropy shifted from 0.952 to 0.984.",
-          "Era Similarity Index: 27.35/100 (confidence 0.579)."
+          "2016 had 8856 scrobbles across 4323 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.015.",
+          "Novelty shifted from 0.620 to 0.369; diversity entropy shifted from 0.952 to 0.983.",
+          "Era Similarity Index: 28.26/100 (confidence 0.600)."
         ]
       },
       "2017/2017": {
@@ -30421,32 +30421,32 @@
       "2017/2026": {
         "eraA": 2017,
         "eraB": 2026,
-        "similarityIndex": 26.96,
-        "confidence": 0.474,
+        "similarityIndex": 27.49,
+        "confidence": 0.5092,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0624,
-          "diversityAlignment": 0.9842,
-          "genreSimilarity": 0.5785,
-          "noveltyAlignment": 0.5423,
-          "persistentStrength": 0.0263,
-          "trackOverlap": 0.028
+          "artistOverlap": 0.063,
+          "diversityAlignment": 0.985,
+          "genreSimilarity": 0.5872,
+          "noveltyAlignment": 0.5843,
+          "persistentStrength": 0.0249,
+          "trackOverlap": 0.0264
         },
         "overlap": {
-          "artistJaccard": 0.0624,
-          "trackJaccard": 0.028
+          "artistJaccard": 0.063,
+          "trackJaccard": 0.0264
         },
         "novelty": {
-          "alignment": 0.5423,
+          "alignment": 0.5843,
           "eraA": 0.7844,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9842,
+          "alignment": 0.985,
           "eraA": 0.9682,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5785,
+        "genreSimilarity": 0.5872,
         "persistentFavorites": [
           {
             "artist": "Khruangbin",
@@ -30558,10 +30558,10 @@
           }
         ],
         "insightBullets": [
-          "2017 had 2082 scrobbles across 1410 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.062 and track overlap was 0.028.",
-          "Novelty shifted from 0.784 to 0.327; diversity entropy shifted from 0.968 to 0.984.",
-          "Era Similarity Index: 26.96/100 (confidence 0.474)."
+          "2017 had 2082 scrobbles across 1410 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.063 and track overlap was 0.026.",
+          "Novelty shifted from 0.784 to 0.369; diversity entropy shifted from 0.968 to 0.983.",
+          "Era Similarity Index: 27.49/100 (confidence 0.509)."
         ]
       },
       "2018/2018": {
@@ -31625,32 +31625,32 @@
       "2018/2026": {
         "eraA": 2018,
         "eraB": 2026,
-        "similarityIndex": 26.96,
-        "confidence": 0.5108,
+        "similarityIndex": 27.78,
+        "confidence": 0.5388,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0766,
-          "diversityAlignment": 0.9695,
-          "genreSimilarity": 0.5398,
-          "noveltyAlignment": 0.5882,
-          "persistentStrength": 0.0175,
-          "trackOverlap": 0.0207
+          "artistOverlap": 0.0812,
+          "diversityAlignment": 0.9702,
+          "genreSimilarity": 0.554,
+          "noveltyAlignment": 0.6302,
+          "persistentStrength": 0.0178,
+          "trackOverlap": 0.0215
         },
         "overlap": {
-          "artistJaccard": 0.0766,
-          "trackJaccard": 0.0207
+          "artistJaccard": 0.0812,
+          "trackJaccard": 0.0215
         },
         "novelty": {
-          "alignment": 0.5882,
+          "alignment": 0.6302,
           "eraA": 0.7386,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9695,
+          "alignment": 0.9702,
           "eraA": 0.9534,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5398,
+        "genreSimilarity": 0.554,
         "persistentFavorites": [
           {
             "artist": "The Brian Jonestown Massacre",
@@ -31762,10 +31762,10 @@
           }
         ],
         "insightBullets": [
-          "2018 had 3327 scrobbles across 2054 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.077 and track overlap was 0.021.",
-          "Novelty shifted from 0.739 to 0.327; diversity entropy shifted from 0.953 to 0.984.",
-          "Era Similarity Index: 26.96/100 (confidence 0.511)."
+          "2018 had 3327 scrobbles across 2054 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.081 and track overlap was 0.021.",
+          "Novelty shifted from 0.739 to 0.369; diversity entropy shifted from 0.953 to 0.983.",
+          "Era Similarity Index: 27.78/100 (confidence 0.539)."
         ]
       },
       "2019/2019": {
@@ -32683,32 +32683,32 @@
       "2019/2026": {
         "eraA": 2019,
         "eraB": 2026,
-        "similarityIndex": 27.68,
-        "confidence": 0.5355,
-        "confidenceBand": "low",
+        "similarityIndex": 28.32,
+        "confidence": 0.562,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0735,
-          "diversityAlignment": 0.9851,
-          "genreSimilarity": 0.5752,
-          "noveltyAlignment": 0.5921,
-          "persistentStrength": 0.0208,
-          "trackOverlap": 0.0239
+          "artistOverlap": 0.0776,
+          "diversityAlignment": 0.9858,
+          "genreSimilarity": 0.5788,
+          "noveltyAlignment": 0.6342,
+          "persistentStrength": 0.0212,
+          "trackOverlap": 0.0248
         },
         "overlap": {
-          "artistJaccard": 0.0735,
-          "trackJaccard": 0.0239
+          "artistJaccard": 0.0776,
+          "trackJaccard": 0.0248
         },
         "novelty": {
-          "alignment": 0.5921,
+          "alignment": 0.6342,
           "eraA": 0.7346,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9851,
+          "alignment": 0.9858,
           "eraA": 0.969,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5752,
+        "genreSimilarity": 0.5788,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -32820,10 +32820,10 @@
           }
         ],
         "insightBullets": [
-          "2019 had 3798 scrobbles across 2430 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.074 and track overlap was 0.024.",
-          "Novelty shifted from 0.735 to 0.327; diversity entropy shifted from 0.969 to 0.984.",
-          "Era Similarity Index: 27.68/100 (confidence 0.535)."
+          "2019 had 3798 scrobbles across 2430 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.078 and track overlap was 0.025.",
+          "Novelty shifted from 0.735 to 0.369; diversity entropy shifted from 0.969 to 0.983.",
+          "Era Similarity Index: 28.32/100 (confidence 0.562)."
         ]
       },
       "2020/2020": {
@@ -33595,32 +33595,32 @@
       "2020/2026": {
         "eraA": 2020,
         "eraB": 2026,
-        "similarityIndex": 28.46,
-        "confidence": 0.6027,
+        "similarityIndex": 29.48,
+        "confidence": 0.6269,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0841,
-          "diversityAlignment": 0.9853,
-          "genreSimilarity": 0.6211,
-          "noveltyAlignment": 0.5547,
-          "persistentStrength": 0.0258,
-          "trackOverlap": 0.027
+          "artistOverlap": 0.09,
+          "diversityAlignment": 0.9861,
+          "genreSimilarity": 0.6447,
+          "noveltyAlignment": 0.5967,
+          "persistentStrength": 0.0264,
+          "trackOverlap": 0.0278
         },
         "overlap": {
-          "artistJaccard": 0.0841,
-          "trackJaccard": 0.027
+          "artistJaccard": 0.09,
+          "trackJaccard": 0.0278
         },
         "novelty": {
-          "alignment": 0.5547,
+          "alignment": 0.5967,
           "eraA": 0.772,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9853,
+          "alignment": 0.9861,
           "eraA": 0.9693,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.6211,
+        "genreSimilarity": 0.6447,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -33732,10 +33732,10 @@
           }
         ],
         "insightBullets": [
-          "2020 had 4897 scrobbles across 3285 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.084 and track overlap was 0.027.",
-          "Novelty shifted from 0.772 to 0.327; diversity entropy shifted from 0.969 to 0.984.",
-          "Era Similarity Index: 28.46/100 (confidence 0.603)."
+          "2020 had 4897 scrobbles across 3285 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.090 and track overlap was 0.028.",
+          "Novelty shifted from 0.772 to 0.369; diversity entropy shifted from 0.969 to 0.983.",
+          "Era Similarity Index: 29.48/100 (confidence 0.627)."
         ]
       },
       "2021/2021": {
@@ -34361,32 +34361,32 @@
       "2021/2026": {
         "eraA": 2021,
         "eraB": 2026,
-        "similarityIndex": 27.26,
-        "confidence": 0.5581,
+        "similarityIndex": 28.33,
+        "confidence": 0.5837,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0854,
-          "diversityAlignment": 0.9951,
-          "genreSimilarity": 0.5205,
-          "noveltyAlignment": 0.5623,
-          "persistentStrength": 0.0286,
-          "trackOverlap": 0.0299
+          "artistOverlap": 0.0912,
+          "diversityAlignment": 0.9958,
+          "genreSimilarity": 0.5468,
+          "noveltyAlignment": 0.6043,
+          "persistentStrength": 0.0294,
+          "trackOverlap": 0.0313
         },
         "overlap": {
-          "artistJaccard": 0.0854,
-          "trackJaccard": 0.0299
+          "artistJaccard": 0.0912,
+          "trackJaccard": 0.0313
         },
         "novelty": {
-          "alignment": 0.5623,
+          "alignment": 0.6043,
           "eraA": 0.7644,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9951,
+          "alignment": 0.9958,
           "eraA": 0.979,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5205,
+        "genreSimilarity": 0.5468,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -34498,10 +34498,10 @@
           }
         ],
         "insightBullets": [
-          "2021 had 4188 scrobbles across 2950 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.085 and track overlap was 0.030.",
-          "Novelty shifted from 0.764 to 0.327; diversity entropy shifted from 0.979 to 0.984.",
-          "Era Similarity Index: 27.26/100 (confidence 0.558)."
+          "2021 had 4188 scrobbles across 2950 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.091 and track overlap was 0.031.",
+          "Novelty shifted from 0.764 to 0.369; diversity entropy shifted from 0.979 to 0.983.",
+          "Era Similarity Index: 28.33/100 (confidence 0.584)."
         ]
       },
       "2022/2022": {
@@ -34981,32 +34981,32 @@
       "2022/2026": {
         "eraA": 2022,
         "eraB": 2026,
-        "similarityIndex": 27.02,
-        "confidence": 0.5105,
+        "similarityIndex": 27.93,
+        "confidence": 0.5386,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0798,
-          "diversityAlignment": 0.9961,
-          "genreSimilarity": 0.5124,
-          "noveltyAlignment": 0.5828,
-          "persistentStrength": 0.0237,
-          "trackOverlap": 0.0253
+          "artistOverlap": 0.0821,
+          "diversityAlignment": 0.9968,
+          "genreSimilarity": 0.5366,
+          "noveltyAlignment": 0.6248,
+          "persistentStrength": 0.0243,
+          "trackOverlap": 0.0268
         },
         "overlap": {
-          "artistJaccard": 0.0798,
-          "trackJaccard": 0.0253
+          "artistJaccard": 0.0821,
+          "trackJaccard": 0.0268
         },
         "novelty": {
-          "alignment": 0.5828,
+          "alignment": 0.6248,
           "eraA": 0.7439,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9961,
+          "alignment": 0.9968,
           "eraA": 0.98,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5124,
+        "genreSimilarity": 0.5366,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -35070,13 +35070,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Freak Slug",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
-            "track": "Care"
+            "rateB": 0.0192,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -35118,10 +35118,10 @@
           }
         ],
         "insightBullets": [
-          "2022 had 3321 scrobbles across 2335 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.080 and track overlap was 0.025.",
-          "Novelty shifted from 0.744 to 0.327; diversity entropy shifted from 0.980 to 0.984.",
-          "Era Similarity Index: 27.02/100 (confidence 0.510)."
+          "2022 had 3321 scrobbles across 2335 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.082 and track overlap was 0.027.",
+          "Novelty shifted from 0.744 to 0.369; diversity entropy shifted from 0.980 to 0.983.",
+          "Era Similarity Index: 27.93/100 (confidence 0.539)."
         ]
       },
       "2023/2023": {
@@ -35455,32 +35455,32 @@
       "2023/2026": {
         "eraA": 2023,
         "eraB": 2026,
-        "similarityIndex": 30.85,
-        "confidence": 0.5899,
+        "similarityIndex": 31.63,
+        "confidence": 0.6144,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1062,
-          "diversityAlignment": 0.9771,
-          "genreSimilarity": 0.6305,
-          "noveltyAlignment": 0.6543,
-          "persistentStrength": 0.0407,
-          "trackOverlap": 0.0463
+          "artistOverlap": 0.1092,
+          "diversityAlignment": 0.9779,
+          "genreSimilarity": 0.6434,
+          "noveltyAlignment": 0.6963,
+          "persistentStrength": 0.042,
+          "trackOverlap": 0.0482
         },
         "overlap": {
-          "artistJaccard": 0.1062,
-          "trackJaccard": 0.0463
+          "artistJaccard": 0.1092,
+          "trackJaccard": 0.0482
         },
         "novelty": {
-          "alignment": 0.6543,
+          "alignment": 0.6963,
           "eraA": 0.6724,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9771,
+          "alignment": 0.9779,
           "eraA": 0.961,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.6305,
+        "genreSimilarity": 0.6434,
         "persistentFavorites": [
           {
             "artist": "Boards of Canada",
@@ -35535,22 +35535,22 @@
             "track": "Track X"
           },
           {
-            "artist": "Allah-Las",
-            "countA": 1,
+            "artist": "Wet Leg",
+            "countA": 0,
             "countB": 7,
-            "delta": 0.0164,
-            "rateA": 0.0027,
+            "delta": 0.0192,
+            "rateA": 0,
             "rateB": 0.0192,
-            "track": "Star"
+            "track": "mangetout"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
-            "track": "Raspberry Jam"
+            "rateB": 0.0192,
+            "track": "pokemon"
           }
         ],
         "falling": [
@@ -35566,10 +35566,10 @@
           {
             "artist": "Jadu Heart",
             "countA": 21,
-            "countB": 1,
-            "delta": -0.0548,
+            "countB": 2,
+            "delta": -0.0521,
             "rateA": 0.0575,
-            "rateB": 0.0027,
+            "rateB": 0.0055,
             "track": "Another Life"
           },
           {
@@ -35592,10 +35592,10 @@
           }
         ],
         "insightBullets": [
-          "2023 had 4699 scrobbles across 2662 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.106 and track overlap was 0.046.",
-          "Novelty shifted from 0.672 to 0.327; diversity entropy shifted from 0.961 to 0.984.",
-          "Era Similarity Index: 30.85/100 (confidence 0.590)."
+          "2023 had 4699 scrobbles across 2662 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.109 and track overlap was 0.048.",
+          "Novelty shifted from 0.672 to 0.369; diversity entropy shifted from 0.961 to 0.983.",
+          "Era Similarity Index: 31.63/100 (confidence 0.614)."
         ]
       },
       "2024/2024": {
@@ -35783,32 +35783,32 @@
       "2024/2026": {
         "eraA": 2024,
         "eraB": 2026,
-        "similarityIndex": 30.22,
-        "confidence": 0.5859,
+        "similarityIndex": 31.63,
+        "confidence": 0.6072,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1025,
-          "diversityAlignment": 0.9844,
-          "genreSimilarity": 0.5896,
-          "noveltyAlignment": 0.6594,
-          "persistentStrength": 0.0424,
-          "trackOverlap": 0.0456
+          "artistOverlap": 0.1196,
+          "diversityAlignment": 0.9851,
+          "genreSimilarity": 0.6074,
+          "noveltyAlignment": 0.7014,
+          "persistentStrength": 0.045,
+          "trackOverlap": 0.0497
         },
         "overlap": {
-          "artistJaccard": 0.1025,
-          "trackJaccard": 0.0456
+          "artistJaccard": 0.1196,
+          "trackJaccard": 0.0497
         },
         "novelty": {
-          "alignment": 0.6594,
+          "alignment": 0.7014,
           "eraA": 0.6674,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9844,
+          "alignment": 0.9851,
           "eraA": 0.9683,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5896,
+        "genreSimilarity": 0.6074,
         "persistentFavorites": [
           {
             "artist": "Allah-Las",
@@ -35817,6 +35817,14 @@
             "rateA": 0.0219,
             "rateB": 0.0192,
             "track": "Star"
+          },
+          {
+            "artist": "Nilüfer Yanya",
+            "countA": 10,
+            "countB": 5,
+            "rateA": 0.0273,
+            "rateB": 0.0137,
+            "track": "Like I Say (I runaway)"
           },
           {
             "artist": "Arc De Soleil",
@@ -35833,14 +35841,6 @@
             "rateA": 0.0164,
             "rateB": 0.011,
             "track": "Ghostride"
-          },
-          {
-            "artist": "Khruangbin",
-            "countA": 5,
-            "countB": 4,
-            "rateA": 0.0137,
-            "rateB": 0.011,
-            "track": "Hold Me Up (Thank You)"
           }
         ],
         "rising": [
@@ -35863,21 +35863,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Geese",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
-            "track": "Crusades"
+            "rateB": 0.0192,
+            "track": "mangetout"
           },
           {
             "artist": "Wet Leg",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "pokemon"
           }
         ],
@@ -35920,10 +35920,10 @@
           }
         ],
         "insightBullets": [
-          "2024 had 7550 scrobbles across 4347 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.102 and track overlap was 0.046.",
-          "Novelty shifted from 0.667 to 0.327; diversity entropy shifted from 0.968 to 0.984.",
-          "Era Similarity Index: 30.22/100 (confidence 0.586)."
+          "2024 had 7550 scrobbles across 4347 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.120 and track overlap was 0.050.",
+          "Novelty shifted from 0.667 to 0.369; diversity entropy shifted from 0.968 to 0.983.",
+          "Era Similarity Index: 31.63/100 (confidence 0.607)."
         ]
       },
       "2025/2025": {
@@ -35965,32 +35965,32 @@
       "2025/2026": {
         "eraA": 2025,
         "eraB": 2026,
-        "similarityIndex": 33.54,
-        "confidence": 0.581,
+        "similarityIndex": 34.98,
+        "confidence": 0.6017,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1237,
-          "diversityAlignment": 0.9861,
-          "genreSimilarity": 0.5994,
-          "noveltyAlignment": 0.8191,
-          "persistentStrength": 0.0684,
-          "trackOverlap": 0.073
+          "artistOverlap": 0.1414,
+          "diversityAlignment": 0.9868,
+          "genreSimilarity": 0.6146,
+          "noveltyAlignment": 0.8612,
+          "persistentStrength": 0.0719,
+          "trackOverlap": 0.0789
         },
         "overlap": {
-          "artistJaccard": 0.1237,
-          "trackJaccard": 0.073
+          "artistJaccard": 0.1414,
+          "trackJaccard": 0.0789
         },
         "novelty": {
-          "alignment": 0.8191,
+          "alignment": 0.8612,
           "eraA": 0.5076,
-          "eraB": 0.3267
+          "eraB": 0.3687
         },
         "diversity": {
-          "alignment": 0.9861,
+          "alignment": 0.9868,
           "eraA": 0.97,
-          "eraB": 0.9839
+          "eraB": 0.9832
         },
-        "genreSimilarity": 0.5994,
+        "genreSimilarity": 0.6146,
         "persistentFavorites": [
           {
             "artist": "Alabaster DePlume",
@@ -36009,20 +36009,20 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Men I Trust",
-            "countA": 11,
-            "countB": 5,
-            "rateA": 0.0301,
-            "rateB": 0.0137,
-            "track": "Say, Can You Hear"
-          },
-          {
             "artist": "Wet Leg",
             "countA": 6,
-            "countB": 5,
+            "countB": 7,
             "rateA": 0.0164,
-            "rateB": 0.0137,
+            "rateB": 0.0192,
             "track": "mangetout"
+          },
+          {
+            "artist": "Broadcast",
+            "countA": 5,
+            "countB": 5,
+            "rateA": 0.0137,
+            "rateB": 0.0137,
+            "track": "Come on Let's Go"
           }
         ],
         "rising": [
@@ -36054,13 +36054,13 @@
             "track": "Star"
           },
           {
-            "artist": "No Vacation",
-            "countA": 0,
-            "countB": 5,
+            "artist": "Wet Leg",
+            "countA": 2,
+            "countB": 7,
             "delta": 0.0137,
-            "rateA": 0,
-            "rateB": 0.0137,
-            "track": "Yam Yam"
+            "rateA": 0.0055,
+            "rateB": 0.0192,
+            "track": "pokemon"
           }
         ],
         "falling": [
@@ -36102,10 +36102,10 @@
           }
         ],
         "insightBullets": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 1746 scrobbles across 906 unique tracks.",
-          "Artist overlap (Jaccard) was 0.124 and track overlap was 0.073.",
-          "Novelty shifted from 0.508 to 0.327; diversity entropy shifted from 0.970 to 0.984.",
-          "Era Similarity Index: 33.54/100 (confidence 0.581)."
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 1946 scrobbles across 1036 unique tracks.",
+          "Artist overlap (Jaccard) was 0.141 and track overlap was 0.079.",
+          "Novelty shifted from 0.508 to 0.369; diversity entropy shifted from 0.970 to 0.983.",
+          "Era Similarity Index: 34.98/100 (confidence 0.602)."
         ]
       },
       "2026/2026": {
@@ -38545,32 +38545,32 @@
       "2005/2026": {
         "eraA": 2005,
         "eraB": 2026,
-        "similarityIndex": 26.67,
-        "confidence": 0.4305,
+        "similarityIndex": 27.26,
+        "confidence": 0.4579,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0232,
-          "diversityAlignment": 0.9992,
-          "genreSimilarity": 0.4593,
-          "noveltyAlignment": 0.8934,
-          "persistentStrength": 0.0011,
-          "trackOverlap": 0.0014
+          "artistOverlap": 0.0235,
+          "diversityAlignment": 0.9995,
+          "genreSimilarity": 0.4788,
+          "noveltyAlignment": 0.9201,
+          "persistentStrength": 0.0017,
+          "trackOverlap": 0.0022
         },
         "overlap": {
-          "artistJaccard": 0.0232,
-          "trackJaccard": 0.0014
+          "artistJaccard": 0.0235,
+          "trackJaccard": 0.0022
         },
         "novelty": {
-          "alignment": 0.8934,
+          "alignment": 0.9201,
           "eraA": 0.7258,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9992,
+          "alignment": 0.9995,
           "eraA": 0.9879,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.4593,
+        "genreSimilarity": 0.4788,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -38597,12 +38597,12 @@
             "track": "Only"
           },
           {
-            "artist": "Portishead",
+            "artist": "Pixies",
             "countA": 1,
-            "countB": 2,
+            "countB": 1,
             "rateA": 0.0027,
-            "rateB": 0.0055,
-            "track": "Strangers"
+            "rateB": 0.0027,
+            "track": "Debaser"
           }
         ],
         "rising": [
@@ -38625,22 +38625,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -38682,10 +38682,10 @@
           }
         ],
         "insightBullets": [
-          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.023 and track overlap was 0.001.",
-          "Novelty shifted from 0.726 to 0.832; diversity entropy shifted from 0.988 to 0.989.",
-          "Era Similarity Index: 26.67/100 (confidence 0.430)."
+          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.023 and track overlap was 0.002.",
+          "Novelty shifted from 0.726 to 0.806; diversity entropy shifted from 0.988 to 0.987.",
+          "Era Similarity Index: 27.26/100 (confidence 0.458)."
         ]
       },
       "2006/2006": {
@@ -40941,32 +40941,32 @@
       "2006/2026": {
         "eraA": 2006,
         "eraB": 2026,
-        "similarityIndex": 28.57,
-        "confidence": 0.3737,
+        "similarityIndex": 28.67,
+        "confidence": 0.4057,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0501,
-          "diversityAlignment": 0.9942,
-          "genreSimilarity": 0.4866,
-          "noveltyAlignment": 0.9455,
-          "persistentStrength": 0.0039,
-          "trackOverlap": 0.0042
+          "artistOverlap": 0.0515,
+          "diversityAlignment": 0.9928,
+          "genreSimilarity": 0.5067,
+          "noveltyAlignment": 0.9188,
+          "persistentStrength": 0.0048,
+          "trackOverlap": 0.0053
         },
         "overlap": {
-          "artistJaccard": 0.0501,
-          "trackJaccard": 0.0042
+          "artistJaccard": 0.0515,
+          "trackJaccard": 0.0053
         },
         "novelty": {
-          "alignment": 0.9455,
+          "alignment": 0.9188,
           "eraA": 0.8869,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9942,
+          "alignment": 0.9928,
           "eraA": 0.9946,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.4866,
+        "genreSimilarity": 0.5067,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -40985,20 +40985,20 @@
             "track": "The Outsider"
           },
           {
+            "artist": "Bjork",
+            "countA": 1,
+            "countB": 1,
+            "rateA": 0.0027,
+            "rateB": 0.0027,
+            "track": "Hunter"
+          },
+          {
             "artist": "Bob Dylan",
             "countA": 1,
             "countB": 1,
             "rateA": 0.0027,
             "rateB": 0.0027,
             "track": "Highway 61 Revisited"
-          },
-          {
-            "artist": "Interpol",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0027,
-            "rateB": 0.0027,
-            "track": "01 - Untitled"
           }
         ],
         "rising": [
@@ -41021,22 +41021,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -41078,10 +41078,10 @@
           }
         ],
         "insightBullets": [
-          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.050 and track overlap was 0.004.",
-          "Novelty shifted from 0.887 to 0.832; diversity entropy shifted from 0.995 to 0.989.",
-          "Era Similarity Index: 28.57/100 (confidence 0.374)."
+          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.051 and track overlap was 0.005.",
+          "Novelty shifted from 0.887 to 0.806; diversity entropy shifted from 0.995 to 0.987.",
+          "Era Similarity Index: 28.67/100 (confidence 0.406)."
         ]
       },
       "2007/2007": {
@@ -43191,32 +43191,32 @@
       "2007/2026": {
         "eraA": 2007,
         "eraB": 2026,
-        "similarityIndex": 29.45,
-        "confidence": 0.5185,
+        "similarityIndex": 30.4,
+        "confidence": 0.5404,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0558,
-          "diversityAlignment": 0.9902,
-          "genreSimilarity": 0.5233,
-          "noveltyAlignment": 0.9516,
-          "persistentStrength": 0.0061,
-          "trackOverlap": 0.0081
+          "artistOverlap": 0.0565,
+          "diversityAlignment": 0.9916,
+          "genreSimilarity": 0.5639,
+          "noveltyAlignment": 0.9783,
+          "persistentStrength": 0.0073,
+          "trackOverlap": 0.0093
         },
         "overlap": {
-          "artistJaccard": 0.0558,
-          "trackJaccard": 0.0081
+          "artistJaccard": 0.0565,
+          "trackJaccard": 0.0093
         },
         "novelty": {
-          "alignment": 0.9516,
+          "alignment": 0.9783,
           "eraA": 0.784,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9902,
+          "alignment": 0.9916,
           "eraA": 0.9789,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5233,
+        "genreSimilarity": 0.5639,
         "persistentFavorites": [
           {
             "artist": "Aphex Twin",
@@ -43227,6 +43227,14 @@
             "track": "Iz-Us"
           },
           {
+            "artist": "PJ Harvey",
+            "countA": 2,
+            "countB": 2,
+            "rateA": 0.0055,
+            "rateB": 0.0055,
+            "track": "Angelene"
+          },
+          {
             "artist": "Radiohead",
             "countA": 2,
             "countB": 2,
@@ -43235,20 +43243,12 @@
             "track": "House of Cards"
           },
           {
-            "artist": "A Perfect Circle",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0027,
-            "rateB": 0.0027,
-            "track": "03 Rose"
-          },
-          {
-            "artist": "A Perfect Circle",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0027,
-            "rateB": 0.0027,
-            "track": "04 Judith"
+            "artist": "Thom Yorke",
+            "countA": 5,
+            "countB": 2,
+            "rateA": 0.0137,
+            "rateB": 0.0055,
+            "track": "Harrowdown Hill"
           }
         ],
         "rising": [
@@ -43271,22 +43271,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -43328,10 +43328,10 @@
           }
         ],
         "insightBullets": [
-          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.008.",
-          "Novelty shifted from 0.784 to 0.832; diversity entropy shifted from 0.979 to 0.989.",
-          "Era Similarity Index: 29.45/100 (confidence 0.518)."
+          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.009.",
+          "Novelty shifted from 0.784 to 0.806; diversity entropy shifted from 0.979 to 0.987.",
+          "Era Similarity Index: 30.40/100 (confidence 0.540)."
         ]
       },
       "2008/2008": {
@@ -45295,32 +45295,32 @@
       "2008/2026": {
         "eraA": 2008,
         "eraB": 2026,
-        "similarityIndex": 29,
-        "confidence": 0.5122,
+        "similarityIndex": 29.88,
+        "confidence": 0.533,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0404,
-          "diversityAlignment": 0.9918,
-          "genreSimilarity": 0.5247,
-          "noveltyAlignment": 0.9633,
-          "persistentStrength": 0.0049,
-          "trackOverlap": 0.0056
+          "artistOverlap": 0.0419,
+          "diversityAlignment": 0.9931,
+          "genreSimilarity": 0.5584,
+          "noveltyAlignment": 0.9901,
+          "persistentStrength": 0.0058,
+          "trackOverlap": 0.0069
         },
         "overlap": {
-          "artistJaccard": 0.0404,
-          "trackJaccard": 0.0056
+          "artistJaccard": 0.0419,
+          "trackJaccard": 0.0069
         },
         "novelty": {
-          "alignment": 0.9633,
+          "alignment": 0.9901,
           "eraA": 0.7957,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9918,
+          "alignment": 0.9931,
           "eraA": 0.9805,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5247,
+        "genreSimilarity": 0.5584,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -45375,22 +45375,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -45432,10 +45432,10 @@
           }
         ],
         "insightBullets": [
-          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.040 and track overlap was 0.006.",
-          "Novelty shifted from 0.796 to 0.832; diversity entropy shifted from 0.981 to 0.989.",
-          "Era Similarity Index: 29.00/100 (confidence 0.512)."
+          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.042 and track overlap was 0.007.",
+          "Novelty shifted from 0.796 to 0.806; diversity entropy shifted from 0.981 to 0.987.",
+          "Era Similarity Index: 29.88/100 (confidence 0.533)."
         ]
       },
       "2009/2009": {
@@ -47253,33 +47253,41 @@
       "2009/2026": {
         "eraA": 2009,
         "eraB": 2026,
-        "similarityIndex": 29.66,
-        "confidence": 0.5201,
+        "similarityIndex": 30.1,
+        "confidence": 0.5423,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.038,
-          "diversityAlignment": 0.999,
-          "genreSimilarity": 0.5479,
-          "noveltyAlignment": 0.9907,
-          "persistentStrength": 0.0063,
-          "trackOverlap": 0.0073
+          "artistOverlap": 0.0394,
+          "diversityAlignment": 0.9996,
+          "genreSimilarity": 0.5901,
+          "noveltyAlignment": 0.964,
+          "persistentStrength": 0.0069,
+          "trackOverlap": 0.0078
         },
         "overlap": {
-          "artistJaccard": 0.038,
-          "trackJaccard": 0.0073
+          "artistJaccard": 0.0394,
+          "trackJaccard": 0.0078
         },
         "novelty": {
-          "alignment": 0.9907,
+          "alignment": 0.964,
           "eraA": 0.8417,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.999,
+          "alignment": 0.9996,
           "eraA": 0.9877,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5479,
+        "genreSimilarity": 0.5901,
         "persistentFavorites": [
+          {
+            "artist": "The xx",
+            "countA": 3,
+            "countB": 3,
+            "rateA": 0.0082,
+            "rateB": 0.0082,
+            "track": "Crystalised"
+          },
           {
             "artist": "Phantogram",
             "countA": 2,
@@ -47303,14 +47311,6 @@
             "rateA": 0.0082,
             "rateB": 0.0055,
             "track": "Pyramid Song"
-          },
-          {
-            "artist": "A Perfect Circle",
-            "countA": 6,
-            "countB": 1,
-            "rateA": 0.0164,
-            "rateB": 0.0027,
-            "track": "01 Hollow"
           }
         ],
         "rising": [
@@ -47333,22 +47333,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -47390,10 +47390,10 @@
           }
         ],
         "insightBullets": [
-          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.038 and track overlap was 0.007.",
-          "Novelty shifted from 0.842 to 0.832; diversity entropy shifted from 0.988 to 0.989.",
-          "Era Similarity Index: 29.66/100 (confidence 0.520)."
+          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.039 and track overlap was 0.008.",
+          "Novelty shifted from 0.842 to 0.806; diversity entropy shifted from 0.988 to 0.987.",
+          "Era Similarity Index: 30.10/100 (confidence 0.542)."
         ]
       },
       "2010/2010": {
@@ -49065,32 +49065,32 @@
       "2010/2026": {
         "eraA": 2010,
         "eraB": 2026,
-        "similarityIndex": 29.81,
-        "confidence": 0.5286,
-        "confidenceBand": "low",
+        "similarityIndex": 30.74,
+        "confidence": 0.5523,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0427,
-          "diversityAlignment": 0.9869,
-          "genreSimilarity": 0.5529,
-          "noveltyAlignment": 0.9786,
-          "persistentStrength": 0.0102,
-          "trackOverlap": 0.0127
+          "artistOverlap": 0.0444,
+          "diversityAlignment": 0.9883,
+          "genreSimilarity": 0.5953,
+          "noveltyAlignment": 0.9947,
+          "persistentStrength": 0.0118,
+          "trackOverlap": 0.0147
         },
         "overlap": {
-          "artistJaccard": 0.0427,
-          "trackJaccard": 0.0127
+          "artistJaccard": 0.0444,
+          "trackJaccard": 0.0147
         },
         "novelty": {
-          "alignment": 0.9786,
+          "alignment": 0.9947,
           "eraA": 0.811,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9869,
+          "alignment": 0.9883,
           "eraA": 0.9756,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5529,
+        "genreSimilarity": 0.5953,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -49145,22 +49145,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -49202,10 +49202,10 @@
           }
         ],
         "insightBullets": [
-          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.013.",
-          "Novelty shifted from 0.811 to 0.832; diversity entropy shifted from 0.976 to 0.989.",
-          "Era Similarity Index: 29.81/100 (confidence 0.529)."
+          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.044 and track overlap was 0.015.",
+          "Novelty shifted from 0.811 to 0.806; diversity entropy shifted from 0.976 to 0.987.",
+          "Era Similarity Index: 30.74/100 (confidence 0.552)."
         ]
       },
       "2011/2011": {
@@ -50731,33 +50731,41 @@
       "2011/2026": {
         "eraA": 2011,
         "eraB": 2026,
-        "similarityIndex": 29.92,
-        "confidence": 0.5118,
+        "similarityIndex": 30.94,
+        "confidence": 0.5324,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0474,
-          "diversityAlignment": 0.9878,
-          "genreSimilarity": 0.57,
-          "noveltyAlignment": 0.9487,
-          "persistentStrength": 0.0092,
-          "trackOverlap": 0.0119
+          "artistOverlap": 0.0495,
+          "diversityAlignment": 0.9891,
+          "genreSimilarity": 0.6122,
+          "noveltyAlignment": 0.9754,
+          "persistentStrength": 0.0102,
+          "trackOverlap": 0.013
         },
         "overlap": {
-          "artistJaccard": 0.0474,
-          "trackJaccard": 0.0119
+          "artistJaccard": 0.0495,
+          "trackJaccard": 0.013
         },
         "novelty": {
-          "alignment": 0.9487,
+          "alignment": 0.9754,
           "eraA": 0.7811,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9878,
+          "alignment": 0.9891,
           "eraA": 0.9765,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.57,
+        "genreSimilarity": 0.6122,
         "persistentFavorites": [
+          {
+            "artist": "The xx",
+            "countA": 14,
+            "countB": 3,
+            "rateA": 0.0384,
+            "rateB": 0.0082,
+            "track": "Crystalised"
+          },
           {
             "artist": "Boards of Canada",
             "countA": 2,
@@ -50781,14 +50789,6 @@
             "rateA": 0.0055,
             "rateB": 0.0055,
             "track": "When I'm Small"
-          },
-          {
-            "artist": "PJ Harvey",
-            "countA": 5,
-            "countB": 2,
-            "rateA": 0.0137,
-            "rateB": 0.0055,
-            "track": "The Garden"
           }
         ],
         "rising": [
@@ -50811,22 +50811,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -50868,10 +50868,10 @@
           }
         ],
         "insightBullets": [
-          "2011 had 8608 scrobbles across 5993 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.047 and track overlap was 0.012.",
-          "Novelty shifted from 0.781 to 0.832; diversity entropy shifted from 0.977 to 0.989.",
-          "Era Similarity Index: 29.92/100 (confidence 0.512)."
+          "2011 had 8608 scrobbles across 5993 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.049 and track overlap was 0.013.",
+          "Novelty shifted from 0.781 to 0.806; diversity entropy shifted from 0.977 to 0.987.",
+          "Era Similarity Index: 30.94/100 (confidence 0.532)."
         ]
       },
       "2012/2012": {
@@ -52251,33 +52251,41 @@
       "2012/2026": {
         "eraA": 2012,
         "eraB": 2026,
-        "similarityIndex": 29.62,
-        "confidence": 0.4639,
+        "similarityIndex": 30.56,
+        "confidence": 0.4898,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.059,
-          "diversityAlignment": 0.9795,
-          "genreSimilarity": 0.5279,
-          "noveltyAlignment": 0.93,
-          "persistentStrength": 0.0139,
-          "trackOverlap": 0.0189
+          "artistOverlap": 0.0587,
+          "diversityAlignment": 0.9809,
+          "genreSimilarity": 0.5701,
+          "noveltyAlignment": 0.9567,
+          "persistentStrength": 0.0149,
+          "trackOverlap": 0.0199
         },
         "overlap": {
-          "artistJaccard": 0.059,
-          "trackJaccard": 0.0189
+          "artistJaccard": 0.0587,
+          "trackJaccard": 0.0199
         },
         "novelty": {
-          "alignment": 0.93,
+          "alignment": 0.9567,
           "eraA": 0.7624,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9795,
+          "alignment": 0.9809,
           "eraA": 0.9683,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5279,
+        "genreSimilarity": 0.5701,
         "persistentFavorites": [
+          {
+            "artist": "The xx",
+            "countA": 4,
+            "countB": 3,
+            "rateA": 0.0109,
+            "rateB": 0.0082,
+            "track": "Crystalised"
+          },
           {
             "artist": "Massive Attack",
             "countA": 13,
@@ -52301,14 +52309,6 @@
             "rateA": 0.0164,
             "rateB": 0.0055,
             "track": "Reckoner"
-          },
-          {
-            "artist": "Mazzy Star",
-            "countA": 2,
-            "countB": 2,
-            "rateA": 0.0055,
-            "rateB": 0.0055,
-            "track": "Fade Into You"
           }
         ],
         "rising": [
@@ -52331,22 +52331,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -52388,10 +52388,10 @@
           }
         ],
         "insightBullets": [
-          "2012 had 4047 scrobbles across 2664 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.019.",
-          "Novelty shifted from 0.762 to 0.832; diversity entropy shifted from 0.968 to 0.989.",
-          "Era Similarity Index: 29.62/100 (confidence 0.464)."
+          "2012 had 4047 scrobbles across 2664 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.020.",
+          "Novelty shifted from 0.762 to 0.806; diversity entropy shifted from 0.968 to 0.987.",
+          "Era Similarity Index: 30.56/100 (confidence 0.490)."
         ]
       },
       "2013/2013": {
@@ -53625,32 +53625,32 @@
       "2013/2026": {
         "eraA": 2013,
         "eraB": 2026,
-        "similarityIndex": 30.38,
-        "confidence": 0.4357,
+        "similarityIndex": 31.11,
+        "confidence": 0.4628,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0.056,
-          "diversityAlignment": 0.9946,
-          "genreSimilarity": 0.5636,
-          "noveltyAlignment": 0.9697,
-          "persistentStrength": 0.0097,
-          "trackOverlap": 0.0109
+          "diversityAlignment": 0.996,
+          "genreSimilarity": 0.5917,
+          "noveltyAlignment": 0.9964,
+          "persistentStrength": 0.0103,
+          "trackOverlap": 0.0119
         },
         "overlap": {
           "artistJaccard": 0.056,
-          "trackJaccard": 0.0109
+          "trackJaccard": 0.0119
         },
         "novelty": {
-          "alignment": 0.9697,
+          "alignment": 0.9964,
           "eraA": 0.802,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9946,
+          "alignment": 0.996,
           "eraA": 0.9834,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5636,
+        "genreSimilarity": 0.5917,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -53705,22 +53705,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -53762,10 +53762,10 @@
           }
         ],
         "insightBullets": [
-          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.011.",
-          "Novelty shifted from 0.802 to 0.832; diversity entropy shifted from 0.983 to 0.989.",
-          "Era Similarity Index: 30.38/100 (confidence 0.436)."
+          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.012.",
+          "Novelty shifted from 0.802 to 0.806; diversity entropy shifted from 0.983 to 0.987.",
+          "Era Similarity Index: 31.11/100 (confidence 0.463)."
         ]
       },
       "2014/2014": {
@@ -54853,32 +54853,32 @@
       "2014/2026": {
         "eraA": 2014,
         "eraB": 2026,
-        "similarityIndex": 30.13,
-        "confidence": 0.4707,
+        "similarityIndex": 30.42,
+        "confidence": 0.4963,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0575,
-          "diversityAlignment": 0.9728,
-          "genreSimilarity": 0.5313,
-          "noveltyAlignment": 0.9981,
-          "persistentStrength": 0.012,
-          "trackOverlap": 0.0152
+          "artistOverlap": 0.0582,
+          "diversityAlignment": 0.9741,
+          "genreSimilarity": 0.5645,
+          "noveltyAlignment": 0.9714,
+          "persistentStrength": 0.0123,
+          "trackOverlap": 0.0158
         },
         "overlap": {
-          "artistJaccard": 0.0575,
-          "trackJaccard": 0.0152
+          "artistJaccard": 0.0582,
+          "trackJaccard": 0.0158
         },
         "novelty": {
-          "alignment": 0.9981,
+          "alignment": 0.9714,
           "eraA": 0.8343,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9728,
+          "alignment": 0.9741,
           "eraA": 0.9615,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5313,
+        "genreSimilarity": 0.5645,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -54933,22 +54933,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -54990,10 +54990,10 @@
           }
         ],
         "insightBullets": [
-          "2014 had 4148 scrobbles across 2908 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.058 and track overlap was 0.015.",
-          "Novelty shifted from 0.834 to 0.832; diversity entropy shifted from 0.961 to 0.989.",
-          "Era Similarity Index: 30.13/100 (confidence 0.471)."
+          "2014 had 4148 scrobbles across 2908 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.058 and track overlap was 0.016.",
+          "Novelty shifted from 0.834 to 0.806; diversity entropy shifted from 0.961 to 0.987.",
+          "Era Similarity Index: 30.42/100 (confidence 0.496)."
         ]
       },
       "2015/2015": {
@@ -55935,32 +55935,32 @@
       "2015/2026": {
         "eraA": 2015,
         "eraB": 2026,
-        "similarityIndex": 30.01,
-        "confidence": 0.4764,
+        "similarityIndex": 30.86,
+        "confidence": 0.5018,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0575,
-          "diversityAlignment": 0.97,
-          "genreSimilarity": 0.5328,
-          "noveltyAlignment": 0.9774,
-          "persistentStrength": 0.0143,
-          "trackOverlap": 0.0185
+          "artistOverlap": 0.0605,
+          "diversityAlignment": 0.9714,
+          "genreSimilarity": 0.5686,
+          "noveltyAlignment": 0.9959,
+          "persistentStrength": 0.0147,
+          "trackOverlap": 0.0187
         },
         "overlap": {
-          "artistJaccard": 0.0575,
-          "trackJaccard": 0.0185
+          "artistJaccard": 0.0605,
+          "trackJaccard": 0.0187
         },
         "novelty": {
-          "alignment": 0.9774,
+          "alignment": 0.9959,
           "eraA": 0.8098,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.97,
+          "alignment": 0.9714,
           "eraA": 0.9588,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5328,
+        "genreSimilarity": 0.5686,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -55984,15 +55984,15 @@
             "countB": 2,
             "rateA": 0.0055,
             "rateB": 0.0055,
-            "track": "The Garden"
+            "track": "Angelene"
           },
           {
             "artist": "PJ Harvey",
-            "countA": 4,
+            "countA": 2,
             "countB": 2,
-            "rateA": 0.011,
+            "rateA": 0.0055,
             "rateB": 0.0055,
-            "track": "This Mess We're In"
+            "track": "The Garden"
           }
         ],
         "rising": [
@@ -56015,22 +56015,22 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [
@@ -56072,10 +56072,10 @@
           }
         ],
         "insightBullets": [
-          "2015 had 4232 scrobbles across 2797 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.019.",
-          "Novelty shifted from 0.810 to 0.832; diversity entropy shifted from 0.959 to 0.989.",
-          "Era Similarity Index: 30.01/100 (confidence 0.476)."
+          "2015 had 4232 scrobbles across 2797 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.060 and track overlap was 0.019.",
+          "Novelty shifted from 0.810 to 0.806; diversity entropy shifted from 0.959 to 0.987.",
+          "Era Similarity Index: 30.86/100 (confidence 0.502)."
         ]
       },
       "2016/2016": {
@@ -56871,32 +56871,32 @@
       "2016/2026": {
         "eraA": 2016,
         "eraB": 2026,
-        "similarityIndex": 29.73,
-        "confidence": 0.273,
+        "similarityIndex": 30.18,
+        "confidence": 0.2687,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0501,
-          "diversityAlignment": 0.9992,
-          "genreSimilarity": 0.5076,
-          "noveltyAlignment": 0.981,
-          "persistentStrength": 0.0159,
-          "trackOverlap": 0.0193
+          "artistOverlap": 0.0506,
+          "diversityAlignment": 0.9979,
+          "genreSimilarity": 0.5583,
+          "noveltyAlignment": 0.9543,
+          "persistentStrength": 0.0143,
+          "trackOverlap": 0.0177
         },
         "overlap": {
-          "artistJaccard": 0.0501,
-          "trackJaccard": 0.0193
+          "artistJaccard": 0.0506,
+          "trackJaccard": 0.0177
         },
         "novelty": {
-          "alignment": 0.981,
+          "alignment": 0.9543,
           "eraA": 0.8514,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9992,
+          "alignment": 0.9979,
           "eraA": 0.9895,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5076,
+        "genreSimilarity": 0.5583,
         "persistentFavorites": [
           {
             "artist": "A Perfect Circle",
@@ -56942,31 +56942,31 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
-            "countA": 1,
+            "artist": "Mannequin Pussy",
+            "countA": 0,
             "countB": 5,
-            "delta": 0.011,
-            "rateA": 0.0027,
+            "delta": 0.0137,
+            "rateA": 0,
             "rateB": 0.0137,
-            "track": "Lazuli"
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "mangetout"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "pokemon"
           }
         ],
         "falling": [
@@ -57008,10 +57008,10 @@
           }
         ],
         "insightBullets": [
-          "2016 had 704 scrobbles across 592 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.050 and track overlap was 0.019.",
-          "Novelty shifted from 0.851 to 0.832; diversity entropy shifted from 0.990 to 0.989.",
-          "Era Similarity Index: 29.73/100 (confidence 0.273)."
+          "2016 had 704 scrobbles across 592 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.051 and track overlap was 0.018.",
+          "Novelty shifted from 0.851 to 0.806; diversity entropy shifted from 0.990 to 0.987.",
+          "Era Similarity Index: 30.18/100 (confidence 0.269)."
         ]
       },
       "2017/2017": {
@@ -57402,14 +57402,14 @@
       "2017/2026": {
         "eraA": 2017,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -57418,14 +57418,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -57449,30 +57449,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2017 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2017 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2018/2018": {
@@ -57824,14 +57824,14 @@
       "2018/2026": {
         "eraA": 2018,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -57840,14 +57840,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -57871,30 +57871,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2018 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2018 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2019/2019": {
@@ -58207,14 +58207,14 @@
       "2019/2026": {
         "eraA": 2019,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58223,14 +58223,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -58254,30 +58254,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2019 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2019 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2020/2020": {
@@ -58551,14 +58551,14 @@
       "2020/2026": {
         "eraA": 2020,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58567,14 +58567,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -58598,30 +58598,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2020 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2020 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2021/2021": {
@@ -58856,14 +58856,14 @@
       "2021/2026": {
         "eraA": 2021,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58872,14 +58872,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -58903,30 +58903,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2021 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2021 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2022/2022": {
@@ -59122,14 +59122,14 @@
       "2022/2026": {
         "eraA": 2022,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59138,14 +59138,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -59169,30 +59169,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2022 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2022 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2023/2023": {
@@ -59349,14 +59349,14 @@
       "2023/2026": {
         "eraA": 2023,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59365,14 +59365,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -59396,30 +59396,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2023 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2023 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2024/2024": {
@@ -59537,14 +59537,14 @@
       "2024/2026": {
         "eraA": 2024,
         "eraB": 2026,
-        "similarityIndex": 1.79,
+        "similarityIndex": 2.07,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0113,
+          "diversityAlignment": 0.0126,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.1676,
+          "noveltyAlignment": 0.1943,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59553,14 +59553,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.1676,
+          "alignment": 0.1943,
           "eraA": 0,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.0113,
+          "alignment": 0.0126,
           "eraA": 0,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -59584,30 +59584,30 @@
             "track": "Lazuli"
           },
           {
-            "artist": "Alabaster Deplume",
+            "artist": "Mannequin Pussy",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "A Gente Acaba (Vento Em Rosa)"
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
+            "countB": 5,
+            "delta": 0.0137,
             "rateA": 0,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "mangetout"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2024 had 0 scrobbles across 0 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
+          "2024 had 0 scrobbles across 0 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.832; diversity entropy shifted from 0.000 to 0.989.",
-          "Era Similarity Index: 1.79/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.806; diversity entropy shifted from 0.000 to 0.987.",
+          "Era Similarity Index: 2.07/100 (confidence 0.000)."
         ]
       },
       "2025/2025": {
@@ -59649,32 +59649,32 @@
       "2025/2026": {
         "eraA": 2025,
         "eraB": 2026,
-        "similarityIndex": 37.81,
-        "confidence": 0.3602,
+        "similarityIndex": 39.07,
+        "confidence": 0.3946,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.1821,
-          "diversityAlignment": 0.9947,
-          "genreSimilarity": 0.5952,
-          "noveltyAlignment": 0.9435,
+          "artistOverlap": 0.1959,
+          "diversityAlignment": 0.9961,
+          "genreSimilarity": 0.6248,
+          "noveltyAlignment": 0.9702,
           "persistentStrength": 0.0987,
-          "trackOverlap": 0.1052
+          "trackOverlap": 0.1074
         },
         "overlap": {
-          "artistJaccard": 0.1821,
-          "trackJaccard": 0.1052
+          "artistJaccard": 0.1959,
+          "trackJaccard": 0.1074
         },
         "novelty": {
-          "alignment": 0.9435,
+          "alignment": 0.9702,
           "eraA": 0.7759,
-          "eraB": 0.8324
+          "eraB": 0.8057
         },
         "diversity": {
-          "alignment": 0.9947,
+          "alignment": 0.9961,
           "eraA": 0.9835,
-          "eraB": 0.9887
+          "eraB": 0.9874
         },
-        "genreSimilarity": 0.5952,
+        "genreSimilarity": 0.6248,
         "persistentFavorites": [
           {
             "artist": "Alabaster Deplume",
@@ -59720,6 +59720,15 @@
             "track": "Track X"
           },
           {
+            "artist": "Mannequin Pussy",
+            "countA": 0,
+            "countB": 5,
+            "delta": 0.0137,
+            "rateA": 0,
+            "rateB": 0.0137,
+            "track": "I Don't Know You"
+          },
+          {
             "artist": "Her's",
             "countA": 0,
             "countB": 4,
@@ -59729,22 +59738,13 @@
             "track": "Under Wraps"
           },
           {
-            "artist": "Mannequin Pussy",
-            "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
-            "rateA": 0,
-            "rateB": 0.011,
-            "track": "I Don't Know You"
-          },
-          {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 1,
-            "countB": 4,
-            "delta": 0.0082,
+            "countB": 5,
+            "delta": 0.011,
             "rateA": 0.0027,
-            "rateB": 0.011,
-            "track": "Star"
+            "rateB": 0.0137,
+            "track": "pokemon"
           }
         ],
         "falling": [
@@ -59786,10 +59786,10 @@
           }
         ],
         "insightBullets": [
-          "2025 had 2174 scrobbles across 1611 unique tracks; 2026 had 1083 scrobbles across 889 unique tracks.",
-          "Artist overlap (Jaccard) was 0.182 and track overlap was 0.105.",
-          "Novelty shifted from 0.776 to 0.832; diversity entropy shifted from 0.983 to 0.989.",
-          "Era Similarity Index: 37.81/100 (confidence 0.360)."
+          "2025 had 2174 scrobbles across 1611 unique tracks; 2026 had 1283 scrobbles across 1019 unique tracks.",
+          "Artist overlap (Jaccard) was 0.196 and track overlap was 0.107.",
+          "Novelty shifted from 0.776 to 0.806; diversity entropy shifted from 0.983 to 0.987.",
+          "Era Similarity Index: 39.07/100 (confidence 0.395)."
         ]
       },
       "2026/2026": {

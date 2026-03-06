@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T05:07:53Z",
+  "generatedAt": "2026-03-06T03:54:33Z",
   "source": "all",
   "timezone": "UTC",
   "topN": 10,
@@ -10989,13 +10989,13 @@
       "source": "all",
       "sourceBreakdown": [
         {
-          "count": 1083,
-          "share": 0.6203,
+          "count": 1283,
+          "share": 0.6593,
           "source": "lastfm"
         },
         {
           "count": 663,
-          "share": 0.3797,
+          "share": 0.3407,
           "source": "spotify"
         }
       ],
@@ -11015,23 +11015,23 @@
         },
         "longestTrackRun": {
           "artist": "Alabaster Deplume",
-          "count": 3,
-          "durationMinutes": 4531.88,
+          "count": 4,
+          "durationMinutes": 4537.35,
           "end": "2026-01-09T21:37:08Z",
-          "start": "2026-01-06T18:05:15Z",
+          "start": "2026-01-06T17:59:47Z",
           "track": "I Hope",
           "trackNormKey": "alabaster deplume|i hope"
         }
       },
       "summary": {
-        "activeDays": 41,
-        "avgSessionMinutes": 58.57,
-        "avgTracksPerSession": 22.65,
+        "activeDays": 53,
+        "avgSessionMinutes": 54.13,
+        "avgTracksPerSession": 19.84,
         "maxDailyPlays": 214,
-        "medianDailyPlays": 29,
-        "nightPlayShare": 0.5808,
-        "totalScrobbles": 1746,
-        "totalSessions": 77
+        "medianDailyPlays": 23,
+        "nightPlayShare": 0.591,
+        "totalScrobbles": 1946,
+        "totalSessions": 98
       },
       "timezone": "UTC",
       "topBurstDays": [
