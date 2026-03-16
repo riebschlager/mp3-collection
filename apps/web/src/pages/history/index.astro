@@ -24,6 +24,63 @@ const formatMonth = (monthStr: string) => {
   const date = new Date(parseInt(year), parseInt(month) - 1);
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 };
+
+const visualizationTiles = [
+  {
+    title: 'Rediscovery Arcs',
+    href: 'history/rediscovery',
+    badge: 'Featured',
+    description: 'See tracks that disappeared for years and then came back, with each arc linking pre-return and return years.',
+    wrapperClass: 'md:col-span-2 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800',
+    badgeClass: 'text-slate-300',
+    copyClass: 'text-slate-200'
+  },
+  {
+    title: 'Monthly Story Wall',
+    href: 'history/month-wall',
+    badge: 'Browse',
+    description: 'Browse every month as a visual story tile, then drill into discovery, source mix, overlap, and risers/decliners.',
+    wrapperClass: 'bg-gradient-to-br from-emerald-900 via-cyan-900 to-slate-900',
+    badgeClass: 'text-slate-300',
+    copyClass: 'text-slate-200'
+  },
+  {
+    title: 'Artist Bar Chart Race',
+    href: 'history/artist-race',
+    badge: 'Watch',
+    description: 'Follow the cumulative all-time artist leaderboard month by month and watch the archive’s long-term winners take shape.',
+    wrapperClass: 'bg-gradient-to-br from-stone-950 via-amber-900 to-emerald-900',
+    badgeClass: 'text-amber-200',
+    copyClass: 'text-stone-100'
+  },
+  {
+    title: 'Transition Flow Atlas',
+    href: 'history/transitions',
+    badge: 'Inspect',
+    description: 'Inspect your strongest within-session handoffs, from track-to-track tunnels to artist-to-artist corridors.',
+    wrapperClass: 'bg-gradient-to-br from-fuchsia-900 via-indigo-900 to-slate-900',
+    badgeClass: 'text-slate-300',
+    copyClass: 'text-slate-200'
+  },
+  {
+    title: 'Era Similarity Index',
+    href: 'history/era-similarity',
+    badge: 'Compare',
+    description: 'Compare every year against every other year with a weighted taste-similarity score and inspect what drives the match.',
+    wrapperClass: 'bg-gradient-to-br from-emerald-900 via-teal-800 to-amber-700',
+    badgeClass: 'text-slate-200',
+    copyClass: 'text-slate-100'
+  },
+  {
+    title: 'Obsession Timeline',
+    href: 'history/obsessions',
+    badge: 'Track',
+    description: 'See your most intense listening bursts: the tracks you played repeatedly in a short span of days, sorted by burst heat.',
+    wrapperClass: 'bg-gradient-to-br from-purple-900 via-rose-900 to-amber-900',
+    badgeClass: 'text-purple-300',
+    copyClass: 'text-rose-200'
+  }
+];
 ---
 
 <Layout title="Listening History - MP3 Collection">
@@ -38,119 +95,44 @@ const formatMonth = (monthStr: string) => {
       </p>
     </div>
 
-    <!-- Rediscovery Arcs -->
-    <div class="rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-white p-8 shadow-xl">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+    <section class="space-y-4">
+      <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-2">New Visualization</p>
-          <h2 class="text-3xl font-bold">Rediscovery Arcs</h2>
-          <p class="mt-2 text-slate-200 max-w-2xl">
-            See tracks that disappeared for years and then came back, with each arc linking pre-return and return years.
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Visualizations</p>
+          <h2 class="text-2xl font-bold text-slate-900">Choose a way into the archive</h2>
         </div>
-        <a
-          href={buildUrl('history/rediscovery')}
-          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
-        >
-          Open Rediscovery Arcs ->
-        </a>
+        <p class="max-w-2xl text-sm text-slate-600">
+          A faster gallery of the listening-history tools, with room to scan across a few directions before diving in.
+        </p>
       </div>
-    </div>
 
-    <!-- Monthly Story Wall -->
-    <div class="rounded-2xl bg-gradient-to-br from-emerald-900 via-cyan-900 to-slate-900 text-white p-8 shadow-xl">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
-        <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-2">New Visualization</p>
-          <h2 class="text-3xl font-bold">Monthly Story Wall</h2>
-          <p class="mt-2 text-slate-200 max-w-2xl">
-            Browse every month as a visual story tile, then drill into discovery, source mix, overlap, and risers/decliners.
-          </p>
-        </div>
-        <a
-          href={buildUrl('history/month-wall')}
-          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
-        >
-          Open Monthly Story Wall ->
-        </a>
-      </div>
-    </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {visualizationTiles.map((tile) => (
+          <a
+            href={buildUrl(tile.href)}
+            class:list={[
+              'group flex min-h-64 flex-col justify-between overflow-hidden rounded-2xl p-7 text-white shadow-xl transition duration-200 hover:-translate-y-1 hover:shadow-2xl',
+              tile.wrapperClass
+            ]}
+          >
+            <div class="space-y-4">
+              <p class:list={['text-xs uppercase tracking-[0.25em]', tile.badgeClass]}>{tile.badge}</p>
+              <div class="space-y-3">
+                <h3 class="text-3xl font-bold leading-tight">{tile.title}</h3>
+                <p class:list={['max-w-2xl text-sm leading-6', tile.copyClass]}>{tile.description}</p>
+              </div>
+            </div>
 
-    <!-- Artist Bar Chart Race -->
-    <div class="rounded-2xl bg-gradient-to-br from-stone-950 via-amber-900 to-emerald-900 text-white p-8 shadow-xl">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
-        <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-amber-200 mb-2">New Visualization</p>
-          <h2 class="text-3xl font-bold">Artist Bar Chart Race</h2>
-          <p class="mt-2 text-stone-100 max-w-2xl">
-            Follow the cumulative all-time artist leaderboard month by month and watch the archive’s long-term winners take shape.
-          </p>
-        </div>
-        <a
-          href={buildUrl('history/artist-race')}
-          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
-        >
-          Open Artist Race ->
-        </a>
+            <div class="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-white">
+              <span class="rounded-full bg-white/15 px-4 py-2 transition-colors group-hover:bg-white/25">
+                Open visualization
+              </span>
+              <span aria-hidden="true" class="text-lg transition-transform duration-200 group-hover:translate-x-1">→</span>
+            </div>
+          </a>
+        ))}
       </div>
-    </div>
-
-    <!-- Transition Flow Atlas -->
-    <div class="rounded-2xl bg-gradient-to-br from-fuchsia-900 via-indigo-900 to-slate-900 text-white p-8 shadow-xl">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
-        <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-2">New Visualization</p>
-          <h2 class="text-3xl font-bold">Transition Flow Atlas</h2>
-          <p class="mt-2 text-slate-200 max-w-2xl">
-            Inspect your strongest within-session handoffs, from track-to-track tunnels to artist-to-artist corridors.
-          </p>
-        </div>
-        <a
-          href={buildUrl('history/transitions')}
-          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
-        >
-          Open Transition Atlas ->
-        </a>
-      </div>
-    </div>
-
-    <!-- Era Similarity Index -->
-    <div class="rounded-2xl bg-gradient-to-br from-emerald-900 via-teal-800 to-amber-700 text-white p-8 shadow-xl">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
-        <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-slate-200 mb-2">New Visualization</p>
-          <h2 class="text-3xl font-bold">Era Similarity Index</h2>
-          <p class="mt-2 text-slate-100 max-w-2xl">
-            Compare every year against every other year with a weighted taste-similarity score and inspect what drives the match.
-          </p>
-        </div>
-        <a
-          href={buildUrl('history/era-similarity')}
-          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
-        >
-          Open Era Similarity ->
-        </a>
-      </div>
-    </div>
-
-    <!-- Obsession Timeline -->
-    <div class="rounded-2xl bg-gradient-to-br from-purple-900 via-rose-900 to-amber-900 text-white p-8 shadow-xl">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
-        <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-purple-300 mb-2">New Visualization</p>
-          <h2 class="text-3xl font-bold">Obsession Timeline</h2>
-          <p class="mt-2 text-rose-200 max-w-2xl">
-            See your most intense listening bursts—the tracks you played repeatedly in a short span of days, sorted by burst heat.
-          </p>
-        </div>
-        <a
-          href={buildUrl('history/obsessions')}
-          class="inline-flex items-center justify-center rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/25 transition-colors"
-        >
-          Open Obsessions ->
-        </a>
-      </div>
-    </div>
+    </section>
 
     <!-- Timeline Overview -->
     <div class="bg-white rounded-lg shadow p-6">
