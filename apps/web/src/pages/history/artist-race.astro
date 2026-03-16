@@ -1,0 +1,1006 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+
+const defaultDataRoot = buildUrl('data');
+---
+
+<Layout title="Artist Bar Chart Race - MP3 Collection">
+  <div class="artist-race-page">
+    <section class="race-hero reveal">
+      <div class="race-hero__copy">
+        <p class="race-kicker">History Lab</p>
+        <h1>Artist Bar Chart Race</h1>
+        <p>
+          Watch your listening canon accumulate month by month, from the first scrobbles in 2005 to the latest partial month.
+          The leaderboard is cumulative all-time, so every pass reveals who stayed ahead and who surged late.
+        </p>
+      </div>
+      <div class="race-hero__actions">
+        <a href={buildUrl('history')} class="race-link">Back to History</a>
+      </div>
+    </section>
+
+    <section class="race-shell reveal">
+      <article class="race-panel race-panel--stage">
+        <div class="race-panel__topline">
+          <div>
+            <p class="race-eyebrow">Cumulative Artist Lead</p>
+            <h2 id="current-label">Loading monthly race...</h2>
+          </div>
+          <div class="race-clock">
+            <div class="race-clock__label">Archive Clock</div>
+            <div id="clock-value" class="race-clock__value">--</div>
+            <div id="clock-subtitle" class="race-clock__subtitle">Preparing artist cache</div>
+          </div>
+        </div>
+
+        <div class="race-stage-wrap">
+          <div class="race-stage-grid" aria-hidden="true"></div>
+          <div id="race-stage" class="race-stage" aria-live="polite"></div>
+        </div>
+
+        <div class="race-axis">
+          <span>0</span>
+          <span id="axis-max">-</span>
+        </div>
+      </article>
+
+      <aside class="race-sidebar">
+        <article class="race-panel race-panel--controls">
+          <p class="race-eyebrow">Playback Controls</p>
+          <div class="race-controls">
+            <button id="play-toggle" class="race-button race-button--primary" type="button">Pause</button>
+            <button id="restart-button" class="race-button" type="button">Restart</button>
+            <label class="race-speed">
+              Speed
+              <select id="speed-select">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+              </select>
+            </label>
+          </div>
+          <label class="race-scrubber" for="frame-scrubber">
+            Month
+            <input id="frame-scrubber" type="range" min="0" max="0" step="1" value="0" />
+          </label>
+          <div class="race-meta">
+            <span id="frame-position">Frame 0 / 0</span>
+            <span id="load-status">Loading artist race cache...</span>
+          </div>
+        </article>
+
+        <article class="race-panel race-panel--stats">
+          <p class="race-eyebrow">Current Snapshot</p>
+          <div class="race-stats">
+            <div class="race-stat">
+              <div class="race-stat__label">Leader</div>
+              <div id="stat-leader" class="race-stat__value race-stat__value--text">-</div>
+            </div>
+            <div class="race-stat">
+              <div class="race-stat__label">Leader Plays</div>
+              <div id="stat-leader-plays" class="race-stat__value">-</div>
+            </div>
+            <div class="race-stat">
+              <div class="race-stat__label">Top 12 Total</div>
+              <div id="stat-top-total" class="race-stat__value">-</div>
+            </div>
+            <div class="race-stat">
+              <div class="race-stat__label">Archive Progress</div>
+              <div id="stat-progress" class="race-stat__value">-</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="race-panel race-panel--note">
+          <p class="race-eyebrow">What You’re Seeing</p>
+          <p>
+            Each monthly frame captures the all-time leaderboard at that point in the archive. Bars interpolate between monthly snapshots,
+            but the source data stays anchored to those cumulative month-end totals.
+          </p>
+          <dl class="race-details">
+            <div>
+              <dt>Metric</dt>
+              <dd id="detail-metric">-</dd>
+            </div>
+            <div>
+              <dt>Entity</dt>
+              <dd id="detail-entity">-</dd>
+            </div>
+            <div>
+              <dt>Timezone</dt>
+              <dd id="detail-timezone">-</dd>
+            </div>
+            <div>
+              <dt>Scrobbles</dt>
+              <dd id="detail-total">-</dd>
+            </div>
+          </dl>
+        </article>
+      </aside>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ defaultDataRoot }}>
+    const playToggleEl = document.getElementById('play-toggle');
+    const restartButtonEl = document.getElementById('restart-button');
+    const speedSelectEl = document.getElementById('speed-select');
+    const frameScrubberEl = document.getElementById('frame-scrubber');
+    const loadStatusEl = document.getElementById('load-status');
+    const framePositionEl = document.getElementById('frame-position');
+
+    const currentLabelEl = document.getElementById('current-label');
+    const clockValueEl = document.getElementById('clock-value');
+    const clockSubtitleEl = document.getElementById('clock-subtitle');
+    const axisMaxEl = document.getElementById('axis-max');
+    const raceStageEl = document.getElementById('race-stage');
+
+    const statLeaderEl = document.getElementById('stat-leader');
+    const statLeaderPlaysEl = document.getElementById('stat-leader-plays');
+    const statTopTotalEl = document.getElementById('stat-top-total');
+    const statProgressEl = document.getElementById('stat-progress');
+
+    const detailMetricEl = document.getElementById('detail-metric');
+    const detailEntityEl = document.getElementById('detail-entity');
+    const detailTimezoneEl = document.getElementById('detail-timezone');
+    const detailTotalEl = document.getElementById('detail-total');
+
+    const numberFormatter = new Intl.NumberFormat('en-US');
+    const barPool = new Map();
+
+    const state = {
+      artifact: null,
+      imageMap: {},
+      frameIndex: 0,
+      frameProgress: 0,
+      playing: true,
+      speed: 1,
+      frameDurationMs: 1600,
+      rafId: 0,
+      lastTimestamp: 0,
+    };
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+    const easeOutQuart = (value) => 1 - Math.pow(1 - clamp(value, 0, 1), 4);
+
+    const initialsFor = (value) => {
+      const clean = String(value || '').trim();
+      if (!clean) return '??';
+      const parts = clean.split(/\s+/).slice(0, 2);
+      return parts.map((part) => part[0]?.toUpperCase() || '').join('').slice(0, 2);
+    };
+
+    const setStatus = (text) => {
+      if (loadStatusEl) loadStatusEl.textContent = text;
+    };
+
+    const createBarElement = (key) => {
+      const el = document.createElement('article');
+      el.className = 'race-item';
+      el.dataset.key = key;
+      el.innerHTML = `
+        <div class="race-item__rank"></div>
+        <div class="race-item__bar">
+          <div class="race-item__fill"></div>
+          <div class="race-item__content">
+            <div class="race-item__identity">
+              <div class="race-item__avatar">
+                <img class="race-item__img" alt="" />
+                <span class="race-item__initials"></span>
+              </div>
+              <div class="race-item__text">
+                <div class="race-item__name"></div>
+                <div class="race-item__subline">cumulative artist plays</div>
+              </div>
+            </div>
+            <div class="race-item__value"></div>
+          </div>
+        </div>
+      `;
+      raceStageEl?.appendChild(el);
+      barPool.set(key, el);
+      return el;
+    };
+
+    const getCurrentFrameState = () => {
+      if (!state.artifact || !Array.isArray(state.artifact.frames) || state.artifact.frames.length === 0) {
+        return { leaders: [], maxCount: 0, activeLabel: '--', currentFrame: null, nextFrame: null };
+      }
+
+      const frames = state.artifact.frames;
+      const currentFrame = frames[state.frameIndex];
+      const nextFrame = frames[Math.min(state.frameIndex + 1, frames.length - 1)];
+      const easing = easeOutQuart(state.frameProgress);
+
+      if (!nextFrame || currentFrame === nextFrame) {
+        const leaders = currentFrame.leaders.map((leader) => ({
+          key: leader.artistSlug || leader.artist,
+          artist: leader.artist,
+          artistSlug: leader.artistSlug,
+          playCount: leader.playCount,
+          rank: leader.rank,
+        }));
+
+        return {
+          leaders,
+          maxCount: leaders[0]?.playCount || 0,
+          activeLabel: currentFrame.label,
+          currentFrame,
+          nextFrame,
+        };
+      }
+
+      const currentMap = new Map(currentFrame.leaders.map((leader) => [leader.artistSlug || leader.artist, leader]));
+      const nextMap = new Map(nextFrame.leaders.map((leader) => [leader.artistSlug || leader.artist, leader]));
+      const currentFloor = currentFrame.leaders[currentFrame.leaders.length - 1]?.playCount || 0;
+      const keys = new Set([...currentMap.keys(), ...nextMap.keys()]);
+      const leaders = [];
+
+      keys.forEach((key) => {
+        const currentLeader = currentMap.get(key);
+        const nextLeader = nextMap.get(key);
+        const targetCount = nextLeader?.playCount ?? currentLeader?.playCount ?? 0;
+        const startCount = currentLeader?.playCount ?? Math.max(0, Math.round(targetCount * 0.84), Math.round(currentFloor * 0.92));
+        const playCount = startCount + ((targetCount - startCount) * easing);
+
+        leaders.push({
+          key,
+          artist: nextLeader?.artist ?? currentLeader?.artist ?? key,
+          artistSlug: nextLeader?.artistSlug ?? currentLeader?.artistSlug ?? key,
+          playCount,
+          rankHint: (currentLeader?.rank ?? state.artifact.displayCount + 2) + (((nextLeader?.rank ?? state.artifact.displayCount + 2) - (currentLeader?.rank ?? state.artifact.displayCount + 2)) * easing),
+        });
+      });
+
+      leaders.sort((a, b) => {
+        if (Math.abs(b.playCount - a.playCount) > 0.0001) return b.playCount - a.playCount;
+        if (Math.abs(a.rankHint - b.rankHint) > 0.0001) return a.rankHint - b.rankHint;
+        return String(a.artist).localeCompare(String(b.artist));
+      });
+
+      const visible = leaders.slice(0, state.artifact.displayCount).map((leader, index) => ({
+        ...leader,
+        rank: index + 1,
+      }));
+
+      return {
+        leaders: visible,
+        maxCount: visible[0]?.playCount || 0,
+        activeLabel: state.frameProgress >= 0.5 ? nextFrame.label : currentFrame.label,
+        currentFrame,
+        nextFrame,
+      };
+    };
+
+    const renderBars = (leaders, maxCount) => {
+      if (!raceStageEl || !state.artifact) return;
+
+      const stageHeight = Math.max(state.artifact.displayCount, leaders.length || state.artifact.displayCount) * 88;
+      raceStageEl.style.height = `${stageHeight}px`;
+
+      const visibleKeys = new Set();
+      leaders.forEach((leader, index) => {
+        const key = leader.key;
+        const el = barPool.get(key) || createBarElement(key);
+        visibleKeys.add(key);
+
+        const rankEl = el.querySelector('.race-item__rank');
+        const fillEl = el.querySelector('.race-item__fill');
+        const nameEl = el.querySelector('.race-item__name');
+        const valueEl = el.querySelector('.race-item__value');
+        const imgEl = el.querySelector('.race-item__img');
+        const initialsEl = el.querySelector('.race-item__initials');
+
+        const widthPct = maxCount > 0 ? clamp((leader.playCount / maxCount) * 100, 7, 100) : 7;
+
+        el.classList.toggle('is-leader', index === 0);
+        el.style.opacity = '1';
+        el.style.transform = `translate3d(0, ${index * 88}px, 0)`;
+        el.style.zIndex = String(120 - index);
+
+        if (rankEl) rankEl.textContent = `#${index + 1}`;
+        if (fillEl) fillEl.style.width = `${widthPct}%`;
+        if (nameEl) nameEl.textContent = leader.artist;
+        if (valueEl) valueEl.textContent = numberFormatter.format(Math.round(leader.playCount));
+
+        const imageUrl = state.imageMap?.[leader.artistSlug];
+        if (imgEl && initialsEl) {
+          if (imageUrl) {
+            imgEl.src = imageUrl;
+            imgEl.alt = `${leader.artist} artwork`;
+            imgEl.style.display = 'block';
+            initialsEl.style.display = 'none';
+          } else {
+            imgEl.removeAttribute('src');
+            imgEl.style.display = 'none';
+            initialsEl.textContent = initialsFor(leader.artist);
+            initialsEl.style.display = 'flex';
+          }
+        }
+      });
+
+      barPool.forEach((el, key) => {
+        if (visibleKeys.has(key)) return;
+        el.classList.remove('is-leader');
+        el.style.opacity = '0';
+        el.style.transform = `translate3d(0, ${state.artifact.displayCount * 94}px, 0)`;
+      });
+    };
+
+    const render = () => {
+      const { leaders, maxCount, activeLabel, currentFrame } = getCurrentFrameState();
+      if (!state.artifact || !currentFrame) return;
+
+      renderBars(leaders, maxCount);
+
+      const leader = leaders[0];
+      const topTotal = leaders.reduce((sum, entry) => sum + entry.playCount, 0);
+      const progressDenominator = Math.max(state.artifact.totalFrames - 1, 1);
+      const progressValue = clamp((state.frameIndex + state.frameProgress) / progressDenominator, 0, 1);
+
+      if (currentLabelEl) currentLabelEl.textContent = activeLabel;
+      if (clockValueEl) clockValueEl.textContent = activeLabel;
+      if (clockSubtitleEl) clockSubtitleEl.textContent = `${numberFormatter.format(state.artifact.totalScrobbles)} scrobbles across ${state.artifact.totalFrames} monthly frames`;
+      if (axisMaxEl) axisMaxEl.textContent = numberFormatter.format(Math.round(maxCount));
+      if (framePositionEl) framePositionEl.textContent = `Frame ${Math.min(state.frameIndex + 1, state.artifact.totalFrames)} / ${state.artifact.totalFrames}`;
+      if (frameScrubberEl) frameScrubberEl.value = String(state.frameIndex);
+
+      if (statLeaderEl) statLeaderEl.textContent = leader?.artist ?? '-';
+      if (statLeaderPlaysEl) statLeaderPlaysEl.textContent = leader ? numberFormatter.format(Math.round(leader.playCount)) : '-';
+      if (statTopTotalEl) statTopTotalEl.textContent = numberFormatter.format(Math.round(topTotal));
+      if (statProgressEl) statProgressEl.textContent = `${Math.round(progressValue * 100)}%`;
+
+      if (detailMetricEl) detailMetricEl.textContent = state.artifact.metric;
+      if (detailEntityEl) detailEntityEl.textContent = state.artifact.entityType;
+      if (detailTimezoneEl) detailTimezoneEl.textContent = state.artifact.timezone;
+      if (detailTotalEl) detailTotalEl.textContent = numberFormatter.format(state.artifact.totalScrobbles);
+    };
+
+    const updatePlayButton = () => {
+      if (!playToggleEl) return;
+      playToggleEl.textContent = state.playing ? 'Pause' : 'Play';
+    };
+
+    const tick = (timestamp) => {
+      if (!state.lastTimestamp) state.lastTimestamp = timestamp;
+      const delta = timestamp - state.lastTimestamp;
+      state.lastTimestamp = timestamp;
+
+      if (state.artifact && state.playing && state.artifact.totalFrames > 1) {
+        state.frameProgress += (delta * state.speed) / state.frameDurationMs;
+
+        while (state.frameProgress >= 1 && state.frameIndex < state.artifact.totalFrames - 1) {
+          state.frameProgress -= 1;
+          state.frameIndex += 1;
+        }
+
+        if (state.frameIndex >= state.artifact.totalFrames - 1) {
+          state.frameIndex = state.artifact.totalFrames - 1;
+          state.frameProgress = 0;
+          state.playing = false;
+          updatePlayButton();
+        }
+      }
+
+      render();
+      state.rafId = requestAnimationFrame(tick);
+    };
+
+    const bindControls = () => {
+      playToggleEl?.addEventListener('click', () => {
+        if (!state.artifact) return;
+        if (!state.playing && state.frameIndex >= state.artifact.totalFrames - 1) {
+          state.frameIndex = 0;
+          state.frameProgress = 0;
+        }
+        state.playing = !state.playing;
+        updatePlayButton();
+        render();
+      });
+
+      restartButtonEl?.addEventListener('click', () => {
+        if (!state.artifact) return;
+        state.frameIndex = 0;
+        state.frameProgress = 0;
+        render();
+      });
+
+      speedSelectEl?.addEventListener('change', () => {
+        const nextSpeed = Number(speedSelectEl.value);
+        state.speed = Number.isFinite(nextSpeed) && nextSpeed > 0 ? nextSpeed : 1;
+      });
+
+      frameScrubberEl?.addEventListener('input', () => {
+        if (!state.artifact) return;
+        state.frameIndex = clamp(Number(frameScrubberEl.value) || 0, 0, state.artifact.totalFrames - 1);
+        state.frameProgress = 0;
+        render();
+      });
+    };
+
+    const initialize = async () => {
+      bindControls();
+      updatePlayButton();
+
+      try {
+        const [artifactResponse, imagesResponse] = await Promise.all([
+          fetch(`${defaultDataRoot}/artist-race.json`),
+          fetch(`${defaultDataRoot}/artist-images.json`),
+        ]);
+
+        if (!artifactResponse.ok) {
+          throw new Error(`artist-race.json HTTP ${artifactResponse.status}`);
+        }
+
+        state.artifact = await artifactResponse.json();
+        if (!state.artifact?.frames?.length) {
+          throw new Error('artist race artifact has no frames');
+        }
+
+        if (imagesResponse.ok) {
+          const imageArtifact = await imagesResponse.json();
+          state.imageMap = imageArtifact?.byArtistSlug || {};
+        } else {
+          state.imageMap = {};
+        }
+
+        if (frameScrubberEl) {
+          frameScrubberEl.max = String(Math.max(state.artifact.totalFrames - 1, 0));
+          frameScrubberEl.value = '0';
+        }
+
+        const generatedAt = state.artifact.generatedAt
+          ? new Date(state.artifact.generatedAt).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })
+          : 'unknown time';
+        setStatus(`Cache loaded. Generated ${generatedAt}.`);
+        render();
+      } catch (error) {
+        const message = error instanceof Error ? error.message : 'unknown error';
+        setStatus(`Unable to load artist race: ${message}`);
+        if (currentLabelEl) currentLabelEl.textContent = 'Artist race unavailable';
+        if (clockValueEl) clockValueEl.textContent = '--';
+      } finally {
+        state.rafId = requestAnimationFrame(tick);
+      }
+    };
+
+    initialize();
+  </script>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Spectral:wght@400;500;600;700&display=swap');
+
+  :root {
+    --race-bg: #0a1012;
+    --race-panel: rgba(12, 23, 27, 0.88);
+    --race-panel-alt: rgba(15, 32, 38, 0.82);
+    --race-line: rgba(196, 184, 142, 0.22);
+    --race-text: #f6f0dd;
+    --race-muted: #bdb196;
+    --race-brass: #e4b84d;
+    --race-ember: #ff714a;
+    --race-teal: #75e3d1;
+    --race-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  }
+
+  .artist-race-page {
+    min-height: 100vh;
+    color: var(--race-text);
+    background:
+      radial-gradient(circle at top left, rgba(228, 184, 77, 0.14), transparent 28%),
+      radial-gradient(circle at top right, rgba(117, 227, 209, 0.16), transparent 22%),
+      linear-gradient(180deg, #081013 0%, #0d171a 52%, #0a1012 100%);
+    border-radius: 34px;
+    padding: 2.2rem;
+    box-shadow: var(--race-shadow);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .artist-race-page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 92%);
+  }
+
+  .race-hero,
+  .race-shell {
+    position: relative;
+    z-index: 1;
+  }
+
+  .race-hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--race-line);
+  }
+
+  .race-hero__copy {
+    max-width: 54rem;
+  }
+
+  .race-kicker,
+  .race-eyebrow,
+  .race-clock__label {
+    margin: 0 0 0.55rem;
+    font: 700 0.72rem/1.1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--race-teal);
+  }
+
+  .artist-race-page h1,
+  .artist-race-page h2,
+  .artist-race-page h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  .artist-race-page h1 {
+    margin: 0;
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .artist-race-page p,
+  .artist-race-page dt,
+  .artist-race-page dd,
+  .artist-race-page label,
+  .artist-race-page button,
+  .artist-race-page select,
+  .artist-race-page input {
+    font-family: 'Spectral', serif;
+  }
+
+  .race-hero p:last-child,
+  .race-panel--note p {
+    margin: 1rem 0 0;
+    max-width: 48rem;
+    color: var(--race-muted);
+    font-size: 1.12rem;
+    line-height: 1.6;
+  }
+
+  .race-link,
+  .race-button {
+    border: 1px solid rgba(228, 184, 77, 0.34);
+    background: rgba(228, 184, 77, 0.06);
+    color: var(--race-text);
+    border-radius: 999px;
+    padding: 0.9rem 1.25rem;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  }
+
+  .race-link:hover,
+  .race-button:hover {
+    transform: translateY(-1px);
+    background: rgba(228, 184, 77, 0.14);
+    border-color: rgba(228, 184, 77, 0.55);
+  }
+
+  .race-button {
+    cursor: pointer;
+    font: 700 0.94rem/1 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .race-button--primary {
+    background: linear-gradient(135deg, rgba(228, 184, 77, 0.92), rgba(255, 113, 74, 0.92));
+    color: #091013;
+    border-color: transparent;
+  }
+
+  .race-shell {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.85fr);
+    gap: 1.35rem;
+  }
+
+  .race-sidebar {
+    display: grid;
+    gap: 1.35rem;
+  }
+
+  .race-panel {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 24%),
+      var(--race-panel);
+    border: 1px solid rgba(228, 184, 77, 0.14);
+    border-radius: 28px;
+    padding: 1.4rem;
+    box-shadow: var(--race-shadow);
+    backdrop-filter: blur(18px);
+  }
+
+  .race-panel--stage {
+    padding: 1.55rem;
+  }
+
+  .race-panel__topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+  }
+
+  .race-panel__topline h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 2.8vw, 3.2rem);
+  }
+
+  .race-clock {
+    min-width: 200px;
+    padding: 1rem 1.1rem;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(117, 227, 209, 0.08), rgba(255, 113, 74, 0.06));
+    border: 1px solid rgba(117, 227, 209, 0.18);
+  }
+
+  .race-clock__value {
+    font: 700 clamp(1.55rem, 2vw, 2.1rem)/1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .race-clock__subtitle {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+    color: var(--race-muted);
+  }
+
+  .race-stage-wrap {
+    position: relative;
+    border-radius: 24px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 35%),
+      var(--race-panel-alt);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    min-height: 1080px;
+    overflow: hidden;
+    padding: 1rem 1rem 1.2rem 1rem;
+  }
+
+  .race-stage-grid {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(228, 184, 77, 0.05) 0%, rgba(228, 184, 77, 0.05) 1px, transparent 1px, transparent 25%),
+      linear-gradient(90deg, rgba(228, 184, 77, 0.05) 0%, rgba(228, 184, 77, 0.05) 1px, transparent 1px, transparent 50%),
+      linear-gradient(90deg, rgba(228, 184, 77, 0.05) 0%, rgba(228, 184, 77, 0.05) 1px, transparent 1px, transparent 75%);
+    background-size: 25% 100%;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  .race-stage {
+    position: relative;
+    min-height: 100%;
+  }
+
+  .race-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.85rem;
+    color: var(--race-muted);
+    font: 600 0.82rem/1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .race-item {
+    position: absolute;
+    inset-inline: 0;
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: center;
+    transition: transform 340ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 220ms ease;
+  }
+
+  .race-item__rank {
+    font: 700 1.1rem/1 'Chakra Petch', sans-serif;
+    color: rgba(246, 240, 221, 0.72);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .race-item__bar {
+    position: relative;
+    min-height: 72px;
+    display: flex;
+    align-items: stretch;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .race-item__fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 12%;
+    border-radius: 20px;
+    background:
+      linear-gradient(90deg, rgba(228, 184, 77, 0.96), rgba(255, 113, 74, 0.92) 62%, rgba(117, 227, 209, 0.78));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    transition: width 340ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 240ms ease;
+  }
+
+  .race-item__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .race-item__identity {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .race-item__avatar {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.05);
+    display: grid;
+    place-items: center;
+  }
+
+  .race-item__img,
+  .race-item__initials {
+    width: 100%;
+    height: 100%;
+  }
+
+  .race-item__img {
+    object-fit: cover;
+  }
+
+  .race-item__initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 0.95rem/1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.1em;
+    color: var(--race-teal);
+  }
+
+  .race-item__text {
+    min-width: 0;
+  }
+
+  .race-item__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 700 1.15rem/1.1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .race-item__subline {
+    margin-top: 0.3rem;
+    color: rgba(246, 240, 221, 0.68);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .race-item__value {
+    flex: 0 0 auto;
+    font: 700 clamp(1.05rem, 1.7vw, 1.6rem)/1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .race-item.is-leader .race-item__fill {
+    filter: brightness(1.06);
+  }
+
+  .race-item.is-leader .race-item__rank,
+  .race-item.is-leader .race-item__value {
+    color: var(--race-brass);
+  }
+
+  .race-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .race-speed {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 0.45rem;
+    color: var(--race-muted);
+    font-size: 0.96rem;
+  }
+
+  .race-speed select,
+  .race-scrubber input {
+    width: 100%;
+  }
+
+  .race-speed select {
+    appearance: none;
+    border-radius: 16px;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--race-text);
+  }
+
+  .race-scrubber {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1rem;
+    color: var(--race-muted);
+  }
+
+  .race-scrubber input[type='range'] {
+    appearance: none;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(228, 184, 77, 0.9), rgba(117, 227, 209, 0.82));
+    outline: none;
+  }
+
+  .race-scrubber input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--race-text);
+    border: 2px solid #081013;
+    box-shadow: 0 0 0 3px rgba(228, 184, 77, 0.24);
+  }
+
+  .race-meta {
+    margin-top: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    color: var(--race-muted);
+    font-size: 0.92rem;
+  }
+
+  .race-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .race-stat {
+    padding: 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .race-stat__label {
+    color: var(--race-muted);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .race-stat__value {
+    margin-top: 0.45rem;
+    font: 700 1.6rem/1 'Chakra Petch', sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .race-stat__value--text {
+    font-size: 1.08rem;
+    line-height: 1.2;
+  }
+
+  .race-details {
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .race-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .race-details dt {
+    color: var(--race-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.84rem;
+  }
+
+  .race-details dd {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  @media (max-width: 1080px) {
+    .race-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .race-stage-wrap {
+      min-height: 980px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .artist-race-page {
+      padding: 1.15rem;
+      border-radius: 24px;
+    }
+
+    .race-hero,
+    .race-panel__topline,
+    .race-meta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .race-stage-wrap {
+      min-height: 920px;
+      padding: 0.75rem;
+    }
+
+    .race-item {
+      grid-template-columns: 52px minmax(0, 1fr);
+      gap: 0.5rem;
+    }
+
+    .race-item__bar {
+      min-height: 74px;
+    }
+
+    .race-item__content {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .race-item__value {
+      padding-left: 3.4rem;
+      font-size: 1.1rem;
+    }
+
+    .race-stats,
+    .race-controls {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

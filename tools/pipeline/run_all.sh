@@ -43,6 +43,9 @@ echo "==> Running process-lastfm"
 echo "==> Running build-timeline"
 ./mp3-scripts build-timeline
 
+echo "==> Running build-artist-race"
+./mp3-scripts build-artist-race
+
 echo "==> Running build-transition-graph"
 ./mp3-scripts build-transition-graph
 
