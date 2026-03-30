@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-16T01:23:03Z",
+  "generatedAt": "2026-03-30T13:22:39Z",
   "timezone": "America/Chicago",
   "metric": "cumulative",
   "entityType": "artist",
   "firstMonth": "2005-02",
   "lastMonth": "2026-03",
   "totalFrames": 254,
-  "totalScrobbles": 111184,
+  "totalScrobbles": 111366,
   "displayCount": 12,
   "frames": [
     {
@@ -19579,7 +19579,7 @@
     {
       "month": "2026-03",
       "label": "Mar 2026",
-      "frameEnd": 1772719683000,
+      "frameEnd": 1774876570000,
       "leaders": [
         {
           "rank": 1,
@@ -19591,7 +19591,7 @@
           "rank": 2,
           "artist": "Radiohead",
           "artistSlug": "radiohead",
-          "playCount": 1556
+          "playCount": 1560
         },
         {
           "rank": 3,
@@ -19609,7 +19609,7 @@
           "rank": 5,
           "artist": "PJ Harvey",
           "artistSlug": "pj-harvey",
-          "playCount": 1043
+          "playCount": 1046
         },
         {
           "rank": 6,
@@ -19621,7 +19621,7 @@
           "rank": 7,
           "artist": "The Smashing Pumpkins",
           "artistSlug": "the-smashing-pumpkins",
-          "playCount": 849
+          "playCount": 851
         },
         {
           "rank": 8,

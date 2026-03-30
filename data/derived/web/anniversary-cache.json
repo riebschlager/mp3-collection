@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T01:22:42Z",
+  "generatedAt": "2026-03-30T13:22:38Z",
   "timezone": "America/Chicago",
   "weekStart": "sunday",
   "topN": 10,
@@ -116153,14 +116153,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -116176,45 +116182,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -118276,14 +118276,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -118299,45 +118305,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -120379,14 +120379,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -120402,45 +120408,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -122666,14 +122666,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -122689,45 +122695,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -124875,14 +124875,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -124898,45 +124904,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -126201,6 +126201,74 @@
       "label": "March 6",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-06",
+          "totalPlays": 27,
+          "uniqueTracks": 27,
+          "topTracks": [
+            {
+              "track": "Ageispolis",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "i",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Ptolemy",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Pulsewidth",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Schottkey 7th Path",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "We Are the Music Makers",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Neighborhood #2 (Laika)",
+              "artist": "Arcade Fire",
+              "album": "Funeral",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2024,
           "date": "2024-03-06",
           "totalPlays": 62,
@@ -126744,14 +126812,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -126767,45 +126841,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -128000,6 +128068,74 @@
       "label": "March 7",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-07",
+          "totalPlays": 22,
+          "uniqueTracks": 22,
+          "topTracks": [
+            {
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
+              "playCount": 1
+            },
+            {
+              "track": "Right Down the Line",
+              "artist": "Bonnie Raitt",
+              "album": "Slipstream",
+              "playCount": 1
+            },
+            {
+              "track": "Let Yourself Go",
+              "artist": "Elvis Presley",
+              "album": "Speedway",
+              "playCount": 1
+            },
+            {
+              "track": "Stuck on You",
+              "artist": "Elvis Presley",
+              "album": "Elvis 30 #1 Hits",
+              "playCount": 1
+            },
+            {
+              "track": "Sporting Life Blues",
+              "artist": "Eric Clapton",
+              "album": "The Road to Escondido",
+              "playCount": 1
+            },
+            {
+              "track": "I Ain't Living Long Like This",
+              "artist": "Gary Stewart",
+              "album": "Your Place Or Mine",
+              "playCount": 1
+            },
+            {
+              "track": "Magnolia",
+              "artist": "J.J. Cale",
+              "album": "Naturally",
+              "playCount": 1
+            },
+            {
+              "track": "Shady Grove",
+              "artist": "Jerry Garcia",
+              "album": "Shady Grove",
+              "playCount": 1
+            },
+            {
+              "track": "High Time",
+              "artist": "Kacey Musgraves",
+              "album": "Pageant Material",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2024,
           "date": "2024-03-07",
           "totalPlays": 28,
@@ -128359,14 +128495,20 @@
           "year": 2026,
           "startDate": "2026-03-01",
           "endDate": "2026-03-07",
-          "totalPlays": 57,
-          "uniqueTracks": 54,
-          "activeDays": 4,
+          "totalPlays": 106,
+          "uniqueTracks": 101,
+          "activeDays": 6,
           "topTracks": [
             {
               "track": "Scars",
               "artist": "Anthony Naples",
               "album": "Orbs",
+              "playCount": 2
+            },
+            {
+              "track": "Hedphelym",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 2
             },
             {
@@ -128382,45 +128524,39 @@
               "playCount": 2
             },
             {
+              "track": "Wet Dream",
+              "artist": "Wet Leg",
+              "album": "Wet Leg",
+              "playCount": 2
+            },
+            {
               "track": "Puede Ser",
               "artist": "Ale Cominotti",
               "album": "Puede Ser",
               "playCount": 1
             },
             {
-              "track": "Xtal",
+              "track": "Heat Lightning",
+              "artist": "Amy Helm",
+              "album": "Didn't It Rain",
+              "playCount": 1
+            },
+            {
+              "track": "Ageispolis",
               "artist": "Aphex Twin",
               "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Rah That's A Mad Question",
-              "artist": "Barry Can't Swim",
-              "album": "Rah That's A Mad Question",
+              "track": "Green Calx",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             },
             {
-              "track": "Water",
-              "artist": "BAYNK",
-              "album": "Water",
-              "playCount": 1
-            },
-            {
-              "track": "Begin Again",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Beyond Beliefs",
-              "artist": "Ben Böhmer",
-              "album": "Begin Again",
-              "playCount": 1
-            },
-            {
-              "track": "Rust",
-              "artist": "Ben Böhmer",
-              "album": "Bloom",
+              "track": "Heliosphan",
+              "artist": "Aphex Twin",
+              "album": "Selected Ambient Works 85-92",
               "playCount": 1
             }
           ]
@@ -129615,6 +129751,74 @@
       "label": "March 8",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-08",
+          "totalPlays": 28,
+          "uniqueTracks": 27,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            },
+            {
+              "track": "Nausea",
+              "artist": "Craft Spells",
+              "album": "Nausea",
+              "playCount": 1
+            },
+            {
+              "track": "Sweet Thang",
+              "artist": "Dreamgirl",
+              "album": "Illuminaughty",
+              "playCount": 1
+            },
+            {
+              "track": "Salome",
+              "artist": "Eternal Dust",
+              "album": "Eternal Dust",
+              "playCount": 1
+            },
+            {
+              "track": "To Be",
+              "artist": "Foxwarren",
+              "album": "Foxwarren",
+              "playCount": 1
+            },
+            {
+              "track": "Rabbits",
+              "artist": "Frida",
+              "album": "I Want In Your Head",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-08",
           "totalPlays": 22,
@@ -130094,6 +130298,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-02",
@@ -131284,6 +131558,74 @@
       "label": "March 9",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-09",
+          "totalPlays": 15,
+          "uniqueTracks": 15,
+          "topTracks": [
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "La Fat Fur",
+              "artist": "Connan Mockasin",
+              "album": "Myths 001",
+              "playCount": 1
+            },
+            {
+              "track": "You Are Not Through",
+              "artist": "Evil Nine",
+              "album": "You Can Be Special Too",
+              "playCount": 1
+            },
+            {
+              "track": "The Loony Bin",
+              "artist": "Jahrund",
+              "album": "Inverted Paradise",
+              "playCount": 1
+            },
+            {
+              "track": "Empty and Silent (feat. King Krule)",
+              "artist": "Mount Kimbie",
+              "album": "The Sunset Violent",
+              "playCount": 1
+            },
+            {
+              "track": "drifting",
+              "artist": "Night Tapes",
+              "album": "drifting",
+              "playCount": 1
+            },
+            {
+              "track": "Futuristic Casket",
+              "artist": "Phantogram",
+              "album": "Eyelid Movies",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-09",
           "totalPlays": 70,
@@ -131929,6 +132271,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-09",
@@ -133119,6 +133531,56 @@
       "label": "March 10",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-10",
+          "totalPlays": 7,
+          "uniqueTracks": 7,
+          "topTracks": [
+            {
+              "track": "Cold Heart",
+              "artist": "Nilüfer Yanya",
+              "album": "Cold Heart",
+              "playCount": 1
+            },
+            {
+              "track": "Where To Look",
+              "artist": "Nilüfer Yanya",
+              "album": "Where To Look",
+              "playCount": 1
+            },
+            {
+              "track": "Origins",
+              "artist": "Tennis",
+              "album": "Young & Old",
+              "playCount": 1
+            },
+            {
+              "track": "Playing Classics",
+              "artist": "Water From Your Eyes",
+              "album": "Playing Classics",
+              "playCount": 1
+            },
+            {
+              "track": "CPR",
+              "artist": "Wet Leg",
+              "album": "CPR",
+              "playCount": 1
+            },
+            {
+              "track": "davina mccall",
+              "artist": "Wet Leg",
+              "album": "davina mccall",
+              "playCount": 1
+            },
+            {
+              "track": "Bloom Baby Bloom - Jimmy Kimmel Live!",
+              "artist": "Wolf Alice",
+              "album": "Bloom Baby Bloom (Jimmy Kimmel Live!)",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-10",
           "totalPlays": 5,
@@ -133686,6 +134148,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-09",
@@ -135756,6 +136288,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-03-09",
           "endDate": "2025-03-15",
@@ -137442,6 +138044,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-09",
@@ -139248,6 +139920,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-03-09",
           "endDate": "2025-03-15",
@@ -140507,6 +141249,32 @@
       "label": "March 14",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-14",
+          "totalPlays": 3,
+          "uniqueTracks": 3,
+          "topTracks": [
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "What Once Was",
+              "artist": "Her's",
+              "album": "Songs of Her's",
+              "playCount": 1
+            },
+            {
+              "track": "Shirim",
+              "artist": "Melody's Echo Chamber",
+              "album": "Bon Voyage",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-14",
           "totalPlays": 9,
@@ -141088,6 +141856,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-08",
+          "endDate": "2026-03-14",
+          "totalPlays": 53,
+          "uniqueTracks": 52,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "Color of Love",
+              "artist": "Bijoux Cone",
+              "album": "Magnetism",
+              "playCount": 2
+            },
+            {
+              "track": "Comb Your Hair",
+              "artist": "Abracadabra",
+              "album": "Abracadabra",
+              "playCount": 1
+            },
+            {
+              "track": "Four Three",
+              "artist": "All India Radio",
+              "album": "Echo Other",
+              "playCount": 1
+            },
+            {
+              "track": "Am I going up?",
+              "artist": "All Them Witches",
+              "album": "Sleeping Through the War",
+              "playCount": 1
+            },
+            {
+              "track": "Not My Baby",
+              "artist": "Alvvays",
+              "album": "Antisocialites",
+              "playCount": 1
+            },
+            {
+              "track": "One More Rush",
+              "artist": "Baril",
+              "album": "One More Rush",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "Majorette",
+              "artist": "Beach House",
+              "album": "Thank Your Lucky Stars",
+              "playCount": 1
+            },
+            {
+              "track": "Freedom Fighter",
+              "artist": "Bowery Electric",
+              "album": "Lushlife",
+              "playCount": 1
+            },
+            {
+              "track": "49 Years",
+              "artist": "CLUB KURU",
+              "album": "Meet Your Maker",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-09",
@@ -142348,6 +143186,50 @@
       "label": "March 15",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-15",
+          "totalPlays": 6,
+          "uniqueTracks": 6,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            },
+            {
+              "track": "Another Space Song",
+              "artist": "Failure",
+              "album": "Fantastic Planet",
+              "playCount": 1
+            },
+            {
+              "track": "Shirim",
+              "artist": "Melody's Echo Chamber",
+              "album": "Bon Voyage",
+              "playCount": 1
+            },
+            {
+              "track": "Slow",
+              "artist": "my bloody valentine",
+              "album": "You Made Me Realise",
+              "playCount": 1
+            },
+            {
+              "track": "Low Place Like Home",
+              "artist": "Sneaker Pimps",
+              "album": "Becoming X",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2024,
           "date": "2024-03-15",
           "totalPlays": 27,
@@ -142859,6 +143741,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-09",
@@ -144119,6 +145071,62 @@
       "label": "March 16",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-16",
+          "totalPlays": 8,
+          "uniqueTracks": 8,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 1
+            },
+            {
+              "track": "Destination Ursa Major",
+              "artist": "Superdrag",
+              "album": "Regretfully Yours",
+              "playCount": 1
+            },
+            {
+              "track": "Nothing Good Is Real",
+              "artist": "Superdrag",
+              "album": "Regretfully Yours",
+              "playCount": 1
+            },
+            {
+              "track": "Slot Machine",
+              "artist": "Superdrag",
+              "album": "Regretfully Yours",
+              "playCount": 1
+            },
+            {
+              "track": "Sucked Out",
+              "artist": "Superdrag",
+              "album": "Regretfully Yours",
+              "playCount": 1
+            },
+            {
+              "track": "Truest Love",
+              "artist": "Superdrag",
+              "album": "Regretfully Yours",
+              "playCount": 1
+            },
+            {
+              "track": "What If You Don't Fly",
+              "artist": "Superdrag",
+              "album": "Regretfully Yours",
+              "playCount": 1
+            },
+            {
+              "track": "I Love How You Love Me",
+              "artist": "The Paris Sisters",
+              "album": "Pop, Rock & Doo Wop - Sounds from the Golden Age Vol. 1",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-16",
           "totalPlays": 2,
@@ -144540,6 +145548,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-16",
@@ -145800,6 +146878,74 @@
       "label": "March 17",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-17",
+          "totalPlays": 11,
+          "uniqueTracks": 11,
+          "topTracks": [
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "58500",
+              "artist": "Enfant Sauvage",
+              "album": "Petrichor",
+              "playCount": 1
+            },
+            {
+              "track": "What's a Girl to Do",
+              "artist": "Fatima Yamaha",
+              "album": "What's A Girl To Do (Remixes)",
+              "playCount": 1
+            },
+            {
+              "track": "Jarred",
+              "artist": "Kiasmos",
+              "album": "Blurred",
+              "playCount": 1
+            },
+            {
+              "track": "The Finishing",
+              "artist": "Stavroz",
+              "album": "The Ginning",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-17",
           "totalPlays": 19,
@@ -146645,6 +147791,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-16",
@@ -148384,6 +149600,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-16",
@@ -150155,6 +151441,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-16",
@@ -152109,6 +153465,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-03-16",
           "endDate": "2025-03-22",
@@ -153326,6 +154752,38 @@
       "label": "March 21",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-21",
+          "totalPlays": 4,
+          "uniqueTracks": 4,
+          "topTracks": [
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Reckoner",
+              "artist": "Radiohead",
+              "album": "In Rainbows",
+              "playCount": 1
+            },
+            {
+              "track": "6 Underground",
+              "artist": "Sneaker Pimps",
+              "album": "Becoming X",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-21",
           "totalPlays": 10,
@@ -153993,6 +155451,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-15",
+          "endDate": "2026-03-21",
+          "totalPlays": 29,
+          "uniqueTracks": 28,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "23",
+              "artist": "Blonde Redhead",
+              "album": "23",
+              "playCount": 2
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Austin Powers Saying Yeah, Baby!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Diarrhea Moustache",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Lunch With Frankenstein",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Phone Call from a Cranky Terrorist",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Sex on the Internet!?",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "You Go, Girl!",
+              "artist": "David Cross",
+              "album": "Shut Up, You Fucking Baby!",
+              "playCount": 1
+            },
+            {
+              "track": "Kick The Tragedy",
+              "artist": "Drop Nineteens",
+              "album": "Delaware",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-16",
@@ -155775,6 +157303,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-03-16",
           "endDate": "2025-03-22",
@@ -156992,6 +158590,74 @@
       "label": "March 23",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-23",
+          "totalPlays": 17,
+          "uniqueTracks": 17,
+          "topTracks": [
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            },
+            {
+              "track": "Flutes",
+              "artist": "Hot Chip",
+              "album": "In Our Heads",
+              "playCount": 1
+            },
+            {
+              "track": "Gosh",
+              "artist": "Jamie xx",
+              "album": "Gosh",
+              "playCount": 1
+            },
+            {
+              "track": "Neverender (Starring Tame Impala) - Live at Coachella 2024",
+              "artist": "Justice",
+              "album": "Neverender (Starring Tame Impala) [Live at Coachella 2024]",
+              "playCount": 1
+            },
+            {
+              "track": "More Pressure",
+              "artist": "Kae Tempest",
+              "album": "More Pressure",
+              "playCount": 1
+            },
+            {
+              "track": "Buena",
+              "artist": "Morphine",
+              "album": "Buena",
+              "playCount": 1
+            },
+            {
+              "track": "Henry Lee",
+              "artist": "Nick Cave & the Bad Seeds",
+              "album": "Henry Lee",
+              "playCount": 1
+            },
+            {
+              "track": "C'mon Billy",
+              "artist": "PJ Harvey",
+              "album": "C'mon Billy",
+              "playCount": 1
+            },
+            {
+              "track": "Down by the Water",
+              "artist": "PJ Harvey",
+              "album": "Down by the Water",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-23",
           "totalPlays": 44,
@@ -157337,6 +159003,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -158555,6 +160291,74 @@
       "label": "March 24",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-24",
+          "totalPlays": 12,
+          "uniqueTracks": 11,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 2
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Me and the Devil",
+              "artist": "Gil Scott-Heron",
+              "album": "I’m New Here (10th Anniversary Expanded Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Low Sun",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Sonido Cósmico",
+              "playCount": 1
+            },
+            {
+              "track": "Untitled",
+              "artist": "Interpol",
+              "album": "Turn on the Bright Lights",
+              "playCount": 1
+            },
+            {
+              "track": "In the Moment",
+              "artist": "Jim James",
+              "album": "Eternally Even",
+              "playCount": 1
+            },
+            {
+              "track": "Blue",
+              "artist": "NewDad",
+              "album": "Blue",
+              "playCount": 1
+            },
+            {
+              "track": "Desert Island Disk",
+              "artist": "Radiohead",
+              "album": "A Moon Shaped Pool",
+              "playCount": 1
+            },
+            {
+              "track": "The Smoke",
+              "artist": "The Smile",
+              "album": "A Light for Attracting Attention",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-24",
           "totalPlays": 54,
@@ -159304,6 +161108,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -160522,6 +162396,62 @@
       "label": "March 25",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-25",
+          "totalPlays": 8,
+          "uniqueTracks": 8,
+          "topTracks": [
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "By",
+              "artist": "HNNY",
+              "album": "Hosoi",
+              "playCount": 1
+            },
+            {
+              "track": "Flown",
+              "artist": "Kiasmos",
+              "album": "II",
+              "playCount": 1
+            },
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 1
+            },
+            {
+              "track": "Movements (Chapter III)",
+              "artist": "Leon Vynehall",
+              "album": "Nothing Is Still",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-25",
           "totalPlays": 11,
@@ -161167,6 +163097,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -162433,6 +164433,26 @@
       "label": "March 26",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-26",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "topTracks": [
+            {
+              "track": "Territory",
+              "artist": "The Blaze",
+              "album": "Territory",
+              "playCount": 1
+            },
+            {
+              "track": "Bunny",
+              "artist": "Tourist",
+              "album": "Wild",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-26",
           "totalPlays": 25,
@@ -163020,6 +165040,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -164356,6 +166446,32 @@
       "label": "March 27",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-27",
+          "totalPlays": 3,
+          "uniqueTracks": 3,
+          "topTracks": [
+            {
+              "track": "The Chain",
+              "artist": "Kerala Dust",
+              "album": "The Chain",
+              "playCount": 1
+            },
+            {
+              "track": "Freak",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 1
+            },
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-27",
           "totalPlays": 29,
@@ -165057,6 +167173,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -166393,6 +168579,56 @@
       "label": "March 28",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-28",
+          "totalPlays": 7,
+          "uniqueTracks": 7,
+          "topTracks": [
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Violet",
+              "artist": "Hole",
+              "album": "Violet",
+              "playCount": 1
+            },
+            {
+              "track": "Bound For The Floor",
+              "artist": "Local H",
+              "album": "Bound For The Floor",
+              "playCount": 1
+            },
+            {
+              "track": "Fake Plastic Trees",
+              "artist": "Radiohead",
+              "album": "Fake Plastic Trees",
+              "playCount": 1
+            },
+            {
+              "track": "Just",
+              "artist": "Radiohead",
+              "album": "Just",
+              "playCount": 1
+            },
+            {
+              "track": "Thirty-Three",
+              "artist": "The Smashing Pumpkins",
+              "album": "Thirty-Three",
+              "playCount": 1
+            },
+            {
+              "track": "Today",
+              "artist": "The Smashing Pumpkins",
+              "album": "Today",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-28",
           "totalPlays": 3,
@@ -166812,6 +169048,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-22",
+          "endDate": "2026-03-28",
+          "totalPlays": 49,
+          "uniqueTracks": 46,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "High by the Beach",
+              "artist": "Lana Del Rey",
+              "album": "Honeymoon",
+              "playCount": 4
+            },
+            {
+              "track": "Would?",
+              "artist": "Alice in Chains",
+              "album": "Would?",
+              "playCount": 1
+            },
+            {
+              "track": "Skyscraper",
+              "artist": "Automatic",
+              "album": "Excess",
+              "playCount": 1
+            },
+            {
+              "track": "Beyond Beliefs",
+              "artist": "Ben Böhmer",
+              "album": "Begin Again",
+              "playCount": 1
+            },
+            {
+              "track": "Celeste",
+              "artist": "Bicep",
+              "album": "Just EP",
+              "playCount": 1
+            },
+            {
+              "track": "Stay the Same",
+              "artist": "Bonobo",
+              "album": "Black Sands",
+              "playCount": 1
+            },
+            {
+              "track": "Viceral",
+              "artist": "dublon",
+              "album": "Viceral",
+              "playCount": 1
+            },
+            {
+              "track": "The World’s Biggest Paving Slab",
+              "artist": "English Teacher",
+              "album": "This Could Be Texas",
+              "playCount": 1
+            },
+            {
+              "track": "Angie (i’ve been lost) [feat. Angie McMahon]",
+              "artist": "Fred again..",
+              "album": "Actual Life (April 14 - December 17 2020)",
+              "playCount": 1
+            },
+            {
+              "track": "I'll Take Care Of U",
+              "artist": "Gil Scott-Heron",
+              "album": "I'll Take Care Of U",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -168148,6 +170454,20 @@
       "label": "March 29",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-29",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2024,
           "date": "2024-03-29",
           "totalPlays": 50,
@@ -168721,6 +171041,28 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-23",
@@ -170057,6 +172399,20 @@
       "label": "March 30",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-03-30",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-03-30",
           "totalPlays": 7,
@@ -170884,6 +173240,28 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-30",
@@ -172916,6 +175294,28 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-03-30",
           "endDate": "2025-04-05",
@@ -174860,6 +177260,28 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-30",
@@ -176873,6 +179295,28 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-30",
@@ -178912,6 +181356,28 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-30",
@@ -180953,6 +183419,28 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-03-29",
+          "endDate": "2026-04-04",
+          "totalPlays": 2,
+          "uniqueTracks": 2,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Water",
+              "artist": "BAYNK",
+              "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Yellow",
+              "artist": "Coldplay",
+              "album": "Parachutes",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-30",

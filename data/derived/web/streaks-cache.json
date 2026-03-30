@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T03:54:33Z",
+  "generatedAt": "2026-03-30T13:23:00Z",
   "source": "all",
   "timezone": "UTC",
   "topN": 10,
@@ -10917,24 +10917,6 @@
           "track": "Yam Yam"
         },
         {
-          "artist": "Beach House",
-          "burstScore": 0.2759,
-          "firstPlay": "2026-01-04",
-          "lastPlay": "2026-02-02",
-          "plays": 8,
-          "spanDays": 28,
-          "track": "Lazuli"
-        },
-        {
-          "artist": "The Smile",
-          "burstScore": 0.2727,
-          "firstPlay": "2026-01-01",
-          "lastPlay": "2026-01-23",
-          "plays": 6,
-          "spanDays": 21,
-          "track": "The Smoke"
-        },
-        {
           "artist": "Black Country, New Road",
           "burstScore": 0.2414,
           "firstPlay": "2026-01-18",
@@ -10978,6 +10960,24 @@
           "plays": 6,
           "spanDays": 29,
           "track": "Crusades"
+        },
+        {
+          "artist": "Wet Leg",
+          "burstScore": 0.1842,
+          "firstPlay": "2026-01-16",
+          "lastPlay": "2026-02-23",
+          "plays": 7,
+          "spanDays": 37,
+          "track": "pokemon"
+        },
+        {
+          "artist": "Allah-Las",
+          "burstScore": 0.1667,
+          "firstPlay": "2026-01-02",
+          "lastPlay": "2026-02-13",
+          "plays": 7,
+          "spanDays": 41,
+          "track": "Star"
         }
       ],
       "period": "Streaks & Bursts",
@@ -10989,13 +10989,13 @@
       "source": "all",
       "sourceBreakdown": [
         {
-          "count": 1283,
-          "share": 0.6593,
+          "count": 1465,
+          "share": 0.6884,
           "source": "lastfm"
         },
         {
           "count": 663,
-          "share": 0.3407,
+          "share": 0.3116,
           "source": "spotify"
         }
       ],
@@ -11024,14 +11024,14 @@
         }
       },
       "summary": {
-        "activeDays": 53,
-        "avgSessionMinutes": 54.13,
-        "avgTracksPerSession": 19.84,
+        "activeDays": 72,
+        "avgSessionMinutes": 43.92,
+        "avgTracksPerSession": 15.75,
         "maxDailyPlays": 214,
-        "medianDailyPlays": 23,
-        "nightPlayShare": 0.591,
-        "totalScrobbles": 1946,
-        "totalSessions": 98
+        "medianDailyPlays": 16,
+        "nightPlayShare": 0.5822,
+        "totalScrobbles": 2128,
+        "totalSessions": 135
       },
       "timezone": "UTC",
       "topBurstDays": [

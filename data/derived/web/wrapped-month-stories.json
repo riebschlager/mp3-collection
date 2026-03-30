@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T03:56:34Z",
+  "generatedAt": "2026-03-30T13:24:57Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -236599,11 +236599,11 @@
             "count": 3
           },
           {
-            "artist": "Nightcrawl",
+            "artist": "NightCrawl",
             "count": 3
           },
           {
-            "artist": "NightCrawl",
+            "artist": "Nightcrawl",
             "count": 3
           },
           {
@@ -238406,13 +238406,13 @@
             "start": "2025-11-04T22:00:04Z"
           },
           "longestTrackRun": {
-            "artist": "Joe Cocker",
+            "artist": "Placebo",
             "count": 3,
-            "durationMinutes": 5.28,
-            "end": "2025-11-04T05:03:58Z",
-            "start": "2025-11-04T04:58:41Z",
-            "track": "Feelin' Alright",
-            "trackNormKey": "joe cocker|feelin alright"
+            "durationMinutes": 152.83,
+            "end": "2025-11-03T22:30:58Z",
+            "start": "2025-11-03T19:58:08Z",
+            "track": "Running Up That Hill",
+            "trackNormKey": "placebo|running up that hill"
           }
         },
         "summary": {
@@ -240229,11 +240229,11 @@
             "count": 4
           },
           {
-            "artist": "Marty Stuart and His Fabulous Superlatives",
+            "artist": "Marty Stuart And His Fabulous Superlatives",
             "count": 3
           },
           {
-            "artist": "Marty Stuart And His Fabulous Superlatives",
+            "artist": "Marty Stuart and His Fabulous Superlatives",
             "count": 3
           },
           {
@@ -240712,7 +240712,7 @@
           "title": "Peak Day"
         },
         {
-          "detail": "22 consecutive plays",
+          "detail": "24 consecutive plays",
           "headline": "Shelby Lynne",
           "id": "artist_streak",
           "title": "Longest Artist Run"
@@ -240811,10 +240811,10 @@
           "longestArtistRun": {
             "artist": "Shelby Lynne",
             "artistNormKey": "shelby lynne",
-            "count": 22,
-            "durationMinutes": 41.93,
-            "end": "2026-01-10T23:02:35Z",
-            "start": "2026-01-10T22:20:39Z"
+            "count": 24,
+            "durationMinutes": 48.58,
+            "end": "2026-01-10T23:06:19Z",
+            "start": "2026-01-10T22:17:44Z"
           },
           "longestTrackRun": {
             "artist": "Alabaster Deplume",
@@ -242537,43 +242537,43 @@
         "discoveryBaseline": "global",
         "newArtists": [
           {
+            "artist": "Bijoux Cone",
+            "count": 2
+          },
+          {
             "artist": "Edmondson",
             "count": 2
+          },
+          {
+            "artist": "Gary Stewart",
+            "count": 2
+          },
+          {
+            "artist": "The Paris Sisters",
+            "count": 2
+          },
+          {
+            "artist": "Abracadabra",
+            "count": 1
           },
           {
             "artist": "Ale Cominotti",
             "count": 1
           },
           {
-            "artist": "Etienne Machine",
+            "artist": "All India Radio",
             "count": 1
           },
           {
-            "artist": "François Ier",
+            "artist": "Amy Helm",
             "count": 1
           },
           {
-            "artist": "High Beam",
+            "artist": "Baril",
             "count": 1
           },
           {
-            "artist": "Kristin Witko",
-            "count": 1
-          },
-          {
-            "artist": "Milli Rich",
-            "count": 1
-          },
-          {
-            "artist": "Monolithic",
-            "count": 1
-          },
-          {
-            "artist": "Paul Ruben",
-            "count": 1
-          },
-          {
-            "artist": "Talking Flowers",
+            "artist": "Cardboard",
             "count": 1
           }
         ],
@@ -242584,85 +242584,79 @@
             "track": "Scars"
           },
           {
+            "artist": "Bijoux Cone",
+            "count": 2,
+            "track": "Color of Love"
+          },
+          {
             "artist": "Edmondson",
             "count": 2,
             "track": "Flamingo Tripper"
           },
           {
-            "artist": "Ale Cominotti",
-            "count": 1,
-            "track": "Puede Ser"
-          },
-          {
-            "artist": "Etienne Machine",
-            "count": 1,
-            "track": "Indian Summer"
-          },
-          {
-            "artist": "François Ier",
-            "count": 1,
-            "track": "1515 - Original Mix"
-          },
-          {
-            "artist": "Galcher Lustwerk",
-            "count": 1,
-            "track": "Warming Up"
-          },
-          {
-            "artist": "High Beam",
-            "count": 1,
-            "track": "Just What I Said (Everything In Its Right Place)"
+            "artist": "Gary Stewart",
+            "count": 2,
+            "track": "I Ain't Living Long Like This"
           },
           {
             "artist": "Kiasmos",
-            "count": 1,
+            "count": 2,
             "track": "Flown"
           },
           {
             "artist": "Kiasmos",
-            "count": 1,
+            "count": 2,
             "track": "Jarred"
           },
           {
-            "artist": "Kristin Witko",
+            "artist": "The Beatles",
+            "count": 2,
+            "track": "Love Me Do - Remastered 2009"
+          },
+          {
+            "artist": "The Paris Sisters",
+            "count": 2,
+            "track": "I Love How You Love Me"
+          },
+          {
+            "artist": "Willie Nelson",
+            "count": 2,
+            "track": "What Was It You Wanted"
+          },
+          {
+            "artist": "Abracadabra",
             "count": 1,
-            "track": "Save Your Tears"
+            "track": "Comb Your Hair"
           }
         ],
         "period": "Discovery",
         "source": "all",
         "summary": {
-          "newArtistCount": 11,
-          "newTrackCount": 21
+          "newArtistCount": 37,
+          "newTrackCount": 93
         }
       },
       "discoveryBaseline": "global",
       "dormantReturns": null,
       "insightBullets": [
-        "You logged 68 plays in 2026-03 across 5 active days.",
-        "Top artist: Kiasmos (4 plays).",
-        "You discovered 11 new artists and 21 new tracks.",
-        "50% of plays happened at night (10pm-6am, UTC)."
+        "You logged 250 plays in 2026-03 across 24 active days.",
+        "Top artist: Aphex Twin (11 plays).",
+        "You discovered 37 new artists and 93 new tracks.",
+        "49% of plays happened at night (10pm-6am, UTC)."
       ],
       "month": 3,
       "monthOverMonth": {
-        "artistOverlapJaccard": 0.0698,
+        "artistOverlapJaccard": 0.1172,
         "comparisonBulletPoints": [
-          "2026-02 had 659 scrobbles across 446 unique tracks; 2026-03 had 68 scrobbles across 65 unique tracks.",
-          "Artist overlap (Jaccard) was 0.070 and track overlap was 0.037.",
-          "Novelty shifted from 0.567 to 0.954; diversity entropy shifted from 0.988 to 0.996.",
-          "Era Similarity Index: 24.05/100 (confidence 0.079).",
-          "Strongest rising track: Anthony Naples - Scars (delta 0.065 plays/day)."
+          "2026-02 had 659 scrobbles across 446 unique tracks; 2026-03 had 250 scrobbles across 223 unique tracks.",
+          "Artist overlap (Jaccard) was 0.117 and track overlap was 0.059.",
+          "Novelty shifted from 0.567 to 0.888; diversity entropy shifted from 0.988 to 0.992.",
+          "Era Similarity Index: 28.12/100 (confidence 0.149).",
+          "Strongest rising track: Lana Del Rey - High by the Beach (delta 0.129 plays/day)."
         ],
-        "diversityCurrent": 0.9962,
+        "diversityCurrent": 0.9924,
         "diversityPrev": 0.9879,
         "genreShift": [
-          {
-            "delta": -0.3963,
-            "genre": "Rock",
-            "rateA": 0.4286,
-            "rateB": 0.0323
-          },
           {
             "delta": -0.3929,
             "genre": "Hard Rock",
@@ -242670,10 +242664,10 @@
             "rateB": 0
           },
           {
-            "delta": -0.25,
+            "delta": -0.2177,
             "genre": "Other",
             "rateA": 0.25,
-            "rateB": 0
+            "rateB": 0.0323
           },
           {
             "delta": -0.2143,
@@ -242682,10 +242676,10 @@
             "rateB": 0
           },
           {
-            "delta": -0.1106,
-            "genre": "Alternative",
-            "rateA": 0.1429,
-            "rateB": 0.0323
+            "delta": -0.2028,
+            "genre": "Rock",
+            "rateA": 0.4286,
+            "rateB": 0.2258
           },
           {
             "delta": -0.1071,
@@ -242716,11 +242710,57 @@
             "genre": "Electronica/Dance",
             "rateA": 0.0714,
             "rateB": 0
+          },
+          {
+            "delta": 0.0645,
+            "genre": "Alternative & Punk",
+            "rateA": 0,
+            "rateB": 0.0645
           }
         ],
-        "noveltyRateCurrent": 0.9538,
+        "noveltyRateCurrent": 0.8879,
         "noveltyRatePrevious": 0.5673,
         "persistentFavorites": [
+          {
+            "artist": "Wet Leg",
+            "countA": 3,
+            "countB": 2,
+            "rateA": 0.1071,
+            "rateB": 0.0645,
+            "track": "davina mccall"
+          },
+          {
+            "artist": "Ben Böhmer",
+            "countA": 1,
+            "countB": 2,
+            "rateA": 0.0357,
+            "rateB": 0.0645,
+            "track": "Beyond Beliefs"
+          },
+          {
+            "artist": "Bicep",
+            "countA": 1,
+            "countB": 2,
+            "rateA": 0.0357,
+            "rateB": 0.0645,
+            "track": "Glue"
+          },
+          {
+            "artist": "Blonde Redhead",
+            "countA": 1,
+            "countB": 2,
+            "rateA": 0.0357,
+            "rateB": 0.0645,
+            "track": "23"
+          },
+          {
+            "artist": "Leon Vynehall",
+            "countA": 1,
+            "countB": 2,
+            "rateA": 0.0357,
+            "rateB": 0.0645,
+            "track": "Movements (Chapter III)"
+          },
           {
             "artist": "Barry Can't Swim",
             "countA": 1,
@@ -242730,12 +242770,12 @@
             "track": "Rah That's A Mad Question"
           },
           {
-            "artist": "Ben Böhmer",
+            "artist": "Beach House",
             "countA": 1,
             "countB": 1,
             "rateA": 0.0357,
             "rateB": 0.0323,
-            "track": "Beyond Beliefs"
+            "track": "Lazuli"
           },
           {
             "artist": "Ben Böhmer",
@@ -242744,14 +242784,6 @@
             "rateA": 0.0357,
             "rateB": 0.0323,
             "track": "Rust"
-          },
-          {
-            "artist": "Bicep",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0357,
-            "rateB": 0.0323,
-            "track": "Glue"
           },
           {
             "artist": "Bonobo",
@@ -242768,38 +242800,6 @@
             "rateA": 0.0357,
             "rateB": 0.0323,
             "track": "A Deeper Life"
-          },
-          {
-            "artist": "Chaos in the CBD",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0357,
-            "rateB": 0.0323,
-            "track": "Love Language"
-          },
-          {
-            "artist": "HNNY",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0357,
-            "rateB": 0.0323,
-            "track": "I Let Go"
-          },
-          {
-            "artist": "Kid Francescoli",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0357,
-            "rateB": 0.0323,
-            "track": "Moon (And It Went Like)"
-          },
-          {
-            "artist": "Leon Vynehall",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0357,
-            "rateB": 0.0323,
-            "track": "Movements (Chapter III)"
           }
         ],
         "previousMonth": "2026-02",
@@ -242897,6 +242897,15 @@
         ],
         "topRisers": [
           {
+            "artist": "Lana Del Rey",
+            "countA": 0,
+            "countB": 4,
+            "delta": 0.129,
+            "rateA": 0,
+            "rateB": 0.129,
+            "track": "High by the Beach"
+          },
+          {
             "artist": "Anthony Naples",
             "countA": 0,
             "countB": 2,
@@ -242904,6 +242913,42 @@
             "rateA": 0,
             "rateB": 0.0645,
             "track": "Scars"
+          },
+          {
+            "artist": "Aphex Twin",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "Hedphelym"
+          },
+          {
+            "artist": "BAYNK",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "Water"
+          },
+          {
+            "artist": "Bijoux Cone",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "Color of Love"
+          },
+          {
+            "artist": "Bonobo",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "Stay the Same"
           },
           {
             "artist": "Edmondson",
@@ -242915,16 +242960,34 @@
             "track": "Flamingo Tripper"
           },
           {
+            "artist": "English Teacher",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "The World’s Biggest Paving Slab"
+          },
+          {
+            "artist": "Gary Stewart",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "I Ain't Living Long Like This"
+          },
+          {
             "artist": "Kiasmos",
             "countA": 0,
             "countB": 2,
             "delta": 0.0645,
             "rateA": 0,
             "rateB": 0.0645,
-            "track": "Looped"
+            "track": "Flown"
           }
         ],
-        "trackOverlapJaccard": 0.0365
+        "trackOverlapJaccard": 0.0585
       },
       "period": "2026-03",
       "scope": {
@@ -242937,44 +243000,44 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "5 active days (13.60 plays per active day)",
-          "headline": "68 plays",
+          "detail": "24 active days (10.42 plays per active day)",
+          "headline": "250 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this month",
-          "headline": "lastfm 100% (68)",
+          "headline": "lastfm 100% (250)",
           "id": "source_mix",
           "title": "Source Mix"
         },
         {
-          "detail": "4 plays",
-          "headline": "Kiasmos",
+          "detail": "11 plays",
+          "headline": "Aphex Twin",
           "id": "top_artist",
           "title": "Top Artist"
         },
         {
-          "detail": "2 plays",
-          "headline": "Anthony Naples - Scars",
+          "detail": "4 plays",
+          "headline": "Lana Del Rey - High by the Beach",
           "id": "top_track",
           "title": "Top Track"
         },
         {
-          "detail": "21 new tracks first heard in 2026-03",
-          "headline": "11 new artists",
+          "detail": "93 new tracks first heard in 2026-03",
+          "headline": "37 new artists",
           "id": "discovery",
           "title": "Discovery"
         },
         {
-          "detail": "24 plays",
-          "headline": "2026-03-04",
+          "detail": "50 plays",
+          "headline": "2026-03-08",
           "id": "peak_day",
           "title": "Peak Day"
         },
         {
-          "detail": "2 consecutive plays",
-          "headline": "Wet Leg",
+          "detail": "10 consecutive plays",
+          "headline": "Aphex Twin",
           "id": "artist_streak",
           "title": "Longest Artist Run"
         },
@@ -242989,46 +243052,72 @@
         "concentratedTracks": [],
         "sourceBreakdown": [
           {
-            "count": 68,
+            "count": 250,
             "share": 1,
             "source": "lastfm"
           }
         ],
         "streaks": {
           "longestActiveDayStreak": {
-            "days": 5,
-            "endDate": "2026-03-05",
+            "days": 11,
+            "endDate": "2026-03-11",
             "startDate": "2026-03-01"
           },
           "longestArtistRun": {
-            "artist": "Wet Leg",
-            "artistNormKey": "wet leg",
-            "count": 2,
-            "durationMinutes": 1014.88,
-            "end": "2026-03-04T15:53:45Z",
-            "start": "2026-03-03T22:58:52Z"
+            "artist": "Aphex Twin",
+            "artistNormKey": "aphex twin",
+            "count": 10,
+            "durationMinutes": 1532.72,
+            "end": "2026-03-06T15:40:46Z",
+            "start": "2026-03-05T14:08:03Z"
           },
           "longestTrackRun": {
-            "artist": "Kristin Witko",
-            "count": 1,
-            "durationMinutes": 0,
-            "end": "2026-03-01T00:57:08Z",
-            "start": "2026-03-01T00:57:08Z",
-            "track": "Save Your Tears",
-            "trackNormKey": "kristin witko|save your tears"
+            "artist": "Bijoux Cone",
+            "count": 2,
+            "durationMinutes": 4.03,
+            "end": "2026-03-08T22:47:59Z",
+            "start": "2026-03-08T22:43:57Z",
+            "track": "Color of Love",
+            "trackNormKey": "bijoux cone|color of love"
           }
         },
         "summary": {
-          "activeDays": 5,
-          "avgSessionMinutes": 26.38,
-          "avgTracksPerSession": 6.8,
-          "maxDailyPlays": 24,
-          "medianDailyPlays": 13,
-          "nightPlayShare": 0.5,
-          "totalScrobbles": 68,
-          "totalSessions": 10
+          "activeDays": 24,
+          "avgSessionMinutes": 18.89,
+          "avgTracksPerSession": 5.32,
+          "maxDailyPlays": 50,
+          "medianDailyPlays": 8,
+          "nightPlayShare": 0.492,
+          "totalScrobbles": 250,
+          "totalSessions": 47
         },
         "topBurstDays": [
+          {
+            "date": "2026-03-08",
+            "plays": 50,
+            "sources": [
+              {
+                "count": 50,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 42,
+            "uniqueTracks": 46
+          },
+          {
+            "date": "2026-03-24",
+            "plays": 28,
+            "sources": [
+              {
+                "count": 28,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 23,
+            "uniqueTracks": 27
+          },
           {
             "date": "2026-03-04",
             "plays": 24,
@@ -243054,6 +243143,32 @@
             ],
             "uniqueArtists": 16,
             "uniqueTracks": 19
+          },
+          {
+            "date": "2026-03-07",
+            "plays": 18,
+            "sources": [
+              {
+                "count": 18,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 18,
+            "uniqueTracks": 18
+          },
+          {
+            "date": "2026-03-09",
+            "plays": 15,
+            "sources": [
+              {
+                "count": 15,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 14,
+            "uniqueTracks": 15
           },
           {
             "date": "2026-03-03",
@@ -243082,17 +243197,30 @@
             "uniqueTracks": 11
           },
           {
-            "date": "2026-03-02",
-            "plays": 1,
+            "date": "2026-03-17",
+            "plays": 11,
             "sources": [
               {
-                "count": 1,
+                "count": 11,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 7,
+            "uniqueTracks": 11
+          },
+          {
+            "date": "2026-03-06",
+            "plays": 9,
+            "sources": [
+              {
+                "count": 9,
                 "share": 1,
                 "source": "lastfm"
               }
             ],
             "uniqueArtists": 1,
-            "uniqueTracks": 1
+            "uniqueTracks": 9
           }
         ],
         "topBurstSessions": [
@@ -243116,6 +243244,30 @@
               "artist": "Biig Piig",
               "count": 1,
               "track": "Lavender"
+            },
+            "uniqueArtists": 18,
+            "uniqueTracks": 22
+          },
+          {
+            "durationMin": 76.53,
+            "end": "2026-03-08T05:16:11Z",
+            "plays": 22,
+            "sources": [
+              {
+                "count": 22,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-03-08T03:59:39Z",
+            "topArtist": {
+              "artist": "Elvis Presley",
+              "count": 2
+            },
+            "topTrack": {
+              "artist": "Amy Helm",
+              "count": 1,
+              "track": "Heat Lightning"
             },
             "uniqueArtists": 18,
             "uniqueTracks": 22
@@ -243145,6 +243297,126 @@
             "uniqueTracks": 20
           },
           {
+            "durationMin": 76.95,
+            "end": "2026-03-08T19:21:43Z",
+            "plays": 20,
+            "sources": [
+              {
+                "count": 20,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-03-08T18:04:46Z",
+            "topArtist": {
+              "artist": "Alvvays",
+              "count": 1
+            },
+            "topTrack": {
+              "artist": "Alvvays",
+              "count": 1,
+              "track": "Not My Baby"
+            },
+            "uniqueArtists": 20,
+            "uniqueTracks": 20
+          },
+          {
+            "durationMin": 54.4,
+            "end": "2026-03-07T02:06:43Z",
+            "plays": 17,
+            "sources": [
+              {
+                "count": 17,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-03-07T01:12:19Z",
+            "topArtist": {
+              "artist": "Arcade Fire",
+              "count": 1
+            },
+            "topTrack": {
+              "artist": "Arcade Fire",
+              "count": 1,
+              "track": "Neighborhood #2 (Laika)"
+            },
+            "uniqueArtists": 17,
+            "uniqueTracks": 17
+          },
+          {
+            "durationMin": 65.72,
+            "end": "2026-03-24T01:37:48Z",
+            "plays": 16,
+            "sources": [
+              {
+                "count": 16,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-03-24T00:32:05Z",
+            "topArtist": {
+              "artist": "PJ Harvey",
+              "count": 3
+            },
+            "topTrack": {
+              "artist": "Gil Scott-Heron",
+              "count": 1,
+              "track": "I'll Take Care Of U"
+            },
+            "uniqueArtists": 13,
+            "uniqueTracks": 16
+          },
+          {
+            "durationMin": 41.57,
+            "end": "2026-03-06T15:40:46Z",
+            "plays": 9,
+            "sources": [
+              {
+                "count": 9,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-03-06T14:59:12Z",
+            "topArtist": {
+              "artist": "Aphex Twin",
+              "count": 9
+            },
+            "topTrack": {
+              "artist": "Aphex Twin",
+              "count": 1,
+              "track": "Ageispolis"
+            },
+            "uniqueArtists": 1,
+            "uniqueTracks": 9
+          },
+          {
+            "durationMin": 26.02,
+            "end": "2026-03-08T23:09:58Z",
+            "plays": 8,
+            "sources": [
+              {
+                "count": 8,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-03-08T22:43:57Z",
+            "topArtist": {
+              "artist": "Bijoux Cone",
+              "count": 2
+            },
+            "topTrack": {
+              "artist": "Bijoux Cone",
+              "count": 2,
+              "track": "Color of Love"
+            },
+            "uniqueArtists": 7,
+            "uniqueTracks": 7
+          },
+          {
             "durationMin": 44.52,
             "end": "2026-03-03T19:07:30Z",
             "plays": 7,
@@ -243169,287 +243441,143 @@
             "uniqueTracks": 7
           },
           {
-            "durationMin": 23.98,
-            "end": "2026-03-03T13:47:36Z",
-            "plays": 5,
+            "durationMin": 25.18,
+            "end": "2026-03-29T01:24:06Z",
+            "plays": 7,
             "sources": [
               {
-                "count": 5,
+                "count": 7,
                 "share": 1,
                 "source": "lastfm"
               }
             ],
-            "start": "2026-03-03T13:23:37Z",
+            "start": "2026-03-29T00:58:55Z",
             "topArtist": {
-              "artist": "BAYNK",
-              "count": 1
+              "artist": "Radiohead",
+              "count": 2
             },
             "topTrack": {
-              "artist": "BAYNK",
+              "artist": "Alice in Chains",
               "count": 1,
-              "track": "Water"
+              "track": "Would?"
             },
             "uniqueArtists": 5,
-            "uniqueTracks": 5
-          },
-          {
-            "durationMin": 15.97,
-            "end": "2026-03-01T01:13:06Z",
-            "plays": 5,
-            "sources": [
-              {
-                "count": 5,
-                "share": 1,
-                "source": "lastfm"
-              }
-            ],
-            "start": "2026-03-01T00:57:08Z",
-            "topArtist": {
-              "artist": "Etienne Machine",
-              "count": 1
-            },
-            "topTrack": {
-              "artist": "Etienne Machine",
-              "count": 1,
-              "track": "Indian Summer"
-            },
-            "uniqueArtists": 5,
-            "uniqueTracks": 5
-          },
-          {
-            "durationMin": 9.77,
-            "end": "2026-03-01T04:48:21Z",
-            "plays": 5,
-            "sources": [
-              {
-                "count": 5,
-                "share": 1,
-                "source": "lastfm"
-              }
-            ],
-            "start": "2026-03-01T04:38:35Z",
-            "topArtist": {
-              "artist": "BALTHVS",
-              "count": 1
-            },
-            "topTrack": {
-              "artist": "BALTHVS",
-              "count": 1,
-              "track": "Johanna's Dream"
-            },
-            "uniqueArtists": 5,
-            "uniqueTracks": 5
-          },
-          {
-            "durationMin": 0,
-            "end": "2026-03-01T05:27:27Z",
-            "plays": 1,
-            "sources": [
-              {
-                "count": 1,
-                "share": 1,
-                "source": "lastfm"
-              }
-            ],
-            "start": "2026-03-01T05:27:27Z",
-            "topArtist": {
-              "artist": "Okonski",
-              "count": 1
-            },
-            "topTrack": {
-              "artist": "Okonski",
-              "count": 1,
-              "track": "Dark Moon"
-            },
-            "uniqueArtists": 1,
-            "uniqueTracks": 1
-          },
-          {
-            "durationMin": 0,
-            "end": "2026-03-02T20:59:14Z",
-            "plays": 1,
-            "sources": [
-              {
-                "count": 1,
-                "share": 1,
-                "source": "lastfm"
-              }
-            ],
-            "start": "2026-03-02T20:59:14Z",
-            "topArtist": {
-              "artist": "Tamaryn",
-              "count": 1
-            },
-            "topTrack": {
-              "artist": "Tamaryn",
-              "count": 1,
-              "track": "Love Fade"
-            },
-            "uniqueArtists": 1,
-            "uniqueTracks": 1
-          },
-          {
-            "durationMin": 0,
-            "end": "2026-03-03T22:58:52Z",
-            "plays": 1,
-            "sources": [
-              {
-                "count": 1,
-                "share": 1,
-                "source": "lastfm"
-              }
-            ],
-            "start": "2026-03-03T22:58:52Z",
-            "topArtist": {
-              "artist": "Wet Leg",
-              "count": 1
-            },
-            "topTrack": {
-              "artist": "Wet Leg",
-              "count": 1,
-              "track": "mangetout"
-            },
-            "uniqueArtists": 1,
-            "uniqueTracks": 1
-          },
-          {
-            "durationMin": 0,
-            "end": "2026-03-05T14:08:03Z",
-            "plays": 1,
-            "sources": [
-              {
-                "count": 1,
-                "share": 1,
-                "source": "lastfm"
-              }
-            ],
-            "start": "2026-03-05T14:08:03Z",
-            "topArtist": {
-              "artist": "Aphex Twin",
-              "count": 1
-            },
-            "topTrack": {
-              "artist": "Aphex Twin",
-              "count": 1,
-              "track": "Xtal"
-            },
-            "uniqueArtists": 1,
-            "uniqueTracks": 1
+            "uniqueTracks": 7
           }
         ]
       },
       "summary": {
-        "activeDays": 5,
+        "activeDays": 24,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 68,
-        "estimatedTotalMinutes": 238,
+        "estimatedFromNonSpotify": 250,
+        "estimatedTotalMinutes": 875,
         "measuredSpotifyMinutes": 0,
-        "nightPlayShare": 0.5,
-        "playsPerActiveDay": 13.6,
+        "nightPlayShare": 0.492,
+        "playsPerActiveDay": 10.42,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 68,
+            "count": 250,
             "share": 1,
             "source": "lastfm"
           }
         ],
-        "totalScrobbles": 68,
-        "uniqueArtists": 54,
-        "uniqueTracks": 65
+        "totalScrobbles": 250,
+        "uniqueArtists": 165,
+        "uniqueTracks": 223
       },
       "topArtists": [
         {
+          "artist": "Aphex Twin",
+          "count": 11
+        },
+        {
+          "artist": "Superdrag",
+          "count": 7
+        },
+        {
+          "artist": "David Cross",
+          "count": 6
+        },
+        {
           "artist": "Kiasmos",
-          "count": 4
+          "count": 6
+        },
+        {
+          "artist": "Wet Leg",
+          "count": 6
+        },
+        {
+          "artist": "Lana Del Rey",
+          "count": 5
         },
         {
           "artist": "Ben Böhmer",
-          "count": 3
-        },
-        {
-          "artist": "Anthony Naples",
-          "count": 2
-        },
-        {
-          "artist": "Chaos in the CBD",
-          "count": 2
-        },
-        {
-          "artist": "Connan Mockasin",
-          "count": 2
-        },
-        {
-          "artist": "Edmondson",
-          "count": 2
+          "count": 4
         },
         {
           "artist": "Portishead",
-          "count": 2
+          "count": 4
         },
         {
-          "artist": "St. Vincent",
-          "count": 2
+          "artist": "Radiohead",
+          "count": 4
         },
         {
           "artist": "The Smashing Pumpkins",
-          "count": 2
-        },
-        {
-          "artist": "Warpaint",
-          "count": 2
+          "count": 4
         }
       ],
       "topTracks": [
+        {
+          "artist": "Lana Del Rey",
+          "count": 4,
+          "track": "High by the Beach"
+        },
         {
           "artist": "Anthony Naples",
           "count": 2,
           "track": "Scars"
         },
         {
-          "artist": "Edmondson",
-          "count": 2,
-          "track": "Flamingo Tripper"
-        },
-        {
-          "artist": "Kiasmos",
-          "count": 2,
-          "track": "Looped"
-        },
-        {
-          "artist": "Ale Cominotti",
-          "count": 1,
-          "track": "Puede Ser"
-        },
-        {
           "artist": "Aphex Twin",
-          "count": 1,
-          "track": "Xtal"
-        },
-        {
-          "artist": "BALTHVS",
-          "count": 1,
-          "track": "Johanna's Dream"
-        },
-        {
-          "artist": "Barry Can't Swim",
-          "count": 1,
-          "track": "Rah That's A Mad Question"
+          "count": 2,
+          "track": "Hedphelym"
         },
         {
           "artist": "BAYNK",
-          "count": 1,
+          "count": 2,
           "track": "Water"
         },
         {
           "artist": "Ben Böhmer",
-          "count": 1,
-          "track": "Begin Again"
+          "count": 2,
+          "track": "Beyond Beliefs"
         },
         {
-          "artist": "Ben Böhmer",
-          "count": 1,
-          "track": "Beyond Beliefs"
+          "artist": "Bicep",
+          "count": 2,
+          "track": "Glue"
+        },
+        {
+          "artist": "Bijoux Cone",
+          "count": 2,
+          "track": "Color of Love"
+        },
+        {
+          "artist": "Blonde Redhead",
+          "count": 2,
+          "track": "23"
+        },
+        {
+          "artist": "Bonobo",
+          "count": 2,
+          "track": "Stay the Same"
+        },
+        {
+          "artist": "Edmondson",
+          "count": 2,
+          "track": "Flamingo Tripper"
         }
       ],
       "year": 2026
