@@ -69,13 +69,14 @@ cd tools/pipeline
 6. `merge-listening`
 7. `process-lastfm`
 8. `build-timeline`
-9. `build-transition-graph`
-10. `build-transition-query-cache`
-11. `build-era-similarity-cache`
-12. `build-wrapped-stories`
-13. `build-wrapped-month-stories`
-14. `build-web-data`
-15. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
+9. `build-anniversary-cache`
+10. `build-transition-graph`
+11. `build-transition-query-cache`
+12. `build-era-similarity-cache`
+13. `build-wrapped-stories`
+14. `build-wrapped-month-stories`
+15. `build-web-data`
+16. `fetch-images` (with `LASTFM_IMAGE_SCOPE` defaulted to `all` by `run_all.sh`)
 
 ## Command Reference
 
@@ -97,6 +98,7 @@ Available commands:
 - `process-lastfm`: builds `data/derived/core/playcounts.json` and `data/derived/web/playcounts.json`
 - `process-listening`: alias for `process-lastfm`
 - `build-timeline`: builds `data/derived/web/timeline.json`
+- `build-anniversary-cache`: builds `data/derived/web/anniversary-cache.json` for day/week history lookups across past years
 - `build-transition-graph`: builds `data/derived/core/transition-graph.json` and `data/derived/web/transition-graph.json`
 - `build-transition-query-cache`: calls MCP `music_transition_graph` per source/year and writes `data/derived/web/transition-query-cache.json`
 - `build-era-similarity-cache`: calls MCP `music_compare_eras` across year pairs and sources, then writes `data/derived/web/era-similarity-cache.json`
@@ -109,7 +111,7 @@ Available commands:
 
 ## Notes
 
-- `process-lastfm` and `build-timeline` call shared logic that rebuilds listening history when stale relative to Last.fm/Spotify source files.
+- `process-lastfm`, `build-timeline`, and `build-anniversary-cache` call shared logic that rebuilds listening history when stale relative to Last.fm/Spotify source files.
 - `build-wrapped-stories` launches the local MCP server (`apps/mcp-server/run-mcp.sh`) and can be tuned with:
   - `MP3_WRAPPED_TIMEZONE` (default: `UTC`)
   - `MP3_WRAPPED_SOURCE` (default: `all`, options: `all|lastfm|spotify`)

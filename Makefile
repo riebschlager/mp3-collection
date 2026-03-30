@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 LASTFM_IMAGE_SCOPE ?= all
 
-.PHONY: help pipeline compile extract listening timeline artist-race transitions transition-cache era-similarity-cache wrapped-stories wrapped-month-stories web-data images doctor validate web-dev web-build web-preview mcp clean-bins
+.PHONY: help pipeline compile extract listening timeline anniversary-cache artist-race transitions transition-cache era-similarity-cache wrapped-stories wrapped-month-stories web-data images doctor validate web-dev web-build web-preview mcp clean-bins
 
 help:
 	@echo "Targets:"
@@ -10,6 +10,7 @@ help:
 	@echo "  extract     Build tracks/albums/artists JSON artifacts"
 	@echo "  listening   Refresh Last.fm + Spotify merged listening data"
 	@echo "  timeline    Rebuild timeline JSON"
+	@echo "  anniversary-cache Rebuild day/week anniversaries JSON"
 	@echo "  artist-race Rebuild cumulative artist race JSON"
 	@echo "  transitions Rebuild listening transition graph JSON"
 	@echo "  transition-cache Rebuild MCP-backed transition query cache JSON"
@@ -44,6 +45,9 @@ listening:
 
 timeline:
 	cd tools/pipeline && go run . build-timeline
+
+anniversary-cache:
+	cd tools/pipeline && go run . build-anniversary-cache
 
 artist-race:
 	cd tools/pipeline && go run . build-artist-race

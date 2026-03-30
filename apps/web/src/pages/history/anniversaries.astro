@@ -1,0 +1,1074 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
+
+const defaultDataRoot = buildUrl('data');
+const historyUrl = buildUrl('history');
+---
+
+<Layout title="Anniversary Almanac - MP3 Collection" description="Browse today-in-history and this-week-in-history listening snapshots across every past year.">
+  <div class="anniversary-page">
+    <section class="anniversary-hero reveal">
+      <div class="anniversary-hero__copy">
+        <p class="anniversary-kicker">History Lens</p>
+        <h1 id="hero-title">Anniversary Almanac</h1>
+        <p id="hero-subtitle" class="anniversary-hero__lede">
+          Compare what was in rotation on a specific month/day, or across that week, for every year in the archive.
+        </p>
+      </div>
+
+      <div class="anniversary-hero__aside">
+        <div class="anniversary-note">
+          <p class="anniversary-note__label">Scope</p>
+          <p>Combined Last.fm and Spotify listening history, aligned to <strong>America/Chicago</strong>.</p>
+        </div>
+        <a href={historyUrl} class="anniversary-back">Back to History</a>
+      </div>
+    </section>
+
+    <section class="anniversary-controls reveal" aria-label="Anniversary explorer controls">
+      <div class="anniversary-controls__row">
+        <div class="anniversary-mode-toggle" role="tablist" aria-label="History mode">
+          <button type="button" class="anniversary-mode-toggle__button" data-view="day" aria-pressed="true">Today in History</button>
+          <button type="button" class="anniversary-mode-toggle__button" data-view="week" aria-pressed="false">This Week in History</button>
+        </div>
+
+        <div class="anniversary-stepper">
+          <button type="button" id="date-prev" class="anniversary-stepper__button" aria-label="Previous day anchor">←</button>
+          <button type="button" id="date-next" class="anniversary-stepper__button" aria-label="Next day anchor">→</button>
+        </div>
+      </div>
+
+      <div class="anniversary-controls__grid">
+        <label class="anniversary-field">
+          <span>Month</span>
+          <select id="month-select"></select>
+        </label>
+
+        <label class="anniversary-field">
+          <span>Day</span>
+          <select id="day-select"></select>
+        </label>
+
+        <div class="anniversary-field anniversary-field--status">
+          <span>Selection</span>
+          <div id="selection-label" class="anniversary-selection">Loading anniversaries cache…</div>
+        </div>
+      </div>
+
+      <p class="anniversary-status" id="load-status" aria-live="polite">Loading anniversaries cache…</p>
+    </section>
+
+    <section class="anniversary-summary reveal">
+      <article class="anniversary-stat-card">
+        <p class="anniversary-stat-card__label">Years Found</p>
+        <p id="stat-years" class="anniversary-stat-card__value">-</p>
+      </article>
+      <article class="anniversary-stat-card">
+        <p class="anniversary-stat-card__label">Total Plays</p>
+        <p id="stat-plays" class="anniversary-stat-card__value">-</p>
+      </article>
+      <article class="anniversary-stat-card">
+        <p class="anniversary-stat-card__label">Peak Year</p>
+        <p id="stat-peak-year" class="anniversary-stat-card__value anniversary-stat-card__value--text">-</p>
+      </article>
+      <article class="anniversary-stat-card">
+        <p class="anniversary-stat-card__label">Top Replay</p>
+        <p id="stat-top-track" class="anniversary-stat-card__value anniversary-stat-card__value--text">-</p>
+      </article>
+    </section>
+
+    <section class="anniversary-results reveal">
+      <div class="anniversary-results__header">
+        <div>
+          <p class="anniversary-kicker anniversary-kicker--warm">Across the Archive</p>
+          <h2 id="results-title">Today in History</h2>
+        </div>
+        <p id="results-context" class="anniversary-results__context">Waiting for data…</p>
+      </div>
+
+      <div id="results-empty" class="anniversary-empty hidden">
+        No listening history matches this anchor yet. Try another month/day or switch between day and week mode.
+      </div>
+
+      <div id="results-list" class="anniversary-results__grid"></div>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ defaultDataRoot }}>
+    const monthSelectEl = document.getElementById('month-select');
+    const daySelectEl = document.getElementById('day-select');
+    const statusEl = document.getElementById('load-status');
+    const selectionLabelEl = document.getElementById('selection-label');
+    const resultsTitleEl = document.getElementById('results-title');
+    const heroTitleEl = document.getElementById('hero-title');
+    const heroSubtitleEl = document.getElementById('hero-subtitle');
+    const resultsContextEl = document.getElementById('results-context');
+    const resultsEmptyEl = document.getElementById('results-empty');
+    const resultsListEl = document.getElementById('results-list');
+    const statYearsEl = document.getElementById('stat-years');
+    const statPlaysEl = document.getElementById('stat-plays');
+    const statPeakYearEl = document.getElementById('stat-peak-year');
+    const statTopTrackEl = document.getElementById('stat-top-track');
+    const prevButtonEl = document.getElementById('date-prev');
+    const nextButtonEl = document.getElementById('date-next');
+    const modeButtons = Array.from(document.querySelectorAll('[data-view]'));
+
+    const monthLabels = [
+      { value: '01', label: 'January' },
+      { value: '02', label: 'February' },
+      { value: '03', label: 'March' },
+      { value: '04', label: 'April' },
+      { value: '05', label: 'May' },
+      { value: '06', label: 'June' },
+      { value: '07', label: 'July' },
+      { value: '08', label: 'August' },
+      { value: '09', label: 'September' },
+      { value: '10', label: 'October' },
+      { value: '11', label: 'November' },
+      { value: '12', label: 'December' },
+    ];
+
+    const state = {
+      cache: null,
+      selectedView: 'day',
+      selectedMonthDay: '01-01',
+      availableMonthDays: [],
+      todayMonthDay: '01-01',
+    };
+
+    const escapeHtml = (value) => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const setStatus = (text) => {
+      if (statusEl) statusEl.textContent = text;
+    };
+
+    const getChicagoTodayMonthDay = () => {
+      const formatted = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago',
+        month: '2-digit',
+        day: '2-digit',
+      }).format(new Date());
+      return formatted.replaceAll('/', '-');
+    };
+
+    const parseIsoDate = (isoDate) => {
+      const [year, month, day] = String(isoDate).split('-').map((value) => Number.parseInt(value, 10));
+      return new Date(Date.UTC(year, (month || 1) - 1, day || 1, 12, 0, 0));
+    };
+
+    const formatIsoDate = (isoDate, options = {}) => {
+      return parseIsoDate(isoDate).toLocaleDateString('en-US', {
+        timeZone: 'UTC',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        ...options,
+      });
+    };
+
+    const currentAnchor = () => state.cache?.anchors?.[state.selectedMonthDay] ?? null;
+
+    const currentResults = () => {
+      const anchor = currentAnchor();
+      if (!anchor) return [];
+      const raw = state.selectedView === 'week' ? anchor.weekResults : anchor.dayResults;
+      return Array.isArray(raw)
+        ? [...raw].sort((a, b) => Number(b?.year || 0) - Number(a?.year || 0))
+        : [];
+    };
+
+    const validMonthDaysForMonth = (monthValue) => {
+      return state.availableMonthDays.filter((monthDay) => monthDay.startsWith(`${monthValue}-`));
+    };
+
+    const syncUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      params.set('view', state.selectedView);
+      params.set('date', state.selectedMonthDay);
+      const next = `${window.location.pathname}?${params.toString()}`;
+      window.history.replaceState({}, '', next);
+    };
+
+    const renderMonthOptions = () => {
+      if (!(monthSelectEl instanceof HTMLSelectElement)) return;
+      const selectedMonth = state.selectedMonthDay.slice(0, 2);
+      monthSelectEl.innerHTML = monthLabels.map((month) => {
+        const selected = month.value === selectedMonth ? 'selected' : '';
+        return `<option value="${month.value}" ${selected}>${month.label}</option>`;
+      }).join('');
+    };
+
+    const renderDayOptions = () => {
+      if (!(daySelectEl instanceof HTMLSelectElement)) return;
+      const monthValue = state.selectedMonthDay.slice(0, 2);
+      const days = validMonthDaysForMonth(monthValue);
+      daySelectEl.innerHTML = days.map((monthDay) => {
+        const dayValue = monthDay.slice(3, 5);
+        const selected = monthDay === state.selectedMonthDay ? 'selected' : '';
+        return `<option value="${dayValue}" ${selected}>${Number.parseInt(dayValue, 10)}</option>`;
+      }).join('');
+    };
+
+    const updateModeButtons = () => {
+      modeButtons.forEach((button) => {
+        const isActive = button.getAttribute('data-view') === state.selectedView;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    };
+
+    const selectMonth = (monthValue) => {
+      const currentDay = state.selectedMonthDay.slice(3, 5);
+      const monthDays = validMonthDaysForMonth(monthValue);
+      const preferred = `${monthValue}-${currentDay}`;
+      if (monthDays.includes(preferred)) {
+        state.selectedMonthDay = preferred;
+        return;
+      }
+      state.selectedMonthDay = monthDays[monthDays.length - 1] || state.selectedMonthDay;
+    };
+
+    const stepMonthDay = (direction) => {
+      const currentIndex = state.availableMonthDays.indexOf(state.selectedMonthDay);
+      if (currentIndex === -1 || state.availableMonthDays.length === 0) return;
+      const nextIndex = (currentIndex + direction + state.availableMonthDays.length) % state.availableMonthDays.length;
+      state.selectedMonthDay = state.availableMonthDays[nextIndex];
+      renderAll();
+    };
+
+    const bestPeakYear = (results) => {
+      if (!results.length) return null;
+      return results.reduce((best, entry) => {
+        if (!best) return entry;
+        const bestPlays = Number(best?.totalPlays || 0);
+        const currentPlays = Number(entry?.totalPlays || 0);
+        if (currentPlays !== bestPlays) return currentPlays > bestPlays ? entry : best;
+        return Number(entry?.year || 0) > Number(best?.year || 0) ? entry : best;
+      }, null);
+    };
+
+    const bestReplay = (results) => {
+      let best = null;
+      results.forEach((entry) => {
+        const topTrack = Array.isArray(entry?.topTracks) ? entry.topTracks[0] : null;
+        if (!topTrack) return;
+        if (!best || Number(topTrack.playCount || 0) > Number(best.playCount || 0)) {
+          best = { ...topTrack, year: entry.year };
+          return;
+        }
+        if (Number(topTrack.playCount || 0) === Number(best.playCount || 0) && Number(entry.year || 0) > Number(best.year || 0)) {
+          best = { ...topTrack, year: entry.year };
+        }
+      });
+      return best;
+    };
+
+    const updateSummary = (results) => {
+      const totalPlays = results.reduce((sum, entry) => sum + Number(entry?.totalPlays || 0), 0);
+      const peakYear = bestPeakYear(results);
+      const topReplay = bestReplay(results);
+
+      if (statYearsEl) statYearsEl.textContent = results.length.toLocaleString();
+      if (statPlaysEl) statPlaysEl.textContent = totalPlays.toLocaleString();
+      if (statPeakYearEl) {
+        statPeakYearEl.textContent = peakYear
+          ? `${peakYear.year} · ${Number(peakYear.totalPlays || 0).toLocaleString()} plays`
+          : '-';
+      }
+      if (statTopTrackEl) {
+        statTopTrackEl.textContent = topReplay
+          ? `${topReplay.artist} - ${topReplay.track} (${topReplay.playCount}x in ${topReplay.year})`
+          : '-';
+      }
+    };
+
+    const resultHeading = (anchorLabel) => {
+      const isToday = state.selectedMonthDay === state.todayMonthDay;
+      if (state.selectedView === 'day') {
+        return isToday ? 'Today in History' : `${anchorLabel} in History`;
+      }
+      return isToday ? 'This Week in History' : `Week of ${anchorLabel}`;
+    };
+
+    const resultContext = (results, anchorLabel) => {
+      if (!results.length) {
+        return `No archived listening for ${anchorLabel} in ${state.selectedView === 'day' ? 'day' : 'week'} mode.`;
+      }
+      const earliestYear = results[results.length - 1]?.year;
+      const latestYear = results[0]?.year;
+      return `${results.length} years found, newest first, spanning ${earliestYear} to ${latestYear}.`;
+    };
+
+    const renderResults = (results) => {
+      if (!resultsListEl || !resultsEmptyEl) return;
+
+      if (!results.length) {
+        resultsListEl.innerHTML = '';
+        resultsEmptyEl.classList.remove('hidden');
+        return;
+      }
+
+      resultsEmptyEl.classList.add('hidden');
+      resultsListEl.innerHTML = results.map((entry) => {
+        const detailLine = state.selectedView === 'week'
+          ? `${formatIsoDate(entry.startDate, { weekday: 'short' })} - ${formatIsoDate(entry.endDate, { weekday: 'short' })}`
+          : formatIsoDate(entry.date, { weekday: 'long' });
+        const activeDaysMarkup = state.selectedView === 'week'
+          ? `<span class="anniversary-card__metric">Active Days <strong>${Number(entry.activeDays || 0)}</strong></span>`
+          : '';
+        const topTracks = Array.isArray(entry.topTracks) ? entry.topTracks : [];
+
+        return `
+          <article class="anniversary-card">
+            <div class="anniversary-card__header">
+              <div>
+                <p class="anniversary-card__eyebrow">${escapeHtml(detailLine)}</p>
+                <h3>${escapeHtml(String(entry.year))}</h3>
+              </div>
+              <div class="anniversary-card__badge">${Number(entry.totalPlays || 0).toLocaleString()} plays</div>
+            </div>
+
+            <div class="anniversary-card__metrics">
+              <span class="anniversary-card__metric">Unique Tracks <strong>${Number(entry.uniqueTracks || 0).toLocaleString()}</strong></span>
+              ${activeDaysMarkup}
+            </div>
+
+            <ol class="anniversary-track-list">
+              ${topTracks.map((track, index) => `
+                <li class="anniversary-track-list__item">
+                  <span class="anniversary-track-list__rank">${index + 1}</span>
+                  <div class="anniversary-track-list__copy">
+                    <div class="anniversary-track-list__title">${escapeHtml(track.track)}</div>
+                    <div class="anniversary-track-list__meta">${escapeHtml(track.artist)}${track.album ? ` · ${escapeHtml(track.album)}` : ''}</div>
+                  </div>
+                  <span class="anniversary-track-list__count">${Number(track.playCount || 0)}x</span>
+                </li>
+              `).join('')}
+            </ol>
+          </article>
+        `;
+      }).join('');
+    };
+
+    const renderAll = () => {
+      const anchor = currentAnchor();
+      const anchorLabel = anchor?.label || state.selectedMonthDay;
+      const results = currentResults();
+
+      renderMonthOptions();
+      renderDayOptions();
+      updateModeButtons();
+      syncUrl();
+      updateSummary(results);
+      renderResults(results);
+
+      if (selectionLabelEl) selectionLabelEl.textContent = `${anchorLabel} · ${state.selectedView === 'week' ? 'week' : 'day'} view`;
+      const heading = resultHeading(anchorLabel);
+      if (resultsTitleEl) resultsTitleEl.textContent = heading;
+      if (heroTitleEl) heroTitleEl.textContent = heading;
+      if (heroSubtitleEl) {
+        heroSubtitleEl.textContent = state.selectedView === 'week'
+          ? `Calendar-week view centered on ${anchorLabel}, with Sunday-through-Saturday windows for every year that contains that date.`
+          : `Exact month/day replay history for ${anchorLabel}, pulled across every year in the archive.`;
+      }
+      if (resultsContextEl) resultsContextEl.textContent = resultContext(results, anchorLabel);
+    };
+
+    const initializeStateFromQuery = () => {
+      const params = new URLSearchParams(window.location.search);
+      const nextView = params.get('view');
+      const nextDate = params.get('date');
+
+      state.selectedView = nextView === 'week' ? 'week' : 'day';
+      if (nextDate && state.availableMonthDays.includes(nextDate)) {
+        state.selectedMonthDay = nextDate;
+        return;
+      }
+
+      state.selectedMonthDay = state.availableMonthDays.includes(state.todayMonthDay)
+        ? state.todayMonthDay
+        : state.availableMonthDays[0] || '01-01';
+    };
+
+    const initialize = async () => {
+      try {
+        state.todayMonthDay = getChicagoTodayMonthDay();
+
+        const response = await fetch(`${defaultDataRoot}/anniversary-cache.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        state.cache = await response.json();
+        state.availableMonthDays = Array.isArray(state.cache?.availableMonthDays)
+          ? state.cache.availableMonthDays.filter((monthDay) => typeof monthDay === 'string')
+          : [];
+
+        if (state.availableMonthDays.length === 0) {
+          throw new Error('No month/day anchors available');
+        }
+
+        initializeStateFromQuery();
+        renderAll();
+
+        const generatedAt = state.cache?.generatedAt
+          ? new Date(state.cache.generatedAt).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })
+          : 'unknown time';
+        const timezone = state.cache?.timezone || 'America/Chicago';
+        setStatus(`Loaded anniversaries cache. Generated ${generatedAt}. Timezone ${timezone}.`);
+      } catch (error) {
+        setStatus(`Unable to load anniversaries cache: ${error instanceof Error ? error.message : 'unknown error'}`);
+      }
+    };
+
+    modeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextView = button.getAttribute('data-view');
+        if (nextView !== 'day' && nextView !== 'week') return;
+        state.selectedView = nextView;
+        renderAll();
+      });
+    });
+
+    if (monthSelectEl instanceof HTMLSelectElement) {
+      monthSelectEl.addEventListener('change', () => {
+        selectMonth(monthSelectEl.value);
+        renderAll();
+      });
+    }
+
+    if (daySelectEl instanceof HTMLSelectElement) {
+      daySelectEl.addEventListener('change', () => {
+        state.selectedMonthDay = `${state.selectedMonthDay.slice(0, 2)}-${daySelectEl.value}`;
+        renderAll();
+      });
+    }
+
+    if (prevButtonEl instanceof HTMLButtonElement) {
+      prevButtonEl.addEventListener('click', () => stepMonthDay(-1));
+    }
+
+    if (nextButtonEl instanceof HTMLButtonElement) {
+      nextButtonEl.addEventListener('click', () => stepMonthDay(1));
+    }
+
+    initialize();
+  </script>
+
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Public+Sans:wght@400;500;600;700;800&display=swap');
+
+    .anniversary-page {
+      --anniv-bg: #170f0b;
+      --anniv-bg-warm: #43201a;
+      --anniv-bg-glow: #a6542b;
+      --anniv-paper: #f3e5cf;
+      --anniv-paper-strong: #fff7ea;
+      --anniv-ink: #28160e;
+      --anniv-muted: #75553d;
+      --anniv-line: rgba(84, 46, 24, 0.18);
+      --anniv-accent: #ba6533;
+      --anniv-accent-deep: #7b261a;
+      --anniv-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      border-radius: 2rem;
+      padding: 2rem;
+      background:
+        radial-gradient(circle at top right, rgba(201, 110, 55, 0.28), transparent 28rem),
+        radial-gradient(circle at bottom left, rgba(255, 244, 217, 0.08), transparent 22rem),
+        linear-gradient(135deg, var(--anniv-bg) 0%, #23120d 45%, var(--anniv-bg-warm) 100%);
+      color: var(--anniv-paper);
+      box-shadow: var(--anniv-shadow);
+      isolation: isolate;
+    }
+
+    .anniversary-page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 2.75rem 2.75rem;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 92%);
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .anniversary-page,
+    .anniversary-page p,
+    .anniversary-page button,
+    .anniversary-page select,
+    .anniversary-page label {
+      font-family: 'Public Sans', sans-serif;
+    }
+
+    .anniversary-page h1,
+    .anniversary-page h2,
+    .anniversary-page h3 {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.015em;
+    }
+
+    .anniversary-page .reveal {
+      animation: anniversaryReveal 520ms ease both;
+    }
+
+    .anniversary-page .reveal:nth-of-type(2) {
+      animation-delay: 70ms;
+    }
+
+    .anniversary-page .reveal:nth-of-type(3) {
+      animation-delay: 120ms;
+    }
+
+    .anniversary-page .reveal:nth-of-type(4) {
+      animation-delay: 160ms;
+    }
+
+    .anniversary-page .reveal:nth-of-type(5) {
+      animation-delay: 220ms;
+    }
+
+    .anniversary-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(16rem, 0.9fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .anniversary-kicker {
+      margin: 0 0 0.9rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 238, 207, 0.75);
+    }
+
+    .anniversary-kicker--warm {
+      color: rgba(126, 56, 28, 0.86);
+    }
+
+    .anniversary-hero__copy,
+    .anniversary-hero__aside,
+    .anniversary-controls,
+    .anniversary-results {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 243, 225, 0.14);
+      border-radius: 1.6rem;
+      background: linear-gradient(180deg, rgba(255, 246, 232, 0.06), rgba(255, 246, 232, 0.02));
+      backdrop-filter: blur(8px);
+    }
+
+    .anniversary-hero__copy {
+      padding: 2.1rem 2.2rem 2.35rem;
+      min-height: 16rem;
+    }
+
+    .anniversary-hero__copy h1 {
+      margin: 0;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 0.94;
+      color: var(--anniv-paper-strong);
+      text-wrap: balance;
+    }
+
+    .anniversary-hero__lede {
+      max-width: 38rem;
+      margin: 1.25rem 0 0;
+      font-size: 1.04rem;
+      line-height: 1.75;
+      color: rgba(255, 244, 229, 0.84);
+    }
+
+    .anniversary-hero__aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.6rem;
+      background:
+        linear-gradient(180deg, rgba(255, 245, 229, 0.08), rgba(255, 245, 229, 0.02)),
+        linear-gradient(145deg, rgba(186, 101, 51, 0.22), rgba(20, 10, 6, 0.02));
+    }
+
+    .anniversary-note {
+      padding: 1rem 1.05rem;
+      border-radius: 1.1rem;
+      background: rgba(255, 245, 227, 0.08);
+      color: rgba(255, 239, 215, 0.9);
+    }
+
+    .anniversary-note__label {
+      margin: 0 0 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 225, 181, 0.72);
+    }
+
+    .anniversary-back {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 241, 221, 0.18);
+      color: var(--anniv-paper-strong);
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+      background: rgba(255, 245, 227, 0.06);
+    }
+
+    .anniversary-back:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 241, 221, 0.36);
+      background: rgba(255, 245, 227, 0.1);
+    }
+
+    .anniversary-controls,
+    .anniversary-results {
+      margin-top: 1.5rem;
+      padding: 1.4rem;
+    }
+
+    .anniversary-controls__row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .anniversary-mode-toggle {
+      display: inline-grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.45rem;
+      padding: 0.4rem;
+      border-radius: 999px;
+      background: rgba(255, 245, 227, 0.08);
+      border: 1px solid rgba(255, 245, 227, 0.1);
+    }
+
+    .anniversary-mode-toggle__button,
+    .anniversary-stepper__button {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+    }
+
+    .anniversary-mode-toggle__button {
+      min-height: 2.8rem;
+      padding: 0 1.2rem;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(255, 240, 220, 0.76);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .anniversary-mode-toggle__button.is-active {
+      background: linear-gradient(135deg, var(--anniv-paper-strong), #f4d7b2);
+      color: var(--anniv-ink);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    .anniversary-stepper {
+      display: inline-flex;
+      gap: 0.55rem;
+    }
+
+    .anniversary-stepper__button {
+      width: 2.9rem;
+      height: 2.9rem;
+      border-radius: 999px;
+      background: rgba(255, 245, 227, 0.08);
+      color: var(--anniv-paper-strong);
+      border: 1px solid rgba(255, 245, 227, 0.12);
+      font-size: 1.1rem;
+    }
+
+    .anniversary-stepper__button:hover,
+    .anniversary-mode-toggle__button:hover {
+      transform: translateY(-1px);
+    }
+
+    .anniversary-controls__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .anniversary-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      color: rgba(255, 244, 230, 0.85);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .anniversary-field select,
+    .anniversary-selection {
+      min-height: 3.2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 245, 227, 0.15);
+      background: rgba(255, 247, 233, 0.08);
+      color: var(--anniv-paper-strong);
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .anniversary-field select:focus {
+      outline: 2px solid rgba(255, 233, 196, 0.48);
+      outline-offset: 2px;
+    }
+
+    .anniversary-field--status {
+      justify-content: flex-end;
+    }
+
+    .anniversary-selection {
+      display: flex;
+      align-items: center;
+      color: rgba(255, 244, 230, 0.92);
+    }
+
+    .anniversary-status {
+      margin: 0.85rem 0 0;
+      font-size: 0.92rem;
+      color: rgba(255, 234, 208, 0.72);
+    }
+
+    .anniversary-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .anniversary-stat-card {
+      border-radius: 1.45rem;
+      border: 1px solid rgba(255, 242, 220, 0.16);
+      background: linear-gradient(180deg, rgba(255, 247, 233, 0.09), rgba(255, 247, 233, 0.03));
+      padding: 1.25rem 1.25rem 1.3rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .anniversary-stat-card__label {
+      margin: 0 0 0.75rem;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255, 228, 190, 0.66);
+    }
+
+    .anniversary-stat-card__value {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 0.95;
+      color: var(--anniv-paper-strong);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+    }
+
+    .anniversary-stat-card__value--text {
+      font-size: 1.12rem;
+      line-height: 1.45;
+      font-family: 'Public Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    .anniversary-results {
+      background:
+        linear-gradient(180deg, rgba(255, 246, 232, 0.98), rgba(243, 229, 207, 0.98)),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.58), rgba(255, 235, 207, 0.28));
+      border-color: rgba(100, 58, 33, 0.12);
+      color: var(--anniv-ink);
+    }
+
+    .anniversary-results__header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-end;
+      margin-bottom: 1rem;
+    }
+
+    .anniversary-results__header h2 {
+      margin: 0;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 0.95;
+    }
+
+    .anniversary-results__context {
+      max-width: 28rem;
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--anniv-muted);
+      text-align: right;
+    }
+
+    .anniversary-empty {
+      padding: 1.3rem 1.35rem;
+      border-radius: 1.2rem;
+      background: rgba(130, 68, 38, 0.08);
+      border: 1px dashed rgba(130, 68, 38, 0.22);
+      color: var(--anniv-muted);
+    }
+
+    .anniversary-results__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .anniversary-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.35rem;
+      padding: 1.2rem;
+      border: 1px solid rgba(85, 46, 22, 0.12);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 248, 237, 0.95)),
+        linear-gradient(135deg, rgba(190, 101, 51, 0.08), transparent 55%);
+      box-shadow: 0 18px 36px rgba(76, 44, 24, 0.12);
+    }
+
+    .anniversary-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(191, 119, 62, 0.12), transparent 45%);
+      pointer-events: none;
+    }
+
+    .anniversary-card__header,
+    .anniversary-card__metrics,
+    .anniversary-track-list {
+      position: relative;
+      z-index: 1;
+    }
+
+    .anniversary-card__header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 0.9rem;
+    }
+
+    .anniversary-card__header h3 {
+      margin: 0.2rem 0 0;
+      font-size: 2.2rem;
+      line-height: 0.95;
+      color: #4e2212;
+    }
+
+    .anniversary-card__eyebrow {
+      margin: 0;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(109, 67, 43, 0.76);
+    }
+
+    .anniversary-card__badge {
+      border-radius: 999px;
+      padding: 0.5rem 0.8rem;
+      background: rgba(117, 44, 27, 0.08);
+      color: #6c2c1b;
+      font-size: 0.8rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .anniversary-card__metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .anniversary-card__metric {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border-radius: 999px;
+      padding: 0.45rem 0.72rem;
+      background: rgba(117, 44, 27, 0.06);
+      color: var(--anniv-muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .anniversary-card__metric strong {
+      color: #582818;
+    }
+
+    .anniversary-track-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .anniversary-track-list__item {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 0.72rem 0.82rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(87, 48, 24, 0.08);
+    }
+
+    .anniversary-track-list__rank {
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #5e2315;
+      color: var(--anniv-paper-strong);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .anniversary-track-list__copy {
+      min-width: 0;
+    }
+
+    .anniversary-track-list__title {
+      font-size: 0.97rem;
+      font-weight: 800;
+      color: #3b1c10;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .anniversary-track-list__meta {
+      margin-top: 0.14rem;
+      font-size: 0.8rem;
+      color: var(--anniv-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .anniversary-track-list__count {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #6f301d;
+      white-space: nowrap;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @keyframes anniversaryReveal {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .anniversary-summary,
+      .anniversary-results__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .anniversary-page {
+        padding: 1.25rem;
+      }
+
+      .anniversary-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .anniversary-controls__grid,
+      .anniversary-summary,
+      .anniversary-results__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .anniversary-results__header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .anniversary-results__context {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .anniversary-controls__row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .anniversary-mode-toggle {
+        width: 100%;
+      }
+
+      .anniversary-stepper {
+        justify-content: flex-end;
+      }
+
+      .anniversary-hero__copy,
+      .anniversary-hero__aside,
+      .anniversary-controls,
+      .anniversary-results {
+        border-radius: 1.25rem;
+      }
+
+      .anniversary-card__header {
+        flex-direction: column;
+      }
+
+      .anniversary-track-list__item {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+
+      .anniversary-track-list__count {
+        grid-column: 2;
+        justify-self: flex-start;
+      }
+    }
+  </style>
+</Layout>

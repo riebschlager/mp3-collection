@@ -63,6 +63,7 @@ Other useful targets:
 - `make compile` (rebuild compiled iTunes CSV)
 - `make listening` (refresh merged listening history + playcounts)
 - `make web-data` (rebuild web JSON/chunks/indexes)
+- `make anniversary-cache` (rebuild day/week anniversaries history JSON)
 - `make artist-race` (rebuild cumulative monthly artist leaderboard race JSON)
 - `make wrapped-stories` (rebuild wrapped story JSON via MCP)
 - `make wrapped-month-stories` (rebuild wrapped month story JSON via MCP)
@@ -101,14 +102,15 @@ cd tools/pipeline
 6. `merge-listening`
 7. `process-lastfm`
 8. `build-timeline`
-9. `build-artist-race`
-10. `build-transition-graph`
-11. `build-transition-query-cache`
-12. `build-era-similarity-cache`
-13. `build-wrapped-stories`
-14. `build-wrapped-month-stories`
-15. `build-web-data`
-16. `fetch-images`
+9. `build-anniversary-cache`
+10. `build-artist-race`
+11. `build-transition-graph`
+12. `build-transition-query-cache`
+13. `build-era-similarity-cache`
+14. `build-wrapped-stories`
+15. `build-wrapped-month-stories`
+16. `build-web-data`
+17. `fetch-images`
 
 You can run any step individually:
 
@@ -124,6 +126,7 @@ Common commands:
 - `merge-listening`
 - `process-lastfm`
 - `build-timeline`
+- `build-anniversary-cache`
 - `build-artist-race`
 - `build-transition-graph`
 - `build-transition-query-cache`
@@ -142,6 +145,7 @@ Common commands:
 - `data/derived/web/chunks/tracks-*.json`
 - `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
 - `data/derived/web/timeline.json`
+- `data/derived/web/anniversary-cache.json`
 - `data/derived/web/artist-race.json`
 - `data/derived/core/transition-graph.json`, `data/derived/web/transition-graph.json`
 - `data/derived/web/transition-query-cache.json`

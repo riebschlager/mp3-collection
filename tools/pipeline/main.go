@@ -41,6 +41,8 @@ func main() {
 		runFetchMetadata()
 	case "build-timeline":
 		runBuildTimeline()
+	case "build-anniversary-cache":
+		runBuildAnniversaryCache()
 	case "build-artist-race":
 		runBuildArtistRace()
 	case "build-wrapped-stories":
@@ -80,6 +82,7 @@ func printUsage() {
 	fmt.Println("  process-listening Alias for process-lastfm")
 	fmt.Println("  fetch-images      Fetch artist/album image metadata from Last.fm")
 	fmt.Println("  build-timeline    Build timeline data from merged history to data/derived/web/timeline.json")
+	fmt.Println("  build-anniversary-cache Build anniversaries/day-week history cache to data/derived/web/anniversary-cache.json")
 	fmt.Println("  build-artist-race Build cumulative monthly artist race data to data/derived/web/artist-race.json")
 	fmt.Println("  build-wrapped-stories Build wrapped story artifact from MCP year-story tool to data/derived/web/wrapped-stories.json")
 	fmt.Println("  build-wrapped-month-stories Build wrapped month story artifact from MCP month-story tool to data/derived/web/wrapped-month-stories.json")
