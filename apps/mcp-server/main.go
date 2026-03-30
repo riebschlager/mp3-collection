@@ -398,6 +398,8 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 		payload, err = musicStreaksAndBursts(params.Arguments)
 	case "music_transition_graph":
 		payload, err = musicTransitionGraph(params.Arguments)
+	case "music_anniversary_history":
+		payload, err = musicAnniversaryHistory(params.Arguments)
 	case "music_month_story":
 		payload, err = musicMonthStory(params.Arguments)
 	case "music_year_story":
@@ -4818,6 +4820,20 @@ func toolCatalog() []toolDefinition {
 					"maxEdges":           map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 50000, "default": 1000},
 					"includeSelfLoops":   map[string]interface{}{"type": "boolean", "default": false},
 					"source":             sourceFilterSchema(),
+				},
+			},
+		},
+		{
+			Name:        "music_anniversary_history",
+			Description: "Compare exact-day and calendar-week listening history across past years for a selected month/day or date anchor.",
+			InputSchema: map[string]interface{}{
+				"type": "object",
+				"properties": map[string]interface{}{
+					"date":     map[string]interface{}{"type": "string", "format": "date", "description": "Optional YYYY-MM-DD anchor date. Only month/day is used for across-years comparison. Defaults to today in America/Chicago."},
+					"monthDay": map[string]interface{}{"type": "string", "pattern": "^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$", "description": "Optional MM-DD override. Use instead of date."},
+					"timezone": map[string]interface{}{"type": "string", "default": "America/Chicago"},
+					"topN":     map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 100, "default": 10},
+					"source":   sourceFilterSchema(),
 				},
 			},
 		},

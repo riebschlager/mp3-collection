@@ -208,6 +208,7 @@ Current tools:
 - `music_listening_patterns`
 - `music_streaks_and_bursts`
 - `music_transition_graph`
+- `music_anniversary_history`
 - `music_month_story`
 - `music_year_story`
 - `music_batch_year_story`

@@ -19,6 +19,7 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `music_listening_patterns`
 - `music_streaks_and_bursts`
 - `music_transition_graph`
+- `music_anniversary_history`
 - `music_month_story`
 - `music_year_story`
 - `music_batch_year_story`
@@ -28,6 +29,7 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 Most analytics tools accept optional `source` filtering: `all` (default), `lastfm`, or `spotify`.
 Discovery-oriented tools (`music_new_discoveries`, `music_month_story`, `music_year_story`, `music_batch_year_story`) also accept `discoveryBaseline`: `global` (default), `source`, or `window`.
 `music_compare_eras` also returns an Era Similarity payload (`similarity`) with a 0-100 index, confidence, and component drivers.
+`music_anniversary_history` defaults to `America/Chicago` and returns both exact-day and calendar-week comparisons for the selected month/day.
 
 ## Data Dependencies
 
@@ -106,7 +108,7 @@ Supported format 2:
 1. `music_audit_match_coverage` treats ambiguous matches as unmatched.
 2. `music_compare_eras` genre shifts exclude unmatched tracks.
 3. `music_find_dormant_returns` only evaluates canonically matched scrobbles.
-4. Most date-bucketed tools evaluate timestamps in UTC (timezone-aware bucketing is currently explicit in selected tools only).
+4. Most date-bucketed tools evaluate timestamps in UTC (timezone-aware bucketing is currently explicit in selected tools like `music_anniversary_history`, `music_streaks_and_bursts`, `music_month_story`, and `music_year_story`).
 5. `music_reload_alias_map` reloads in process only; it does not edit alias files.
 
 ## Schemas
