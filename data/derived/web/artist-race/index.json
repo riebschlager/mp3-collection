@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-04-03T01:55:59Z",
+  "timezone": "America/Chicago",
+  "entityType": "artist",
+  "displayCount": 12,
+  "defaultGranularity": "week",
+  "defaultWindowKey": "13w",
+  "variants": [
+    {
+      "granularity": "week",
+      "windowKey": "all",
+      "label": "Weekly, All Time",
+      "path": "artist-race/week-all.json",
+      "totalFrames": 1104,
+      "firstFrameKey": "2005-W06",
+      "lastFrameKey": "2026-W14"
+    },
+    {
+      "granularity": "week",
+      "windowKey": "4w",
+      "label": "Weekly, Last 4 Weeks",
+      "path": "artist-race/week-4w.json",
+      "totalFrames": 1104,
+      "firstFrameKey": "2005-W06",
+      "lastFrameKey": "2026-W14"
+    },
+    {
+      "granularity": "week",
+      "windowKey": "13w",
+      "label": "Weekly, Last 13 Weeks",
+      "path": "artist-race/week-13w.json",
+      "totalFrames": 1104,
+      "firstFrameKey": "2005-W06",
+      "lastFrameKey": "2026-W14"
+    },
+    {
+      "granularity": "week",
+      "windowKey": "52w",
+      "label": "Weekly, Last 52 Weeks",
+      "path": "artist-race/week-52w.json",
+      "totalFrames": 1104,
+      "firstFrameKey": "2005-W06",
+      "lastFrameKey": "2026-W14"
+    },
+    {
+      "granularity": "month",
+      "windowKey": "all",
+      "label": "Monthly, All Time",
+      "path": "artist-race/month-all.json",
+      "totalFrames": 254,
+      "firstFrameKey": "2005-02",
+      "lastFrameKey": "2026-03"
+    },
+    {
+      "granularity": "month",
+      "windowKey": "4w",
+      "label": "Monthly, Last 4 Weeks",
+      "path": "artist-race/month-4w.json",
+      "totalFrames": 254,
+      "firstFrameKey": "2005-02",
+      "lastFrameKey": "2026-03"
+    },
+    {
+      "granularity": "month",
+      "windowKey": "13w",
+      "label": "Monthly, Last 13 Weeks",
+      "path": "artist-race/month-13w.json",
+      "totalFrames": 254,
+      "firstFrameKey": "2005-02",
+      "lastFrameKey": "2026-03"
+    },
+    {
+      "granularity": "month",
+      "windowKey": "52w",
+      "label": "Monthly, Last 52 Weeks",
+      "path": "artist-race/month-52w.json",
+      "totalFrames": 254,
+      "firstFrameKey": "2005-02",
+      "lastFrameKey": "2026-03"
+    }
+  ]
+}

@@ -64,7 +64,7 @@ Other useful targets:
 - `make listening` (refresh merged listening history + playcounts)
 - `make web-data` (rebuild web JSON/chunks/indexes)
 - `make anniversary-cache` (rebuild day/week anniversaries history JSON)
-- `make artist-race` (rebuild cumulative monthly artist leaderboard race JSON)
+- `make artist-race` (rebuild weekly/monthly artist leaderboard race variants)
 - `make wrapped-stories` (rebuild wrapped story JSON via MCP)
 - `make wrapped-month-stories` (rebuild wrapped month story JSON via MCP)
 - `make era-similarity-cache` (rebuild MCP-backed era similarity matrix cache)
@@ -146,7 +146,7 @@ Common commands:
 - `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
 - `data/derived/web/timeline.json`
 - `data/derived/web/anniversary-cache.json`
-- `data/derived/web/artist-race.json`
+- `data/derived/web/artist-race/index.json` + variant files in `data/derived/web/artist-race/`
 - `data/derived/core/transition-graph.json`, `data/derived/web/transition-graph.json`
 - `data/derived/web/transition-query-cache.json`
 - `data/derived/web/era-similarity-cache.json`

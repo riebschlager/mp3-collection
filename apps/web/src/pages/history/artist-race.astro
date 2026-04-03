@@ -12,8 +12,8 @@ const defaultDataRoot = buildUrl('data');
         <p class="race-kicker">History Lab</p>
         <h1>Artist Bar Chart Race</h1>
         <p>
-          Watch your listening canon accumulate month by month, from the first scrobbles in 2005 to the latest partial month.
-          The leaderboard is cumulative all-time, so every pass reveals who stayed ahead and who surged late.
+          Explore your artist leaderboard as a living time machine. Switch between weekly and monthly playback,
+          then compare all-time leaders against rolling windows like the last 4, 13, or 52 weeks.
         </p>
       </div>
       <div class="race-hero__actions">
@@ -24,9 +24,9 @@ const defaultDataRoot = buildUrl('data');
     <section class="race-shell reveal">
       <article class="race-panel race-panel--stage">
         <div class="race-panel__topline">
-          <div>
-            <p class="race-eyebrow">Cumulative Artist Lead</p>
-            <h2 id="current-label">Loading monthly race...</h2>
+          <div style="display:none">
+            <p class="race-eyebrow">Windowed Artist Lead</p>
+            <h2 id="current-label">Loading artist race...</h2>
           </div>
           <div class="race-clock">
             <div class="race-clock__label">Archive Clock</div>
@@ -52,7 +52,25 @@ const defaultDataRoot = buildUrl('data');
           <div class="race-controls">
             <button id="play-toggle" class="race-button race-button--primary" type="button">Pause</button>
             <button id="restart-button" class="race-button" type="button">Restart</button>
-            <label class="race-speed">
+          </div>
+          <div class="race-select-grid">
+            <label class="race-field">
+              Playback Step
+              <select id="granularity-select">
+                <option value="week" selected>Week</option>
+                <option value="month">Month</option>
+              </select>
+            </label>
+            <label class="race-field">
+              Window
+              <select id="window-select">
+                <option value="all">All Time</option>
+                <option value="4w">Last 4 Weeks</option>
+                <option value="13w" selected>Last 13 Weeks</option>
+                <option value="52w">Last 52 Weeks</option>
+              </select>
+            </label>
+            <label class="race-field race-field--full">
               Speed
               <select id="speed-select">
                 <option value="0.5">0.5x</option>
@@ -64,7 +82,7 @@ const defaultDataRoot = buildUrl('data');
             </label>
           </div>
           <label class="race-scrubber" for="frame-scrubber">
-            Month
+            Frame
             <input id="frame-scrubber" type="range" min="0" max="0" step="1" value="0" />
           </label>
           <div class="race-meta">
@@ -98,13 +116,22 @@ const defaultDataRoot = buildUrl('data');
         <article class="race-panel race-panel--note">
           <p class="race-eyebrow">What You’re Seeing</p>
           <p>
-            Each monthly frame captures the all-time leaderboard at that point in the archive. Bars interpolate between monthly snapshots,
-            but the source data stays anchored to those cumulative month-end totals.
+            Each frame is precomputed from the listening archive for the selected playback step and time window.
+            Bars interpolate between snapshots, but the counts stay grounded in the underlying weekly or monthly data.
+            Weekly rolling windows use smoothed rank ordering to calm the vertical motion without changing the counts.
           </p>
           <dl class="race-details">
             <div>
               <dt>Metric</dt>
               <dd id="detail-metric">-</dd>
+            </div>
+            <div>
+              <dt>Window</dt>
+              <dd id="detail-window">-</dd>
+            </div>
+            <div>
+              <dt>Range</dt>
+              <dd id="detail-range">-</dd>
             </div>
             <div>
               <dt>Entity</dt>
@@ -127,6 +154,8 @@ const defaultDataRoot = buildUrl('data');
   <script is:inline define:vars={{ defaultDataRoot }}>
     const playToggleEl = document.getElementById('play-toggle');
     const restartButtonEl = document.getElementById('restart-button');
+    const granularitySelectEl = document.getElementById('granularity-select');
+    const windowSelectEl = document.getElementById('window-select');
     const speedSelectEl = document.getElementById('speed-select');
     const frameScrubberEl = document.getElementById('frame-scrubber');
     const loadStatusEl = document.getElementById('load-status');
@@ -144,27 +173,138 @@ const defaultDataRoot = buildUrl('data');
     const statProgressEl = document.getElementById('stat-progress');
 
     const detailMetricEl = document.getElementById('detail-metric');
+    const detailWindowEl = document.getElementById('detail-window');
+    const detailRangeEl = document.getElementById('detail-range');
     const detailEntityEl = document.getElementById('detail-entity');
     const detailTimezoneEl = document.getElementById('detail-timezone');
     const detailTotalEl = document.getElementById('detail-total');
 
     const numberFormatter = new Intl.NumberFormat('en-US');
+    const dateFormatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' });
+    const raceRowHeight = 88;
+    const raceOffstageOffset = 24;
     const barPool = new Map();
+    const barGradientCache = new Map();
+    const variantLabels = {
+      all: 'All Time',
+      '4w': 'Last 4 Weeks',
+      '13w': 'Last 13 Weeks',
+      '52w': 'Last 52 Weeks',
+    };
+    const granularityLabels = {
+      week: 'Weekly',
+      month: 'Monthly',
+    };
 
     const state = {
+      manifest: null,
       artifact: null,
+      variantCache: new Map(),
+      variantIndex: new Map(),
+      selectedGranularity: 'week',
+      selectedWindowKey: '13w',
       imageMap: {},
       frameIndex: 0,
       frameProgress: 0,
       playing: true,
       speed: 1,
       frameDurationMs: 1600,
+      loadingVariant: false,
       rafId: 0,
       lastTimestamp: 0,
     };
 
     const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
     const easeOutQuart = (value) => 1 - Math.pow(1 - clamp(value, 0, 1), 4);
+    const variantKeyFor = (granularity, windowKey) => `${granularity}:${windowKey}`;
+    const windowLabelForKey = (windowKey) => variantLabels[windowKey] ?? windowKey;
+    const granularityLabelFor = (granularity) => granularityLabels[granularity] ?? granularity;
+    const hashCode = (value) => {
+      let hash = 0;
+      const input = String(value || '').toLowerCase();
+      for (let i = 0; i < input.length; i += 1) {
+        hash = input.charCodeAt(i) + ((hash << 5) - hash);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    };
+    const hslToRgb = (hue, saturation, lightness) => {
+      const safeHue = ((Number(hue) % 360) + 360) % 360;
+      const safeSaturation = clamp(Number(saturation) / 100, 0, 1);
+      const safeLightness = clamp(Number(lightness) / 100, 0, 1);
+      const chroma = (1 - Math.abs((2 * safeLightness) - 1)) * safeSaturation;
+      const segment = safeHue / 60;
+      const x = chroma * (1 - Math.abs((segment % 2) - 1));
+
+      let red = 0;
+      let green = 0;
+      let blue = 0;
+
+      if (segment >= 0 && segment < 1) {
+        red = chroma;
+        green = x;
+      } else if (segment < 2) {
+        red = x;
+        green = chroma;
+      } else if (segment < 3) {
+        green = chroma;
+        blue = x;
+      } else if (segment < 4) {
+        green = x;
+        blue = chroma;
+      } else if (segment < 5) {
+        red = x;
+        blue = chroma;
+      } else {
+        red = chroma;
+        blue = x;
+      }
+
+      const match = safeLightness - (chroma / 2);
+      return {
+        red: Math.round((red + match) * 255),
+        green: Math.round((green + match) * 255),
+        blue: Math.round((blue + match) * 255),
+      };
+    };
+    const relativeLuminance = ({ red, green, blue }) => {
+      const channel = (value) => {
+        const normalized = value / 255;
+        return normalized <= 0.03928 ? normalized / 12.92 : Math.pow((normalized + 0.055) / 1.055, 2.4);
+      };
+
+      return (0.2126 * channel(red)) + (0.7152 * channel(green)) + (0.0722 * channel(blue));
+    };
+    const getArtistBarPalette = (value) => {
+      const key = String(value || 'unknown');
+      const cached = barGradientCache.get(key);
+      if (cached) return cached;
+
+      const hash = hashCode(key);
+      const hue = hash % 360;
+      const saturation = 70 + (hash % 10);
+      const startLightness = 42 + (hash % 6);
+      const midLightness = 58 + ((hash >> 3) % 8);
+      const endLightness = 50 + ((hash >> 6) % 7);
+      const midSaturation = Math.min(saturation + 5, 88);
+      const endSaturation = Math.max(saturation - 6, 62);
+      const gradient = `linear-gradient(90deg, hsl(${hue} ${saturation}% ${startLightness}%) 0%, hsl(${hue} ${midSaturation}% ${midLightness}%) 58%, hsl(${hue} ${endSaturation}% ${endLightness}%) 100%)`;
+      const overlayGradient = `linear-gradient(90deg, hsl(${hue} ${Math.min(saturation + 2, 84)}% ${Math.max(startLightness - 10, 24)}%) 0%, hsl(${hue} ${Math.min(midSaturation + 1, 86)}% ${Math.max(midLightness - 11, 28)}%) 58%, hsl(${hue} ${Math.min(endSaturation + 2, 82)}% ${Math.max(endLightness - 10, 26)}%) 100%)`;
+      const luminance = relativeLuminance(hslToRgb(hue, midSaturation, midLightness));
+      const useDarkText = luminance > 0.42;
+      const palette = {
+        gradient,
+        overlay: overlayGradient,
+        foreground: useDarkText ? '#091013' : '#f6f0dd',
+        subtle: useDarkText ? 'rgba(9, 16, 19, 0.74)' : 'rgba(246, 240, 221, 0.74)',
+        avatarBorder: useDarkText ? 'rgba(9, 16, 19, 0.16)' : 'rgba(255, 255, 255, 0.18)',
+        avatarBackground: useDarkText ? 'rgba(255, 255, 255, 0.18)' : 'rgba(9, 16, 19, 0.16)',
+        overlayOpacity: useDarkText ? '0.24' : '0.36',
+      };
+
+      barGradientCache.set(key, palette);
+      return palette;
+    };
 
     const initialsFor = (value) => {
       const clean = String(value || '').trim();
@@ -177,6 +317,47 @@ const defaultDataRoot = buildUrl('data');
       if (loadStatusEl) loadStatusEl.textContent = text;
     };
 
+    const getVariantDescriptor = (granularity, windowKey) => {
+      if (!state.variantIndex.size) return null;
+      return state.variantIndex.get(variantKeyFor(granularity, windowKey)) ?? null;
+    };
+
+    const getMetricLabel = (artifact) => {
+      if (!artifact) return '-';
+      return artifact.metric === 'cumulative' ? 'All-time cumulative' : 'Trailing window';
+    };
+
+    const getWindowLabel = (artifact) => {
+      if (!artifact) return '-';
+      return windowLabelForKey(artifact.windowKey);
+    };
+
+    const formatFrameRange = (frame) => {
+      if (!frame) return '-';
+      return `${dateFormatter.format(new Date(frame.frameStart))} to ${dateFormatter.format(new Date(frame.frameEnd))}`;
+    };
+
+    const getArtifactSummary = (artifact) => {
+      if (!artifact) return '';
+      return `${numberFormatter.format(artifact.totalScrobbles)} archive scrobbles across ${artifact.totalFrames} ${artifact.granularity} frames`;
+    };
+
+    const getLeaderSubline = (artifact, leader = null) => {
+      if (!artifact) return 'artist plays';
+      const base = artifact.metric === 'cumulative' ? 'all-time artist plays' : `${windowLabelForKey(artifact.windowKey).toLowerCase()} plays`;
+      if (!leader || leader.rawRank === leader.rank || !Number.isFinite(leader.rawRank)) {
+        return base;
+      }
+      return `${base} · raw #${leader.rawRank}`;
+    };
+
+    const getOffstageY = (artifact) => ((artifact?.displayCount || 0) * raceRowHeight) + raceOffstageOffset;
+
+    const setVariantControls = () => {
+      if (granularitySelectEl) granularitySelectEl.value = state.selectedGranularity;
+      if (windowSelectEl) windowSelectEl.value = state.selectedWindowKey;
+    };
+
     const createBarElement = (key) => {
       const el = document.createElement('article');
       el.className = 'race-item';
@@ -185,6 +366,7 @@ const defaultDataRoot = buildUrl('data');
         <div class="race-item__rank"></div>
         <div class="race-item__bar">
           <div class="race-item__fill"></div>
+          <div class="race-item__shade"></div>
           <div class="race-item__content">
             <div class="race-item__identity">
               <div class="race-item__avatar">
@@ -207,26 +389,32 @@ const defaultDataRoot = buildUrl('data');
 
     const getCurrentFrameState = () => {
       if (!state.artifact || !Array.isArray(state.artifact.frames) || state.artifact.frames.length === 0) {
-        return { leaders: [], maxCount: 0, activeLabel: '--', currentFrame: null, nextFrame: null };
+        return { leaders: [], summaryLeaders: [], maxCount: 0, activeLabel: '--', currentFrame: null, nextFrame: null };
       }
 
       const frames = state.artifact.frames;
       const currentFrame = frames[state.frameIndex];
       const nextFrame = frames[Math.min(state.frameIndex + 1, frames.length - 1)];
       const easing = easeOutQuart(state.frameProgress);
+      const offstageY = getOffstageY(state.artifact);
 
       if (!nextFrame || currentFrame === nextFrame) {
-        const leaders = currentFrame.leaders.map((leader) => ({
-          key: leader.artistSlug || leader.artist,
-          artist: leader.artist,
-          artistSlug: leader.artistSlug,
-          playCount: leader.playCount,
-          rank: leader.rank,
-        }));
+        const leaders = currentFrame.leaders
+          .map((leader) => ({
+            key: leader.artistSlug || leader.artist,
+            artist: leader.artist,
+            artistSlug: leader.artistSlug,
+            playCount: leader.playCount,
+            rank: leader.rank,
+            rawRank: leader.rawRank,
+            yPosition: (leader.rank - 1) * raceRowHeight,
+          }))
+          .sort((left, right) => left.rank - right.rank || String(left.artist).localeCompare(String(right.artist)));
 
         return {
           leaders,
-          maxCount: leaders[0]?.playCount || 0,
+          summaryLeaders: currentFrame.leaders,
+          maxCount: leaders.reduce((maxCount, leader) => Math.max(maxCount, leader.playCount), 0),
           activeLabel: currentFrame.label,
           currentFrame,
           nextFrame,
@@ -238,6 +426,7 @@ const defaultDataRoot = buildUrl('data');
       const currentFloor = currentFrame.leaders[currentFrame.leaders.length - 1]?.playCount || 0;
       const keys = new Set([...currentMap.keys(), ...nextMap.keys()]);
       const leaders = [];
+      const summaryLeaders = state.frameProgress >= 0.5 ? nextFrame.leaders : currentFrame.leaders;
 
       keys.forEach((key) => {
         const currentLeader = currentMap.get(key);
@@ -245,30 +434,34 @@ const defaultDataRoot = buildUrl('data');
         const targetCount = nextLeader?.playCount ?? currentLeader?.playCount ?? 0;
         const startCount = currentLeader?.playCount ?? Math.max(0, Math.round(targetCount * 0.84), Math.round(currentFloor * 0.92));
         const playCount = startCount + ((targetCount - startCount) * easing);
+        const startY = currentLeader ? (currentLeader.rank - 1) * raceRowHeight : offstageY;
+        const endY = nextLeader ? (nextLeader.rank - 1) * raceRowHeight : offstageY;
+        const currentRank = currentLeader?.rank ?? nextLeader?.rank ?? state.artifact.displayCount + 1;
+        const nextRank = nextLeader?.rank ?? currentLeader?.rank ?? state.artifact.displayCount + 1;
+        const currentRawRank = currentLeader?.rawRank ?? nextLeader?.rawRank ?? currentRank;
+        const nextRawRank = nextLeader?.rawRank ?? currentLeader?.rawRank ?? nextRank;
 
         leaders.push({
           key,
           artist: nextLeader?.artist ?? currentLeader?.artist ?? key,
           artistSlug: nextLeader?.artistSlug ?? currentLeader?.artistSlug ?? key,
           playCount,
-          rankHint: (currentLeader?.rank ?? state.artifact.displayCount + 2) + (((nextLeader?.rank ?? state.artifact.displayCount + 2) - (currentLeader?.rank ?? state.artifact.displayCount + 2)) * easing),
+          rank: state.frameProgress >= 0.5 ? nextRank : currentRank,
+          rawRank: state.frameProgress >= 0.5 ? nextRawRank : currentRawRank,
+          yPosition: startY + ((endY - startY) * easing),
         });
       });
 
       leaders.sort((a, b) => {
-        if (Math.abs(b.playCount - a.playCount) > 0.0001) return b.playCount - a.playCount;
-        if (Math.abs(a.rankHint - b.rankHint) > 0.0001) return a.rankHint - b.rankHint;
+        if (Math.abs(a.yPosition - b.yPosition) > 0.0001) return a.yPosition - b.yPosition;
+        if (a.rank !== b.rank) return a.rank - b.rank;
         return String(a.artist).localeCompare(String(b.artist));
       });
 
-      const visible = leaders.slice(0, state.artifact.displayCount).map((leader, index) => ({
-        ...leader,
-        rank: index + 1,
-      }));
-
       return {
-        leaders: visible,
-        maxCount: visible[0]?.playCount || 0,
+        leaders,
+        summaryLeaders,
+        maxCount: leaders.reduce((maxCount, leader) => Math.max(maxCount, leader.playCount), 0),
         activeLabel: state.frameProgress >= 0.5 ? nextFrame.label : currentFrame.label,
         currentFrame,
         nextFrame,
@@ -278,32 +471,49 @@ const defaultDataRoot = buildUrl('data');
     const renderBars = (leaders, maxCount) => {
       if (!raceStageEl || !state.artifact) return;
 
-      const stageHeight = Math.max(state.artifact.displayCount, leaders.length || state.artifact.displayCount) * 88;
+      const stageHeight = state.artifact.displayCount * raceRowHeight;
+      const offstageY = getOffstageY(state.artifact);
       raceStageEl.style.height = `${stageHeight}px`;
 
       const visibleKeys = new Set();
-      leaders.forEach((leader, index) => {
+      leaders.forEach((leader) => {
         const key = leader.key;
         const el = barPool.get(key) || createBarElement(key);
         visibleKeys.add(key);
 
         const rankEl = el.querySelector('.race-item__rank');
         const fillEl = el.querySelector('.race-item__fill');
+        const shadeEl = el.querySelector('.race-item__shade');
         const nameEl = el.querySelector('.race-item__name');
+        const sublineEl = el.querySelector('.race-item__subline');
         const valueEl = el.querySelector('.race-item__value');
         const imgEl = el.querySelector('.race-item__img');
         const initialsEl = el.querySelector('.race-item__initials');
 
         const widthPct = maxCount > 0 ? clamp((leader.playCount / maxCount) * 100, 7, 100) : 7;
 
-        el.classList.toggle('is-leader', index === 0);
+        el.classList.toggle('is-leader', leader.rank === 1);
         el.style.opacity = '1';
-        el.style.transform = `translate3d(0, ${index * 88}px, 0)`;
-        el.style.zIndex = String(120 - index);
+        el.style.transform = `translate3d(0, ${leader.yPosition}px, 0)`;
+        el.style.zIndex = String(200 - Math.round((leader.yPosition / raceRowHeight) * 10));
 
-        if (rankEl) rankEl.textContent = `#${index + 1}`;
-        if (fillEl) fillEl.style.width = `${widthPct}%`;
+        if (rankEl) rankEl.textContent = `#${leader.rank}`;
+        const palette = getArtistBarPalette(leader.artist || leader.key);
+
+        if (fillEl) {
+          fillEl.style.background = palette.gradient;
+        }
+        if (shadeEl) {
+          shadeEl.style.width = `${widthPct}%`;
+          shadeEl.style.background = palette.overlay;
+          shadeEl.style.opacity = palette.overlayOpacity;
+        }
+        el.style.setProperty('--race-item-fg', palette.foreground);
+        el.style.setProperty('--race-item-subtle', palette.subtle);
+        el.style.setProperty('--race-item-avatar-border', palette.avatarBorder);
+        el.style.setProperty('--race-item-avatar-bg', palette.avatarBackground);
         if (nameEl) nameEl.textContent = leader.artist;
+        if (sublineEl) sublineEl.textContent = getLeaderSubline(state.artifact, leader);
         if (valueEl) valueEl.textContent = numberFormatter.format(Math.round(leader.playCount));
 
         const imageUrl = state.imageMap?.[leader.artistSlug];
@@ -326,24 +536,28 @@ const defaultDataRoot = buildUrl('data');
         if (visibleKeys.has(key)) return;
         el.classList.remove('is-leader');
         el.style.opacity = '0';
-        el.style.transform = `translate3d(0, ${state.artifact.displayCount * 94}px, 0)`;
+        el.style.transform = `translate3d(0, ${offstageY}px, 0)`;
       });
     };
 
     const render = () => {
-      const { leaders, maxCount, activeLabel, currentFrame } = getCurrentFrameState();
+      const { leaders, summaryLeaders, maxCount, activeLabel, currentFrame } = getCurrentFrameState();
       if (!state.artifact || !currentFrame) return;
 
       renderBars(leaders, maxCount);
 
-      const leader = leaders[0];
-      const topTotal = leaders.reduce((sum, entry) => sum + entry.playCount, 0);
+      const leader = summaryLeaders[0];
+      const topTotal = summaryLeaders.reduce((sum, entry) => sum + entry.playCount, 0);
       const progressDenominator = Math.max(state.artifact.totalFrames - 1, 1);
       const progressValue = clamp((state.frameIndex + state.frameProgress) / progressDenominator, 0, 1);
+      const referenceFrame =
+        state.frameProgress >= 0.5
+          ? state.artifact.frames[Math.min(state.frameIndex + 1, state.artifact.totalFrames - 1)]
+          : currentFrame;
 
       if (currentLabelEl) currentLabelEl.textContent = activeLabel;
       if (clockValueEl) clockValueEl.textContent = activeLabel;
-      if (clockSubtitleEl) clockSubtitleEl.textContent = `${numberFormatter.format(state.artifact.totalScrobbles)} scrobbles across ${state.artifact.totalFrames} monthly frames`;
+      if (clockSubtitleEl) clockSubtitleEl.textContent = getArtifactSummary(state.artifact);
       if (axisMaxEl) axisMaxEl.textContent = numberFormatter.format(Math.round(maxCount));
       if (framePositionEl) framePositionEl.textContent = `Frame ${Math.min(state.frameIndex + 1, state.artifact.totalFrames)} / ${state.artifact.totalFrames}`;
       if (frameScrubberEl) frameScrubberEl.value = String(state.frameIndex);
@@ -353,7 +567,9 @@ const defaultDataRoot = buildUrl('data');
       if (statTopTotalEl) statTopTotalEl.textContent = numberFormatter.format(Math.round(topTotal));
       if (statProgressEl) statProgressEl.textContent = `${Math.round(progressValue * 100)}%`;
 
-      if (detailMetricEl) detailMetricEl.textContent = state.artifact.metric;
+      if (detailMetricEl) detailMetricEl.textContent = getMetricLabel(state.artifact);
+      if (detailWindowEl) detailWindowEl.textContent = getWindowLabel(state.artifact);
+      if (detailRangeEl) detailRangeEl.textContent = formatFrameRange(referenceFrame);
       if (detailEntityEl) detailEntityEl.textContent = state.artifact.entityType;
       if (detailTimezoneEl) detailTimezoneEl.textContent = state.artifact.timezone;
       if (detailTotalEl) detailTotalEl.textContent = numberFormatter.format(state.artifact.totalScrobbles);
@@ -364,12 +580,59 @@ const defaultDataRoot = buildUrl('data');
       playToggleEl.textContent = state.playing ? 'Pause' : 'Play';
     };
 
+    const loadVariant = async (granularity, windowKey) => {
+      const descriptor = getVariantDescriptor(granularity, windowKey);
+      if (!descriptor) {
+        throw new Error(`No artist race variant for ${granularity}/${windowKey}`);
+      }
+
+      const cacheKey = variantKeyFor(granularity, windowKey);
+      setStatus(`Loading ${descriptor.label.toLowerCase()}...`);
+      state.loadingVariant = true;
+
+      try {
+        let artifact = state.variantCache.get(cacheKey);
+        if (!artifact) {
+          const response = await fetch(`${defaultDataRoot}/${descriptor.path}`);
+          if (!response.ok) {
+            throw new Error(`${descriptor.path} HTTP ${response.status}`);
+          }
+          artifact = await response.json();
+          if (!artifact?.frames?.length) {
+            throw new Error(`${descriptor.path} has no frames`);
+          }
+          state.variantCache.set(cacheKey, artifact);
+        }
+
+        state.artifact = artifact;
+        state.selectedGranularity = granularity;
+        state.selectedWindowKey = windowKey;
+        state.frameIndex = 0;
+        state.frameProgress = 0;
+        state.lastTimestamp = 0;
+        setVariantControls();
+
+        if (frameScrubberEl) {
+          frameScrubberEl.max = String(Math.max(artifact.totalFrames - 1, 0));
+          frameScrubberEl.value = '0';
+        }
+
+        const generatedAt = artifact.generatedAt
+          ? new Date(artifact.generatedAt).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })
+          : 'unknown time';
+        setStatus(`Loaded ${descriptor.label}. Generated ${generatedAt}.`);
+        render();
+      } finally {
+        state.loadingVariant = false;
+      }
+    };
+
     const tick = (timestamp) => {
       if (!state.lastTimestamp) state.lastTimestamp = timestamp;
       const delta = timestamp - state.lastTimestamp;
       state.lastTimestamp = timestamp;
 
-      if (state.artifact && state.playing && state.artifact.totalFrames > 1) {
+      if (state.artifact && state.playing && !state.loadingVariant && state.artifact.totalFrames > 1) {
         state.frameProgress += (delta * state.speed) / state.frameDurationMs;
 
         while (state.frameProgress >= 1 && state.frameIndex < state.artifact.totalFrames - 1) {
@@ -413,6 +676,28 @@ const defaultDataRoot = buildUrl('data');
         state.speed = Number.isFinite(nextSpeed) && nextSpeed > 0 ? nextSpeed : 1;
       });
 
+      granularitySelectEl?.addEventListener('change', async () => {
+        const nextGranularity = granularitySelectEl.value;
+        const nextWindowKey = windowSelectEl?.value || state.selectedWindowKey;
+        try {
+          await loadVariant(nextGranularity, nextWindowKey);
+        } catch (error) {
+          const message = error instanceof Error ? error.message : 'unknown error';
+          setStatus(`Unable to switch artist race variant: ${message}`);
+        }
+      });
+
+      windowSelectEl?.addEventListener('change', async () => {
+        const nextWindowKey = windowSelectEl.value;
+        const nextGranularity = granularitySelectEl?.value || state.selectedGranularity;
+        try {
+          await loadVariant(nextGranularity, nextWindowKey);
+        } catch (error) {
+          const message = error instanceof Error ? error.message : 'unknown error';
+          setStatus(`Unable to switch artist race variant: ${message}`);
+        }
+      });
+
       frameScrubberEl?.addEventListener('input', () => {
         if (!state.artifact) return;
         state.frameIndex = clamp(Number(frameScrubberEl.value) || 0, 0, state.artifact.totalFrames - 1);
@@ -426,19 +711,25 @@ const defaultDataRoot = buildUrl('data');
       updatePlayButton();
 
       try {
-        const [artifactResponse, imagesResponse] = await Promise.all([
-          fetch(`${defaultDataRoot}/artist-race.json`),
+        const [manifestResponse, imagesResponse] = await Promise.all([
+          fetch(`${defaultDataRoot}/artist-race/index.json`),
           fetch(`${defaultDataRoot}/artist-images.json`),
         ]);
 
-        if (!artifactResponse.ok) {
-          throw new Error(`artist-race.json HTTP ${artifactResponse.status}`);
+        if (!manifestResponse.ok) {
+          throw new Error(`artist-race/index.json HTTP ${manifestResponse.status}`);
         }
 
-        state.artifact = await artifactResponse.json();
-        if (!state.artifact?.frames?.length) {
-          throw new Error('artist race artifact has no frames');
+        state.manifest = await manifestResponse.json();
+        if (!state.manifest?.variants?.length) {
+          throw new Error('artist race manifest has no variants');
         }
+        state.variantIndex = new Map(
+          state.manifest.variants.map((variant) => [variantKeyFor(variant.granularity, variant.windowKey), variant]),
+        );
+        state.selectedGranularity = state.manifest.defaultGranularity || 'week';
+        state.selectedWindowKey = state.manifest.defaultWindowKey || '13w';
+        setVariantControls();
 
         if (imagesResponse.ok) {
           const imageArtifact = await imagesResponse.json();
@@ -447,16 +738,7 @@ const defaultDataRoot = buildUrl('data');
           state.imageMap = {};
         }
 
-        if (frameScrubberEl) {
-          frameScrubberEl.max = String(Math.max(state.artifact.totalFrames - 1, 0));
-          frameScrubberEl.value = '0';
-        }
-
-        const generatedAt = state.artifact.generatedAt
-          ? new Date(state.artifact.generatedAt).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })
-          : 'unknown time';
-        setStatus(`Cache loaded. Generated ${generatedAt}.`);
-        render();
+        await loadVariant(state.selectedGranularity, state.selectedWindowKey);
       } catch (error) {
         const message = error instanceof Error ? error.message : 'unknown error';
         setStatus(`Unable to load artist race: ${message}`);
@@ -735,13 +1017,23 @@ const defaultDataRoot = buildUrl('data');
 
   .race-item__fill {
     position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(228, 184, 77, 0.96), rgba(255, 113, 74, 0.92) 62%, rgba(117, 227, 209, 0.78));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    transition: filter 240ms ease;
+  }
+
+  .race-item__shade {
+    position: absolute;
     inset: 0 auto 0 0;
     width: 12%;
     border-radius: 20px;
-    background:
-      linear-gradient(90deg, rgba(228, 184, 77, 0.96), rgba(255, 113, 74, 0.92) 62%, rgba(117, 227, 209, 0.78));
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-    transition: width 340ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 240ms ease;
+    background: rgba(8, 16, 19, 0.22);
+    box-shadow:
+      inset -1px 0 0 rgba(255, 255, 255, 0.08),
+      14px 0 26px rgba(8, 16, 19, 0.08);
+    transition: width 340ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 240ms ease, filter 240ms ease;
   }
 
   .race-item__content {
@@ -753,6 +1045,7 @@ const defaultDataRoot = buildUrl('data');
     align-items: center;
     gap: 1rem;
     padding: 0.85rem 1rem;
+    color: var(--race-item-fg, var(--race-text));
   }
 
   .race-item__identity {
@@ -768,8 +1061,8 @@ const defaultDataRoot = buildUrl('data');
     flex: 0 0 48px;
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--race-item-avatar-border, rgba(255, 255, 255, 0.14));
+    background: var(--race-item-avatar-bg, rgba(255, 255, 255, 0.05));
     display: grid;
     place-items: center;
   }
@@ -790,7 +1083,7 @@ const defaultDataRoot = buildUrl('data');
     justify-content: center;
     font: 700 0.95rem/1 'Chakra Petch', sans-serif;
     letter-spacing: 0.1em;
-    color: var(--race-teal);
+    color: inherit;
   }
 
   .race-item__text {
@@ -808,7 +1101,7 @@ const defaultDataRoot = buildUrl('data');
 
   .race-item__subline {
     margin-top: 0.3rem;
-    color: rgba(246, 240, 221, 0.68);
+    color: var(--race-item-subtle, rgba(246, 240, 221, 0.68));
     font-size: 0.85rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -825,8 +1118,7 @@ const defaultDataRoot = buildUrl('data');
     filter: brightness(1.06);
   }
 
-  .race-item.is-leader .race-item__rank,
-  .race-item.is-leader .race-item__value {
+  .race-item.is-leader .race-item__rank {
     color: var(--race-brass);
   }
 
@@ -837,20 +1129,30 @@ const defaultDataRoot = buildUrl('data');
     align-items: center;
   }
 
-  .race-speed {
-    grid-column: 1 / -1;
+  .race-select-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .race-field {
     display: grid;
     gap: 0.45rem;
     color: var(--race-muted);
     font-size: 0.96rem;
   }
 
-  .race-speed select,
+  .race-field--full {
+    grid-column: 1 / -1;
+  }
+
+  .race-field select,
   .race-scrubber input {
     width: 100%;
   }
 
-  .race-speed select {
+  .race-field select {
     appearance: none;
     border-radius: 16px;
     padding: 0.85rem 1rem;
@@ -999,7 +1301,8 @@ const defaultDataRoot = buildUrl('data');
     }
 
     .race-stats,
-    .race-controls {
+    .race-controls,
+    .race-select-grid {
       grid-template-columns: 1fr;
     }
   }

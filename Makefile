@@ -11,7 +11,7 @@ help:
 	@echo "  listening   Refresh Last.fm + Spotify merged listening data"
 	@echo "  timeline    Rebuild timeline JSON"
 	@echo "  anniversary-cache Rebuild day/week anniversaries JSON"
-	@echo "  artist-race Rebuild cumulative artist race JSON"
+	@echo "  artist-race Rebuild weekly/monthly artist race variants"
 	@echo "  transitions Rebuild listening transition graph JSON"
 	@echo "  transition-cache Rebuild MCP-backed transition query cache JSON"
 	@echo "  era-similarity-cache Rebuild MCP-backed era similarity matrix JSON"
