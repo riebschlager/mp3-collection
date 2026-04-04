@@ -289,7 +289,7 @@ const defaultDataRoot = buildUrl('data');
       const midSaturation = Math.min(saturation + 5, 88);
       const endSaturation = Math.max(saturation - 6, 62);
       const gradient = `linear-gradient(90deg, hsl(${hue} ${saturation}% ${startLightness}%) 0%, hsl(${hue} ${midSaturation}% ${midLightness}%) 58%, hsl(${hue} ${endSaturation}% ${endLightness}%) 100%)`;
-      const overlayGradient = `linear-gradient(90deg, hsl(${hue} ${Math.min(saturation + 2, 84)}% ${Math.max(startLightness - 10, 24)}%) 0%, hsl(${hue} ${Math.min(midSaturation + 1, 86)}% ${Math.max(midLightness - 11, 28)}%) 58%, hsl(${hue} ${Math.min(endSaturation + 2, 82)}% ${Math.max(endLightness - 10, 26)}%) 100%)`;
+      const overlayGradient = `linear-gradient(90deg, hsl(${hue} ${Math.min(saturation + 4, 88)}% ${Math.max(startLightness - 16, 18)}%) 0%, hsl(${hue} ${Math.min(midSaturation + 3, 90)}% ${Math.max(midLightness - 17, 22)}%) 58%, hsl(${hue} ${Math.min(endSaturation + 4, 86)}% ${Math.max(endLightness - 16, 20)}%) 100%)`;
       const luminance = relativeLuminance(hslToRgb(hue, midSaturation, midLightness));
       const useDarkText = luminance > 0.42;
       const palette = {
@@ -299,7 +299,7 @@ const defaultDataRoot = buildUrl('data');
         subtle: useDarkText ? 'rgba(9, 16, 19, 0.74)' : 'rgba(246, 240, 221, 0.74)',
         avatarBorder: useDarkText ? 'rgba(9, 16, 19, 0.16)' : 'rgba(255, 255, 255, 0.18)',
         avatarBackground: useDarkText ? 'rgba(255, 255, 255, 0.18)' : 'rgba(9, 16, 19, 0.16)',
-        overlayOpacity: useDarkText ? '0.24' : '0.36',
+        overlayOpacity: useDarkText ? '0.36' : '0.5',
       };
 
       barGradientCache.set(key, palette);
@@ -1031,8 +1031,8 @@ const defaultDataRoot = buildUrl('data');
     border-radius: 20px;
     background: rgba(8, 16, 19, 0.22);
     box-shadow:
-      inset -1px 0 0 rgba(255, 255, 255, 0.08),
-      14px 0 26px rgba(8, 16, 19, 0.08);
+      inset -1px 0 0 rgba(255, 255, 255, 0.14),
+      16px 0 30px rgba(8, 16, 19, 0.16);
     transition: width 340ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 240ms ease, filter 240ms ease;
   }
 

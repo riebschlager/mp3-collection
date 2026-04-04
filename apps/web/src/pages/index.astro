@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import TrackList from '../components/TrackList.astro';
+import { buildLibraryUrl } from '../lib/urls';
 
 // Load metadata from JSON
 const metadata = await import('../../public/data/metadata.json');
@@ -147,25 +147,25 @@ const buildUrl = (path: string) => {
     <!-- Quick Navigation -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <a
-        href={buildUrl('artists')}
+        href={buildLibraryUrl({ sort: 'artist' })}
         class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg shadow-lg p-8 hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105"
       >
-        <h3 class="text-2xl font-bold mb-2">Browse Artists</h3>
-        <p class="text-blue-100">Explore {metadata.totalArtists?.toLocaleString()} artists</p>
+        <h3 class="text-2xl font-bold mb-2">Browse by Artist</h3>
+        <p class="text-blue-100">Open the new library browser sorted around artists</p>
       </a>
       <a
-        href={buildUrl('albums')}
+        href={buildLibraryUrl({ sort: 'album' })}
         class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-lg shadow-lg p-8 hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105"
       >
-        <h3 class="text-2xl font-bold mb-2">Browse Albums</h3>
-        <p class="text-green-100">Discover {metadata.totalAlbums?.toLocaleString()} albums</p>
+        <h3 class="text-2xl font-bold mb-2">Browse by Album</h3>
+        <p class="text-green-100">Move from panes into albums without page-to-page hops</p>
       </a>
       <a
-        href={buildUrl('tracks/1')}
+        href={buildLibraryUrl({ sort: 'title' })}
         class="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-lg shadow-lg p-8 hover:from-purple-600 hover:to-purple-700 transition-all transform hover:scale-105"
       >
-        <h3 class="text-2xl font-bold mb-2">Browse Tracks</h3>
-        <p class="text-purple-100">View all {metadata.totalTracks?.toLocaleString()} tracks</p>
+        <h3 class="text-2xl font-bold mb-2">Browse Songs</h3>
+        <p class="text-purple-100">Use the sortable song list inside the unified library</p>
       </a>
       <a
         href={buildUrl('history')}

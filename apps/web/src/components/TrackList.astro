@@ -1,4 +1,6 @@
 ---
+import { buildLibraryUrl } from '../lib/urls';
+
 interface Track {
   id: string;
   name: string;
@@ -20,13 +22,6 @@ interface Props {
 }
 
 const { tracks, showArtist = true, showAlbum = true, showPlayCount = true } = Astro.props;
-
-const buildUrl = (path: string) => {
-  const base = import.meta.env.BASE_URL;
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  const separator = base.endsWith('/') ? '' : '/';
-  return `${base}${separator}${cleanPath}`;
-};
 ---
 
 <div class="bg-white rounded-lg shadow overflow-hidden">
@@ -68,7 +63,7 @@ const buildUrl = (path: string) => {
           {showArtist && (
             <td class="px-6 py-4 whitespace-nowrap">
               <a
-                href={buildUrl(`artists/${track.artistSlug}`)}
+                href={buildLibraryUrl({ artist: track.artistSlug })}
                 class="text-sm text-blue-600 hover:text-blue-800"
               >
                 {track.artist}
@@ -78,7 +73,7 @@ const buildUrl = (path: string) => {
           {showAlbum && (
             <td class="px-6 py-4 whitespace-nowrap">
               <a
-                href={buildUrl(`albums/${track.albumSlug}`)}
+                href={buildLibraryUrl({ artist: track.artistSlug, album: track.albumSlug })}
                 class="text-sm text-blue-600 hover:text-blue-800"
               >
                 {track.album}

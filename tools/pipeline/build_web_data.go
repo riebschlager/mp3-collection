@@ -478,6 +478,16 @@ func runBuildWebData() {
 	writeJSON(filepath.Join(outputDir, "albums-index.json"), albumIndex)
 	fmt.Printf("  Wrote %d albums to albums-index.json\n", len(albumIndexList))
 
+	fmt.Println("\nCreating archive browser dataset...")
+	archiveBrowser := buildArchiveBrowserData(tracks)
+	writeJSON(filepath.Join(outputDir, "archive-browser.json"), archiveBrowser)
+	fmt.Printf("  Wrote archive-browser.json with %d tracks, %d artists, %d albums, %d genres\n",
+		archiveBrowser.Meta.TotalTracks,
+		archiveBrowser.Meta.TotalArtists,
+		archiveBrowser.Meta.TotalAlbums,
+		archiveBrowser.Meta.TotalGenres,
+	)
+
 	// Metadata
 	fmt.Println("\nCreating metadata file...")
 	var genres []string
@@ -545,7 +555,7 @@ func runBuildWebData() {
 	absOut, _ := filepath.Abs(outputDir)
 	fmt.Printf("\nOutput directory: %s\n", absOut)
 	fmt.Printf("Track chunks:     %d files in chunks/\n", totalChunks)
-	fmt.Println("Index files:      artists-index.json, albums-index.json, metadata.json")
+	fmt.Println("Index files:      artists-index.json, albums-index.json, archive-browser.json, metadata.json")
 	fmt.Println("\nReady for Astro build!")
 }
 

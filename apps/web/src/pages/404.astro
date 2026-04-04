@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { buildUrl } from '../lib/urls';
+
+const basePath = import.meta.env.BASE_URL;
+const libraryUrl = buildUrl('library');
+const homeUrl = buildUrl('');
+---
+
+<Layout title="Archive Redirect - MP3 Collection" description="Redirecting legacy archive links into the new library browser">
+  <section class="missing-shell">
+    <p class="missing-kicker">Archive Redirect</p>
+    <h1>Routing this URL into the new library.</h1>
+    <p class="missing-copy">
+      Legacy artist, album, and track routes now resolve through the client-driven archive browser.
+      If the redirect does not happen automatically, use the library link below.
+    </p>
+    <div class="missing-actions">
+      <a href={libraryUrl}>Open Library</a>
+      <a href={homeUrl}>Home</a>
+    </div>
+    <p class="missing-path" id="missing-path">Checking route...</p>
+  </section>
+
+  <script is:inline define:vars={{ basePath, libraryUrl }}>
+    const statusEl = document.getElementById('missing-path');
+    const normalizedBase = basePath.endsWith('/') ? basePath.slice(0, -1) : basePath;
+    let path = window.location.pathname;
+
+    if (normalizedBase && normalizedBase !== '/' && path.startsWith(normalizedBase)) {
+      path = path.slice(normalizedBase.length) || '/';
+    }
+
+    const artistMatch = path.match(/^\/artists(?:\/([^/?#]+))?\/?$/);
+    const albumMatch = path.match(/^\/albums(?:\/([^/?#]+))?\/?$/);
+    const trackMatch = path.match(/^\/tracks(?:\/([^/?#]+))?\/?$/);
+
+    const buildTarget = (params) => {
+      const query = new URLSearchParams();
+      Object.entries(params).forEach(([key, value]) => {
+        if (value) query.set(key, value);
+      });
+      const next = query.toString();
+      return next ? `${libraryUrl}?${next}` : libraryUrl;
+    };
+
+    let target = '';
+    if (artistMatch) {
+      target = buildTarget({ artist: artistMatch[1] ?? '' });
+    } else if (albumMatch) {
+      target = buildTarget({ album: albumMatch[1] ?? '' });
+    } else if (trackMatch) {
+      target = libraryUrl;
+    }
+
+    if (target) {
+      if (statusEl) {
+        statusEl.textContent = `Redirecting ${path} to ${target}`;
+      }
+      window.location.replace(target);
+    } else if (statusEl) {
+      statusEl.textContent = `No compatibility redirect matched ${path}.`;
+    }
+  </script>
+</Layout>
+
+<style>
+  .missing-shell {
+    max-width: 42rem;
+    margin: 4rem auto;
+    padding: 2.2rem;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(236, 243, 248, 0.9));
+    border: 1px solid rgba(76, 95, 117, 0.16);
+    box-shadow: 0 20px 48px rgba(42, 56, 72, 0.12);
+  }
+
+  .missing-kicker {
+    margin: 0 0 0.4rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #1f6f8b;
+  }
+
+  .missing-shell h1 {
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 0.95;
+    color: #223245;
+  }
+
+  .missing-copy,
+  .missing-path {
+    color: #5d6d80;
+    line-height: 1.7;
+  }
+
+  .missing-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.3rem;
+  }
+
+  .missing-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0 1.1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(76, 95, 117, 0.16);
+    background: rgba(255, 255, 255, 0.88);
+    color: #223245;
+  }
+
+  .missing-actions a:first-child {
+    color: #1f6f8b;
+    border-color: rgba(31, 111, 139, 0.24);
+  }
+</style>

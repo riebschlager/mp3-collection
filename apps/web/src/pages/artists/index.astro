@@ -1,105 +1,34 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { buildUrl } from '../../lib/urls';
 
-// Load all artists
-const artistsIndex = await import('../../../public/data/artists-index.json');
-
-// Sort alphabetically
-const sortedArtists = [...artistsIndex.artists].sort((a, b) => a.name.localeCompare(b.name));
-
-// Group by first letter
-const artistsByLetter = new Map<string, any[]>();
-sortedArtists.forEach(artist => {
-  const firstLetter = artist.name[0].toUpperCase();
-  if (!artistsByLetter.has(firstLetter)) {
-    artistsByLetter.set(firstLetter, []);
-  }
-  artistsByLetter.get(firstLetter)!.push(artist);
-});
-
-const letters = Array.from(artistsByLetter.keys()).sort();
-
-const buildUrl = (path: string) => {
-  const base = import.meta.env.BASE_URL;
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  const separator = base.endsWith('/') ? '' : '/';
-  return `${base}${separator}${cleanPath}`;
-};
+const libraryUrl = buildUrl('library');
 ---
 
-<Layout title="Artists - MP3 Collection" description={`Browse ${artistsIndex.total} artists from the MP3 collection`}>
-  <div class="space-y-8">
-    <div>
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Artists</h1>
-      <p class="text-gray-600">{artistsIndex.total.toLocaleString()} artists in the collection</p>
-    </div>
+<Layout title="Artists - MP3 Collection" description="Redirecting to the library browser">
+  <section class="route-redirect">
+    <p>Artists now open in the unified library browser.</p>
+    <a href={libraryUrl}>Open Library</a>
+  </section>
 
-    <!-- Letter Navigation -->
-    <div class="bg-white rounded-lg shadow p-4 sticky top-20 z-40">
-      <div class="flex flex-wrap gap-2 justify-center">
-        {letters.map(letter => (
-          <a
-            href={`#${letter}`}
-            class="px-3 py-1 bg-blue-100 text-blue-700 hover:bg-blue-200 rounded font-medium"
-          >
-            {letter}
-          </a>
-        ))}
-      </div>
-    </div>
-
-    <!-- Artist Listings -->
-    {letters.map(letter => {
-      const artists = artistsByLetter.get(letter) || [];
-      return (
-        <div id={letter} class="scroll-mt-32">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4 border-b-2 border-blue-500 pb-2">
-            {letter}
-          </h2>
-          <div class="overflow-x-auto bg-white rounded-lg shadow border border-gray-100">
-            <table class="min-w-full divide-y divide-gray-200">
-              <thead class="bg-gray-50">
-                <tr>
-                  <th
-                    scope="col"
-                    class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wide"
-                  >
-                    Artist
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-3 text-right text-xs font-semibold text-gray-500 uppercase tracking-wide"
-                  >
-                    Albums
-                  </th>
-                  <th
-                    scope="col"
-                    class="px-4 py-3 text-right text-xs font-semibold text-gray-500 uppercase tracking-wide"
-                  >
-                    Tracks
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-100">
-                {artists.map(artist => (
-                  <tr class="hover:bg-gray-50">
-                    <td class="px-4 py-3">
-                      <a
-                        href={buildUrl(`artists/${artist.slug}`)}
-                        class="text-blue-600 font-medium hover:text-blue-800"
-                      >
-                        {artist.name}
-                      </a>
-                    </td>
-                    <td class="px-4 py-3 text-right text-sm text-gray-600">{artist.albumCount}</td>
-                    <td class="px-4 py-3 text-right text-sm text-gray-600">{artist.trackCount}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      );
-    })}
-  </div>
+  <script is:inline define:vars={{ libraryUrl }}>
+    window.location.replace(libraryUrl);
+  </script>
 </Layout>
+
+<style>
+  .route-redirect {
+    display: grid;
+    gap: 1rem;
+    justify-items: start;
+    padding: 2rem;
+    border-radius: 18px;
+    background: rgba(255, 252, 246, 0.9);
+    border: 1px solid rgba(76, 95, 117, 0.12);
+  }
+
+  .route-redirect a {
+    color: #1f6f8b;
+    font-weight: 600;
+  }
+</style>
