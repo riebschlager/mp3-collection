@@ -14,6 +14,7 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `music_audit_match_coverage`
 - `music_compare_eras`
 - `music_listening_summary`
+- `music_artist_tracks`
 - `music_new_discoveries`
 - `music_genre_profile`
 - `music_listening_patterns`
@@ -27,6 +28,7 @@ Go MCP server for data-backed analysis of the MP3 collection and listening histo
 - `music_reload_alias_map`
 
 Most analytics tools accept optional `source` filtering: `all` (default), `lastfm`, or `spotify`.
+`music_artist_tracks` accepts required `artist` input plus optional `topN`, `startDate`, and `endDate`, and returns ranked `{ track, album, count }` rows with `{ totalPlays, uniqueTracks }` summary data.
 Discovery-oriented tools (`music_new_discoveries`, `music_month_story`, `music_year_story`, `music_batch_year_story`) also accept `discoveryBaseline`: `global` (default), `source`, or `window`.
 `music_compare_eras` also returns an Era Similarity payload (`similarity`) with a 0-100 index, confidence, and component drivers.
 `music_anniversary_history` defaults to `America/Chicago` and returns both exact-day and calendar-week comparisons for the selected month/day.

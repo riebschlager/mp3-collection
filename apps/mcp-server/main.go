@@ -179,6 +179,29 @@ type topTrackStat struct {
 	Count  int
 }
 
+type artistTrackRank struct {
+	Track string
+	Album string
+	Count int
+}
+
+type artistTracksArtistMatch struct {
+	NormKey string
+	Display string
+}
+
+type artistTrackAlbumChoice struct {
+	Display string
+	Count   int
+}
+
+type artistTracksReport struct {
+	Artist       string
+	TotalPlays   int
+	UniqueTracks int
+	Tracks       []artistTrackRank
+}
+
 type eraAnalysis struct {
 	Label          string
 	Start          time.Time
@@ -388,6 +411,8 @@ func handleToolsCall(raw json.RawMessage) (toolCallResult, error) {
 		payload, err = compareEras(params.Arguments)
 	case "music_listening_summary":
 		payload, err = musicListeningSummary(params.Arguments)
+	case "music_artist_tracks":
+		payload, err = musicArtistTracks(params.Arguments)
 	case "music_new_discoveries":
 		payload, err = musicNewDiscoveries(params.Arguments)
 	case "music_genre_profile":
@@ -1827,6 +1852,68 @@ func musicListeningSummary(args map[string]interface{}) (map[string]interface{},
 		"topTracks":  rankTrackStats(stats.TrackDisplay, topN),
 		"topArtists": rankedCounts(stats.ArtistCounts, topN, "artist"),
 		"topGenres":  rankedCounts(stats.GenreCounts, topN, "genre"),
+	}, nil
+}
+
+func musicArtistTracks(args map[string]interface{}) (map[string]interface{}, error) {
+	artistQuery := asString(args["artist"])
+	if artistQuery == "" {
+		return nil, errors.New("artist is required")
+	}
+
+	sourceFilter, err := parseSourceFilter(args)
+	if err != nil {
+		return nil, err
+	}
+
+	topN := 25
+	if v, ok := asInt(args["topN"]); ok {
+		if v < 1 {
+			v = 1
+		}
+		if v > 100 {
+			v = 100
+		}
+		topN = v
+	}
+
+	start, end, period, err := parseArtistTracksPeriod(args)
+	if err != nil {
+		return nil, err
+	}
+
+	resolver, err := getResolver()
+	if err != nil {
+		return nil, fmt.Errorf("resolver unavailable: %w", err)
+	}
+	scrobbles, err := getListeningScrobbles()
+	if err != nil {
+		return nil, fmt.Errorf("listening history unavailable: %w", err)
+	}
+
+	report, err := buildArtistTracksReport(artistQuery, filterScrobblesBySource(scrobbles, sourceFilter), resolver, start, end, topN)
+	if err != nil {
+		return nil, err
+	}
+
+	tracks := make([]map[string]interface{}, 0, len(report.Tracks))
+	for _, row := range report.Tracks {
+		tracks = append(tracks, map[string]interface{}{
+			"track": row.Track,
+			"album": row.Album,
+			"count": row.Count,
+		})
+	}
+
+	return map[string]interface{}{
+		"artist": report.Artist,
+		"source": sourceFilter,
+		"period": period,
+		"summary": map[string]interface{}{
+			"totalPlays":   report.TotalPlays,
+			"uniqueTracks": report.UniqueTracks,
+		},
+		"tracks": tracks,
 	}, nil
 }
 
@@ -3608,6 +3695,241 @@ func rankDisplayArtistsAndTracks(scrobbles []lastFMScrobble, start, end time.Tim
 	return topArtists, topTracks, len(artistCounts), len(trackCounts)
 }
 
+func buildArtistTracksReport(query string, scrobbles []lastFMScrobble, resolver *trackResolver, start, end *time.Time, topN int) (artistTracksReport, error) {
+	if resolver == nil {
+		return artistTracksReport{}, errors.New("resolver is required")
+	}
+
+	match, err := resolveArtistTracksArtist(query, scrobbles, resolver)
+	if err != nil {
+		return artistTracksReport{}, err
+	}
+
+	type trackAggregate struct {
+		track      string
+		count      int
+		albumStats map[string]*artistTrackAlbumChoice
+	}
+
+	trackStats := map[string]*trackAggregate{}
+	totalPlays := 0
+
+	for _, sc := range scrobbles {
+		normArtist := resolver.aliases.CanonicalValue("artist", normalizeForMatching(sc.Artist))
+		if normArtist != match.NormKey {
+			continue
+		}
+		if !timestampInOptionalRange(sc.Date, start, end) {
+			continue
+		}
+
+		normTrack := resolver.aliases.CanonicalValue("track", normalizeForMatching(sc.Track))
+		if normTrack == "" {
+			continue
+		}
+
+		trackKey := buildExactKey(match.NormKey, normTrack)
+		trackStat := trackStats[trackKey]
+		if trackStat == nil {
+			displayTrack := strings.TrimSpace(sc.Track)
+			if exact := resolver.exactIndex[trackKey]; len(exact) > 0 {
+				if name := strings.TrimSpace(resolver.tracks[exact[0]].Name); name != "" {
+					displayTrack = name
+				}
+			}
+			trackStat = &trackAggregate{
+				track:      displayTrack,
+				albumStats: map[string]*artistTrackAlbumChoice{},
+			}
+			trackStats[trackKey] = trackStat
+		}
+
+		trackStat.count++
+		totalPlays++
+
+		albumDisplay := strings.TrimSpace(sc.Album)
+		if albumDisplay == "" {
+			continue
+		}
+
+		albumKey := resolver.aliases.CanonicalValue("album", normalizeForMatching(albumDisplay))
+		if albumKey == "" {
+			albumKey = normalizeForMatching(albumDisplay)
+		}
+		if albumKey == "" {
+			albumKey = strings.ToLower(albumDisplay)
+		}
+
+		albumStat := trackStat.albumStats[albumKey]
+		if albumStat == nil {
+			trackStat.albumStats[albumKey] = &artistTrackAlbumChoice{
+				Display: albumDisplay,
+				Count:   1,
+			}
+			continue
+		}
+		albumStat.Count++
+	}
+
+	rows := make([]artistTrackRank, 0, len(trackStats))
+	for trackKey, trackStat := range trackStats {
+		rows = append(rows, artistTrackRank{
+			Track: trackStat.track,
+			Album: selectArtistTrackAlbum(trackStat.albumStats, resolver, trackKey),
+			Count: trackStat.count,
+		})
+	}
+
+	sort.Slice(rows, func(i, j int) bool {
+		if rows[i].Count == rows[j].Count {
+			if strings.EqualFold(rows[i].Track, rows[j].Track) {
+				return strings.ToLower(rows[i].Album) < strings.ToLower(rows[j].Album)
+			}
+			return strings.ToLower(rows[i].Track) < strings.ToLower(rows[j].Track)
+		}
+		return rows[i].Count > rows[j].Count
+	})
+
+	uniqueTracks := len(rows)
+	if topN < len(rows) {
+		rows = rows[:topN]
+	}
+
+	return artistTracksReport{
+		Artist:       match.Display,
+		TotalPlays:   totalPlays,
+		UniqueTracks: uniqueTracks,
+		Tracks:       rows,
+	}, nil
+}
+
+func resolveArtistTracksArtist(query string, scrobbles []lastFMScrobble, resolver *trackResolver) (artistTracksArtistMatch, error) {
+	if resolver == nil {
+		return artistTracksArtistMatch{}, errors.New("resolver is required")
+	}
+
+	queryNorm := resolver.aliases.CanonicalValue("artist", normalizeForMatching(query))
+	if queryNorm == "" {
+		return artistTracksArtistMatch{}, errors.New("artist is required")
+	}
+
+	type artistStat struct {
+		display string
+		count   int
+	}
+
+	artistStats := map[string]*artistStat{}
+	for _, sc := range scrobbles {
+		normArtist := resolver.aliases.CanonicalValue("artist", normalizeForMatching(sc.Artist))
+		if normArtist == "" {
+			continue
+		}
+
+		stat := artistStats[normArtist]
+		if stat == nil {
+			stat = &artistStat{
+				display: artistDisplayForNormKey(resolver, normArtist, strings.TrimSpace(sc.Artist)),
+			}
+			artistStats[normArtist] = stat
+		}
+		stat.count++
+	}
+
+	if len(artistStats) == 0 {
+		return artistTracksArtistMatch{}, errors.New("no artists available for requested source")
+	}
+
+	if stat := artistStats[queryNorm]; stat != nil {
+		return artistTracksArtistMatch{
+			NormKey: queryNorm,
+			Display: stat.display,
+		}, nil
+	}
+
+	bestKey := ""
+	bestScore := 0.0
+	secondScore := 0.0
+	for normArtist := range artistStats {
+		score := stringSimilarity(queryNorm, normArtist)
+		if score > bestScore {
+			secondScore = bestScore
+			bestScore = score
+			bestKey = normArtist
+			continue
+		}
+		if score > secondScore {
+			secondScore = score
+		}
+	}
+
+	matchedThreshold, _ := thresholdsForStrictness("medium")
+	if bestKey == "" || bestScore < matchedThreshold {
+		return artistTracksArtistMatch{}, fmt.Errorf("artist not found: %q", query)
+	}
+	if bestScore-secondScore < 0.05 {
+		return artistTracksArtistMatch{}, fmt.Errorf("artist match is ambiguous for %q", query)
+	}
+
+	return artistTracksArtistMatch{
+		NormKey: bestKey,
+		Display: artistStats[bestKey].display,
+	}, nil
+}
+
+func artistDisplayForNormKey(resolver *trackResolver, normArtist, fallback string) string {
+	if resolver != nil {
+		if indexes := resolver.artistIndex[normArtist]; len(indexes) > 0 {
+			if artist := strings.TrimSpace(resolver.tracks[indexes[0]].Artist); artist != "" {
+				return artist
+			}
+		}
+	}
+	return fallback
+}
+
+func selectArtistTrackAlbum(albumStats map[string]*artistTrackAlbumChoice, resolver *trackResolver, trackKey string) string {
+	bestAlbum := ""
+	bestCount := 0
+	for _, albumStat := range albumStats {
+		if albumStat.Count > bestCount {
+			bestAlbum = albumStat.Display
+			bestCount = albumStat.Count
+			continue
+		}
+		if albumStat.Count == bestCount && bestCount > 0 && strings.ToLower(albumStat.Display) < strings.ToLower(bestAlbum) {
+			bestAlbum = albumStat.Display
+		}
+	}
+	if bestAlbum != "" {
+		return bestAlbum
+	}
+	if resolver == nil {
+		return ""
+	}
+
+	resolvedAlbum := ""
+	resolvedNorm := ""
+	for _, idx := range resolver.exactIndex[trackKey] {
+		album := strings.TrimSpace(resolver.tracks[idx].Album)
+		if album == "" {
+			continue
+		}
+		normAlbum := normalizeForMatching(album)
+		if normAlbum == "" {
+			continue
+		}
+		if resolvedAlbum == "" {
+			resolvedAlbum = album
+			resolvedNorm = normAlbum
+			continue
+		}
+		if resolvedNorm != normAlbum {
+			return ""
+		}
+	}
+	return resolvedAlbum
+}
+
 func topStringCount(counts map[string]int) (string, int) {
 	bestKey := ""
 	bestCount := 0
@@ -4748,6 +5070,21 @@ func toolCatalog() []toolDefinition {
 			},
 		},
 		{
+			Name:        "music_artist_tracks",
+			Description: "Return an artist's top tracks ranked by play count, with optional source and date filtering.",
+			InputSchema: map[string]interface{}{
+				"type":     "object",
+				"required": []string{"artist"},
+				"properties": map[string]interface{}{
+					"artist":    map[string]interface{}{"type": "string"},
+					"startDate": map[string]interface{}{"type": "string", "format": "date"},
+					"endDate":   map[string]interface{}{"type": "string", "format": "date"},
+					"topN":      map[string]interface{}{"type": "integer", "minimum": 1, "maximum": 100, "default": 25},
+					"source":    sourceFilterSchema(),
+				},
+			},
+		},
+		{
 			Name:        "music_new_discoveries",
 			Description: "Identify tracks and artists scrobbled for the first time in a given period.",
 			InputSchema: map[string]interface{}{
@@ -4984,6 +5321,33 @@ func parseEra(value map[string]interface{}, fallbackLabel string) (time.Time, ti
 		label = fallbackLabel
 	}
 	return start, end, label, nil
+}
+
+func parseArtistTracksPeriod(args map[string]interface{}) (*time.Time, *time.Time, map[string]interface{}, error) {
+	var start *time.Time
+	var end *time.Time
+	period := map[string]interface{}{}
+
+	if rawStart := asString(args["startDate"]); rawStart != "" {
+		parsedStart, err := parseDate(rawStart)
+		if err != nil {
+			return nil, nil, nil, fmt.Errorf("startDate: %w", err)
+		}
+		start = &parsedStart
+		period["startDate"] = rawStart
+	}
+	if rawEnd := asString(args["endDate"]); rawEnd != "" {
+		parsedEnd, err := parseDate(rawEnd)
+		if err != nil {
+			return nil, nil, nil, fmt.Errorf("endDate: %w", err)
+		}
+		end = &parsedEnd
+		period["endDate"] = rawEnd
+	}
+	if start != nil && end != nil && end.Before(*start) {
+		return nil, nil, nil, errors.New("endDate must be on or after startDate")
+	}
+	return start, end, period, nil
 }
 
 func parseDate(s string) (time.Time, error) {
