@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T13:23:00Z",
+  "generatedAt": "2026-04-14T02:12:55Z",
   "source": "all",
   "timezone": "UTC",
   "topN": 10,
@@ -10890,15 +10890,6 @@
     "2026": {
       "concentratedTracks": [
         {
-          "artist": "Beach House",
-          "burstScore": 0.3846,
-          "firstPlay": "2026-01-12",
-          "lastPlay": "2026-01-24",
-          "plays": 5,
-          "spanDays": 12,
-          "track": "Drunk in LA"
-        },
-        {
           "artist": "Alabaster Deplume",
           "burstScore": 0.3478,
           "firstPlay": "2026-01-06",
@@ -10935,15 +10926,6 @@
           "track": "Lotus Flower"
         },
         {
-          "artist": "Allah-Las",
-          "burstScore": 0.2222,
-          "firstPlay": "2026-01-02",
-          "lastPlay": "2026-01-28",
-          "plays": 6,
-          "spanDays": 26,
-          "track": "Raspberry Jam"
-        },
-        {
           "artist": "Men I Trust",
           "burstScore": 0.2174,
           "firstPlay": "2026-01-02",
@@ -10978,6 +10960,24 @@
           "plays": 7,
           "spanDays": 41,
           "track": "Star"
+        },
+        {
+          "artist": "Freak Slug",
+          "burstScore": 0.1579,
+          "firstPlay": "2026-01-03",
+          "lastPlay": "2026-02-09",
+          "plays": 6,
+          "spanDays": 37,
+          "track": "Care"
+        },
+        {
+          "artist": "Nilüfer Yanya",
+          "burstScore": 0.1515,
+          "firstPlay": "2026-01-21",
+          "lastPlay": "2026-02-23",
+          "plays": 5,
+          "spanDays": 32,
+          "track": "Like I Say (I Runaway)"
         }
       ],
       "period": "Streaks & Bursts",
@@ -10989,13 +10989,13 @@
       "source": "all",
       "sourceBreakdown": [
         {
-          "count": 1465,
-          "share": 0.6884,
+          "count": 1633,
+          "share": 0.7112,
           "source": "lastfm"
         },
         {
           "count": 663,
-          "share": 0.3116,
+          "share": 0.2888,
           "source": "spotify"
         }
       ],
@@ -11024,14 +11024,14 @@
         }
       },
       "summary": {
-        "activeDays": 72,
-        "avgSessionMinutes": 43.92,
-        "avgTracksPerSession": 15.75,
+        "activeDays": 83,
+        "avgSessionMinutes": 43.32,
+        "avgTracksPerSession": 15.19,
         "maxDailyPlays": 214,
         "medianDailyPlays": 16,
-        "nightPlayShare": 0.5822,
-        "totalScrobbles": 2128,
-        "totalSessions": 135
+        "nightPlayShare": 0.5697,
+        "totalScrobbles": 2296,
+        "totalSessions": 151
       },
       "timezone": "UTC",
       "topBurstDays": [

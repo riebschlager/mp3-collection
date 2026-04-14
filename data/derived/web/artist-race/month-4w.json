@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T01:55:59Z",
+  "generatedAt": "2026-04-14T02:12:06Z",
   "timezone": "America/Chicago",
   "entityType": "artist",
   "granularity": "month",
@@ -7,8 +7,8 @@
   "metric": "trailing-window",
   "orderingMode": "exact",
   "displayCount": 12,
-  "totalFrames": 254,
-  "totalScrobbles": 111366,
+  "totalFrames": 255,
+  "totalScrobbles": 111534,
   "frames": [
     {
       "key": "2005-02",
@@ -21812,8 +21812,8 @@
       "key": "2026-03",
       "label": "Mar 2026",
       "frameStart": 1772344800000,
-      "frameEnd": 1774876570000,
-      "windowTotalScrobbles": 239,
+      "frameEnd": 1775019599999,
+      "windowTotalScrobbles": 231,
       "leaders": [
         {
           "rank": 1,
@@ -21839,51 +21839,51 @@
         {
           "rank": 4,
           "rawRank": 4,
-          "artist": "Kiasmos",
-          "artistSlug": "kiasmos",
-          "playCount": 6
+          "artist": "Lana Del Rey",
+          "artistSlug": "lana-del-rey",
+          "playCount": 5
         },
         {
           "rank": 5,
           "rawRank": 5,
           "artist": "Wet Leg",
           "artistSlug": "wet-leg",
-          "playCount": 6
+          "playCount": 5
         },
         {
           "rank": 6,
           "rawRank": 6,
-          "artist": "Lana Del Rey",
-          "artistSlug": "lana-del-rey",
-          "playCount": 5
+          "artist": "Kiasmos",
+          "artistSlug": "kiasmos",
+          "playCount": 4
         },
         {
           "rank": 7,
           "rawRank": 7,
-          "artist": "Ben Böhmer",
-          "artistSlug": "ben-bhmer",
-          "playCount": 4
-        },
-        {
-          "rank": 8,
-          "rawRank": 8,
           "artist": "Portishead",
           "artistSlug": "portishead",
           "playCount": 4
         },
         {
-          "rank": 9,
-          "rawRank": 9,
+          "rank": 8,
+          "rawRank": 8,
           "artist": "Radiohead",
           "artistSlug": "radiohead",
           "playCount": 4
         },
         {
-          "rank": 10,
-          "rawRank": 10,
+          "rank": 9,
+          "rawRank": 9,
           "artist": "The Smashing Pumpkins",
           "artistSlug": "the-smashing-pumpkins",
           "playCount": 4
+        },
+        {
+          "rank": 10,
+          "rawRank": 10,
+          "artist": "Ben Böhmer",
+          "artistSlug": "ben-bhmer",
+          "playCount": 3
         },
         {
           "rank": 11,
@@ -21897,6 +21897,99 @@
           "rawRank": 12,
           "artist": "Bonobo",
           "artistSlug": "bonobo",
+          "playCount": 3
+        }
+      ]
+    },
+    {
+      "key": "2026-04",
+      "label": "Apr 2026",
+      "frameStart": 1775019600000,
+      "frameEnd": 1776132471000,
+      "windowTotalScrobbles": 234,
+      "leaders": [
+        {
+          "rank": 1,
+          "rawRank": 1,
+          "artist": "R.E.M.",
+          "artistSlug": "rem",
+          "playCount": 17
+        },
+        {
+          "rank": 2,
+          "rawRank": 2,
+          "artist": "Khruangbin",
+          "artistSlug": "khruangbin",
+          "playCount": 9
+        },
+        {
+          "rank": 3,
+          "rawRank": 3,
+          "artist": "David Cross",
+          "artistSlug": "david-cross",
+          "playCount": 6
+        },
+        {
+          "rank": 4,
+          "rawRank": 4,
+          "artist": "Lana Del Rey",
+          "artistSlug": "lana-del-rey",
+          "playCount": 5
+        },
+        {
+          "rank": 5,
+          "rawRank": 5,
+          "artist": "Sven Wunder",
+          "artistSlug": "sven-wunder",
+          "playCount": 5
+        },
+        {
+          "rank": 6,
+          "rawRank": 6,
+          "artist": "Digable Planets",
+          "artistSlug": "digable-planets",
+          "playCount": 4
+        },
+        {
+          "rank": 7,
+          "rawRank": 7,
+          "artist": "Nilüfer Yanya",
+          "artistSlug": "nilfer-yanya",
+          "playCount": 4
+        },
+        {
+          "rank": 8,
+          "rawRank": 8,
+          "artist": "PJ Harvey",
+          "artistSlug": "pj-harvey",
+          "playCount": 4
+        },
+        {
+          "rank": 9,
+          "rawRank": 9,
+          "artist": "Radiohead",
+          "artistSlug": "radiohead",
+          "playCount": 4
+        },
+        {
+          "rank": 10,
+          "rawRank": 10,
+          "artist": "Yin Yin",
+          "artistSlug": "yin-yin",
+          "playCount": 4
+        },
+        {
+          "rank": 11,
+          "rawRank": 11,
+          "artist": "Bicep",
+          "artistSlug": "bicep",
+          "playCount": 3
+        },
+        {
+          "rank": 12,
+          "rawRank": 12,
+          "artist": "Catching Flies",
+          "artistSlug": "catching-flies",
           "playCount": 3
         }
       ]

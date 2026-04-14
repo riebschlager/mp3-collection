@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T13:22:35Z",
+  "generatedAt": "2026-04-14T02:12:02Z",
   "config": {
     "spotifyMinMsPlayed": 30000,
     "crossSourceDedupeWindowMs": 120000
   },
   "lastfm": {
-    "inputEvents": 61927,
-    "validEvents": 61927
+    "inputEvents": 62095,
+    "validEvents": 62095
   },
   "spotify": {
     "inputFiles": 4,
@@ -20,13 +20,13 @@
     "addedEvents": 49439
   },
   "output": {
-    "totalEvents": 111366,
+    "totalEvents": 111534,
     "sourceCounts": {
-      "lastfm": 61927,
+      "lastfm": 62095,
       "spotify": 49439
     },
     "firstEvent": 1108339195000,
-    "lastEvent": 1774876570000,
+    "lastEvent": 1776132471000,
     "years": {
       "2005": 3532,
       "2006": 2510,
@@ -49,7 +49,7 @@
       "2023": 4699,
       "2024": 7550,
       "2025": 8449,
-      "2026": 2128
+      "2026": 2296
     }
   }
 }

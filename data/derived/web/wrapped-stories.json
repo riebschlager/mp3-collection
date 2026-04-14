@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T13:24:21Z",
+  "generatedAt": "2026-04-14T02:14:14Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -24860,6 +24860,16 @@
             "track": "Crusades"
           },
           {
+            "artist": "Khruangbin",
+            "count": 5,
+            "track": "White Gloves ii"
+          },
+          {
+            "artist": "Parcels",
+            "count": 5,
+            "track": "Theworstthing"
+          },
+          {
             "artist": "Alabaster Deplume",
             "count": 4,
             "track": "I Hope"
@@ -24868,6 +24878,11 @@
             "artist": "Allah-Las",
             "count": 4,
             "track": "Ela Navega"
+          },
+          {
+            "artist": "Bicep",
+            "count": 4,
+            "track": "Glue"
           },
           {
             "artist": "Cocteau Twins",
@@ -24882,29 +24897,14 @@
           {
             "artist": "Night Tapes",
             "count": 4,
-            "track": "television"
-          },
-          {
-            "artist": "Parcels",
-            "count": 4,
-            "track": "Theworstthing"
-          },
-          {
-            "artist": "Prewn",
-            "count": 4,
-            "track": "System"
-          },
-          {
-            "artist": "Racing Mount Pleasant",
-            "count": 4,
-            "track": "Call It Easy"
+            "track": "babygirl (like n01 else)"
           }
         ],
         "period": "Discovery",
         "source": "all",
         "summary": {
-          "newArtistCount": 139,
-          "newTrackCount": 494
+          "newArtistCount": 160,
+          "newTrackCount": 556
         }
       },
       "discoveryBaseline": "global",
@@ -24925,11 +24925,11 @@
         "summary": {
           "dormantReturnedArtistCount": 5,
           "dormantReturnedTrackCount": 7,
-          "matchRateInScope": 0.2379,
-          "matchedScrobblesInScope": 26495,
+          "matchRateInScope": 0.2376,
+          "matchedScrobblesInScope": 26496,
           "resultsReturned": 5,
           "returnPeriodDays": 365,
-          "totalScrobblesInScope": 111366
+          "totalScrobblesInScope": 111534
         },
         "topDormantReturns": [
           {
@@ -25032,10 +25032,10 @@
         ]
       },
       "insightBullets": [
-        "You logged 2128 plays in 2026 across 72 active days.",
+        "You logged 2296 plays in 2026 across 83 active days.",
         "Top artist: Radiohead (63 plays).",
-        "You discovered 139 new artists and 494 new tracks.",
-        "58% of plays happened at night (10pm-6am, UTC)."
+        "You discovered 160 new artists and 556 new tracks.",
+        "57% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
         "discoveryBaseline": "global",
@@ -25047,14 +25047,14 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "72 active days (29.56 plays per active day)",
-          "headline": "2128 plays",
+          "detail": "83 active days (27.66 plays per active day)",
+          "headline": "2296 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this year",
-          "headline": "lastfm 69% (1465) · spotify 31% (663)",
+          "headline": "lastfm 71% (1633) · spotify 29% (663)",
           "id": "source_mix",
           "title": "Source Mix"
         },
@@ -25065,14 +25065,14 @@
           "title": "Top Artist"
         },
         {
-          "detail": "9 plays",
+          "detail": "10 plays",
           "headline": "Beach House - Lazuli",
           "id": "top_track",
           "title": "Top Track"
         },
         {
-          "detail": "494 new tracks first heard in 2026",
-          "headline": "139 new artists",
+          "detail": "556 new tracks first heard in 2026",
+          "headline": "160 new artists",
           "id": "discovery",
           "title": "Discovery"
         },
@@ -25097,15 +25097,6 @@
       ],
       "streaksAndBursts": {
         "concentratedTracks": [
-          {
-            "artist": "Beach House",
-            "burstScore": 0.3846,
-            "firstPlay": "2026-01-12",
-            "lastPlay": "2026-01-24",
-            "plays": 5,
-            "spanDays": 12,
-            "track": "Drunk in LA"
-          },
           {
             "artist": "Alabaster Deplume",
             "burstScore": 0.3478,
@@ -25143,15 +25134,6 @@
             "track": "Lotus Flower"
           },
           {
-            "artist": "Allah-Las",
-            "burstScore": 0.2222,
-            "firstPlay": "2026-01-02",
-            "lastPlay": "2026-01-28",
-            "plays": 6,
-            "spanDays": 26,
-            "track": "Raspberry Jam"
-          },
-          {
             "artist": "Men I Trust",
             "burstScore": 0.2174,
             "firstPlay": "2026-01-02",
@@ -25186,17 +25168,35 @@
             "plays": 7,
             "spanDays": 41,
             "track": "Star"
+          },
+          {
+            "artist": "Freak Slug",
+            "burstScore": 0.1579,
+            "firstPlay": "2026-01-03",
+            "lastPlay": "2026-02-09",
+            "plays": 6,
+            "spanDays": 37,
+            "track": "Care"
+          },
+          {
+            "artist": "Nilüfer Yanya",
+            "burstScore": 0.1515,
+            "firstPlay": "2026-01-21",
+            "lastPlay": "2026-02-23",
+            "plays": 5,
+            "spanDays": 32,
+            "track": "Like I Say (I Runaway)"
           }
         ],
         "sourceBreakdown": [
           {
-            "count": 1465,
-            "share": 0.6884,
+            "count": 1633,
+            "share": 0.7112,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.3116,
+            "share": 0.2888,
             "source": "spotify"
           }
         ],
@@ -25225,14 +25225,14 @@
           }
         },
         "summary": {
-          "activeDays": 72,
-          "avgSessionMinutes": 43.92,
-          "avgTracksPerSession": 15.75,
+          "activeDays": 83,
+          "avgSessionMinutes": 43.32,
+          "avgTracksPerSession": 15.19,
           "maxDailyPlays": 214,
           "medianDailyPlays": 16,
-          "nightPlayShare": 0.5822,
-          "totalScrobbles": 2128,
-          "totalSessions": 135
+          "nightPlayShare": 0.5697,
+          "totalScrobbles": 2296,
+          "totalSessions": 151
         },
         "topBurstDays": [
           {
@@ -25710,29 +25710,29 @@
         ]
       },
       "summary": {
-        "activeDays": 72,
+        "activeDays": 83,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 1465,
-        "estimatedTotalMinutes": 7708.59,
+        "estimatedFromNonSpotify": 1633,
+        "estimatedTotalMinutes": 8296.59,
         "measuredSpotifyMinutes": 2581.09,
-        "nightPlayShare": 0.5822,
-        "playsPerActiveDay": 29.56,
+        "nightPlayShare": 0.5697,
+        "playsPerActiveDay": 27.66,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 1465,
-            "share": 0.6884,
+            "count": 1633,
+            "share": 0.7112,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.3116,
+            "share": 0.2888,
             "source": "spotify"
           }
         ],
-        "totalScrobbles": 2128,
-        "uniqueArtists": 592,
-        "uniqueTracks": 1164
+        "totalScrobbles": 2296,
+        "uniqueArtists": 645,
+        "uniqueTracks": 1273
       },
       "topArtists": [
         {
@@ -25740,23 +25740,27 @@
           "count": 63
         },
         {
+          "artist": "Khruangbin",
+          "count": 55
+        },
+        {
           "artist": "Alabaster Deplume",
           "count": 47
         },
         {
-          "artist": "Khruangbin",
-          "count": 46
-        },
-        {
           "artist": "Beach House",
-          "count": 38
+          "count": 40
         },
         {
           "artist": "Wet Leg",
-          "count": 37
+          "count": 38
         },
         {
           "artist": "PJ Harvey",
+          "count": 33
+        },
+        {
+          "artist": "Men I Trust",
           "count": 32
         },
         {
@@ -25764,28 +25768,39 @@
           "count": 32
         },
         {
-          "artist": "Men I Trust",
-          "count": 31
-        },
-        {
           "artist": "A Perfect Circle",
           "count": 29
         },
         {
           "artist": "Allah-Las",
-          "count": 28
+          "count": 29
         }
       ],
       "topTracks": [
         {
           "artist": "Beach House",
-          "count": 9,
+          "count": 10,
           "track": "Lazuli"
         },
         {
           "artist": "Alabaster Deplume",
           "count": 8,
           "track": "A Gente Acaba (Vento Em Rosa)"
+        },
+        {
+          "artist": "The Smile",
+          "count": 8,
+          "track": "The Smoke"
+        },
+        {
+          "artist": "Wet Leg",
+          "count": 8,
+          "track": "davina mccall"
+        },
+        {
+          "artist": "Allah-Las",
+          "count": 7,
+          "track": "Raspberry Jam"
         },
         {
           "artist": "Allah-Las",
@@ -25798,16 +25813,6 @@
           "track": "Track X"
         },
         {
-          "artist": "The Smile",
-          "count": 7,
-          "track": "The Smoke"
-        },
-        {
-          "artist": "Wet Leg",
-          "count": 7,
-          "track": "davina mccall"
-        },
-        {
           "artist": "Wet Leg",
           "count": 7,
           "track": "mangetout"
@@ -25818,27 +25823,22 @@
           "track": "pokemon"
         },
         {
-          "artist": "Allah-Las",
+          "artist": "Beach House",
           "count": 6,
-          "track": "Raspberry Jam"
-        },
-        {
-          "artist": "Freak Slug",
-          "count": 6,
-          "track": "Care"
+          "track": "Drunk in LA"
         }
       ],
       "year": 2026,
       "yearOverYear": {
-        "artistOverlapJaccard": 0.1456,
+        "artistOverlapJaccard": 0.1539,
         "comparisonBulletPoints": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.146 and track overlap was 0.080.",
-          "Novelty shifted from 0.508 to 0.410; diversity entropy shifted from 0.970 to 0.983.",
-          "Era Similarity Index: 36.11/100 (confidence 0.621).",
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.154 and track overlap was 0.084.",
+          "Novelty shifted from 0.508 to 0.449; diversity entropy shifted from 0.970 to 0.981.",
+          "Era Similarity Index: 36.99/100 (confidence 0.638).",
           "Strongest rising track: Black Country, New Road - Track X (delta 0.019 plays/day)."
         ],
-        "diversityCurrent": 0.9825,
+        "diversityCurrent": 0.9811,
         "diversityPrev": 0.97,
         "genreShift": [
           {
@@ -25854,10 +25854,10 @@
             "rateB": 0.0082
           },
           {
-            "delta": -0.0685,
+            "delta": -0.0658,
             "genre": "AlternRock",
             "rateA": 0.0685,
-            "rateB": 0
+            "rateB": 0.0027
           },
           {
             "delta": -0.063,
@@ -25879,15 +25879,15 @@
           },
           {
             "delta": -0.0329,
-            "genre": "Alternative",
-            "rateA": 0.0575,
-            "rateB": 0.0247
-          },
-          {
-            "delta": -0.0329,
             "genre": "Other",
             "rateA": 0.0767,
             "rateB": 0.0438
+          },
+          {
+            "delta": -0.0301,
+            "genre": "Alternative",
+            "rateA": 0.0575,
+            "rateB": 0.0274
           },
           {
             "delta": -0.0164,
@@ -25902,15 +25902,15 @@
             "rateB": 0
           }
         ],
-        "noveltyRateCurrent": 0.4098,
+        "noveltyRateCurrent": 0.4493,
         "noveltyRatePrevious": 0.5076,
         "persistentFavorites": [
           {
             "artist": "Beach House",
             "countA": 10,
-            "countB": 9,
+            "countB": 10,
             "rateA": 0.0274,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -25932,10 +25932,34 @@
           {
             "artist": "Broadcast",
             "countA": 5,
-            "countB": 5,
+            "countB": 6,
             "rateA": 0.0137,
-            "rateB": 0.0137,
+            "rateB": 0.0164,
             "track": "Come on Let's Go"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 7,
+            "countB": 5,
+            "rateA": 0.0192,
+            "rateB": 0.0137,
+            "track": "August 10"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 11,
+            "countB": 5,
+            "rateA": 0.0301,
+            "rateB": 0.0137,
+            "track": "May Ninth"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 10,
+            "countB": 5,
+            "rateA": 0.0274,
+            "rateB": 0.0137,
+            "track": "White Gloves"
           },
           {
             "artist": "Men I Trust",
@@ -25954,36 +25978,12 @@
             "track": "Like I Say (I runaway)"
           },
           {
-            "artist": "Alabaster DePlume",
-            "countA": 4,
-            "countB": 4,
-            "rateA": 0.011,
-            "rateB": 0.011,
-            "track": "Why, Buzzardman, Why?"
-          },
-          {
-            "artist": "Aphex Twin",
-            "countA": 4,
-            "countB": 4,
-            "rateA": 0.011,
-            "rateB": 0.011,
-            "track": "Iz-Us"
-          },
-          {
-            "artist": "Boards of Canada",
-            "countA": 13,
-            "countB": 4,
-            "rateA": 0.0356,
-            "rateB": 0.011,
-            "track": "Roygbiv"
-          },
-          {
-            "artist": "Crumb",
+            "artist": "Sven Wunder",
             "countA": 9,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.0247,
-            "rateB": 0.011,
-            "track": "Ghostride"
+            "rateB": 0.0137,
+            "track": "Take A Break"
           }
         ],
         "previousYear": 2025,
@@ -26090,6 +26090,24 @@
             "track": "Track X"
           },
           {
+            "artist": "The Smile",
+            "countA": 2,
+            "countB": 8,
+            "delta": 0.0164,
+            "rateA": 0.0055,
+            "rateB": 0.0219,
+            "track": "The Smoke"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 2,
+            "countB": 8,
+            "delta": 0.0164,
+            "rateA": 0.0055,
+            "rateB": 0.0219,
+            "track": "davina mccall"
+          },
+          {
             "artist": "Geese",
             "countA": 0,
             "countB": 6,
@@ -26105,25 +26123,16 @@
             "delta": 0.0137,
             "rateA": 0.0055,
             "rateB": 0.0192,
+            "track": "Raspberry Jam"
+          },
+          {
+            "artist": "Allah-Las",
+            "countA": 2,
+            "countB": 7,
+            "delta": 0.0137,
+            "rateA": 0.0055,
+            "rateB": 0.0192,
             "track": "Star"
-          },
-          {
-            "artist": "The Smile",
-            "countA": 2,
-            "countB": 7,
-            "delta": 0.0137,
-            "rateA": 0.0055,
-            "rateB": 0.0192,
-            "track": "The Smoke"
-          },
-          {
-            "artist": "Wet Leg",
-            "countA": 2,
-            "countB": 7,
-            "delta": 0.0137,
-            "rateA": 0.0055,
-            "rateB": 0.0192,
-            "track": "davina mccall"
           },
           {
             "artist": "Wet Leg",
@@ -26133,6 +26142,15 @@
             "rateA": 0.0055,
             "rateB": 0.0192,
             "track": "pokemon"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 0,
+            "countB": 5,
+            "delta": 0.0137,
+            "rateA": 0,
+            "rateB": 0.0137,
+            "track": "White Gloves ii"
           },
           {
             "artist": "Mannequin Pussy",
@@ -26151,27 +26169,9 @@
             "rateA": 0,
             "rateB": 0.0137,
             "track": "Yam Yam"
-          },
-          {
-            "artist": "Alabaster Deplume",
-            "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
-            "rateA": 0,
-            "rateB": 0.011,
-            "track": "I Hope"
-          },
-          {
-            "artist": "Allah-Las",
-            "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
-            "rateA": 0,
-            "rateB": 0.011,
-            "track": "Ela Navega"
           }
         ],
-        "trackOverlapJaccard": 0.0799
+        "trackOverlapJaccard": 0.0844
       }
     }
   },

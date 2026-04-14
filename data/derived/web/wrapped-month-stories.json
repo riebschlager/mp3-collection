@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T13:24:57Z",
+  "generatedAt": "2026-04-14T02:14:50Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -242,7 +242,8 @@
     "2025-12",
     "2026-01",
     "2026-02",
-    "2026-03"
+    "2026-03",
+    "2026-04"
   ],
   "stories": {
     "2005-02": {
@@ -119771,13 +119772,13 @@
             "start": "2016-05-09T20:16:11Z"
           },
           "longestTrackRun": {
-            "artist": "The Jon Spencer Blues Explosion",
+            "artist": "The Jesus Lizard",
             "count": 2,
-            "durationMinutes": 2.9,
-            "end": "2016-05-01T14:42:28Z",
-            "start": "2016-05-01T14:39:34Z",
-            "track": "Shake That Bat",
-            "trackNormKey": "the jon spencer blues explosion|shake that bat"
+            "durationMinutes": 2.82,
+            "end": "2016-05-01T14:24:10Z",
+            "start": "2016-05-01T14:21:21Z",
+            "track": "Uncommonly Good",
+            "trackNormKey": "the jesus lizard|uncommonly good"
           }
         },
         "summary": {
@@ -123581,13 +123582,13 @@
             "start": "2016-09-22T17:05:44Z"
           },
           "longestTrackRun": {
-            "artist": "American Aquarium",
+            "artist": "Le Butcherettes",
             "count": 2,
-            "durationMinutes": 4.52,
-            "end": "2016-09-07T17:38:30Z",
-            "start": "2016-09-07T17:33:59Z",
-            "track": "End Over End",
-            "trackNormKey": "american aquarium|end over end"
+            "durationMinutes": 2.63,
+            "end": "2016-09-07T17:26:14Z",
+            "start": "2016-09-07T17:23:36Z",
+            "track": "Shave The Pride",
+            "trackNormKey": "le butcherettes|shave the pride"
           }
         },
         "summary": {
@@ -236599,11 +236600,11 @@
             "count": 3
           },
           {
-            "artist": "NightCrawl",
+            "artist": "Nightcrawl",
             "count": 3
           },
           {
-            "artist": "Nightcrawl",
+            "artist": "NightCrawl",
             "count": 3
           },
           {
@@ -242594,6 +242595,11 @@
             "track": "Flamingo Tripper"
           },
           {
+            "artist": "Galcher Lustwerk",
+            "count": 2,
+            "track": "Warming Up"
+          },
+          {
             "artist": "Gary Stewart",
             "count": 2,
             "track": "I Ain't Living Long Like This"
@@ -242622,39 +242628,34 @@
             "artist": "Willie Nelson",
             "count": 2,
             "track": "What Was It You Wanted"
-          },
-          {
-            "artist": "Abracadabra",
-            "count": 1,
-            "track": "Comb Your Hair"
           }
         ],
         "period": "Discovery",
         "source": "all",
         "summary": {
           "newArtistCount": 37,
-          "newTrackCount": 93
+          "newTrackCount": 94
         }
       },
       "discoveryBaseline": "global",
       "dormantReturns": null,
       "insightBullets": [
-        "You logged 250 plays in 2026-03 across 24 active days.",
+        "You logged 256 plays in 2026-03 across 24 active days.",
         "Top artist: Aphex Twin (11 plays).",
-        "You discovered 37 new artists and 93 new tracks.",
-        "49% of plays happened at night (10pm-6am, UTC)."
+        "You discovered 37 new artists and 94 new tracks.",
+        "48% of plays happened at night (10pm-6am, UTC)."
       ],
       "month": 3,
       "monthOverMonth": {
-        "artistOverlapJaccard": 0.1172,
+        "artistOverlapJaccard": 0.1166,
         "comparisonBulletPoints": [
-          "2026-02 had 659 scrobbles across 446 unique tracks; 2026-03 had 250 scrobbles across 223 unique tracks.",
-          "Artist overlap (Jaccard) was 0.117 and track overlap was 0.059.",
-          "Novelty shifted from 0.567 to 0.888; diversity entropy shifted from 0.988 to 0.992.",
-          "Era Similarity Index: 28.12/100 (confidence 0.149).",
+          "2026-02 had 659 scrobbles across 446 unique tracks; 2026-03 had 256 scrobbles across 225 unique tracks.",
+          "Artist overlap (Jaccard) was 0.117 and track overlap was 0.058.",
+          "Novelty shifted from 0.567 to 0.876; diversity entropy shifted from 0.988 to 0.991.",
+          "Era Similarity Index: 28.23/100 (confidence 0.151).",
           "Strongest rising track: Lana Del Rey - High by the Beach (delta 0.129 plays/day)."
         ],
-        "diversityCurrent": 0.9924,
+        "diversityCurrent": 0.9915,
         "diversityPrev": 0.9879,
         "genreShift": [
           {
@@ -242718,7 +242719,7 @@
             "rateB": 0.0645
           }
         ],
-        "noveltyRateCurrent": 0.8879,
+        "noveltyRateCurrent": 0.8756,
         "noveltyRatePrevious": 0.5673,
         "persistentFavorites": [
           {
@@ -242740,9 +242741,9 @@
           {
             "artist": "Bicep",
             "countA": 1,
-            "countB": 2,
+            "countB": 3,
             "rateA": 0.0357,
-            "rateB": 0.0645,
+            "rateB": 0.0968,
             "track": "Glue"
           },
           {
@@ -242752,6 +242753,14 @@
             "rateA": 0.0357,
             "rateB": 0.0645,
             "track": "23"
+          },
+          {
+            "artist": "HNNY",
+            "countA": 1,
+            "countB": 2,
+            "rateA": 0.0357,
+            "rateB": 0.0645,
+            "track": "I Let Go"
           },
           {
             "artist": "Leon Vynehall",
@@ -242792,14 +242801,6 @@
             "rateA": 0.0357,
             "rateB": 0.0323,
             "track": "Shadows"
-          },
-          {
-            "artist": "Chaos in the CBD",
-            "countA": 1,
-            "countB": 1,
-            "rateA": 0.0357,
-            "rateB": 0.0323,
-            "track": "A Deeper Life"
           }
         ],
         "previousMonth": "2026-02",
@@ -242969,6 +242970,15 @@
             "track": "The World’s Biggest Paving Slab"
           },
           {
+            "artist": "Galcher Lustwerk",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0645,
+            "rateA": 0,
+            "rateB": 0.0645,
+            "track": "Warming Up"
+          },
+          {
             "artist": "Gary Stewart",
             "countA": 0,
             "countB": 2,
@@ -242976,18 +242986,9 @@
             "rateA": 0,
             "rateB": 0.0645,
             "track": "I Ain't Living Long Like This"
-          },
-          {
-            "artist": "Kiasmos",
-            "countA": 0,
-            "countB": 2,
-            "delta": 0.0645,
-            "rateA": 0,
-            "rateB": 0.0645,
-            "track": "Flown"
           }
         ],
-        "trackOverlapJaccard": 0.0585
+        "trackOverlapJaccard": 0.0584
       },
       "period": "2026-03",
       "scope": {
@@ -243000,14 +243001,14 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "24 active days (10.42 plays per active day)",
-          "headline": "250 plays",
+          "detail": "24 active days (10.67 plays per active day)",
+          "headline": "256 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this month",
-          "headline": "lastfm 100% (250)",
+          "headline": "lastfm 100% (256)",
           "id": "source_mix",
           "title": "Source Mix"
         },
@@ -243024,7 +243025,7 @@
           "title": "Top Track"
         },
         {
-          "detail": "93 new tracks first heard in 2026-03",
+          "detail": "94 new tracks first heard in 2026-03",
           "headline": "37 new artists",
           "id": "discovery",
           "title": "Discovery"
@@ -243052,7 +243053,7 @@
         "concentratedTracks": [],
         "sourceBreakdown": [
           {
-            "count": 250,
+            "count": 256,
             "share": 1,
             "source": "lastfm"
           }
@@ -243083,12 +243084,12 @@
         },
         "summary": {
           "activeDays": 24,
-          "avgSessionMinutes": 18.89,
-          "avgTracksPerSession": 5.32,
+          "avgSessionMinutes": 19.43,
+          "avgTracksPerSession": 5.45,
           "maxDailyPlays": 50,
           "medianDailyPlays": 8,
-          "nightPlayShare": 0.492,
-          "totalScrobbles": 250,
+          "nightPlayShare": 0.4805,
+          "totalScrobbles": 256,
           "totalSessions": 47
         },
         "topBurstDays": [
@@ -243441,8 +243442,8 @@
             "uniqueTracks": 7
           },
           {
-            "durationMin": 25.18,
-            "end": "2026-03-29T01:24:06Z",
+            "durationMin": 25.47,
+            "end": "2026-03-30T13:41:38Z",
             "plays": 7,
             "sources": [
               {
@@ -243451,17 +243452,17 @@
                 "source": "lastfm"
               }
             ],
-            "start": "2026-03-29T00:58:55Z",
+            "start": "2026-03-30T13:16:10Z",
             "topArtist": {
-              "artist": "Radiohead",
-              "count": 2
+              "artist": "BAYNK",
+              "count": 1
             },
             "topTrack": {
-              "artist": "Alice in Chains",
+              "artist": "BAYNK",
               "count": 1,
-              "track": "Would?"
+              "track": "Water"
             },
-            "uniqueArtists": 5,
+            "uniqueArtists": 7,
             "uniqueTracks": 7
           }
         ]
@@ -243469,22 +243470,22 @@
       "summary": {
         "activeDays": 24,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 250,
-        "estimatedTotalMinutes": 875,
+        "estimatedFromNonSpotify": 256,
+        "estimatedTotalMinutes": 896,
         "measuredSpotifyMinutes": 0,
-        "nightPlayShare": 0.492,
-        "playsPerActiveDay": 10.42,
+        "nightPlayShare": 0.4805,
+        "playsPerActiveDay": 10.67,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 250,
+            "count": 256,
             "share": 1,
             "source": "lastfm"
           }
         ],
-        "totalScrobbles": 250,
-        "uniqueArtists": 165,
-        "uniqueTracks": 223
+        "totalScrobbles": 256,
+        "uniqueArtists": 167,
+        "uniqueTracks": 225
       },
       "topArtists": [
         {
@@ -243516,15 +243517,15 @@
           "count": 4
         },
         {
+          "artist": "Bicep",
+          "count": 4
+        },
+        {
           "artist": "Portishead",
           "count": 4
         },
         {
           "artist": "Radiohead",
-          "count": 4
-        },
-        {
-          "artist": "The Smashing Pumpkins",
           "count": 4
         }
       ],
@@ -243533,6 +243534,11 @@
           "artist": "Lana Del Rey",
           "count": 4,
           "track": "High by the Beach"
+        },
+        {
+          "artist": "Bicep",
+          "count": 3,
+          "track": "Glue"
         },
         {
           "artist": "Anthony Naples",
@@ -243553,11 +243559,6 @@
           "artist": "Ben Böhmer",
           "count": 2,
           "track": "Beyond Beliefs"
-        },
-        {
-          "artist": "Bicep",
-          "count": 2,
-          "track": "Glue"
         },
         {
           "artist": "Bijoux Cone",
@@ -243581,13 +243582,997 @@
         }
       ],
       "year": 2026
+    },
+    "2026-04": {
+      "discoveries": {
+        "discoveryBaseline": "global",
+        "newArtists": [
+          {
+            "artist": "Yagya",
+            "count": 2
+          },
+          {
+            "artist": "Al Nicol",
+            "count": 1
+          },
+          {
+            "artist": "Aunt Cynthia's Cabin",
+            "count": 1
+          },
+          {
+            "artist": "beachtown",
+            "count": 1
+          },
+          {
+            "artist": "Beverly Glenn-Copeland",
+            "count": 1
+          },
+          {
+            "artist": "burger/ink",
+            "count": 1
+          },
+          {
+            "artist": "Gas",
+            "count": 1
+          },
+          {
+            "artist": "Heiko Voss",
+            "count": 1
+          },
+          {
+            "artist": "Kaeto",
+            "count": 1
+          },
+          {
+            "artist": "Kassian",
+            "count": 1
+          }
+        ],
+        "newTracks": [
+          {
+            "artist": "Catching Flies",
+            "count": 2,
+            "track": "Orsay"
+          },
+          {
+            "artist": "Yagya",
+            "count": 2,
+            "track": "Sleepygirl 1"
+          },
+          {
+            "artist": "Actress",
+            "count": 1,
+            "track": "XRAY"
+          },
+          {
+            "artist": "Al Nicol",
+            "count": 1,
+            "track": "Mountain Song"
+          },
+          {
+            "artist": "Arlo Parks",
+            "count": 1,
+            "track": "Blue Disco"
+          },
+          {
+            "artist": "Arlo Parks",
+            "count": 1,
+            "track": "Luck Of Life"
+          },
+          {
+            "artist": "Art School Girlfriend",
+            "count": 1,
+            "track": "The Peaks"
+          },
+          {
+            "artist": "Aunt Cynthia's Cabin",
+            "count": 1,
+            "track": "Misty Woman"
+          },
+          {
+            "artist": "BDRMM",
+            "count": 1,
+            "track": "Be Careful - Fila Brazillia Remix"
+          },
+          {
+            "artist": "beabadoobee",
+            "count": 1,
+            "track": "All I Did Was Dream of You"
+          }
+        ],
+        "period": "Discovery",
+        "source": "all",
+        "summary": {
+          "newArtistCount": 21,
+          "newTrackCount": 61
+        }
+      },
+      "discoveryBaseline": "global",
+      "dormantReturns": null,
+      "insightBullets": [
+        "You logged 162 plays in 2026-04 across 11 active days.",
+        "Top artist: R.E.M. (17 plays).",
+        "You discovered 21 new artists and 61 new tracks.",
+        "43% of plays happened at night (10pm-6am, UTC)."
+      ],
+      "month": 4,
+      "monthOverMonth": {
+        "artistOverlapJaccard": 0.0664,
+        "comparisonBulletPoints": [
+          "2026-03 had 256 scrobbles across 225 unique tracks; 2026-04 had 162 scrobbles across 157 unique tracks.",
+          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.019.",
+          "Novelty shifted from 0.876 to 0.975; diversity entropy shifted from 0.991 to 0.998.",
+          "Era Similarity Index: 25.03/100 (confidence 0.160).",
+          "Strongest rising track: Catching Flies - Orsay (delta 0.067 plays/day)."
+        ],
+        "diversityCurrent": 0.9982,
+        "diversityPrev": 0.9915,
+        "genreShift": [
+          {
+            "delta": -0.2258,
+            "genre": "Rock",
+            "rateA": 0.2258,
+            "rateB": 0
+          },
+          {
+            "delta": -0.0645,
+            "genre": "Alternative & Punk",
+            "rateA": 0.0645,
+            "rateB": 0
+          },
+          {
+            "delta": -0.0634,
+            "genre": "Alternative",
+            "rateA": 0.0968,
+            "rateB": 0.0333
+          },
+          {
+            "delta": 0.0333,
+            "genre": "AlternRock",
+            "rateA": 0,
+            "rateB": 0.0333
+          },
+          {
+            "delta": -0.0323,
+            "genre": "Inde Rock",
+            "rateA": 0.0323,
+            "rateB": 0
+          },
+          {
+            "delta": -0.0323,
+            "genre": "Other",
+            "rateA": 0.0323,
+            "rateB": 0
+          }
+        ],
+        "noveltyRateCurrent": 0.9745,
+        "noveltyRatePrevious": 0.8756,
+        "persistentFavorites": [
+          {
+            "artist": "Galcher Lustwerk",
+            "countA": 2,
+            "countB": 1,
+            "rateA": 0.0645,
+            "rateB": 0.0333,
+            "track": "Warming Up"
+          },
+          {
+            "artist": "Kiasmos",
+            "countA": 2,
+            "countB": 1,
+            "rateA": 0.0645,
+            "rateB": 0.0333,
+            "track": "Flown"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 2,
+            "countB": 1,
+            "rateA": 0.0645,
+            "rateB": 0.0333,
+            "track": "davina mccall"
+          },
+          {
+            "artist": "Beach House",
+            "countA": 1,
+            "countB": 1,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "Lazuli"
+          },
+          {
+            "artist": "Holy Wave",
+            "countA": 1,
+            "countB": 1,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "Do You Feel It"
+          },
+          {
+            "artist": "The Smile",
+            "countA": 1,
+            "countB": 1,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "The Smoke"
+          },
+          {
+            "artist": "Warpaint",
+            "countA": 1,
+            "countB": 1,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "Common Blue"
+          }
+        ],
+        "previousMonth": "2026-03",
+        "topDecliners": [
+          {
+            "artist": "Lana Del Rey",
+            "countA": 4,
+            "countB": 0,
+            "delta": -0.129,
+            "rateA": 0.129,
+            "rateB": 0,
+            "track": "High by the Beach"
+          },
+          {
+            "artist": "Bicep",
+            "countA": 3,
+            "countB": 0,
+            "delta": -0.0968,
+            "rateA": 0.0968,
+            "rateB": 0,
+            "track": "Glue"
+          },
+          {
+            "artist": "Anthony Naples",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Scars"
+          },
+          {
+            "artist": "Aphex Twin",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Hedphelym"
+          },
+          {
+            "artist": "BAYNK",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Water"
+          },
+          {
+            "artist": "Ben Böhmer",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Beyond Beliefs"
+          },
+          {
+            "artist": "Bijoux Cone",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Color of Love"
+          },
+          {
+            "artist": "Blonde Redhead",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "23"
+          },
+          {
+            "artist": "Bonobo",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Stay the Same"
+          },
+          {
+            "artist": "Edmondson",
+            "countA": 2,
+            "countB": 0,
+            "delta": -0.0645,
+            "rateA": 0.0645,
+            "rateB": 0,
+            "track": "Flamingo Tripper"
+          }
+        ],
+        "topRisers": [
+          {
+            "artist": "Catching Flies",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0667,
+            "rateA": 0,
+            "rateB": 0.0667,
+            "track": "Orsay"
+          },
+          {
+            "artist": "Hermanos Gutiérrez",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0667,
+            "rateA": 0,
+            "rateB": 0.0667,
+            "track": "Elegantly Wasted"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0667,
+            "rateA": 0,
+            "rateB": 0.0667,
+            "track": "White Gloves ii"
+          },
+          {
+            "artist": "Yagya",
+            "countA": 0,
+            "countB": 2,
+            "delta": 0.0667,
+            "rateA": 0,
+            "rateB": 0.0667,
+            "track": "Sleepygirl 1"
+          },
+          {
+            "artist": "Beach House",
+            "countA": 1,
+            "countB": 1,
+            "delta": 0.0011,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "Lazuli"
+          },
+          {
+            "artist": "Holy Wave",
+            "countA": 1,
+            "countB": 1,
+            "delta": 0.0011,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "Do You Feel It"
+          },
+          {
+            "artist": "The Smile",
+            "countA": 1,
+            "countB": 1,
+            "delta": 0.0011,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "The Smoke"
+          },
+          {
+            "artist": "Warpaint",
+            "countA": 1,
+            "countB": 1,
+            "delta": 0.0011,
+            "rateA": 0.0323,
+            "rateB": 0.0333,
+            "track": "Common Blue"
+          }
+        ],
+        "trackOverlapJaccard": 0.0187
+      },
+      "period": "2026-04",
+      "scope": {
+        "discoveryBaseline": "global",
+        "endDate": "2026-04-30",
+        "source": "all",
+        "startDate": "2026-04-01",
+        "timezone": "UTC"
+      },
+      "source": "all",
+      "storyCards": [
+        {
+          "detail": "11 active days (14.73 plays per active day)",
+          "headline": "162 plays",
+          "id": "total_plays",
+          "title": "Total Plays"
+        },
+        {
+          "detail": "Combined listening sources in this month",
+          "headline": "lastfm 100% (162)",
+          "id": "source_mix",
+          "title": "Source Mix"
+        },
+        {
+          "detail": "17 plays",
+          "headline": "R.E.M.",
+          "id": "top_artist",
+          "title": "Top Artist"
+        },
+        {
+          "detail": "2 plays",
+          "headline": "Catching Flies - Orsay",
+          "id": "top_track",
+          "title": "Top Track"
+        },
+        {
+          "detail": "61 new tracks first heard in 2026-04",
+          "headline": "21 new artists",
+          "id": "discovery",
+          "title": "Discovery"
+        },
+        {
+          "detail": "44 plays",
+          "headline": "2026-04-01",
+          "id": "peak_day",
+          "title": "Peak Day"
+        },
+        {
+          "detail": "17 consecutive plays",
+          "headline": "R.E.M.",
+          "id": "artist_streak",
+          "title": "Longest Artist Run"
+        },
+        {
+          "detail": "Taste overlap, novelty, and risers vs the previous month",
+          "headline": "Compared to 2026-03",
+          "id": "month_over_month",
+          "title": "Month-over-Month"
+        }
+      ],
+      "streaksAndBursts": {
+        "concentratedTracks": [],
+        "sourceBreakdown": [
+          {
+            "count": 162,
+            "share": 1,
+            "source": "lastfm"
+          }
+        ],
+        "streaks": {
+          "longestActiveDayStreak": {
+            "days": 4,
+            "endDate": "2026-04-14",
+            "startDate": "2026-04-11"
+          },
+          "longestArtistRun": {
+            "artist": "R.E.M.",
+            "artistNormKey": "rem",
+            "count": 17,
+            "durationMinutes": 56.3,
+            "end": "2026-04-14T02:07:51Z",
+            "start": "2026-04-14T01:11:33Z"
+          },
+          "longestTrackRun": {
+            "artist": "Catching Flies",
+            "count": 2,
+            "durationMinutes": 1585.22,
+            "end": "2026-04-09T21:47:54Z",
+            "start": "2026-04-08T19:22:41Z",
+            "track": "Orsay",
+            "trackNormKey": "catching flies|orsay"
+          }
+        },
+        "summary": {
+          "activeDays": 11,
+          "avgSessionMinutes": 36.63,
+          "avgTracksPerSession": 10.06,
+          "maxDailyPlays": 44,
+          "medianDailyPlays": 8,
+          "nightPlayShare": 0.4259,
+          "totalScrobbles": 162,
+          "totalSessions": 16
+        },
+        "topBurstDays": [
+          {
+            "date": "2026-04-01",
+            "plays": 44,
+            "sources": [
+              {
+                "count": 44,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 39,
+            "uniqueTracks": 44
+          },
+          {
+            "date": "2026-04-13",
+            "plays": 36,
+            "sources": [
+              {
+                "count": 36,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 21,
+            "uniqueTracks": 36
+          },
+          {
+            "date": "2026-04-11",
+            "plays": 27,
+            "sources": [
+              {
+                "count": 27,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 21,
+            "uniqueTracks": 27
+          },
+          {
+            "date": "2026-04-12",
+            "plays": 17,
+            "sources": [
+              {
+                "count": 17,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 13,
+            "uniqueTracks": 16
+          },
+          {
+            "date": "2026-04-14",
+            "plays": 17,
+            "sources": [
+              {
+                "count": 17,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 1,
+            "uniqueTracks": 17
+          },
+          {
+            "date": "2026-04-02",
+            "plays": 8,
+            "sources": [
+              {
+                "count": 8,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 7,
+            "uniqueTracks": 8
+          },
+          {
+            "date": "2026-04-09",
+            "plays": 4,
+            "sources": [
+              {
+                "count": 4,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 4,
+            "uniqueTracks": 4
+          },
+          {
+            "date": "2026-04-03",
+            "plays": 3,
+            "sources": [
+              {
+                "count": 3,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 2,
+            "uniqueTracks": 3
+          },
+          {
+            "date": "2026-04-08",
+            "plays": 3,
+            "sources": [
+              {
+                "count": 3,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 3,
+            "uniqueTracks": 3
+          },
+          {
+            "date": "2026-04-05",
+            "plays": 1,
+            "sources": [
+              {
+                "count": 1,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "uniqueArtists": 1,
+            "uniqueTracks": 1
+          }
+        ],
+        "topBurstSessions": [
+          {
+            "durationMin": 170.78,
+            "end": "2026-04-01T16:27:08Z",
+            "plays": 44,
+            "sources": [
+              {
+                "count": 44,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-01T13:36:21Z",
+            "topArtist": {
+              "artist": "Rival Consoles",
+              "count": 3
+            },
+            "topTrack": {
+              "artist": "Actress",
+              "count": 1,
+              "track": "XRAY"
+            },
+            "uniqueArtists": 39,
+            "uniqueTracks": 44
+          },
+          {
+            "durationMin": 97.9,
+            "end": "2026-04-11T01:47:19Z",
+            "plays": 25,
+            "sources": [
+              {
+                "count": 25,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-11T00:09:25Z",
+            "topArtist": {
+              "artist": "Nilüfer Yanya",
+              "count": 4
+            },
+            "topTrack": {
+              "artist": "Arlo Parks",
+              "count": 1,
+              "track": "Blue Disco"
+            },
+            "uniqueArtists": 19,
+            "uniqueTracks": 25
+          },
+          {
+            "durationMin": 84.65,
+            "end": "2026-04-13T22:21:47Z",
+            "plays": 19,
+            "sources": [
+              {
+                "count": 19,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-13T20:57:08Z",
+            "topArtist": {
+              "artist": "Khruangbin",
+              "count": 4
+            },
+            "topTrack": {
+              "artist": "Amanaz",
+              "count": 1,
+              "track": "Khala My Friend"
+            },
+            "uniqueArtists": 13,
+            "uniqueTracks": 19
+          },
+          {
+            "durationMin": 64.25,
+            "end": "2026-04-13T19:34:23Z",
+            "plays": 17,
+            "sources": [
+              {
+                "count": 17,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-13T18:30:08Z",
+            "topArtist": {
+              "artist": "Yin Yin",
+              "count": 3
+            },
+            "topTrack": {
+              "artist": "Allah-Las",
+              "count": 1,
+              "track": "Raspberry Jam"
+            },
+            "uniqueArtists": 12,
+            "uniqueTracks": 17
+          },
+          {
+            "durationMin": 56.3,
+            "end": "2026-04-14T02:07:51Z",
+            "plays": 17,
+            "sources": [
+              {
+                "count": 17,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-14T01:11:33Z",
+            "topArtist": {
+              "artist": "R.E.M.",
+              "count": 17
+            },
+            "topTrack": {
+              "artist": "R.E.M.",
+              "count": 1,
+              "track": "Auctioneer (Another Engine) - 2010 Remaster"
+            },
+            "uniqueArtists": 1,
+            "uniqueTracks": 17
+          },
+          {
+            "durationMin": 62.03,
+            "end": "2026-04-12T02:09:49Z",
+            "plays": 16,
+            "sources": [
+              {
+                "count": 16,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-12T01:07:47Z",
+            "topArtist": {
+              "artist": "Khruangbin",
+              "count": 3
+            },
+            "topTrack": {
+              "artist": "Al Nicol",
+              "count": 1,
+              "track": "Mountain Song"
+            },
+            "uniqueArtists": 13,
+            "uniqueTracks": 16
+          },
+          {
+            "durationMin": 16.55,
+            "end": "2026-04-02T20:34:52Z",
+            "plays": 5,
+            "sources": [
+              {
+                "count": 5,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-02T20:18:19Z",
+            "topArtist": {
+              "artist": "Croatian Amor",
+              "count": 1
+            },
+            "topTrack": {
+              "artist": "Croatian Amor",
+              "count": 1,
+              "track": "Any Path to Touch the Stars"
+            },
+            "uniqueArtists": 5,
+            "uniqueTracks": 5
+          },
+          {
+            "durationMin": 16.27,
+            "end": "2026-04-03T00:08:58Z",
+            "plays": 4,
+            "sources": [
+              {
+                "count": 4,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-02T23:52:42Z",
+            "topArtist": {
+              "artist": "Digable Planets",
+              "count": 4
+            },
+            "topTrack": {
+              "artist": "Digable Planets",
+              "count": 1,
+              "track": "Dog It"
+            },
+            "uniqueArtists": 1,
+            "uniqueTracks": 4
+          },
+          {
+            "durationMin": 8.67,
+            "end": "2026-04-09T21:56:34Z",
+            "plays": 4,
+            "sources": [
+              {
+                "count": 4,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-09T21:47:54Z",
+            "topArtist": {
+              "artist": "Blonde Redhead",
+              "count": 1
+            },
+            "topTrack": {
+              "artist": "Blonde Redhead",
+              "count": 1,
+              "track": "Elephant Woman"
+            },
+            "uniqueArtists": 4,
+            "uniqueTracks": 4
+          },
+          {
+            "durationMin": 4.68,
+            "end": "2026-04-08T19:22:41Z",
+            "plays": 3,
+            "sources": [
+              {
+                "count": 3,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-08T19:18:00Z",
+            "topArtist": {
+              "artist": "Catching Flies",
+              "count": 1
+            },
+            "topTrack": {
+              "artist": "Catching Flies",
+              "count": 1,
+              "track": "Orsay"
+            },
+            "uniqueArtists": 3,
+            "uniqueTracks": 3
+          }
+        ]
+      },
+      "summary": {
+        "activeDays": 11,
+        "discoveryBaseline": "global",
+        "estimatedFromNonSpotify": 162,
+        "estimatedTotalMinutes": 567,
+        "measuredSpotifyMinutes": 0,
+        "nightPlayShare": 0.4259,
+        "playsPerActiveDay": 14.73,
+        "source": "all",
+        "sourceBreakdown": [
+          {
+            "count": 162,
+            "share": 1,
+            "source": "lastfm"
+          }
+        ],
+        "totalScrobbles": 162,
+        "uniqueArtists": 106,
+        "uniqueTracks": 157
+      },
+      "topArtists": [
+        {
+          "artist": "R.E.M.",
+          "count": 17
+        },
+        {
+          "artist": "Khruangbin",
+          "count": 9
+        },
+        {
+          "artist": "Sven Wunder",
+          "count": 5
+        },
+        {
+          "artist": "Digable Planets",
+          "count": 4
+        },
+        {
+          "artist": "Nilüfer Yanya",
+          "count": 4
+        },
+        {
+          "artist": "Yin Yin",
+          "count": 4
+        },
+        {
+          "artist": "Catching Flies",
+          "count": 3
+        },
+        {
+          "artist": "Rival Consoles",
+          "count": 3
+        },
+        {
+          "artist": "Surprise Chef",
+          "count": 3
+        },
+        {
+          "artist": "The Marías",
+          "count": 3
+        }
+      ],
+      "topTracks": [
+        {
+          "artist": "Catching Flies",
+          "count": 2,
+          "track": "Orsay"
+        },
+        {
+          "artist": "Hermanos Gutiérrez",
+          "count": 2,
+          "track": "Elegantly Wasted"
+        },
+        {
+          "artist": "Khruangbin",
+          "count": 2,
+          "track": "White Gloves ii"
+        },
+        {
+          "artist": "Yagya",
+          "count": 2,
+          "track": "Sleepygirl 1"
+        },
+        {
+          "artist": "Actress",
+          "count": 1,
+          "track": "XRAY"
+        },
+        {
+          "artist": "Al Nicol",
+          "count": 1,
+          "track": "Mountain Song"
+        },
+        {
+          "artist": "Allah-Las",
+          "count": 1,
+          "track": "Raspberry Jam"
+        },
+        {
+          "artist": "Amanaz",
+          "count": 1,
+          "track": "Khala My Friend"
+        },
+        {
+          "artist": "Arc De Soleil",
+          "count": 1,
+          "track": "Got Caught In Amsterdam"
+        },
+        {
+          "artist": "Arlo Parks",
+          "count": 1,
+          "track": "Blue Disco"
+        }
+      ],
+      "year": 2026
     }
   },
   "summary": {
     "failedCount": 0,
     "failedMonths": [],
-    "generatedCount": 238,
+    "generatedCount": 239,
     "includeDormantReturns": false,
-    "requestedCount": 238
+    "requestedCount": 239
   }
 }

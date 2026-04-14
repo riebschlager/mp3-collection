@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T13:22:38Z",
+  "generatedAt": "2026-04-14T02:12:05Z",
   "timezone": "America/Chicago",
   "weekStart": "sunday",
   "topN": 10,
@@ -171045,10 +171045,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -171056,9 +171080,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -172401,13 +172449,49 @@
         {
           "year": 2026,
           "date": "2026-03-30",
-          "totalPlays": 1,
-          "uniqueTracks": 1,
+          "totalPlays": 7,
+          "uniqueTracks": 7,
           "topTracks": [
             {
               "track": "Water",
               "artist": "BAYNK",
               "album": "Water",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 1
+            },
+            {
+              "track": "I Let Go",
+              "artist": "HNNY",
+              "album": "light shines through",
+              "playCount": 1
+            },
+            {
+              "track": "Moon Circles",
+              "artist": "Maribou State",
+              "album": "Truths",
+              "playCount": 1
+            },
+            {
+              "track": "VIEWS",
+              "artist": "Mild Minds",
+              "album": "MOOD",
+              "playCount": 1
+            },
+            {
+              "track": "Makeshift Tourniquet",
+              "artist": "Vegyn",
+              "album": "The Road To Hell Is Paved With Good Intentions",
               "playCount": 1
             }
           ]
@@ -173244,10 +173328,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -173255,9 +173363,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -175297,10 +175429,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -175308,9 +175464,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -176651,6 +176831,74 @@
       "label": "April 1",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-01",
+          "totalPlays": 46,
+          "uniqueTracks": 46,
+          "topTracks": [
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
+            {
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
+              "playCount": 1
+            },
+            {
+              "track": "Angels",
+              "artist": "Dark Sky",
+              "album": "Othona",
+              "playCount": 1
+            },
+            {
+              "track": "Waxcap",
+              "artist": "Djrum",
+              "album": "Waxcap",
+              "playCount": 1
+            },
+            {
+              "track": "Visages Visages",
+              "artist": "Domenique Dumont",
+              "album": "Visages Visages",
+              "playCount": 1
+            },
+            {
+              "track": "Tangerine Sour",
+              "artist": "Emancipator",
+              "album": "Tangerine Sour",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-01",
           "totalPlays": 32,
@@ -177264,10 +177512,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -177275,9 +177547,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -178594,6 +178890,68 @@
       "label": "April 2",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-02",
+          "totalPlays": 9,
+          "uniqueTracks": 9,
+          "topTracks": [
+            {
+              "track": "Any Path to Touch the Stars",
+              "artist": "Croatian Amor",
+              "album": "A Part of You in Everything",
+              "playCount": 1
+            },
+            {
+              "track": "Dog It",
+              "artist": "Digable Planets",
+              "album": "Blowout Comb",
+              "playCount": 1
+            },
+            {
+              "track": "Jettin'",
+              "artist": "Digable Planets",
+              "album": "Blowout Comb",
+              "playCount": 1
+            },
+            {
+              "track": "Pacifics - From The Original Motion Picture Soundtrack “N.Y. Is Red Hot\"",
+              "artist": "Digable Planets",
+              "album": "Reachin' (A New Refutation Of Time And Space)",
+              "playCount": 1
+            },
+            {
+              "track": "Where I'm From",
+              "artist": "Digable Planets",
+              "album": "Reachin' (A New Refutation Of Time And Space)",
+              "playCount": 1
+            },
+            {
+              "track": "Blue",
+              "artist": "Jasper Tygner",
+              "album": "Blue",
+              "playCount": 1
+            },
+            {
+              "track": "Aeolian Harp",
+              "artist": "Kassian",
+              "album": "Channels",
+              "playCount": 1
+            },
+            {
+              "track": "Nautical Dub",
+              "artist": "Porter Ricks",
+              "album": "Biokinetics",
+              "playCount": 1
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-02",
           "totalPlays": 64,
@@ -179299,10 +179657,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -179310,9 +179692,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -180629,6 +181035,20 @@
       "label": "April 3",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-03",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-03",
           "totalPlays": 81,
@@ -181360,10 +181780,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -181371,9 +181815,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -183423,10 +183891,34 @@
           "year": 2026,
           "startDate": "2026-03-29",
           "endDate": "2026-04-04",
-          "totalPlays": 2,
-          "uniqueTracks": 2,
-          "activeDays": 2,
+          "totalPlays": 64,
+          "uniqueTracks": 62,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Warming Up",
+              "artist": "Galcher Lustwerk",
+              "album": "Information (Redacted)",
+              "playCount": 2
+            },
+            {
+              "track": "Sleepygirl 1",
+              "artist": "Yagya",
+              "album": "Sleepygirls",
+              "playCount": 2
+            },
+            {
+              "track": "XRAY",
+              "artist": "Actress",
+              "album": "Karma & Desire",
+              "playCount": 1
+            },
+            {
+              "track": "The Peaks",
+              "artist": "Art School Girlfriend",
+              "album": "The Peaks",
+              "playCount": 1
+            },
             {
               "track": "Water",
               "artist": "BAYNK",
@@ -183434,9 +183926,33 @@
               "playCount": 1
             },
             {
-              "track": "Yellow",
-              "artist": "Coldplay",
-              "album": "Parachutes",
+              "track": "Be Careful - Fila Brazillia Remix",
+              "artist": "BDRMM",
+              "album": "Be Careful (Fila Brazillia Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Sunset Village - Blood Orange Remix",
+              "artist": "Beverly Glenn-Copeland",
+              "album": "Sunset Village (Blood Orange Remix)",
+              "playCount": 1
+            },
+            {
+              "track": "Glue",
+              "artist": "Bicep",
+              "album": "Bicep",
+              "playCount": 1
+            },
+            {
+              "track": "Elvism",
+              "artist": "burger/ink",
+              "album": "[Las Vegas]",
+              "playCount": 1
+            },
+            {
+              "track": "Ojai",
+              "artist": "Catching Flies",
+              "album": "Ojai",
               "playCount": 1
             }
           ]
@@ -184753,6 +185269,20 @@
       "label": "April 5",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-05",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Walk This Way (feat. Aerosmith)",
+              "artist": "Run–D.M.C.",
+              "album": "Raising Hell",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-05",
           "totalPlays": 93,
@@ -185602,6 +186132,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-03-30",
@@ -187434,6 +188034,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-06",
           "endDate": "2025-04-12",
@@ -188697,6 +189367,20 @@
       "label": "April 7",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-07",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-07",
           "totalPlays": 9,
@@ -189358,6 +190042,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-06",
@@ -190552,6 +191306,32 @@
       "label": "April 8",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-08",
+          "totalPlays": 3,
+          "uniqueTracks": 3,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 1
+            },
+            {
+              "track": "Realise",
+              "artist": "Lone",
+              "album": "Always Inside Your Head (Expanded)",
+              "playCount": 1
+            },
+            {
+              "track": "Closing Time",
+              "artist": "Semisonic",
+              "album": "20th Century Masters: The Millennium Collection: Best Of Semisonic",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-08",
           "totalPlays": 47,
@@ -191229,6 +192009,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-06",
@@ -192517,6 +193367,38 @@
       "label": "April 9",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-09",
+          "totalPlays": 4,
+          "uniqueTracks": 4,
+          "topTracks": [
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            },
+            {
+              "track": "Come on Let's Go",
+              "artist": "Broadcast",
+              "album": "The Noise Made by People",
+              "playCount": 1
+            },
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 1
+            },
+            {
+              "track": "Black Swan",
+              "artist": "Thom Yorke",
+              "album": "The Eraser",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-09",
           "totalPlays": 21,
@@ -193098,6 +193980,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-06",
@@ -194304,6 +195256,74 @@
       "label": "April 10",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-10",
+          "totalPlays": 25,
+          "uniqueTracks": 25,
+          "topTracks": [
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Say",
+              "artist": "C Duncan",
+              "album": "Architect",
+              "playCount": 1
+            },
+            {
+              "track": "Take Me To Beijing (一起回北京) (Official Video)",
+              "artist": "Chinese American Bear",
+              "album": "Take Me To Beijing (一起回北京) (Official Video)",
+              "playCount": 1
+            },
+            {
+              "track": "Dafodil",
+              "artist": "Jamie xx",
+              "album": "In Waves",
+              "playCount": 1
+            },
+            {
+              "track": "DISTANCE",
+              "artist": "Kaeto",
+              "album": "Intro",
+              "playCount": 1
+            },
+            {
+              "track": "I Hope to Be Around",
+              "artist": "Men I Trust",
+              "album": "I Hope to Be Around",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-10",
           "totalPlays": 18,
@@ -194839,6 +195859,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-06",
@@ -196045,6 +197135,74 @@
       "label": "April 11",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-11",
+          "totalPlays": 18,
+          "uniqueTracks": 18,
+          "topTracks": [
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Forgive the Damages (feat. Daudi Matsiko)",
+              "artist": "GoGo Penguin",
+              "album": "Necessary Fictions",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted",
+              "playCount": 1
+            },
+            {
+              "track": "A Love International",
+              "artist": "Khruangbin",
+              "album": "A Love International",
+              "playCount": 1
+            },
+            {
+              "track": "May Ninth",
+              "artist": "Khruangbin",
+              "album": "May Ninth",
+              "playCount": 1
+            },
+            {
+              "track": "White Gloves ii",
+              "artist": "Khruangbin",
+              "album": "White Gloves ii",
+              "playCount": 1
+            },
+            {
+              "track": "Bullet",
+              "artist": "Loaded Honey",
+              "album": "Bullet",
+              "playCount": 1
+            },
+            {
+              "track": "Kmart",
+              "artist": "Munik",
+              "album": "Kmart",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-11",
           "totalPlays": 9,
@@ -196560,6 +197718,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-05",
+          "endDate": "2026-04-11",
+          "totalPlays": 52,
+          "uniqueTracks": 51,
+          "activeDays": 6,
+          "topTracks": [
+            {
+              "track": "Orsay",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 2
+            },
+            {
+              "track": "Mountain Song",
+              "artist": "Al Nicol",
+              "album": "Mountain Song",
+              "playCount": 1
+            },
+            {
+              "track": "Blue Disco",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Luck Of Life",
+              "artist": "Arlo Parks",
+              "album": "Ambiguous Desire",
+              "playCount": 1
+            },
+            {
+              "track": "Black Box",
+              "artist": "Automatic",
+              "album": "Is It Now?",
+              "playCount": 1
+            },
+            {
+              "track": "All I Did Was Dream of You",
+              "artist": "beabadoobee",
+              "album": "All I Did Was Dream of You",
+              "playCount": 1
+            },
+            {
+              "track": "Drunk in LA",
+              "artist": "Beach House",
+              "album": "DRUNK IN LA",
+              "playCount": 1
+            },
+            {
+              "track": "Lazuli",
+              "artist": "Beach House",
+              "album": "Bloom",
+              "playCount": 1
+            },
+            {
+              "track": "No One Knows Me Like You",
+              "artist": "beachtown",
+              "album": "No One Knows Me Like You",
+              "playCount": 1
+            },
+            {
+              "track": "Elephant Woman",
+              "artist": "Blonde Redhead",
+              "album": "Misery Is a Butterfly",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-06",
@@ -197766,6 +198994,20 @@
       "label": "April 12",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-12",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-12",
           "totalPlays": 98,
@@ -198375,6 +199617,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-06",
@@ -199587,6 +200899,74 @@
       "label": "April 13",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-13",
+          "totalPlays": 53,
+          "uniqueTracks": 53,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Do You Feel It",
+              "artist": "Holy Wave",
+              "album": "RELAX",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2024,
           "date": "2024-04-13",
           "totalPlays": 55,
@@ -200210,6 +201590,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-13",
@@ -202009,6 +203459,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-13",
@@ -203823,6 +205343,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-13",
           "endDate": "2025-04-19",
@@ -205581,6 +207171,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-13",
@@ -207426,6 +209086,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-13",
@@ -209359,6 +211089,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-12",
+          "endDate": "2026-04-18",
+          "totalPlays": 54,
+          "uniqueTracks": 54,
+          "activeDays": 2,
+          "topTracks": [
+            {
+              "track": "Raspberry Jam",
+              "artist": "Allah-Las",
+              "album": "Raspberry Jam",
+              "playCount": 1
+            },
+            {
+              "track": "Khala My Friend",
+              "artist": "Amanaz",
+              "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Got Caught In Amsterdam",
+              "artist": "Arc De Soleil",
+              "album": "The Thief in Marrakesh Got Caught in Amsterdam Trying to Escape",
+              "playCount": 1
+            },
+            {
+              "track": "Misty Woman",
+              "artist": "Aunt Cynthia's Cabin",
+              "album": "Misty Woman",
+              "playCount": 1
+            },
+            {
+              "track": "In Lust",
+              "artist": "BALTHVS",
+              "album": "Cause & Effect",
+              "playCount": 1
+            },
+            {
+              "track": "Walk Like A Motherfucker",
+              "artist": "Ghost Funk Orchestra",
+              "album": "A Song For Paul",
+              "playCount": 1
+            },
+            {
+              "track": "Do You",
+              "artist": "Ghostwoman",
+              "album": "Ghost Woman",
+              "playCount": 1
+            },
+            {
+              "track": "Flower Rain",
+              "artist": "Gianni Brezzo",
+              "album": "The Awakening",
+              "playCount": 1
+            },
+            {
+              "track": "I Think About You - Geiger Mix",
+              "artist": "Heiko Voss",
+              "album": "I Think About You",
+              "playCount": 1
+            },
+            {
+              "track": "Elegantly Wasted [Feat. Leon Bridges]",
+              "artist": "Hermanos Gutiérrez",
+              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-13",

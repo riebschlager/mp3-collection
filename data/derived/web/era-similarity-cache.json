@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T13:23:00Z",
+  "generatedAt": "2026-04-14T02:12:54Z",
   "years": [
     2005,
     2006,
@@ -56,7 +56,7 @@
         28.78,
         29.63,
         27.26,
-        25.07
+        25.51
       ],
       [
         44.74,
@@ -80,7 +80,7 @@
         29.91,
         30.64,
         28.43,
-        25.19
+        25.48
       ],
       [
         32.69,
@@ -104,7 +104,7 @@
         32.63,
         32.47,
         31.1,
-        27.12
+        27.54
       ],
       [
         32.11,
@@ -128,7 +128,7 @@
         32.6,
         32.63,
         30.5,
-        26.54
+        27.01
       ],
       [
         33.04,
@@ -152,7 +152,7 @@
         32.47,
         32.52,
         30.13,
-        26.62
+        27.03
       ],
       [
         31.7,
@@ -176,7 +176,7 @@
         32.7,
         32.62,
         31.45,
-        27.17
+        27.65
       ],
       [
         30.82,
@@ -200,7 +200,7 @@
         33.56,
         34.06,
         32.57,
-        28.28
+        28.89
       ],
       [
         30.3,
@@ -224,7 +224,7 @@
         32,
         32.88,
         30.95,
-        28.23
+        28.76
       ],
       [
         30.33,
@@ -248,7 +248,7 @@
         32.47,
         31.89,
         30.95,
-        27.52
+        27.86
       ],
       [
         27.62,
@@ -272,7 +272,7 @@
         30.33,
         30.34,
         28.24,
-        27.19
+        27.72
       ],
       [
         28.54,
@@ -296,7 +296,7 @@
         31.81,
         31.66,
         30.93,
-        27.4
+        27.96
       ],
       [
         29.08,
@@ -320,7 +320,7 @@
         33.04,
         34.16,
         32.85,
-        29.39
+        29.92
       ],
       [
         28.61,
@@ -344,7 +344,7 @@
         31.41,
         31.01,
         29.6,
-        28.38
+        28.6
       ],
       [
         29.15,
@@ -368,7 +368,7 @@
         34.66,
         33.23,
         32.25,
-        29.05
+        29.5
       ],
       [
         29.01,
@@ -392,7 +392,7 @@
         33.21,
         34.18,
         31.67,
-        29.38
+        29.69
       ],
       [
         29.86,
@@ -416,7 +416,7 @@
         36.06,
         37.22,
         34.81,
-        31
+        31.57
       ],
       [
         29.95,
@@ -440,7 +440,7 @@
         36.61,
         35.94,
         35.03,
-        29.5
+        30.11
       ],
       [
         29.83,
@@ -464,7 +464,7 @@
         36.31,
         34.85,
         33.4,
-        29.37
+        29.92
       ],
       [
         28.78,
@@ -488,7 +488,7 @@
         100,
         38.3,
         37.47,
-        33.08
+        33.47
       ],
       [
         29.63,
@@ -512,7 +512,7 @@
         38.3,
         100,
         41.97,
-        33.18
+        33.93
       ],
       [
         27.26,
@@ -536,30 +536,30 @@
         37.47,
         41.97,
         100,
-        36.11
+        36.99
       ],
       [
-        25.07,
-        25.19,
-        27.12,
-        26.54,
-        26.62,
-        27.17,
-        28.28,
-        28.23,
-        27.52,
-        27.19,
-        27.4,
-        29.39,
-        28.38,
-        29.05,
-        29.38,
-        31,
+        25.51,
+        25.48,
+        27.54,
+        27.01,
+        27.03,
+        27.65,
+        28.89,
+        28.76,
+        27.86,
+        27.72,
+        27.96,
+        29.92,
+        28.6,
         29.5,
-        29.37,
-        33.08,
-        33.18,
-        36.11,
+        29.69,
+        31.57,
+        30.11,
+        29.92,
+        33.47,
+        33.93,
+        36.99,
         100
       ]
     ],
@@ -586,7 +586,7 @@
         2.86,
         2.86,
         28.83,
-        28
+        28.19
       ],
       [
         44.74,
@@ -610,7 +610,7 @@
         1.19,
         1.19,
         30.94,
-        29.73
+        29.48
       ],
       [
         32.69,
@@ -634,7 +634,7 @@
         2.37,
         2.37,
         32.69,
-        31.25
+        31.36
       ],
       [
         32.11,
@@ -682,7 +682,7 @@
         1.71,
         1.71,
         32.27,
-        31.2
+        31.14
       ],
       [
         31.7,
@@ -706,7 +706,7 @@
         2.13,
         2.13,
         33.29,
-        31.57
+        31.59
       ],
       [
         30.82,
@@ -730,7 +730,7 @@
         2.42,
         2.42,
         34.43,
-        32.46
+        32.83
       ],
       [
         30.29,
@@ -754,7 +754,7 @@
         2.69,
         2.69,
         33.27,
-        32.1
+        32.42
       ],
       [
         30.33,
@@ -778,7 +778,7 @@
         2.15,
         2.15,
         34.09,
-        31.89
+        31.72
       ],
       [
         27.65,
@@ -802,7 +802,7 @@
         2.04,
         2.04,
         30.67,
-        31.4
+        31.31
       ],
       [
         28.52,
@@ -826,7 +826,7 @@
         2.31,
         2.31,
         33.37,
-        31.56
+        31.7
       ],
       [
         27.36,
@@ -850,7 +850,7 @@
         1.59,
         1.59,
         31,
-        30.76
+        30.71
       ],
       [
         2.86,
@@ -874,7 +874,7 @@
         20,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -898,7 +898,7 @@
         20,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -922,7 +922,7 @@
         20,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -946,7 +946,7 @@
         20,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -970,7 +970,7 @@
         20,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -994,7 +994,7 @@
         20,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -1018,7 +1018,7 @@
         100,
         20,
         2.41,
-        2.2
+        2.28
       ],
       [
         2.86,
@@ -1042,7 +1042,7 @@
         20,
         100,
         2.41,
-        2.2
+        2.28
       ],
       [
         28.83,
@@ -1066,30 +1066,30 @@
         2.41,
         2.41,
         100,
-        40.26
+        40.68
       ],
       [
-        28,
-        29.73,
-        31.25,
+        28.19,
+        29.48,
+        31.36,
         31.07,
-        31.2,
-        31.57,
-        32.46,
-        32.1,
-        31.89,
-        31.4,
-        31.56,
-        30.76,
-        2.2,
-        2.2,
-        2.2,
-        2.2,
-        2.2,
-        2.2,
-        2.2,
-        2.2,
-        40.26,
+        31.14,
+        31.59,
+        32.83,
+        32.42,
+        31.72,
+        31.31,
+        31.7,
+        30.71,
+        2.28,
+        2.28,
+        2.28,
+        2.28,
+        2.28,
+        2.28,
+        2.28,
+        2.28,
+        40.68,
         100
       ]
     ],
@@ -4585,32 +4585,32 @@
       "2005/2026": {
         "eraA": 2005,
         "eraB": 2026,
-        "similarityIndex": 25.07,
-        "confidence": 0.5733,
+        "similarityIndex": 25.51,
+        "confidence": 0.5963,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0268,
-          "diversityAlignment": 0.9946,
-          "genreSimilarity": 0.4839,
-          "noveltyAlignment": 0.684,
-          "persistentStrength": 0.0023,
-          "trackOverlap": 0.0029
+          "artistOverlap": 0.0264,
+          "diversityAlignment": 0.9931,
+          "genreSimilarity": 0.4879,
+          "noveltyAlignment": 0.7235,
+          "persistentStrength": 0.0026,
+          "trackOverlap": 0.0034
         },
         "overlap": {
-          "artistJaccard": 0.0268,
-          "trackJaccard": 0.0029
+          "artistJaccard": 0.0264,
+          "trackJaccard": 0.0034
         },
         "novelty": {
-          "alignment": 0.684,
+          "alignment": 0.7235,
           "eraA": 0.7258,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9946,
+          "alignment": 0.9931,
           "eraA": 0.9879,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.4839,
+        "genreSimilarity": 0.4879,
         "persistentFavorites": [
           {
             "artist": "Nine Inch Nails",
@@ -4649,10 +4649,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -4665,22 +4665,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -4722,10 +4722,10 @@
           }
         ],
         "insightBullets": [
-          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.027 and track overlap was 0.003.",
-          "Novelty shifted from 0.726 to 0.410; diversity entropy shifted from 0.988 to 0.983.",
-          "Era Similarity Index: 25.07/100 (confidence 0.573)."
+          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.026 and track overlap was 0.003.",
+          "Novelty shifted from 0.726 to 0.449; diversity entropy shifted from 0.988 to 0.981.",
+          "Era Similarity Index: 25.51/100 (confidence 0.596)."
         ]
       },
       "2006/2006": {
@@ -7541,32 +7541,32 @@
       "2006/2026": {
         "eraA": 2006,
         "eraB": 2026,
-        "similarityIndex": 25.19,
-        "confidence": 0.5406,
-        "confidenceBand": "low",
+        "similarityIndex": 25.48,
+        "confidence": 0.5674,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0575,
-          "diversityAlignment": 0.988,
-          "genreSimilarity": 0.527,
-          "noveltyAlignment": 0.5229,
-          "persistentStrength": 0.0046,
-          "trackOverlap": 0.0056
+          "artistOverlap": 0.0557,
+          "diversityAlignment": 0.9865,
+          "genreSimilarity": 0.5254,
+          "noveltyAlignment": 0.5624,
+          "persistentStrength": 0.0044,
+          "trackOverlap": 0.0055
         },
         "overlap": {
-          "artistJaccard": 0.0575,
-          "trackJaccard": 0.0056
+          "artistJaccard": 0.0557,
+          "trackJaccard": 0.0055
         },
         "novelty": {
-          "alignment": 0.5229,
+          "alignment": 0.5624,
           "eraA": 0.8869,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.988,
+          "alignment": 0.9865,
           "eraA": 0.9946,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.527,
+        "genreSimilarity": 0.5254,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -7605,10 +7605,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -7621,22 +7621,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -7678,10 +7678,10 @@
           }
         ],
         "insightBullets": [
-          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.006.",
-          "Novelty shifted from 0.887 to 0.410; diversity entropy shifted from 0.995 to 0.983.",
-          "Era Similarity Index: 25.19/100 (confidence 0.541)."
+          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.005.",
+          "Novelty shifted from 0.887 to 0.449; diversity entropy shifted from 0.995 to 0.981.",
+          "Era Similarity Index: 25.48/100 (confidence 0.567)."
         ]
       },
       "2007/2007": {
@@ -10351,32 +10351,32 @@
       "2007/2026": {
         "eraA": 2007,
         "eraB": 2026,
-        "similarityIndex": 27.12,
-        "confidence": 0.6329,
+        "similarityIndex": 27.54,
+        "confidence": 0.6513,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0621,
-          "diversityAlignment": 0.9964,
-          "genreSimilarity": 0.5615,
-          "noveltyAlignment": 0.6258,
-          "persistentStrength": 0.0095,
-          "trackOverlap": 0.0102
+          "artistOverlap": 0.0607,
+          "diversityAlignment": 0.9979,
+          "genreSimilarity": 0.5652,
+          "noveltyAlignment": 0.6654,
+          "persistentStrength": 0.0097,
+          "trackOverlap": 0.0104
         },
         "overlap": {
-          "artistJaccard": 0.0621,
-          "trackJaccard": 0.0102
+          "artistJaccard": 0.0607,
+          "trackJaccard": 0.0104
         },
         "novelty": {
-          "alignment": 0.6258,
+          "alignment": 0.6654,
           "eraA": 0.784,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9964,
+          "alignment": 0.9979,
           "eraA": 0.9789,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.5615,
+        "genreSimilarity": 0.5652,
         "persistentFavorites": [
           {
             "artist": "Sneaker Pimps",
@@ -10385,6 +10385,14 @@
             "rateA": 0.011,
             "rateB": 0.0082,
             "track": "6 Underground"
+          },
+          {
+            "artist": "Thom Yorke",
+            "countA": 5,
+            "countB": 3,
+            "rateA": 0.0137,
+            "rateB": 0.0082,
+            "track": "Black Swan"
           },
           {
             "artist": "A Perfect Circle",
@@ -10401,24 +10409,16 @@
             "rateA": 0.0082,
             "rateB": 0.0055,
             "track": "The Noose"
-          },
-          {
-            "artist": "A Perfect Circle",
-            "countA": 2,
-            "countB": 2,
-            "rateA": 0.0055,
-            "rateB": 0.0055,
-            "track": "The Outsider"
           }
         ],
         "rising": [
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -10431,22 +10431,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -10488,10 +10488,10 @@
           }
         ],
         "insightBullets": [
-          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.062 and track overlap was 0.010.",
-          "Novelty shifted from 0.784 to 0.410; diversity entropy shifted from 0.979 to 0.983.",
-          "Era Similarity Index: 27.12/100 (confidence 0.633)."
+          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.061 and track overlap was 0.010.",
+          "Novelty shifted from 0.784 to 0.449; diversity entropy shifted from 0.979 to 0.981.",
+          "Era Similarity Index: 27.54/100 (confidence 0.651)."
         ]
       },
       "2008/2008": {
@@ -13015,32 +13015,32 @@
       "2008/2026": {
         "eraA": 2008,
         "eraB": 2026,
-        "similarityIndex": 26.54,
-        "confidence": 0.6205,
+        "similarityIndex": 27.01,
+        "confidence": 0.6379,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.047,
-          "diversityAlignment": 0.998,
-          "genreSimilarity": 0.568,
-          "noveltyAlignment": 0.614,
-          "persistentStrength": 0.0081,
-          "trackOverlap": 0.0084
+          "artistOverlap": 0.0473,
+          "diversityAlignment": 0.9995,
+          "genreSimilarity": 0.5707,
+          "noveltyAlignment": 0.6536,
+          "persistentStrength": 0.0083,
+          "trackOverlap": 0.0087
         },
         "overlap": {
-          "artistJaccard": 0.047,
-          "trackJaccard": 0.0084
+          "artistJaccard": 0.0473,
+          "trackJaccard": 0.0087
         },
         "novelty": {
-          "alignment": 0.614,
+          "alignment": 0.6536,
           "eraA": 0.7957,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.998,
+          "alignment": 0.9995,
           "eraA": 0.9805,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.568,
+        "genreSimilarity": 0.5707,
         "persistentFavorites": [
           {
             "artist": "Bjork",
@@ -13079,10 +13079,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -13095,22 +13095,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -13152,10 +13152,10 @@
           }
         ],
         "insightBullets": [
-          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.047 and track overlap was 0.008.",
-          "Novelty shifted from 0.796 to 0.410; diversity entropy shifted from 0.981 to 0.983.",
-          "Era Similarity Index: 26.54/100 (confidence 0.621)."
+          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.047 and track overlap was 0.009.",
+          "Novelty shifted from 0.796 to 0.449; diversity entropy shifted from 0.981 to 0.981.",
+          "Era Similarity Index: 27.01/100 (confidence 0.638)."
         ]
       },
       "2009/2009": {
@@ -15533,32 +15533,32 @@
       "2009/2026": {
         "eraA": 2009,
         "eraB": 2026,
-        "similarityIndex": 26.62,
-        "confidence": 0.636,
+        "similarityIndex": 27.03,
+        "confidence": 0.6546,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0438,
-          "diversityAlignment": 0.9948,
-          "genreSimilarity": 0.6133,
-          "noveltyAlignment": 0.5681,
-          "persistentStrength": 0.0087,
-          "trackOverlap": 0.0086
+          "artistOverlap": 0.0437,
+          "diversityAlignment": 0.9933,
+          "genreSimilarity": 0.616,
+          "noveltyAlignment": 0.6077,
+          "persistentStrength": 0.0085,
+          "trackOverlap": 0.0084
         },
         "overlap": {
-          "artistJaccard": 0.0438,
-          "trackJaccard": 0.0086
+          "artistJaccard": 0.0437,
+          "trackJaccard": 0.0084
         },
         "novelty": {
-          "alignment": 0.5681,
+          "alignment": 0.6077,
           "eraA": 0.8417,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9948,
+          "alignment": 0.9933,
           "eraA": 0.9877,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6133,
+        "genreSimilarity": 0.616,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -15597,10 +15597,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -15613,22 +15613,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -15670,10 +15670,10 @@
           }
         ],
         "insightBullets": [
-          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.044 and track overlap was 0.009.",
-          "Novelty shifted from 0.842 to 0.410; diversity entropy shifted from 0.988 to 0.983.",
-          "Era Similarity Index: 26.62/100 (confidence 0.636)."
+          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.044 and track overlap was 0.008.",
+          "Novelty shifted from 0.842 to 0.449; diversity entropy shifted from 0.988 to 0.981.",
+          "Era Similarity Index: 27.03/100 (confidence 0.655)."
         ]
       },
       "2010/2010": {
@@ -17905,32 +17905,32 @@
       "2010/2026": {
         "eraA": 2010,
         "eraB": 2026,
-        "similarityIndex": 27.17,
-        "confidence": 0.6526,
+        "similarityIndex": 27.65,
+        "confidence": 0.6726,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0502,
-          "diversityAlignment": 0.9931,
-          "genreSimilarity": 0.6025,
-          "noveltyAlignment": 0.5988,
-          "persistentStrength": 0.0146,
-          "trackOverlap": 0.0155
+          "artistOverlap": 0.0499,
+          "diversityAlignment": 0.9946,
+          "genreSimilarity": 0.6072,
+          "noveltyAlignment": 0.6383,
+          "persistentStrength": 0.0148,
+          "trackOverlap": 0.0158
         },
         "overlap": {
-          "artistJaccard": 0.0502,
-          "trackJaccard": 0.0155
+          "artistJaccard": 0.0499,
+          "trackJaccard": 0.0158
         },
         "novelty": {
-          "alignment": 0.5988,
+          "alignment": 0.6383,
           "eraA": 0.811,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9931,
+          "alignment": 0.9946,
           "eraA": 0.9756,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6025,
+        "genreSimilarity": 0.6072,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -17957,22 +17957,22 @@
             "track": "Reckoner"
           },
           {
-            "artist": "A Perfect Circle",
-            "countA": 3,
-            "countB": 2,
-            "rateA": 0.0082,
-            "rateB": 0.0055,
-            "track": "01 Hollow"
+            "artist": "Thom Yorke",
+            "countA": 8,
+            "countB": 3,
+            "rateA": 0.0219,
+            "rateB": 0.0082,
+            "track": "Black Swan"
           }
         ],
         "rising": [
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -17985,22 +17985,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -18042,10 +18042,10 @@
           }
         ],
         "insightBullets": [
-          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
+          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
           "Artist overlap (Jaccard) was 0.050 and track overlap was 0.016.",
-          "Novelty shifted from 0.811 to 0.410; diversity entropy shifted from 0.976 to 0.983.",
-          "Era Similarity Index: 27.17/100 (confidence 0.653)."
+          "Novelty shifted from 0.811 to 0.449; diversity entropy shifted from 0.976 to 0.981.",
+          "Era Similarity Index: 27.65/100 (confidence 0.673)."
         ]
       },
       "2011/2011": {
@@ -20131,32 +20131,32 @@
       "2011/2026": {
         "eraA": 2011,
         "eraB": 2026,
-        "similarityIndex": 28.28,
-        "confidence": 0.6196,
+        "similarityIndex": 28.89,
+        "confidence": 0.6369,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0564,
-          "diversityAlignment": 0.994,
-          "genreSimilarity": 0.6401,
-          "noveltyAlignment": 0.6289,
-          "persistentStrength": 0.0159,
+          "artistOverlap": 0.0565,
+          "diversityAlignment": 0.9954,
+          "genreSimilarity": 0.6528,
+          "noveltyAlignment": 0.6684,
+          "persistentStrength": 0.016,
           "trackOverlap": 0.0159
         },
         "overlap": {
-          "artistJaccard": 0.0564,
+          "artistJaccard": 0.0565,
           "trackJaccard": 0.0159
         },
         "novelty": {
-          "alignment": 0.6289,
+          "alignment": 0.6684,
           "eraA": 0.7809,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.994,
+          "alignment": 0.9954,
           "eraA": 0.9765,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6401,
+        "genreSimilarity": 0.6528,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -20195,10 +20195,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -20211,22 +20211,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -20268,10 +20268,10 @@
           }
         ],
         "insightBullets": [
-          "2011 had 8622 scrobbles across 6002 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
+          "2011 had 8622 scrobbles across 6002 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
           "Artist overlap (Jaccard) was 0.056 and track overlap was 0.016.",
-          "Novelty shifted from 0.781 to 0.410; diversity entropy shifted from 0.976 to 0.983.",
-          "Era Similarity Index: 28.28/100 (confidence 0.620)."
+          "Novelty shifted from 0.781 to 0.449; diversity entropy shifted from 0.976 to 0.981.",
+          "Era Similarity Index: 28.89/100 (confidence 0.637)."
         ]
       },
       "2012/2012": {
@@ -22211,32 +22211,32 @@
       "2012/2026": {
         "eraA": 2012,
         "eraB": 2026,
-        "similarityIndex": 28.23,
-        "confidence": 0.5993,
+        "similarityIndex": 28.76,
+        "confidence": 0.621,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0605,
-          "diversityAlignment": 0.9858,
-          "genreSimilarity": 0.6084,
-          "noveltyAlignment": 0.6472,
-          "persistentStrength": 0.0188,
-          "trackOverlap": 0.0224
+          "artistOverlap": 0.0585,
+          "diversityAlignment": 0.9872,
+          "genreSimilarity": 0.6192,
+          "noveltyAlignment": 0.6868,
+          "persistentStrength": 0.0193,
+          "trackOverlap": 0.0234
         },
         "overlap": {
-          "artistJaccard": 0.0605,
-          "trackJaccard": 0.0224
+          "artistJaccard": 0.0585,
+          "trackJaccard": 0.0234
         },
         "novelty": {
-          "alignment": 0.6472,
+          "alignment": 0.6868,
           "eraA": 0.7626,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9858,
+          "alignment": 0.9872,
           "eraA": 0.9683,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6084,
+        "genreSimilarity": 0.6192,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -22275,10 +22275,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -22291,22 +22291,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -22348,10 +22348,10 @@
           }
         ],
         "insightBullets": [
-          "2012 had 4049 scrobbles across 2666 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.060 and track overlap was 0.022.",
-          "Novelty shifted from 0.763 to 0.410; diversity entropy shifted from 0.968 to 0.983.",
-          "Era Similarity Index: 28.23/100 (confidence 0.599)."
+          "2012 had 4049 scrobbles across 2666 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.023.",
+          "Novelty shifted from 0.763 to 0.449; diversity entropy shifted from 0.968 to 0.981.",
+          "Era Similarity Index: 28.76/100 (confidence 0.621)."
         ]
       },
       "2013/2013": {
@@ -24145,32 +24145,32 @@
       "2013/2026": {
         "eraA": 2013,
         "eraB": 2026,
-        "similarityIndex": 27.52,
-        "confidence": 0.5771,
+        "similarityIndex": 27.86,
+        "confidence": 0.5999,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0605,
-          "diversityAlignment": 0.9992,
-          "genreSimilarity": 0.5967,
-          "noveltyAlignment": 0.6077,
-          "persistentStrength": 0.0125,
-          "trackOverlap": 0.0127
+          "artistOverlap": 0.0596,
+          "diversityAlignment": 0.9977,
+          "genreSimilarity": 0.5952,
+          "noveltyAlignment": 0.6473,
+          "persistentStrength": 0.0127,
+          "trackOverlap": 0.0132
         },
         "overlap": {
-          "artistJaccard": 0.0605,
-          "trackJaccard": 0.0127
+          "artistJaccard": 0.0596,
+          "trackJaccard": 0.0132
         },
         "novelty": {
-          "alignment": 0.6077,
+          "alignment": 0.6473,
           "eraA": 0.802,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9992,
+          "alignment": 0.9977,
           "eraA": 0.9834,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.5967,
+        "genreSimilarity": 0.5952,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -24209,10 +24209,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -24225,22 +24225,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -24282,10 +24282,10 @@
           }
         ],
         "insightBullets": [
-          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
+          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
           "Artist overlap (Jaccard) was 0.060 and track overlap was 0.013.",
-          "Novelty shifted from 0.802 to 0.410; diversity entropy shifted from 0.983 to 0.983.",
-          "Era Similarity Index: 27.52/100 (confidence 0.577)."
+          "Novelty shifted from 0.802 to 0.449; diversity entropy shifted from 0.983 to 0.981.",
+          "Era Similarity Index: 27.86/100 (confidence 0.600)."
         ]
       },
       "2014/2014": {
@@ -25933,32 +25933,32 @@
       "2014/2026": {
         "eraA": 2014,
         "eraB": 2026,
-        "similarityIndex": 27.19,
-        "confidence": 0.6057,
+        "similarityIndex": 27.72,
+        "confidence": 0.6272,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0644,
-          "diversityAlignment": 0.9791,
-          "genreSimilarity": 0.5912,
-          "noveltyAlignment": 0.5745,
-          "persistentStrength": 0.0155,
-          "trackOverlap": 0.0182
+          "artistOverlap": 0.0656,
+          "diversityAlignment": 0.9806,
+          "genreSimilarity": 0.5961,
+          "noveltyAlignment": 0.614,
+          "persistentStrength": 0.0156,
+          "trackOverlap": 0.0184
         },
         "overlap": {
-          "artistJaccard": 0.0644,
-          "trackJaccard": 0.0182
+          "artistJaccard": 0.0656,
+          "trackJaccard": 0.0184
         },
         "novelty": {
-          "alignment": 0.5745,
+          "alignment": 0.614,
           "eraA": 0.8353,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9791,
+          "alignment": 0.9806,
           "eraA": 0.9617,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.5912,
+        "genreSimilarity": 0.5961,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -25997,10 +25997,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -26013,22 +26013,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -26070,10 +26070,10 @@
           }
         ],
         "insightBullets": [
-          "2014 had 4167 scrobbles across 2927 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.018.",
-          "Novelty shifted from 0.835 to 0.410; diversity entropy shifted from 0.962 to 0.983.",
-          "Era Similarity Index: 27.19/100 (confidence 0.606)."
+          "2014 had 4167 scrobbles across 2927 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.018.",
+          "Novelty shifted from 0.835 to 0.449; diversity entropy shifted from 0.962 to 0.981.",
+          "Era Similarity Index: 27.72/100 (confidence 0.627)."
         ]
       },
       "2015/2015": {
@@ -27575,32 +27575,32 @@
       "2015/2026": {
         "eraA": 2015,
         "eraB": 2026,
-        "similarityIndex": 27.4,
-        "confidence": 0.6358,
+        "similarityIndex": 27.96,
+        "confidence": 0.6564,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0642,
-          "diversityAlignment": 0.978,
-          "genreSimilarity": 0.578,
-          "noveltyAlignment": 0.6082,
+          "artistOverlap": 0.0641,
+          "diversityAlignment": 0.9795,
+          "genreSimilarity": 0.5882,
+          "noveltyAlignment": 0.6477,
           "persistentStrength": 0.0205,
-          "trackOverlap": 0.0206
+          "trackOverlap": 0.0208
         },
         "overlap": {
-          "artistJaccard": 0.0642,
-          "trackJaccard": 0.0206
+          "artistJaccard": 0.0641,
+          "trackJaccard": 0.0208
         },
         "novelty": {
-          "alignment": 0.6082,
+          "alignment": 0.6477,
           "eraA": 0.8016,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.978,
+          "alignment": 0.9795,
           "eraA": 0.9606,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.578,
+        "genreSimilarity": 0.5882,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -27639,10 +27639,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -27655,22 +27655,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -27712,10 +27712,10 @@
           }
         ],
         "insightBullets": [
-          "2015 had 4684 scrobbles across 3095 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
+          "2015 had 4684 scrobbles across 3095 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
           "Artist overlap (Jaccard) was 0.064 and track overlap was 0.021.",
-          "Novelty shifted from 0.802 to 0.410; diversity entropy shifted from 0.961 to 0.983.",
-          "Era Similarity Index: 27.40/100 (confidence 0.636)."
+          "Novelty shifted from 0.802 to 0.449; diversity entropy shifted from 0.961 to 0.981.",
+          "Era Similarity Index: 27.96/100 (confidence 0.656)."
         ]
       },
       "2016/2016": {
@@ -29071,39 +29071,39 @@
       "2016/2026": {
         "eraA": 2016,
         "eraB": 2026,
-        "similarityIndex": 29.39,
-        "confidence": 0.6183,
+        "similarityIndex": 29.92,
+        "confidence": 0.6355,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0639,
-          "diversityAlignment": 0.9695,
-          "genreSimilarity": 0.6073,
-          "noveltyAlignment": 0.7896,
-          "persistentStrength": 0.0124,
-          "trackOverlap": 0.0157
+          "artistOverlap": 0.0657,
+          "diversityAlignment": 0.971,
+          "genreSimilarity": 0.6094,
+          "noveltyAlignment": 0.8292,
+          "persistentStrength": 0.0128,
+          "trackOverlap": 0.0165
         },
         "overlap": {
-          "artistJaccard": 0.0639,
-          "trackJaccard": 0.0157
+          "artistJaccard": 0.0657,
+          "trackJaccard": 0.0165
         },
         "novelty": {
-          "alignment": 0.7896,
+          "alignment": 0.8292,
           "eraA": 0.6202,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9695,
+          "alignment": 0.971,
           "eraA": 0.9521,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6073,
+        "genreSimilarity": 0.6094,
         "persistentFavorites": [
           {
             "artist": "Beach House",
             "countA": 16,
-            "countB": 9,
+            "countB": 10,
             "rateA": 0.0437,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -29142,31 +29142,31 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
+            "artist": "The Smile",
+            "countA": 0,
+            "countB": 8,
+            "delta": 0.0219,
+            "rateA": 0,
+            "rateB": 0.0219,
+            "track": "The Smoke"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 8,
+            "delta": 0.0219,
+            "rateA": 0,
+            "rateB": 0.0219,
+            "track": "davina mccall"
+          },
+          {
             "artist": "Allah-Las",
             "countA": 0,
             "countB": 7,
             "delta": 0.0192,
             "rateA": 0,
             "rateB": 0.0192,
-            "track": "Star"
-          },
-          {
-            "artist": "Black Country, New Road",
-            "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
-            "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
-          },
-          {
-            "artist": "The Smile",
-            "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
-            "rateA": 0,
-            "rateB": 0.0192,
-            "track": "The Smoke"
+            "track": "Raspberry Jam"
           }
         ],
         "falling": [
@@ -29208,10 +29208,10 @@
           }
         ],
         "insightBullets": [
-          "2016 had 8856 scrobbles across 4323 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.016.",
-          "Novelty shifted from 0.620 to 0.410; diversity entropy shifted from 0.952 to 0.983.",
-          "Era Similarity Index: 29.39/100 (confidence 0.618)."
+          "2016 had 8856 scrobbles across 4323 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.017.",
+          "Novelty shifted from 0.620 to 0.449; diversity entropy shifted from 0.952 to 0.981.",
+          "Era Similarity Index: 29.92/100 (confidence 0.635)."
         ]
       },
       "2017/2017": {
@@ -30421,39 +30421,39 @@
       "2017/2026": {
         "eraA": 2017,
         "eraB": 2026,
-        "similarityIndex": 28.38,
-        "confidence": 0.5325,
+        "similarityIndex": 28.6,
+        "confidence": 0.5316,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.065,
-          "diversityAlignment": 0.9856,
-          "genreSimilarity": 0.6127,
-          "noveltyAlignment": 0.6254,
-          "persistentStrength": 0.0251,
-          "trackOverlap": 0.0271
+          "artistOverlap": 0.0638,
+          "diversityAlignment": 0.9871,
+          "genreSimilarity": 0.6033,
+          "noveltyAlignment": 0.6649,
+          "persistentStrength": 0.0246,
+          "trackOverlap": 0.0268
         },
         "overlap": {
-          "artistJaccard": 0.065,
-          "trackJaccard": 0.0271
+          "artistJaccard": 0.0638,
+          "trackJaccard": 0.0268
         },
         "novelty": {
-          "alignment": 0.6254,
+          "alignment": 0.6649,
           "eraA": 0.7844,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9856,
+          "alignment": 0.9871,
           "eraA": 0.9682,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6127,
+        "genreSimilarity": 0.6033,
         "persistentFavorites": [
           {
             "artist": "Khruangbin",
             "countA": 4,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.011,
-            "rateB": 0.011,
+            "rateB": 0.0137,
             "track": "White Gloves"
           },
           {
@@ -30483,6 +30483,15 @@
         ],
         "rising": [
           {
+            "artist": "Beach House",
+            "countA": 1,
+            "countB": 10,
+            "delta": 0.0247,
+            "rateA": 0.0027,
+            "rateB": 0.0274,
+            "track": "Lazuli"
+          },
+          {
             "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 8,
@@ -30492,31 +30501,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Beach House",
-            "countA": 1,
-            "countB": 9,
+            "artist": "The Smile",
+            "countA": 0,
+            "countB": 8,
             "delta": 0.0219,
-            "rateA": 0.0027,
-            "rateB": 0.0247,
-            "track": "Lazuli"
+            "rateA": 0,
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
-          },
-          {
-            "artist": "Black Country, New Road",
-            "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
-            "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -30558,10 +30558,10 @@
           }
         ],
         "insightBullets": [
-          "2017 had 2082 scrobbles across 1410 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.065 and track overlap was 0.027.",
-          "Novelty shifted from 0.784 to 0.410; diversity entropy shifted from 0.968 to 0.983.",
-          "Era Similarity Index: 28.38/100 (confidence 0.532)."
+          "2017 had 2082 scrobbles across 1410 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.027.",
+          "Novelty shifted from 0.784 to 0.449; diversity entropy shifted from 0.968 to 0.981.",
+          "Era Similarity Index: 28.60/100 (confidence 0.532)."
         ]
       },
       "2018/2018": {
@@ -31625,32 +31625,32 @@
       "2018/2026": {
         "eraA": 2018,
         "eraB": 2026,
-        "similarityIndex": 29.05,
-        "confidence": 0.5643,
+        "similarityIndex": 29.5,
+        "confidence": 0.5879,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0859,
-          "diversityAlignment": 0.9709,
-          "genreSimilarity": 0.5927,
-          "noveltyAlignment": 0.6712,
+          "artistOverlap": 0.0865,
+          "diversityAlignment": 0.9724,
+          "genreSimilarity": 0.5946,
+          "noveltyAlignment": 0.7108,
           "persistentStrength": 0.0198,
-          "trackOverlap": 0.0252
+          "trackOverlap": 0.025
         },
         "overlap": {
-          "artistJaccard": 0.0859,
-          "trackJaccard": 0.0252
+          "artistJaccard": 0.0865,
+          "trackJaccard": 0.025
         },
         "novelty": {
-          "alignment": 0.6712,
+          "alignment": 0.7108,
           "eraA": 0.7386,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9709,
+          "alignment": 0.9724,
           "eraA": 0.9534,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.5927,
+        "genreSimilarity": 0.5946,
         "persistentFavorites": [
           {
             "artist": "The Brian Jonestown Massacre",
@@ -31663,9 +31663,17 @@
           {
             "artist": "Khruangbin",
             "countA": 3,
-            "countB": 4,
+            "countB": 3,
             "rateA": 0.0082,
-            "rateB": 0.011,
+            "rateB": 0.0082,
+            "track": "Two Fish and an Elephant"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 3,
+            "countB": 5,
+            "rateA": 0.0082,
+            "rateB": 0.0137,
             "track": "White Gloves"
           },
           {
@@ -31675,24 +31683,16 @@
             "rateA": 0.0082,
             "rateB": 0.011,
             "track": "Sweet Tides"
-          },
-          {
-            "artist": "A Perfect Circle",
-            "countA": 9,
-            "countB": 2,
-            "rateA": 0.0247,
-            "rateB": 0.0055,
-            "track": "01 Hollow"
           }
         ],
         "rising": [
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -31705,22 +31705,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -31762,10 +31762,10 @@
           }
         ],
         "insightBullets": [
-          "2018 had 3327 scrobbles across 2054 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.086 and track overlap was 0.025.",
-          "Novelty shifted from 0.739 to 0.410; diversity entropy shifted from 0.953 to 0.983.",
-          "Era Similarity Index: 29.05/100 (confidence 0.564)."
+          "2018 had 3327 scrobbles across 2054 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.087 and track overlap was 0.025.",
+          "Novelty shifted from 0.739 to 0.449; diversity entropy shifted from 0.953 to 0.981.",
+          "Era Similarity Index: 29.50/100 (confidence 0.588)."
         ]
       },
       "2019/2019": {
@@ -32683,32 +32683,32 @@
       "2019/2026": {
         "eraA": 2019,
         "eraB": 2026,
-        "similarityIndex": 29.38,
-        "confidence": 0.5861,
+        "similarityIndex": 29.69,
+        "confidence": 0.6084,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0837,
-          "diversityAlignment": 0.9865,
-          "genreSimilarity": 0.603,
-          "noveltyAlignment": 0.6752,
-          "persistentStrength": 0.023,
-          "trackOverlap": 0.0269
+          "artistOverlap": 0.0843,
+          "diversityAlignment": 0.9879,
+          "genreSimilarity": 0.5959,
+          "noveltyAlignment": 0.7148,
+          "persistentStrength": 0.0227,
+          "trackOverlap": 0.0263
         },
         "overlap": {
-          "artistJaccard": 0.0837,
-          "trackJaccard": 0.0269
+          "artistJaccard": 0.0843,
+          "trackJaccard": 0.0263
         },
         "novelty": {
-          "alignment": 0.6752,
+          "alignment": 0.7148,
           "eraA": 0.7346,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9865,
+          "alignment": 0.9879,
           "eraA": 0.969,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.603,
+        "genreSimilarity": 0.5959,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -32729,17 +32729,17 @@
           {
             "artist": "Khruangbin",
             "countA": 4,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.011,
-            "rateB": 0.011,
+            "rateB": 0.0137,
             "track": "August 10"
           },
           {
             "artist": "Khruangbin",
             "countA": 4,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.011,
-            "rateB": 0.011,
+            "rateB": 0.0137,
             "track": "White Gloves"
           }
         ],
@@ -32747,10 +32747,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -32763,22 +32763,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -32820,10 +32820,10 @@
           }
         ],
         "insightBullets": [
-          "2019 had 3798 scrobbles across 2430 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.084 and track overlap was 0.027.",
-          "Novelty shifted from 0.735 to 0.410; diversity entropy shifted from 0.969 to 0.983.",
-          "Era Similarity Index: 29.38/100 (confidence 0.586)."
+          "2019 had 3798 scrobbles across 2430 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.084 and track overlap was 0.026.",
+          "Novelty shifted from 0.735 to 0.449; diversity entropy shifted from 0.969 to 0.981.",
+          "Era Similarity Index: 29.69/100 (confidence 0.608)."
         ]
       },
       "2020/2020": {
@@ -33595,32 +33595,32 @@
       "2020/2026": {
         "eraA": 2020,
         "eraB": 2026,
-        "similarityIndex": 31,
-        "confidence": 0.6489,
+        "similarityIndex": 31.57,
+        "confidence": 0.6692,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0972,
-          "diversityAlignment": 0.9867,
-          "genreSimilarity": 0.6955,
-          "noveltyAlignment": 0.6378,
-          "persistentStrength": 0.0287,
-          "trackOverlap": 0.0311
+          "artistOverlap": 0.0974,
+          "diversityAlignment": 0.9882,
+          "genreSimilarity": 0.7051,
+          "noveltyAlignment": 0.6773,
+          "persistentStrength": 0.0288,
+          "trackOverlap": 0.0315
         },
         "overlap": {
-          "artistJaccard": 0.0972,
-          "trackJaccard": 0.0311
+          "artistJaccard": 0.0974,
+          "trackJaccard": 0.0315
         },
         "novelty": {
-          "alignment": 0.6378,
+          "alignment": 0.6773,
           "eraA": 0.772,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9867,
+          "alignment": 0.9882,
           "eraA": 0.9693,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6955,
+        "genreSimilarity": 0.7051,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -33641,9 +33641,9 @@
           {
             "artist": "Khruangbin",
             "countA": 4,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.0109,
-            "rateB": 0.011,
+            "rateB": 0.0137,
             "track": "August 10"
           },
           {
@@ -33659,10 +33659,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -33675,22 +33675,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -33732,10 +33732,10 @@
           }
         ],
         "insightBullets": [
-          "2020 had 4897 scrobbles across 3285 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
+          "2020 had 4897 scrobbles across 3285 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
           "Artist overlap (Jaccard) was 0.097 and track overlap was 0.031.",
-          "Novelty shifted from 0.772 to 0.410; diversity entropy shifted from 0.969 to 0.983.",
-          "Era Similarity Index: 31.00/100 (confidence 0.649)."
+          "Novelty shifted from 0.772 to 0.449; diversity entropy shifted from 0.969 to 0.981.",
+          "Era Similarity Index: 31.57/100 (confidence 0.669)."
         ]
       },
       "2021/2021": {
@@ -34361,32 +34361,32 @@
       "2021/2026": {
         "eraA": 2021,
         "eraB": 2026,
-        "similarityIndex": 29.5,
-        "confidence": 0.6069,
+        "similarityIndex": 30.11,
+        "confidence": 0.6284,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0977,
-          "diversityAlignment": 0.9964,
-          "genreSimilarity": 0.5798,
-          "noveltyAlignment": 0.6454,
-          "persistentStrength": 0.03,
-          "trackOverlap": 0.0326
+          "artistOverlap": 0.1004,
+          "diversityAlignment": 0.9979,
+          "genreSimilarity": 0.5835,
+          "noveltyAlignment": 0.6849,
+          "persistentStrength": 0.031,
+          "trackOverlap": 0.0343
         },
         "overlap": {
-          "artistJaccard": 0.0977,
-          "trackJaccard": 0.0326
+          "artistJaccard": 0.1004,
+          "trackJaccard": 0.0343
         },
         "novelty": {
-          "alignment": 0.6454,
+          "alignment": 0.6849,
           "eraA": 0.7644,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9964,
+          "alignment": 0.9979,
           "eraA": 0.979,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.5798,
+        "genreSimilarity": 0.5835,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -34407,17 +34407,17 @@
           {
             "artist": "Allah-Las",
             "countA": 3,
-            "countB": 6,
+            "countB": 7,
             "rateA": 0.0082,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Raspberry Jam"
           },
           {
             "artist": "Khruangbin",
             "countA": 3,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.0082,
-            "rateB": 0.011,
+            "rateB": 0.0137,
             "track": "August 10"
           }
         ],
@@ -34425,10 +34425,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -34441,22 +34441,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Allah-Las",
+            "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Star"
+            "rateB": 0.0219,
+            "track": "The Smoke"
           },
           {
-            "artist": "Black Country, New Road",
+            "artist": "Wet Leg",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -34498,10 +34498,10 @@
           }
         ],
         "insightBullets": [
-          "2021 had 4188 scrobbles across 2950 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.098 and track overlap was 0.033.",
-          "Novelty shifted from 0.764 to 0.410; diversity entropy shifted from 0.979 to 0.983.",
-          "Era Similarity Index: 29.50/100 (confidence 0.607)."
+          "2021 had 4188 scrobbles across 2950 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.100 and track overlap was 0.034.",
+          "Novelty shifted from 0.764 to 0.449; diversity entropy shifted from 0.979 to 0.981.",
+          "Era Similarity Index: 30.11/100 (confidence 0.628)."
         ]
       },
       "2022/2022": {
@@ -34981,32 +34981,32 @@
       "2022/2026": {
         "eraA": 2022,
         "eraB": 2026,
-        "similarityIndex": 29.37,
-        "confidence": 0.5641,
+        "similarityIndex": 29.92,
+        "confidence": 0.5876,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.088,
-          "diversityAlignment": 0.9975,
-          "genreSimilarity": 0.5848,
-          "noveltyAlignment": 0.6659,
-          "persistentStrength": 0.027,
-          "trackOverlap": 0.03
+          "artistOverlap": 0.0904,
+          "diversityAlignment": 0.9989,
+          "genreSimilarity": 0.5875,
+          "noveltyAlignment": 0.7054,
+          "persistentStrength": 0.0271,
+          "trackOverlap": 0.0306
         },
         "overlap": {
-          "artistJaccard": 0.088,
-          "trackJaccard": 0.03
+          "artistJaccard": 0.0904,
+          "trackJaccard": 0.0306
         },
         "novelty": {
-          "alignment": 0.6659,
+          "alignment": 0.7054,
           "eraA": 0.7439,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9975,
+          "alignment": 0.9989,
           "eraA": 0.98,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.5848,
+        "genreSimilarity": 0.5875,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -35045,10 +35045,10 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 9,
-            "delta": 0.0247,
+            "countB": 10,
+            "delta": 0.0274,
             "rateA": 0,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -35061,22 +35061,22 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Black Country, New Road",
-            "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
-            "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
-          },
-          {
             "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
+            "rateB": 0.0219,
             "track": "The Smoke"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 8,
+            "delta": 0.0219,
+            "rateA": 0,
+            "rateB": 0.0219,
+            "track": "davina mccall"
           }
         ],
         "falling": [
@@ -35118,10 +35118,10 @@
           }
         ],
         "insightBullets": [
-          "2022 had 3321 scrobbles across 2335 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.088 and track overlap was 0.030.",
-          "Novelty shifted from 0.744 to 0.410; diversity entropy shifted from 0.980 to 0.983.",
-          "Era Similarity Index: 29.37/100 (confidence 0.564)."
+          "2022 had 3321 scrobbles across 2335 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.090 and track overlap was 0.031.",
+          "Novelty shifted from 0.744 to 0.449; diversity entropy shifted from 0.980 to 0.981.",
+          "Era Similarity Index: 29.92/100 (confidence 0.588)."
         ]
       },
       "2023/2023": {
@@ -35455,32 +35455,32 @@
       "2023/2026": {
         "eraA": 2023,
         "eraB": 2026,
-        "similarityIndex": 33.08,
-        "confidence": 0.6367,
+        "similarityIndex": 33.47,
+        "confidence": 0.6573,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1169,
-          "diversityAlignment": 0.9785,
-          "genreSimilarity": 0.6871,
-          "noveltyAlignment": 0.7374,
-          "persistentStrength": 0.0455,
-          "trackOverlap": 0.0517
+          "artistOverlap": 0.1203,
+          "diversityAlignment": 0.98,
+          "genreSimilarity": 0.6786,
+          "noveltyAlignment": 0.7769,
+          "persistentStrength": 0.0453,
+          "trackOverlap": 0.0513
         },
         "overlap": {
-          "artistJaccard": 0.1169,
-          "trackJaccard": 0.0517
+          "artistJaccard": 0.1203,
+          "trackJaccard": 0.0513
         },
         "novelty": {
-          "alignment": 0.7374,
+          "alignment": 0.7769,
           "eraA": 0.6724,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9785,
+          "alignment": 0.98,
           "eraA": 0.961,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6871,
+        "genreSimilarity": 0.6786,
         "persistentFavorites": [
           {
             "artist": "Boards of Canada",
@@ -35526,31 +35526,31 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
-            "artist": "Black Country, New Road",
-            "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
-            "rateA": 0,
-            "rateB": 0.0192,
-            "track": "Track X"
-          },
-          {
             "artist": "The Smile",
             "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
+            "countB": 8,
+            "delta": 0.0219,
             "rateA": 0,
-            "rateB": 0.0192,
+            "rateB": 0.0219,
             "track": "The Smoke"
           },
           {
             "artist": "Wet Leg",
             "countA": 0,
+            "countB": 8,
+            "delta": 0.0219,
+            "rateA": 0,
+            "rateB": 0.0219,
+            "track": "davina mccall"
+          },
+          {
+            "artist": "Allah-Las",
+            "countA": 0,
             "countB": 7,
             "delta": 0.0192,
             "rateA": 0,
             "rateB": 0.0192,
-            "track": "davina mccall"
+            "track": "Raspberry Jam"
           }
         ],
         "falling": [
@@ -35592,10 +35592,10 @@
           }
         ],
         "insightBullets": [
-          "2023 had 4699 scrobbles across 2662 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.117 and track overlap was 0.052.",
-          "Novelty shifted from 0.672 to 0.410; diversity entropy shifted from 0.961 to 0.983.",
-          "Era Similarity Index: 33.08/100 (confidence 0.637)."
+          "2023 had 4699 scrobbles across 2662 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.120 and track overlap was 0.051.",
+          "Novelty shifted from 0.672 to 0.449; diversity entropy shifted from 0.961 to 0.981.",
+          "Era Similarity Index: 33.47/100 (confidence 0.657)."
         ]
       },
       "2024/2024": {
@@ -35783,32 +35783,32 @@
       "2024/2026": {
         "eraA": 2024,
         "eraB": 2026,
-        "similarityIndex": 33.18,
-        "confidence": 0.6266,
+        "similarityIndex": 33.93,
+        "confidence": 0.6445,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1247,
-          "diversityAlignment": 0.9858,
-          "genreSimilarity": 0.6661,
-          "noveltyAlignment": 0.7424,
-          "persistentStrength": 0.0468,
-          "trackOverlap": 0.0525
+          "artistOverlap": 0.1275,
+          "diversityAlignment": 0.9872,
+          "genreSimilarity": 0.6771,
+          "noveltyAlignment": 0.782,
+          "persistentStrength": 0.0487,
+          "trackOverlap": 0.0548
         },
         "overlap": {
-          "artistJaccard": 0.1247,
-          "trackJaccard": 0.0525
+          "artistJaccard": 0.1275,
+          "trackJaccard": 0.0548
         },
         "novelty": {
-          "alignment": 0.7424,
+          "alignment": 0.782,
           "eraA": 0.6674,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9858,
+          "alignment": 0.9872,
           "eraA": 0.9683,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6661,
+        "genreSimilarity": 0.6771,
         "persistentFavorites": [
           {
             "artist": "Allah-Las",
@@ -35827,20 +35827,20 @@
             "track": "Like I Say (I runaway)"
           },
           {
-            "artist": "Arc De Soleil",
-            "countA": 8,
-            "countB": 4,
-            "rateA": 0.0219,
-            "rateB": 0.011,
-            "track": "The Thief in Marrakesh"
+            "artist": "Sven Wunder",
+            "countA": 6,
+            "countB": 5,
+            "rateA": 0.0164,
+            "rateB": 0.0137,
+            "track": "Take A Break"
           },
           {
-            "artist": "Crumb",
-            "countA": 6,
-            "countB": 4,
-            "rateA": 0.0164,
-            "rateB": 0.011,
-            "track": "Ghostride"
+            "artist": "Khruangbin",
+            "countA": 5,
+            "countB": 5,
+            "rateA": 0.0137,
+            "rateB": 0.0137,
+            "track": "May Ninth"
           }
         ],
         "rising": [
@@ -35854,6 +35854,15 @@
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 8,
+            "delta": 0.0219,
+            "rateA": 0,
+            "rateB": 0.0219,
+            "track": "davina mccall"
+          },
+          {
             "artist": "Black Country, New Road",
             "countA": 0,
             "countB": 7,
@@ -35861,15 +35870,6 @@
             "rateA": 0,
             "rateB": 0.0192,
             "track": "Track X"
-          },
-          {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 7,
-            "delta": 0.0192,
-            "rateA": 0,
-            "rateB": 0.0192,
-            "track": "davina mccall"
           },
           {
             "artist": "Wet Leg",
@@ -35920,10 +35920,10 @@
           }
         ],
         "insightBullets": [
-          "2024 had 7550 scrobbles across 4347 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.125 and track overlap was 0.053.",
-          "Novelty shifted from 0.667 to 0.410; diversity entropy shifted from 0.968 to 0.983.",
-          "Era Similarity Index: 33.18/100 (confidence 0.627)."
+          "2024 had 7550 scrobbles across 4347 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.128 and track overlap was 0.055.",
+          "Novelty shifted from 0.667 to 0.449; diversity entropy shifted from 0.968 to 0.981.",
+          "Era Similarity Index: 33.93/100 (confidence 0.644)."
         ]
       },
       "2025/2025": {
@@ -35965,39 +35965,39 @@
       "2025/2026": {
         "eraA": 2025,
         "eraB": 2026,
-        "similarityIndex": 36.11,
-        "confidence": 0.6206,
+        "similarityIndex": 36.99,
+        "confidence": 0.638,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1456,
-          "diversityAlignment": 0.9875,
-          "genreSimilarity": 0.6503,
-          "noveltyAlignment": 0.9022,
-          "persistentStrength": 0.0732,
-          "trackOverlap": 0.0799
+          "artistOverlap": 0.1539,
+          "diversityAlignment": 0.989,
+          "genreSimilarity": 0.6534,
+          "noveltyAlignment": 0.9418,
+          "persistentStrength": 0.0769,
+          "trackOverlap": 0.0844
         },
         "overlap": {
-          "artistJaccard": 0.1456,
-          "trackJaccard": 0.0799
+          "artistJaccard": 0.1539,
+          "trackJaccard": 0.0844
         },
         "novelty": {
-          "alignment": 0.9022,
+          "alignment": 0.9418,
           "eraA": 0.5076,
-          "eraB": 0.4098
+          "eraB": 0.4493
         },
         "diversity": {
-          "alignment": 0.9875,
+          "alignment": 0.989,
           "eraA": 0.97,
-          "eraB": 0.9825
+          "eraB": 0.9811
         },
-        "genreSimilarity": 0.6503,
+        "genreSimilarity": 0.6534,
         "persistentFavorites": [
           {
             "artist": "Beach House",
             "countA": 10,
-            "countB": 9,
+            "countB": 10,
             "rateA": 0.0274,
-            "rateB": 0.0247,
+            "rateB": 0.0274,
             "track": "Lazuli"
           },
           {
@@ -36019,9 +36019,9 @@
           {
             "artist": "Broadcast",
             "countA": 5,
-            "countB": 5,
+            "countB": 6,
             "rateA": 0.0137,
-            "rateB": 0.0137,
+            "rateB": 0.0164,
             "track": "Come on Let's Go"
           }
         ],
@@ -36036,6 +36036,24 @@
             "track": "Track X"
           },
           {
+            "artist": "The Smile",
+            "countA": 2,
+            "countB": 8,
+            "delta": 0.0164,
+            "rateA": 0.0055,
+            "rateB": 0.0219,
+            "track": "The Smoke"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 2,
+            "countB": 8,
+            "delta": 0.0164,
+            "rateA": 0.0055,
+            "rateB": 0.0219,
+            "track": "davina mccall"
+          },
+          {
             "artist": "Geese",
             "countA": 0,
             "countB": 6,
@@ -36043,24 +36061,6 @@
             "rateA": 0,
             "rateB": 0.0164,
             "track": "Crusades"
-          },
-          {
-            "artist": "Allah-Las",
-            "countA": 2,
-            "countB": 7,
-            "delta": 0.0137,
-            "rateA": 0.0055,
-            "rateB": 0.0192,
-            "track": "Star"
-          },
-          {
-            "artist": "The Smile",
-            "countA": 2,
-            "countB": 7,
-            "delta": 0.0137,
-            "rateA": 0.0055,
-            "rateB": 0.0192,
-            "track": "The Smoke"
           }
         ],
         "falling": [
@@ -36102,10 +36102,10 @@
           }
         ],
         "insightBullets": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2128 scrobbles across 1164 unique tracks.",
-          "Artist overlap (Jaccard) was 0.146 and track overlap was 0.080.",
-          "Novelty shifted from 0.508 to 0.410; diversity entropy shifted from 0.970 to 0.983.",
-          "Era Similarity Index: 36.11/100 (confidence 0.621)."
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "Artist overlap (Jaccard) was 0.154 and track overlap was 0.084.",
+          "Novelty shifted from 0.508 to 0.449; diversity entropy shifted from 0.970 to 0.981.",
+          "Era Similarity Index: 36.99/100 (confidence 0.638)."
         ]
       },
       "2026/2026": {
@@ -38545,32 +38545,32 @@
       "2005/2026": {
         "eraA": 2005,
         "eraB": 2026,
-        "similarityIndex": 28,
-        "confidence": 0.4827,
+        "similarityIndex": 28.19,
+        "confidence": 0.5057,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.025,
-          "diversityAlignment": 0.9989,
-          "genreSimilarity": 0.5153,
-          "noveltyAlignment": 0.9324,
-          "persistentStrength": 0.0024,
-          "trackOverlap": 0.0029
+          "artistOverlap": 0.0247,
+          "diversityAlignment": 0.9978,
+          "genreSimilarity": 0.5233,
+          "noveltyAlignment": 0.94,
+          "persistentStrength": 0.0027,
+          "trackOverlap": 0.0034
         },
         "overlap": {
-          "artistJaccard": 0.025,
-          "trackJaccard": 0.0029
+          "artistJaccard": 0.0247,
+          "trackJaccard": 0.0034
         },
         "novelty": {
-          "alignment": 0.9324,
+          "alignment": 0.94,
           "eraA": 0.7258,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9989,
+          "alignment": 0.9978,
           "eraA": 0.9879,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.5153,
+        "genreSimilarity": 0.5233,
         "persistentFavorites": [
           {
             "artist": "Sonic Youth",
@@ -38609,11 +38609,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -38625,22 +38634,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -38682,10 +38682,10 @@
           }
         ],
         "insightBullets": [
-          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.025 and track overlap was 0.003.",
-          "Novelty shifted from 0.726 to 0.793; diversity entropy shifted from 0.988 to 0.987.",
-          "Era Similarity Index: 28.00/100 (confidence 0.483)."
+          "Novelty shifted from 0.726 to 0.786; diversity entropy shifted from 0.988 to 0.986.",
+          "Era Similarity Index: 28.19/100 (confidence 0.506)."
         ]
       },
       "2006/2006": {
@@ -40941,32 +40941,32 @@
       "2006/2026": {
         "eraA": 2006,
         "eraB": 2026,
-        "similarityIndex": 29.73,
-        "confidence": 0.4347,
+        "similarityIndex": 29.48,
+        "confidence": 0.4616,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.055,
-          "diversityAlignment": 0.9923,
-          "genreSimilarity": 0.5769,
-          "noveltyAlignment": 0.9065,
-          "persistentStrength": 0.0053,
-          "trackOverlap": 0.0057
+          "artistOverlap": 0.0534,
+          "diversityAlignment": 0.9911,
+          "genreSimilarity": 0.5701,
+          "noveltyAlignment": 0.8989,
+          "persistentStrength": 0.0051,
+          "trackOverlap": 0.0055
         },
         "overlap": {
-          "artistJaccard": 0.055,
-          "trackJaccard": 0.0057
+          "artistJaccard": 0.0534,
+          "trackJaccard": 0.0055
         },
         "novelty": {
-          "alignment": 0.9065,
+          "alignment": 0.8989,
           "eraA": 0.8869,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9923,
+          "alignment": 0.9911,
           "eraA": 0.9946,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.5769,
+        "genreSimilarity": 0.5701,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -41005,11 +41005,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -41021,22 +41030,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -41078,10 +41078,10 @@
           }
         ],
         "insightBullets": [
-          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.055 and track overlap was 0.006.",
-          "Novelty shifted from 0.887 to 0.793; diversity entropy shifted from 0.995 to 0.987.",
-          "Era Similarity Index: 29.73/100 (confidence 0.435)."
+          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.053 and track overlap was 0.005.",
+          "Novelty shifted from 0.887 to 0.786; diversity entropy shifted from 0.995 to 0.986.",
+          "Era Similarity Index: 29.48/100 (confidence 0.462)."
         ]
       },
       "2007/2007": {
@@ -43191,32 +43191,32 @@
       "2007/2026": {
         "eraA": 2007,
         "eraB": 2026,
-        "similarityIndex": 31.25,
-        "confidence": 0.5604,
+        "similarityIndex": 31.36,
+        "confidence": 0.5787,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0603,
-          "diversityAlignment": 0.9921,
-          "genreSimilarity": 0.6007,
-          "noveltyAlignment": 0.9906,
-          "persistentStrength": 0.0082,
-          "trackOverlap": 0.0103
+          "artistOverlap": 0.0589,
+          "diversityAlignment": 0.9932,
+          "genreSimilarity": 0.6053,
+          "noveltyAlignment": 0.9982,
+          "persistentStrength": 0.0084,
+          "trackOverlap": 0.0104
         },
         "overlap": {
-          "artistJaccard": 0.0603,
-          "trackJaccard": 0.0103
+          "artistJaccard": 0.0589,
+          "trackJaccard": 0.0104
         },
         "novelty": {
-          "alignment": 0.9906,
+          "alignment": 0.9982,
           "eraA": 0.784,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9921,
+          "alignment": 0.9932,
           "eraA": 0.9789,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6007,
+        "genreSimilarity": 0.6053,
         "persistentFavorites": [
           {
             "artist": "Aphex Twin",
@@ -43255,11 +43255,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -43271,22 +43280,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -43328,10 +43328,10 @@
           }
         ],
         "insightBullets": [
-          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.060 and track overlap was 0.010.",
-          "Novelty shifted from 0.784 to 0.793; diversity entropy shifted from 0.979 to 0.987.",
-          "Era Similarity Index: 31.25/100 (confidence 0.560)."
+          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.010.",
+          "Novelty shifted from 0.784 to 0.786; diversity entropy shifted from 0.979 to 0.986.",
+          "Era Similarity Index: 31.36/100 (confidence 0.579)."
         ]
       },
       "2008/2008": {
@@ -45296,31 +45296,31 @@
         "eraA": 2008,
         "eraB": 2026,
         "similarityIndex": 31.07,
-        "confidence": 0.5518,
+        "confidence": 0.5692,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0458,
-          "diversityAlignment": 0.9937,
-          "genreSimilarity": 0.6207,
-          "noveltyAlignment": 0.9976,
-          "persistentStrength": 0.0069,
-          "trackOverlap": 0.0085
+          "artistOverlap": 0.0461,
+          "diversityAlignment": 0.9948,
+          "genreSimilarity": 0.6233,
+          "noveltyAlignment": 0.9901,
+          "persistentStrength": 0.0071,
+          "trackOverlap": 0.0087
         },
         "overlap": {
-          "artistJaccard": 0.0458,
-          "trackJaccard": 0.0085
+          "artistJaccard": 0.0461,
+          "trackJaccard": 0.0087
         },
         "novelty": {
-          "alignment": 0.9976,
+          "alignment": 0.9901,
           "eraA": 0.7957,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9937,
+          "alignment": 0.9948,
           "eraA": 0.9805,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6207,
+        "genreSimilarity": 0.6233,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -45359,11 +45359,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -45375,22 +45384,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -45432,10 +45432,10 @@
           }
         ],
         "insightBullets": [
-          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.046 and track overlap was 0.008.",
-          "Novelty shifted from 0.796 to 0.793; diversity entropy shifted from 0.981 to 0.987.",
-          "Era Similarity Index: 31.07/100 (confidence 0.552)."
+          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.046 and track overlap was 0.009.",
+          "Novelty shifted from 0.796 to 0.786; diversity entropy shifted from 0.981 to 0.986.",
+          "Era Similarity Index: 31.07/100 (confidence 0.569)."
         ]
       },
       "2009/2009": {
@@ -47253,32 +47253,32 @@
       "2009/2026": {
         "eraA": 2009,
         "eraB": 2026,
-        "similarityIndex": 31.2,
-        "confidence": 0.5625,
+        "similarityIndex": 31.14,
+        "confidence": 0.5811,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0431,
-          "diversityAlignment": 0.9991,
-          "genreSimilarity": 0.6623,
-          "noveltyAlignment": 0.9517,
-          "persistentStrength": 0.0078,
-          "trackOverlap": 0.0086
+          "artistOverlap": 0.043,
+          "diversityAlignment": 0.998,
+          "genreSimilarity": 0.6643,
+          "noveltyAlignment": 0.9442,
+          "persistentStrength": 0.0076,
+          "trackOverlap": 0.0085
         },
         "overlap": {
-          "artistJaccard": 0.0431,
-          "trackJaccard": 0.0086
+          "artistJaccard": 0.043,
+          "trackJaccard": 0.0085
         },
         "novelty": {
-          "alignment": 0.9517,
+          "alignment": 0.9442,
           "eraA": 0.8417,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9991,
+          "alignment": 0.998,
           "eraA": 0.9877,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6623,
+        "genreSimilarity": 0.6643,
         "persistentFavorites": [
           {
             "artist": "The xx",
@@ -47317,11 +47317,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -47333,22 +47342,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -47390,10 +47390,10 @@
           }
         ],
         "insightBullets": [
-          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.009.",
-          "Novelty shifted from 0.842 to 0.793; diversity entropy shifted from 0.988 to 0.987.",
-          "Era Similarity Index: 31.20/100 (confidence 0.562)."
+          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.008.",
+          "Novelty shifted from 0.842 to 0.786; diversity entropy shifted from 0.988 to 0.986.",
+          "Era Similarity Index: 31.14/100 (confidence 0.581)."
         ]
       },
       "2010/2010": {
@@ -49065,32 +49065,32 @@
       "2010/2026": {
         "eraA": 2010,
         "eraB": 2026,
-        "similarityIndex": 31.57,
-        "confidence": 0.5739,
+        "similarityIndex": 31.59,
+        "confidence": 0.5939,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0498,
-          "diversityAlignment": 0.9888,
-          "genreSimilarity": 0.6441,
-          "noveltyAlignment": 0.9823,
-          "persistentStrength": 0.0125,
-          "trackOverlap": 0.0156
+          "artistOverlap": 0.0495,
+          "diversityAlignment": 0.9899,
+          "genreSimilarity": 0.6502,
+          "noveltyAlignment": 0.9748,
+          "persistentStrength": 0.0128,
+          "trackOverlap": 0.0159
         },
         "overlap": {
-          "artistJaccard": 0.0498,
-          "trackJaccard": 0.0156
+          "artistJaccard": 0.0495,
+          "trackJaccard": 0.0159
         },
         "novelty": {
-          "alignment": 0.9823,
+          "alignment": 0.9748,
           "eraA": 0.811,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9888,
+          "alignment": 0.9899,
           "eraA": 0.9756,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6441,
+        "genreSimilarity": 0.6502,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -49129,11 +49129,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -49145,22 +49154,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -49202,10 +49202,10 @@
           }
         ],
         "insightBullets": [
-          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.050 and track overlap was 0.016.",
-          "Novelty shifted from 0.811 to 0.793; diversity entropy shifted from 0.976 to 0.987.",
-          "Era Similarity Index: 31.57/100 (confidence 0.574)."
+          "Novelty shifted from 0.811 to 0.786; diversity entropy shifted from 0.976 to 0.986.",
+          "Era Similarity Index: 31.59/100 (confidence 0.594)."
         ]
       },
       "2011/2011": {
@@ -50731,32 +50731,32 @@
       "2011/2026": {
         "eraA": 2011,
         "eraB": 2026,
-        "similarityIndex": 32.46,
-        "confidence": 0.5512,
+        "similarityIndex": 32.83,
+        "confidence": 0.5686,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0551,
-          "diversityAlignment": 0.9897,
-          "genreSimilarity": 0.6869,
-          "noveltyAlignment": 0.9877,
-          "persistentStrength": 0.0124,
+          "artistOverlap": 0.0552,
+          "diversityAlignment": 0.9908,
+          "genreSimilarity": 0.7055,
+          "noveltyAlignment": 0.9952,
+          "persistentStrength": 0.0125,
           "trackOverlap": 0.0158
         },
         "overlap": {
-          "artistJaccard": 0.0551,
+          "artistJaccard": 0.0552,
           "trackJaccard": 0.0158
         },
         "novelty": {
-          "alignment": 0.9877,
+          "alignment": 0.9952,
           "eraA": 0.7811,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9897,
+          "alignment": 0.9908,
           "eraA": 0.9765,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6869,
+        "genreSimilarity": 0.7055,
         "persistentFavorites": [
           {
             "artist": "The xx",
@@ -50795,11 +50795,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -50811,22 +50820,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -50868,10 +50868,10 @@
           }
         ],
         "insightBullets": [
-          "2011 had 8608 scrobbles across 5993 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2011 had 8608 scrobbles across 5993 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.055 and track overlap was 0.016.",
-          "Novelty shifted from 0.781 to 0.793; diversity entropy shifted from 0.977 to 0.987.",
-          "Era Similarity Index: 32.46/100 (confidence 0.551)."
+          "Novelty shifted from 0.781 to 0.786; diversity entropy shifted from 0.977 to 0.986.",
+          "Era Similarity Index: 32.83/100 (confidence 0.569)."
         ]
       },
       "2012/2012": {
@@ -52251,32 +52251,32 @@
       "2012/2026": {
         "eraA": 2012,
         "eraB": 2026,
-        "similarityIndex": 32.1,
-        "confidence": 0.5134,
+        "similarityIndex": 32.42,
+        "confidence": 0.5351,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0589,
-          "diversityAlignment": 0.9814,
-          "genreSimilarity": 0.6593,
-          "noveltyAlignment": 0.969,
-          "persistentStrength": 0.0166,
-          "trackOverlap": 0.0223
+          "artistOverlap": 0.057,
+          "diversityAlignment": 0.9826,
+          "genreSimilarity": 0.6778,
+          "noveltyAlignment": 0.9766,
+          "persistentStrength": 0.0172,
+          "trackOverlap": 0.0232
         },
         "overlap": {
-          "artistJaccard": 0.0589,
-          "trackJaccard": 0.0223
+          "artistJaccard": 0.057,
+          "trackJaccard": 0.0232
         },
         "novelty": {
-          "alignment": 0.969,
+          "alignment": 0.9766,
           "eraA": 0.7624,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9814,
+          "alignment": 0.9826,
           "eraA": 0.9683,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6593,
+        "genreSimilarity": 0.6778,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -52315,11 +52315,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -52331,22 +52340,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -52388,10 +52388,10 @@
           }
         ],
         "insightBullets": [
-          "2012 had 4047 scrobbles across 2664 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.022.",
-          "Novelty shifted from 0.762 to 0.793; diversity entropy shifted from 0.968 to 0.987.",
-          "Era Similarity Index: 32.10/100 (confidence 0.513)."
+          "2012 had 4047 scrobbles across 2664 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.023.",
+          "Novelty shifted from 0.762 to 0.786; diversity entropy shifted from 0.968 to 0.986.",
+          "Era Similarity Index: 32.42/100 (confidence 0.535)."
         ]
       },
       "2013/2013": {
@@ -53625,32 +53625,32 @@
       "2013/2026": {
         "eraA": 2013,
         "eraB": 2026,
-        "similarityIndex": 31.89,
-        "confidence": 0.4874,
+        "similarityIndex": 31.72,
+        "confidence": 0.5101,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.06,
-          "diversityAlignment": 0.9965,
-          "genreSimilarity": 0.6359,
-          "noveltyAlignment": 0.9913,
-          "persistentStrength": 0.0112,
-          "trackOverlap": 0.0128
+          "artistOverlap": 0.0591,
+          "diversityAlignment": 0.9977,
+          "genreSimilarity": 0.6297,
+          "noveltyAlignment": 0.9838,
+          "persistentStrength": 0.0114,
+          "trackOverlap": 0.0132
         },
         "overlap": {
-          "artistJaccard": 0.06,
-          "trackJaccard": 0.0128
+          "artistJaccard": 0.0591,
+          "trackJaccard": 0.0132
         },
         "novelty": {
-          "alignment": 0.9913,
+          "alignment": 0.9838,
           "eraA": 0.802,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9965,
+          "alignment": 0.9977,
           "eraA": 0.9834,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6359,
+        "genreSimilarity": 0.6297,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -53689,11 +53689,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -53705,22 +53714,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -53762,10 +53762,10 @@
           }
         ],
         "insightBullets": [
-          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.060 and track overlap was 0.013.",
-          "Novelty shifted from 0.802 to 0.793; diversity entropy shifted from 0.983 to 0.987.",
-          "Era Similarity Index: 31.89/100 (confidence 0.487)."
+          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.013.",
+          "Novelty shifted from 0.802 to 0.786; diversity entropy shifted from 0.983 to 0.986.",
+          "Era Similarity Index: 31.72/100 (confidence 0.510)."
         ]
       },
       "2014/2014": {
@@ -54853,32 +54853,32 @@
       "2014/2026": {
         "eraA": 2014,
         "eraB": 2026,
-        "similarityIndex": 31.4,
-        "confidence": 0.5197,
+        "similarityIndex": 31.31,
+        "confidence": 0.5412,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0648,
-          "diversityAlignment": 0.9747,
-          "genreSimilarity": 0.6173,
-          "noveltyAlignment": 0.9591,
-          "persistentStrength": 0.0145,
-          "trackOverlap": 0.0183
+          "artistOverlap": 0.066,
+          "diversityAlignment": 0.9758,
+          "genreSimilarity": 0.6124,
+          "noveltyAlignment": 0.9516,
+          "persistentStrength": 0.0146,
+          "trackOverlap": 0.0186
         },
         "overlap": {
-          "artistJaccard": 0.0648,
-          "trackJaccard": 0.0183
+          "artistJaccard": 0.066,
+          "trackJaccard": 0.0186
         },
         "novelty": {
-          "alignment": 0.9591,
+          "alignment": 0.9516,
           "eraA": 0.8343,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9747,
+          "alignment": 0.9758,
           "eraA": 0.9615,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6173,
+        "genreSimilarity": 0.6124,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -54917,11 +54917,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -54933,22 +54942,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -54990,10 +54990,10 @@
           }
         ],
         "insightBullets": [
-          "2014 had 4148 scrobbles across 2908 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.065 and track overlap was 0.018.",
-          "Novelty shifted from 0.834 to 0.793; diversity entropy shifted from 0.961 to 0.987.",
-          "Era Similarity Index: 31.40/100 (confidence 0.520)."
+          "2014 had 4148 scrobbles across 2908 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.019.",
+          "Novelty shifted from 0.834 to 0.786; diversity entropy shifted from 0.961 to 0.986.",
+          "Era Similarity Index: 31.31/100 (confidence 0.541)."
         ]
       },
       "2015/2015": {
@@ -55935,32 +55935,32 @@
       "2015/2026": {
         "eraA": 2015,
         "eraB": 2026,
-        "similarityIndex": 31.56,
-        "confidence": 0.525,
+        "similarityIndex": 31.7,
+        "confidence": 0.5464,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0658,
-          "diversityAlignment": 0.9719,
-          "genreSimilarity": 0.606,
-          "noveltyAlignment": 0.9836,
+          "artistOverlap": 0.0649,
+          "diversityAlignment": 0.9731,
+          "genreSimilarity": 0.6211,
+          "noveltyAlignment": 0.976,
           "persistentStrength": 0.0168,
-          "trackOverlap": 0.0212
+          "trackOverlap": 0.0214
         },
         "overlap": {
-          "artistJaccard": 0.0658,
-          "trackJaccard": 0.0212
+          "artistJaccard": 0.0649,
+          "trackJaccard": 0.0214
         },
         "novelty": {
-          "alignment": 0.9836,
+          "alignment": 0.976,
           "eraA": 0.8098,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9719,
+          "alignment": 0.9731,
           "eraA": 0.9588,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.606,
+        "genreSimilarity": 0.6211,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -55999,11 +55999,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -56015,22 +56024,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -56072,10 +56072,10 @@
           }
         ],
         "insightBullets": [
-          "2015 had 4232 scrobbles across 2797 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.021.",
-          "Novelty shifted from 0.810 to 0.793; diversity entropy shifted from 0.959 to 0.987.",
-          "Era Similarity Index: 31.56/100 (confidence 0.525)."
+          "2015 had 4232 scrobbles across 2797 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.065 and track overlap was 0.021.",
+          "Novelty shifted from 0.810 to 0.786; diversity entropy shifted from 0.959 to 0.986.",
+          "Era Similarity Index: 31.70/100 (confidence 0.546)."
         ]
       },
       "2016/2016": {
@@ -56871,32 +56871,32 @@
       "2016/2026": {
         "eraA": 2016,
         "eraB": 2026,
-        "similarityIndex": 30.76,
-        "confidence": 0.2696,
+        "similarityIndex": 30.71,
+        "confidence": 0.2732,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0503,
-          "diversityAlignment": 0.9973,
-          "genreSimilarity": 0.6079,
-          "noveltyAlignment": 0.942,
-          "persistentStrength": 0.0136,
-          "trackOverlap": 0.017
+          "artistOverlap": 0.0485,
+          "diversityAlignment": 0.9962,
+          "genreSimilarity": 0.616,
+          "noveltyAlignment": 0.9345,
+          "persistentStrength": 0.0126,
+          "trackOverlap": 0.0159
         },
         "overlap": {
-          "artistJaccard": 0.0503,
-          "trackJaccard": 0.017
+          "artistJaccard": 0.0485,
+          "trackJaccard": 0.0159
         },
         "novelty": {
-          "alignment": 0.942,
+          "alignment": 0.9345,
           "eraA": 0.8514,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9973,
+          "alignment": 0.9962,
           "eraA": 0.9895,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.6079,
+        "genreSimilarity": 0.616,
         "persistentFavorites": [
           {
             "artist": "A Perfect Circle",
@@ -56933,6 +56933,24 @@
         ],
         "rising": [
           {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
+          },
+          {
+            "artist": "Beach House",
+            "countA": 1,
+            "countB": 7,
+            "delta": 0.0164,
+            "rateA": 0.0027,
+            "rateB": 0.0192,
+            "track": "Lazuli"
+          },
+          {
             "artist": "Black Country, New Road",
             "countA": 0,
             "countB": 6,
@@ -56942,31 +56960,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
             "artist": "Beach House",
-            "countA": 1,
-            "countB": 6,
-            "delta": 0.0137,
-            "rateA": 0.0027,
-            "rateB": 0.0164,
-            "track": "Lazuli"
-          },
-          {
-            "artist": "Mannequin Pussy",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [
@@ -57008,10 +57008,10 @@
           }
         ],
         "insightBullets": [
-          "2016 had 704 scrobbles across 592 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.050 and track overlap was 0.017.",
-          "Novelty shifted from 0.851 to 0.793; diversity entropy shifted from 0.990 to 0.987.",
-          "Era Similarity Index: 30.76/100 (confidence 0.270)."
+          "2016 had 704 scrobbles across 592 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.048 and track overlap was 0.016.",
+          "Novelty shifted from 0.851 to 0.786; diversity entropy shifted from 0.990 to 0.986.",
+          "Era Similarity Index: 30.71/100 (confidence 0.273)."
         ]
       },
       "2017/2017": {
@@ -57402,14 +57402,14 @@
       "2017/2026": {
         "eraA": 2017,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -57418,14 +57418,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -57433,11 +57433,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -57449,30 +57458,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2017 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2017 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2018/2018": {
@@ -57824,14 +57824,14 @@
       "2018/2026": {
         "eraA": 2018,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -57840,14 +57840,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -57855,11 +57855,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -57871,30 +57880,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2018 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2018 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2019/2019": {
@@ -58207,14 +58207,14 @@
       "2019/2026": {
         "eraA": 2019,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58223,14 +58223,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -58238,11 +58238,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -58254,30 +58263,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2019 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2019 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2020/2020": {
@@ -58551,14 +58551,14 @@
       "2020/2026": {
         "eraA": 2020,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58567,14 +58567,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -58582,11 +58582,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -58598,30 +58607,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2020 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2020 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2021/2021": {
@@ -58856,14 +58856,14 @@
       "2021/2026": {
         "eraA": 2021,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58872,14 +58872,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -58887,11 +58887,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -58903,30 +58912,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2021 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2021 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2022/2022": {
@@ -59122,14 +59122,14 @@
       "2022/2026": {
         "eraA": 2022,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59138,14 +59138,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -59153,11 +59153,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -59169,30 +59178,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2022 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2022 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2023/2023": {
@@ -59349,14 +59349,14 @@
       "2023/2026": {
         "eraA": 2023,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59365,14 +59365,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -59380,11 +59380,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -59396,30 +59405,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2023 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2023 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2024/2024": {
@@ -59537,14 +59537,14 @@
       "2024/2026": {
         "eraA": 2024,
         "eraB": 2026,
-        "similarityIndex": 2.2,
+        "similarityIndex": 2.28,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
-          "diversityAlignment": 0.0132,
+          "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2066,
+          "noveltyAlignment": 0.2142,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59553,14 +59553,14 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2066,
+          "alignment": 0.2142,
           "eraA": 0,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.0132,
+          "alignment": 0.0143,
           "eraA": 0,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
         "genreSimilarity": 0,
         "persistentFavorites": [],
@@ -59568,11 +59568,20 @@
           {
             "artist": "Beach House",
             "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
+            "countB": 7,
+            "delta": 0.0192,
             "rateA": 0,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
+          },
+          {
+            "artist": "Wet Leg",
+            "countA": 0,
+            "countB": 7,
+            "delta": 0.0192,
+            "rateA": 0,
+            "rateB": 0.0192,
+            "track": "davina mccall"
           },
           {
             "artist": "Black Country, New Road",
@@ -59584,30 +59593,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 0,
-            "countB": 6,
-            "delta": 0.0164,
-            "rateA": 0,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Mannequin Pussy",
+            "artist": "Beach House",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "I Don't Know You"
+            "track": "Drunk in LA"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2024 had 0 scrobbles across 0 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
+          "2024 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.793; diversity entropy shifted from 0.000 to 0.987.",
-          "Era Similarity Index: 2.20/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.28/100 (confidence 0.000)."
         ]
       },
       "2025/2025": {
@@ -59649,32 +59649,32 @@
       "2025/2026": {
         "eraA": 2025,
         "eraB": 2026,
-        "similarityIndex": 40.26,
-        "confidence": 0.4259,
+        "similarityIndex": 40.68,
+        "confidence": 0.4548,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.1958,
-          "diversityAlignment": 0.9966,
-          "genreSimilarity": 0.7004,
-          "noveltyAlignment": 0.9825,
-          "persistentStrength": 0.0963,
-          "trackOverlap": 0.105
+          "artistOverlap": 0.202,
+          "diversityAlignment": 0.9978,
+          "genreSimilarity": 0.7026,
+          "noveltyAlignment": 0.9901,
+          "persistentStrength": 0.0986,
+          "trackOverlap": 0.1082
         },
         "overlap": {
-          "artistJaccard": 0.1958,
-          "trackJaccard": 0.105
+          "artistJaccard": 0.202,
+          "trackJaccard": 0.1082
         },
         "novelty": {
-          "alignment": 0.9825,
+          "alignment": 0.9901,
           "eraA": 0.7759,
-          "eraB": 0.7934
+          "eraB": 0.7858
         },
         "diversity": {
-          "alignment": 0.9966,
+          "alignment": 0.9978,
           "eraA": 0.9835,
-          "eraB": 0.9868
+          "eraB": 0.9857
         },
-        "genreSimilarity": 0.7004,
+        "genreSimilarity": 0.7026,
         "persistentFavorites": [
           {
             "artist": "Alabaster Deplume",
@@ -59687,9 +59687,9 @@
           {
             "artist": "Beach House",
             "countA": 4,
-            "countB": 6,
+            "countB": 7,
             "rateA": 0.011,
-            "rateB": 0.0164,
+            "rateB": 0.0192,
             "track": "Lazuli"
           },
           {
@@ -59701,15 +59701,24 @@
             "track": "Falling Apart"
           },
           {
-            "artist": "Men I Trust",
-            "countA": 5,
+            "artist": "Khruangbin",
+            "countA": 3,
             "countB": 3,
-            "rateA": 0.0137,
+            "rateA": 0.0082,
             "rateB": 0.0082,
-            "track": "Say, Can You Hear"
+            "track": "May Ninth"
           }
         ],
         "rising": [
+          {
+            "artist": "Wet Leg",
+            "countA": 1,
+            "countB": 7,
+            "delta": 0.0164,
+            "rateA": 0.0027,
+            "rateB": 0.0192,
+            "track": "davina mccall"
+          },
           {
             "artist": "Black Country, New Road",
             "countA": 0,
@@ -59729,22 +59738,13 @@
             "track": "I Don't Know You"
           },
           {
-            "artist": "Wet Leg",
-            "countA": 1,
-            "countB": 6,
-            "delta": 0.0137,
-            "rateA": 0.0027,
-            "rateB": 0.0164,
-            "track": "davina mccall"
-          },
-          {
-            "artist": "Her's",
+            "artist": "Allah-Las",
             "countA": 0,
             "countB": 4,
             "delta": 0.011,
             "rateA": 0,
             "rateB": 0.011,
-            "track": "Under Wraps"
+            "track": "Raspberry Jam"
           }
         ],
         "falling": [
@@ -59786,10 +59786,10 @@
           }
         ],
         "insightBullets": [
-          "2025 had 2174 scrobbles across 1611 unique tracks; 2026 had 1465 scrobbles across 1147 unique tracks.",
-          "Artist overlap (Jaccard) was 0.196 and track overlap was 0.105.",
-          "Novelty shifted from 0.776 to 0.793; diversity entropy shifted from 0.983 to 0.987.",
-          "Era Similarity Index: 40.26/100 (confidence 0.426)."
+          "2025 had 2174 scrobbles across 1611 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "Artist overlap (Jaccard) was 0.202 and track overlap was 0.108.",
+          "Novelty shifted from 0.776 to 0.786; diversity entropy shifted from 0.983 to 0.986.",
+          "Era Similarity Index: 40.68/100 (confidence 0.455)."
         ]
       },
       "2026/2026": {
