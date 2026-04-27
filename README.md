@@ -1,218 +1,91 @@
 # MP3 Collection
 
-Historical iTunes archive + listening-history analytics + static web explorer.
+Historical iTunes archive + listening-history analytics + dynamic web explorer.
 
-This repo combines:
-- iTunes export compilation from many legacy files.
-- Data extraction/build pipelines in Go.
-- Last.fm + Spotify listening-history merge and derived analytics.
-- A static Astro site for browsing artists, albums, tracks, timeline, and wrapped-style yearly summaries.
-- A local MCP server for deeper music-intel analysis workflows.
+This repo has been modernized from a static-JSON pipeline to a robust **Go + SQLite** architecture.
+
+## Architecture
+
+- **Backend (`backend/`)**: A unified Go service providing:
+  - **ETL CLI (`cmd/etl`)**: High-performance data ingestion for iTunes, Last.fm, and Spotify.
+  - **REST API (`cmd/server`)**: A dynamic API serving music data and analytics.
+  - **MCP Server (`cmd/mcp`)**: A Model Context Protocol server for AI-powered music intelligence.
+- **Frontend (`apps/web`)**: An Astro-based web application using **Server-Side Rendering (SSR)** to fetch live data from the backend.
+- **Database**: A central SQLite database (`data/mp3_collection.db`) that unifies tracks, artists, albums, and listening history.
 
 ## Repository Layout
 
-- `apps/web/`: Astro frontend (`public/data` symlinks to `../../../data/derived/web`).
-- `apps/mcp-server/`: Go MCP server for data-backed music analysis tools.
-- `tools/pipeline/`: Go command suite for extraction, listening merge, timeline/build, image metadata.
-- `data/`: intermediate pipeline artifacts plus organized input/derived datasets.
-  - `data/inputs/itunes`: raw iTunes export files (`Library.export*`, `.txt`).
-  - `data/inputs/lastfm`, `data/inputs/spotify`: source listening-history inputs.
-  - `data/derived/compiled`: compiled iTunes CSV + validation report.
-  - `data/derived/core`: canonical tracks/albums/artists/history/playcounts artifacts.
-  - `data/derived/web`: web-ready JSON artifacts used by the Astro app.
+- `backend/`:
+  - `cmd/etl/`: CLI tools for database initialization and data ingestion.
+  - `cmd/server/`: REST API server (port 8080).
+  - `cmd/mcp/`: MCP Stdio server.
+  - `internal/`: Shared logic for database access, API routing, and MCP tools.
+- `apps/web/`: Astro frontend.
+- `data/`:
+  - `mp3_collection.db`: The unified SQLite database.
+  - `inputs/`: Raw data sources (iTunes CSV, Last.fm JSON, Spotify JSON).
 
 ## Prerequisites
 
-- Go 1.22+ (Go 1.21 works for `tools/pipeline`; `apps/mcp-server` targets Go 1.22)
-- Node.js 20+ (matches CI workflow)
-- Git LFS (required for large dataset files tracked in this repo)
+- Go 1.22+
+- Node.js 20+
+- SQLite3
 
-## Environment Setup
+## Getting Started
 
-```bash
-git lfs install
-git lfs pull
-cp .env.example .env
-```
+### 1. Database Setup & Ingestion
 
-`.env` is used by Go commands (auto-loaded from current/parent directories):
-- `LASTFM_API_KEY` (required for Last.fm API calls)
-- `LASTFM_USERNAME` (optional, defaults to `riebschlager`)
-- Optional path overrides for ETL commands:
-  - `MP3_PROJECT_ROOT`
-  - `MP3_ARCHIVE_DIR`, `MP3_COMPILED_DIR`, `MP3_DATA_DIR`, `MP3_WEB_DATA_DIR`, `MP3_LASTFM_DIR`, `MP3_SPOTIFY_DIR`
-  - Defaults now point to the organized layout:
-    - `MP3_ARCHIVE_DIR=data/inputs/itunes`
-    - `MP3_COMPILED_DIR=data/derived/compiled`
-    - `MP3_DATA_DIR=data/derived/core`
-    - `MP3_WEB_DATA_DIR=data/derived/web`
-    - `MP3_LASTFM_DIR=data/inputs/lastfm`
-    - `MP3_SPOTIFY_DIR=data/inputs/spotify`
-
-## Daily Workflow (from Repo Root)
-
-Use root `make` targets for the common workflows:
+Initialize the database and import your music data:
 
 ```bash
-make pipeline   # full Go pipeline refresh (images default to LASTFM_IMAGE_SCOPE=all)
-make web-dev    # run Astro dev server
-make mcp        # start MCP server
+cd backend
+# Initialize schema
+go run ./cmd/etl init
+# Ingest iTunes library
+go run ./cmd/etl ingest-itunes
+# Fetch recent scrobbles
+go run ./cmd/etl fetch-lastfm
+# Ingest Spotify history
+go run ./cmd/etl ingest-spotify
+# Pre-compute analytics (Transitions & Eras)
+go run ./cmd/etl compute-transitions
+go run ./cmd/etl compute-eras
 ```
 
-Other useful targets:
-- `make compile` (rebuild compiled iTunes CSV)
-- `make listening` (refresh merged listening history + playcounts)
-- `make web-data` (rebuild web JSON/chunks/indexes)
-- `make anniversary-cache` (rebuild day/week anniversaries history JSON)
-- `make artist-race` (rebuild weekly/monthly artist leaderboard race variants)
-- `make wrapped-stories` (rebuild wrapped story JSON via MCP)
-- `make wrapped-month-stories` (rebuild wrapped month story JSON via MCP)
-- `make era-similarity-cache` (rebuild MCP-backed era similarity matrix cache)
-- `make images` (refresh merged Last.fm+Spotify listening data, rebuild web-data, then refresh artist/album image metadata; default `LASTFM_IMAGE_SCOPE=all`)
-- `make doctor` (validate ETL path config + required inputs)
-- `make validate` (run doctor + Go builds + web build)
-- `make help` (list all targets)
+### 2. Run the Backend
 
-## Data Pipelines
-
-### 1. Compile iTunes Exports (when source archives change)
+Start the REST API server:
 
 ```bash
-cd tools/pipeline
-go run . compile-itunes-exports
+cd backend
+go run ./cmd/server
 ```
+The API will be available at `http://localhost:8080/api/v1/`.
 
-Outputs:
-- `data/derived/compiled/compiled_itunes_library.csv`
-- `data/derived/compiled/validation_report.txt`
+### 3. Run the Frontend
 
-### 2. Build Data with Go (recommended)
-
-```bash
-cd tools/pipeline
-./run_all.sh
-```
-
-`run_all.sh` executes:
-1. `compile-itunes-exports`
-2. `extract-tracks`
-3. `extract-albums`
-4. `extract-artists`
-5. `fetch-lastfm`
-6. `merge-listening`
-7. `process-lastfm`
-8. `build-timeline`
-9. `build-anniversary-cache`
-10. `build-artist-race`
-11. `build-transition-graph`
-12. `build-transition-query-cache`
-13. `build-era-similarity-cache`
-14. `build-wrapped-stories`
-15. `build-wrapped-month-stories`
-16. `build-web-data`
-17. `fetch-images`
-
-You can run any step individually:
-
-```bash
-cd tools/pipeline
-go run . <command>
-```
-
-Common commands:
-- `compile-itunes-exports` (alias: `compile-exports`)
-- `extract-tracks`, `extract-albums`, `extract-artists`
-- `fetch-lastfm`
-- `merge-listening`
-- `process-lastfm`
-- `build-timeline`
-- `build-anniversary-cache`
-- `build-artist-race`
-- `build-transition-graph`
-- `build-transition-query-cache`
-- `build-era-similarity-cache`
-- `build-wrapped-stories`
-- `build-wrapped-month-stories`
-- `build-web-data`
-- `fetch-images` (alias: `fetch-metadata`)
-- `doctor` (validate resolved path config and required inputs)
-
-## Generated Artifact Summary
-
-- `data/derived/core/tracks.json`, `data/derived/core/albums.json`, `data/derived/core/artists.json`
-- `data/derived/core/listening-history.json`, `data/derived/core/listening-merge-report.json`
-- `data/derived/core/playcounts.json`
-- `data/derived/web/chunks/tracks-*.json`
-- `data/derived/web/artists-index.json`, `data/derived/web/albums-index.json`, `data/derived/web/metadata.json`
-- `data/derived/web/timeline.json`
-- `data/derived/web/anniversary-cache.json`
-- `data/derived/web/artist-race/index.json` + variant files in `data/derived/web/artist-race/`
-- `data/derived/core/transition-graph.json`, `data/derived/web/transition-graph.json`
-- `data/derived/web/transition-query-cache.json`
-- `data/derived/web/era-similarity-cache.json`
-- `data/derived/web/wrapped-stories.json`
-- `data/derived/web/wrapped-month-stories.json`
-- `data/derived/web/playcounts.json`, `data/derived/web/listening-merge-report.json`
-- `data/derived/web/artist-images.json`, `data/derived/web/album-images.json`
-
-## Run the Web App
+Start the Astro dev server:
 
 ```bash
 cd apps/web
 npm install
 npm run dev
 ```
+The web app will be available at `http://localhost:4321/mp3-collection`.
 
-Default dev URL: `http://localhost:4321`
+### 4. Run the MCP Server
 
-Build/preview locally:
-
-```bash
-npm run build
-npm run preview
-```
-
-## Deployment
-
-GitHub Pages deployment is automated via `.github/workflows/deploy.yml`.
-
-- Trigger: push to `main`/`master` with changes in `apps/web/**`, `data/derived/web/**`, or the workflow file.
-- Site URL: `https://riebschlager.github.io/mp3-collection`
-
-See `DEPLOYMENT.md` for full details.
-
-## Validation CI
-
-Repository validation runs in GitHub Actions via `.github/workflows/validate.yml` on pull requests and relevant pushes.
-
-## MCP Server
+To use the AI tools, configure your MCP client (like Claude Desktop) to run:
 
 ```bash
-cd apps/mcp-server
-go run .
+cd backend
+go run ./cmd/mcp
 ```
 
-Or use the launcher script:
+## Analytics Capabilities
 
-```bash
-./apps/mcp-server/run-mcp.sh
-```
-
-Current tools:
-- `music_resolve_track_identity`
-- `music_audit_match_coverage`
-- `music_compare_eras`
-- `music_listening_summary`
-- `music_new_discoveries`
-- `music_genre_profile`
-- `music_listening_patterns`
-- `music_streaks_and_bursts`
-- `music_transition_graph`
-- `music_anniversary_history`
-- `music_month_story`
-- `music_year_story`
-- `music_batch_year_story`
-- `music_find_dormant_returns`
-- `music_reload_alias_map`
-
-Most analytics tools support `source` filtering (`all|lastfm|spotify`), and discovery tools support `discoveryBaseline` (`global|source|window`).
+The new architecture enables advanced on-the-fly analytics:
+- **Transition Flow Atlas**: Session-aware directional listening patterns.
+- **Era Similarity Index**: Jaccard-based taste proximity between years.
+- **Dynamic Stats**: Instant play counts and top charts across 20 years of data.
+- **AI Intelligence**: Direct SQL-backed tools for exploring music trends.
