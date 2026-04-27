@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:54Z",
+  "generatedAt": "2026-04-27T01:54:04Z",
   "years": [
     2005,
     2006,
@@ -56,7 +56,7 @@
         28.78,
         29.63,
         27.26,
-        25.51
+        25.79
       ],
       [
         44.74,
@@ -80,7 +80,7 @@
         29.91,
         30.64,
         28.43,
-        25.48
+        25.69
       ],
       [
         32.69,
@@ -104,7 +104,7 @@
         32.63,
         32.47,
         31.1,
-        27.54
+        27.79
       ],
       [
         32.11,
@@ -128,7 +128,7 @@
         32.6,
         32.63,
         30.5,
-        27.01
+        27.3
       ],
       [
         33.04,
@@ -152,7 +152,7 @@
         32.47,
         32.52,
         30.13,
-        27.03
+        27.32
       ],
       [
         31.7,
@@ -176,7 +176,7 @@
         32.7,
         32.62,
         31.45,
-        27.65
+        27.95
       ],
       [
         30.82,
@@ -200,7 +200,7 @@
         33.56,
         34.06,
         32.57,
-        28.89
+        29.33
       ],
       [
         30.3,
@@ -224,7 +224,7 @@
         32,
         32.88,
         30.95,
-        28.76
+        29.11
       ],
       [
         30.33,
@@ -248,7 +248,7 @@
         32.47,
         31.89,
         30.95,
-        27.86
+        28.07
       ],
       [
         27.62,
@@ -272,7 +272,7 @@
         30.33,
         30.34,
         28.24,
-        27.72
+        28
       ],
       [
         28.54,
@@ -296,7 +296,7 @@
         31.81,
         31.66,
         30.93,
-        27.96
+        28.31
       ],
       [
         29.08,
@@ -320,7 +320,7 @@
         33.04,
         34.16,
         32.85,
-        29.92
+        30.2
       ],
       [
         28.61,
@@ -344,7 +344,7 @@
         31.41,
         31.01,
         29.6,
-        28.6
+        28.81
       ],
       [
         29.15,
@@ -368,7 +368,7 @@
         34.66,
         33.23,
         32.25,
-        29.5
+        29.77
       ],
       [
         29.01,
@@ -392,7 +392,7 @@
         33.21,
         34.18,
         31.67,
-        29.69
+        29.99
       ],
       [
         29.86,
@@ -416,7 +416,7 @@
         36.06,
         37.22,
         34.81,
-        31.57
+        31.9
       ],
       [
         29.95,
@@ -440,7 +440,7 @@
         36.61,
         35.94,
         35.03,
-        30.11
+        30.37
       ],
       [
         29.83,
@@ -464,7 +464,7 @@
         36.31,
         34.85,
         33.4,
-        29.92
+        30.15
       ],
       [
         28.78,
@@ -488,7 +488,7 @@
         100,
         38.3,
         37.47,
-        33.47
+        33.79
       ],
       [
         29.63,
@@ -512,7 +512,7 @@
         38.3,
         100,
         41.97,
-        33.93
+        34.59
       ],
       [
         27.26,
@@ -536,30 +536,30 @@
         37.47,
         41.97,
         100,
-        36.99
+        38
       ],
       [
-        25.51,
-        25.48,
-        27.54,
-        27.01,
-        27.03,
-        27.65,
-        28.89,
-        28.76,
-        27.86,
-        27.72,
-        27.96,
-        29.92,
-        28.6,
-        29.5,
-        29.69,
-        31.57,
-        30.11,
-        29.92,
-        33.47,
-        33.93,
-        36.99,
+        25.79,
+        25.69,
+        27.79,
+        27.3,
+        27.32,
+        27.95,
+        29.33,
+        29.11,
+        28.07,
+        28,
+        28.31,
+        30.2,
+        28.81,
+        29.77,
+        29.99,
+        31.9,
+        30.37,
+        30.15,
+        33.79,
+        34.59,
+        38,
         100
       ]
     ],
@@ -586,7 +586,7 @@
         2.86,
         2.86,
         28.83,
-        28.19
+        28.05
       ],
       [
         44.74,
@@ -610,7 +610,7 @@
         1.19,
         1.19,
         30.94,
-        29.48
+        29.32
       ],
       [
         32.69,
@@ -634,7 +634,7 @@
         2.37,
         2.37,
         32.69,
-        31.36
+        31.14
       ],
       [
         32.11,
@@ -658,7 +658,7 @@
         2.24,
         2.24,
         32.88,
-        31.07
+        30.98
       ],
       [
         33.04,
@@ -682,7 +682,7 @@
         1.71,
         1.71,
         32.27,
-        31.14
+        31.05
       ],
       [
         31.7,
@@ -706,7 +706,7 @@
         2.13,
         2.13,
         33.29,
-        31.59
+        31.51
       ],
       [
         30.82,
@@ -730,7 +730,7 @@
         2.42,
         2.42,
         34.43,
-        32.83
+        32.88
       ],
       [
         30.29,
@@ -754,7 +754,7 @@
         2.69,
         2.69,
         33.27,
-        32.42
+        32.4
       ],
       [
         30.33,
@@ -778,7 +778,7 @@
         2.15,
         2.15,
         34.09,
-        31.72
+        31.56
       ],
       [
         27.65,
@@ -802,7 +802,7 @@
         2.04,
         2.04,
         30.67,
-        31.31
+        31.21
       ],
       [
         28.52,
@@ -826,7 +826,7 @@
         2.31,
         2.31,
         33.37,
-        31.7
+        31.73
       ],
       [
         27.36,
@@ -850,7 +850,7 @@
         1.59,
         1.59,
         31,
-        30.71
+        30.75
       ],
       [
         2.86,
@@ -874,7 +874,7 @@
         20,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -898,7 +898,7 @@
         20,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -922,7 +922,7 @@
         20,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -946,7 +946,7 @@
         20,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -970,7 +970,7 @@
         20,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -994,7 +994,7 @@
         20,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -1018,7 +1018,7 @@
         100,
         20,
         2.41,
-        2.28
+        2.24
       ],
       [
         2.86,
@@ -1042,7 +1042,7 @@
         20,
         100,
         2.41,
-        2.28
+        2.24
       ],
       [
         28.83,
@@ -1066,30 +1066,30 @@
         2.41,
         2.41,
         100,
-        40.68
+        41.17
       ],
       [
-        28.19,
-        29.48,
-        31.36,
-        31.07,
+        28.05,
+        29.32,
         31.14,
-        31.59,
-        32.83,
-        32.42,
-        31.72,
-        31.31,
-        31.7,
-        30.71,
-        2.28,
-        2.28,
-        2.28,
-        2.28,
-        2.28,
-        2.28,
-        2.28,
-        2.28,
-        40.68,
+        30.98,
+        31.05,
+        31.51,
+        32.88,
+        32.4,
+        31.56,
+        31.21,
+        31.73,
+        30.75,
+        2.24,
+        2.24,
+        2.24,
+        2.24,
+        2.24,
+        2.24,
+        2.24,
+        2.24,
+        41.17,
         100
       ]
     ],
@@ -4585,32 +4585,32 @@
       "2005/2026": {
         "eraA": 2005,
         "eraB": 2026,
-        "similarityIndex": 25.51,
-        "confidence": 0.5963,
+        "similarityIndex": 25.79,
+        "confidence": 0.6196,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0264,
-          "diversityAlignment": 0.9931,
-          "genreSimilarity": 0.4879,
-          "noveltyAlignment": 0.7235,
-          "persistentStrength": 0.0026,
-          "trackOverlap": 0.0034
+          "artistOverlap": 0.0248,
+          "diversityAlignment": 0.9928,
+          "genreSimilarity": 0.4854,
+          "noveltyAlignment": 0.7621,
+          "persistentStrength": 0.0025,
+          "trackOverlap": 0.0033
         },
         "overlap": {
-          "artistJaccard": 0.0264,
-          "trackJaccard": 0.0034
+          "artistJaccard": 0.0248,
+          "trackJaccard": 0.0033
         },
         "novelty": {
-          "alignment": 0.7235,
+          "alignment": 0.7621,
           "eraA": 0.7258,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9931,
+          "alignment": 0.9928,
           "eraA": 0.9879,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.4879,
+        "genreSimilarity": 0.4854,
         "persistentFavorites": [
           {
             "artist": "Nine Inch Nails",
@@ -4658,10 +4658,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -4722,10 +4722,10 @@
           }
         ],
         "insightBullets": [
-          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.026 and track overlap was 0.003.",
-          "Novelty shifted from 0.726 to 0.449; diversity entropy shifted from 0.988 to 0.981.",
-          "Era Similarity Index: 25.51/100 (confidence 0.596)."
+          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.025 and track overlap was 0.003.",
+          "Novelty shifted from 0.726 to 0.488; diversity entropy shifted from 0.988 to 0.981.",
+          "Era Similarity Index: 25.79/100 (confidence 0.620)."
         ]
       },
       "2006/2006": {
@@ -7541,32 +7541,32 @@
       "2006/2026": {
         "eraA": 2006,
         "eraB": 2026,
-        "similarityIndex": 25.48,
-        "confidence": 0.5674,
+        "similarityIndex": 25.69,
+        "confidence": 0.5947,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0557,
-          "diversityAlignment": 0.9865,
-          "genreSimilarity": 0.5254,
-          "noveltyAlignment": 0.5624,
-          "persistentStrength": 0.0044,
-          "trackOverlap": 0.0055
+          "artistOverlap": 0.0526,
+          "diversityAlignment": 0.9861,
+          "genreSimilarity": 0.522,
+          "noveltyAlignment": 0.601,
+          "persistentStrength": 0.0042,
+          "trackOverlap": 0.0053
         },
         "overlap": {
-          "artistJaccard": 0.0557,
-          "trackJaccard": 0.0055
+          "artistJaccard": 0.0526,
+          "trackJaccard": 0.0053
         },
         "novelty": {
-          "alignment": 0.5624,
+          "alignment": 0.601,
           "eraA": 0.8869,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9865,
+          "alignment": 0.9861,
           "eraA": 0.9946,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5254,
+        "genreSimilarity": 0.522,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -7614,10 +7614,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -7678,10 +7678,10 @@
           }
         ],
         "insightBullets": [
-          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.005.",
-          "Novelty shifted from 0.887 to 0.449; diversity entropy shifted from 0.995 to 0.981.",
-          "Era Similarity Index: 25.48/100 (confidence 0.567)."
+          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.053 and track overlap was 0.005.",
+          "Novelty shifted from 0.887 to 0.488; diversity entropy shifted from 0.995 to 0.981.",
+          "Era Similarity Index: 25.69/100 (confidence 0.595)."
         ]
       },
       "2007/2007": {
@@ -10351,32 +10351,32 @@
       "2007/2026": {
         "eraA": 2007,
         "eraB": 2026,
-        "similarityIndex": 27.54,
-        "confidence": 0.6513,
+        "similarityIndex": 27.79,
+        "confidence": 0.67,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0607,
-          "diversityAlignment": 0.9979,
-          "genreSimilarity": 0.5652,
-          "noveltyAlignment": 0.6654,
-          "persistentStrength": 0.0097,
-          "trackOverlap": 0.0104
+          "artistOverlap": 0.0581,
+          "diversityAlignment": 0.9982,
+          "genreSimilarity": 0.5621,
+          "noveltyAlignment": 0.7039,
+          "persistentStrength": 0.0095,
+          "trackOverlap": 0.0102
         },
         "overlap": {
-          "artistJaccard": 0.0607,
-          "trackJaccard": 0.0104
+          "artistJaccard": 0.0581,
+          "trackJaccard": 0.0102
         },
         "novelty": {
-          "alignment": 0.6654,
+          "alignment": 0.7039,
           "eraA": 0.784,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9979,
+          "alignment": 0.9982,
           "eraA": 0.9789,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5652,
+        "genreSimilarity": 0.5621,
         "persistentFavorites": [
           {
             "artist": "Sneaker Pimps",
@@ -10424,10 +10424,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -10488,10 +10488,10 @@
           }
         ],
         "insightBullets": [
-          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.061 and track overlap was 0.010.",
-          "Novelty shifted from 0.784 to 0.449; diversity entropy shifted from 0.979 to 0.981.",
-          "Era Similarity Index: 27.54/100 (confidence 0.651)."
+          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.058 and track overlap was 0.010.",
+          "Novelty shifted from 0.784 to 0.488; diversity entropy shifted from 0.979 to 0.981.",
+          "Era Similarity Index: 27.79/100 (confidence 0.670)."
         ]
       },
       "2008/2008": {
@@ -13015,32 +13015,32 @@
       "2008/2026": {
         "eraA": 2008,
         "eraB": 2026,
-        "similarityIndex": 27.01,
-        "confidence": 0.6379,
+        "similarityIndex": 27.3,
+        "confidence": 0.6557,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0473,
-          "diversityAlignment": 0.9995,
-          "genreSimilarity": 0.5707,
-          "noveltyAlignment": 0.6536,
-          "persistentStrength": 0.0083,
-          "trackOverlap": 0.0087
+          "artistOverlap": 0.0463,
+          "diversityAlignment": 0.9998,
+          "genreSimilarity": 0.5672,
+          "noveltyAlignment": 0.6921,
+          "persistentStrength": 0.0081,
+          "trackOverlap": 0.0086
         },
         "overlap": {
-          "artistJaccard": 0.0473,
-          "trackJaccard": 0.0087
+          "artistJaccard": 0.0463,
+          "trackJaccard": 0.0086
         },
         "novelty": {
-          "alignment": 0.6536,
+          "alignment": 0.6921,
           "eraA": 0.7957,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9995,
+          "alignment": 0.9998,
           "eraA": 0.9805,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5707,
+        "genreSimilarity": 0.5672,
         "persistentFavorites": [
           {
             "artist": "Bjork",
@@ -13088,10 +13088,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -13152,10 +13152,10 @@
           }
         ],
         "insightBullets": [
-          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.047 and track overlap was 0.009.",
-          "Novelty shifted from 0.796 to 0.449; diversity entropy shifted from 0.981 to 0.981.",
-          "Era Similarity Index: 27.01/100 (confidence 0.638)."
+          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.046 and track overlap was 0.009.",
+          "Novelty shifted from 0.796 to 0.488; diversity entropy shifted from 0.981 to 0.981.",
+          "Era Similarity Index: 27.30/100 (confidence 0.656)."
         ]
       },
       "2009/2009": {
@@ -15533,32 +15533,32 @@
       "2009/2026": {
         "eraA": 2009,
         "eraB": 2026,
-        "similarityIndex": 27.03,
-        "confidence": 0.6546,
+        "similarityIndex": 27.32,
+        "confidence": 0.6736,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0437,
-          "diversityAlignment": 0.9933,
-          "genreSimilarity": 0.616,
-          "noveltyAlignment": 0.6077,
-          "persistentStrength": 0.0085,
-          "trackOverlap": 0.0084
+          "artistOverlap": 0.0425,
+          "diversityAlignment": 0.993,
+          "genreSimilarity": 0.6125,
+          "noveltyAlignment": 0.6462,
+          "persistentStrength": 0.0084,
+          "trackOverlap": 0.0083
         },
         "overlap": {
-          "artistJaccard": 0.0437,
-          "trackJaccard": 0.0084
+          "artistJaccard": 0.0425,
+          "trackJaccard": 0.0083
         },
         "novelty": {
-          "alignment": 0.6077,
+          "alignment": 0.6462,
           "eraA": 0.8417,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9933,
+          "alignment": 0.993,
           "eraA": 0.9877,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.616,
+        "genreSimilarity": 0.6125,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -15606,10 +15606,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -15670,10 +15670,10 @@
           }
         ],
         "insightBullets": [
-          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.044 and track overlap was 0.008.",
-          "Novelty shifted from 0.842 to 0.449; diversity entropy shifted from 0.988 to 0.981.",
-          "Era Similarity Index: 27.03/100 (confidence 0.655)."
+          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.008.",
+          "Novelty shifted from 0.842 to 0.488; diversity entropy shifted from 0.988 to 0.981.",
+          "Era Similarity Index: 27.32/100 (confidence 0.674)."
         ]
       },
       "2010/2010": {
@@ -17905,32 +17905,32 @@
       "2010/2026": {
         "eraA": 2010,
         "eraB": 2026,
-        "similarityIndex": 27.65,
-        "confidence": 0.6726,
+        "similarityIndex": 27.95,
+        "confidence": 0.6929,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0499,
-          "diversityAlignment": 0.9946,
-          "genreSimilarity": 0.6072,
-          "noveltyAlignment": 0.6383,
-          "persistentStrength": 0.0148,
-          "trackOverlap": 0.0158
+          "artistOverlap": 0.0486,
+          "diversityAlignment": 0.9949,
+          "genreSimilarity": 0.6046,
+          "noveltyAlignment": 0.6769,
+          "persistentStrength": 0.0145,
+          "trackOverlap": 0.0154
         },
         "overlap": {
-          "artistJaccard": 0.0499,
-          "trackJaccard": 0.0158
+          "artistJaccard": 0.0486,
+          "trackJaccard": 0.0154
         },
         "novelty": {
-          "alignment": 0.6383,
+          "alignment": 0.6769,
           "eraA": 0.811,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9946,
+          "alignment": 0.9949,
           "eraA": 0.9756,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6072,
+        "genreSimilarity": 0.6046,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -17978,10 +17978,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -18042,10 +18042,10 @@
           }
         ],
         "insightBullets": [
-          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.050 and track overlap was 0.016.",
-          "Novelty shifted from 0.811 to 0.449; diversity entropy shifted from 0.976 to 0.981.",
-          "Era Similarity Index: 27.65/100 (confidence 0.673)."
+          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.049 and track overlap was 0.015.",
+          "Novelty shifted from 0.811 to 0.488; diversity entropy shifted from 0.976 to 0.981.",
+          "Era Similarity Index: 27.95/100 (confidence 0.693)."
         ]
       },
       "2011/2011": {
@@ -20131,32 +20131,32 @@
       "2011/2026": {
         "eraA": 2011,
         "eraB": 2026,
-        "similarityIndex": 28.89,
-        "confidence": 0.6369,
+        "similarityIndex": 29.33,
+        "confidence": 0.6546,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0565,
-          "diversityAlignment": 0.9954,
-          "genreSimilarity": 0.6528,
-          "noveltyAlignment": 0.6684,
-          "persistentStrength": 0.016,
-          "trackOverlap": 0.0159
+          "artistOverlap": 0.0556,
+          "diversityAlignment": 0.9958,
+          "genreSimilarity": 0.659,
+          "noveltyAlignment": 0.707,
+          "persistentStrength": 0.0157,
+          "trackOverlap": 0.0156
         },
         "overlap": {
-          "artistJaccard": 0.0565,
-          "trackJaccard": 0.0159
+          "artistJaccard": 0.0556,
+          "trackJaccard": 0.0156
         },
         "novelty": {
-          "alignment": 0.6684,
+          "alignment": 0.707,
           "eraA": 0.7809,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9954,
+          "alignment": 0.9958,
           "eraA": 0.9765,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6528,
+        "genreSimilarity": 0.659,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -20204,10 +20204,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -20268,10 +20268,10 @@
           }
         ],
         "insightBullets": [
-          "2011 had 8622 scrobbles across 6002 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
+          "2011 had 8622 scrobbles across 6002 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
           "Artist overlap (Jaccard) was 0.056 and track overlap was 0.016.",
-          "Novelty shifted from 0.781 to 0.449; diversity entropy shifted from 0.976 to 0.981.",
-          "Era Similarity Index: 28.89/100 (confidence 0.637)."
+          "Novelty shifted from 0.781 to 0.488; diversity entropy shifted from 0.976 to 0.981.",
+          "Era Similarity Index: 29.33/100 (confidence 0.655)."
         ]
       },
       "2012/2012": {
@@ -22211,32 +22211,32 @@
       "2012/2026": {
         "eraA": 2012,
         "eraB": 2026,
-        "similarityIndex": 28.76,
-        "confidence": 0.621,
+        "similarityIndex": 29.11,
+        "confidence": 0.6431,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0585,
-          "diversityAlignment": 0.9872,
-          "genreSimilarity": 0.6192,
-          "noveltyAlignment": 0.6868,
-          "persistentStrength": 0.0193,
-          "trackOverlap": 0.0234
+          "artistOverlap": 0.0559,
+          "diversityAlignment": 0.9876,
+          "genreSimilarity": 0.6244,
+          "noveltyAlignment": 0.7253,
+          "persistentStrength": 0.0188,
+          "trackOverlap": 0.0226
         },
         "overlap": {
-          "artistJaccard": 0.0585,
-          "trackJaccard": 0.0234
+          "artistJaccard": 0.0559,
+          "trackJaccard": 0.0226
         },
         "novelty": {
-          "alignment": 0.6868,
+          "alignment": 0.7253,
           "eraA": 0.7626,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9872,
+          "alignment": 0.9876,
           "eraA": 0.9683,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6192,
+        "genreSimilarity": 0.6244,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -22284,10 +22284,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -22348,10 +22348,10 @@
           }
         ],
         "insightBullets": [
-          "2012 had 4049 scrobbles across 2666 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.023.",
-          "Novelty shifted from 0.763 to 0.449; diversity entropy shifted from 0.968 to 0.981.",
-          "Era Similarity Index: 28.76/100 (confidence 0.621)."
+          "2012 had 4049 scrobbles across 2666 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.023.",
+          "Novelty shifted from 0.763 to 0.488; diversity entropy shifted from 0.968 to 0.981.",
+          "Era Similarity Index: 29.11/100 (confidence 0.643)."
         ]
       },
       "2013/2013": {
@@ -24145,32 +24145,32 @@
       "2013/2026": {
         "eraA": 2013,
         "eraB": 2026,
-        "similarityIndex": 27.86,
-        "confidence": 0.5999,
+        "similarityIndex": 28.07,
+        "confidence": 0.623,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0596,
-          "diversityAlignment": 0.9977,
-          "genreSimilarity": 0.5952,
-          "noveltyAlignment": 0.6473,
-          "persistentStrength": 0.0127,
-          "trackOverlap": 0.0132
+          "artistOverlap": 0.0564,
+          "diversityAlignment": 0.9973,
+          "genreSimilarity": 0.5923,
+          "noveltyAlignment": 0.6858,
+          "persistentStrength": 0.0123,
+          "trackOverlap": 0.0127
         },
         "overlap": {
-          "artistJaccard": 0.0596,
-          "trackJaccard": 0.0132
+          "artistJaccard": 0.0564,
+          "trackJaccard": 0.0127
         },
         "novelty": {
-          "alignment": 0.6473,
+          "alignment": 0.6858,
           "eraA": 0.802,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9977,
+          "alignment": 0.9973,
           "eraA": 0.9834,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5952,
+        "genreSimilarity": 0.5923,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -24218,10 +24218,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -24282,10 +24282,10 @@
           }
         ],
         "insightBullets": [
-          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.060 and track overlap was 0.013.",
-          "Novelty shifted from 0.802 to 0.449; diversity entropy shifted from 0.983 to 0.981.",
-          "Era Similarity Index: 27.86/100 (confidence 0.600)."
+          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.013.",
+          "Novelty shifted from 0.802 to 0.488; diversity entropy shifted from 0.983 to 0.981.",
+          "Era Similarity Index: 28.07/100 (confidence 0.623)."
         ]
       },
       "2014/2014": {
@@ -25933,32 +25933,32 @@
       "2014/2026": {
         "eraA": 2014,
         "eraB": 2026,
-        "similarityIndex": 27.72,
-        "confidence": 0.6272,
+        "similarityIndex": 28,
+        "confidence": 0.6491,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0656,
-          "diversityAlignment": 0.9806,
-          "genreSimilarity": 0.5961,
-          "noveltyAlignment": 0.614,
-          "persistentStrength": 0.0156,
-          "trackOverlap": 0.0184
+          "artistOverlap": 0.0641,
+          "diversityAlignment": 0.981,
+          "genreSimilarity": 0.5927,
+          "noveltyAlignment": 0.6526,
+          "persistentStrength": 0.0153,
+          "trackOverlap": 0.0181
         },
         "overlap": {
-          "artistJaccard": 0.0656,
-          "trackJaccard": 0.0184
+          "artistJaccard": 0.0641,
+          "trackJaccard": 0.0181
         },
         "novelty": {
-          "alignment": 0.614,
+          "alignment": 0.6526,
           "eraA": 0.8353,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9806,
+          "alignment": 0.981,
           "eraA": 0.9617,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5961,
+        "genreSimilarity": 0.5927,
         "persistentFavorites": [
           {
             "artist": "Massive Attack",
@@ -26006,10 +26006,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -26070,10 +26070,10 @@
           }
         ],
         "insightBullets": [
-          "2014 had 4167 scrobbles across 2927 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.018.",
-          "Novelty shifted from 0.835 to 0.449; diversity entropy shifted from 0.962 to 0.981.",
-          "Era Similarity Index: 27.72/100 (confidence 0.627)."
+          "2014 had 4167 scrobbles across 2927 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.018.",
+          "Novelty shifted from 0.835 to 0.488; diversity entropy shifted from 0.962 to 0.981.",
+          "Era Similarity Index: 28.00/100 (confidence 0.649)."
         ]
       },
       "2015/2015": {
@@ -27575,32 +27575,32 @@
       "2015/2026": {
         "eraA": 2015,
         "eraB": 2026,
-        "similarityIndex": 27.96,
-        "confidence": 0.6564,
+        "similarityIndex": 28.31,
+        "confidence": 0.6774,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0641,
-          "diversityAlignment": 0.9795,
-          "genreSimilarity": 0.5882,
-          "noveltyAlignment": 0.6477,
-          "persistentStrength": 0.0205,
-          "trackOverlap": 0.0208
+          "artistOverlap": 0.0615,
+          "diversityAlignment": 0.9799,
+          "genreSimilarity": 0.5931,
+          "noveltyAlignment": 0.6863,
+          "persistentStrength": 0.0201,
+          "trackOverlap": 0.0202
         },
         "overlap": {
-          "artistJaccard": 0.0641,
-          "trackJaccard": 0.0208
+          "artistJaccard": 0.0615,
+          "trackJaccard": 0.0202
         },
         "novelty": {
-          "alignment": 0.6477,
+          "alignment": 0.6863,
           "eraA": 0.8016,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9795,
+          "alignment": 0.9799,
           "eraA": 0.9606,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5882,
+        "genreSimilarity": 0.5931,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -27648,10 +27648,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -27712,10 +27712,10 @@
           }
         ],
         "insightBullets": [
-          "2015 had 4684 scrobbles across 3095 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.021.",
-          "Novelty shifted from 0.802 to 0.449; diversity entropy shifted from 0.961 to 0.981.",
-          "Era Similarity Index: 27.96/100 (confidence 0.656)."
+          "2015 had 4684 scrobbles across 3095 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.061 and track overlap was 0.020.",
+          "Novelty shifted from 0.802 to 0.488; diversity entropy shifted from 0.961 to 0.981.",
+          "Era Similarity Index: 28.31/100 (confidence 0.677)."
         ]
       },
       "2016/2016": {
@@ -29071,32 +29071,32 @@
       "2016/2026": {
         "eraA": 2016,
         "eraB": 2026,
-        "similarityIndex": 29.92,
-        "confidence": 0.6355,
+        "similarityIndex": 30.2,
+        "confidence": 0.6531,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0657,
-          "diversityAlignment": 0.971,
-          "genreSimilarity": 0.6094,
-          "noveltyAlignment": 0.8292,
-          "persistentStrength": 0.0128,
-          "trackOverlap": 0.0165
+          "artistOverlap": 0.0646,
+          "diversityAlignment": 0.9714,
+          "genreSimilarity": 0.6056,
+          "noveltyAlignment": 0.8677,
+          "persistentStrength": 0.0126,
+          "trackOverlap": 0.0161
         },
         "overlap": {
-          "artistJaccard": 0.0657,
-          "trackJaccard": 0.0165
+          "artistJaccard": 0.0646,
+          "trackJaccard": 0.0161
         },
         "novelty": {
-          "alignment": 0.8292,
+          "alignment": 0.8677,
           "eraA": 0.6202,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.971,
+          "alignment": 0.9714,
           "eraA": 0.9521,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6094,
+        "genreSimilarity": 0.6056,
         "persistentFavorites": [
           {
             "artist": "Beach House",
@@ -29135,10 +29135,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -29208,10 +29208,10 @@
           }
         ],
         "insightBullets": [
-          "2016 had 8856 scrobbles across 4323 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.017.",
-          "Novelty shifted from 0.620 to 0.449; diversity entropy shifted from 0.952 to 0.981.",
-          "Era Similarity Index: 29.92/100 (confidence 0.635)."
+          "2016 had 8856 scrobbles across 4323 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.065 and track overlap was 0.016.",
+          "Novelty shifted from 0.620 to 0.488; diversity entropy shifted from 0.952 to 0.981.",
+          "Era Similarity Index: 30.20/100 (confidence 0.653)."
         ]
       },
       "2017/2017": {
@@ -30421,32 +30421,32 @@
       "2017/2026": {
         "eraA": 2017,
         "eraB": 2026,
-        "similarityIndex": 28.6,
-        "confidence": 0.5316,
+        "similarityIndex": 28.81,
+        "confidence": 0.5327,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0638,
-          "diversityAlignment": 0.9871,
-          "genreSimilarity": 0.6033,
-          "noveltyAlignment": 0.6649,
-          "persistentStrength": 0.0246,
-          "trackOverlap": 0.0268
+          "artistOverlap": 0.0619,
+          "diversityAlignment": 0.9875,
+          "genreSimilarity": 0.5987,
+          "noveltyAlignment": 0.7035,
+          "persistentStrength": 0.0237,
+          "trackOverlap": 0.0255
         },
         "overlap": {
-          "artistJaccard": 0.0638,
-          "trackJaccard": 0.0268
+          "artistJaccard": 0.0619,
+          "trackJaccard": 0.0255
         },
         "novelty": {
-          "alignment": 0.6649,
+          "alignment": 0.7035,
           "eraA": 0.7844,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9871,
+          "alignment": 0.9875,
           "eraA": 0.9682,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6033,
+        "genreSimilarity": 0.5987,
         "persistentFavorites": [
           {
             "artist": "Khruangbin",
@@ -30483,6 +30483,15 @@
         ],
         "rising": [
           {
+            "artist": "Alabaster Deplume",
+            "countA": 0,
+            "countB": 9,
+            "delta": 0.0247,
+            "rateA": 0,
+            "rateB": 0.0247,
+            "track": "A Gente Acaba (Vento Em Rosa)"
+          },
+          {
             "artist": "Beach House",
             "countA": 1,
             "countB": 10,
@@ -30490,15 +30499,6 @@
             "rateA": 0.0027,
             "rateB": 0.0274,
             "track": "Lazuli"
-          },
-          {
-            "artist": "Alabaster Deplume",
-            "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
-            "rateA": 0,
-            "rateB": 0.0219,
-            "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
             "artist": "The Smile",
@@ -30558,10 +30558,10 @@
           }
         ],
         "insightBullets": [
-          "2017 had 2082 scrobbles across 1410 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.027.",
-          "Novelty shifted from 0.784 to 0.449; diversity entropy shifted from 0.968 to 0.981.",
-          "Era Similarity Index: 28.60/100 (confidence 0.532)."
+          "2017 had 2082 scrobbles across 1410 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.062 and track overlap was 0.026.",
+          "Novelty shifted from 0.784 to 0.488; diversity entropy shifted from 0.968 to 0.981.",
+          "Era Similarity Index: 28.81/100 (confidence 0.533)."
         ]
       },
       "2018/2018": {
@@ -31625,32 +31625,32 @@
       "2018/2026": {
         "eraA": 2018,
         "eraB": 2026,
-        "similarityIndex": 29.5,
-        "confidence": 0.5879,
+        "similarityIndex": 29.77,
+        "confidence": 0.6118,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0865,
-          "diversityAlignment": 0.9724,
-          "genreSimilarity": 0.5946,
-          "noveltyAlignment": 0.7108,
-          "persistentStrength": 0.0198,
-          "trackOverlap": 0.025
+          "artistOverlap": 0.0854,
+          "diversityAlignment": 0.9727,
+          "genreSimilarity": 0.5907,
+          "noveltyAlignment": 0.7493,
+          "persistentStrength": 0.0192,
+          "trackOverlap": 0.024
         },
         "overlap": {
-          "artistJaccard": 0.0865,
-          "trackJaccard": 0.025
+          "artistJaccard": 0.0854,
+          "trackJaccard": 0.024
         },
         "novelty": {
-          "alignment": 0.7108,
+          "alignment": 0.7493,
           "eraA": 0.7386,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9724,
+          "alignment": 0.9727,
           "eraA": 0.9534,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5946,
+        "genreSimilarity": 0.5907,
         "persistentFavorites": [
           {
             "artist": "The Brian Jonestown Massacre",
@@ -31698,10 +31698,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -31762,10 +31762,10 @@
           }
         ],
         "insightBullets": [
-          "2018 had 3327 scrobbles across 2054 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.087 and track overlap was 0.025.",
-          "Novelty shifted from 0.739 to 0.449; diversity entropy shifted from 0.953 to 0.981.",
-          "Era Similarity Index: 29.50/100 (confidence 0.588)."
+          "2018 had 3327 scrobbles across 2054 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.085 and track overlap was 0.024.",
+          "Novelty shifted from 0.739 to 0.488; diversity entropy shifted from 0.953 to 0.981.",
+          "Era Similarity Index: 29.77/100 (confidence 0.612)."
         ]
       },
       "2019/2019": {
@@ -32683,32 +32683,32 @@
       "2019/2026": {
         "eraA": 2019,
         "eraB": 2026,
-        "similarityIndex": 29.69,
-        "confidence": 0.6084,
+        "similarityIndex": 29.99,
+        "confidence": 0.6311,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0843,
-          "diversityAlignment": 0.9879,
-          "genreSimilarity": 0.5959,
-          "noveltyAlignment": 0.7148,
-          "persistentStrength": 0.0227,
-          "trackOverlap": 0.0263
+          "artistOverlap": 0.0841,
+          "diversityAlignment": 0.9883,
+          "genreSimilarity": 0.5925,
+          "noveltyAlignment": 0.7533,
+          "persistentStrength": 0.022,
+          "trackOverlap": 0.0254
         },
         "overlap": {
-          "artistJaccard": 0.0843,
-          "trackJaccard": 0.0263
+          "artistJaccard": 0.0841,
+          "trackJaccard": 0.0254
         },
         "novelty": {
-          "alignment": 0.7148,
+          "alignment": 0.7533,
           "eraA": 0.7346,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9879,
+          "alignment": 0.9883,
           "eraA": 0.969,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5959,
+        "genreSimilarity": 0.5925,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -32756,10 +32756,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -32820,10 +32820,10 @@
           }
         ],
         "insightBullets": [
-          "2019 had 3798 scrobbles across 2430 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.084 and track overlap was 0.026.",
-          "Novelty shifted from 0.735 to 0.449; diversity entropy shifted from 0.969 to 0.981.",
-          "Era Similarity Index: 29.69/100 (confidence 0.608)."
+          "2019 had 3798 scrobbles across 2430 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.084 and track overlap was 0.025.",
+          "Novelty shifted from 0.735 to 0.488; diversity entropy shifted from 0.969 to 0.981.",
+          "Era Similarity Index: 29.99/100 (confidence 0.631)."
         ]
       },
       "2020/2020": {
@@ -33595,32 +33595,32 @@
       "2020/2026": {
         "eraA": 2020,
         "eraB": 2026,
-        "similarityIndex": 31.57,
-        "confidence": 0.6692,
+        "similarityIndex": 31.9,
+        "confidence": 0.6899,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0974,
-          "diversityAlignment": 0.9882,
-          "genreSimilarity": 0.7051,
-          "noveltyAlignment": 0.6773,
-          "persistentStrength": 0.0288,
-          "trackOverlap": 0.0315
+          "artistOverlap": 0.0961,
+          "diversityAlignment": 0.9886,
+          "genreSimilarity": 0.7057,
+          "noveltyAlignment": 0.7159,
+          "persistentStrength": 0.0282,
+          "trackOverlap": 0.0308
         },
         "overlap": {
-          "artistJaccard": 0.0974,
-          "trackJaccard": 0.0315
+          "artistJaccard": 0.0961,
+          "trackJaccard": 0.0308
         },
         "novelty": {
-          "alignment": 0.6773,
+          "alignment": 0.7159,
           "eraA": 0.772,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9882,
+          "alignment": 0.9886,
           "eraA": 0.9693,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.7051,
+        "genreSimilarity": 0.7057,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -33668,10 +33668,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -33732,10 +33732,10 @@
           }
         ],
         "insightBullets": [
-          "2020 had 4897 scrobbles across 3285 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.097 and track overlap was 0.031.",
-          "Novelty shifted from 0.772 to 0.449; diversity entropy shifted from 0.969 to 0.981.",
-          "Era Similarity Index: 31.57/100 (confidence 0.669)."
+          "2020 had 4897 scrobbles across 3285 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.096 and track overlap was 0.031.",
+          "Novelty shifted from 0.772 to 0.488; diversity entropy shifted from 0.969 to 0.981.",
+          "Era Similarity Index: 31.90/100 (confidence 0.690)."
         ]
       },
       "2021/2021": {
@@ -34361,32 +34361,32 @@
       "2021/2026": {
         "eraA": 2021,
         "eraB": 2026,
-        "similarityIndex": 30.11,
-        "confidence": 0.6284,
+        "similarityIndex": 30.37,
+        "confidence": 0.6502,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1004,
-          "diversityAlignment": 0.9979,
-          "genreSimilarity": 0.5835,
-          "noveltyAlignment": 0.6849,
-          "persistentStrength": 0.031,
-          "trackOverlap": 0.0343
+          "artistOverlap": 0.099,
+          "diversityAlignment": 0.9983,
+          "genreSimilarity": 0.5805,
+          "noveltyAlignment": 0.7235,
+          "persistentStrength": 0.0302,
+          "trackOverlap": 0.0332
         },
         "overlap": {
-          "artistJaccard": 0.1004,
-          "trackJaccard": 0.0343
+          "artistJaccard": 0.099,
+          "trackJaccard": 0.0332
         },
         "novelty": {
-          "alignment": 0.6849,
+          "alignment": 0.7235,
           "eraA": 0.7644,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9979,
+          "alignment": 0.9983,
           "eraA": 0.979,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5835,
+        "genreSimilarity": 0.5805,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -34434,10 +34434,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -34498,10 +34498,10 @@
           }
         ],
         "insightBullets": [
-          "2021 had 4188 scrobbles across 2950 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.100 and track overlap was 0.034.",
-          "Novelty shifted from 0.764 to 0.449; diversity entropy shifted from 0.979 to 0.981.",
-          "Era Similarity Index: 30.11/100 (confidence 0.628)."
+          "2021 had 4188 scrobbles across 2950 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.099 and track overlap was 0.033.",
+          "Novelty shifted from 0.764 to 0.488; diversity entropy shifted from 0.979 to 0.981.",
+          "Era Similarity Index: 30.37/100 (confidence 0.650)."
         ]
       },
       "2022/2022": {
@@ -34981,32 +34981,32 @@
       "2022/2026": {
         "eraA": 2022,
         "eraB": 2026,
-        "similarityIndex": 29.92,
-        "confidence": 0.5876,
+        "similarityIndex": 30.15,
+        "confidence": 0.6116,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0904,
-          "diversityAlignment": 0.9989,
-          "genreSimilarity": 0.5875,
-          "noveltyAlignment": 0.7054,
-          "persistentStrength": 0.0271,
-          "trackOverlap": 0.0306
+          "artistOverlap": 0.0881,
+          "diversityAlignment": 0.9993,
+          "genreSimilarity": 0.5841,
+          "noveltyAlignment": 0.744,
+          "persistentStrength": 0.0265,
+          "trackOverlap": 0.0297
         },
         "overlap": {
-          "artistJaccard": 0.0904,
-          "trackJaccard": 0.0306
+          "artistJaccard": 0.0881,
+          "trackJaccard": 0.0297
         },
         "novelty": {
-          "alignment": 0.7054,
+          "alignment": 0.744,
           "eraA": 0.7439,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9989,
+          "alignment": 0.9993,
           "eraA": 0.98,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.5875,
+        "genreSimilarity": 0.5841,
         "persistentFavorites": [
           {
             "artist": "Crumb",
@@ -35054,10 +35054,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -35118,10 +35118,10 @@
           }
         ],
         "insightBullets": [
-          "2022 had 3321 scrobbles across 2335 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.090 and track overlap was 0.031.",
-          "Novelty shifted from 0.744 to 0.449; diversity entropy shifted from 0.980 to 0.981.",
-          "Era Similarity Index: 29.92/100 (confidence 0.588)."
+          "2022 had 3321 scrobbles across 2335 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.088 and track overlap was 0.030.",
+          "Novelty shifted from 0.744 to 0.488; diversity entropy shifted from 0.980 to 0.981.",
+          "Era Similarity Index: 30.15/100 (confidence 0.612)."
         ]
       },
       "2023/2023": {
@@ -35455,32 +35455,32 @@
       "2023/2026": {
         "eraA": 2023,
         "eraB": 2026,
-        "similarityIndex": 33.47,
-        "confidence": 0.6573,
+        "similarityIndex": 33.79,
+        "confidence": 0.6783,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1203,
-          "diversityAlignment": 0.98,
-          "genreSimilarity": 0.6786,
-          "noveltyAlignment": 0.7769,
-          "persistentStrength": 0.0453,
-          "trackOverlap": 0.0513
+          "artistOverlap": 0.1213,
+          "diversityAlignment": 0.9803,
+          "genreSimilarity": 0.6745,
+          "noveltyAlignment": 0.8155,
+          "persistentStrength": 0.0443,
+          "trackOverlap": 0.0498
         },
         "overlap": {
-          "artistJaccard": 0.1203,
-          "trackJaccard": 0.0513
+          "artistJaccard": 0.1213,
+          "trackJaccard": 0.0498
         },
         "novelty": {
-          "alignment": 0.7769,
+          "alignment": 0.8155,
           "eraA": 0.6724,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.98,
+          "alignment": 0.9803,
           "eraA": 0.961,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6786,
+        "genreSimilarity": 0.6745,
         "persistentFavorites": [
           {
             "artist": "Boards of Canada",
@@ -35519,10 +35519,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -35592,10 +35592,10 @@
           }
         ],
         "insightBullets": [
-          "2023 had 4699 scrobbles across 2662 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.120 and track overlap was 0.051.",
-          "Novelty shifted from 0.672 to 0.449; diversity entropy shifted from 0.961 to 0.981.",
-          "Era Similarity Index: 33.47/100 (confidence 0.657)."
+          "2023 had 4699 scrobbles across 2662 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.121 and track overlap was 0.050.",
+          "Novelty shifted from 0.672 to 0.488; diversity entropy shifted from 0.961 to 0.981.",
+          "Era Similarity Index: 33.79/100 (confidence 0.678)."
         ]
       },
       "2024/2024": {
@@ -35783,32 +35783,32 @@
       "2024/2026": {
         "eraA": 2024,
         "eraB": 2026,
-        "similarityIndex": 33.93,
-        "confidence": 0.6445,
+        "similarityIndex": 34.59,
+        "confidence": 0.6627,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1275,
-          "diversityAlignment": 0.9872,
-          "genreSimilarity": 0.6771,
-          "noveltyAlignment": 0.782,
-          "persistentStrength": 0.0487,
-          "trackOverlap": 0.0548
+          "artistOverlap": 0.1327,
+          "diversityAlignment": 0.9876,
+          "genreSimilarity": 0.6812,
+          "noveltyAlignment": 0.8205,
+          "persistentStrength": 0.0497,
+          "trackOverlap": 0.0558
         },
         "overlap": {
-          "artistJaccard": 0.1275,
-          "trackJaccard": 0.0548
+          "artistJaccard": 0.1327,
+          "trackJaccard": 0.0558
         },
         "novelty": {
-          "alignment": 0.782,
+          "alignment": 0.8205,
           "eraA": 0.6674,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.9872,
+          "alignment": 0.9876,
           "eraA": 0.9683,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6771,
+        "genreSimilarity": 0.6812,
         "persistentFavorites": [
           {
             "artist": "Allah-Las",
@@ -35837,9 +35837,9 @@
           {
             "artist": "Khruangbin",
             "countA": 5,
-            "countB": 5,
+            "countB": 6,
             "rateA": 0.0137,
-            "rateB": 0.0137,
+            "rateB": 0.0164,
             "track": "May Ninth"
           }
         ],
@@ -35847,10 +35847,10 @@
           {
             "artist": "Alabaster Deplume",
             "countA": 0,
-            "countB": 8,
-            "delta": 0.0219,
+            "countB": 9,
+            "delta": 0.0247,
             "rateA": 0,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -35920,10 +35920,10 @@
           }
         ],
         "insightBullets": [
-          "2024 had 7550 scrobbles across 4347 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.128 and track overlap was 0.055.",
-          "Novelty shifted from 0.667 to 0.449; diversity entropy shifted from 0.968 to 0.981.",
-          "Era Similarity Index: 33.93/100 (confidence 0.644)."
+          "2024 had 7550 scrobbles across 4347 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.133 and track overlap was 0.056.",
+          "Novelty shifted from 0.667 to 0.488; diversity entropy shifted from 0.968 to 0.981.",
+          "Era Similarity Index: 34.59/100 (confidence 0.663)."
         ]
       },
       "2025/2025": {
@@ -35965,32 +35965,32 @@
       "2025/2026": {
         "eraA": 2025,
         "eraB": 2026,
-        "similarityIndex": 36.99,
-        "confidence": 0.638,
+        "similarityIndex": 38,
+        "confidence": 0.6558,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.1539,
-          "diversityAlignment": 0.989,
-          "genreSimilarity": 0.6534,
-          "noveltyAlignment": 0.9418,
-          "persistentStrength": 0.0769,
-          "trackOverlap": 0.0844
+          "artistOverlap": 0.1673,
+          "diversityAlignment": 0.9893,
+          "genreSimilarity": 0.6501,
+          "noveltyAlignment": 0.9803,
+          "persistentStrength": 0.0822,
+          "trackOverlap": 0.0914
         },
         "overlap": {
-          "artistJaccard": 0.1539,
-          "trackJaccard": 0.0844
+          "artistJaccard": 0.1673,
+          "trackJaccard": 0.0914
         },
         "novelty": {
-          "alignment": 0.9418,
+          "alignment": 0.9803,
           "eraA": 0.5076,
-          "eraB": 0.4493
+          "eraB": 0.4879
         },
         "diversity": {
-          "alignment": 0.989,
+          "alignment": 0.9893,
           "eraA": 0.97,
-          "eraB": 0.9811
+          "eraB": 0.9807
         },
-        "genreSimilarity": 0.6534,
+        "genreSimilarity": 0.6501,
         "persistentFavorites": [
           {
             "artist": "Beach House",
@@ -36003,10 +36003,18 @@
           {
             "artist": "Alabaster DePlume",
             "countA": 15,
-            "countB": 8,
+            "countB": 9,
             "rateA": 0.0411,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 11,
+            "countB": 6,
+            "rateA": 0.0301,
+            "rateB": 0.0164,
+            "track": "May Ninth"
           },
           {
             "artist": "Wet Leg",
@@ -36015,14 +36023,6 @@
             "rateA": 0.0164,
             "rateB": 0.0192,
             "track": "mangetout"
-          },
-          {
-            "artist": "Broadcast",
-            "countA": 5,
-            "countB": 6,
-            "rateA": 0.0137,
-            "rateB": 0.0164,
-            "track": "Come on Let's Go"
           }
         ],
         "rising": [
@@ -36102,10 +36102,10 @@
           }
         ],
         "insightBullets": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.154 and track overlap was 0.084.",
-          "Novelty shifted from 0.508 to 0.449; diversity entropy shifted from 0.970 to 0.981.",
-          "Era Similarity Index: 36.99/100 (confidence 0.638)."
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.167 and track overlap was 0.091.",
+          "Novelty shifted from 0.508 to 0.488; diversity entropy shifted from 0.970 to 0.981.",
+          "Era Similarity Index: 38.00/100 (confidence 0.656)."
         ]
       },
       "2026/2026": {
@@ -38545,32 +38545,32 @@
       "2005/2026": {
         "eraA": 2005,
         "eraB": 2026,
-        "similarityIndex": 28.19,
-        "confidence": 0.5057,
+        "similarityIndex": 28.05,
+        "confidence": 0.529,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0247,
+          "artistOverlap": 0.0232,
           "diversityAlignment": 0.9978,
-          "genreSimilarity": 0.5233,
-          "noveltyAlignment": 0.94,
-          "persistentStrength": 0.0027,
-          "trackOverlap": 0.0034
+          "genreSimilarity": 0.5209,
+          "noveltyAlignment": 0.9356,
+          "persistentStrength": 0.0026,
+          "trackOverlap": 0.0033
         },
         "overlap": {
-          "artistJaccard": 0.0247,
-          "trackJaccard": 0.0034
+          "artistJaccard": 0.0232,
+          "trackJaccard": 0.0033
         },
         "novelty": {
-          "alignment": 0.94,
+          "alignment": 0.9356,
           "eraA": 0.7258,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9978,
           "eraA": 0.9879,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.5233,
+        "genreSimilarity": 0.5209,
         "persistentFavorites": [
           {
             "artist": "Sonic Youth",
@@ -38634,13 +38634,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -38682,10 +38682,10 @@
           }
         ],
         "insightBullets": [
-          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.025 and track overlap was 0.003.",
-          "Novelty shifted from 0.726 to 0.786; diversity entropy shifted from 0.988 to 0.986.",
-          "Era Similarity Index: 28.19/100 (confidence 0.506)."
+          "2005 had 3532 scrobbles across 2604 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.023 and track overlap was 0.003.",
+          "Novelty shifted from 0.726 to 0.790; diversity entropy shifted from 0.988 to 0.986.",
+          "Era Similarity Index: 28.05/100 (confidence 0.529)."
         ]
       },
       "2006/2006": {
@@ -40941,32 +40941,32 @@
       "2006/2026": {
         "eraA": 2006,
         "eraB": 2026,
-        "similarityIndex": 29.48,
-        "confidence": 0.4616,
+        "similarityIndex": 29.32,
+        "confidence": 0.4889,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0534,
+          "artistOverlap": 0.0503,
           "diversityAlignment": 0.9911,
-          "genreSimilarity": 0.5701,
-          "noveltyAlignment": 0.8989,
-          "persistentStrength": 0.0051,
-          "trackOverlap": 0.0055
+          "genreSimilarity": 0.5642,
+          "noveltyAlignment": 0.9033,
+          "persistentStrength": 0.0049,
+          "trackOverlap": 0.0053
         },
         "overlap": {
-          "artistJaccard": 0.0534,
-          "trackJaccard": 0.0055
+          "artistJaccard": 0.0503,
+          "trackJaccard": 0.0053
         },
         "novelty": {
-          "alignment": 0.8989,
+          "alignment": 0.9033,
           "eraA": 0.8869,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9911,
           "eraA": 0.9946,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.5701,
+        "genreSimilarity": 0.5642,
         "persistentFavorites": [
           {
             "artist": "PJ Harvey",
@@ -41030,13 +41030,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -41078,10 +41078,10 @@
           }
         ],
         "insightBullets": [
-          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.053 and track overlap was 0.005.",
-          "Novelty shifted from 0.887 to 0.786; diversity entropy shifted from 0.995 to 0.986.",
-          "Era Similarity Index: 29.48/100 (confidence 0.462)."
+          "2006 had 2510 scrobbles across 2228 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.050 and track overlap was 0.005.",
+          "Novelty shifted from 0.887 to 0.790; diversity entropy shifted from 0.995 to 0.986.",
+          "Era Similarity Index: 29.32/100 (confidence 0.489)."
         ]
       },
       "2007/2007": {
@@ -43191,32 +43191,32 @@
       "2007/2026": {
         "eraA": 2007,
         "eraB": 2026,
-        "similarityIndex": 31.36,
-        "confidence": 0.5787,
+        "similarityIndex": 31.14,
+        "confidence": 0.5975,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0589,
-          "diversityAlignment": 0.9932,
-          "genreSimilarity": 0.6053,
-          "noveltyAlignment": 0.9982,
-          "persistentStrength": 0.0084,
-          "trackOverlap": 0.0104
+          "artistOverlap": 0.0564,
+          "diversityAlignment": 0.9933,
+          "genreSimilarity": 0.5999,
+          "noveltyAlignment": 0.9938,
+          "persistentStrength": 0.0082,
+          "trackOverlap": 0.0102
         },
         "overlap": {
-          "artistJaccard": 0.0589,
-          "trackJaccard": 0.0104
+          "artistJaccard": 0.0564,
+          "trackJaccard": 0.0102
         },
         "novelty": {
-          "alignment": 0.9982,
+          "alignment": 0.9938,
           "eraA": 0.784,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
-          "alignment": 0.9932,
+          "alignment": 0.9933,
           "eraA": 0.9789,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6053,
+        "genreSimilarity": 0.5999,
         "persistentFavorites": [
           {
             "artist": "Aphex Twin",
@@ -43280,13 +43280,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -43328,10 +43328,10 @@
           }
         ],
         "insightBullets": [
-          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.010.",
-          "Novelty shifted from 0.784 to 0.786; diversity entropy shifted from 0.979 to 0.986.",
-          "Era Similarity Index: 31.36/100 (confidence 0.579)."
+          "2007 had 6790 scrobbles across 4856 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.010.",
+          "Novelty shifted from 0.784 to 0.790; diversity entropy shifted from 0.979 to 0.986.",
+          "Era Similarity Index: 31.14/100 (confidence 0.598)."
         ]
       },
       "2008/2008": {
@@ -45295,32 +45295,32 @@
       "2008/2026": {
         "eraA": 2008,
         "eraB": 2026,
-        "similarityIndex": 31.07,
-        "confidence": 0.5692,
+        "similarityIndex": 30.98,
+        "confidence": 0.587,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0461,
+          "artistOverlap": 0.0452,
           "diversityAlignment": 0.9948,
-          "genreSimilarity": 0.6233,
-          "noveltyAlignment": 0.9901,
-          "persistentStrength": 0.0071,
-          "trackOverlap": 0.0087
+          "genreSimilarity": 0.6171,
+          "noveltyAlignment": 0.9944,
+          "persistentStrength": 0.007,
+          "trackOverlap": 0.0086
         },
         "overlap": {
-          "artistJaccard": 0.0461,
-          "trackJaccard": 0.0087
+          "artistJaccard": 0.0452,
+          "trackJaccard": 0.0086
         },
         "novelty": {
-          "alignment": 0.9901,
+          "alignment": 0.9944,
           "eraA": 0.7957,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9948,
           "eraA": 0.9805,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6233,
+        "genreSimilarity": 0.6171,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -45384,13 +45384,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -45432,10 +45432,10 @@
           }
         ],
         "insightBullets": [
-          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.046 and track overlap was 0.009.",
-          "Novelty shifted from 0.796 to 0.786; diversity entropy shifted from 0.981 to 0.986.",
-          "Era Similarity Index: 31.07/100 (confidence 0.569)."
+          "2008 had 8462 scrobbles across 6252 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.045 and track overlap was 0.009.",
+          "Novelty shifted from 0.796 to 0.790; diversity entropy shifted from 0.981 to 0.986.",
+          "Era Similarity Index: 30.98/100 (confidence 0.587)."
         ]
       },
       "2009/2009": {
@@ -47253,32 +47253,32 @@
       "2009/2026": {
         "eraA": 2009,
         "eraB": 2026,
-        "similarityIndex": 31.14,
-        "confidence": 0.5811,
+        "similarityIndex": 31.05,
+        "confidence": 0.6,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.043,
+          "artistOverlap": 0.0418,
           "diversityAlignment": 0.998,
-          "genreSimilarity": 0.6643,
-          "noveltyAlignment": 0.9442,
-          "persistentStrength": 0.0076,
-          "trackOverlap": 0.0085
+          "genreSimilarity": 0.6583,
+          "noveltyAlignment": 0.9485,
+          "persistentStrength": 0.0074,
+          "trackOverlap": 0.0083
         },
         "overlap": {
-          "artistJaccard": 0.043,
-          "trackJaccard": 0.0085
+          "artistJaccard": 0.0418,
+          "trackJaccard": 0.0083
         },
         "novelty": {
-          "alignment": 0.9442,
+          "alignment": 0.9485,
           "eraA": 0.8417,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.998,
           "eraA": 0.9877,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6643,
+        "genreSimilarity": 0.6583,
         "persistentFavorites": [
           {
             "artist": "The xx",
@@ -47342,13 +47342,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -47390,10 +47390,10 @@
           }
         ],
         "insightBullets": [
-          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.043 and track overlap was 0.008.",
-          "Novelty shifted from 0.842 to 0.786; diversity entropy shifted from 0.988 to 0.986.",
-          "Era Similarity Index: 31.14/100 (confidence 0.581)."
+          "2009 had 6475 scrobbles across 5185 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.042 and track overlap was 0.008.",
+          "Novelty shifted from 0.842 to 0.790; diversity entropy shifted from 0.988 to 0.986.",
+          "Era Similarity Index: 31.05/100 (confidence 0.600)."
         ]
       },
       "2010/2010": {
@@ -49065,32 +49065,32 @@
       "2010/2026": {
         "eraA": 2010,
         "eraB": 2026,
-        "similarityIndex": 31.59,
-        "confidence": 0.5939,
+        "similarityIndex": 31.51,
+        "confidence": 0.6142,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0495,
+          "artistOverlap": 0.0483,
           "diversityAlignment": 0.9899,
-          "genreSimilarity": 0.6502,
-          "noveltyAlignment": 0.9748,
-          "persistentStrength": 0.0128,
-          "trackOverlap": 0.0159
+          "genreSimilarity": 0.6455,
+          "noveltyAlignment": 0.9792,
+          "persistentStrength": 0.0125,
+          "trackOverlap": 0.0155
         },
         "overlap": {
-          "artistJaccard": 0.0495,
-          "trackJaccard": 0.0159
+          "artistJaccard": 0.0483,
+          "trackJaccard": 0.0155
         },
         "novelty": {
-          "alignment": 0.9748,
+          "alignment": 0.9792,
           "eraA": 0.811,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9899,
           "eraA": 0.9756,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6502,
+        "genreSimilarity": 0.6455,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -49154,13 +49154,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -49202,10 +49202,10 @@
           }
         ],
         "insightBullets": [
-          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.050 and track overlap was 0.016.",
-          "Novelty shifted from 0.811 to 0.786; diversity entropy shifted from 0.976 to 0.986.",
-          "Era Similarity Index: 31.59/100 (confidence 0.594)."
+          "2010 had 5166 scrobbles across 3736 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.048 and track overlap was 0.015.",
+          "Novelty shifted from 0.811 to 0.790; diversity entropy shifted from 0.976 to 0.986.",
+          "Era Similarity Index: 31.51/100 (confidence 0.614)."
         ]
       },
       "2011/2011": {
@@ -50731,32 +50731,32 @@
       "2011/2026": {
         "eraA": 2011,
         "eraB": 2026,
-        "similarityIndex": 32.83,
-        "confidence": 0.5686,
+        "similarityIndex": 32.88,
+        "confidence": 0.5862,
         "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0552,
+          "artistOverlap": 0.0544,
           "diversityAlignment": 0.9908,
-          "genreSimilarity": 0.7055,
-          "noveltyAlignment": 0.9952,
-          "persistentStrength": 0.0125,
-          "trackOverlap": 0.0158
+          "genreSimilarity": 0.7143,
+          "noveltyAlignment": 0.9909,
+          "persistentStrength": 0.0123,
+          "trackOverlap": 0.0155
         },
         "overlap": {
-          "artistJaccard": 0.0552,
-          "trackJaccard": 0.0158
+          "artistJaccard": 0.0544,
+          "trackJaccard": 0.0155
         },
         "novelty": {
-          "alignment": 0.9952,
+          "alignment": 0.9909,
           "eraA": 0.7811,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9908,
           "eraA": 0.9765,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.7055,
+        "genreSimilarity": 0.7143,
         "persistentFavorites": [
           {
             "artist": "The xx",
@@ -50820,13 +50820,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -50868,10 +50868,10 @@
           }
         ],
         "insightBullets": [
-          "2011 had 8608 scrobbles across 5993 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.055 and track overlap was 0.016.",
-          "Novelty shifted from 0.781 to 0.786; diversity entropy shifted from 0.977 to 0.986.",
-          "Era Similarity Index: 32.83/100 (confidence 0.569)."
+          "2011 had 8608 scrobbles across 5993 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.054 and track overlap was 0.016.",
+          "Novelty shifted from 0.781 to 0.790; diversity entropy shifted from 0.977 to 0.986.",
+          "Era Similarity Index: 32.88/100 (confidence 0.586)."
         ]
       },
       "2012/2012": {
@@ -52251,32 +52251,32 @@
       "2012/2026": {
         "eraA": 2012,
         "eraB": 2026,
-        "similarityIndex": 32.42,
-        "confidence": 0.5351,
-        "confidenceBand": "low",
+        "similarityIndex": 32.4,
+        "confidence": 0.5572,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.057,
+          "artistOverlap": 0.0545,
           "diversityAlignment": 0.9826,
-          "genreSimilarity": 0.6778,
-          "noveltyAlignment": 0.9766,
-          "persistentStrength": 0.0172,
-          "trackOverlap": 0.0232
+          "genreSimilarity": 0.6867,
+          "noveltyAlignment": 0.9722,
+          "persistentStrength": 0.0167,
+          "trackOverlap": 0.0225
         },
         "overlap": {
-          "artistJaccard": 0.057,
-          "trackJaccard": 0.0232
+          "artistJaccard": 0.0545,
+          "trackJaccard": 0.0225
         },
         "novelty": {
-          "alignment": 0.9766,
+          "alignment": 0.9722,
           "eraA": 0.7624,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9826,
           "eraA": 0.9683,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6778,
+        "genreSimilarity": 0.6867,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -52340,13 +52340,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -52388,10 +52388,10 @@
           }
         ],
         "insightBullets": [
-          "2012 had 4047 scrobbles across 2664 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.057 and track overlap was 0.023.",
-          "Novelty shifted from 0.762 to 0.786; diversity entropy shifted from 0.968 to 0.986.",
-          "Era Similarity Index: 32.42/100 (confidence 0.535)."
+          "2012 had 4047 scrobbles across 2664 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.055 and track overlap was 0.022.",
+          "Novelty shifted from 0.762 to 0.790; diversity entropy shifted from 0.968 to 0.986.",
+          "Era Similarity Index: 32.40/100 (confidence 0.557)."
         ]
       },
       "2013/2013": {
@@ -53625,32 +53625,32 @@
       "2013/2026": {
         "eraA": 2013,
         "eraB": 2026,
-        "similarityIndex": 31.72,
-        "confidence": 0.5101,
+        "similarityIndex": 31.56,
+        "confidence": 0.5333,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0591,
+          "artistOverlap": 0.0559,
           "diversityAlignment": 0.9977,
-          "genreSimilarity": 0.6297,
-          "noveltyAlignment": 0.9838,
-          "persistentStrength": 0.0114,
-          "trackOverlap": 0.0132
+          "genreSimilarity": 0.6246,
+          "noveltyAlignment": 0.9881,
+          "persistentStrength": 0.011,
+          "trackOverlap": 0.0128
         },
         "overlap": {
-          "artistJaccard": 0.0591,
-          "trackJaccard": 0.0132
+          "artistJaccard": 0.0559,
+          "trackJaccard": 0.0128
         },
         "novelty": {
-          "alignment": 0.9838,
+          "alignment": 0.9881,
           "eraA": 0.802,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9977,
           "eraA": 0.9834,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6297,
+        "genreSimilarity": 0.6246,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -53714,13 +53714,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -53762,10 +53762,10 @@
           }
         ],
         "insightBullets": [
-          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.059 and track overlap was 0.013.",
-          "Novelty shifted from 0.802 to 0.786; diversity entropy shifted from 0.983 to 0.986.",
-          "Era Similarity Index: 31.72/100 (confidence 0.510)."
+          "2013 had 3614 scrobbles across 2733 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.056 and track overlap was 0.013.",
+          "Novelty shifted from 0.802 to 0.790; diversity entropy shifted from 0.983 to 0.986.",
+          "Era Similarity Index: 31.56/100 (confidence 0.533)."
         ]
       },
       "2014/2014": {
@@ -54853,32 +54853,32 @@
       "2014/2026": {
         "eraA": 2014,
         "eraB": 2026,
-        "similarityIndex": 31.31,
-        "confidence": 0.5412,
-        "confidenceBand": "low",
+        "similarityIndex": 31.21,
+        "confidence": 0.5631,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.066,
+          "artistOverlap": 0.0645,
           "diversityAlignment": 0.9758,
-          "genreSimilarity": 0.6124,
-          "noveltyAlignment": 0.9516,
-          "persistentStrength": 0.0146,
-          "trackOverlap": 0.0186
+          "genreSimilarity": 0.6068,
+          "noveltyAlignment": 0.9559,
+          "persistentStrength": 0.0143,
+          "trackOverlap": 0.0183
         },
         "overlap": {
-          "artistJaccard": 0.066,
-          "trackJaccard": 0.0186
+          "artistJaccard": 0.0645,
+          "trackJaccard": 0.0183
         },
         "novelty": {
-          "alignment": 0.9516,
+          "alignment": 0.9559,
           "eraA": 0.8343,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9758,
           "eraA": 0.9615,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6124,
+        "genreSimilarity": 0.6068,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -54942,13 +54942,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -54990,10 +54990,10 @@
           }
         ],
         "insightBullets": [
-          "2014 had 4148 scrobbles across 2908 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.066 and track overlap was 0.019.",
-          "Novelty shifted from 0.834 to 0.786; diversity entropy shifted from 0.961 to 0.986.",
-          "Era Similarity Index: 31.31/100 (confidence 0.541)."
+          "2014 had 4148 scrobbles across 2908 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.064 and track overlap was 0.018.",
+          "Novelty shifted from 0.834 to 0.790; diversity entropy shifted from 0.961 to 0.986.",
+          "Era Similarity Index: 31.21/100 (confidence 0.563)."
         ]
       },
       "2015/2015": {
@@ -55935,32 +55935,32 @@
       "2015/2026": {
         "eraA": 2015,
         "eraB": 2026,
-        "similarityIndex": 31.7,
-        "confidence": 0.5464,
-        "confidenceBand": "low",
+        "similarityIndex": 31.73,
+        "confidence": 0.5681,
+        "confidenceBand": "medium",
         "components": {
-          "artistOverlap": 0.0649,
+          "artistOverlap": 0.062,
           "diversityAlignment": 0.9731,
-          "genreSimilarity": 0.6211,
-          "noveltyAlignment": 0.976,
-          "persistentStrength": 0.0168,
-          "trackOverlap": 0.0214
+          "genreSimilarity": 0.6283,
+          "noveltyAlignment": 0.9804,
+          "persistentStrength": 0.0165,
+          "trackOverlap": 0.0207
         },
         "overlap": {
-          "artistJaccard": 0.0649,
-          "trackJaccard": 0.0214
+          "artistJaccard": 0.062,
+          "trackJaccard": 0.0207
         },
         "novelty": {
-          "alignment": 0.976,
+          "alignment": 0.9804,
           "eraA": 0.8098,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9731,
           "eraA": 0.9588,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.6211,
+        "genreSimilarity": 0.6283,
         "persistentFavorites": [
           {
             "artist": "Radiohead",
@@ -56024,13 +56024,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -56072,10 +56072,10 @@
           }
         ],
         "insightBullets": [
-          "2015 had 4232 scrobbles across 2797 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.065 and track overlap was 0.021.",
-          "Novelty shifted from 0.810 to 0.786; diversity entropy shifted from 0.959 to 0.986.",
-          "Era Similarity Index: 31.70/100 (confidence 0.546)."
+          "2015 had 4232 scrobbles across 2797 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.062 and track overlap was 0.021.",
+          "Novelty shifted from 0.810 to 0.790; diversity entropy shifted from 0.959 to 0.986.",
+          "Era Similarity Index: 31.73/100 (confidence 0.568)."
         ]
       },
       "2016/2016": {
@@ -56871,32 +56871,32 @@
       "2016/2026": {
         "eraA": 2016,
         "eraB": 2026,
-        "similarityIndex": 30.71,
-        "confidence": 0.2732,
+        "similarityIndex": 30.75,
+        "confidence": 0.2787,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.0485,
+          "artistOverlap": 0.0461,
           "diversityAlignment": 0.9962,
-          "genreSimilarity": 0.616,
-          "noveltyAlignment": 0.9345,
-          "persistentStrength": 0.0126,
-          "trackOverlap": 0.0159
+          "genreSimilarity": 0.6235,
+          "noveltyAlignment": 0.9388,
+          "persistentStrength": 0.0117,
+          "trackOverlap": 0.0149
         },
         "overlap": {
-          "artistJaccard": 0.0485,
-          "trackJaccard": 0.0159
+          "artistJaccard": 0.0461,
+          "trackJaccard": 0.0149
         },
         "novelty": {
-          "alignment": 0.9345,
+          "alignment": 0.9388,
           "eraA": 0.8514,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9962,
           "eraA": 0.9895,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.616,
+        "genreSimilarity": 0.6235,
         "persistentFavorites": [
           {
             "artist": "A Perfect Circle",
@@ -56960,13 +56960,13 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [
@@ -57008,10 +57008,10 @@
           }
         ],
         "insightBullets": [
-          "2016 had 704 scrobbles across 592 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.048 and track overlap was 0.016.",
-          "Novelty shifted from 0.851 to 0.786; diversity entropy shifted from 0.990 to 0.986.",
-          "Era Similarity Index: 30.71/100 (confidence 0.273)."
+          "2016 had 704 scrobbles across 592 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.046 and track overlap was 0.015.",
+          "Novelty shifted from 0.851 to 0.790; diversity entropy shifted from 0.990 to 0.986.",
+          "Era Similarity Index: 30.75/100 (confidence 0.279)."
         ]
       },
       "2017/2017": {
@@ -57402,14 +57402,14 @@
       "2017/2026": {
         "eraA": 2017,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -57418,9 +57418,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -57458,21 +57458,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2017 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2017 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2018/2018": {
@@ -57824,14 +57824,14 @@
       "2018/2026": {
         "eraA": 2018,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -57840,9 +57840,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -57880,21 +57880,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2018 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2018 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2019/2019": {
@@ -58207,14 +58207,14 @@
       "2019/2026": {
         "eraA": 2019,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58223,9 +58223,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -58263,21 +58263,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2019 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2019 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2020/2020": {
@@ -58551,14 +58551,14 @@
       "2020/2026": {
         "eraA": 2020,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58567,9 +58567,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -58607,21 +58607,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2020 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2020 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2021/2021": {
@@ -58856,14 +58856,14 @@
       "2021/2026": {
         "eraA": 2021,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -58872,9 +58872,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -58912,21 +58912,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2021 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2021 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2022/2022": {
@@ -59122,14 +59122,14 @@
       "2022/2026": {
         "eraA": 2022,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59138,9 +59138,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -59178,21 +59178,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2022 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2022 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2023/2023": {
@@ -59349,14 +59349,14 @@
       "2023/2026": {
         "eraA": 2023,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59365,9 +59365,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -59405,21 +59405,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2023 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2023 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2024/2024": {
@@ -59537,14 +59537,14 @@
       "2024/2026": {
         "eraA": 2024,
         "eraB": 2026,
-        "similarityIndex": 2.28,
+        "similarityIndex": 2.24,
         "confidence": 0,
         "confidenceBand": "low",
         "components": {
           "artistOverlap": 0,
           "diversityAlignment": 0.0143,
           "genreSimilarity": 0,
-          "noveltyAlignment": 0.2142,
+          "noveltyAlignment": 0.2098,
           "persistentStrength": 0,
           "trackOverlap": 0
         },
@@ -59553,9 +59553,9 @@
           "trackJaccard": 0
         },
         "novelty": {
-          "alignment": 0.2142,
+          "alignment": 0.2098,
           "eraA": 0,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.0143,
@@ -59593,21 +59593,21 @@
             "track": "Track X"
           },
           {
-            "artist": "Beach House",
+            "artist": "Alabaster Deplume",
             "countA": 0,
             "countB": 5,
             "delta": 0.0137,
             "rateA": 0,
             "rateB": 0.0137,
-            "track": "Drunk in LA"
+            "track": "A Gente Acaba (Vento Em Rosa)"
           }
         ],
         "falling": [],
         "insightBullets": [
-          "2024 had 0 scrobbles across 0 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
+          "2024 had 0 scrobbles across 0 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
           "Artist overlap (Jaccard) was 0.000 and track overlap was 0.000.",
-          "Novelty shifted from 0.000 to 0.786; diversity entropy shifted from 0.000 to 0.986.",
-          "Era Similarity Index: 2.28/100 (confidence 0.000)."
+          "Novelty shifted from 0.000 to 0.790; diversity entropy shifted from 0.000 to 0.986.",
+          "Era Similarity Index: 2.24/100 (confidence 0.000)."
         ]
       },
       "2025/2025": {
@@ -59649,39 +59649,39 @@
       "2025/2026": {
         "eraA": 2025,
         "eraB": 2026,
-        "similarityIndex": 40.68,
-        "confidence": 0.4548,
+        "similarityIndex": 41.17,
+        "confidence": 0.4842,
         "confidenceBand": "low",
         "components": {
-          "artistOverlap": 0.202,
+          "artistOverlap": 0.2137,
           "diversityAlignment": 0.9978,
-          "genreSimilarity": 0.7026,
-          "noveltyAlignment": 0.9901,
-          "persistentStrength": 0.0986,
-          "trackOverlap": 0.1082
+          "genreSimilarity": 0.6961,
+          "noveltyAlignment": 0.9857,
+          "persistentStrength": 0.1059,
+          "trackOverlap": 0.1153
         },
         "overlap": {
-          "artistJaccard": 0.202,
-          "trackJaccard": 0.1082
+          "artistJaccard": 0.2137,
+          "trackJaccard": 0.1153
         },
         "novelty": {
-          "alignment": 0.9901,
+          "alignment": 0.9857,
           "eraA": 0.7759,
-          "eraB": 0.7858
+          "eraB": 0.7902
         },
         "diversity": {
           "alignment": 0.9978,
           "eraA": 0.9835,
           "eraB": 0.9857
         },
-        "genreSimilarity": 0.7026,
+        "genreSimilarity": 0.6961,
         "persistentFavorites": [
           {
             "artist": "Alabaster Deplume",
             "countA": 6,
-            "countB": 4,
+            "countB": 5,
             "rateA": 0.0164,
-            "rateB": 0.011,
+            "rateB": 0.0137,
             "track": "A Gente Acaba (Vento Em Rosa)"
           },
           {
@@ -59701,12 +59701,12 @@
             "track": "Falling Apart"
           },
           {
-            "artist": "Khruangbin",
+            "artist": "Hermanos Gutiérrez",
             "countA": 3,
             "countB": 3,
             "rateA": 0.0082,
             "rateB": 0.0082,
-            "track": "May Ninth"
+            "track": "Elegantly Wasted [Feat. Leon Bridges]"
           }
         ],
         "rising": [
@@ -59729,6 +59729,15 @@
             "track": "Track X"
           },
           {
+            "artist": "Khruangbin",
+            "countA": 0,
+            "countB": 5,
+            "delta": 0.0137,
+            "rateA": 0,
+            "rateB": 0.0137,
+            "track": "White Gloves ii"
+          },
+          {
             "artist": "Mannequin Pussy",
             "countA": 0,
             "countB": 5,
@@ -59736,15 +59745,6 @@
             "rateA": 0,
             "rateB": 0.0137,
             "track": "I Don't Know You"
-          },
-          {
-            "artist": "Allah-Las",
-            "countA": 0,
-            "countB": 4,
-            "delta": 0.011,
-            "rateA": 0,
-            "rateB": 0.011,
-            "track": "Raspberry Jam"
           }
         ],
         "falling": [
@@ -59786,10 +59786,10 @@
           }
         ],
         "insightBullets": [
-          "2025 had 2174 scrobbles across 1611 unique tracks; 2026 had 1633 scrobbles across 1256 unique tracks.",
-          "Artist overlap (Jaccard) was 0.202 and track overlap was 0.108.",
-          "Novelty shifted from 0.776 to 0.786; diversity entropy shifted from 0.983 to 0.986.",
-          "Era Similarity Index: 40.68/100 (confidence 0.455)."
+          "2025 had 2174 scrobbles across 1611 unique tracks; 2026 had 1804 scrobbles across 1387 unique tracks.",
+          "Artist overlap (Jaccard) was 0.214 and track overlap was 0.115.",
+          "Novelty shifted from 0.776 to 0.790; diversity entropy shifted from 0.983 to 0.986.",
+          "Era Similarity Index: 41.17/100 (confidence 0.484)."
         ]
       },
       "2026/2026": {

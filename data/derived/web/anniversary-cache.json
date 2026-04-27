@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:05Z",
+  "generatedAt": "2026-04-27T01:53:15Z",
   "timezone": "America/Chicago",
   "weekStart": "sunday",
   "topN": 10,
@@ -199621,10 +199621,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -199635,6 +199647,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -199656,33 +199674,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -200901,8 +200901,8 @@
         {
           "year": 2026,
           "date": "2026-04-13",
-          "totalPlays": 53,
-          "uniqueTracks": 53,
+          "totalPlays": 61,
+          "uniqueTracks": 61,
           "topTracks": [
             {
               "track": "Raspberry Jam",
@@ -200935,6 +200935,12 @@
               "playCount": 1
             },
             {
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
+              "playCount": 1
+            },
+            {
               "track": "Walk Like A Motherfucker",
               "artist": "Ghost Funk Orchestra",
               "album": "A Song For Paul",
@@ -200956,12 +200962,6 @@
               "track": "I Think About You - Geiger Mix",
               "artist": "Heiko Voss",
               "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Do You Feel It",
-              "artist": "Holy Wave",
-              "album": "RELAX",
               "playCount": 1
             }
           ]
@@ -201594,10 +201594,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -201608,6 +201620,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -201629,33 +201647,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -202872,6 +202872,20 @@
       "label": "April 14",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-14",
+          "totalPlays": 1,
+          "uniqueTracks": 1,
+          "topTracks": [
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-14",
           "totalPlays": 5,
@@ -203463,10 +203477,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -203477,6 +203503,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -203498,33 +203530,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -205346,10 +205360,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -205360,6 +205386,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -205381,33 +205413,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -207175,10 +207189,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -207189,6 +207215,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -207210,33 +207242,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -208557,6 +208571,74 @@
       "label": "April 17",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-17",
+          "totalPlays": 15,
+          "uniqueTracks": 15,
+          "topTracks": [
+            {
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
+              "playCount": 1
+            },
+            {
+              "track": "Club der Ewigkeiten",
+              "artist": "DJ Koze",
+              "album": "Knock Knock",
+              "playCount": 1
+            },
+            {
+              "track": "Melody Electronics",
+              "artist": "HNNY",
+              "album": "light shines through",
+              "playCount": 1
+            },
+            {
+              "track": "⋆.✩ ࣪₊˚.⋆☾⋆⁺₊✧",
+              "artist": "HNNY",
+              "album": "Close",
+              "playCount": 1
+            },
+            {
+              "track": "Let's Dence",
+              "artist": "Isolée",
+              "album": "Resort Island",
+              "playCount": 1
+            },
+            {
+              "track": "Flickers in the Air of Night",
+              "artist": "Kara-Lis Coverdale",
+              "album": "From Where You Came",
+              "playCount": 1
+            },
+            {
+              "track": "Acrobat",
+              "artist": "Marco Shuttle",
+              "album": "Cobalt Desert Oasis",
+              "playCount": 1
+            },
+            {
+              "track": "Daydream of You",
+              "artist": "Mr. Mitch",
+              "album": "Lazy",
+              "playCount": 1
+            },
+            {
+              "track": "X-Dream",
+              "artist": "Otik",
+              "album": "X-Dream",
+              "playCount": 1
+            },
+            {
+              "track": "Mango Drive",
+              "artist": "Rhythm & Sound",
+              "album": "Rhythm & Sound",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-17",
           "totalPlays": 10,
@@ -209090,10 +209172,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -209104,6 +209198,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -209125,33 +209225,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -210472,6 +210554,26 @@
       "label": "April 18",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-18",
+          "totalPlays": 3,
+          "uniqueTracks": 2,
+          "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-18",
           "totalPlays": 3,
@@ -211093,10 +211195,22 @@
           "year": 2026,
           "startDate": "2026-04-12",
           "endDate": "2026-04-18",
-          "totalPlays": 54,
-          "uniqueTracks": 54,
-          "activeDays": 2,
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 5,
           "topTracks": [
+            {
+              "track": "Route 101",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 2
+            },
+            {
+              "track": "Black Iris",
+              "artist": "Sven Wunder",
+              "album": "Eastern Flowers",
+              "playCount": 2
+            },
             {
               "track": "Raspberry Jam",
               "artist": "Allah-Las",
@@ -211107,6 +211221,12 @@
               "track": "Khala My Friend",
               "artist": "Amanaz",
               "album": "Africa",
+              "playCount": 1
+            },
+            {
+              "track": "Made Your Point",
+              "artist": "Andy Stott",
+              "album": "Unknown Exception",
               "playCount": 1
             },
             {
@@ -211128,33 +211248,15 @@
               "playCount": 1
             },
             {
-              "track": "Walk Like A Motherfucker",
-              "artist": "Ghost Funk Orchestra",
-              "album": "A Song For Paul",
+              "track": "Into Black",
+              "artist": "Blouse",
+              "album": "Blouse",
               "playCount": 1
             },
             {
-              "track": "Do You",
-              "artist": "Ghostwoman",
-              "album": "Ghost Woman",
-              "playCount": 1
-            },
-            {
-              "track": "Flower Rain",
-              "artist": "Gianni Brezzo",
-              "album": "The Awakening",
-              "playCount": 1
-            },
-            {
-              "track": "I Think About You - Geiger Mix",
-              "artist": "Heiko Voss",
-              "album": "I Think About You",
-              "playCount": 1
-            },
-            {
-              "track": "Elegantly Wasted [Feat. Leon Bridges]",
-              "artist": "Hermanos Gutiérrez",
-              "album": "Elegantly Wasted [Feat. Leon Bridges]",
+              "track": "Tides",
+              "artist": "Catching Flies",
+              "album": "Tides",
               "playCount": 1
             }
           ]
@@ -213159,6 +213261,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-13",
           "endDate": "2025-04-19",
@@ -214504,6 +214676,26 @@
       "label": "April 20",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-20",
+          "totalPlays": 3,
+          "uniqueTracks": 2,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "Butterfly By",
+              "artist": "Heinz Kiessling",
+              "album": "Whatever Works (Original Motion Picture Soundtrack)",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-20",
           "totalPlays": 43,
@@ -215151,6 +215343,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-20",
@@ -217083,6 +217345,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-20",
           "endDate": "2025-04-26",
@@ -218476,6 +218808,74 @@
       "label": "April 22",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-22",
+          "totalPlays": 14,
+          "uniqueTracks": 14,
+          "topTracks": [
+            {
+              "track": "Scars",
+              "artist": "Anthony Naples",
+              "album": "Orbs",
+              "playCount": 1
+            },
+            {
+              "track": "Paradise Engineering",
+              "artist": "Barker",
+              "album": "Utility",
+              "playCount": 1
+            },
+            {
+              "track": "When Prophecy Fails",
+              "artist": "Barker",
+              "album": "Debiasing EP",
+              "playCount": 1
+            },
+            {
+              "track": "Badd",
+              "artist": "Dark Sky",
+              "album": "Othona",
+              "playCount": 1
+            },
+            {
+              "track": "Home Calling",
+              "artist": "DJ Seinfeld",
+              "album": "Mirrors",
+              "playCount": 1
+            },
+            {
+              "track": "Sais",
+              "artist": "Floating Points",
+              "album": "Shadows",
+              "playCount": 1
+            },
+            {
+              "track": "Coco loco",
+              "artist": "Herb Alpert",
+              "album": "Fandango",
+              "playCount": 1
+            },
+            {
+              "track": "God Knows We Tried",
+              "artist": "Hugo Massien",
+              "album": "Metamorphosis",
+              "playCount": 1
+            },
+            {
+              "track": "Tendency",
+              "artist": "Jan Jelinek",
+              "album": "Loop-Finding-Jazz-Records",
+              "playCount": 1
+            },
+            {
+              "track": "The Dream",
+              "artist": "John Tejada",
+              "album": "Parabolas",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-22",
           "totalPlays": 34,
@@ -219201,6 +219601,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-20",
@@ -220525,6 +220995,62 @@
       "label": "April 23",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-23",
+          "totalPlays": 8,
+          "uniqueTracks": 8,
+          "topTracks": [
+            {
+              "track": "Pastoral",
+              "artist": "Christian Löffler",
+              "album": "Pastoral",
+              "playCount": 1
+            },
+            {
+              "track": "slk",
+              "artist": "K-Lone",
+              "album": "slk",
+              "playCount": 1
+            },
+            {
+              "track": "HV Road",
+              "artist": "Khotin",
+              "album": "Release Spirit",
+              "playCount": 1
+            },
+            {
+              "track": "Derecho",
+              "artist": "Photay",
+              "album": "Windswept",
+              "playCount": 1
+            },
+            {
+              "track": "in someone else's garden",
+              "artist": "puurvuur",
+              "album": "in someone else's garden",
+              "playCount": 1
+            },
+            {
+              "track": "hawthorn",
+              "artist": "Rachika Nayar",
+              "album": "hawthorn",
+              "playCount": 1
+            },
+            {
+              "track": "I Know",
+              "artist": "Tsha",
+              "album": "OnlyL",
+              "playCount": 1
+            },
+            {
+              "track": "Theme From Jeopardy! - Think Music",
+              "artist": "TV Theme Song Maniacs",
+              "album": "Cover Me: With 99 Tv Songs",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-23",
           "totalPlays": 72,
@@ -221158,6 +221684,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-20",
@@ -222880,6 +223476,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-20",
           "endDate": "2025-04-26",
@@ -224133,6 +224799,74 @@
       "label": "April 25",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-25",
+          "totalPlays": 56,
+          "uniqueTracks": 55,
+          "topTracks": [
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Visit Croatia",
+              "artist": "Alabaster Deplume",
+              "album": "Copernicus - The Good Book of No",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-25",
           "totalPlays": 59,
@@ -224678,6 +225412,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-19",
+          "endDate": "2026-04-25",
+          "totalPlays": 81,
+          "uniqueTracks": 79,
+          "activeDays": 4,
+          "topTracks": [
+            {
+              "track": "What's My Sign?",
+              "artist": "Network Music Ensemble",
+              "album": "Classic Game Show",
+              "playCount": 2
+            },
+            {
+              "track": "La Ruée",
+              "artist": "tony njoku",
+              "album": "Last Bloom",
+              "playCount": 2
+            },
+            {
+              "track": "A Gente Acaba (Vento Em Rosa)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Again",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "Every Time",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals Vol. 1 (IA11 Edition)",
+              "playCount": 1
+            },
+            {
+              "track": "Glass",
+              "artist": "Alabaster Deplume",
+              "album": "Glass",
+              "playCount": 1
+            },
+            {
+              "track": "If You're Sure You Want To",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Not Now, Jesus",
+              "artist": "Alabaster Deplume",
+              "album": "To Cy & Lee: Instrumentals, Vol. 1",
+              "playCount": 1
+            },
+            {
+              "track": "Now (Stars Are Lit)",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            },
+            {
+              "track": "The Sound Of My Feet On This Earth Is A Song To Your Spirit",
+              "artist": "Alabaster Deplume",
+              "album": "GOLD",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-20",
@@ -225932,6 +226736,74 @@
       "label": "April 26",
       "dayResults": [
         {
+          "year": 2026,
+          "date": "2026-04-26",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "date": "2025-04-26",
           "totalPlays": 8,
@@ -226583,6 +227455,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-20",
@@ -228503,6 +229445,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-27",
           "endDate": "2025-05-03",
@@ -230339,6 +231351,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-27",
@@ -232216,6 +233298,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-27",
@@ -234103,6 +235255,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-27",
@@ -236165,6 +237387,76 @@
       ],
       "weekResults": [
         {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
+        {
           "year": 2025,
           "startDate": "2025-04-27",
           "endDate": "2025-05-03",
@@ -238023,6 +239315,76 @@
         }
       ],
       "weekResults": [
+        {
+          "year": 2026,
+          "startDate": "2026-04-26",
+          "endDate": "2026-05-02",
+          "totalPlays": 63,
+          "uniqueTracks": 63,
+          "activeDays": 1,
+          "topTracks": [
+            {
+              "track": "B.P.E",
+              "artist": "Anaiis",
+              "album": "B.P.E",
+              "playCount": 1
+            },
+            {
+              "track": "Midnight In Saqqara (Live)",
+              "artist": "Arc De Soleil",
+              "album": "Midnight In Saqqara (Live)",
+              "playCount": 1
+            },
+            {
+              "track": "GO",
+              "artist": "Baby Rose",
+              "album": "Go",
+              "playCount": 1
+            },
+            {
+              "track": "Found A Light (Beale Street)",
+              "artist": "BADBADNOTGOOD",
+              "album": "Found A Light (Beale Street)",
+              "playCount": 1
+            },
+            {
+              "track": "Cactus Water",
+              "artist": "Channel Tres",
+              "album": "Cactus Water",
+              "playCount": 1
+            },
+            {
+              "track": "Equinox",
+              "artist": "Common Saints",
+              "album": "EQUINOX",
+              "playCount": 1
+            },
+            {
+              "track": "There She Goes",
+              "artist": "Curtis Harding",
+              "album": "There She Goes",
+              "playCount": 1
+            },
+            {
+              "track": "Kimosabè",
+              "artist": "Dope Lemon",
+              "album": "Kimosabè",
+              "playCount": 1
+            },
+            {
+              "track": "Real Thing",
+              "artist": "Drugdealer",
+              "album": "Real Thing",
+              "playCount": 1
+            },
+            {
+              "track": "Lovers' Holiday",
+              "artist": "Durand Jones & The Indications",
+              "album": "Lovers' Holiday",
+              "playCount": 1
+            }
+          ]
+        },
         {
           "year": 2025,
           "startDate": "2025-04-27",

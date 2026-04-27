@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:06Z",
+  "generatedAt": "2026-04-27T01:53:16Z",
   "timezone": "America/Chicago",
   "entityType": "artist",
   "displayCount": 12,
@@ -11,36 +11,36 @@
       "windowKey": "all",
       "label": "Weekly, All Time",
       "path": "artist-race/week-all.json",
-      "totalFrames": 1106,
+      "totalFrames": 1107,
       "firstFrameKey": "2005-W06",
-      "lastFrameKey": "2026-W16"
+      "lastFrameKey": "2026-W17"
     },
     {
       "granularity": "week",
       "windowKey": "4w",
       "label": "Weekly, Last 4 Weeks",
       "path": "artist-race/week-4w.json",
-      "totalFrames": 1106,
+      "totalFrames": 1107,
       "firstFrameKey": "2005-W06",
-      "lastFrameKey": "2026-W16"
+      "lastFrameKey": "2026-W17"
     },
     {
       "granularity": "week",
       "windowKey": "13w",
       "label": "Weekly, Last 13 Weeks",
       "path": "artist-race/week-13w.json",
-      "totalFrames": 1106,
+      "totalFrames": 1107,
       "firstFrameKey": "2005-W06",
-      "lastFrameKey": "2026-W16"
+      "lastFrameKey": "2026-W17"
     },
     {
       "granularity": "week",
       "windowKey": "52w",
       "label": "Weekly, Last 52 Weeks",
       "path": "artist-race/week-52w.json",
-      "totalFrames": 1106,
+      "totalFrames": 1107,
       "firstFrameKey": "2005-W06",
-      "lastFrameKey": "2026-W16"
+      "lastFrameKey": "2026-W17"
     },
     {
       "granularity": "month",

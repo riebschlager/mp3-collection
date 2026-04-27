@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:14:14Z",
+  "generatedAt": "2026-04-27T01:55:23Z",
   "timezone": "UTC",
   "source": "all",
   "discoveryBaseline": "global",
@@ -24861,7 +24861,7 @@
           },
           {
             "artist": "Khruangbin",
-            "count": 5,
+            "count": 6,
             "track": "White Gloves ii"
           },
           {
@@ -24890,21 +24890,21 @@
             "track": "Pitch the Baby"
           },
           {
+            "artist": "Drugdealer",
+            "count": 4,
+            "track": "Real Thing"
+          },
+          {
             "artist": "Jim James",
             "count": 4,
             "track": "In the Moment"
-          },
-          {
-            "artist": "Night Tapes",
-            "count": 4,
-            "track": "babygirl (like n01 else)"
           }
         ],
         "period": "Discovery",
         "source": "all",
         "summary": {
-          "newArtistCount": 160,
-          "newTrackCount": 556
+          "newArtistCount": 184,
+          "newTrackCount": 636
         }
       },
       "discoveryBaseline": "global",
@@ -24925,11 +24925,11 @@
         "summary": {
           "dormantReturnedArtistCount": 5,
           "dormantReturnedTrackCount": 7,
-          "matchRateInScope": 0.2376,
-          "matchedScrobblesInScope": 26496,
+          "matchRateInScope": 0.2372,
+          "matchedScrobblesInScope": 26497,
           "resultsReturned": 5,
           "returnPeriodDays": 365,
-          "totalScrobblesInScope": 111534
+          "totalScrobblesInScope": 111705
         },
         "topDormantReturns": [
           {
@@ -25032,10 +25032,10 @@
         ]
       },
       "insightBullets": [
-        "You logged 2296 plays in 2026 across 83 active days.",
+        "You logged 2467 plays in 2026 across 90 active days.",
         "Top artist: Radiohead (63 plays).",
-        "You discovered 160 new artists and 556 new tracks.",
-        "57% of plays happened at night (10pm-6am, UTC)."
+        "You discovered 184 new artists and 636 new tracks.",
+        "56% of plays happened at night (10pm-6am, UTC)."
       ],
       "scope": {
         "discoveryBaseline": "global",
@@ -25047,14 +25047,14 @@
       "source": "all",
       "storyCards": [
         {
-          "detail": "83 active days (27.66 plays per active day)",
-          "headline": "2296 plays",
+          "detail": "90 active days (27.41 plays per active day)",
+          "headline": "2467 plays",
           "id": "total_plays",
           "title": "Total Plays"
         },
         {
           "detail": "Combined listening sources in this year",
-          "headline": "lastfm 71% (1633) · spotify 29% (663)",
+          "headline": "lastfm 73% (1804) · spotify 27% (663)",
           "id": "source_mix",
           "title": "Source Mix"
         },
@@ -25071,8 +25071,8 @@
           "title": "Top Track"
         },
         {
-          "detail": "556 new tracks first heard in 2026",
-          "headline": "160 new artists",
+          "detail": "636 new tracks first heard in 2026",
+          "headline": "184 new artists",
           "id": "discovery",
           "title": "Discovery"
         },
@@ -25097,15 +25097,6 @@
       ],
       "streaksAndBursts": {
         "concentratedTracks": [
-          {
-            "artist": "Alabaster Deplume",
-            "burstScore": 0.3478,
-            "firstPlay": "2026-01-06",
-            "lastPlay": "2026-01-29",
-            "plays": 8,
-            "spanDays": 22,
-            "track": "A Gente Acaba (Vento Em Rosa)"
-          },
           {
             "artist": "No Vacation",
             "burstScore": 0.3125,
@@ -25186,17 +25177,26 @@
             "plays": 5,
             "spanDays": 32,
             "track": "Like I Say (I Runaway)"
+          },
+          {
+            "artist": "Wet Leg",
+            "burstScore": 0.1489,
+            "firstPlay": "2026-01-16",
+            "lastPlay": "2026-03-03",
+            "plays": 7,
+            "spanDays": 46,
+            "track": "mangetout"
           }
         ],
         "sourceBreakdown": [
           {
-            "count": 1633,
-            "share": 0.7112,
+            "count": 1804,
+            "share": 0.7313,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.2888,
+            "share": 0.2687,
             "source": "spotify"
           }
         ],
@@ -25216,23 +25216,23 @@
           },
           "longestTrackRun": {
             "artist": "Alabaster Deplume",
-            "count": 4,
-            "durationMinutes": 4537.35,
+            "count": 3,
+            "durationMinutes": 4531.88,
             "end": "2026-01-09T21:37:08Z",
-            "start": "2026-01-06T17:59:47Z",
+            "start": "2026-01-06T18:05:15Z",
             "track": "I Hope",
             "trackNormKey": "alabaster deplume|i hope"
           }
         },
         "summary": {
-          "activeDays": 83,
-          "avgSessionMinutes": 43.32,
-          "avgTracksPerSession": 15.19,
+          "activeDays": 90,
+          "avgSessionMinutes": 44.14,
+          "avgTracksPerSession": 15.2,
           "maxDailyPlays": 214,
           "medianDailyPlays": 16,
-          "nightPlayShare": 0.5697,
-          "totalScrobbles": 2296,
-          "totalSessions": 151
+          "nightPlayShare": 0.5553,
+          "totalScrobbles": 2467,
+          "totalSessions": 162
         },
         "topBurstDays": [
           {
@@ -25398,22 +25398,17 @@
             "uniqueTracks": 40
           },
           {
-            "date": "2026-01-10",
-            "plays": 68,
+            "date": "2026-04-26",
+            "plays": 69,
             "sources": [
               {
-                "count": 34,
-                "share": 0.5,
+                "count": 69,
+                "share": 1,
                 "source": "lastfm"
-              },
-              {
-                "count": 34,
-                "share": 0.5,
-                "source": "spotify"
               }
             ],
-            "uniqueArtists": 17,
-            "uniqueTracks": 35
+            "uniqueArtists": 47,
+            "uniqueTracks": 69
           }
         ],
         "topBurstSessions": [
@@ -25621,6 +25616,30 @@
             "uniqueTracks": 33
           },
           {
+            "durationMin": 225.02,
+            "end": "2026-04-26T22:49:55Z",
+            "plays": 62,
+            "sources": [
+              {
+                "count": 62,
+                "share": 1,
+                "source": "lastfm"
+              }
+            ],
+            "start": "2026-04-26T19:04:54Z",
+            "topArtist": {
+              "artist": "Loaded Honey",
+              "count": 8
+            },
+            "topTrack": {
+              "artist": "Anaiis",
+              "count": 1,
+              "track": "B.P.E"
+            },
+            "uniqueArtists": 40,
+            "uniqueTracks": 62
+          },
+          {
             "durationMin": 109.07,
             "end": "2026-01-23T03:00:41Z",
             "plays": 60,
@@ -25677,62 +25696,33 @@
             },
             "uniqueArtists": 14,
             "uniqueTracks": 30
-          },
-          {
-            "durationMin": 92.47,
-            "end": "2026-01-02T16:58:32Z",
-            "plays": 54,
-            "sources": [
-              {
-                "count": 27,
-                "share": 0.5,
-                "source": "lastfm"
-              },
-              {
-                "count": 27,
-                "share": 0.5,
-                "source": "spotify"
-              }
-            ],
-            "start": "2026-01-02T15:26:04Z",
-            "topArtist": {
-              "artist": "Allah-Las",
-              "count": 8
-            },
-            "topTrack": {
-              "artist": "Allah-Las",
-              "count": 2,
-              "track": "Ela Navega"
-            },
-            "uniqueArtists": 16,
-            "uniqueTracks": 28
           }
         ]
       },
       "summary": {
-        "activeDays": 83,
+        "activeDays": 90,
         "discoveryBaseline": "global",
-        "estimatedFromNonSpotify": 1633,
-        "estimatedTotalMinutes": 8296.59,
+        "estimatedFromNonSpotify": 1804,
+        "estimatedTotalMinutes": 8895.09,
         "measuredSpotifyMinutes": 2581.09,
-        "nightPlayShare": 0.5697,
-        "playsPerActiveDay": 27.66,
+        "nightPlayShare": 0.5553,
+        "playsPerActiveDay": 27.41,
         "source": "all",
         "sourceBreakdown": [
           {
-            "count": 1633,
-            "share": 0.7112,
+            "count": 1804,
+            "share": 0.7313,
             "source": "lastfm"
           },
           {
             "count": 663,
-            "share": 0.2888,
+            "share": 0.2687,
             "source": "spotify"
           }
         ],
-        "totalScrobbles": 2296,
-        "uniqueArtists": 645,
-        "uniqueTracks": 1273
+        "totalScrobbles": 2467,
+        "uniqueArtists": 714,
+        "uniqueTracks": 1404
       },
       "topArtists": [
         {
@@ -25740,12 +25730,12 @@
           "count": 63
         },
         {
-          "artist": "Khruangbin",
-          "count": 55
+          "artist": "Alabaster Deplume",
+          "count": 58
         },
         {
-          "artist": "Alabaster Deplume",
-          "count": 47
+          "artist": "Khruangbin",
+          "count": 58
         },
         {
           "artist": "Beach House",
@@ -25757,7 +25747,7 @@
         },
         {
           "artist": "PJ Harvey",
-          "count": 33
+          "count": 34
         },
         {
           "artist": "Men I Trust",
@@ -25784,7 +25774,7 @@
         },
         {
           "artist": "Alabaster Deplume",
-          "count": 8,
+          "count": 9,
           "track": "A Gente Acaba (Vento Em Rosa)"
         },
         {
@@ -25830,15 +25820,15 @@
       ],
       "year": 2026,
       "yearOverYear": {
-        "artistOverlapJaccard": 0.1539,
+        "artistOverlapJaccard": 0.1673,
         "comparisonBulletPoints": [
-          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2296 scrobbles across 1273 unique tracks.",
-          "Artist overlap (Jaccard) was 0.154 and track overlap was 0.084.",
-          "Novelty shifted from 0.508 to 0.449; diversity entropy shifted from 0.970 to 0.981.",
-          "Era Similarity Index: 36.99/100 (confidence 0.638).",
+          "2025 had 8449 scrobbles across 4163 unique tracks; 2026 had 2467 scrobbles across 1404 unique tracks.",
+          "Artist overlap (Jaccard) was 0.167 and track overlap was 0.091.",
+          "Novelty shifted from 0.508 to 0.488; diversity entropy shifted from 0.970 to 0.981.",
+          "Era Similarity Index: 38.00/100 (confidence 0.656).",
           "Strongest rising track: Black Country, New Road - Track X (delta 0.019 plays/day)."
         ],
-        "diversityCurrent": 0.9811,
+        "diversityCurrent": 0.9807,
         "diversityPrev": 0.97,
         "genreShift": [
           {
@@ -25884,10 +25874,10 @@
             "rateB": 0.0438
           },
           {
-            "delta": -0.0301,
+            "delta": -0.0274,
             "genre": "Alternative",
             "rateA": 0.0575,
-            "rateB": 0.0274
+            "rateB": 0.0301
           },
           {
             "delta": -0.0164,
@@ -25902,7 +25892,7 @@
             "rateB": 0
           }
         ],
-        "noveltyRateCurrent": 0.4493,
+        "noveltyRateCurrent": 0.4879,
         "noveltyRatePrevious": 0.5076,
         "persistentFavorites": [
           {
@@ -25916,10 +25906,18 @@
           {
             "artist": "Alabaster DePlume",
             "countA": 15,
-            "countB": 8,
+            "countB": 9,
             "rateA": 0.0411,
-            "rateB": 0.0219,
+            "rateB": 0.0247,
             "track": "A Gente Acaba (Vento Em Rosa)"
+          },
+          {
+            "artist": "Khruangbin",
+            "countA": 11,
+            "countB": 6,
+            "rateA": 0.0301,
+            "rateB": 0.0164,
+            "track": "May Ninth"
           },
           {
             "artist": "Wet Leg",
@@ -25944,14 +25942,6 @@
             "rateA": 0.0192,
             "rateB": 0.0137,
             "track": "August 10"
-          },
-          {
-            "artist": "Khruangbin",
-            "countA": 11,
-            "countB": 5,
-            "rateA": 0.0301,
-            "rateB": 0.0137,
-            "track": "May Ninth"
           },
           {
             "artist": "Khruangbin",
@@ -26117,6 +26107,15 @@
             "track": "Crusades"
           },
           {
+            "artist": "Khruangbin",
+            "countA": 0,
+            "countB": 6,
+            "delta": 0.0164,
+            "rateA": 0,
+            "rateB": 0.0164,
+            "track": "White Gloves ii"
+          },
+          {
             "artist": "Allah-Las",
             "countA": 2,
             "countB": 7,
@@ -26144,15 +26143,6 @@
             "track": "pokemon"
           },
           {
-            "artist": "Khruangbin",
-            "countA": 0,
-            "countB": 5,
-            "delta": 0.0137,
-            "rateA": 0,
-            "rateB": 0.0137,
-            "track": "White Gloves ii"
-          },
-          {
             "artist": "Mannequin Pussy",
             "countA": 0,
             "countB": 5,
@@ -26171,7 +26161,7 @@
             "track": "Yam Yam"
           }
         ],
-        "trackOverlapJaccard": 0.0844
+        "trackOverlapJaccard": 0.0914
       }
     }
   },

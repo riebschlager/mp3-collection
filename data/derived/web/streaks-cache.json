@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:55Z",
+  "generatedAt": "2026-04-27T01:54:05Z",
   "source": "all",
   "timezone": "UTC",
   "topN": 10,
@@ -10890,15 +10890,6 @@
     "2026": {
       "concentratedTracks": [
         {
-          "artist": "Alabaster Deplume",
-          "burstScore": 0.3478,
-          "firstPlay": "2026-01-06",
-          "lastPlay": "2026-01-29",
-          "plays": 8,
-          "spanDays": 22,
-          "track": "A Gente Acaba (Vento Em Rosa)"
-        },
-        {
           "artist": "No Vacation",
           "burstScore": 0.3125,
           "firstPlay": "2026-01-24",
@@ -10978,6 +10969,15 @@
           "plays": 5,
           "spanDays": 32,
           "track": "Like I Say (I Runaway)"
+        },
+        {
+          "artist": "Wet Leg",
+          "burstScore": 0.1489,
+          "firstPlay": "2026-01-16",
+          "lastPlay": "2026-03-03",
+          "plays": 7,
+          "spanDays": 46,
+          "track": "mangetout"
         }
       ],
       "period": "Streaks & Bursts",
@@ -10989,13 +10989,13 @@
       "source": "all",
       "sourceBreakdown": [
         {
-          "count": 1633,
-          "share": 0.7112,
+          "count": 1804,
+          "share": 0.7313,
           "source": "lastfm"
         },
         {
           "count": 663,
-          "share": 0.2888,
+          "share": 0.2687,
           "source": "spotify"
         }
       ],
@@ -11015,23 +11015,23 @@
         },
         "longestTrackRun": {
           "artist": "Alabaster Deplume",
-          "count": 4,
-          "durationMinutes": 4537.35,
+          "count": 3,
+          "durationMinutes": 4531.88,
           "end": "2026-01-09T21:37:08Z",
-          "start": "2026-01-06T17:59:47Z",
+          "start": "2026-01-06T18:05:15Z",
           "track": "I Hope",
           "trackNormKey": "alabaster deplume|i hope"
         }
       },
       "summary": {
-        "activeDays": 83,
-        "avgSessionMinutes": 43.32,
-        "avgTracksPerSession": 15.19,
+        "activeDays": 90,
+        "avgSessionMinutes": 44.14,
+        "avgTracksPerSession": 15.2,
         "maxDailyPlays": 214,
         "medianDailyPlays": 16,
-        "nightPlayShare": 0.5697,
-        "totalScrobbles": 2296,
-        "totalSessions": 151
+        "nightPlayShare": 0.5553,
+        "totalScrobbles": 2467,
+        "totalSessions": 162
       },
       "timezone": "UTC",
       "topBurstDays": [
@@ -11198,22 +11198,17 @@
           "uniqueTracks": 40
         },
         {
-          "date": "2026-01-10",
-          "plays": 68,
+          "date": "2026-04-26",
+          "plays": 69,
           "sources": [
             {
-              "count": 34,
-              "share": 0.5,
+              "count": 69,
+              "share": 1,
               "source": "lastfm"
-            },
-            {
-              "count": 34,
-              "share": 0.5,
-              "source": "spotify"
             }
           ],
-          "uniqueArtists": 17,
-          "uniqueTracks": 35
+          "uniqueArtists": 47,
+          "uniqueTracks": 69
         }
       ],
       "topBurstSessions": [
@@ -11421,6 +11416,30 @@
           "uniqueTracks": 33
         },
         {
+          "durationMin": 225.02,
+          "end": "2026-04-26T22:49:55Z",
+          "plays": 62,
+          "sources": [
+            {
+              "count": 62,
+              "share": 1,
+              "source": "lastfm"
+            }
+          ],
+          "start": "2026-04-26T19:04:54Z",
+          "topArtist": {
+            "artist": "Loaded Honey",
+            "count": 8
+          },
+          "topTrack": {
+            "artist": "Anaiis",
+            "count": 1,
+            "track": "B.P.E"
+          },
+          "uniqueArtists": 40,
+          "uniqueTracks": 62
+        },
+        {
           "durationMin": 109.07,
           "end": "2026-01-23T03:00:41Z",
           "plays": 60,
@@ -11477,35 +11496,6 @@
           },
           "uniqueArtists": 14,
           "uniqueTracks": 30
-        },
-        {
-          "durationMin": 92.47,
-          "end": "2026-01-02T16:58:32Z",
-          "plays": 54,
-          "sources": [
-            {
-              "count": 27,
-              "share": 0.5,
-              "source": "lastfm"
-            },
-            {
-              "count": 27,
-              "share": 0.5,
-              "source": "spotify"
-            }
-          ],
-          "start": "2026-01-02T15:26:04Z",
-          "topArtist": {
-            "artist": "Allah-Las",
-            "count": 8
-          },
-          "topTrack": {
-            "artist": "Allah-Las",
-            "count": 2,
-            "track": "Ela Navega"
-          },
-          "uniqueArtists": 16,
-          "uniqueTracks": 28
         }
       ]
     }

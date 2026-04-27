@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:06Z",
+  "generatedAt": "2026-04-27T01:53:16Z",
   "timezone": "America/Chicago",
   "entityType": "artist",
   "granularity": "week",
@@ -7,8 +7,8 @@
   "metric": "cumulative",
   "orderingMode": "exact",
   "displayCount": 12,
-  "totalFrames": 1106,
-  "totalScrobbles": 111534,
+  "totalFrames": 1107,
+  "totalScrobbles": 111705,
   "frames": [
     {
       "key": "2005-W06",
@@ -100609,8 +100609,8 @@
       "key": "2026-W16",
       "label": "Apr 13-19, 2026",
       "frameStart": 1776056400000,
-      "frameEnd": 1776132471000,
-      "windowTotalScrobbles": 111534,
+      "frameEnd": 1776661199999,
+      "windowTotalScrobbles": 111561,
       "leaders": [
         {
           "rank": 1,
@@ -100631,7 +100631,7 @@
           "rawRank": 3,
           "artist": "R.E.M.",
           "artistSlug": "rem",
-          "playCount": 1260
+          "playCount": 1261
         },
         {
           "rank": 4,
@@ -100645,7 +100645,100 @@
           "rawRank": 5,
           "artist": "PJ Harvey",
           "artistSlug": "pj-harvey",
-          "playCount": 1047
+          "playCount": 1048
+        },
+        {
+          "rank": 6,
+          "rawRank": 6,
+          "artist": "Helmet",
+          "artistSlug": "helmet",
+          "playCount": 995
+        },
+        {
+          "rank": 7,
+          "rawRank": 7,
+          "artist": "The Smashing Pumpkins",
+          "artistSlug": "the-smashing-pumpkins",
+          "playCount": 851
+        },
+        {
+          "rank": 8,
+          "rawRank": 8,
+          "artist": "Puscifer",
+          "artistSlug": "puscifer",
+          "playCount": 829
+        },
+        {
+          "rank": 9,
+          "rawRank": 9,
+          "artist": "Wilco",
+          "artistSlug": "wilco",
+          "playCount": 814
+        },
+        {
+          "rank": 10,
+          "rawRank": 10,
+          "artist": "TOOL",
+          "artistSlug": "tool",
+          "playCount": 703
+        },
+        {
+          "rank": 11,
+          "rawRank": 11,
+          "artist": "Neutral Milk Hotel",
+          "artistSlug": "neutral-milk-hotel",
+          "playCount": 692
+        },
+        {
+          "rank": 12,
+          "rawRank": 12,
+          "artist": "Firewater",
+          "artistSlug": "firewater",
+          "playCount": 688
+        }
+      ]
+    },
+    {
+      "key": "2026-W17",
+      "label": "Apr 20-26, 2026",
+      "frameStart": 1776661200000,
+      "frameEnd": 1777245678000,
+      "windowTotalScrobbles": 111705,
+      "leaders": [
+        {
+          "rank": 1,
+          "rawRank": 1,
+          "artist": "A Perfect Circle",
+          "artistSlug": "a-perfect-circle",
+          "playCount": 2290
+        },
+        {
+          "rank": 2,
+          "rawRank": 2,
+          "artist": "Radiohead",
+          "artistSlug": "radiohead",
+          "playCount": 1560
+        },
+        {
+          "rank": 3,
+          "rawRank": 3,
+          "artist": "R.E.M.",
+          "artistSlug": "rem",
+          "playCount": 1261
+        },
+        {
+          "rank": 4,
+          "rawRank": 4,
+          "artist": "Nine Inch Nails",
+          "artistSlug": "nine-inch-nails",
+          "playCount": 1135
+        },
+        {
+          "rank": 5,
+          "rawRank": 5,
+          "artist": "PJ Harvey",
+          "artistSlug": "pj-harvey",
+          "playCount": 1048
         },
         {
           "rank": 6,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:06Z",
+  "generatedAt": "2026-04-27T01:53:16Z",
   "timezone": "America/Chicago",
   "entityType": "artist",
   "granularity": "month",
@@ -8,7 +8,7 @@
   "orderingMode": "exact",
   "displayCount": 12,
   "totalFrames": 255,
-  "totalScrobbles": 111534,
+  "totalScrobbles": 111705,
   "frames": [
     {
       "key": "2005-02",
@@ -22661,92 +22661,92 @@
       "key": "2026-04",
       "label": "Apr 2026",
       "frameStart": 1775019600000,
-      "frameEnd": 1776132471000,
-      "windowTotalScrobbles": 1949,
+      "frameEnd": 1777245678000,
+      "windowTotalScrobbles": 1331,
       "leaders": [
         {
           "rank": 1,
           "rawRank": 1,
           "artist": "Radiohead",
           "artistSlug": "radiohead",
-          "playCount": 53
+          "playCount": 35
         },
         {
           "rank": 2,
           "rawRank": 2,
-          "artist": "Khruangbin",
-          "artistSlug": "khruangbin",
-          "playCount": 45
+          "artist": "Wet Leg",
+          "artistSlug": "wet-leg",
+          "playCount": 30
         },
         {
           "rank": 3,
           "rawRank": 3,
-          "artist": "Wet Leg",
-          "artistSlug": "wet-leg",
-          "playCount": 38
-        },
-        {
-          "rank": 4,
-          "rawRank": 4,
-          "artist": "Beach House",
-          "artistSlug": "beach-house",
-          "playCount": 36
-        },
-        {
-          "rank": 5,
-          "rawRank": 5,
-          "artist": "PJ Harvey",
-          "artistSlug": "pj-harvey",
-          "playCount": 31
-        },
-        {
-          "rank": 6,
-          "rawRank": 6,
           "artist": "A Perfect Circle",
           "artistSlug": "a-perfect-circle",
           "playCount": 29
         },
         {
-          "rank": 7,
-          "rawRank": 7,
+          "rank": 4,
+          "rawRank": 4,
+          "artist": "Khruangbin",
+          "artistSlug": "khruangbin",
+          "playCount": 20
+        },
+        {
+          "rank": 5,
+          "rawRank": 5,
           "artist": "Nilüfer Yanya",
           "artistSlug": "nilfer-yanya",
-          "playCount": 27
+          "playCount": 20
+        },
+        {
+          "rank": 6,
+          "rawRank": 6,
+          "artist": "Portishead",
+          "artistSlug": "portishead",
+          "playCount": 18
+        },
+        {
+          "rank": 7,
+          "rawRank": 7,
+          "artist": "R.E.M.",
+          "artistSlug": "rem",
+          "playCount": 18
         },
         {
           "rank": 8,
           "rawRank": 8,
-          "artist": "Portishead",
-          "artistSlug": "portishead",
-          "playCount": 26
+          "artist": "Alabaster Deplume",
+          "artistSlug": "alabaster-deplume",
+          "playCount": 17
         },
         {
           "rank": 9,
           "rawRank": 9,
-          "artist": "Men I Trust",
-          "artistSlug": "men-i-trust",
-          "playCount": 25
+          "artist": "PJ Harvey",
+          "artistSlug": "pj-harvey",
+          "playCount": 16
         },
         {
           "rank": 10,
           "rawRank": 10,
-          "artist": "The Smile",
-          "artistSlug": "the-smile",
-          "playCount": 25
+          "artist": "Aphex Twin",
+          "artistSlug": "aphex-twin",
+          "playCount": 15
         },
         {
           "rank": 11,
           "rawRank": 11,
-          "artist": "Sven Wunder",
-          "artistSlug": "sven-wunder",
-          "playCount": 23
+          "artist": "Loaded Honey",
+          "artistSlug": "loaded-honey",
+          "playCount": 12
         },
         {
           "rank": 12,
           "rawRank": 12,
-          "artist": "The Marías",
-          "artistSlug": "the-maras",
-          "playCount": 23
+          "artist": "The Smile",
+          "artistSlug": "the-smile",
+          "playCount": 12
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:12:06Z",
+  "generatedAt": "2026-04-27T01:53:16Z",
   "timezone": "America/Chicago",
   "entityType": "artist",
   "granularity": "month",
@@ -8,7 +8,7 @@
   "orderingMode": "exact",
   "displayCount": 12,
   "totalFrames": 255,
-  "totalScrobbles": 111534,
+  "totalScrobbles": 111705,
   "frames": [
     {
       "key": "2005-02",
@@ -23146,29 +23146,29 @@
       "key": "2026-04",
       "label": "Apr 2026",
       "frameStart": 1775019600000,
-      "frameEnd": 1776132471000,
-      "windowTotalScrobbles": 8794,
+      "frameEnd": 1777245678000,
+      "windowTotalScrobbles": 8580,
       "leaders": [
         {
           "rank": 1,
           "rawRank": 1,
           "artist": "Khruangbin",
           "artistSlug": "khruangbin",
-          "playCount": 152
+          "playCount": 145
         },
         {
           "rank": 2,
           "rawRank": 2,
           "artist": "Beach House",
           "artistSlug": "beach-house",
-          "playCount": 128
+          "playCount": 125
         },
         {
           "rank": 3,
           "rawRank": 3,
           "artist": "Men I Trust",
           "artistSlug": "men-i-trust",
-          "playCount": 121
+          "playCount": 119
         },
         {
           "rank": 4,
@@ -23182,7 +23182,7 @@
           "rawRank": 5,
           "artist": "Nilüfer Yanya",
           "artistSlug": "nilfer-yanya",
-          "playCount": 84
+          "playCount": 85
         },
         {
           "rank": 6,
@@ -23194,44 +23194,44 @@
         {
           "rank": 7,
           "rawRank": 7,
-          "artist": "R.E.M.",
-          "artistSlug": "rem",
+          "artist": "PJ Harvey",
+          "artistSlug": "pj-harvey",
           "playCount": 70
         },
         {
           "rank": 8,
           "rawRank": 8,
-          "artist": "PJ Harvey",
-          "artistSlug": "pj-harvey",
+          "artist": "Alabaster Deplume",
+          "artistSlug": "alabaster-deplume",
           "playCount": 69
         },
         {
           "rank": 9,
           "rawRank": 9,
-          "artist": "Wet Leg",
-          "artistSlug": "wet-leg",
+          "artist": "R.E.M.",
+          "artistSlug": "rem",
           "playCount": 69
         },
         {
           "rank": 10,
           "rawRank": 10,
-          "artist": "Alabaster DePlume",
-          "artistSlug": "alabaster-deplume",
-          "playCount": 64
+          "artist": "Wet Leg",
+          "artistSlug": "wet-leg",
+          "playCount": 69
         },
         {
           "rank": 11,
           "rawRank": 11,
-          "artist": "Sven Wunder",
-          "artistSlug": "sven-wunder",
-          "playCount": 62
+          "artist": "Alabaster DePlume",
+          "artistSlug": "alabaster-deplume",
+          "playCount": 61
         },
         {
           "rank": 12,
           "rawRank": 12,
-          "artist": "Alabaster Deplume",
-          "artistSlug": "alabaster-deplume",
-          "playCount": 58
+          "artist": "Sven Wunder",
+          "artistSlug": "sven-wunder",
+          "playCount": 60
         }
       ]
     }
