@@ -1,0 +1,41 @@
+---
+import '../styles/itunes.css';
+import { buildUrl } from '../lib/urls';
+
+const dataUrl = buildUrl('data/itunes-library.json');
+const homeUrl = buildUrl('');
+const faviconUrl = buildUrl('favicon.svg');
+---
+
+<!doctype html>
+<html lang="en" class="itunes-document">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A standalone iTunes-style browser for the original iTunes playlist exports"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={faviconUrl} />
+    <title>iTunes - MP3 Collection</title>
+  </head>
+  <body class="itunes-page">
+    <div id="itunes-browser" data-data-url={dataUrl} data-home-url={homeUrl}>
+      <div class="itunes-boot">
+        <div class="itunes-boot-window">
+          <div class="itunes-boot-bar"></div>
+          <p>Loading iTunes Library...</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      import { mountITunesBrowser } from '../scripts/itunes-browser';
+
+      const root = document.getElementById('itunes-browser');
+      if (root instanceof HTMLElement) {
+        mountITunesBrowser(root);
+      }
+    </script>
+  </body>
+</html>
