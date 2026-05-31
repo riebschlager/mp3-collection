@@ -27,7 +27,7 @@ This repo has been modernized from a static-JSON pipeline to a robust **Go + SQL
 
 ## Prerequisites
 
-- Go 1.22+
+- Go 1.25.5+
 - Node.js 20+
 - SQLite3
 

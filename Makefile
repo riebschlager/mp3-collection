@@ -76,12 +76,12 @@ images:
 	cd tools/pipeline && LASTFM_IMAGE_SCOPE=$(LASTFM_IMAGE_SCOPE) go run . fetch-images
 
 doctor:
-	cd tools/pipeline && go run . doctor
+	GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" go -C backend run ./cmd/etl doctor
 
 validate:
 	mkdir -p .cache/go-build
 	LASTFM_API_KEY="$${LASTFM_API_KEY:-ci-placeholder}" GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" $(MAKE) doctor
-	GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" go -C tools/pipeline build ./...
+	GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" go -C backend build ./...
 	GOCACHE="$${GOCACHE:-$(CURDIR)/.cache/go-build}" go -C apps/mcp-server build ./...
 	npm -C apps/web ci
 	npm -C apps/web run build
